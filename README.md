@@ -35,7 +35,7 @@
 
 ## 🛠 Tech Stacks
 
-###FRONTEND
+### FRONTEND
 
 ![image](https://user-images.githubusercontent.com/107836206/201006763-863c3f60-1456-4cb3-b7f5-ebbcac47fc0d.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006777-e6d4621d-a761-4767-8173-6a11a2dedfca.png)
@@ -44,7 +44,7 @@
 ![image](https://user-images.githubusercontent.com/107836206/201006803-f11f1ec3-c5fc-4ae1-91ed-112d3739b671.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006898-3ba29792-59fe-4cd3-bee2-99e9b4244c3d.png)
 
-###BACKEND
+### BACKEND
 
 
 
