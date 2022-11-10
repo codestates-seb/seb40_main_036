@@ -33,13 +33,21 @@
 | <img src="https://avatars.githubusercontent.com/u/107448607?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/107971877?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/83641398?v=4" alt="img" height="150px" width="150px" />
 | [SeongYum](https://github.com/SeongYum) | [sunghee-park](https://github.com/sunghee-park) | [GopOwl](https://github.com/GopOwl) |
 
-## 🛠Tech Stacks
+## 🛠 Tech Stacks
+
+###FRONTEND
+
 ![image](https://user-images.githubusercontent.com/107836206/201006763-863c3f60-1456-4cb3-b7f5-ebbcac47fc0d.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006777-e6d4621d-a761-4767-8173-6a11a2dedfca.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006784-c396df1c-b0a2-4690-808e-474ee181f01a.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006795-d94b1387-4447-4aaf-af5c-3260043c2d1c.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006803-f11f1ec3-c5fc-4ae1-91ed-112d3739b671.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006898-3ba29792-59fe-4cd3-bee2-99e9b4244c3d.png)
+
+###BACKEND
+
+
+
 
 
  ## 📌 깃 커밋 규칙 
