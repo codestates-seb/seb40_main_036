@@ -32,3 +32,14 @@
 | :--------------: | :-------------: | :-------------: | 
 | <img src="https://avatars.githubusercontent.com/u/107448607?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/107971877?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/83641398?v=4" alt="img" height="150px" width="150px" />
 | [SeongYum](https://github.com/SeongYum) | [sunghee-park](https://github.com/sunghee-park) | [GopOwl](https://github.com/GopOwl) |
+
+ ## 📌 깃 커밋 규칙 
+- [FE/BE]
+  - ⛲ feat : 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
+  - 🚨 fix : 기능에 대한 버그 수정
+  - 📄 docs : 문서(주석) 수정
+  - 🖼 style : 코드 스타일, 포맷팅에 대한 수정, 코드 수정이 없는 경우
+  - 🔨 refactor : 기능의 변화가 아닌 코드 리팩터링 ex) 변수 이름 변경
+  - 🌏 release : 버전 릴리즈
+  - ✅ merge : 병합
+  - ⚙ chore : 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore
