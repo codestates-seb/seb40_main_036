@@ -1,3 +1,4 @@
+import Pagination from './pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 
@@ -14,6 +15,7 @@ function ShareList() {
           </Row2>
         </ShareListTitle>
         <ShareListContents />
+        <Pagination />
       </ShareListContent>
     </ShareListContainer>
   );
