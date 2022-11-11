@@ -25,6 +25,10 @@ const ShareListContaner = styled.div`
 const ShareListTitle = styled.div`
   width: 100%;
   max-width: 1100px;
+  h1 {
+    font-size: 27px;
+    margin: 0 12px 12px 0;
+  }
 `;
 
 const Row1 = styled.div`
