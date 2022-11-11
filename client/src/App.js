@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import Main from './pages/main';
 import Nav from './components/nav';
-import ShareList from './Components/ShareList';
+import ShareList from './components/ShareList';
+import Login from './components/Login';
+import SignUP from './components/SignUp';
 import './App.css';
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<SignUP />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
