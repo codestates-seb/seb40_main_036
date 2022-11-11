@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Login = () => {
   return (
@@ -27,7 +27,9 @@ const Login = () => {
               </div>
             </div>
             <button>로그인</button>
-            <div className="accountExistence">계정이 없으신가요? <Link to='/signup'>회원가입</Link></div>
+            <div className="accountExistence">
+              계정이 없으신가요? <Link to="/signup">회원가입</Link>
+            </div>
           </form>
         </LoginInput>
       </div>
@@ -38,7 +40,6 @@ const Login = () => {
 export default Login;
 
 const LoginInput = styled.div`
-
   .loginInput {
     position: absolute;
     top: 50%;
@@ -72,14 +73,14 @@ const LoginInput = styled.div`
     top: 621px;
     background: #008505;
     border-radius: 3px;
-    margin-top : 10px;
+    margin-top: 10px;
   }
   .accountExistence {
-    margin-top : 15px;
+    margin-top: 15px;
   }
   .accountExistence a {
     padding-left: 7px;
-    color:blue;
+    color: blue;
   }
 `;
 const LoginForm = styled.div`

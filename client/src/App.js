@@ -1,16 +1,25 @@
-import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./component/Login";
-import SignUP from "./component/SignUp";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import Main from './pages/main';
+import Nav from './components/nav';
+import ShareList from './components/ShareList';
+import Login from './components/Login';
+import SignUP from './components/SignUp';
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<SignUP />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/share" element={<ShareList />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<SignUP />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
