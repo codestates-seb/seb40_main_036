@@ -3,13 +3,12 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/seb40_main_036/server" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/seb40_main_036/server/backend" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/seb40_main_036/server" />
+            <option value="$PROJECT_DIR$/seb40_main_036/server/backend" />
           </set>
         </option>
       </GradleProjectSettings>
