@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Login = () => {
@@ -26,7 +27,7 @@ const Login = () => {
               </div>
             </div>
             <button>로그인</button>
-            <div className="accountExistence">계정이 없으신가요? <a href="#">회원가입</a></div>
+            <div className="accountExistence">계정이 없으신가요? <Link to='/signup'>회원가입</Link></div>
           </form>
         </LoginInput>
       </div>
