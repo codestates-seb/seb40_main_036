@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import ShareListContents from './ShareListContents';
 
 function ShareList() {
   return (
-    <ShareListContaner>
+    <ShareListContainer>
       <ShareListContent>
         <ShareListTitle>
           <Row1>
@@ -12,14 +13,15 @@ function ShareList() {
             <button>글쓰기</button>
           </Row2>
         </ShareListTitle>
+        <ShareListContents />
       </ShareListContent>
-    </ShareListContaner>
+    </ShareListContainer>
   );
 }
 
 export default ShareList;
 
-const ShareListContaner = styled.div`
+const ShareListContainer = styled.div`
   width: 100%;
   max-width: 1254px;
   margin: 0 auto;
@@ -36,7 +38,7 @@ const ShareListContent = styled.div`
 `;
 
 const ShareListTitle = styled.div`
-  width: 100%;
+  padding: 0 24px;
 `;
 
 const Row1 = styled.div`
