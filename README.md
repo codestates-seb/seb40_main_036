@@ -46,6 +46,13 @@
 
 ### BACKEND
 
+ <div>
+ <img src="https://img.shields.io/badge/spring boot-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white">
+ <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white" > 
+ <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" >
+ <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white" > 
+ <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
+ </div> 
 
 
 
@@ -60,3 +67,32 @@
   - 🌏 release : 버전 릴리즈
   - ✅ merge : 병합
   - ⚙ chore : 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore
+  
+  
+  
+  ## 📌 BACKEND 개발 규칙
+- [이름 짓기 컨벤션]
+
+ <패키지 명>
+ - 소문자로 작성
+
+ <엔티티 변수명>
+ - 최대한 짧게 작성 : memberId(X) -> id, memberEmail(X) -> email
+
+ <URI>
+ - 소문자로 작성
+ - 작성 순서 : /리소스명/{id}/동사(method X)
+		ex /member/join (상황에 맞게 {id}와 동사는 생략 가능)
+
+
+- [브랜치 규칙]
+
+ <브랜치 작성 방법>
+ - 새로운 기능을 추가할 경우 : feat/member-create/kyh0113
+ - 코드 리팩터링의 경우 : refactor/member-create/kyh0113
+
+ <push 규칙>
+ 0. 코드 작성 전에 반드시 pull 먼저 하기
+ 1. 규칙에 맞게 생성한 브랜치에서 코드 작성하기
+ 2. 각자 생성한 브랜치의 origin에다 push하기
+ 3. 깃허브에서 be_dev에 PR 보내기
