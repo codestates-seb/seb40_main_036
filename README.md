@@ -71,8 +71,6 @@
   
   
  ## 📌 BACKEND 개발 규칙
-[이름 짓기 컨벤션]
-
 
 <패키지 명>
 - 소문자로 작성
@@ -85,11 +83,6 @@
 - 작성 순서 : /리소스명/{id}/동사(method X)
 	    ex /member/join (상황에 맞게 {id}와 동사는 생략 가능)
 
-	
-\n
-[브랜치 규칙]
-
-	
 <브랜치 작성 방법>
 - 새로운 기능을 추가할 경우 : feat/member-create/kyh0113
 - 코드 리팩터링의 경우 : refactor/member-create/kyh0113
