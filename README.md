@@ -80,9 +80,7 @@
 
 <URI>
 - 소문자로 작성
-	
-- 작성 순서 : /리소스명/{id}/동사(method X)
-	    ex /member/join (상황에 맞게 {id}와 동사는 생략 가능)
+- 작성 순서 : /리소스명/{id}/동사(method X) ex /member/join (상황에 맞게 {id}와 동사는 생략 가능)
 
 <브랜치 작성 방법>
 - 새로운 기능을 추가할 경우 : feat/member-create/kyh0113
