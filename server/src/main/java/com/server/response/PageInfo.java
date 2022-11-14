@@ -1,4 +1,4 @@
-package com.backend.Response;
+package com.server.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,3 +11,5 @@ public class PageInfo {
     private long totalElements;
     private int totalPages;
 }
+
+

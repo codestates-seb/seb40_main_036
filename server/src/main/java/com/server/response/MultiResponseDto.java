@@ -1,4 +1,4 @@
-package com.backend.Response;
+package com.server.response;
 
 import lombok.Getter;
 import org.springframework.data.domain.Page;
@@ -16,4 +16,3 @@ public class MultiResponseDto<T> {
                 page.getSize(), page.getTotalElements(), page.getTotalPages());
     }
 }
-
