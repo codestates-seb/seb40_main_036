@@ -1,19 +1,22 @@
 package com.server.member.controller;
 
+import com.server.member.dto.MemberLoginDto;
 import com.server.member.dto.MemberPostDto;
 import com.server.member.entity.Member;
 import com.server.member.mapper.MemberMapper;
 import com.server.member.service.MemberService;
+import com.server.response.MultiResponseDto;
+import com.server.response.SingleResponseDto;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Positive;
+import java.util.List;
 
 @RestController
 @RequestMapping("/member")
@@ -35,10 +38,51 @@ public class MemberController {
                 HttpStatus.CREATED);
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<Object> loginMember(@RequestBody @Valid MemberLoginDto memberLoginDto){
-//        Member member = memberMapper.memberLoginDtoMember(memberLoginDto);
-//
-//        return null;
-//    }
+    @GetMapping("/{Id}")
+    public ResponseEntity getMember(@PathVariable("Id")
+                                    @Positive long Id) {
+        Member member = memberService.findMember(Id);
+
+        return new ResponseEntity<>(
+
+                new SingleResponseDto(memberMapper.memberToMemberResponseDto(member)),
+                HttpStatus.OK);
+
+    }
+
+    @GetMapping
+    public ResponseEntity getMembers(@Positive @RequestParam int page,
+                                       @Positive @RequestParam int size) {
+        Page<Member> pageMembers = memberService.findMembers(page-1, size);
+        List<Member> members = pageMembers.getContent();// 내용까지도
+
+        return new ResponseEntity<>(
+                new MultiResponseDto<>(memberMapper.membersToMemberResponseDtos(members),
+                        pageMembers),
+                HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<Object> loginMember(@RequestBody MemberLoginDto memberLoginDto) {
+        Member member = memberMapper.memberLoginDtoMember(memberLoginDto);
+        Member response = memberService.LoginMember(member);
+
+        return new ResponseEntity<>(memberMapper.memberToMemberResponseDto(response), HttpStatus.OK);
+    }
+
+
+    @PostMapping("/logout")
+    public ResponseEntity<Object> logoutMember() {
+
+        return new ResponseEntity<>("", HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{Id}")
+    public ResponseEntity deleteMember(@PathVariable("Id")
+                                       @Positive long Id){
+
+        memberService.deleteMember(Id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }
