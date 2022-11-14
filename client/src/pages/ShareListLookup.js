@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ShareAnswerViewr from '../components/ShareAnswer';
 import ShareLisViewer from '../components/ShareListViewer';
 import ShareLisViewerContents from '../components/ShareListViewerContents';
 function ShareListLookup() {
@@ -7,6 +8,7 @@ function ShareListLookup() {
       <Container>
         <ShareLisViewer />
         <ShareLisViewerContents />
+        <ShareAnswerViewr />
       </Container>
     </Contents>
   );
