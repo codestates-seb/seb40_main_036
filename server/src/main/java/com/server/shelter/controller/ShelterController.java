@@ -41,8 +41,8 @@ public class ShelterController {
                 HttpStatus.CREATED);
     }
 
-    @GetMapping("/{Id}")
-    public ResponseEntity getShelter(@PathVariable("Id")
+    @GetMapping("/{id}")
+    public ResponseEntity getShelter(@PathVariable("id")
                                     @Positive long Id) {
         Shelter shelter = shelterService.findShelter(Id);
 
@@ -64,8 +64,8 @@ public class ShelterController {
                 HttpStatus.OK);
     }
 
-    @DeleteMapping("/{Id}")
-    public ResponseEntity deleteShelter(@PathVariable("Id")
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteShelter(@PathVariable("id")
                                        @Positive long Id){
 
         shelterService.deleteShelter(Id);

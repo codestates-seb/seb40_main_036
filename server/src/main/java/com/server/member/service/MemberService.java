@@ -37,8 +37,8 @@ public class MemberService {
         return mem;
     }
 
-    public Member findMember(long Id){
-        return findVerifiedMember(Id);
+    public Member findMember(long id){
+        return findVerifiedMember(id);
     }
 
 
@@ -47,16 +47,16 @@ public class MemberService {
                 Sort.by("Id").descending()));
     }
 
-    public void deleteMember(long Id){
+    public void deleteMember(long id){
 
-        Member findMember = findVerifiedMember(Id);
+        Member findMember = findVerifiedMember(id);
         memberRepository.delete(findMember);
 
     }
 
-    public Member findVerifiedMember(long Id){
+    public Member findVerifiedMember(long id){
         Optional<Member> optionalMember=
-                memberRepository.findById(Id);
+                memberRepository.findById(id);
         Member findMember =
                 optionalMember.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.Member_NOT_FOUND));

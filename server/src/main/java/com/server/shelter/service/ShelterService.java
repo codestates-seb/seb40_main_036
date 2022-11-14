@@ -39,17 +39,17 @@ public class ShelterService {
         return shelterRepository.save(findShelter);
     }
 
-    public Shelter findVerifiedShelter(long Id){
+    public Shelter findVerifiedShelter(long id){
         Optional<Shelter> optionalShelter=
-                shelterRepository.findById(Id);
+                shelterRepository.findById(id);
         Shelter findShelter =
                 optionalShelter.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.Shelter_NOT_FOUND));
         return findShelter;
     }
 
-    public Shelter findShelter(long Id){
-        return findVerifiedShelter(Id);
+    public Shelter findShelter(long id){
+        return findVerifiedShelter(id);
     }
 
     public Page<Shelter> findShelters(int page, int size){
@@ -57,9 +57,9 @@ public class ShelterService {
                 Sort.by("Id").descending()));
     }
 
-    public void deleteShelter(long Id){
+    public void deleteShelter(long id){
 
-        Shelter findShelter = findVerifiedShelter(Id);
+        Shelter findShelter = findVerifiedShelter(id);
         shelterRepository.delete(findShelter);
 
     }
