@@ -1,38 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
+import Map from '../components/Map';
 
 const Main = () => {
-  const [myLocation, setMyLocation] = useState(
-    37.566481622437934,
-    126.98502302169841
-  );
-  useEffect(() => {
-    initTmap();
-  }, []);
-  useEffect(() => {
-    console.log(myLocation);
-  }, [myLocation]);
-  function initTmap() {
-    new window.Tmapv2.Map('TMapApp', {
-      center: new window.Tmapv2.LatLng(37.566481622437934, 126.98502302169841),
-      width: '100%',
-      height: '100%',
-      zoom: 15,
-    });
-  }
+  const [locationX, setlocationX] = useState(33.450701);
+  const [locationY, setlocationY] = useState(126.570667);
+  const [loading, setloading] = useState(false);
 
   const onclickhandle = () => {
     console.log('test');
   };
+
   const getLocation = () => {
     if (navigator.geolocation) {
       // GPS를 지원하면
+      setloading(true);
       navigator.geolocation.getCurrentPosition(
         function (position) {
-          setMyLocation(position.coords.latitude, position.coords.longitude);
+          setlocationX(position.coords.latitude);
+          setlocationY(position.coords.longitude);
         },
         function (error) {
           console.error(error);
@@ -47,10 +36,14 @@ const Main = () => {
       alert('GPS를 지원하지 않습니다');
     }
   };
-
   return (
     <>
-      <MapWrapper id="TMapApp" />
+      <Map
+        x={locationX}
+        y={locationY}
+        loading={loading}
+        setloading={setloading}
+      />
       <Positionrelative>
         <Button
           text={<FontAwesomeIcon icon={solid('location-crosshairs')} />}
@@ -62,12 +55,7 @@ const Main = () => {
   );
 };
 export default Main;
-const MapWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-`;
+
 const Positionrelative = styled.div`
   position: relative;
   button {
