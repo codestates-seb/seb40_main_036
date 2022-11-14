@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function ShareLisViewer() {
+function ShareListViewer() {
   return (
     <Container>
       <LookContentsHeader>
@@ -17,7 +17,7 @@ function ShareLisViewer() {
   );
 }
 
-export default ShareLisViewer;
+export default ShareListViewer;
 
 const Container = styled.div`
   display: flex;
@@ -25,10 +25,10 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
-  border: 2px solid black;
+  border: 1px solid #d2d2d2;
   border-left-width: 0;
   border-top-width: 0px;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   border-right-width: 0;
 `;
 const LookContentsHeader = styled.div`
@@ -51,5 +51,9 @@ const Title = styled.div`
   .userName {
     font-size: 18px;
     font-weight: bold;
+  }
+  .time {
+    font-size: 16px;
+    color: #838383;
   }
 `;
