@@ -6,6 +6,7 @@ import ShareList from './components/ShareList';
 import Login from './components/Login';
 import SignUP from './components/SignUp';
 import './App.css';
+import ShareListLookup from './pages/ShareListLookup';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
+          <Route path="/shareLookup" element={<ShareListLookup />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
         </Routes>
