@@ -10,9 +10,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ShelterPatchDto {
-    private Long id;
+    private Long shelterId;
     private String name;
     private String address;
     private int num;
-
 }

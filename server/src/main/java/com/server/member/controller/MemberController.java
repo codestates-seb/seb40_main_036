@@ -38,8 +38,8 @@ public class MemberController {
                 HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity getMember(@PathVariable("id")
+    @GetMapping("/{memberId}")
+    public ResponseEntity getMember(@PathVariable("memberId")
                                     @Positive long Id) {
         Member member = memberService.findMember(Id);
 
@@ -77,8 +77,8 @@ public class MemberController {
         return new ResponseEntity<>("", HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity deleteMember(@PathVariable("id")
+    @DeleteMapping("/{memberId}")
+    public ResponseEntity deleteMember(@PathVariable("memberId")
                                        @Positive long Id){
 
         memberService.deleteMember(Id);

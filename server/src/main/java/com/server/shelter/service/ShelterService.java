@@ -25,41 +25,41 @@ public class ShelterService {
     }
 
     public Shelter updateShelter(Shelter shelter){
-        // ShelterId 확인
-        Shelter findShelter = findVerifiedShelter(shelter.getId());
-        // ShelterAddress 수정
+        // shelterId 확인
+        Shelter findShelter = findVerifiedShelter(shelter.getShelterId());
+        // address 수정
         Optional.ofNullable(shelter.getAddress())
                 .ifPresent(Address->findShelter.setAddress(Address));
-        // ShelterBody 수정
+        // name 수정
         Optional.ofNullable(shelter.getName())
                 .ifPresent(Name ->findShelter.setName(Name));
-        // 수정 날짜 및 시간 수정
+        // 수용 가능 인원 수정
         Optional.ofNullable(shelter.getNum())
                 .ifPresent(Num->findShelter.setNum(Num));
         return shelterRepository.save(findShelter);
     }
 
-    public Shelter findVerifiedShelter(long id){
+    public Shelter findVerifiedShelter(long shelterId){
         Optional<Shelter> optionalShelter=
-                shelterRepository.findById(id);
+                shelterRepository.findById(shelterId);
         Shelter findShelter =
                 optionalShelter.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.Shelter_NOT_FOUND));
         return findShelter;
     }
 
-    public Shelter findShelter(long id){
-        return findVerifiedShelter(id);
+    public Shelter findShelter(long shelterId){
+        return findVerifiedShelter(shelterId);
     }
 
     public Page<Shelter> findShelters(int page, int size){
         return shelterRepository.findAll(PageRequest.of(page,size,
-                Sort.by("Id").descending()));
+                Sort.by("shelterId").descending()));
     }
 
-    public void deleteShelter(long id){
+    public void deleteShelter(long shelterId){
 
-        Shelter findShelter = findVerifiedShelter(id);
+        Shelter findShelter = findVerifiedShelter(shelterId);
         shelterRepository.delete(findShelter);
 
     }

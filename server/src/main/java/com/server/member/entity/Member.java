@@ -1,5 +1,6 @@
 package com.server.member.entity;
 
+import com.server.reservation.entity.Reservation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,7 @@ public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Long id;
+    private Long memberId;
 
     @Column(nullable = false)
     private String name;
@@ -30,5 +31,8 @@ public class Member {
 
     @Column(nullable = false)
     private String phone;
+
+    @OneToOne(mappedBy = "member")
+    private Reservation reservation;
 
 }

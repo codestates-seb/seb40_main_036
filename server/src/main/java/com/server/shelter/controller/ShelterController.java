@@ -41,8 +41,8 @@ public class ShelterController {
                 HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity getShelter(@PathVariable("id")
+    @GetMapping("/{shelterId}")
+    public ResponseEntity getShelter(@PathVariable("shelterId")
                                     @Positive long Id) {
         Shelter shelter = shelterService.findShelter(Id);
 
@@ -64,18 +64,18 @@ public class ShelterController {
                 HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity deleteShelter(@PathVariable("id")
+    @DeleteMapping("/{shelterId}")
+    public ResponseEntity deleteShelter(@PathVariable("shelterId")
                                        @Positive long Id){
 
         shelterService.deleteShelter(Id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity patchShelter(@PathVariable("id") @Positive long Id,
+    @PatchMapping("/{shelterId}")
+    public ResponseEntity patchShelter(@PathVariable("shelterId") @Positive long Id,
                                     @Valid @RequestBody ShelterPatchDto shelterPatchDto) {
-        shelterPatchDto.setId(Id);
+        shelterPatchDto.setShelterId(Id);
         Shelter response = shelterService.updateShelter(shelterMapper.shelterPatchDtoToShelter(shelterPatchDto));
 
         return new ResponseEntity<>(shelterMapper.shelterToShelterResponseDto(response), HttpStatus.OK);
