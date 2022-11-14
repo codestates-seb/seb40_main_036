@@ -36,7 +36,7 @@ const Container = styled.div`
 `;
 const Post = styled.div`
   border: 1px solid #d2d2d2;
-  border-radius: 5px;
+  border-radius: 10px;
   .user {
     display: flex;
     align-items: center;
