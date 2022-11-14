@@ -63,4 +63,5 @@ const DeletEdit = styled.div`
   color: #838383;
   font-size: 18px;
   padding-left: 73px;
+  cursor: pointer;
 `;

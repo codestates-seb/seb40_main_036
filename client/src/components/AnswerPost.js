@@ -4,12 +4,21 @@ function AnswerPost() {
   return (
     <Container>
       <Post>
-        <div className="userProfile">
-          <img src={Profile} alt="profile" />
+        <div className="user">
+          <div className="userProfile">
+            <img src={Profile} alt="profile" />
+          </div>
+          <div className="content">
+            <div className="userName">박해커</div>
+          </div>
         </div>
-        <div className="content">
-          <div className="userName">박해커</div>
-          <AnswerText id="body" cols="5" rows="5"></AnswerText>
+        <AnswerText
+          id="body"
+          cols="3"
+          rows="3"
+          placeholder="댓글을 입력해 주세요."
+        ></AnswerText>
+        <div className="submitButon">
           <button type="submit">등록</button>
         </div>
       </Post>
@@ -20,33 +29,47 @@ function AnswerPost() {
 export default AnswerPost;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
-  border: 1px solid #d2d2d2;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 1px;
-  border-right-width: 0;
   padding: 20px 0;
 `;
 const Post = styled.div`
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  .user {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 10px;
+  }
   .userProfile {
-    padding: 10px;
     img {
-      width: 53px;
+      width: 35px;
     }
   }
   .userName {
+    margin-left: 2px;
     font-weight: bold;
     font-size: 20px;
   }
+  .submitButon {
+    display: flex;
+    justify-content: end;
+    padding: 0 10px 10px 10px;
+  }
+  button {
+    background-color: #008505;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+  }
 `;
 const AnswerText = styled.textarea`
-  padding: 50px 10px 10px 10px;
+  padding: 10px;
   resize: none;
   width: 100%;
-  border-radius: 10px;
+  border: none;
 `;
