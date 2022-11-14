@@ -29,15 +29,14 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
-  border: 2px solid #d2d2d2;
+  border: 1px solid #d2d2d2;
   border-left-width: 0;
   border-top-width: 0;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   border-right-width: 0;
   padding: 20px 0;
 `;
 const AnswerContents = styled.div`
-  padding: 20px 0 30px 0;
   font-size: 18px;
   display: flex;
   flex-direction: row;
@@ -63,4 +62,5 @@ const DeletEdit = styled.div`
   gap: 0px 5px;
   color: #838383;
   font-size: 18px;
+  padding-left: 73px;
 `;
