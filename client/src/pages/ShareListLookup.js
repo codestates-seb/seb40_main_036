@@ -18,7 +18,7 @@ function ShareListLookup() {
 
 export default ShareListLookup;
 const Contents = styled.div`
-  margin-top: 96px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
