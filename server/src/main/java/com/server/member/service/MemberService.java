@@ -37,26 +37,26 @@ public class MemberService {
         return mem;
     }
 
-    public Member findMember(long id){
-        return findVerifiedMember(id);
+    public Member findMember(long memberId){
+        return findVerifiedMember(memberId);
     }
 
 
     public Page<Member> findMembers(int page, int size){
         return memberRepository.findAll(PageRequest.of(page,size,
-                Sort.by("Id").descending()));
+                Sort.by("memberId").descending()));
     }
 
-    public void deleteMember(long id){
+    public void deleteMember(long memberId){
 
-        Member findMember = findVerifiedMember(id);
+        Member findMember = findVerifiedMember(memberId);
         memberRepository.delete(findMember);
 
     }
 
-    public Member findVerifiedMember(long id){
+    public Member findVerifiedMember(long memberId){
         Optional<Member> optionalMember=
-                memberRepository.findById(id);
+                memberRepository.findById(memberId);
         Member findMember =
                 optionalMember.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.Member_NOT_FOUND));

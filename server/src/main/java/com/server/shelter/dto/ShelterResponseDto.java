@@ -9,9 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class ShelterResponseDto {
-    private Long id;
+    private Long shelterId;
     private String name;
     private String address;
     private int num;
