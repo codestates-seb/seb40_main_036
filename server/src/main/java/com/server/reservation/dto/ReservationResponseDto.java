@@ -17,5 +17,5 @@ public class ReservationResponseDto {
     private long shelterId;
     private long num;
     private LocalDateTime createdAt;
-    private LocalDateTime modified;
+    private LocalDateTime modifiedAt;
 }
