@@ -2,6 +2,7 @@ import Pagination from './pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const tag = ['구로구', '강남구', '관악구', '동작구', '마포구'];
 
@@ -32,6 +33,24 @@ function ShareList() {
           <button>글쓰기</button>
         </Row>
         <Pagination />
+        <SearchContainer>
+          <select id="search">
+            <option>제목+내용</option>
+            <option>제목</option>
+            <option>내용</option>
+            <option>이름</option>
+          </select>
+          <input
+            type="text"
+            maxLength="20"
+            className="searchInput"
+            name="search"
+            placeholder="검색어를 입력해주세요."
+          />
+          <div className="searchClick">
+            <FaSearch />
+          </div>
+        </SearchContainer>
       </ShareListContent>
     </ShareListContainer>
   );
@@ -77,7 +96,6 @@ const SelectBox = styled.div`
   select {
     width: 100px;
     height: 40px;
-    background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
@@ -97,5 +115,36 @@ const Row = styled.div`
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
+  }
+`;
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  select {
+    font-size: 18px;
+    width: 110px;
+    border-radius: 5px 0 0 5px;
+    border-color: #919eab;
+  }
+  .searchInput {
+    font-size: 18px;
+    width: 450px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #919eab;
+    border-right: 0px;
+    border-left: 0px;
+  }
+  .searchClick {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #919eab;
+    font-size: 24px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
   }
 `;
