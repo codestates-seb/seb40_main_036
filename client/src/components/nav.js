@@ -125,8 +125,8 @@ const Header = styled.header`
       display: flex;
       border: 4px solid #008505;
       border-top: none;
-      border-right: none;
       border-bottom-left-radius: 15px;
+      padding-bottom: 8px;
     }
     ul {
       align-items: center;
