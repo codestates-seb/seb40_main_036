@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import DropDown from './Dropdown';
 
 const WriteForm = () => {
   return (
     <WriteFormStyle>
       <form className="input">
+        <div className="region">지역선택</div>
+        <DropDown />
         <div className="title">
           <label className="titleText" htmlFor="titleWrite">
             제목
@@ -35,6 +38,12 @@ const WriteFormStyle = styled.div`
   box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.25);
   margin: 60px auto;
 
+  .region {
+    padding-left: 100px;
+    padding-top: 60px;
+    font-weight: 400;
+    font-size: 24px;
+  }
   .title {
     padding: 50px;
   }
