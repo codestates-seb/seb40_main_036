@@ -19,6 +19,12 @@ function ShareList() {
             <h1>물품 나눔 게시판</h1>
           </Header>
           <SelectBox>
+            <select className="city">
+              <option>서울특별시</option>
+              <option>경기도</option>
+              <option>경상북도</option>
+              <option>경상남도</option>
+            </select>
             <select onChange={handleSelect} value={Selected}>
               {tag.map((item) => (
                 <option value={item} key={item}>
@@ -64,7 +70,7 @@ const ShareListContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 40px 24px;
   justify-content: center;
 `;
 
@@ -75,12 +81,10 @@ const ShareListContent = styled.div`
 `;
 
 const ShareListTitle = styled.div`
-  padding: 0 24px;
+  padding: 24px 24px 0;
 `;
 
 const Header = styled.div`
-  height: 50px;
-  margin: 0 0 12px;
   .h1 {
     font-size: 27px;
     margin: 0 12px 12px 0;
@@ -92,7 +96,10 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
-
+  .city {
+    width: 150px;
+    margin-right: 10px;
+  }
   select {
     width: 100px;
     height: 40px;
