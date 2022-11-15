@@ -6,7 +6,12 @@ function ShareListViewer() {
       <ShareContentsHeader>
         <div className="listLink">물품 나눔 게시판</div>
         <ShareContentsTitle>
-          <h1>물이 부족해요 물 나눔 부탁드립니다.</h1>
+          <div className="header">
+            <div className="tagContainer">
+              <div className="tag">구로구</div>
+            </div>
+            <h1>물이 부족해요 물 나눔 부탁드립니다.</h1>
+          </div>
           <div className="userContainer">
             <div className="userProfile">
               <img src={Profile} alt="profile" />
@@ -46,7 +51,16 @@ const ShareContentsTitle = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
-
+  .header {
+    display: flex;
+  }
+  .tag {
+    padding: 5px 15px;
+    align-items: center;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
   h1 {
     font-size: 24px;
   }
