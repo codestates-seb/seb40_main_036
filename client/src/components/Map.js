@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
-
 const Map = (props) => {
   useEffect(() => {
     //let container = document.getElementById('map_div');
