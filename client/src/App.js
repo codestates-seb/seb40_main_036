@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react'; // eslint-disable-line no-unused-vars
 import Main from './pages/main';
 import Nav from './components/nav';
@@ -8,12 +8,16 @@ import SignUP from './components/SignUp';
 import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
+//import WriteForm from './components/WriteForm';
+//import DropDown from './components/Dropdown';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Nav />
+        {/* <WriteForm /> */}
+        {/* <DropDown /> */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />

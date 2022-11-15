@@ -1,66 +1,56 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../components/button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
+import Map from '../components/Map';
 
 const Main = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.innerHTML = `         
-            function initTmap() {
-                var map = new Tmapv3.Map("TMapApp", {
-                    center: new Tmapv3.LatLng(37.566481622437934,126.98502302169841),
-                    width: "100%",
-                    height: "100%",
-                    zoom:15
-                });
-            }
-            
-            initTmap();
-       `;
-    script.type = 'text/javascript';
-    script.async = 'async';
-    document.head.appendChild(script);
-  }, []);
-  const onclickhandle = () => {
-    console.log('test');
+  const [locationX, setlocationX] = useState(33.450701);
+  const [locationY, setlocationY] = useState(126.570667);
+  const [loading, setloading] = useState(false);
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      // GPS를 지원하면
+      setloading(true);
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          setlocationX(position.coords.latitude);
+          setlocationY(position.coords.longitude);
+        },
+        function (error) {
+          console.error(error);
+        },
+        {
+          enableHighAccuracy: false,
+          maximumAge: 0,
+          timeout: Infinity,
+        }
+      );
+    } else {
+      alert('GPS를 지원하지 않습니다');
+    }
   };
   return (
     <>
-      <MapWrapper id="TMapApp" />
+      <Map
+        x={locationX}
+        y={locationY}
+        loading={loading}
+        setloading={setloading}
+      />
       <Positionrelative>
-        <Button
-          onclick={onclickhandle}
-          text={<FontAwesomeIcon icon={solid('location-crosshairs')} />}
-        />
-        <Button onclick={onclickhandle} text={'가장 가까운 대피소찾기'} />
+        <button onClick={getLocation}>가장 가까운 대피소찾기</button>
       </Positionrelative>
     </>
   );
 };
 export default Main;
-const MapWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-`;
+
 const Positionrelative = styled.div`
   position: relative;
   button {
     position: fixed;
     border: none;
     right: 40px;
-  }
-  button:first-child {
-    bottom: 150px;
-    padding: 12px;
-    border-radius: 50%;
-    background: white;
-    border: 2px solid black;
-  }
-  button:last-child {
     bottom: 40px;
     background: #008505;
     font-size: 13px;
