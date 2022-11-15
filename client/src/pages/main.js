@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../components/button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
 import Map from '../components/Map';
 
 const Main = () => {
   const [locationX, setlocationX] = useState(33.450701);
   const [locationY, setlocationY] = useState(126.570667);
   const [loading, setloading] = useState(false);
-
-  const onclickhandle = () => {
-    console.log('test');
-  };
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -45,11 +38,7 @@ const Main = () => {
         setloading={setloading}
       />
       <Positionrelative>
-        <Button
-          text={<FontAwesomeIcon icon={solid('location-crosshairs')} />}
-          onclick={getLocation}
-        />
-        <Button onclick={onclickhandle} text={'가장 가까운 대피소찾기'} />
+        <button onClick={getLocation}>가장 가까운 대피소찾기</button>
       </Positionrelative>
     </>
   );
@@ -62,19 +51,6 @@ const Positionrelative = styled.div`
     position: fixed;
     border: none;
     right: 40px;
-  }
-  button:first-child {
-    bottom: 150px;
-    padding: 12px;
-    border-radius: 50%;
-    background: white;
-    border: 1px solid #008505;
-    color: #008505;
-  }
-  button:first-child:hover {
-    background: lightgray;
-  }
-  button:last-child {
     bottom: 40px;
     background: #008505;
     font-size: 13px;
@@ -83,7 +59,7 @@ const Positionrelative = styled.div`
     padding: 24px 36px;
     border-radius: 10px;
   }
-  button:last-child:hover {
+  button:hover {
     background: #005603;
   }
 `;
