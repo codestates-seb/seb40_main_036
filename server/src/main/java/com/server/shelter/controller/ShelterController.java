@@ -33,7 +33,7 @@ public class ShelterController {
     private final ShelterMapper shelterMapper;
 
     @PostMapping
-    public ResponseEntity postShelter(@Validated @RequestBody ShelterPostDto shelterPostDto){
+    public ResponseEntity postShelter(@Valid @RequestBody ShelterPostDto shelterPostDto){
 
         Shelter shelter = shelterService.createShelter(shelterMapper.shelterPostDtoToShelter(shelterPostDto));
         return new ResponseEntity<>(
