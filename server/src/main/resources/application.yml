@@ -1,15 +1,15 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/salida
+    # url: jdbc:mysql://localhost:3306/salida
     username: root
-    password: ken343611@
+    # password: 3525
 
   jpa:
     show-sql: true
     hibernate:
       format_sql: true
-      ddl-auto: none
+      ddl-auto: create
 
   logging:
     level:

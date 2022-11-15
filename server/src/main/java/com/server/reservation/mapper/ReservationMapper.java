@@ -8,6 +8,7 @@ import com.server.reservation.entity.Reservation;
 import com.server.shelter.entity.Shelter;
 import org.mapstruct.Mapper;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface ReservationMapper {
@@ -31,21 +32,37 @@ public interface ReservationMapper {
     }
 
     Reservation reservationPatchDtoToReservation(ReservationPatchDto reservationPatchDto);
-    ReservationResponseDto reservationToReservationResponseDto(Reservation reservation);
+    // ReservationResponseDto reservationToReservationResponseDto(Reservation reservation);
 
-//    default ReservationResponseDto reservationToReservationResponseDto(Reservation reservation) {
-//        ReservationResponseDto reservationResponseDto = new ReservationResponseDto();
-//
-//        // reservationId
-//        reservationResponseDto.setReservationId(reservation.getReservationId());
-//        // memberId
-//        reservationResponseDto.setMemberId(reservationResponseDto.getMemberId());
-//        // shelterId
-//        reservationResponseDto.setShelterId(reservationResponseDto.getShelterId());
-//        // num
-//        reservationResponseDto.setNum(reservationResponseDto.getNum());
-//        return reservationResponseDto;
-//    }
+    default ReservationResponseDto reservationToReservationResponseDto(Reservation reservation) {
+        ReservationResponseDto reservationResponseDto = new ReservationResponseDto();
+        // reservationId
+        reservationResponseDto.setReservationId(reservation.getReservationId());
+        // memberId
+        reservationResponseDto.setMemberId(reservation.getMember().getMemberId());
+        // shelterId
+        reservationResponseDto.setShelterId(reservation.getShelter().getShelterId());
+        // num
+        reservationResponseDto.setNum(reservation.getNum());
+        // createdAt
+        reservationResponseDto.setCreatedAt(reservation.getCreatedAt());
+        // modifiedAt
+        reservationResponseDto.setModifiedAt(reservation.getModifiedAt());
 
-    List<ReservationResponseDto> reservationsToReservationResponseDtos(List<Reservation> reservations);
+        return reservationResponseDto;
+    }
+
+    default List<ReservationResponseDto> reservationsToReservationResponseDtos(List<Reservation> reservations){
+        return reservations.stream()
+                .map(reservation -> ReservationResponseDto
+                .builder()
+                        .reservationId(reservation.getReservationId())
+                        .memberId(reservation.getMember().getMemberId())
+                        .shelterId(reservation.getShelter().getShelterId())
+                        .num(reservation.getNum())
+                        .createdAt(reservation.getCreatedAt())
+                        .modifiedAt(reservation.getModifiedAt())
+                        .build())
+                .collect(Collectors.toList());
+    }
 }
