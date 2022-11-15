@@ -8,6 +8,7 @@ public enum ExceptionCode {
     Answer_NOT_FOUND(404, "Answer not found"),
     Shelter_NOT_FOUND(404, "Shelter not found"),
     Reservation_NOT_FOUND(404, "Reservation not found"),
+    ReservationInfo_NOT_FOUND(404, "ReservationInfo not found"),
     StuffAnswer_NOT_FOUND(404, "StuffAnswer not found"),
     StuffQuestion_NOT_FOUND(404, "StuffQuestion not found"),
 
@@ -16,6 +17,7 @@ public enum ExceptionCode {
     QUESTION_EXISTS(409, "Question exists"),
     ANSWER_EXISTS(409, "Answer exists"),
     RESERVATION_EXISTS(409, "Reservation exists"),
+    RESERVATIONINFO_EXISTS(409, "ReservationInfo exists"),
     STUFFQUESTION_EXISTS(409, "StuffQuestion exists"),
     STUFFANSWER_EXISTS(409, "StuffAnswer exists");
 

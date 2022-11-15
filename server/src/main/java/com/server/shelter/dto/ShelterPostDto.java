@@ -14,6 +14,6 @@ import lombok.Setter;
 public class ShelterPostDto {
     private String name;
     private String address;
-    private int num;
+    private int capacity;
 
 }

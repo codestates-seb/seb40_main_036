@@ -34,8 +34,8 @@ public class ShelterService {
         Optional.ofNullable(shelter.getName())
                 .ifPresent(Name ->findShelter.setName(Name));
         // 수용 가능 인원 수정
-        Optional.ofNullable(shelter.getNum())
-                .ifPresent(Num->findShelter.setNum(Num));
+        Optional.ofNullable(shelter.getCapacity())
+                .ifPresent(Capacity->findShelter.setCapacity(Capacity));
         return shelterRepository.save(findShelter);
     }
 

@@ -1,6 +1,7 @@
 package com.server.reservation.entity;
 
 import com.server.member.entity.Member;
+import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.shelter.entity.Shelter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,6 +12,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -40,4 +43,7 @@ public class Reservation {
 
     @LastModifiedDate
     private LocalDateTime modifiedAt  = LocalDateTime.now();
+
+    @OneToMany(mappedBy = "reservation")
+    private List<ReservationInfo> reservationInfos = new ArrayList<>();
 }
