@@ -12,12 +12,10 @@ function AnswerPost() {
             <div className="userName">박해커</div>
           </div>
         </div>
-        <AnswerText
-          id="body"
-          cols="3"
-          rows="3"
+        <textarea
+          className="answer"
           placeholder="댓글을 입력해 주세요."
-        ></AnswerText>
+        ></textarea>
         <div className="submitButon">
           <button type="submit">등록</button>
         </div>
@@ -57,6 +55,12 @@ const Post = styled.div`
     justify-content: end;
     padding: 0 10px 10px 10px;
   }
+  textarea {
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    border: none;
+  }
   button {
     background-color: #008505;
     color: #ffffff;
@@ -66,10 +70,4 @@ const Post = styled.div`
     height: 40px;
     cursor: pointer;
   }
-`;
-const AnswerText = styled.textarea`
-  padding: 10px;
-  resize: none;
-  width: 100%;
-  border: none;
 `;
