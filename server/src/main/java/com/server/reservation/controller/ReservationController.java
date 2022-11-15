@@ -1,5 +1,7 @@
 package com.server.reservation.controller;
 
+import com.server.member.entity.Member;
+import com.server.member.service.MemberService;
 import com.server.reservation.dto.ReservationPatchDto;
 import com.server.reservation.dto.ReservationPostDto;
 import com.server.reservation.entity.Reservation;
@@ -7,6 +9,8 @@ import com.server.reservation.mapper.ReservationMapper;
 import com.server.reservation.service.ReservationService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
+import com.server.shelter.entity.Shelter;
+import com.server.shelter.service.ShelterService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -25,16 +29,16 @@ import java.util.List;
 public class ReservationController {
 
     private final ReservationService reservationService;
-
     private final ReservationMapper reservationMapper;
+    private final MemberService memberService;
+    private final ShelterService shelterService;
 
     @PostMapping
-    public ResponseEntity postReservation(@Validated @RequestBody ReservationPostDto reservationPostDto){
+    public ResponseEntity postReservation(@Valid @RequestBody ReservationPostDto reservationPostDto){
 
         Reservation reservation = reservationService.createReservation(reservationMapper.reservationPostDtoToReservation(reservationPostDto));
         return new ResponseEntity<>(
-                reservationMapper.reservationToReservationResponseDto(reservation),
-                HttpStatus.CREATED);
+                new SingleResponseDto<>(reservationMapper.reservationToReservationResponseDto(reservation)), HttpStatus.CREATED);
     }
 
     @PatchMapping("/{reservationId}")
