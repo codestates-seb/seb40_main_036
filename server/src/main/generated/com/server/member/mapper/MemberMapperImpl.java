@@ -4,13 +4,15 @@ import com.server.member.dto.MemberLoginDto;
 import com.server.member.dto.MemberPostDto;
 import com.server.member.dto.MemberResponseDto;
 import com.server.member.entity.Member;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-12T20:50:51+0900",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.17 (Azul Systems, Inc.)"
+    date = "2022-11-15T16:41:38+0900",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class MemberMapperImpl implements MemberMapper {
@@ -51,20 +53,34 @@ public class MemberMapperImpl implements MemberMapper {
             return null;
         }
 
-        long id = 0L;
+        long memberId = 0L;
         String name = null;
         String email = null;
         String phone = null;
 
-        if ( member.getId() != null ) {
-            id = member.getId();
+        if ( member.getMemberId() != null ) {
+            memberId = member.getMemberId();
         }
         name = member.getName();
         email = member.getEmail();
         phone = member.getPhone();
 
-        MemberResponseDto memberResponseDto = new MemberResponseDto( id, name, email, phone );
+        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, name, email, phone );
 
         return memberResponseDto;
+    }
+
+    @Override
+    public List<MemberResponseDto> membersToMemberResponseDtos(List<Member> members) {
+        if ( members == null ) {
+            return null;
+        }
+
+        List<MemberResponseDto> list = new ArrayList<MemberResponseDto>( members.size() );
+        for ( Member member : members ) {
+            list.add( memberToMemberResponseDto( member ) );
+        }
+
+        return list;
     }
 }
