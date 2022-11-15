@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Logo from './../img/SalidaLogo.png';
 
 const Login = () => {
   return (
     <LoginForm>
       <div className="loginForm">
         <div className="logoImg">
-          <img src="img/SalidaLogo.png" alt="logo" />
+          <img className="logoImg" src={Logo} alt="logo" />
         </div>
         <LoginInput>
           <form className="loginInput">
             <div className="idPwBox">
               <label className="idPwText" htmlFor="idWrite">
-                아이디
+                이메일
               </label>
               <div>
                 <input className="idPwInput" type="text" id="idWrite" />
@@ -77,6 +78,7 @@ const LoginInput = styled.div`
   }
   .accountExistence {
     margin-top: 15px;
+    text-align: center;
   }
   .accountExistence a {
     padding-left: 7px;
@@ -89,8 +91,6 @@ const LoginForm = styled.div`
     border-radius: 5px;
     width: 340px;
     height: 458px;
-    left: 546px;
-    top: 290px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -98,5 +98,6 @@ const LoginForm = styled.div`
   }
   .logoImg {
     margin-top: 15px;
+    text-align: center;
   }
 `;
