@@ -1,25 +1,60 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import Incheon from './../static/Incheon.json';
+import Marker from './../img/locationDotSolid.svg';
+import SideNav from '../components/SideNav';
+
+const { kakao } = window;
+var geocoder = new kakao.maps.services.Geocoder();
+const dummy = Incheon.map((x) => {
+  let obj = {};
+  obj['title'] = x.name;
+  geocoder.addressSearch(x.geolocation, function (result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+      obj['latlng'] = new kakao.maps.LatLng(result[0].y, result[0].x);
+    }
+  });
+  return obj;
+});
+
 const Map = (props) => {
-  useEffect(() => {
-    //let container = document.getElementById('map_div');
-    let container = 'map_div';
+  const [open, setopen] = useState(false);
+  const [title, setTitle] = useState('');
+  const Mapping = async () => {
+    let container = document.getElementById('map');
     let options = {
-      // 지도가 생성될 div
-      center: new window.Tmapv2.LatLng(props.x, props.y),
-      zoom: 16, // 지도 줌레벨
+      center: new kakao.maps.LatLng(props.x, props.y),
+      level: 5,
     };
-    const Mapping = async () => {
-      await new window.Tmapv2.Map(container, options);
-      props.setloading(false);
-    };
+    let map = await new kakao.maps.Map(container, options);
+    var markerImage = new kakao.maps.MarkerImage(
+      Marker,
+      new kakao.maps.Size(31, 35)
+    );
+    for (let i = 0; i < dummy.length; i++) {
+      let marker = new kakao.maps.Marker({
+        map: map,
+        position: dummy[i].latlng,
+        title: dummy[i].title,
+        image: markerImage,
+        clickable: true,
+      });
+      kakao.maps.event.addListener(marker, 'click', () => {
+        setopen(true);
+        setTitle(marker.getTitle());
+      });
+    }
+    props.setloading(false);
+  };
+  useEffect(() => {
     Mapping();
   }, [props.x, props.y]);
 
   return (
     <>
+      {open && <SideNav setopen={setopen} location={title} />}
       <LoadingIcon
         icon={solid('spinner')}
         size={'3x'}
@@ -27,7 +62,7 @@ const Map = (props) => {
         pulse={true}
         style={props.loading ? { display: 'block' } : { display: 'none' }}
       />
-      <MapWrapper id="map_div"></MapWrapper>
+      <MapWrapper id="map"></MapWrapper>
     </>
   );
 };
@@ -45,5 +80,5 @@ const MapWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 `;
