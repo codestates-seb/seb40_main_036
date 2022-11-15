@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react'; // eslint-disable-line no-unused-vars
-import Main from './pages/main';
-import Nav from './components/nav';
+import Main from './pages/Main';
+import Nav from './components/Nav';
 import ShareList from './components/ShareList';
 import Login from './components/Login';
 import SignUP from './components/SignUp';
