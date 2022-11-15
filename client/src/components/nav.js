@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Logo from './../img/logo.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [Ishide, setIsHide] = useState(true);
@@ -34,10 +35,10 @@ const Nav = () => {
         <div className="navbar-member flex">
           <ul className="flex">
             <li>
-              <a href="...">로그인</a>
+              <Link to="/login">로그인</Link>
             </li>
             <li>
-              <a href="...">회원가입</a>
+              <Link to="/signup">회원가입</Link>
             </li>
           </ul>
         </div>

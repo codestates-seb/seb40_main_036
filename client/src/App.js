@@ -6,12 +6,14 @@ import ShareList from './components/ShareList';
 import Login from './components/Login';
 import SignUP from './components/SignUp';
 import './App.css';
+// import WriteForm from './components/WriteForm';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Nav />
+        {/* <WriteForm /> */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
