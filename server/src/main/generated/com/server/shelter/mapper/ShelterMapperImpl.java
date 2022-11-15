@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-15T19:50:46+0900",
+    date = "2022-11-16T01:56:55+0900",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -27,7 +27,7 @@ public class ShelterMapperImpl implements ShelterMapper {
 
         shelter.setName( shelterPostDto.getName() );
         shelter.setAddress( shelterPostDto.getAddress() );
-        shelter.setNum( shelterPostDto.getNum() );
+        shelter.setCapacity( shelterPostDto.getCapacity() );
 
         return shelter;
     }
@@ -43,7 +43,7 @@ public class ShelterMapperImpl implements ShelterMapper {
         shelter.setShelterId( shelterPatchDto.getShelterId() );
         shelter.setName( shelterPatchDto.getName() );
         shelter.setAddress( shelterPatchDto.getAddress() );
-        shelter.setNum( shelterPatchDto.getNum() );
+        shelter.setCapacity( shelterPatchDto.getCapacity() );
 
         return shelter;
     }
@@ -59,7 +59,7 @@ public class ShelterMapperImpl implements ShelterMapper {
         shelterResponseDto.setShelterId( shelter.getShelterId() );
         shelterResponseDto.setName( shelter.getName() );
         shelterResponseDto.setAddress( shelter.getAddress() );
-        shelterResponseDto.setNum( shelter.getNum() );
+        shelterResponseDto.setCapacity( shelter.getCapacity() );
 
         return shelterResponseDto;
     }

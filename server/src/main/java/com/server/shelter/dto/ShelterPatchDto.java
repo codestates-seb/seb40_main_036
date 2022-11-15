@@ -13,5 +13,5 @@ public class ShelterPatchDto {
     private Long shelterId;
     private String name;
     private String address;
-    private int num;
+    private int capacity;
 }
