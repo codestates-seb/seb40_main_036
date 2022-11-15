@@ -1,4 +1,4 @@
-import Pagination from './pagination';
+import Pagination from './Pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 
