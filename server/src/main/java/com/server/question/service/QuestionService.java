@@ -30,12 +30,7 @@ public class QuestionService {
 
     public Question createQuestion(Question question){
 
-//        if(!memberRepository.existsById(question.getMemberId())){
-//            throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
-//        }
-
-        Member member=memberRepository.findByMemberId(question.getMemberId());
-        if(member==null){
+        if(!memberRepository.existsById(question.getMemberId())){
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
@@ -50,7 +45,7 @@ public class QuestionService {
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
-        Question findquestion = findVerifiedquestion(question.getQuestionId());
+        Question findquestion = findVerifiedQuestion(question.getQuestionId());
 
         // address 수정
         Optional.ofNullable(question.getQuestionTitle())
@@ -67,7 +62,7 @@ public class QuestionService {
         return questionRepository.save(findquestion);
 
     }
-    public Question findVerifiedquestion(long questionId){
+    public Question findVerifiedQuestion(long questionId){
         Optional<Question> optionalquestion=
                 questionRepository.findById(questionId);
         Question findquestion =
@@ -76,10 +71,8 @@ public class QuestionService {
         return findquestion;
     }
 
-
     public Question findQuestion(long questionId){
-
-        return findVerifiedquestion(questionId);
+        return findVerifiedQuestion(questionId);
     }
 
     public List<Question> searchQuestion(String word){
@@ -92,7 +85,7 @@ public class QuestionService {
     }
 
     public void deleteQuestion(long questionId){
-        Question question=findVerifiedquestion(questionId);
+        Question question=findVerifiedQuestion(questionId);
         questionRepository.delete(question);
     }
 

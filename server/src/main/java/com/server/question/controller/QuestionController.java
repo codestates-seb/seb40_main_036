@@ -7,6 +7,7 @@ import com.server.question.entity.Question;
 import com.server.question.mapper.QuestionMapper;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
+import com.server.response.SingleResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -29,7 +30,7 @@ public class QuestionController {
     private final QuestionMapper questionMapper;
 
     @PostMapping
-    public ResponseEntity questionPost(@Validated QuestionPostDto questionPostDto){
+    public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
 
         Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto));
 
@@ -38,8 +39,8 @@ public class QuestionController {
 
     }
 
-    @PatchMapping("{questionId}")
-    public ResponseEntity patchPost(@PathVariable("questionId") @Positive Long questionId,
+    @PatchMapping("/{questionId}")
+    public ResponseEntity patchQuestion(@PathVariable("questionId") @Positive long questionId,
                                     @Valid @RequestBody QuestionPatchDto questionPatchDto){
 
         Question question=questionMapper.questionPatchDtoToQuestion(questionPatchDto);
@@ -53,13 +54,19 @@ public class QuestionController {
 
 
     @GetMapping("/{questionId}")
-    public ResponseEntity getQuestion(@PathVariable("questionId") @Positive Long questionId){
-        Question question=questionService.findQuestion(questionId);
+    public ResponseEntity getQuestion(@PathVariable("questionId")
+                                    @Positive long Id) {
+        Question question = questionService.findQuestion(Id);
 
-        return new ResponseEntity(questionMapper.questionToQuestionResponseDto(question),HttpStatus.OK);
+        return new ResponseEntity<>(
+
+                new SingleResponseDto(questionMapper.questionToQuestionResponseDto(question)),
+                HttpStatus.OK);
+
     }
 
-    @GetMapping("/{word}")
+
+    @GetMapping("/search/{word}")
     public ResponseEntity searchQuestion(@PathVariable("word") String word){
         List<Question> questionList=questionService.searchQuestion(word);
 
@@ -77,8 +84,8 @@ public class QuestionController {
                 HttpStatus.OK);
     }
 
-    @DeleteMapping("questionId")
-    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive Long questionId){
+    @DeleteMapping("/{questionId}")
+    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
 
         questionService.deleteQuestion(questionId);
 

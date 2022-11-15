@@ -3,8 +3,9 @@ package com.server.question.mapper;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.dto.QuestionResponseDto;
+import com.server.question.dto.QuestionResponseDto.QuestionResponseDtoBuilder;
 import com.server.question.entity.Question;
-import java.time.format.DateTimeFormatter;
+import com.server.question.entity.Question.QuestionBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-15T14:40:55+0900",
+    date = "2022-11-15T16:41:38+0900",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -24,14 +25,14 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        Question question = new Question();
+        QuestionBuilder question = Question.builder();
 
-        question.setMemberId( questionPostDto.getMemberId() );
-        question.setQuestionTitle( questionPostDto.getQuestionTitle() );
-        question.setQuestionContent( questionPostDto.getQuestionContent() );
-        question.setQuestionTag( questionPostDto.getQuestionTag() );
+        question.memberId( questionPostDto.getMemberId() );
+        question.questionTitle( questionPostDto.getQuestionTitle() );
+        question.questionContent( questionPostDto.getQuestionContent() );
+        question.questionTag( questionPostDto.getQuestionTag() );
 
-        return question;
+        return question.build();
     }
 
     @Override
@@ -40,11 +41,11 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        Question question = new Question();
+        QuestionBuilder question = Question.builder();
 
-        question.setMemberId( questionPatchDto.getMemberId() );
+        question.memberId( questionPatchDto.getMemberId() );
 
-        return question;
+        return question.build();
     }
 
     @Override
@@ -53,26 +54,15 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        Long memberId = null;
-        String questionCreated = null;
-        String questionModifed = null;
+        QuestionResponseDtoBuilder questionResponseDto = QuestionResponseDto.builder();
 
-        memberId = question.getMemberId();
-        if ( question.getQuestionCreated() != null ) {
-            questionCreated = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format( question.getQuestionCreated() );
-        }
-        if ( question.getQuestionModifed() != null ) {
-            questionModifed = DateTimeFormatter.ISO_LOCAL_DATE_TIME.format( question.getQuestionModifed() );
-        }
+        questionResponseDto.questionId( question.getQuestionId() );
+        questionResponseDto.memberId( question.getMemberId() );
+        questionResponseDto.questionTitle( question.getQuestionTitle() );
+        questionResponseDto.questionContent( question.getQuestionContent() );
+        questionResponseDto.questionTag( question.getQuestionTag() );
 
-        Long id = null;
-        String title = null;
-        String content = null;
-        String tag = null;
-
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( id, memberId, title, content, tag, questionCreated, questionModifed );
-
-        return questionResponseDto;
+        return questionResponseDto.build();
     }
 
     @Override

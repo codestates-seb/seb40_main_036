@@ -1,26 +1,24 @@
 package com.server.question.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+@Builder
 @AllArgsConstructor
 @Getter
 @Setter
 public class QuestionResponseDto {
 
-    private Long Id;
+    private Long questionId;
 
     private Long memberId;
 
-    private String title;
+    private String questionTitle;
 
-    private String content;
+    private String questionContent;
 
-    private String tag;
-
-    private String questionCreated;
-
-    private String questionModifed;
+    private String questionTag;
 
 }
