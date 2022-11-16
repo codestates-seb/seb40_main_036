@@ -72,8 +72,9 @@ const SideWrapper = styled.aside`
     display: flex;
     justify-content: space-between;
     width: 160px;
-    margin: 0 auto;
+    margin: 20px auto;
     align-items: center;
+
     > svg {
       margin-right: 16px;
     }
