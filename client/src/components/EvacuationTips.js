@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import EarthquakeTipsContents from './EarthquakeTipsContents';
+import CongestionTips from './CongestionTips';
 
-const calamity = ['지진', '군중밀집', '태풍', '해일'];
 function EvacuationTips() {
-  const [Selected, setSelected] = useState();
+  const [Selected, setSelected] = useState('earthquake');
   const handleSelect = (e) => {
     setSelected(e.target.value);
   };
+  const selectComponent = {
+    earthquake: <EarthquakeTipsContents />,
+    congestion: <CongestionTips />,
+  };
+  console.log(Selected);
+  console.log(selectComponent);
   return (
     <TipstContainer>
       <TipsContent>
@@ -17,15 +23,12 @@ function EvacuationTips() {
           </Header>
           <SelectBox>
             <select onChange={handleSelect} value={Selected}>
-              {calamity.map((item) => (
-                <option value={item} key={item}>
-                  {item}
-                </option>
-              ))}
+              <option value="earthquake">지진</option>
+              <option value="congestion">군중밀집</option>
             </select>
           </SelectBox>
+          {Selected && <Content>{selectComponent[Selected]}</Content>}
         </TipsTitle>
-        <EarthquakeTipsContents />
       </TipsContent>
     </TipstContainer>
   );
@@ -39,7 +42,7 @@ const TipstContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 0;
   justify-content: center;
 `;
 
@@ -59,7 +62,7 @@ const Header = styled.div`
     margin: 0 12px 12px 0;
   }
 `;
-
+const Content = styled.div``;
 const SelectBox = styled.div`
   display: flex;
   justify-content: end;
@@ -73,5 +76,6 @@ const SelectBox = styled.div`
     border-color: #d2d2d2;
     font-size: 20px;
     padding: 10px;
+    cursor: pointer;
   }
 `;

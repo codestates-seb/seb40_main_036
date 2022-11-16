@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function ShareListContents() {
+function ReviewListContents() {
   return (
     <Container>
       <ContentsTitle>
@@ -11,7 +11,7 @@ function ShareListContents() {
       </ContentsTitle>
       <ContentsList>
         <div className="num">01</div>
-        <div className="title">물이 부족합니다</div>
+        <div className="title">봉천 초등학교 정보입니다.</div>
         <div className="writer">김코딩</div>
         <div className="date">2022.11.11</div>
       </ContentsList>
@@ -19,7 +19,7 @@ function ShareListContents() {
   );
 }
 
-export default ShareListContents;
+export default ReviewListContents;
 
 const Container = styled.div`
   border: 3px solid black;

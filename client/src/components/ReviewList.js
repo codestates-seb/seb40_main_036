@@ -1,15 +1,10 @@
 import Pagination from './pagination';
 import styled from 'styled-components';
-import ShareListContents from './ShareListContents';
+import ReviewListContents from './ReviewListContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
-// const BREAK_POINT_MOBLE = 479;
-// const BREAK_POINT_TABLET = 768;
-// const BREAK_POINT_PC = 1024;
-
-function ShareList() {
+function ReviewList() {
   const [selectValue, setSelectValue] = useState('');
   const onChangeSelect = (e) => {
     setSelectValue(e.target.value);
@@ -19,7 +14,7 @@ function ShareList() {
       <ShareListContent>
         <ShareListTitle>
           <Header>
-            <h1>물품 나눔 게시판</h1>
+            <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
             <select
@@ -53,11 +48,9 @@ function ShareList() {
             </select>
           </SelectBox>
         </ShareListTitle>
-        <ShareListContents />
+        <ReviewListContents />
         <Row>
-          <Link to="/writeForm">
-            <button className="writing">글쓰기</button>
-          </Link>
+          <button>글쓰기</button>
         </Row>
         <Pagination />
         <SearchContainer>
@@ -83,7 +76,7 @@ function ShareList() {
   );
 }
 
-export default ShareList;
+export default ReviewList;
 
 const ShareListContainer = styled.div`
   width: 100%;
@@ -137,7 +130,7 @@ const Row = styled.div`
   align-items: center;
   margin: 12px 0 0;
   padding: 0 24px;
-  .writing {
+  button {
     width: 100px;
     height: 40px;
     background-color: #ffffff;
@@ -152,11 +145,11 @@ const SearchContainer = styled.div`
   justify-content: center;
   padding: 20px;
   select {
-    cursor: pointer;
     font-size: 18px;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
+    cursor: pointer;
   }
   .searchInput {
     font-size: 18px;

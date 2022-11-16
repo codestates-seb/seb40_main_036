@@ -22,6 +22,7 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 `;
 const Container = styled.div`
   margin: 0 auto;
@@ -29,5 +30,5 @@ const Container = styled.div`
   max-width: 1254px;
   border: 1px solid #d2d2d2;
   border-radius: 10px;
-  padding: 20px;
+  padding: 24px;
 `;

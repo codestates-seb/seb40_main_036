@@ -1,21 +1,19 @@
 import styled from 'styled-components';
-import SituationTips from './../img/상황별행동요령.jpeg';
-import PlaceTips from './../img/장소별행동요령.jpeg';
+import congestionTips from './../img/압사시행동요령.jpeg';
 
-function EarthquakeTipsContents() {
+function CongestionTipsContents() {
   return (
     <TipsContainer>
       <TipsContents>
-        <div className="earthquake">
-          <img src={PlaceTips} alt="PlaceTips" />
-          <img src={SituationTips} alt="SituationTips" />
+        <div className="congestion">
+          <img src={congestionTips} alt="congestionTips" />
         </div>
       </TipsContents>
     </TipsContainer>
   );
 }
 
-export default EarthquakeTipsContents;
+export default CongestionTipsContents;
 
 const TipsContainer = styled.div`
   display: flex;
@@ -32,7 +30,7 @@ const TipsContainer = styled.div`
   padding: 20px 0;
 `;
 const TipsContents = styled.div`
-  .earthquake {
+  .congestion {
     display: flex;
     justify-content: center;
     flex-direction: column;
