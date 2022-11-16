@@ -22,10 +22,10 @@ function EquipmentContents() {
 export default EquipmentContents;
 
 const Container = styled.div`
-  border: 3px solid black;
+  border: 2px solid black;
   border-left-width: 0;
-  border-top-width: 3px;
-  border-bottom-width: 3px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
   border-right-width: 0;
 `;
 
@@ -39,7 +39,7 @@ const ContentsTitle = styled.div`
   border-top-width: 0;
   border-bottom-width: 1px;
   border-right-width: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   .num {
     width: 10%;
@@ -60,7 +60,7 @@ const ContentsList = styled.div`
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
-  font-size: 18px;
+  font-size: 16px;
   .num {
     width: 10%;
   }

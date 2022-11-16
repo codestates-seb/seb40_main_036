@@ -67,9 +67,8 @@ const ShareListTitle = styled.div`
 `;
 
 const Header = styled.div`
-  .h1 {
+  h1 {
     font-size: 27px;
-    margin: 0 12px 12px 0;
   }
 `;
 
@@ -118,14 +117,14 @@ const SearchContainer = styled.div`
   justify-content: center;
   padding: 20px;
   select {
-    font-size: 18px;
+    font-size: 16px;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
     cursor: pointer;
   }
   .searchInput {
-    font-size: 18px;
+    font-size: 16px;
     width: 450px;
     height: 40px;
     padding: 15px;

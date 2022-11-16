@@ -27,8 +27,8 @@ function EvacuationTips() {
               <option value="congestion">군중밀집</option>
             </select>
           </SelectBox>
-          {Selected && <Content>{selectComponent[Selected]}</Content>}
         </TipsTitle>
+        {Selected && <Content>{selectComponent[Selected]}</Content>}
       </TipsContent>
     </TipstContainer>
   );
@@ -42,7 +42,7 @@ const TipstContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 0;
+  padding: 40px 24px;
   justify-content: center;
 `;
 
@@ -57,9 +57,8 @@ const TipsTitle = styled.div`
 `;
 
 const Header = styled.div`
-  .h1 {
+  h1 {
     font-size: 27px;
-    margin: 0 12px 12px 0;
   }
 `;
 const Content = styled.div``;
