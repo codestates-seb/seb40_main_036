@@ -4,6 +4,10 @@ import ShareListContents from './ShareListContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
+// const BREAK_POINT_MOBLE = 479;
+// const BREAK_POINT_TABLET = 768;
+// const BREAK_POINT_PC = 1024;
+
 function ShareList() {
   const [selectValue, setSelectValue] = useState('');
   const onChangeSelect = (e) => {
@@ -50,7 +54,7 @@ function ShareList() {
         </ShareListTitle>
         <ShareListContents />
         <Row>
-          <button>글쓰기</button>
+          <button className="writing">글쓰기</button>
         </Row>
         <Pagination />
         <SearchContainer>
@@ -121,6 +125,7 @@ const SelectBox = styled.div`
     border-color: #d2d2d2;
     font-size: 16px;
     padding: 10px;
+    cursor: pointer;
   }
 `;
 const Row = styled.div`
@@ -129,13 +134,14 @@ const Row = styled.div`
   align-items: center;
   margin: 12px 0 0;
   padding: 0 24px;
-  button {
+  .writing {
     width: 100px;
     height: 40px;
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
+    cursor: pointer;
   }
 `;
 const SearchContainer = styled.div`
@@ -143,6 +149,7 @@ const SearchContainer = styled.div`
   justify-content: center;
   padding: 20px;
   select {
+    cursor: pointer;
     font-size: 18px;
     width: 110px;
     border-radius: 5px 0 0 5px;

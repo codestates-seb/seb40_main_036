@@ -42,7 +42,7 @@ const TipstContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 0;
   justify-content: center;
 `;
 
@@ -76,5 +76,6 @@ const SelectBox = styled.div`
     border-color: #d2d2d2;
     font-size: 20px;
     padding: 10px;
+    cursor: pointer;
   }
 `;

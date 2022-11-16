@@ -121,6 +121,7 @@ const SelectBox = styled.div`
     border-color: #d2d2d2;
     font-size: 16px;
     padding: 10px;
+    cursor: pointer;
   }
 `;
 const Row = styled.div`
@@ -136,6 +137,7 @@ const Row = styled.div`
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
+    cursor: pointer;
   }
 `;
 const SearchContainer = styled.div`
@@ -147,6 +149,7 @@ const SearchContainer = styled.div`
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
+    cursor: pointer;
   }
   .searchInput {
     font-size: 18px;

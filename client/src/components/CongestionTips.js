@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import congestionTips from './../img/압사시행동요령.jpeg';
 
-function EarthquakeTipsContents() {
+function CongestionTipsContents() {
   return (
     <TipsContainer>
       <TipsContents>
-        <div className="earthquake">
+        <div className="congestion">
           <img src={congestionTips} alt="congestionTips" />
         </div>
       </TipsContents>
@@ -13,11 +13,12 @@ function EarthquakeTipsContents() {
   );
 }
 
-export default EarthquakeTipsContents;
+export default CongestionTipsContents;
 
 const TipsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
@@ -29,9 +30,13 @@ const TipsContainer = styled.div`
   padding: 20px 0;
 `;
 const TipsContents = styled.div`
-  .earthquake {
+  .congestion {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  img {
+    max-width: 700px;
+    width: 100%;
   }
 `;

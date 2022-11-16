@@ -20,6 +20,7 @@ export default EarthquakeTipsContents;
 const TipsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
@@ -35,5 +36,9 @@ const TipsContents = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  img {
+    max-width: 700px;
+    width: 100%;
   }
 `;

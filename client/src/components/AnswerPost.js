@@ -80,5 +80,8 @@ const Post = styled.div`
     width: 80px;
     height: 40px;
     cursor: pointer;
+    :hover {
+      background-color: #005603;
+    }
   }
 `;
