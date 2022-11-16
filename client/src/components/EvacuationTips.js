@@ -77,5 +77,8 @@ const SelectBox = styled.div`
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
+    :focus {
+      outline: none;
+    }
   }
 `;

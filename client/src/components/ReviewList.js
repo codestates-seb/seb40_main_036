@@ -1,14 +1,10 @@
 import Pagination from './pagination';
 import styled from 'styled-components';
 import ReviewListContents from './ReviewListContents';
-import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import DropDown from './Dropdown';
 
 function ReviewList() {
-  const [selectValue, setSelectValue] = useState('');
-  const onChangeSelect = (e) => {
-    setSelectValue(e.target.value);
-  };
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -17,35 +13,7 @@ function ReviewList() {
             <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
-            <select
-              className="selectRegion"
-              value={selectValue}
-              onChange={onChangeSelect}
-            >
-              <option value="서울특별시">서울특별시</option>
-              <option value="부산광역시">부산광역시</option>
-              <option value="인천광역시">인천광역시</option>
-              <option value="대구광역시">대구광역시</option>
-              <option value="대전광역시">대전광역시</option>
-              <option value="광주광역시">광주광역시</option>
-              <option value="울산광역시">울산광역시</option>
-            </select>
-            <select
-              className="selectDistrict"
-              value={selectValue}
-              onChange={onChangeSelect}
-            >
-              <option value="서울특별시">강남구</option>
-              <option value="서울특별시">강동구</option>
-              <option value="서울특별시">강북구</option>
-              <option value="인천광역시">남구</option>
-              <option value="서울특별시">관악구</option>
-              <option value="서울특별시">광진구</option>
-              <option value="서울특별시">구로구</option>
-              <option value="서울특별시">금천구</option>
-              <option value="서울특별시">노원구</option>
-              <option value="서울특별시">도봉구</option>
-            </select>
+            <DropDown />
           </SelectBox>
         </ShareListTitle>
         <ReviewListContents />
@@ -111,11 +79,16 @@ const SelectBox = styled.div`
   align-items: center;
   margin: 0 0 12px;
   .selectRegion {
-    width: 150px;
-    margin-right: 10px;
+    width: 210px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
   }
-  select {
-    width: 100px;
+  .selectDistrict {
+    width: 150px;
     height: 40px;
     border-radius: 5px;
     border-color: #d2d2d2;
