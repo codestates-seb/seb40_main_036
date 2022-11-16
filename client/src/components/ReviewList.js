@@ -1,10 +1,10 @@
 import Pagination from './pagination';
 import styled from 'styled-components';
-import ShareListContents from './ShareListContents';
+import ReviewListContents from './ReviewListContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-function ShareList() {
+function ReviewList() {
   const [selectValue, setSelectValue] = useState('');
   const onChangeSelect = (e) => {
     setSelectValue(e.target.value);
@@ -14,7 +14,7 @@ function ShareList() {
       <ShareListContent>
         <ShareListTitle>
           <Header>
-            <h1>물품 나눔 게시판</h1>
+            <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
             <select
@@ -48,7 +48,7 @@ function ShareList() {
             </select>
           </SelectBox>
         </ShareListTitle>
-        <ShareListContents />
+        <ReviewListContents />
         <Row>
           <button>글쓰기</button>
         </Row>
@@ -76,7 +76,7 @@ function ShareList() {
   );
 }
 
-export default ShareList;
+export default ReviewList;
 
 const ShareListContainer = styled.div`
   width: 100%;
