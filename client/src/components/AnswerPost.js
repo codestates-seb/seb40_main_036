@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
+import { useRef, useCallback } from 'react';
 function AnswerPost() {
+  const textRef = useRef();
+  const handleResizeHeight = useCallback(() => {
+    textRef.current.style.height = 'auto';
+    textRef.current.style.height = textRef.current.scrollHeight + 'px';
+  }, []);
   return (
     <Container>
       <Post>
@@ -14,7 +20,9 @@ function AnswerPost() {
         </div>
         <textarea
           className="answer"
+          ref={textRef}
           placeholder="댓글을 입력해 주세요."
+          onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
           <button type="submit">등록</button>
@@ -60,6 +68,9 @@ const Post = styled.div`
     resize: none;
     width: 100%;
     border: none;
+  }
+  textarea:focus {
+    outline: none;
   }
   button {
     background-color: #008505;
