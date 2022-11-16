@@ -6,6 +6,8 @@ import lombok.Getter;
 public class AnswerPostDto {
 
     private Long questionId;
+
     private Long memberId;
+
     private String answerContent;
 }

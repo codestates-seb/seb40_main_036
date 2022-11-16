@@ -1,5 +1,8 @@
 package com.server.question.controller;
 
+import com.server.answer.entity.Answer;
+import com.server.answer.repository.AnswerRepository;
+import com.server.answer.service.AnswerService;
 import com.server.member.entity.Member;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
@@ -29,6 +32,8 @@ public class QuestionController {
 
     private final QuestionMapper questionMapper;
 
+    private final AnswerService answerService;
+
     @PostMapping
     public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
 
@@ -56,12 +61,11 @@ public class QuestionController {
     @GetMapping("/{questionId}")
     public ResponseEntity getQuestion(@PathVariable("questionId")
                                     @Positive long Id) {
+
         Question question = questionService.findQuestion(Id);
+        List<Answer> answers=answerService.findQuestionAnswers(Id);
 
-        return new ResponseEntity<>(
-
-                new SingleResponseDto(questionMapper.questionToQuestionResponseDto(question)),
-                HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.AnswersToQuestionResponseDto(question,answers),HttpStatus.OK);
 
     }
 

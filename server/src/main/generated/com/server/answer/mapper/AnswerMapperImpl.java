@@ -3,7 +3,6 @@ package com.server.answer.mapper;
 import com.server.answer.dto.AnswerPatchDto;
 import com.server.answer.dto.AnswerPostDto;
 import com.server.answer.dto.AnswerResponseDto;
-import com.server.answer.dto.AnswerResponseDto.AnswerResponseDtoBuilder;
 import com.server.answer.entity.Answer;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-16T14:53:20+0900",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+    date = "2022-11-16T18:56:39+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class AnswerMapperImpl implements AnswerMapper {
@@ -54,7 +53,7 @@ public class AnswerMapperImpl implements AnswerMapper {
             return null;
         }
 
-        AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
+        AnswerResponseDto.AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
 
         answerResponseDto.answerId( answer.getAnswerId() );
         answerResponseDto.questionId( answer.getQuestionId() );

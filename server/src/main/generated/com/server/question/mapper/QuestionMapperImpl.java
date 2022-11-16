@@ -1,11 +1,11 @@
 package com.server.question.mapper;
 
+import com.server.answer.dto.AnswerResponseDto;
+import com.server.answer.entity.Answer;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.dto.QuestionResponseDto;
-import com.server.question.dto.QuestionResponseDto.QuestionResponseDtoBuilder;
 import com.server.question.entity.Question;
-import com.server.question.entity.Question.QuestionBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-16T14:53:20+0900",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+    date = "2022-11-16T18:56:39+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class QuestionMapperImpl implements QuestionMapper {
@@ -25,7 +25,7 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        QuestionBuilder question = Question.builder();
+        Question.QuestionBuilder question = Question.builder();
 
         question.memberId( questionPostDto.getMemberId() );
         question.questionTitle( questionPostDto.getQuestionTitle() );
@@ -41,7 +41,7 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        QuestionBuilder question = Question.builder();
+        Question.QuestionBuilder question = Question.builder();
 
         question.memberId( questionPatchDto.getMemberId() );
 
@@ -54,15 +54,49 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        QuestionResponseDtoBuilder questionResponseDto = QuestionResponseDto.builder();
+        Long questionId = null;
+        Long memberId = null;
+        String questionTitle = null;
+        String questionContent = null;
+        String questionTag = null;
 
-        questionResponseDto.questionId( question.getQuestionId() );
-        questionResponseDto.memberId( question.getMemberId() );
-        questionResponseDto.questionTitle( question.getQuestionTitle() );
-        questionResponseDto.questionContent( question.getQuestionContent() );
-        questionResponseDto.questionTag( question.getQuestionTag() );
+        questionId = question.getQuestionId();
+        memberId = question.getMemberId();
+        questionTitle = question.getQuestionTitle();
+        questionContent = question.getQuestionContent();
+        questionTag = question.getQuestionTag();
 
-        return questionResponseDto.build();
+        List<AnswerResponseDto> answers = null;
+
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, answers );
+
+        return questionResponseDto;
+    }
+
+    @Override
+    public QuestionResponseDto AnswersToQuestionResponseDto(Question question, List<Answer> answers) {
+        if ( question == null && answers == null ) {
+            return null;
+        }
+
+        Long questionId = null;
+        Long memberId = null;
+        String questionTitle = null;
+        String questionContent = null;
+        String questionTag = null;
+        if ( question != null ) {
+            questionId = question.getQuestionId();
+            memberId = question.getMemberId();
+            questionTitle = question.getQuestionTitle();
+            questionContent = question.getQuestionContent();
+            questionTag = question.getQuestionTag();
+        }
+        List<AnswerResponseDto> answers1 = null;
+        answers1 = answerListToAnswerResponseDtoList( answers );
+
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, answers1 );
+
+        return questionResponseDto;
     }
 
     @Override
@@ -77,5 +111,35 @@ public class QuestionMapperImpl implements QuestionMapper {
         }
 
         return list;
+    }
+
+    protected AnswerResponseDto answerToAnswerResponseDto(Answer answer) {
+        if ( answer == null ) {
+            return null;
+        }
+
+        AnswerResponseDto.AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
+
+        answerResponseDto.answerId( answer.getAnswerId() );
+        answerResponseDto.questionId( answer.getQuestionId() );
+        answerResponseDto.memberId( answer.getMemberId() );
+        answerResponseDto.answerContent( answer.getAnswerContent() );
+        answerResponseDto.answerCreatedAt( answer.getAnswerCreatedAt() );
+        answerResponseDto.answerModifiedAt( answer.getAnswerModifiedAt() );
+
+        return answerResponseDto.build();
+    }
+
+    protected List<AnswerResponseDto> answerListToAnswerResponseDtoList(List<Answer> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<AnswerResponseDto> list1 = new ArrayList<AnswerResponseDto>( list.size() );
+        for ( Answer answer : list ) {
+            list1.add( answerToAnswerResponseDto( answer ) );
+        }
+
+        return list1;
     }
 }
