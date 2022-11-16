@@ -5,9 +5,9 @@ import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-// const BREAK_POINT_MOBLE = 479;
-// const BREAK_POINT_TABLET = 768;
-// const BREAK_POINT_PC = 1024;
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 function ShareList() {
   const [selectValue, setSelectValue] = useState('');
