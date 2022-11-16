@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-import DropDown from './Dropdown';
 import Editor from './Editor';
-
-const WriteForm = () => {
+const WriteUpdate = () => {
   return (
-    <WriteFormStyle>
-      <form className="input">
-        <div className="region">지역선택</div>
-        <DropDown />
+    <WriteUpdateStyle>
+      <form>
         <div className="title">
           <label className="titleText" htmlFor="titleWrite">
             제목
@@ -23,32 +19,25 @@ const WriteForm = () => {
       </form>
       <div className="reCancelBox">
         <button className="registBox">
-          <div className="registInput">등록</div>
+          <div className="registInput">수정</div>
         </button>
         <button className="cancelBox">
           <div className="cancelInput">취소</div>
         </button>
       </div>
-    </WriteFormStyle>
+    </WriteUpdateStyle>
   );
 };
 
-export default WriteForm;
+export default WriteUpdate;
 
-const WriteFormStyle = styled.div`
+const WriteUpdateStyle = styled.div`
   width: 1180px;
   height: 100%;
   background: #ffffff;
   box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.25);
   margin: 50px auto;
 
-  .region {
-    padding-left: 100px;
-    padding-top: 60px;
-    padding-bottom: 12px;
-    font-weight: 400;
-    font-size: 24px;
-  }
   .title {
     padding: 50px;
   }

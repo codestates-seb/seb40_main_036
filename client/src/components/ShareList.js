@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 // const BREAK_POINT_MOBLE = 479;
 // const BREAK_POINT_TABLET = 768;
@@ -54,7 +55,9 @@ function ShareList() {
         </ShareListTitle>
         <ShareListContents />
         <Row>
-          <button className="writing">글쓰기</button>
+          <Link to="/writeForm">
+            <button className="writing">글쓰기</button>
+          </Link>
         </Row>
         <Pagination />
         <SearchContainer>

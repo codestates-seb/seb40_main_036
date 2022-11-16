@@ -9,17 +9,15 @@ import SignUP from './components/SignUp';
 import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
+import WriteUpdate from './components/WriteUpdate';
 import Equipment from './components/Equipment';
-//import WriteForm from './components/WriteForm';
-//import DropDown from './components/Dropdown';
+import WriteForm from './components/WriteForm';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Nav />
-        {/* <WriteForm /> */}
-        {/* <DropDown /> */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
@@ -29,6 +27,8 @@ function App() {
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
+          <Route path="/writeForm" element={<WriteForm />}></Route>
+          <Route path="/writeUpdate" element={<WriteUpdate />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
