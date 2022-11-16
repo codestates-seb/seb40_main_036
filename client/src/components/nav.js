@@ -55,16 +55,16 @@ const Nav = () => {
               <ul>
                 <li className="sm-dblock">비품</li>
                 <li>
-                  <a href="...">비품 현황</a>
+                  <Link to="/equipment">비품 현황</Link>
                 </li>
               </ul>
               <ul>
                 <li className="sm-dblock">커뮤니티</li>
                 <li>
-                  <a href="...">물품 나눔</a>
+                  <Link to="/share">물품 나눔</Link>
                 </li>
                 <li>
-                  <a href="...">대피소 후기</a>
+                  <Link to="/review">대피소 후기</Link>
                 </li>
               </ul>
             </div>
