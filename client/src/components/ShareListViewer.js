@@ -62,7 +62,7 @@ const ShareContentsTitle = styled.div`
     margin-right: 5px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .userContainer {
     display: flex;

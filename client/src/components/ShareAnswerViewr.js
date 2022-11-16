@@ -37,7 +37,6 @@ const Container = styled.div`
   padding: 20px 0;
 `;
 const AnswerContents = styled.div`
-  font-size: 18px;
   display: flex;
   flex-direction: row;
   -webkit-box-align: center;
@@ -50,10 +49,13 @@ const AnswerContents = styled.div`
   }
   .userName {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .contents {
+    font-size: 16px;
   }
   .date {
-    font-size: 16px;
+    font-size: 14px;
     color: #838383;
   }
 `;
@@ -61,7 +63,7 @@ const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
   color: #838383;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 73px;
   cursor: pointer;
 `;

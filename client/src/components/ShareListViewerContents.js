@@ -42,7 +42,7 @@ const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
   color: #838383;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   .edit {
     color: #838383;

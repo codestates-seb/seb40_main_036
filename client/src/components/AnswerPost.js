@@ -15,7 +15,7 @@ function AnswerPost() {
             <img src={Profile} alt="profile" />
           </div>
           <div className="content">
-            <div className="userName">박해커</div>
+            <div className="userName">김우빈</div>
           </div>
         </div>
         <textarea
@@ -56,7 +56,7 @@ const Post = styled.div`
   .userName {
     margin-left: 2px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
   }
   .submitButon {
     display: flex;
@@ -64,10 +64,11 @@ const Post = styled.div`
     padding: 0 10px 10px 10px;
   }
   textarea {
-    padding: 10px;
+    padding: 10px 20px;
     resize: none;
     width: 100%;
     border: none;
+    font-size: 16px;
   }
   textarea:focus {
     outline: none;
