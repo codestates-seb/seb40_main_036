@@ -9,6 +9,7 @@ import SignUP from './components/SignUp';
 import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
+import Equipment from './components/Equipment';
 //import WriteForm from './components/WriteForm';
 //import DropDown from './components/Dropdown';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
           <Route path="/review" element={<ReviewList />} />
+          <Route path="/Equipment" element={<Equipment />} />
           <Route path="/shareLookup" element={<ShareListLookup />} />
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>

@@ -45,10 +45,10 @@ const ContentsTitle = styled.div`
     width: 10%;
   }
   .title {
-    width: 70%;
+    width: 65%;
   }
   .writer {
-    width: 10%;
+    width: 15%;
   }
   .date {
     width: 10%;
@@ -65,10 +65,10 @@ const ContentsList = styled.div`
     width: 10%;
   }
   .title {
-    width: 70%;
+    width: 65%;
   }
   .writer {
-    width: 10%;
+    width: 15%;
   }
   .date {
     width: 10%;

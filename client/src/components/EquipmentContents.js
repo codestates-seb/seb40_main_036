@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function ReviewListContents() {
+function EquipmentContents() {
   return (
     <Container>
       <ContentsTitle>
@@ -11,15 +11,15 @@ function ReviewListContents() {
       </ContentsTitle>
       <ContentsList>
         <div className="num">01</div>
-        <div className="title">봉천 초등학교 정보입니다.</div>
-        <div className="writer">김코딩</div>
+        <div className="title">봉천 초등학교 비품 현황입니다.</div>
+        <div className="writer">봉천 초등학교</div>
         <div className="date">2022.11.11</div>
       </ContentsList>
     </Container>
   );
 }
 
-export default ReviewListContents;
+export default EquipmentContents;
 
 const Container = styled.div`
   border: 3px solid black;
