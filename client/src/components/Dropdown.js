@@ -16,12 +16,9 @@ const DropDown = () => {
           onChange={onChangeSelect}
         >
           <option value="서울특별시">서울특별시</option>
-          <option value="부산광역시">부산광역시</option>
-          <option value="인천광역시">인천광역시</option>
-          <option value="대구광역시">대구광역시</option>
-          <option value="대전광역시">대전광역시</option>
-          <option value="광주광역시">광주광역시</option>
-          <option value="울산광역시">울산광역시</option>
+          <option value="경기도">경기도</option>
+          <option value="경상북도">경상북도</option>
+          <option value="경상남도">경상남도</option>
         </select>
         <select
           className="selectDistrict"
@@ -31,13 +28,10 @@ const DropDown = () => {
           <option value="서울특별시">강남구</option>
           <option value="서울특별시">강동구</option>
           <option value="서울특별시">강북구</option>
-          <option value="인천광역시">남구</option>
+          <option value="경기도">만안구</option>
           <option value="서울특별시">관악구</option>
           <option value="서울특별시">광진구</option>
           <option value="서울특별시">구로구</option>
-          <option value="서울특별시">금천구</option>
-          <option value="서울특별시">노원구</option>
-          <option value="서울특별시">도봉구</option>
         </select>
       </SelectRegionStyle>
     </>

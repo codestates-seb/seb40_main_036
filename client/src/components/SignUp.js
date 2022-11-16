@@ -130,16 +130,13 @@ const SignUP = () => {
 export default SignUP;
 
 const SignUpForm = styled.div`
-  .signUpForm {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 340px;
-    height: 600px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  width: 340px;
+  height: 579px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 90px auto;
+
   .logoImg {
     margin-top: 15px;
     text-align: center;
@@ -148,10 +145,10 @@ const SignUpForm = styled.div`
 
 const SignUpInput = styled.div`
   .signUpInput {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
   }
   .idPwText {

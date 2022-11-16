@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function ShareLisViewerContents() {
@@ -10,7 +11,9 @@ function ShareLisViewerContents() {
       </ShareListContents>
       <DeletEdit>
         <div className="delete">삭제</div>
-        <div className="edit">수정</div>
+        <Link to="/writeUpdate" style={{ textDecoration: 'none' }}>
+          <div className="edit">수정</div>
+        </Link>
       </DeletEdit>
     </Container>
   );
@@ -41,4 +44,7 @@ const DeletEdit = styled.div`
   color: #838383;
   font-size: 20px;
   cursor: pointer;
+  .edit {
+    color: #838383;
+  }
 `;

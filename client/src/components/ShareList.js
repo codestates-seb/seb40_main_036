@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const tag = ['구로구', '강남구', '관악구', '동작구', '마포구'];
 
@@ -36,7 +37,9 @@ function ShareList() {
         </ShareListTitle>
         <ShareListContents />
         <Row>
-          <button>글쓰기</button>
+          <Link to="/writeForm">
+            <button>글쓰기</button>
+          </Link>
         </Row>
         <Pagination />
         <SearchContainer>
