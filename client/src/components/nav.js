@@ -2,73 +2,86 @@ import styled from 'styled-components';
 import Logo from './../img/logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const Nav = () => {
   const [Ishide, setIsHide] = useState(true);
   return (
     <Header>
-      <div
-        className="navbar flex"
-        onMouseEnter={() => {
-          setIsHide(false);
-        }}
-        onMouseLeave={() => {
-          setIsHide(true);
-        }}
-      >
-        <div className="navbar-logo flex" id="logo">
-          <img src={Logo} alt="logo" />
-        </div>
-        <div className="navbar-list flex">
-          <ul className="flex">
-            <li>
-              <a href="...">대피 요령</a>
-            </li>
-            <li>
-              <a href="...">비품</a>
-            </li>
-            <li>
-              <a href="...">커뮤니티</a>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-member flex">
-          <ul className="flex">
-            <li>
-              <Link to="/login">로그인</Link>
-            </li>
-            <li>
-              <Link to="/signup">회원가입</Link>
-            </li>
-          </ul>
-        </div>
-        {!Ishide && (
-          <div className="navbar-slide">
-            <ul className="">
-              <li>
-                <a href="...">재난별 대피요령</a>
-              </li>
+      <div>
+        <div
+          className="navbar flex"
+          onMouseEnter={() => {
+            setIsHide(false);
+          }}
+          onMouseLeave={() => {
+            setIsHide(true);
+          }}
+        >
+          <div className="navbar-logo flex" id="logo">
+            <img src={Logo} alt="logo" />
+          </div>
+          <div className="navbar-list flex">
+            <ul className="flex">
+              <li className="nav-title">대피요령</li>
+              <li className="nav-title">비품</li>
+              <li className="nav-title">커뮤니티</li>
             </ul>
-            <ul>
+          </div>
+          <div className="navbar-member flex">
+            <ul className="flex">
               <li>
-                <a href="...">비품 현황</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="...">물품 나눔</a>
+                <Link to="/login">로그인</Link>
               </li>
               <li>
-                <a href="...">대피소 후기</a>
-              </li>
-            </ul>
-            <ul className="info">
-              <li>
-                <a href="...">지진 정보</a>
+                <Link to="/signup">회원가입</Link>
               </li>
             </ul>
           </div>
-        )}
+          {!Ishide && (
+            <div className="navbar-slide">
+              <ul className="">
+                <li className="sm-dblock">대피요령</li>
+                <li>
+                  <Link to="Tips">재난별 대피요령</Link>
+                </li>
+              </ul>
+              <ul>
+                <li className="sm-dblock">비품</li>
+                <li>
+                  <a href="...">비품 현황</a>
+                </li>
+              </ul>
+              <ul>
+                <li className="sm-dblock">커뮤니티</li>
+                <li>
+                  <a href="...">물품 나눔</a>
+                </li>
+                <li>
+                  <a href="...">대피소 후기</a>
+                </li>
+              </ul>
+            </div>
+          )}
+          <div className="responsive-bar">
+            {Ishide && (
+              <FontAwesomeIcon
+                icon={solid('bars')}
+                onClick={() => setIsHide(false)}
+              />
+            )}
+            {!Ishide && (
+              <FontAwesomeIcon
+                icon={solid('x')}
+                onClick={() => setIsHide(true)}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </Header>
   );
@@ -78,19 +91,31 @@ export default Nav;
 const Header = styled.header`
   position: relative;
   height: 50px;
-  background: white;
-  border-bottom: 4px solid #008505;
+
   display: flex;
   justify-content: center;
+  > div {
+    background: white;
+    border-bottom: 4px solid #008505;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+  }
+
   .flex {
     display: flex;
   }
   .navbar {
+    position: relative;
     margin: 0 auto;
-    position: fixed;
     width: 100%;
     max-width: 1440px;
     height: 46px;
+    ${tablet} {
+      justify-content: space-between;
+      align-items: center;
+    }
     .navbar-logo {
       width: 200px;
       align-items: center;
@@ -101,7 +126,12 @@ const Header = styled.header`
     }
     .navbar-list {
       flex: 1 1 auto;
-
+      ${tablet} {
+        display: none;
+      }
+      li.nav-title {
+        padding: 4px 24px;
+      }
       li {
         position: relative;
 
@@ -116,6 +146,11 @@ const Header = styled.header`
         }
       }
     }
+    .navbar-member {
+      ${tablet} {
+        display: none;
+      }
+    }
     .navbar-slide {
       position: absolute;
       z-index: 1;
@@ -128,14 +163,45 @@ const Header = styled.header`
       border-top: none;
       border-bottom-left-radius: 15px;
       padding-bottom: 8px;
+      ul {
+        width: 120px;
+      }
+      .sm-dblock {
+        display: none;
+      }
+      ${tablet} {
+        left: 0;
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        flex-direction: column;
+        .sm-dblock {
+          display: block;
+          font-weight: 600;
+          font-size: 16px;
+          margin-top: 8px;
+        }
+      }
+    }
+    .responsive-bar {
+      display: none;
+      margin-right: 24px;
+      ${tablet} {
+        display: block;
+      }
     }
     ul {
       align-items: center;
+      ${tablet} {
+        align-items: baseline;
+        flex-direction: column;
+        display: flex;
+      }
     }
     ul.info {
       flex: 1 0 auto;
       text-align: right;
-      a {
+      li {
         width: 70px;
       }
     }
@@ -145,13 +211,16 @@ const Header = styled.header`
       padding: 4px 16px;
     }
     a {
+      padding: 4px 8px;
+    }
+    li,
+    a {
       color: black;
       text-decoration: none;
       font-weight: 400;
       display: inline-block;
       font-size: 13px;
       width: 120px;
-      padding: 4px 8px;
       border-radius: 0.75rem;
     }
     a:hover {
