@@ -47,6 +47,7 @@ const SideWrapper = styled.aside`
   padding: 8px 16px;
   z-index: -1;
   font-size: 24px;
+  box-shadow: 5px 0 5px rgb(0 0 0/25%);
   .d-flex {
     display: flex;
     flex-direction: column;
@@ -71,8 +72,9 @@ const SideWrapper = styled.aside`
     display: flex;
     justify-content: space-between;
     width: 160px;
-    margin: 0 auto;
+    margin: 20px auto;
     align-items: center;
+
     > svg {
       margin-right: 16px;
     }
