@@ -1,6 +1,6 @@
 import Pagination from './pagination';
 import styled from 'styled-components';
-import ShareListContents from './ShareListContents';
+import EquipmentContents from './EquipmentContents';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ import { FaSearch } from 'react-icons/fa';
 // const BREAK_POINT_TABLET = 768;
 // const BREAK_POINT_PC = 1024;
 
-function ShareList() {
+function Equipment() {
   const [selectValue, setSelectValue] = useState('');
   const onChangeSelect = (e) => {
     setSelectValue(e.target.value);
@@ -18,7 +18,7 @@ function ShareList() {
       <ShareListContent>
         <ShareListTitle>
           <Header>
-            <h1>물품 나눔 게시판</h1>
+            <h1>비품 현황</h1>
           </Header>
           <SelectBox>
             <select
@@ -52,7 +52,7 @@ function ShareList() {
             </select>
           </SelectBox>
         </ShareListTitle>
-        <ShareListContents />
+        <EquipmentContents />
         <Row>
           <button className="writing">글쓰기</button>
         </Row>
@@ -62,7 +62,7 @@ function ShareList() {
             <option>제목+내용</option>
             <option>제목</option>
             <option>내용</option>
-            <option>이름</option>
+            <option>기관</option>
           </select>
           <input
             type="text"
@@ -80,7 +80,7 @@ function ShareList() {
   );
 }
 
-export default ShareList;
+export default Equipment;
 
 const ShareListContainer = styled.div`
   width: 100%;
