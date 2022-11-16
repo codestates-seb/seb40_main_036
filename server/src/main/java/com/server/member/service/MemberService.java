@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -19,21 +20,36 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    private final PasswordEncoder passwordEncoder;
+
     public Member createMember(Member member){
 
         Member mem = memberRepository.findByEmail(member.getEmail());
         if(mem!=null){ // 있으면
             throw new BusinessLogicException(ExceptionCode.MEMBER_EXISTS);
         }
+
+        member.setPassword(passwordEncoder.encode(member.getPassword()));
+
         return memberRepository.save(member);
     }
 
     public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
 
-        String memberEmail = member.getEmail();
-        String memberPassword = member.getPassword();
+        //String memberEmail = member.getEmail();
+        //String memberPassword = member.getPassword();
 
-        Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
+        Member mem=memberRepository.findByEmail(member.getEmail());
+        if(mem==null){
+            throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
+        }
+
+
+        if(!passwordEncoder.matches(member.getPassword(),mem.getPassword())){
+            throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
+        }
+
+        //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
         return mem;
     }
 
