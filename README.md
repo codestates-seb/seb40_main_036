@@ -67,3 +67,26 @@
   - 🌏 release : 버전 릴리즈
   - ✅ merge : 병합
   - ⚙ chore : 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore
+  
+  
+  
+ ## 📌 BACKEND 개발 규칙
+- [패키지 명]
+  - 소문자로 작성
+  
+- [엔티티 변수명]
+  - 최대한 짧게 작성 : memberId(X) -> id, memberEmail(X) -> email
+  
+- [URI]
+  - 소문자로 작성
+  - 작성 순서 : /리소스명/{id}/동사(method X) ex /member/join (상황에 맞게 {id}와 동사는 생략 가능)
+
+- [브랜치 작성방법]
+  - 새로운 기능을 추가할 경우 : feat/member-create/kyh0113
+  - 코드 리팩터링의 경우 : refactor/member-create/kyh0113
+  
+- [push 규칙]
+  1. 코드 작성 전에 반드시 pull 먼저 하기
+  2. 규칙에 맞게 생성한 브랜치에서 코드 작성하기
+  3. 각자 생성한 브랜치의 origin에다 push하기
+  4. 깃허브에서 be_dev에 PR 보내기
