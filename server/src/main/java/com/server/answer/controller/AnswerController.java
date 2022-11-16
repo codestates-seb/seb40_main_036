@@ -29,7 +29,6 @@ public class AnswerController {
 
     private final AnswerMapper answerMapper;
 
-
     @PostMapping
     public ResponseEntity postAnswer(@Valid @RequestBody AnswerPostDto answerPostDto){
 

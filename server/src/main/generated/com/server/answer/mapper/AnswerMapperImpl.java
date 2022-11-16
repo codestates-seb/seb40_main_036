@@ -3,7 +3,6 @@ package com.server.answer.mapper;
 import com.server.answer.dto.AnswerPatchDto;
 import com.server.answer.dto.AnswerPostDto;
 import com.server.answer.dto.AnswerResponseDto;
-import com.server.answer.dto.AnswerResponseDto.AnswerResponseDtoBuilder;
 import com.server.answer.entity.Answer;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +53,7 @@ public class AnswerMapperImpl implements AnswerMapper {
             return null;
         }
 
-        AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
+        AnswerResponseDto.AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
 
         answerResponseDto.answerId( answer.getAnswerId() );
         answerResponseDto.questionId( answer.getQuestionId() );
