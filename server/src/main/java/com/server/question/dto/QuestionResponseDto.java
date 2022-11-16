@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Builder
 @AllArgsConstructor
 @Getter
@@ -20,5 +22,9 @@ public class QuestionResponseDto {
     private String questionContent;
 
     private String questionTag;
+
+    private LocalDateTime questionCreated;
+
+    private LocalDateTime questionModifed;
 
 }
