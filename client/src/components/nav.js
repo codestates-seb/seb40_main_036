@@ -23,7 +23,9 @@ const Nav = () => {
           }}
         >
           <div className="navbar-logo flex" id="logo">
-            <img src={Logo} alt="logo" />
+            <Link to="/">
+              <img src={Logo} alt="logo" />
+            </Link>
           </div>
           <div className="navbar-list flex">
             <ul className="flex">
@@ -223,7 +225,7 @@ const Header = styled.header`
       width: 120px;
       border-radius: 0.75rem;
     }
-    a:hover {
+    ul a:hover {
       background: lightgray;
     }
     .navbar-member a {
