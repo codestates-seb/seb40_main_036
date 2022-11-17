@@ -10,7 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class StuffQuestionService {
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
-        stuffQuestion.setStuffQuestionCreated(LocalDateTime.now());
+        stuffQuestion.setStuffQuestionCreated(LocalDate.now());
 
         return stuffQuestionRepository.save(stuffQuestion);
     }
@@ -53,7 +53,7 @@ public class StuffQuestionService {
         Optional.ofNullable(stuffQuestion.getStuffQuestionTag())
                 .ifPresent(Tag -> findStuffQuestion.setStuffQuestionTag(Tag));
 
-        findStuffQuestion.setStuffQuestionModified(LocalDateTime.now());
+        findStuffQuestion.setStuffQuestionModified(LocalDate.now());
 
         return stuffQuestionRepository.save(findStuffQuestion);
 

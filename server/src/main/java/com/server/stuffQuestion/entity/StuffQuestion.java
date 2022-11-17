@@ -3,9 +3,8 @@ package com.server.stuffQuestion.entity;
 import com.server.member.entity.Member;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import lombok.*;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +33,9 @@ public class StuffQuestion {
     @Column(updatable = false)
     private String  stuffQuestionTag;
 
-    private LocalDateTime stuffQuestionCreated;
+    private LocalDate stuffQuestionCreated;
 
-    private LocalDateTime stuffQuestionModified;
+    private LocalDate stuffQuestionModified;
 
     @ManyToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)

@@ -11,8 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,7 +35,7 @@ public class AnswerService {
             throw new BusinessLogicException(ExceptionCode.Question_NOT_FOUND);
         }
 
-        answer.setAnswerCreatedAt(LocalDateTime.now());
+        answer.setAnswerCreated(LocalDate.now());
 
         return answerRepository.save(answer);
 
@@ -52,7 +51,7 @@ public class AnswerService {
         Optional.ofNullable(answer.getAnswerContent())
                 .ifPresent(Content -> findAnswer.setAnswerContent(Content));
 
-        findAnswer.setAnswerModifiedAt(LocalDateTime.now());
+        findAnswer.setAnswerModified(LocalDate.now());
 
         return answerRepository.save(findAnswer);
     }

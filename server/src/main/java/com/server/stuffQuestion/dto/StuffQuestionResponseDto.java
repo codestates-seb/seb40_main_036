@@ -1,12 +1,10 @@
 package com.server.stuffQuestion.dto;
 
-import com.server.answer.dto.AnswerResponseDto;
 import com.server.stuffAnswer.dto.StuffAnswerResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
@@ -26,9 +24,9 @@ public class StuffQuestionResponseDto {
 
     private String  stuffQuestionTag;
 
-    private LocalDateTime stuffQuestionCreated;
+    private LocalDate stuffQuestionCreated;
 
-    private LocalDateTime stuffQuestionModified;
+    private LocalDate stuffQuestionModified;
 
     private List<StuffAnswerResponseDto> stuffAnswers;
 }
