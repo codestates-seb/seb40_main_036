@@ -24,7 +24,7 @@ public class ShelterPostDto {
 
     private String geolocation; // 대피소 주소
 
-    private long updatedate; // 대피소 정보 수정 날짜
+    private String updatedate; // 대피소 정보 수정 날짜
 
     private int capacity; // 대피소 수용가능 인원
 

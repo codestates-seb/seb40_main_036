@@ -45,9 +45,9 @@ public interface ReservationMapper {
         // num
         reservationResponseDto.setNum(reservation.getNum());
         // createdAt
-        reservationResponseDto.setCreatedAt(reservation.getCreatedAt());
+        reservationResponseDto.setReservationCreated(reservation.getReservationCreated());
         // modifiedAt
-        reservationResponseDto.setModifiedAt(reservation.getModifiedAt());
+        reservationResponseDto.setReservationModified(reservation.getReservationModified());
 
         return reservationResponseDto;
     }
@@ -60,8 +60,8 @@ public interface ReservationMapper {
                         .memberId(reservation.getMember().getMemberId())
                         .shelterId(reservation.getShelter().getShelterId())
                         .num(reservation.getNum())
-                        .createdAt(reservation.getCreatedAt())
-                        .modifiedAt(reservation.getModifiedAt())
+                        .reservationCreated(reservation.getReservationCreated())
+                        .reservationModified(reservation.getReservationModified())
                         .build())
                 .collect(Collectors.toList());
     }

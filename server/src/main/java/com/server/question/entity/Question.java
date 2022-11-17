@@ -40,8 +40,6 @@ public class Question {
 
     private LocalDateTime questionModified;
 
-    //////////////////////////////////////////////
-
     @OneToMany(mappedBy = "question", cascade = CascadeType.PERSIST)
     private List<Answer> answers=new ArrayList<>();
 

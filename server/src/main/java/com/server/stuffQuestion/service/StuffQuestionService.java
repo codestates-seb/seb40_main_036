@@ -53,7 +53,7 @@ public class StuffQuestionService {
         Optional.ofNullable(stuffQuestion.getStuffQuestionTag())
                 .ifPresent(Tag -> findStuffQuestion.setStuffQuestionTag(Tag));
 
-        findStuffQuestion.setStuffQuestionModifed(LocalDateTime.now());
+        findStuffQuestion.setStuffQuestionModified(LocalDateTime.now());
 
         return stuffQuestionRepository.save(findStuffQuestion);
 

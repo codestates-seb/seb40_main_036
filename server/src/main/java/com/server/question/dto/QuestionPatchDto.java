@@ -7,9 +7,9 @@ public class QuestionPatchDto {
 
     private Long memberId;
 
-    private String title;
+    private String questionTitle;
 
-    private String content;
+    private String questionContent;
 
-    private String tag;
+    private String questionTag;
 }

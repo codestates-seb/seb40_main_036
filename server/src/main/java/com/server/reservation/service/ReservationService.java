@@ -31,7 +31,7 @@ public class ReservationService {
         // 대피소가 존재하는지 확인
         shelterService.findVerifiedShelter(reservation.getShelter().getShelterId()); // 있으면 넘어가고 없으면 예외문구뜸
 
-        reservation.setCreatedAt(LocalDateTime.now());
+        reservation.setReservationCreated(LocalDateTime.now());
 
         Reservation savedReservation = saveReservation(reservation);
         return reservationRepository.save(savedReservation);
@@ -52,7 +52,7 @@ public class ReservationService {
         Optional.ofNullable(reservation.getNum())
                 .ifPresent(Num->findReservation.setNum(Num));
         // 예약 시간 수정
-        findReservation.setModifiedAt(LocalDateTime.now());
+        findReservation.setReservationModified(LocalDateTime.now());
         return reservationRepository.save(findReservation);
     }
 
