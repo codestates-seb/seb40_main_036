@@ -50,18 +50,23 @@ function ShareList() {
             <DropDown />
           </SelectBox>
         </ShareListTitle>
-        <ShareListContainer>
-          {questions.length !== 0 && (
-            <>
-              <ShareListContents
-                key={questions.questionId}
-                title={questions.questionTitle}
-                num={questions.questionId}
-                writer={questions.memberId}
-              />
-            </>
-          )}
-        </ShareListContainer>
+        <ContentsContainer>
+          <ContentsTitle>
+            <div className="num">번호</div>
+            <div className="title">제목</div>
+            <div className="writer">작성자</div>
+            <div className="date">작성일</div>
+          </ContentsTitle>
+          {questions.map((item) => (
+            <ShareListContents
+              key={item.questionId}
+              title={item.questionTitle}
+              num={item.questionId}
+              writer={item.name}
+              date={item.questionCreated}
+            />
+          ))}
+        </ContentsContainer>
         <Row>
           <Link to="/writeForm">
             <button className="writing">글쓰기</button>
@@ -141,6 +146,38 @@ const SelectBox = styled.div`
     font-size: 16px;
     padding: 10px;
     cursor: pointer;
+  }
+`;
+const ContentsContainer = styled.div`
+  border: 2px solid black;
+  border-left-width: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 0;
+`;
+const ContentsTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-right-width: 0;
+  .num {
+    width: 10%;
+  }
+  .title {
+    width: 65%;
+  }
+  .writer {
+    width: 15%;
+  }
+  .date {
+    width: 10%;
   }
 `;
 const Row = styled.div`

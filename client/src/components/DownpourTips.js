@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import DownpourTips from './../img/집중호우.jpeg';
 import TyphoonTips from './../img/태풍호우.jpeg';
 function DownpourTipsContents() {
   return (
     <TipsContainer>
       <TipsContents>
         <div className="Downpour">
-          <img src={DownpourTips} alt="DownpourTips" />
           <img src={TyphoonTips} alt="TyphoonTips" />
         </div>
       </TipsContents>

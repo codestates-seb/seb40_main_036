@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 
-function ShareListContents({ num, title, writer }) {
+function ShareListContents({ num, title, writer, date }) {
   return (
     <Container>
-      <ContentsTitle>
-        <div className="num">번호</div>
-        <div className="title">제목</div>
-        <div className="writer">작성자</div>
-        <div className="date">작성일</div>
-      </ContentsTitle>
       <ContentsList>
         <div className="num">{num}</div>
         <div className="title">{title}</div>
         <div className="writer">{writer}</div>
-        <div className="date">2022.11.11</div>
+        <div className="date">{date}</div>
       </ContentsList>
     </Container>
   );
@@ -21,39 +15,7 @@ function ShareListContents({ num, title, writer }) {
 
 export default ShareListContents;
 
-const Container = styled.div`
-  border: 2px solid black;
-  border-left-width: 0;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-  border-right-width: 0;
-`;
-
-const ContentsTitle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 24px;
-  border: 1px solid black;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 1px;
-  border-right-width: 0;
-  font-size: 18px;
-  font-weight: bold;
-  .num {
-    width: 10%;
-  }
-  .title {
-    width: 65%;
-  }
-  .writer {
-    width: 15%;
-  }
-  .date {
-    width: 10%;
-  }
-`;
+const Container = styled.div``;
 
 const ContentsList = styled.div`
   display: flex;
@@ -61,6 +23,11 @@ const ContentsList = styled.div`
   align-items: center;
   padding: 8px 24px;
   font-size: 16px;
+  border: 1px solid black;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-right-width: 0;
   .num {
     width: 10%;
   }

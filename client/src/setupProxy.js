@@ -5,7 +5,7 @@ module.exports = function (app) {
     '/question',
 
     createProxyMiddleware({
-      target: 'https://ef7d-211-214-195-126.jp.ngrok.io',
+      target: 'https://4cc3-211-214-195-126.jp.ngrok.io',
 
       changeOrigin: true,
     })

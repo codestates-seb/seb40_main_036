@@ -71,7 +71,7 @@ const SelectBox = styled.div`
   margin: 0 0 12px;
 
   select {
-    width: 120px;
+    width: 130px;
     height: 45px;
     border-radius: 5px;
     border-color: #d2d2d2;
