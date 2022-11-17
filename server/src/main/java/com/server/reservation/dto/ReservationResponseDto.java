@@ -1,8 +1,7 @@
 package com.server.reservation.dto;
 
 import lombok.*;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -14,6 +13,6 @@ public class ReservationResponseDto {
     private long memberId;
     private long shelterId;
     private long num;
-    private LocalDateTime reservationCreated;
-    private LocalDateTime reservationModified;
+    private LocalDate reservationCreated;
+    private LocalDate reservationModified;
 }

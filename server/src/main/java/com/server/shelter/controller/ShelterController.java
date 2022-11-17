@@ -64,6 +64,7 @@ public class ShelterController {
                 HttpStatus.OK);
     }
 
+
     @DeleteMapping("/{shelterId}")
     public ResponseEntity deleteShelter(@PathVariable("shelterId")
                                        @Positive long Id){
