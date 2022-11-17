@@ -23,13 +23,22 @@ public class Shelter {
     private Long shelterId;
 
     @Column (nullable = false)
-    private String name;
+    private String location; // 군
 
     @Column (nullable = false)
-    private String address;
+    private String shelterName; // 대피소 이름
 
     @Column (nullable = false)
-    private int capacity;
+    private int uuid; // 대피소 고유 번호
+
+    @Column (nullable = false)
+    private String geolocation; // 대피소 주소
+
+    @Column (nullable = false)
+    private long updatedate; // 대피소 정보 수정 날짜
+
+    @Column (nullable = false)
+    private int capacity; // 대피소 수용가능 인원
 
     @OneToOne(mappedBy = "shelter")
     private Reservation reservation;
