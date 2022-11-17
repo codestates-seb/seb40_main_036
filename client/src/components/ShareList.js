@@ -60,6 +60,7 @@ function ShareList() {
           {questions.map((item) => (
             <ShareListContents
               key={item.questionId}
+              id={item.questionId}
               title={item.questionTitle}
               num={item.questionId}
               writer={item.name}

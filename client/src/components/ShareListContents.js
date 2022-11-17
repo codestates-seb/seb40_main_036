@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-function ShareListContents({ num, title, writer, date }) {
+function ShareListContents({ id, num, title, writer, date }) {
   return (
     <Container>
       <ContentsList>
         <div className="num">{num}</div>
-        <div className="title">{title}</div>
+        <Link to={`/question/${id}`} className="title">
+          {title}
+        </Link>
         <div className="writer">{writer}</div>
         <div className="date">{date}</div>
       </ContentsList>
