@@ -46,7 +46,7 @@ public class Question {
     private List<Answer> answers=new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "name",insertable = false,updatable = false)
+    @JoinColumn(name = "memberId",insertable = false,updatable = false)
     private Member member;
 
 

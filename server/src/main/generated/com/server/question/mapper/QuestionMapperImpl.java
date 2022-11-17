@@ -14,13 +14,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-<<<<<<< HEAD
-    date = "2022-11-17T15:07:31+0900",
+    date = "2022-11-17T15:38:26+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
-=======
-    date = "2022-11-17T15:26:00+0900",
-    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 )
 @Component
 public class QuestionMapperImpl implements QuestionMapper {
@@ -68,12 +63,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
-<<<<<<< HEAD
         LocalDateTime questionModified = null;
-=======
-        LocalDateTime questionModfied = null;
         List<AnswerResponseDto> answers = null;
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
         questionId = question.getQuestionId();
         memberId = question.getMemberId();
@@ -82,18 +73,10 @@ public class QuestionMapperImpl implements QuestionMapper {
         questionContent = question.getQuestionContent();
         questionTag = question.getQuestionTag();
         questionCreated = question.getQuestionCreated();
-<<<<<<< HEAD
         questionModified = question.getQuestionModified();
-
-        List<AnswerResponseDto> answers = null;
-
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers );
-=======
-        questionModfied = question.getQuestionModfied();
         answers = answerListToAnswerResponseDtoList( question.getAnswers() );
 
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers );
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers );
 
         return questionResponseDto;
     }
@@ -111,12 +94,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
-<<<<<<< HEAD
         LocalDateTime questionModified = null;
-=======
-        LocalDateTime questionModfied = null;
         List<AnswerResponseDto> answers1 = null;
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
         if ( question != null ) {
             questionId = question.getQuestionId();
             memberId = question.getMemberId();
@@ -125,19 +104,11 @@ public class QuestionMapperImpl implements QuestionMapper {
             questionContent = question.getQuestionContent();
             questionTag = question.getQuestionTag();
             questionCreated = question.getQuestionCreated();
-<<<<<<< HEAD
             questionModified = question.getQuestionModified();
-=======
-            questionModfied = question.getQuestionModfied();
             answers1 = answerListToAnswerResponseDtoList( question.getAnswers() );
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
         }
 
-<<<<<<< HEAD
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers1 );
-=======
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers1 );
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers1 );
 
         return questionResponseDto;
     }
