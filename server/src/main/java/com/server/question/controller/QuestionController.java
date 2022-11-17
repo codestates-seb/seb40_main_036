@@ -63,6 +63,7 @@ public class QuestionController {
                                     @Positive long Id) {
 
         Question question = questionService.findQuestion(Id);
+        question = questionService.addViews(question);
         List<Answer> answers=answerService.findQuestionAnswers(Id);
 
         return new ResponseEntity<>(questionMapper.AnswersToQuestionResponseDto(question,answers),HttpStatus.OK);

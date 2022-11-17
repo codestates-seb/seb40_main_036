@@ -24,12 +24,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StuffQuestionController {
 
-
     private final StuffQuestionService stuffQuestionService;
 
-
     private final StuffQuestionMapper stuffQuestionMapper;
-
 
     @PostMapping
     public ResponseEntity postStuffQuestion(@Valid @RequestBody StuffQuestionPostDto stuffQuestionPostDto){

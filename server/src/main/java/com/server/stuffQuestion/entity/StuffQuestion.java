@@ -33,6 +33,8 @@ public class StuffQuestion {
     @Column(updatable = false)
     private String  stuffQuestionTag;
 
+    // private long views; // 조회수
+
     private LocalDate stuffQuestionCreated;
 
     private LocalDate stuffQuestionModified;

@@ -24,6 +24,8 @@ public class QuestionResponseDto {
 
     private String questionTag;
 
+    private String views; // 조회수
+
     private LocalDate questionCreated;
 
     private LocalDate questionModified;

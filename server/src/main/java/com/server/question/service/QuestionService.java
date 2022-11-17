@@ -84,4 +84,12 @@ public class QuestionService {
         questionRepository.delete(question);
     }
 
+    public Question addViews(Question question){
+        long views = question.getViews();
+        views++;
+        question.setViews(views);
+
+        return questionRepository.save(question);
+    }
+
 }
