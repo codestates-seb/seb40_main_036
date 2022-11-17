@@ -31,6 +31,6 @@ public class Question {
 
     private LocalDateTime questionCreated;
 
-    private LocalDateTime questionModifed;
+    private LocalDateTime questionModified;
 
 }

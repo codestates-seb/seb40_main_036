@@ -1,5 +1,6 @@
 package com.server.member.entity;
 
+import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
