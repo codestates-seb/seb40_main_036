@@ -31,7 +31,7 @@ const TipsContainer = styled.div`
   padding: 20px 0;
 `;
 const TipsContents = styled.div`
-  .congestion {
+  .Downpour {
     display: flex;
     justify-content: center;
     flex-direction: column;

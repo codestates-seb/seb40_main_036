@@ -14,8 +14,7 @@ function EvacuationTips() {
     congestion: <CongestionTips />,
     downpour: <DownpourTipsContents />,
   };
-  console.log(Selected);
-  console.log(selectComponent);
+
   return (
     <TipstContainer>
       <TipsContent>
