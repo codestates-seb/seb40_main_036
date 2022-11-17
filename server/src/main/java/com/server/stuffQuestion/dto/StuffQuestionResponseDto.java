@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @AllArgsConstructor
@@ -17,11 +18,17 @@ public class StuffQuestionResponseDto {
 
     private Long memberId;
 
+    private String name;
+
     private String  stuffQuestionTitle;
 
     private String  stuffQuestionContent;
 
     private String  stuffQuestionTag;
+
+    private LocalDateTime stuffQuestionCreated;
+
+    private LocalDateTime stuffQuestionModified;
 
     private List<StuffAnswerResponseDto> stuffAnswers;
 }

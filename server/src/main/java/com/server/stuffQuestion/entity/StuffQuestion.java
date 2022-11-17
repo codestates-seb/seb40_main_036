@@ -36,7 +36,7 @@ public class StuffQuestion {
 
     private LocalDateTime stuffQuestionCreated;
 
-    private LocalDateTime stuffQuestionModifed;
+    private LocalDateTime stuffQuestionModified;
 
     @ManyToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)

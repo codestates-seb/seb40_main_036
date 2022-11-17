@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-17T15:07:31+0900",
+    date = "2022-11-17T20:16:35+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -25,8 +25,12 @@ public class ShelterMapperImpl implements ShelterMapper {
 
         Shelter shelter = new Shelter();
 
-        shelter.setName( shelterPostDto.getName() );
-        shelter.setAddress( shelterPostDto.getAddress() );
+        shelter.setShelterId( shelterPostDto.getShelterId() );
+        shelter.setLocation( shelterPostDto.getLocation() );
+        shelter.setShelterName( shelterPostDto.getShelterName() );
+        shelter.setUuid( shelterPostDto.getUuid() );
+        shelter.setGeolocation( shelterPostDto.getGeolocation() );
+        shelter.setUpdatedate( shelterPostDto.getUpdatedate() );
         shelter.setCapacity( shelterPostDto.getCapacity() );
 
         return shelter;
@@ -41,8 +45,11 @@ public class ShelterMapperImpl implements ShelterMapper {
         Shelter shelter = new Shelter();
 
         shelter.setShelterId( shelterPatchDto.getShelterId() );
-        shelter.setName( shelterPatchDto.getName() );
-        shelter.setAddress( shelterPatchDto.getAddress() );
+        shelter.setLocation( shelterPatchDto.getLocation() );
+        shelter.setShelterName( shelterPatchDto.getShelterName() );
+        shelter.setUuid( shelterPatchDto.getUuid() );
+        shelter.setGeolocation( shelterPatchDto.getGeolocation() );
+        shelter.setUpdatedate( shelterPatchDto.getUpdatedate() );
         shelter.setCapacity( shelterPatchDto.getCapacity() );
 
         return shelter;
@@ -57,8 +64,11 @@ public class ShelterMapperImpl implements ShelterMapper {
         ShelterResponseDto shelterResponseDto = new ShelterResponseDto();
 
         shelterResponseDto.setShelterId( shelter.getShelterId() );
-        shelterResponseDto.setName( shelter.getName() );
-        shelterResponseDto.setAddress( shelter.getAddress() );
+        shelterResponseDto.setLocation( shelter.getLocation() );
+        shelterResponseDto.setShelterName( shelter.getShelterName() );
+        shelterResponseDto.setUuid( shelter.getUuid() );
+        shelterResponseDto.setGeolocation( shelter.getGeolocation() );
+        shelterResponseDto.setUpdatedate( shelter.getUpdatedate() );
         shelterResponseDto.setCapacity( shelter.getCapacity() );
 
         return shelterResponseDto;

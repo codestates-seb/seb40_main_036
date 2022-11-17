@@ -6,6 +6,7 @@ import com.server.stuffQuestion.dto.StuffQuestionPatchDto;
 import com.server.stuffQuestion.dto.StuffQuestionPostDto;
 import com.server.stuffQuestion.dto.StuffQuestionResponseDto;
 import com.server.stuffQuestion.entity.StuffQuestion;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-17T15:38:26+0900",
+    date = "2022-11-17T20:16:35+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -62,6 +63,8 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         String stuffQuestionTitle = null;
         String stuffQuestionContent = null;
         String stuffQuestionTag = null;
+        LocalDateTime stuffQuestionCreated = null;
+        LocalDateTime stuffQuestionModified = null;
         List<StuffAnswerResponseDto> stuffAnswers = null;
 
         stuffQuestionId = stuffQuestion.getStuffQuestionId();
@@ -69,9 +72,13 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffQuestionTitle = stuffQuestion.getStuffQuestionTitle();
         stuffQuestionContent = stuffQuestion.getStuffQuestionContent();
         stuffQuestionTag = stuffQuestion.getStuffQuestionTag();
+        stuffQuestionCreated = stuffQuestion.getStuffQuestionCreated();
+        stuffQuestionModified = stuffQuestion.getStuffQuestionModified();
         stuffAnswers = stuffAnswerListToStuffAnswerResponseDtoList( stuffQuestion.getStuffAnswers() );
 
-        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, stuffQuestionTitle, stuffQuestionContent, stuffQuestionTag, stuffAnswers );
+        String name = null;
+
+        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, stuffQuestionTag, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
 
         return stuffQuestionResponseDto;
     }
