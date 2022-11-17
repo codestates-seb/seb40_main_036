@@ -24,13 +24,18 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.google.code.gson:gson:2.8.7'
 	implementation 'mysql:mysql-connector-java'
-	implementation "org.mapstruct:mapstruct:1.4.2.Final"
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+
+	//implementation "org.mapstruct:mapstruct:1.4.2.Final"
+	//annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
+
+	implementation 'org.mapstruct:mapstruct:1.5.1.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
 }
 
 tasks.named('test') {

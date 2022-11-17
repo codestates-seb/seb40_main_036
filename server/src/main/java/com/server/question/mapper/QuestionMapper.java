@@ -1,6 +1,7 @@
 package com.server.question.mapper;
 
 
+import com.server.answer.entity.Answer;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.dto.QuestionResponseDto;
@@ -17,6 +18,8 @@ public interface QuestionMapper {
     Question questionPatchDtoToQuestion (QuestionPatchDto questionPatchDto);
 
     QuestionResponseDto questionToQuestionResponseDto (Question question);
+
+    QuestionResponseDto AnswersToQuestionResponseDto(Question question, List<Answer> answers);
 
     List<QuestionResponseDto> questionsToQuestionResponseDtos (List<Question> questions);
 }

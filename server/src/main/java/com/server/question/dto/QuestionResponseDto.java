@@ -1,11 +1,13 @@
 package com.server.question.dto;
 
+import com.server.answer.dto.AnswerResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-@Builder
+import java.util.List;
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -20,5 +22,7 @@ public class QuestionResponseDto {
     private String questionContent;
 
     private String questionTag;
+
+    private List<AnswerResponseDto> answers;
 
 }
