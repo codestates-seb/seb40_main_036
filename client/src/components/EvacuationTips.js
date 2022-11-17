@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import EarthquakeTipsContents from './EarthquakeTipsContents';
 import CongestionTips from './CongestionTips';
+import DownpourTipsContents from './DownpourTips';
 
 function EvacuationTips() {
   const [Selected, setSelected] = useState('earthquake');
@@ -11,6 +12,7 @@ function EvacuationTips() {
   const selectComponent = {
     earthquake: <EarthquakeTipsContents />,
     congestion: <CongestionTips />,
+    downpour: <DownpourTipsContents />,
   };
   console.log(Selected);
   console.log(selectComponent);
@@ -25,6 +27,7 @@ function EvacuationTips() {
             <select onChange={handleSelect} value={Selected}>
               <option value="earthquake">지진</option>
               <option value="congestion">군중밀집</option>
+              <option value="downpour">태풍,호우</option>
             </select>
           </SelectBox>
         </TipsTitle>

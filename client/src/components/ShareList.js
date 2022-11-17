@@ -4,12 +4,41 @@ import ShareListContents from './ShareListContents';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import DropDown from './Dropdown';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 function ShareList() {
+  const [questions, setQuestions] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchQustion = async () => {
+      try {
+        // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
+        setError(null);
+        setQuestions(null);
+        // loading 상태를 true 로 바꿉니다.
+        setLoading(true);
+        const response = await axios.get(`/question?page=1&size=10`);
+        console.log(response.data.data);
+        setQuestions(response.data.data); // 데이터는 response.body 안에 들어있습니다.
+      } catch (e) {
+        setError(e);
+      }
+      setLoading(false);
+    };
+
+    fetchQustion();
+  }, []);
+  if (loading) return <div>로딩중..</div>;
+  if (error) return <div>에러가 발생했습니다</div>;
+  if (!questions) return <div>질문이 없습니다.</div>;
+
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -21,7 +50,18 @@ function ShareList() {
             <DropDown />
           </SelectBox>
         </ShareListTitle>
-        <ShareListContents />
+        <ShareListContainer>
+          {questions.length !== 0 && (
+            <>
+              <ShareListContents
+                key={questions.questionId}
+                title={questions.questionTitle}
+                num={questions.questionId}
+                writer={questions.memberId}
+              />
+            </>
+          )}
+        </ShareListContainer>
         <Row>
           <Link to="/writeForm">
             <button className="writing">글쓰기</button>

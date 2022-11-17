@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-function ShareListContents() {
+function ShareListContents({ num, title, writer }) {
   return (
     <Container>
       <ContentsTitle>
@@ -10,9 +10,9 @@ function ShareListContents() {
         <div className="date">작성일</div>
       </ContentsTitle>
       <ContentsList>
-        <div className="num">01</div>
-        <div className="title">물이 부족합니다</div>
-        <div className="writer">김코딩</div>
+        <div className="num">{num}</div>
+        <div className="title">{title}</div>
+        <div className="writer">{writer}</div>
         <div className="date">2022.11.11</div>
       </ContentsList>
     </Container>
