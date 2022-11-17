@@ -28,11 +28,7 @@ public class QuestionResponseDto {
 
     private LocalDateTime questionCreated;
 
-<<<<<<< HEAD
     private LocalDateTime questionModified;
-=======
-    private LocalDateTime questionModfied;
->>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
     private List<AnswerResponseDto> answers;
 
