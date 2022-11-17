@@ -1,5 +1,7 @@
 package com.server.stuffAnswer.entity;
 
+import com.server.member.entity.Member;
+import com.server.stuffQuestion.entity.StuffQuestion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,4 +32,12 @@ public class StuffAnswer {
     private LocalDateTime stuffAnswerCreatedAt;
 
     private LocalDateTime stuffAnswerModifiedAt;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId",insertable = false,updatable = false)
+    private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "stuffQuestionId",insertable = false,updatable = false)
+    private StuffQuestion stuffQuestion;
 }

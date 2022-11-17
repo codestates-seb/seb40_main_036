@@ -57,7 +57,7 @@ public class QuestionService {
         Optional.ofNullable(question.getQuestionTag())
                 .ifPresent(Tag->findquestion.setQuestionTag(Tag));
 
-        findquestion.setQuestionModifed(LocalDateTime.now());
+        findquestion.setQuestionModfied(LocalDateTime.now());
 
         return questionRepository.save(findquestion);
 

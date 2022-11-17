@@ -1,5 +1,6 @@
 package com.server.answer.entity;
 
+import com.server.question.entity.Question;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,12 @@ public class Answer {
     private LocalDateTime answerCreatedAt;
 
     private LocalDateTime answerModifiedAt;
+
+    ////////////////////////////////////////////////
+
+    @ManyToOne
+    @JoinColumn(name = "questionId",insertable = false,updatable = false)
+    private Question question;
 
 
     /*@ManyToOne
