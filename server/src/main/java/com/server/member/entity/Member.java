@@ -2,6 +2,8 @@ package com.server.member.entity;
 
 import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
+import com.server.stuffAnswer.entity.StuffAnswer;
+import com.server.stuffQuestion.entity.StuffQuestion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,5 +39,14 @@ public class Member {
 
     @OneToOne(mappedBy = "member")
     private Reservation reservation;
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
+    private List<Question> questions=new ArrayList<>();
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
+    private List<StuffQuestion> stuffQuestions=new ArrayList<>();
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
+    private List<StuffAnswer> stuffAnswers=new ArrayList<>();
 
 }

@@ -1,6 +1,7 @@
 package com.server.stuffQuestion.mapper;
 
 import com.server.stuffAnswer.dto.StuffAnswerResponseDto;
+import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffQuestion.dto.StuffQuestionPatchDto;
 import com.server.stuffQuestion.dto.StuffQuestionPostDto;
 import com.server.stuffQuestion.dto.StuffQuestionResponseDto;
@@ -12,8 +13,13 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
+<<<<<<< HEAD
     date = "2022-11-17T15:07:31+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+=======
+    date = "2022-11-17T15:25:59+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 )
 @Component
 public class StuffQuestionMapperImpl implements StuffQuestionMapper {
@@ -61,14 +67,14 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         String stuffQuestionTitle = null;
         String stuffQuestionContent = null;
         String stuffQuestionTag = null;
+        List<StuffAnswerResponseDto> stuffAnswers = null;
 
         stuffQuestionId = stuffQuestion.getStuffQuestionId();
         memberId = stuffQuestion.getMemberId();
         stuffQuestionTitle = stuffQuestion.getStuffQuestionTitle();
         stuffQuestionContent = stuffQuestion.getStuffQuestionContent();
         stuffQuestionTag = stuffQuestion.getStuffQuestionTag();
-
-        List<StuffAnswerResponseDto> stuffAnswers = null;
+        stuffAnswers = stuffAnswerListToStuffAnswerResponseDtoList( stuffQuestion.getStuffAnswers() );
 
         StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, stuffQuestionTitle, stuffQuestionContent, stuffQuestionTag, stuffAnswers );
 
@@ -87,5 +93,35 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         }
 
         return list;
+    }
+
+    protected StuffAnswerResponseDto stuffAnswerToStuffAnswerResponseDto(StuffAnswer stuffAnswer) {
+        if ( stuffAnswer == null ) {
+            return null;
+        }
+
+        StuffAnswerResponseDto.StuffAnswerResponseDtoBuilder stuffAnswerResponseDto = StuffAnswerResponseDto.builder();
+
+        stuffAnswerResponseDto.stuffAnswerId( stuffAnswer.getStuffAnswerId() );
+        stuffAnswerResponseDto.stuffQuestionId( stuffAnswer.getStuffQuestionId() );
+        stuffAnswerResponseDto.memberId( stuffAnswer.getMemberId() );
+        stuffAnswerResponseDto.stuffAnswerContent( stuffAnswer.getStuffAnswerContent() );
+        stuffAnswerResponseDto.stuffAnswerCreatedAt( stuffAnswer.getStuffAnswerCreatedAt() );
+        stuffAnswerResponseDto.stuffAnswerModifiedAt( stuffAnswer.getStuffAnswerModifiedAt() );
+
+        return stuffAnswerResponseDto.build();
+    }
+
+    protected List<StuffAnswerResponseDto> stuffAnswerListToStuffAnswerResponseDtoList(List<StuffAnswer> list) {
+        if ( list == null ) {
+            return null;
+        }
+
+        List<StuffAnswerResponseDto> list1 = new ArrayList<StuffAnswerResponseDto>( list.size() );
+        for ( StuffAnswer stuffAnswer : list ) {
+            list1.add( stuffAnswerToStuffAnswerResponseDto( stuffAnswer ) );
+        }
+
+        return list1;
     }
 }

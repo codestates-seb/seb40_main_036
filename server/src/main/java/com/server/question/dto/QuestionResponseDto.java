@@ -18,6 +18,8 @@ public class QuestionResponseDto {
 
     private Long memberId;
 
+    private String name;
+
     private String questionTitle;
 
     private String questionContent;
@@ -26,7 +28,11 @@ public class QuestionResponseDto {
 
     private LocalDateTime questionCreated;
 
+<<<<<<< HEAD
     private LocalDateTime questionModified;
+=======
+    private LocalDateTime questionModfied;
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
     private List<AnswerResponseDto> answers;
 

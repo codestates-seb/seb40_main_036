@@ -14,8 +14,13 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
+<<<<<<< HEAD
     date = "2022-11-17T15:07:31+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+=======
+    date = "2022-11-17T15:26:00+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 )
 @Component
 public class QuestionMapperImpl implements QuestionMapper {
@@ -26,14 +31,15 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        Question.QuestionBuilder question = Question.builder();
+        Question question = new Question();
 
-        question.memberId( questionPostDto.getMemberId() );
-        question.questionTitle( questionPostDto.getQuestionTitle() );
-        question.questionContent( questionPostDto.getQuestionContent() );
-        question.questionTag( questionPostDto.getQuestionTag() );
+        question.setMemberId( questionPostDto.getMemberId() );
+        question.setName( questionPostDto.getName() );
+        question.setQuestionTitle( questionPostDto.getQuestionTitle() );
+        question.setQuestionContent( questionPostDto.getQuestionContent() );
+        question.setQuestionTag( questionPostDto.getQuestionTag() );
 
-        return question.build();
+        return question;
     }
 
     @Override
@@ -42,11 +48,11 @@ public class QuestionMapperImpl implements QuestionMapper {
             return null;
         }
 
-        Question.QuestionBuilder question = Question.builder();
+        Question question = new Question();
 
-        question.memberId( questionPatchDto.getMemberId() );
+        question.setMemberId( questionPatchDto.getMemberId() );
 
-        return question.build();
+        return question;
     }
 
     @Override
@@ -57,23 +63,37 @@ public class QuestionMapperImpl implements QuestionMapper {
 
         Long questionId = null;
         Long memberId = null;
+        String name = null;
         String questionTitle = null;
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
+<<<<<<< HEAD
         LocalDateTime questionModified = null;
+=======
+        LocalDateTime questionModfied = null;
+        List<AnswerResponseDto> answers = null;
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
         questionId = question.getQuestionId();
         memberId = question.getMemberId();
+        name = question.getName();
         questionTitle = question.getQuestionTitle();
         questionContent = question.getQuestionContent();
         questionTag = question.getQuestionTag();
         questionCreated = question.getQuestionCreated();
+<<<<<<< HEAD
         questionModified = question.getQuestionModified();
 
         List<AnswerResponseDto> answers = null;
 
         QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers );
+=======
+        questionModfied = question.getQuestionModfied();
+        answers = answerListToAnswerResponseDtoList( question.getAnswers() );
+
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers );
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
         return questionResponseDto;
     }
@@ -86,24 +106,38 @@ public class QuestionMapperImpl implements QuestionMapper {
 
         Long questionId = null;
         Long memberId = null;
+        String name = null;
         String questionTitle = null;
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
+<<<<<<< HEAD
         LocalDateTime questionModified = null;
+=======
+        LocalDateTime questionModfied = null;
+        List<AnswerResponseDto> answers1 = null;
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
         if ( question != null ) {
             questionId = question.getQuestionId();
             memberId = question.getMemberId();
+            name = question.getName();
             questionTitle = question.getQuestionTitle();
             questionContent = question.getQuestionContent();
             questionTag = question.getQuestionTag();
             questionCreated = question.getQuestionCreated();
+<<<<<<< HEAD
             questionModified = question.getQuestionModified();
+=======
+            questionModfied = question.getQuestionModfied();
+            answers1 = answerListToAnswerResponseDtoList( question.getAnswers() );
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
         }
-        List<AnswerResponseDto> answers1 = null;
-        answers1 = answerListToAnswerResponseDtoList( answers );
 
+<<<<<<< HEAD
         QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers1 );
+=======
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers1 );
+>>>>>>> a61e73b573a6096e2b21fe6944e605e55b19d79b
 
         return questionResponseDto;
     }
