@@ -59,31 +59,41 @@ public class StuffQuestionService {
 
     }
 
-        public StuffQuestion findVerifiedStuffQuestion(long stuffQuestionId){
+    public StuffQuestion findVerifiedStuffQuestion(long stuffQuestionId){
         Optional<StuffQuestion> optionalStuffQuestion =
                 stuffQuestionRepository.findById(stuffQuestionId);
         StuffQuestion findStuffQuestion =
                 optionalStuffQuestion.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.StuffQuestion_NOT_FOUND));
         return findStuffQuestion;
-        }
+    }
 
 
-        public StuffQuestion findStuffQuestion(long stuffQuestionID){return findVerifiedStuffQuestion(stuffQuestionID);}
+    public StuffQuestion findStuffQuestion(long stuffQuestionID){return findVerifiedStuffQuestion(stuffQuestionID);}
 
         public List<StuffQuestion> searchStuffQuestion(String word){
             return stuffQuestionRepository.findByStuffQuestionContentContaining(word);
-        }
+    }
 
-
-        public Page<StuffQuestion> findStuffQuestions(int page, int size){
+    public Page<StuffQuestion> findStuffQuestions(int page, int size){
             return stuffQuestionRepository.findAll(PageRequest.of(page,size,
                     Sort.by("stuffQuestionId").descending()));
-        }
+    }
 
 
-        public void deleteStuffQuestion(long stuffQuestionId){
+    public void deleteStuffQuestion(long stuffQuestionId){
         StuffQuestion stuffQuestion = findVerifiedStuffQuestion(stuffQuestionId);
         stuffQuestionRepository.delete(stuffQuestion);
-        }
+    }
+
+//    public StuffQuestion addViews(StuffQuestion stuffQuestion){
+//        long views = stuffQuestion.getViews();
+//        views++;
+//        stuffQuestion.setViews(views);
+//
+//        return stuffQuestionRepository.save(stuffQuestion);
+//
+//    }
+
+
 }

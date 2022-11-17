@@ -35,6 +35,8 @@ public class Question {
     @Column(updatable = false)
     private String questionTag;
 
+    private long views; // 조회수
+
     private LocalDate questionCreated;
 
     private LocalDate questionModified;
