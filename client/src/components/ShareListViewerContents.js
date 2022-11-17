@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function ShareLisViewerContents() {
+function ShareLisViewerContents({ content }) {
   return (
     <Container>
       <ShareListContents>
-        <div className="contents">
-          물이 부족합니다. 물을 나눠주실 수 있나요?
-        </div>
+        <div className="contents">{content}</div>
       </ShareListContents>
       <DeletEdit>
         <div className="delete">삭제</div>
