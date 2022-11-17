@@ -3,8 +3,10 @@ package com.server.reservationInfo.service;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.reservation.entity.Reservation;
+import com.server.reservation.repository.ReservationRepository;
 import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.reservationInfo.repository.ReservationInfoRepository;
+import com.server.shelter.repository.ShelterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +20,7 @@ import java.util.Optional;
 public class ReservationInfoService {
 
     private final ReservationInfoRepository reservationInfoRepository;
+    private final ShelterRepository shelterRepository;
 
     public ReservationInfo findReservationInfo(long reservationInfoId) {
         return findVerifiedReservationInfo(reservationInfoId);
@@ -36,4 +39,5 @@ public class ReservationInfoService {
                         new BusinessLogicException(ExceptionCode.ReservationInfo_NOT_FOUND));
         return findReservationInfo;
     }
+
 }

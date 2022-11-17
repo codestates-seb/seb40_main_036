@@ -7,11 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +35,9 @@ public class Reservation {
     @Column(nullable = false)
     private int num;
 
-    private LocalDateTime reservationCreated;
+    private LocalDate reservationCreated;
 
-    private LocalDateTime reservationModified;
+    private LocalDate reservationModified;
 
     @OneToMany(mappedBy = "reservation")
     private List<ReservationInfo> reservationInfos = new ArrayList<>();

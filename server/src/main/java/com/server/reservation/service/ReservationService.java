@@ -5,14 +5,14 @@ import com.server.exception.ExceptionCode;
 import com.server.member.service.MemberService;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.repository.ReservationRepository;
+import com.server.reservationInfo.repository.ReservationInfoRepository;
 import com.server.shelter.service.ShelterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Service
@@ -20,6 +20,8 @@ import java.util.Optional;
 public class ReservationService {
 
     private final ReservationRepository reservationRepository;
+
+    private final ReservationInfoRepository reservationInfoRepository;
     private final MemberService memberService;
     private final ShelterService shelterService;
 
@@ -31,9 +33,10 @@ public class ReservationService {
         // 대피소가 존재하는지 확인
         shelterService.findVerifiedShelter(reservation.getShelter().getShelterId()); // 있으면 넘어가고 없으면 예외문구뜸
 
-        reservation.setReservationCreated(LocalDateTime.now());
+        reservation.setReservationCreated(LocalDate.now());
 
         Reservation savedReservation = saveReservation(reservation);
+
         return reservationRepository.save(savedReservation);
 
     }
@@ -52,7 +55,7 @@ public class ReservationService {
         Optional.ofNullable(reservation.getNum())
                 .ifPresent(Num->findReservation.setNum(Num));
         // 예약 시간 수정
-        findReservation.setReservationModified(LocalDateTime.now());
+        findReservation.setReservationModified(LocalDate.now());
         return reservationRepository.save(findReservation);
     }
 
