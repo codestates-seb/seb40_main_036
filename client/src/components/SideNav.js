@@ -5,8 +5,9 @@ import { useState } from 'react';
 
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
+  const [hide, sethide] = useState(false);
   return (
-    <SideWrapper>
+    <SideWrapper className={hide === true ? 'hide' : ''}>
       <div className="d-flex">
         <div className="ta-right">
           <FontAwesomeIcon
@@ -33,12 +34,18 @@ const SideNav = (props) => {
           <button className="reservation">예약하기</button>
         </div>
       </div>
+      <ArrowWrapper onClick={() => sethide(!hide)}>
+        {hide && <FontAwesomeIcon icon={solid('chevron-right')} />}
+        {!hide && <FontAwesomeIcon icon={solid('chevron-left')} />}
+      </ArrowWrapper>
     </SideWrapper>
   );
 };
 export default SideNav;
 
 const SideWrapper = styled.aside`
+  position: relative;
+  left: 0;
   max-width: 400px;
   width: 100%;
   height: calc(100vh - 50px);
@@ -48,6 +55,8 @@ const SideWrapper = styled.aside`
   z-index: -1;
   font-size: 24px;
   box-shadow: 5px 0 5px rgb(0 0 0/25%);
+  transition: 0.5s ease all;
+
   .d-flex {
     display: flex;
     flex-direction: column;
@@ -97,4 +106,23 @@ const SideWrapper = styled.aside`
     width: 100%;
     font-weight: 600;
   }
+  &.hide {
+    left: -400px;
+  }
+`;
+const ArrowWrapper = styled.div`
+  position: relative;
+  width: 25px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  background: white;
+  box-shadow: 5px 0 5px rgb(0 0 0/25%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -25px;
+  cursor: pointer;
 `;
