@@ -35,9 +35,7 @@ public class AnswerController {
         Answer answer = answerService.createAnswer(answerMapper.answerPostDtoToAnswer(answerPostDto));
 
         return new ResponseEntity<>(answerMapper.answerToAnswerResponseDto(answer), HttpStatus.CREATED);
-
     }
-
 
 
     @PatchMapping("/{answerId}")
@@ -50,7 +48,6 @@ public class AnswerController {
         Answer responseAnswer = answerService.updateAnswer(answer);
 
         return new ResponseEntity<>(answerMapper.answerToAnswerResponseDto(responseAnswer),HttpStatus.OK);
-
     }
 
 
@@ -63,7 +60,6 @@ public class AnswerController {
 
                 new SingleResponseDto(answerMapper.answerToAnswerResponseDto(answer)),
                 HttpStatus.OK);
-
     }
 
 
@@ -74,9 +70,6 @@ public class AnswerController {
 
         return new ResponseEntity<>(answerMapper.answersToAnswersResponseDtos(answerList),HttpStatus.OK);
     }
-
-
-
 
 
     @GetMapping
@@ -90,7 +83,6 @@ public class AnswerController {
     }
 
 
-
     @DeleteMapping("/{answerId}")
     public ResponseEntity deleteAnswer(@PathVariable("answerId") @Positive long answerId){
 
@@ -98,6 +90,4 @@ public class AnswerController {
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
-
 }

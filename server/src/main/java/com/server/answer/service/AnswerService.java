@@ -33,7 +33,7 @@ public class AnswerService {
         }
 
         if (!questionRepository.existsById(answer.getQuestionId())) {
-            throw new BusinessLogicException(ExceptionCode.Answer_NOT_FOUND);
+            throw new BusinessLogicException(ExceptionCode.Question_NOT_FOUND);
         }
 
         answer.setAnswerCreatedAt(LocalDateTime.now());
@@ -41,6 +41,7 @@ public class AnswerService {
         return answerRepository.save(answer);
 
     }
+
 
     public Answer updateAnswer(Answer answer) {
         if (!memberRepository.existsById(answer.getMemberId())) {
@@ -56,6 +57,7 @@ public class AnswerService {
         return answerRepository.save(findAnswer);
     }
 
+
     public Answer findVerifiedAnswer(long answerId){
         Optional<Answer> optionalAnswer =
                 answerRepository.findById(answerId);
@@ -63,19 +65,23 @@ public class AnswerService {
                 optionalAnswer.orElseThrow(()->
                         new  BusinessLogicException(ExceptionCode.Answer_NOT_FOUND));
         return  findAnswer;
-
     }
 
+
     public Answer findAnswer(long answerId){return findVerifiedAnswer(answerId);}
+
 
     public List<Answer> findQuestionAnswers (long questionId){
         return answerRepository.findByQuestionId(questionId);
     }
 
+
     public Page<Answer> findAnswers(int page, int size){
         return answerRepository.findAll(PageRequest.of(page,size,
                 Sort.by("answerId").descending()));
     }
+
+
     public void deleteAnswer(long answerId){
         Answer answer= findVerifiedAnswer(answerId);
         answerRepository.delete(answer);
