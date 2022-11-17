@@ -2,22 +2,17 @@ package com.server.question.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
-import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
-import com.server.member.service.MemberService;
 import com.server.question.entity.Question;
 import com.server.question.repository.QuestionRepository;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +29,7 @@ public class QuestionService {
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
-        question.setQuestionCreated(LocalDateTime.now());
+        question.setQuestionCreated(LocalDate.now());
 
         return questionRepository.save(question);
     }
@@ -57,7 +52,7 @@ public class QuestionService {
         Optional.ofNullable(question.getQuestionTag())
                 .ifPresent(Tag->findquestion.setQuestionTag(Tag));
 
-        findquestion.setQuestionModified(LocalDateTime.now());
+        findquestion.setQuestionModified(LocalDate.now());
 
         return questionRepository.save(findquestion);
 

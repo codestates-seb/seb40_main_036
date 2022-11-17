@@ -6,7 +6,7 @@ import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.dto.QuestionResponseDto;
 import com.server.question.entity.Question;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-17T20:16:35+0900",
+    date = "2022-11-18T00:51:34+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -65,8 +65,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionTitle = null;
         String questionContent = null;
         String questionTag = null;
-        LocalDateTime questionCreated = null;
-        LocalDateTime questionModified = null;
+        LocalDate questionCreated = null;
+        LocalDate questionModified = null;
         List<AnswerResponseDto> answers = null;
 
         questionId = question.getQuestionId();
@@ -96,8 +96,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionTitle = null;
         String questionContent = null;
         String questionTag = null;
-        LocalDateTime questionCreated = null;
-        LocalDateTime questionModified = null;
+        LocalDate questionCreated = null;
+        LocalDate questionModified = null;
         List<AnswerResponseDto> answers1 = null;
         if ( question != null ) {
             questionId = question.getQuestionId();

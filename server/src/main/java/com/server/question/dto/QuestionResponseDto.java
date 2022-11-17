@@ -2,11 +2,9 @@ package com.server.question.dto;
 
 import com.server.answer.dto.AnswerResponseDto;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
@@ -26,9 +24,9 @@ public class QuestionResponseDto {
 
     private String questionTag;
 
-    private LocalDateTime questionCreated;
+    private LocalDate questionCreated;
 
-    private LocalDateTime questionModified;
+    private LocalDate questionModified;
 
     private List<AnswerResponseDto> answers;
 

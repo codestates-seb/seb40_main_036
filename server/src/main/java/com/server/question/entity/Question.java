@@ -3,9 +3,8 @@ package com.server.question.entity;
 import com.server.answer.entity.Answer;
 import com.server.member.entity.Member;
 import lombok.*;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,9 +35,9 @@ public class Question {
     @Column(updatable = false)
     private String questionTag;
 
-    private LocalDateTime questionCreated;
+    private LocalDate questionCreated;
 
-    private LocalDateTime questionModified;
+    private LocalDate questionModified;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.PERSIST)
     private List<Answer> answers=new ArrayList<>();
