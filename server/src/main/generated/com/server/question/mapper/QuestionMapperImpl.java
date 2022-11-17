@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-17T15:40:34+0900",
-    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
+    date = "2022-11-17T15:52:05+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
 public class QuestionMapperImpl implements QuestionMapper {
@@ -63,7 +63,7 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
-        LocalDateTime questionModfied = null;
+        LocalDateTime questionModified = null;
         List<AnswerResponseDto> answers = null;
 
         questionId = question.getQuestionId();
@@ -73,10 +73,10 @@ public class QuestionMapperImpl implements QuestionMapper {
         questionContent = question.getQuestionContent();
         questionTag = question.getQuestionTag();
         questionCreated = question.getQuestionCreated();
-        questionModfied = question.getQuestionModfied();
+        questionModified = question.getQuestionModified();
         answers = answerListToAnswerResponseDtoList( question.getAnswers() );
 
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers );
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers );
 
         return questionResponseDto;
     }
@@ -94,7 +94,7 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionContent = null;
         String questionTag = null;
         LocalDateTime questionCreated = null;
-        LocalDateTime questionModfied = null;
+        LocalDateTime questionModified = null;
         List<AnswerResponseDto> answers1 = null;
         if ( question != null ) {
             questionId = question.getQuestionId();
@@ -104,11 +104,11 @@ public class QuestionMapperImpl implements QuestionMapper {
             questionContent = question.getQuestionContent();
             questionTag = question.getQuestionTag();
             questionCreated = question.getQuestionCreated();
-            questionModfied = question.getQuestionModfied();
+            questionModified = question.getQuestionModified();
             answers1 = answerListToAnswerResponseDtoList( question.getAnswers() );
         }
 
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModfied, answers1 );
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, questionTag, questionCreated, questionModified, answers1 );
 
         return questionResponseDto;
     }

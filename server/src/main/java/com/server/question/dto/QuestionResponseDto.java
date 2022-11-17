@@ -28,7 +28,7 @@ public class QuestionResponseDto {
 
     private LocalDateTime questionCreated;
 
-    private LocalDateTime questionModfied;
+    private LocalDateTime questionModified;
 
     private List<AnswerResponseDto> answers;
 

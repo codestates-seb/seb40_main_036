@@ -38,11 +38,9 @@ public class Reservation {
     @Column(nullable = false)
     private int num;
 
-    @CreatedDate
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 
-    @LastModifiedDate
-    private LocalDateTime modifiedAt  = LocalDateTime.now();
+    private LocalDateTime modifiedAt;
 
     @OneToMany(mappedBy = "reservation")
     private List<ReservationInfo> reservationInfos = new ArrayList<>();

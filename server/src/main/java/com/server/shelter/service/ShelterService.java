@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Column;
 import java.util.Optional;
 
 @Service
@@ -27,12 +28,21 @@ public class ShelterService {
     public Shelter updateShelter(Shelter shelter){
         // shelterId 확인
         Shelter findShelter = findVerifiedShelter(shelter.getShelterId());
-        // address 수정
-        Optional.ofNullable(shelter.getAddress())
-                .ifPresent(Address->findShelter.setAddress(Address));
-        // name 수정
-        Optional.ofNullable(shelter.getName())
-                .ifPresent(Name ->findShelter.setName(Name));
+        // location 수정
+        Optional.ofNullable(shelter.getLocation())
+                .ifPresent(location ->findShelter.setLocation(location));
+        // shelterName 수정
+        Optional.ofNullable(shelter.getShelterName())
+                .ifPresent(shelterName->findShelter.setShelterName(shelterName));
+        // uuid 대피소 고유 번호 수정
+        Optional.ofNullable(shelter.getUuid())
+                .ifPresent(uuid->findShelter.setUuid(uuid));
+        // geolocation 수정
+        Optional.ofNullable(shelter.getGeolocation())
+                .ifPresent(geolocation ->findShelter.setGeolocation(geolocation));
+        // updatedate 수정
+        Optional.ofNullable(shelter.getUpdatedate())
+                .ifPresent(updatedate ->findShelter.setUpdatedate(updatedate));
         // 수용 가능 인원 수정
         Optional.ofNullable(shelter.getCapacity())
                 .ifPresent(Capacity->findShelter.setCapacity(Capacity));

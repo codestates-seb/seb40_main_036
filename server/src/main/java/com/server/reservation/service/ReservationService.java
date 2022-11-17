@@ -31,6 +31,8 @@ public class ReservationService {
         // 대피소가 존재하는지 확인
         shelterService.findVerifiedShelter(reservation.getShelter().getShelterId()); // 있으면 넘어가고 없으면 예외문구뜸
 
+        reservation.setCreatedAt(LocalDateTime.now());
+
         Reservation savedReservation = saveReservation(reservation);
         return reservationRepository.save(savedReservation);
 
