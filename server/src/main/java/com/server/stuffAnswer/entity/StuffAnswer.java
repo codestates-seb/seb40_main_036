@@ -6,9 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -29,9 +29,9 @@ public class StuffAnswer {
     @Column(nullable = false)
     private String stuffAnswerContent;
 
-    private LocalDateTime stuffAnswerCreatedAt;
+    private LocalDate stuffAnswerCreated;
 
-    private LocalDateTime stuffAnswerModifiedAt;
+    private LocalDate stuffAnswerModified;
 
     @ManyToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)

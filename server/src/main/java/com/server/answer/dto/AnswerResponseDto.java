@@ -1,8 +1,7 @@
 package com.server.answer.dto;
 
 import lombok.*;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Builder
 @AllArgsConstructor
@@ -18,8 +17,8 @@ public class AnswerResponseDto {
 
     private String answerContent;
 
-    private LocalDateTime answerCreatedAt;
+    private LocalDate answerCreated;
 
-    private LocalDateTime answerModifiedAt;
+    private LocalDate answerModified;
 
 }

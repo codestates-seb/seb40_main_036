@@ -6,7 +6,7 @@ import com.server.stuffQuestion.dto.StuffQuestionPatchDto;
 import com.server.stuffQuestion.dto.StuffQuestionPostDto;
 import com.server.stuffQuestion.dto.StuffQuestionResponseDto;
 import com.server.stuffQuestion.entity.StuffQuestion;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-18T00:51:34+0900",
+    date = "2022-11-18T01:06:27+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -63,8 +63,8 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         String stuffQuestionTitle = null;
         String stuffQuestionContent = null;
         String stuffQuestionTag = null;
-        LocalDateTime stuffQuestionCreated = null;
-        LocalDateTime stuffQuestionModified = null;
+        LocalDate stuffQuestionCreated = null;
+        LocalDate stuffQuestionModified = null;
         List<StuffAnswerResponseDto> stuffAnswers = null;
 
         stuffQuestionId = stuffQuestion.getStuffQuestionId();
@@ -108,8 +108,8 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffAnswerResponseDto.stuffQuestionId( stuffAnswer.getStuffQuestionId() );
         stuffAnswerResponseDto.memberId( stuffAnswer.getMemberId() );
         stuffAnswerResponseDto.stuffAnswerContent( stuffAnswer.getStuffAnswerContent() );
-        stuffAnswerResponseDto.stuffAnswerCreatedAt( stuffAnswer.getStuffAnswerCreatedAt() );
-        stuffAnswerResponseDto.stuffAnswerModifiedAt( stuffAnswer.getStuffAnswerModifiedAt() );
+        stuffAnswerResponseDto.stuffAnswerCreated( stuffAnswer.getStuffAnswerCreated() );
+        stuffAnswerResponseDto.stuffAnswerModified( stuffAnswer.getStuffAnswerModified() );
 
         return stuffAnswerResponseDto.build();
     }

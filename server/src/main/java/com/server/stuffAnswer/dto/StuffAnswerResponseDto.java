@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Builder
 @AllArgsConstructor
@@ -21,7 +20,7 @@ public class StuffAnswerResponseDto {
 
     private String stuffAnswerContent;
 
-    private LocalDateTime stuffAnswerCreatedAt;
+    private LocalDate stuffAnswerCreated;
 
-    private LocalDateTime stuffAnswerModifiedAt;
+    private LocalDate stuffAnswerModified;
 }

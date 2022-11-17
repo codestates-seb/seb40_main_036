@@ -5,9 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -29,29 +28,12 @@ public class Answer {
     @Column(nullable = false)
     private String answerContent;
 
-    private LocalDateTime answerCreatedAt;
+    private LocalDate answerCreated;
 
-    private LocalDateTime answerModifiedAt;
-
-    ////////////////////////////////////////////////
+    private LocalDate answerModified;
 
     @ManyToOne
     @JoinColumn(name = "questionId",insertable = false,updatable = false)
     private Question question;
-
-
-    /*@ManyToOne
-    @JoinColumn(name = "questionId")
-    private Question question;
-    @ManyToOne
-    @JoinColumn(name = "memberId")
-    private Member member;
-    @Column(nullable = false)
-    private String answerContent;
-    @CreatedDate
-    private LocalDateTime createdAt = LocalDateTime.now();
-    @LastModifiedDate
-    private LocalDateTime modifiedAt = LocalDateTime.now();*/
-
 
 }
