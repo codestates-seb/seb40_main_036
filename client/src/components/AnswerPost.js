@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Profile from './../img/profile.png';
 import { useRef, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -13,31 +12,25 @@ function AnswerPost() {
   }, []);
 
   const handleOnClick = () => {
-    if (AnswerPost.body !== '') {
+    if (AnswerPost.body !== '' && sessionStorage.getItem('membeId')) {
       const data = {
         answerContent: textRef.current.value,
         questionId: `${QuestionId}`,
-        memberId: '1',
-        name: 'kyh',
+        memberId: `${sessionStorage.getItem('membeId')}`,
+        name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
         .post(`/answer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
+    } else {
+      window.location.href = '/login';
     }
   };
   return (
     <Container>
       <Post>
-        <div className="user">
-          <div className="userProfile">
-            <img src={Profile} alt="profile" />
-          </div>
-          <div className="content">
-            <div className="userName">김우빈</div>
-          </div>
-        </div>
         <textarea
           className="answer"
           ref={textRef}
@@ -65,28 +58,15 @@ const Container = styled.div`
 const Post = styled.div`
   border: 1px solid #d2d2d2;
   border-radius: 10px;
-  .user {
-    display: flex;
-    align-items: center;
-    padding: 10px 0 0 10px;
-  }
-  .userProfile {
-    img {
-      width: 35px;
-    }
-  }
-  .userName {
-    margin-left: 2px;
-    font-weight: bold;
-    font-size: 18px;
-  }
+
   .submitButon {
     display: flex;
     justify-content: end;
-    padding: 0 10px 10px 10px;
+    padding: 0 15px 15px 15px;
   }
   textarea {
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 15px 15px 0 15px;
     resize: none;
     width: 100%;
     border: none;
