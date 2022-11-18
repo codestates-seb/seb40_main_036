@@ -1,12 +1,29 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { useRef, useCallback } from 'react';
+import axios from 'axios';
+
 function AnswerPost() {
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = 'auto';
     textRef.current.style.height = textRef.current.scrollHeight + 'px';
   }, []);
+
+  const handleOnClick = () => {
+    if (AnswerPost.body !== '') {
+      const data = {
+        answerContent: textRef.current.value,
+        questionId: '1',
+        memberId: '1',
+      };
+      console.log(data);
+      axios
+        .post(`/answer`, data)
+        .then(() => window.location.reload())
+        .catch((err) => console.log(err));
+    }
+  };
   return (
     <Container>
       <Post>
@@ -25,7 +42,9 @@ function AnswerPost() {
           onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
-          <button type="submit">등록</button>
+          <button type="submit" onClick={handleOnClick}>
+            등록
+          </button>
         </div>
       </Post>
     </Container>

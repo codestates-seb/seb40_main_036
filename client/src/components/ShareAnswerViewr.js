@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-function ShareAnswerViewr() {
+function ShareAnswerViewr({ answerContents, answerDate, user }) {
   return (
     <Container>
       <AnswerContents>
@@ -8,9 +8,9 @@ function ShareAnswerViewr() {
           <img src={Profile} alt="profile" />
         </div>
         <div className="content">
-          <div className="userName">박해커</div>
-          <div className="contents">저 물 있습니다!!</div>
-          <div className="date">2022.11.01 15:00</div>
+          <div className="userName">{user}</div>
+          <div className="contents">{answerContents}</div>
+          <div className="date">{answerDate}</div>
         </div>
       </AnswerContents>
       <DeletEdit>

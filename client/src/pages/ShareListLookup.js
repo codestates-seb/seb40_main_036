@@ -9,6 +9,7 @@ import ShareLisViewerContents from '../components/ShareListViewerContents';
 function ShareListLookup() {
   const { QuestionId } = useParams();
   const [questions, setQuestions] = useState(null);
+  const [answer, setAnswer] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -22,7 +23,8 @@ function ShareListLookup() {
         setLoading(true);
         const response = await axios.get(`/question/${QuestionId}`);
         console.log(response.data);
-        setQuestions(response.data); // 데이터는 response.body 안에 들어있습니다.
+        setQuestions(response.data);
+        setAnswer(response.data.answers); // 데이터는 response.body 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
@@ -56,7 +58,15 @@ function ShareListLookup() {
             />
           </>
         )}
-        <ShareAnswerViewr />
+        {answer.map((item) => (
+          <ShareAnswerViewr
+            key={item.answerId}
+            id={item.questionId}
+            user={item.memberId}
+            answerContents={item.answerContent}
+            answerDate={item.answerCreated}
+          />
+        ))}
         <AnswerPost />
       </Container>
     </Contents>
