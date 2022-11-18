@@ -75,7 +75,7 @@ public class QuestionService {
     }
 
     public List<Question> searchQuestion(String word){
-        return questionRepository.findByQuestionContentContaining(word);
+        return questionRepository.findByQuestionTitleContaining(word);
     }
 
     public Page<Question> findQuestions(int page, int size){

@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Column;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -73,4 +74,9 @@ public class ShelterService {
         shelterRepository.delete(findShelter);
 
     }
+
+    public List<Shelter> searchShelter (String location){
+        return  shelterRepository.findByGeolocationContaining(location);
+    }
+
 }
