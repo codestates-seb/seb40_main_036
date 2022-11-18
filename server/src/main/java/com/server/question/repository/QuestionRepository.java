@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
-    List<Question> findByQuestionContentContaining(String word);
+    List<Question> findByQuestionTitleContaining(String word);
 }

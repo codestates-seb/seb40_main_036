@@ -65,6 +65,14 @@ public class ShelterController {
     }
 
 
+    @GetMapping("/search/{location}")
+    public ResponseEntity searchShelter(@PathVariable("location")
+                                        @Valid String location){
+        List<Shelter> shelters = shelterService.searchShelter(location);
+
+        return new ResponseEntity<>(shelterMapper.sheltersToShelterResponseDtos(shelters),HttpStatus.OK);
+    }
+
     @DeleteMapping("/{shelterId}")
     public ResponseEntity deleteShelter(@PathVariable("shelterId")
                                        @Positive long Id){

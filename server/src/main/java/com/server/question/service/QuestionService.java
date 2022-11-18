@@ -75,12 +75,12 @@ public class QuestionService {
     }
 
     public List<Question> searchQuestion(String word){
-        return questionRepository.findByQuestionContentContaining(word);
+        return questionRepository.findByQuestionTitleContaining(word);
     }
 
     public Page<Question> findQuestions(int page, int size){
         return questionRepository.findAll(PageRequest.of(page,size,
-                Sort.by("memberId").descending()));
+                Sort.by("questionId").descending()));
     }
 
     public void deleteQuestion(long questionId){
