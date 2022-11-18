@@ -1,15 +1,73 @@
 import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import AnswerPost from '../components/AnswerPost';
 import ShareAnswerViewr from '../components/ShareAnswerViewr';
-import ShareLisViewer from '../components/ShareListViewer';
+import ShareLisViewerTitle from '../components/ShareListViewerTitle';
 import ShareLisViewerContents from '../components/ShareListViewerContents';
 function ShareListLookup() {
+  const { QuestionId } = useParams();
+  const [questions, setQuestions] = useState(null);
+  const [answer, setAnswer] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchQustion = async () => {
+      try {
+        // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
+        setError(null);
+        setQuestions(null);
+        // loading 상태를 true 로 바꿉니다.
+        setLoading(true);
+        const response = await axios.get(`/question/${QuestionId}`);
+        console.log(response.data);
+        setQuestions(response.data);
+        setAnswer(response.data.answers); // 데이터는 response.body 안에 들어있습니다.
+      } catch (e) {
+        setError(e);
+      }
+      setLoading(false);
+    };
+
+    fetchQustion();
+  }, [QuestionId]);
+  if (loading) return <div>로딩중..</div>;
+  if (error) return <div>에러가 발생했습니다</div>;
+  if (!questions) return <div>질문이 없습니다.</div>;
   return (
     <Contents>
       <Container>
-        <ShareLisViewer />
-        <ShareLisViewerContents />
-        <ShareAnswerViewr />
+        {questions.length !== 0 && (
+          <>
+            <ShareLisViewerTitle
+              key={questions.questionId}
+              title={questions.questionTitle}
+              date={questions.questionCreated}
+              name={questions.name}
+              modifie={questions.questionModified}
+              tag={questions.locationTag}
+            />
+            <ShareLisViewerContents
+              id={questions.questionId}
+              title={questions.questionTitle}
+              content={questions.questionContent}
+              user={questions.questionWriter}
+              questionId={questions.questionId}
+              memberId={questions.memberId}
+            />
+          </>
+        )}
+        {answer.map((item) => (
+          <ShareAnswerViewr
+            key={item.answerId}
+            id={item.questionId}
+            user={item.name}
+            answerContents={item.answerContent}
+            answerDate={item.answerCreated}
+          />
+        ))}
         <AnswerPost />
       </Container>
     </Contents>
