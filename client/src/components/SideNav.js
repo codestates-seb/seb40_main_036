@@ -16,7 +16,7 @@ const SideNav = (props) => {
           />
         </div>
         <div className="pt128">
-          <div className="mb8 ta-center">XX m</div>
+          <div className="mb8 ta-center">{props.distance} m</div>
           <div className="mb8 ta-center bold">{props.location}</div>
           <div className="mb8 ta-center">45/350</div>
           <div className="mb8 ta-center reservation">

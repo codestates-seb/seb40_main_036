@@ -26,6 +26,8 @@ const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
 const Map = (props) => {
   const [open, setopen] = useState(false);
   const [title, setTitle] = useState('');
+  const [distance, setDistance] = useState('');
+
   const Mapping = async () => {
     let container = document.getElementById('map');
     let options = {
@@ -39,63 +41,58 @@ const Map = (props) => {
     );
     new kakao.maps.Marker({
       map: map,
-      position: new window.kakao.maps.LatLng(props.x, props.y),
-      image: new window.kakao.maps.MarkerImage(
-        Circle,
-        new kakao.maps.Size(15, 15)
-      ),
+      position: new kakao.maps.LatLng(props.x, props.y),
+      image: new kakao.maps.MarkerImage(Circle, new kakao.maps.Size(15, 15)),
     });
-    for (let i = 0; i < dummy.length; i++) {
+
+    dummy.forEach((i) => {
       let marker = new kakao.maps.Marker({
         map: map,
-        position: dummy[i].latlng,
-        title: dummy[i].title,
+        position: i.latlng,
+        title: i.title,
         image: markerImage,
         clickable: true,
       });
       kakao.maps.event.addListener(marker, 'click', () => {
         setopen(true);
         setTitle(marker.getTitle());
-        fetchRoute(props.y, props.x, dummy[i].x, dummy[i].y);
+        fetchRoute(props.y, props.x, i.x, i.y);
       });
-    }
+    });
+
     props.setloading(false);
   };
 
-  const fetchRoute = (routestartX, routestartY, routeendX, routeendY) => {
+  const fetchRoute = async (routestartX, routestartY, routeendX, routeendY) => {
+    const options = {
+      method: 'GET',
+      url: 'https://apis.openapi.sk.com/tmap/routes/distance',
+      params: {
+        version: '1',
+        startX: routestartX,
+        startY: routestartY,
+        endX: routeendX,
+        endY: routeendY,
+        reqCoordType: 'WGS84GEO',
+        callback: 'function',
+      },
+      headers: { accept: 'application/json', appKey: skAppKey },
+    };
     axios
-      .post(
-        'https://apis.openapi.sk.com/tmap/routes/pedestrian?version=1&callback=function',
-        {
-          startX: routestartX,
-          startY: routestartY,
-          endX: routeendX,
-          endY: routeendY,
-          reqCoordType: 'WGS84GEO',
-          resCoordType: 'WGS84GEO',
-          startName: '%EC%B6%9C%EB%B0%9C',
-          endName: '%EB%8F%84%EC%B0%A9',
-        },
-        {
-          headers: {
-            accept: 'application/json',
-            'content-type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            appKey: skAppKey,
-          },
-        }
-      )
-      .then((res) => console.log(res))
+      .request(options)
+      .then((res) => setDistance(res.data.distanceInfo.distance))
       .catch((err) => console.error(err));
   };
-
+  console.log(distance);
   useEffect(() => {
     Mapping();
   }, [props.x, props.y]);
 
   return (
     <>
-      {open && <SideNav setopen={setopen} location={title} />}
+      {open && (
+        <SideNav setopen={setopen} location={title} distance={distance} />
+      )}
       <LoadingIcon
         icon={solid('spinner')}
         size={'3x'}
