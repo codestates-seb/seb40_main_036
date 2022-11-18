@@ -37,8 +37,25 @@ function ShareListLookup() {
   return (
     <Contents>
       <Container>
-        <ShareLisViewerTitle />
-        <ShareLisViewerContents />
+        {questions.length !== 0 && (
+          <>
+            <ShareLisViewerTitle
+              key={questions.questionId}
+              title={questions.questionTitle}
+              date={questions.questionCreated}
+              name={questions.name}
+              modifie={questions.questionModified}
+            />
+            <ShareLisViewerContents
+              id={questions.questionId}
+              title={questions.questionTitle}
+              content={questions.questionContent}
+              user={questions.questionWriter}
+              questionId={questions.questionId}
+              memberId={questions.memberId}
+            />
+          </>
+        )}
         <ShareAnswerViewr />
         <AnswerPost />
       </Container>

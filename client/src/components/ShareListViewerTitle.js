@@ -1,24 +1,30 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-function ShareListViewer() {
+import { Link } from 'react-router-dom';
+
+function ShareListViewer({ title, name, date }) {
   return (
     <Container>
       <ShareContentsHeader>
-        <div className="listLink">물품 나눔 게시판</div>
+        <div className="linkBox">
+          <Link to={'/share'} className="listLink">
+            물품 나눔 게시판
+          </Link>
+        </div>
         <ShareContentsTitle>
           <div className="header">
             <div className="tagContainer">
               <div className="tag">구로구</div>
             </div>
-            <h1>물이 부족해요 물 나눔 부탁드립니다.</h1>
+            <h1>{title}</h1>
           </div>
           <div className="userContainer">
             <div className="userProfile">
               <img src={Profile} alt="profile" />
             </div>
             <div className="user">
-              <div className="userName">김코딩</div>
-              <div className="date">2022.11.01 14:00</div>
+              <div className="userName">{name}</div>
+              <div className="date">{date}</div>
             </div>
           </div>
         </ShareContentsTitle>
@@ -42,9 +48,11 @@ const Container = styled.div`
   border-right-width: 0;
 `;
 const ShareContentsHeader = styled.div`
+  .linkBox {
+    margin-bottom: 5px;
+  }
   .listLink {
     color: #008505;
-    padding-bottom: 5px;
   }
 `;
 const ShareContentsTitle = styled.div`

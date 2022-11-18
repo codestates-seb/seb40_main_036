@@ -6,7 +6,7 @@ function ShareListContents({ id, num, title, writer, date }) {
     <Container>
       <ContentsList>
         <div className="num">{num}</div>
-        <Link to={`/question/${id}`} className="title">
+        <Link to={`/share/${id}`} className="title">
           {title}
         </Link>
         <div className="writer">{writer}</div>
