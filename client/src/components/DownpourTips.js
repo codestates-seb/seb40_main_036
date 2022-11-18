@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-import congestionTips from './../img/압사시행동요령.jpeg';
-
-function CongestionTipsContents() {
+import TyphoonTips from './../img/태풍호우.jpeg';
+function DownpourTipsContents() {
   return (
     <TipsContainer>
       <TipsContents>
-        <div className="congestion">
-          <img src={congestionTips} alt="congestionTips" />
+        <div className="Downpour">
+          <img src={TyphoonTips} alt="TyphoonTips" />
         </div>
       </TipsContents>
     </TipsContainer>
   );
 }
 
-export default CongestionTipsContents;
+export default DownpourTipsContents;
 
 const TipsContainer = styled.div`
   display: flex;
@@ -30,7 +29,7 @@ const TipsContainer = styled.div`
   padding: 20px 0;
 `;
 const TipsContents = styled.div`
-  .congestion {
+  .Downpour {
     display: flex;
     justify-content: center;
     flex-direction: column;
