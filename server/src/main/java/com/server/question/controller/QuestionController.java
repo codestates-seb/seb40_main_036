@@ -32,7 +32,6 @@ public class QuestionController {
 
     private final QuestionMapper questionMapper;
 
-    private final AnswerService answerService;
 
     @PostMapping
     public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
@@ -64,9 +63,8 @@ public class QuestionController {
 
         Question question = questionService.findQuestion(Id);
         question = questionService.addViews(question);
-        List<Answer> answers=answerService.findQuestionAnswers(Id);
 
-        return new ResponseEntity<>(questionMapper.AnswersToQuestionResponseDto(question,answers),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question),HttpStatus.OK);
 
     }
 

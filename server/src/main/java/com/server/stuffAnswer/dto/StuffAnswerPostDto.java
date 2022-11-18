@@ -9,6 +9,8 @@ public class StuffAnswerPostDto {
 
     private Long memberId;
 
+    private String name;
+
     private String stuffAnswerContent;
 
 }

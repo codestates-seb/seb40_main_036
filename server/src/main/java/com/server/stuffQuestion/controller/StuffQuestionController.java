@@ -57,14 +57,7 @@ public class StuffQuestionController {
 
         StuffQuestion stuffQuestion = stuffQuestionService.findStuffQuestion(Id);
 
-
-
-//        question = questionService.addViews(question);
-//        List<Answer> answers=answerService.findQuestionAnswers(Id);
-//
-//        return new ResponseEntity<>(questionMapper.AnswersToQuestionResponseDto(question,answers),HttpStatus.OK);
-
-
+        stuffQuestion=stuffQuestionService.addViews(stuffQuestion);
 
 
         return new ResponseEntity<>(

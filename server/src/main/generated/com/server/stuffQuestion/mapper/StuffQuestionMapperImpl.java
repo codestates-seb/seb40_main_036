@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-18T13:23:03+0900",
+    date = "2022-11-18T14:29:00+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -32,7 +32,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffQuestion.name( stuffQuestionPostDto.getName() );
         stuffQuestion.stuffQuestionTitle( stuffQuestionPostDto.getStuffQuestionTitle() );
         stuffQuestion.stuffQuestionContent( stuffQuestionPostDto.getStuffQuestionContent() );
-        stuffQuestion.stuffQuestionTag( stuffQuestionPostDto.getStuffQuestionTag() );
+        stuffQuestion.locationTag( stuffQuestionPostDto.getLocationTag() );
 
         return stuffQuestion.build();
     }
@@ -48,7 +48,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffQuestion.memberId( stuffQuestionPatchDto.getMemberId() );
         stuffQuestion.stuffQuestionTitle( stuffQuestionPatchDto.getStuffQuestionTitle() );
         stuffQuestion.stuffQuestionContent( stuffQuestionPatchDto.getStuffQuestionContent() );
-        stuffQuestion.stuffQuestionTag( stuffQuestionPatchDto.getStuffQuestionTag() );
+        stuffQuestion.locationTag( stuffQuestionPatchDto.getLocationTag() );
 
         return stuffQuestion.build();
     }
@@ -64,7 +64,8 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         String name = null;
         String stuffQuestionTitle = null;
         String stuffQuestionContent = null;
-        String stuffQuestionTag = null;
+        String locationTag = null;
+        long views = 0L;
         LocalDate stuffQuestionCreated = null;
         LocalDate stuffQuestionModified = null;
         List<StuffAnswerResponseDto> stuffAnswers = null;
@@ -74,12 +75,13 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         name = stuffQuestion.getName();
         stuffQuestionTitle = stuffQuestion.getStuffQuestionTitle();
         stuffQuestionContent = stuffQuestion.getStuffQuestionContent();
-        stuffQuestionTag = stuffQuestion.getStuffQuestionTag();
+        locationTag = stuffQuestion.getLocationTag();
+        views = stuffQuestion.getViews();
         stuffQuestionCreated = stuffQuestion.getStuffQuestionCreated();
         stuffQuestionModified = stuffQuestion.getStuffQuestionModified();
         stuffAnswers = stuffAnswerListToStuffAnswerResponseDtoList( stuffQuestion.getStuffAnswers() );
 
-        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, stuffQuestionTag, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
+        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, locationTag, views, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
 
         return stuffQuestionResponseDto;
     }
@@ -108,6 +110,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffAnswerResponseDto.stuffAnswerId( stuffAnswer.getStuffAnswerId() );
         stuffAnswerResponseDto.stuffQuestionId( stuffAnswer.getStuffQuestionId() );
         stuffAnswerResponseDto.memberId( stuffAnswer.getMemberId() );
+        stuffAnswerResponseDto.name( stuffAnswer.getName() );
         stuffAnswerResponseDto.stuffAnswerContent( stuffAnswer.getStuffAnswerContent() );
         stuffAnswerResponseDto.stuffAnswerCreated( stuffAnswer.getStuffAnswerCreated() );
         stuffAnswerResponseDto.stuffAnswerModified( stuffAnswer.getStuffAnswerModified() );

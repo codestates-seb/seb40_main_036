@@ -27,6 +27,9 @@ public class StuffAnswer {
     private Long memberId;
 
     @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
     private String stuffAnswerContent;
 
     private LocalDate stuffAnswerCreated;
