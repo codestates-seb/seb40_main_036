@@ -13,6 +13,6 @@ public class QuestionPostDto {
 
     private String questionContent;
 
-    private String questionTag;
+    private String locationTag;
 }
 

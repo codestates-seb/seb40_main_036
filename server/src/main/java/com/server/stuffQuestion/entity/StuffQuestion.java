@@ -1,6 +1,7 @@
 package com.server.stuffQuestion.entity;
 
 import com.server.member.entity.Member;
+import com.server.shelter.entity.Shelter;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import lombok.*;
 import javax.persistence.*;
@@ -21,22 +22,22 @@ public class StuffQuestion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long stuffQuestionId;
 
-    @Column(updatable = false)
+    @Column(nullable = false)
     private Long memberId;
 
-    @Column(updatable = false)
+    @Column(nullable = false)
     private String name;
 
-    @Column(updatable = false)
+    @Column(nullable = false)
     private String  stuffQuestionTitle;
 
-    @Column(updatable = false)
+    @Column(nullable = false)
     private String  stuffQuestionContent;
 
-    @Column(updatable = false)
-    private String  stuffQuestionTag;
+    @Column(nullable = true)
+    private String  locationTag;
 
-    // private long views; // 조회수
+    private long views; // 조회수
 
     private LocalDate stuffQuestionCreated;
 
@@ -48,5 +49,9 @@ public class StuffQuestion {
 
     @OneToMany(mappedBy = "stuffQuestion",cascade = CascadeType.PERSIST)
     private List<StuffAnswer> stuffAnswers=new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "shelterId", insertable = false, updatable = false)
+    private Shelter shelter;
 
 }

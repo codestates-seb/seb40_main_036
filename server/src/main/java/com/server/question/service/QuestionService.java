@@ -53,8 +53,8 @@ public class QuestionService {
         Optional.ofNullable(question.getQuestionContent())
                 .ifPresent(Content ->findquestion.setQuestionContent(Content));
         // 수용 가능 인원 수정
-        Optional.ofNullable(question.getQuestionTag())
-                .ifPresent(Tag->findquestion.setQuestionTag(Tag));
+        Optional.ofNullable(question.getLocationTag())
+                .ifPresent(Tag->findquestion.setLocationTag(Tag));
 
         findquestion.setQuestionModified(LocalDate.now());
 

@@ -11,5 +11,5 @@ public class StuffQuestionPatchDto {
 
     private String  stuffQuestionContent;
 
-    private String  stuffQuestionTag;
+    private String  locationTag;
 }
