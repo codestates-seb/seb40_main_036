@@ -11,25 +11,38 @@ const Editor = () => {
         [{ align: [] }],
         [{ list: 'ordered' }, { list: 'bullet' }],
         [{ size: ['small', false, 'large', 'huge'] }],
-        ['link', 'image', 'video'],
+        ['link', 'video'],
         [{ color: [] }, { background: [] }],
       ],
     }),
     []
   );
 
-  const { quill, quillRef } = useQuill({ modules });
+  const formats = [
+    'bold',
+    'italic',
+    'underline',
+    'align',
+    'list',
+    'size',
+    'link',
+    'image',
+    'video',
+    'color',
+    'background',
+  ];
+
+  const { quill, quillRef } = useQuill({ modules, formats });
   const [value, setValue] = useState();
   useEffect(() => {
     if (quill) {
       quill.on('text-change', () => {
-        console.log(quillRef.current.firstChild.innerHTML); // Get innerHTML using quillRef
         setValue(quillRef.current.firstChild.innerHTML);
       });
     }
+    console.log(value, 'this is quill');
   }, [quill]);
 
-  console.log(value, 'this is quill');
   return (
     <EditorStyle>
       <div className="editor">

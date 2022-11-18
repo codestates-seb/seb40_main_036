@@ -1,8 +1,49 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './../img/SalidaLogo.png';
+import { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
+  // 초기값 - 이메일, 비밀번호
+  const [inputId, setInputId] = useState('');
+  const [inputPw, setInputPw] = useState('');
+
+  const onChangeId = (e) => {
+    setInputId(e.target.value);
+  };
+
+  const onChangePw = (e) => {
+    setInputPw(e.target.value);
+  };
+
+  const onClickLogin = async (event) => {
+    event.preventDefault();
+    return await axios
+      .post(
+        '/member/login',
+        {
+          email: inputId,
+          password: inputPw,
+        },
+        { withCredentials: true }
+      )
+      .then((res) => {
+        // 로그인 성공과 실패시 나오는 데이터를 기반으로 로그인이 성공 했을때만 페이지 이동이 되게 구현
+        console.log(res);
+        console.log(res.headers); // 응답이 어떻게 오는지 콘솔에서 확인하기 위한 코드
+        sessionStorage.setItem('email', inputId);
+        sessionStorage.setItem('membeId', res.data.memberId);
+        sessionStorage.setItem('name', res.data.name);
+        // localStorage.setItem('authorization', res.headers.authorization); 백엔드에서 토큰 구현하면 로컬스토리지로
+        window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
+      })
+      .catch((e) => {
+        console.log(e.response.data);
+        return '이메일 혹은 비밀번호를 확인하세요.';
+      });
+  };
+
   return (
     <LoginForm>
       <div className="loginForm">
@@ -16,7 +57,13 @@ const Login = () => {
                 이메일
               </label>
               <div>
-                <input className="idPwInput" type="text" id="idWrite" />
+                <input
+                  className="idPwInput"
+                  type="text"
+                  id="idWrite"
+                  value={inputId}
+                  onChange={onChangeId}
+                />
               </div>
             </div>
             <div className="idPwBox">
@@ -24,10 +71,16 @@ const Login = () => {
                 비밀번호
               </label>
               <div>
-                <input className="idPwInput" type="password" id="pwWrite" />
+                <input
+                  className="idPwInput"
+                  type="password"
+                  id="pwWrite"
+                  value={inputPw}
+                  onChange={onChangePw}
+                />
               </div>
             </div>
-            <button>로그인</button>
+            <button onClick={onClickLogin}>로그인</button>
             <div className="accountExistence">
               계정이 없으신가요? <Link to="/signup">회원가입</Link>
             </div>

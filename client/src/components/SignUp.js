@@ -1,16 +1,38 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const SignUP = () => {
+  const [inputName, setInputName] = useState('');
   const [inputId, setInputId] = useState('');
-  const [hyphen, setHyphen] = useState('');
   const [inputPw, setInputPw] = useState('');
+
+  const [hyphen, setHyphen] = useState(''); // 전화번호
 
   // 오류메세지 상태
   const [idMessage, setIdMessage] = useState('');
+  const [nameMessage, setNameMessage] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
+
+  // 유효성 검사
+  const [isId, setIsId] = useState(false); // eslint-disable-line no-unused-vars
+  const [isname, setIsName] = useState(false); // eslint-disable-line no-unused-vars
+  const [isPassword, setIsPassword] = useState(false); // eslint-disable-line no-unused-vars
+
+  const onChangeName = (e) => {
+    const currentName = e.target.value;
+    setInputName(currentName);
+
+    if (currentName.length < 2 || currentName.length > 5) {
+      setNameMessage('닉네임은 2글자 이상 5글자 이하로 입력해주세요!');
+      setIsName(false);
+    } else {
+      setNameMessage('사용가능한 닉네임 입니다.');
+      setIsName(true);
+    }
+  };
 
   const onChangeId = (e) => {
     const currentId = e.target.value;
@@ -20,8 +42,10 @@ const SignUP = () => {
 
     if (!idRegExp.test(currentId)) {
       setIdMessage('이메일의 형식이 올바르지 않습니다!');
+      setIsId(false);
     } else {
       setIdMessage('사용 가능한 이메일 입니다.'); // 아직은 이메일 형식만 맞으면 이러한 메세지가 뜨게 설정 나중에 중복여부로 구현 예정
+      setIsId(true);
     }
   };
 
@@ -41,9 +65,36 @@ const SignUP = () => {
       setPasswordMessage(
         '숫자+영문자+특수문자 조합으로 8자리 이상 입력해주세요!'
       );
+      setIsPassword(false);
     } else {
       setPasswordMessage('안전한 비밀번호 입니다.');
+      setIsPassword(true);
     }
+  };
+
+  const navigate = useNavigate();
+
+  const onClickSignUp = (e) => {
+    e.preventDefault(); // 새로고침 방지
+    axios
+      .post('/member/join', {
+        name: inputName,
+        email: inputId,
+        password: inputPw,
+        phone: hyphen,
+      })
+      .then((response) => {
+        // Handle success.
+        console.log(response);
+        console.log('User profile', response.data.memberId);
+        console.log('User token', response.data.access_token);
+        localStorage.setItem('token', response.data.jwt); // 로컬스토리지에 토큰을 받아옴
+        navigate('/login');
+      })
+      .catch((error) => {
+        // Handle error.
+        console.log('An error occurred:', error);
+      });
   };
 
   useEffect(() => {
@@ -69,9 +120,16 @@ const SignUP = () => {
                 이름
               </label>
               <div>
-                <input className="idPwInput" type="text" id="nameWrite" />
+                <input
+                  className="idPwInput"
+                  type="text"
+                  id="nameWrite"
+                  onChange={onChangeName}
+                  value={inputName}
+                />
               </div>
             </div>
+            <div className="msg">{nameMessage}</div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="numWrite">
                 전화번호
@@ -114,9 +172,9 @@ const SignUP = () => {
                   value={inputPw}
                 />
               </div>
-              <div>{passwordMessage}</div>
             </div>
-            <button>회원가입</button>
+            <div className="msg">{passwordMessage}</div>
+            <button onClick={onClickSignUp}>회원가입</button>
             <div className="accountExistence">
               이미 계정이 있으신가요? <Link to="/login">로그인</Link>
             </div>
@@ -131,7 +189,7 @@ export default SignUP;
 
 const SignUpForm = styled.div`
   width: 340px;
-  height: 579px;
+  height: 600px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -164,6 +222,11 @@ const SignUpInput = styled.div`
     top: 436px;
     border: 1px solid #bcbcbc;
     border-radius: 3px;
+    positon: fixed;
+  }
+  .msg {
+    margin-top: -10px;
+    text-align: center;
   }
   .idPwBox {
     margin-bottom: 20px;
