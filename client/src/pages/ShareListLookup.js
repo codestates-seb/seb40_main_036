@@ -62,7 +62,8 @@ function ShareListLookup() {
         {answer.map((item) => (
           <ShareAnswerViewr
             key={item.answerId}
-            id={item.questionId}
+            id={item.answerId}
+            memberid={item.memberId}
             user={item.name}
             answerContents={item.answerContent}
             answerDate={item.answerCreated}

@@ -1,6 +1,22 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-function ShareAnswerViewr({ answerContents, answerDate, user }) {
+import axios from 'axios';
+
+function ShareAnswerViewr({ answerContents, answerDate, user, id, memberid }) {
+  const deleteClick = () => {
+    const result = window.confirm('답변을 삭제하시겠습니까?');
+    if (
+      result === true &&
+      Number(sessionStorage.getItem('membeId')) === memberid
+    ) {
+      setTimeout(() => {
+        axios
+          .delete(`/answer/${id}`)
+          .then(() => window.location.reload())
+          .catch((err) => console.log(err));
+      }, 1000);
+    }
+  };
   return (
     <Container>
       <AnswerContents>
@@ -14,8 +30,8 @@ function ShareAnswerViewr({ answerContents, answerDate, user }) {
         </div>
       </AnswerContents>
       <DeletEdit>
-        <div className="delete">삭제</div>
-        <div className="edit">수정</div>
+        <button onClick={deleteClick}>삭제</button>
+        <button className="edit">수정</button>
       </DeletEdit>
     </Container>
   );
@@ -62,8 +78,12 @@ const AnswerContents = styled.div`
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
-  color: #838383;
-  font-size: 16px;
   padding-left: 73px;
-  cursor: pointer;
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: #838383;
+    font-size: 16px;
+    border: none;
+  }
 `;
