@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-function ShareAnswerViewr() {
+function ShareAnswerViewr({ answerContents, answerDate, user }) {
   return (
     <Container>
       <AnswerContents>
@@ -8,9 +8,9 @@ function ShareAnswerViewr() {
           <img src={Profile} alt="profile" />
         </div>
         <div className="content">
-          <div className="userName">박해커</div>
-          <div className="contents">저 물 있습니다!!</div>
-          <div className="date">2022.11.01 15:00</div>
+          <div className="userName">{user}</div>
+          <div className="contents">{answerContents}</div>
+          <div className="date">{answerDate}</div>
         </div>
       </AnswerContents>
       <DeletEdit>
@@ -37,7 +37,6 @@ const Container = styled.div`
   padding: 20px 0;
 `;
 const AnswerContents = styled.div`
-  font-size: 18px;
   display: flex;
   flex-direction: row;
   -webkit-box-align: center;
@@ -50,10 +49,13 @@ const AnswerContents = styled.div`
   }
   .userName {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .contents {
+    font-size: 16px;
   }
   .date {
-    font-size: 16px;
+    font-size: 14px;
     color: #838383;
   }
 `;
@@ -61,7 +63,7 @@ const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
   color: #838383;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 73px;
   cursor: pointer;
 `;

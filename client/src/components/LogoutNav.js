@@ -8,8 +8,15 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-const Nav = () => {
+
+const LogoutNav = () => {
   const [Ishide, setIsHide] = useState(true);
+
+  const onClickLogout = () => {
+    sessionStorage.clear(); // 세션스토리지 안에 있는 모든 데이터를 삭제해줌
+    // 로그인페이지로 이동(새로고침)
+    window.location.href = '/login';
+  };
   return (
     <Header>
       <div>
@@ -37,10 +44,8 @@ const Nav = () => {
           <div className="navbar-member flex">
             <ul className="flex">
               <li>
-                <Link to="/login">로그인</Link>
-              </li>
-              <li>
-                <Link to="/signup">회원가입</Link>
+                <Link onClick={onClickLogout}>로그아웃</Link>
+                {/*로그아웃 버튼*/}
               </li>
             </ul>
           </div>
@@ -55,16 +60,16 @@ const Nav = () => {
               <ul>
                 <li className="sm-dblock">비품</li>
                 <li>
-                  <Link to="/equipment">비품 현황</Link>
+                  <a href="...">비품 현황</a>
                 </li>
               </ul>
               <ul>
                 <li className="sm-dblock">커뮤니티</li>
                 <li>
-                  <Link to="/share">물품 나눔</Link>
+                  <a href="...">물품 나눔</a>
                 </li>
                 <li>
-                  <Link to="/review">대피소 후기</Link>
+                  <a href="...">대피소 후기</a>
                 </li>
               </ul>
             </div>
@@ -88,7 +93,8 @@ const Nav = () => {
     </Header>
   );
 };
-export default Nav;
+
+export default LogoutNav;
 
 const Header = styled.header`
   position: relative;
@@ -221,14 +227,15 @@ const Header = styled.header`
       text-decoration: none;
       font-weight: 400;
       display: inline-block;
+      font-size: 13px;
       width: 120px;
       border-radius: 0.75rem;
-      ${tablet} {
-        font-size: 13px;
-      }
     }
     ul a:hover {
       background: lightgray;
+    }
+    .navbar-member a {
+      width: 70px;
     }
   }
 `;

@@ -24,10 +24,10 @@ const TipsContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-left-width: 0;
-  border-top-width: 3px;
-  border-bottom-width: 3px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
   border-right-width: 0;
   padding: 20px 0;
 `;
