@@ -5,7 +5,7 @@ module.exports = function (app) {
     '/question',
 
     createProxyMiddleware({
-      target: 'https://4c4c-14-39-204-244.jp.ngrok.io',
+      target: 'https://67c1-211-214-195-126.jp.ngrok.io',
 
       changeOrigin: true,
     })
@@ -14,7 +14,7 @@ module.exports = function (app) {
     '/answer',
 
     createProxyMiddleware({
-      target: 'https://4c4c-14-39-204-244.jp.ngrok.io',
+      target: 'https://67c1-211-214-195-126.jp.ngrok.io',
 
       changeOrigin: true,
     })
