@@ -1,5 +1,7 @@
 package com.server.question.service;
 
+import com.server.answer.entity.Answer;
+import com.server.answer.repository.AnswerRepository;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
@@ -21,6 +23,8 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
 
     private final MemberRepository memberRepository;
+
+    private final AnswerRepository answerRepository;
 
 
     public Question createQuestion(Question question){
@@ -80,8 +84,16 @@ public class QuestionService {
     }
 
     public void deleteQuestion(long questionId){
-        Question question=findVerifiedQuestion(questionId);
-        questionRepository.delete(question);
+
+        if(!questionRepository.existsById(questionId)){
+            throw new BusinessLogicException(ExceptionCode.Question_NOT_FOUND);
+        }
+
+        List<Answer> answers=answerRepository.findByQuestionId(questionId);
+
+        answerRepository.deleteAll(answers);
+
+        questionRepository.deleteById(questionId);
     }
 
     public Question addViews(Question question){
