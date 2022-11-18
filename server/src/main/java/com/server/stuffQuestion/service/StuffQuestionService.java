@@ -54,8 +54,8 @@ public class StuffQuestionService {
         Optional.ofNullable(stuffQuestion.getStuffQuestionContent())
                 .ifPresent(Content -> findStuffQuestion.setStuffQuestionContent(Content));
 
-        Optional.ofNullable(stuffQuestion.getStuffQuestionTag())
-                .ifPresent(Tag -> findStuffQuestion.setStuffQuestionTag(Tag));
+        Optional.ofNullable(stuffQuestion.getLocationTag())
+                .ifPresent(Tag -> findStuffQuestion.setLocationTag(Tag));
 
         findStuffQuestion.setStuffQuestionModified(LocalDate.now());
 
@@ -97,14 +97,14 @@ public class StuffQuestionService {
         stuffQuestionRepository.deleteById(stuffQuestionId);
     }
 
-//    public StuffQuestion addViews(StuffQuestion stuffQuestion){
-//        long views = stuffQuestion.getViews();
-//        views++;
-//        stuffQuestion.setViews(views);
-//
-//        return stuffQuestionRepository.save(stuffQuestion);
-//
-//    }
+    public StuffQuestion addViews(StuffQuestion stuffQuestion){
+        long views = stuffQuestion.getViews();
+        views++;
+        stuffQuestion.setViews(views);
+
+        return stuffQuestionRepository.save(stuffQuestion);
+
+    }
 
 
 }
