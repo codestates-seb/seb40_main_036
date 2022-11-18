@@ -80,7 +80,7 @@ public class QuestionService {
 
     public Page<Question> findQuestions(int page, int size){
         return questionRepository.findAll(PageRequest.of(page,size,
-                Sort.by("memberId").descending()));
+                Sort.by("questionId").descending()));
     }
 
     public void deleteQuestion(long questionId){
