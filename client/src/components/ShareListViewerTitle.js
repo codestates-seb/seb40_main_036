@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
 
-function ShareListViewer({ title, name, date }) {
+function ShareListViewer({ title, name, date, tag }) {
   return (
     <Container>
       <ShareContentsHeader>
@@ -14,7 +14,7 @@ function ShareListViewer({ title, name, date }) {
         <ShareContentsTitle>
           <div className="header">
             <div className="tagContainer">
-              <div className="tag">구로구</div>
+              <div className="tag">{tag}</div>
             </div>
             <h1>{title}</h1>
           </div>
@@ -48,6 +48,9 @@ const Container = styled.div`
   border-right-width: 0;
 `;
 const ShareContentsHeader = styled.div`
+  a:link {
+    text-decoration: none;
+  }
   .linkBox {
     margin-bottom: 5px;
   }
@@ -59,6 +62,7 @@ const ShareContentsTitle = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+
   .header {
     display: flex;
   }

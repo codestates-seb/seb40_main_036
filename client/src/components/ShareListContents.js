@@ -31,11 +31,15 @@ const ContentsList = styled.div`
   border-top-width: 0;
   border-bottom-width: 1px;
   border-right-width: 0;
+  a:link {
+    text-decoration: none;
+  }
   .num {
     width: 10%;
   }
   .title {
     width: 65%;
+    color: inherit;
   }
   .writer {
     width: 15%;

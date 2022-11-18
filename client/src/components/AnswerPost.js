@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { useRef, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function AnswerPost() {
+  const { QuestionId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = 'auto';
@@ -14,8 +16,9 @@ function AnswerPost() {
     if (AnswerPost.body !== '') {
       const data = {
         answerContent: textRef.current.value,
-        questionId: '1',
+        questionId: `${QuestionId}`,
         memberId: '1',
+        name: 'kyh',
       };
       console.log(data);
       axios

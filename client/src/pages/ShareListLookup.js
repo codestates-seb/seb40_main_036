@@ -47,6 +47,7 @@ function ShareListLookup() {
               date={questions.questionCreated}
               name={questions.name}
               modifie={questions.questionModified}
+              tag={questions.locationTag}
             />
             <ShareLisViewerContents
               id={questions.questionId}
@@ -62,7 +63,7 @@ function ShareListLookup() {
           <ShareAnswerViewr
             key={item.answerId}
             id={item.questionId}
-            user={item.memberId}
+            user={item.name}
             answerContents={item.answerContent}
             answerDate={item.answerCreated}
           />
