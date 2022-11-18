@@ -25,6 +25,9 @@ public class StuffQuestion {
     private Long memberId;
 
     @Column(updatable = false)
+    private String name;
+
+    @Column(updatable = false)
     private String  stuffQuestionTitle;
 
     @Column(updatable = false)

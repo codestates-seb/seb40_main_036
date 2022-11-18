@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-18T03:17:15+0900",
+    date = "2022-11-18T10:55:36+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -29,6 +29,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         StuffQuestion.StuffQuestionBuilder stuffQuestion = StuffQuestion.builder();
 
         stuffQuestion.memberId( stuffQuestionPostDto.getMemberId() );
+        stuffQuestion.name( stuffQuestionPostDto.getName() );
         stuffQuestion.stuffQuestionTitle( stuffQuestionPostDto.getStuffQuestionTitle() );
         stuffQuestion.stuffQuestionContent( stuffQuestionPostDto.getStuffQuestionContent() );
         stuffQuestion.stuffQuestionTag( stuffQuestionPostDto.getStuffQuestionTag() );
@@ -60,6 +61,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
 
         Long stuffQuestionId = null;
         Long memberId = null;
+        String name = null;
         String stuffQuestionTitle = null;
         String stuffQuestionContent = null;
         String stuffQuestionTag = null;
@@ -69,14 +71,13 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
 
         stuffQuestionId = stuffQuestion.getStuffQuestionId();
         memberId = stuffQuestion.getMemberId();
+        name = stuffQuestion.getName();
         stuffQuestionTitle = stuffQuestion.getStuffQuestionTitle();
         stuffQuestionContent = stuffQuestion.getStuffQuestionContent();
         stuffQuestionTag = stuffQuestion.getStuffQuestionTag();
         stuffQuestionCreated = stuffQuestion.getStuffQuestionCreated();
         stuffQuestionModified = stuffQuestion.getStuffQuestionModified();
         stuffAnswers = stuffAnswerListToStuffAnswerResponseDtoList( stuffQuestion.getStuffAnswers() );
-
-        String name = null;
 
         StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, stuffQuestionTag, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
 
