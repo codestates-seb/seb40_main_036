@@ -29,10 +29,12 @@ function ShareAnswerViewr({ answerContents, answerDate, user, id, memberid }) {
           <div className="date">{answerDate}</div>
         </div>
       </AnswerContents>
-      <DeletEdit>
-        <button onClick={deleteClick}>삭제</button>
-        <button className="edit">수정</button>
-      </DeletEdit>
+      {memberid === Number(sessionStorage.getItem('membeId')) ? (
+        <DeletEdit>
+          <button onClick={deleteClick}>삭제</button>
+          <button className="edit">수정</button>
+        </DeletEdit>
+      ) : null}
     </Container>
   );
 }

@@ -61,6 +61,7 @@ function ShareList() {
             <ShareListContents
               key={item.questionId}
               id={item.questionId}
+              memberId={item.memberId}
               title={item.questionTitle}
               num={item.questionId}
               writer={item.name}
