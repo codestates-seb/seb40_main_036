@@ -9,7 +9,10 @@ import lombok.*;
 @Builder
 public class ReservationInfoResponseDto {
     private long reservationInfoId;
-    private long shelterId;
+    private long reservationId;
+    private String shelterName;
+    private String location;
+    private String geolocation;
     private int capacity;
     private int num;
 }

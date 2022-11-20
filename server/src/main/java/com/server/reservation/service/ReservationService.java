@@ -37,6 +37,8 @@ public class ReservationService {
 
         Reservation savedReservation = saveReservation(reservation);
 
+        
+
         return reservationRepository.save(savedReservation);
 
     }
@@ -65,7 +67,7 @@ public class ReservationService {
 
     public Page<Reservation> findReservations(int page, int size){
         return reservationRepository.findAll(PageRequest.of(page,size,
-                Sort.by("reservationId").descending()));
+                Sort.by("shelterName").descending()));
     }
 
     public void deleteReservation(long reservationId){
@@ -77,7 +79,7 @@ public class ReservationService {
 
     public Reservation findVerifiedReservation(long reservationId){
         Optional<Reservation> optionalReservation=
-                reservationRepository.findById(reservationId);
+                reservationRepository.findByReservationId(reservationId);
         Reservation findReservation =
                 optionalReservation.orElseThrow(()->
                         new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND));

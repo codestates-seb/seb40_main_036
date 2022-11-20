@@ -46,9 +46,6 @@ public class Shelter {
     private Reservation reservation;
 
     @OneToMany(mappedBy = "shelter")
-    private List<ReservationInfo> reservationInfos = new ArrayList<>();
-
-    @OneToMany(mappedBy = "shelter")
     private List<Question> questions = new ArrayList<>();
 
     @OneToMany(mappedBy = "shelter")
