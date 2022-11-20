@@ -20,7 +20,6 @@ import java.util.Optional;
 public class ReservationInfoService {
 
     private final ReservationInfoRepository reservationInfoRepository;
-    private final ShelterRepository shelterRepository;
 
     public ReservationInfo findReservationInfo(long reservationInfoId) {
         return findVerifiedReservationInfo(reservationInfoId);

@@ -25,6 +25,18 @@ public class ReservationInfo {
     private Shelter shelter;
 
     @ManyToOne
-    @JoinColumn(name = "num")
+    @JoinColumn(name = "reservationId")
     private Reservation reservation;
+
+    private long reservationInfo;
+
+    private String shelterName;
+
+    private String location;
+
+    private String geolocation;
+
+    private int capacity;
+
+    private int num;
 }
