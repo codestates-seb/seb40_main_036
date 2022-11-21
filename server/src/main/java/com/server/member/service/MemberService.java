@@ -1,6 +1,7 @@
 package com.server.member.service;
 
 
+import com.server.config.jwt.JwtTokenProvider;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.entity.Member;
@@ -22,6 +23,8 @@ public class MemberService {
 
     private final PasswordEncoder passwordEncoder;
 
+    private final JwtTokenProvider jwtTokenProvider;
+
     public Member createMember(Member member){
 
         Member mem = memberRepository.findByEmail(member.getEmail());
@@ -34,7 +37,7 @@ public class MemberService {
         return memberRepository.save(member);
     }
 
-    public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
+    public String LoginMember(Member member){ // 리턴값을 토큰값으로~
 
         //String memberEmail = member.getEmail();
         //String memberPassword = member.getPassword();
@@ -50,7 +53,8 @@ public class MemberService {
         }
 
         //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
-        return mem;
+        //return mem;
+        return jwtTokenProvider.createToken(mem.getEmail());
     }
 
     public Member findMember(long memberId){
