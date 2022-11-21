@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const { kakao } = window;
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
+
 const Map = (props) => {
   const [open, setopen] = useState(false);
   const [title, setTitle] = useState('');
@@ -32,12 +33,7 @@ const Map = (props) => {
       image: new kakao.maps.MarkerImage(Circle, new kakao.maps.Size(15, 15)),
     });
 
-    const fetchRoute = async (
-      routestartX,
-      routestartY,
-      routeendX,
-      routeendY
-    ) => {
+    const fetchRoute = (routestartX, routestartY, routeendX, routeendY) => {
       const options = {
         method: 'GET',
         url: 'https://apis.openapi.sk.com/tmap/routes/distance',
@@ -57,8 +53,6 @@ const Map = (props) => {
         .then((res) => setDistance(res.data.distanceInfo.distance))
         .catch((err) => console.error(err));
     };
-
-    console.log(props.lists);
     props.lists.forEach((i) => {
       let marker = new kakao.maps.Marker({
         map: map,
@@ -76,8 +70,11 @@ const Map = (props) => {
 
     props.setloading(false);
   };
+
   useEffect(() => {
     Mapping();
+    console.log(props.lists);
+    console.log(props.location);
   }, [props.x, props.y]);
 
   return (
