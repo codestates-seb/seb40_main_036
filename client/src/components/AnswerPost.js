@@ -19,7 +19,6 @@ function AnswerPost() {
         memberId: `${sessionStorage.getItem('membeId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
-      console.log(data);
       axios
         .post(`/answer`, data)
         .then(() => window.location.reload())

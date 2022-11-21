@@ -1,4 +1,4 @@
-import Pagination from './pagination';
+import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { FaSearch } from 'react-icons/fa';
@@ -15,7 +15,17 @@ function ShareList() {
   const [questions, setQuestions] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+  const [items, setItems] = useState(10);
 
+  const handlePageChange = (page) => {
+    setPage(page);
+  };
+
+  const itemChange = (e) => {
+    setItems(Number(e.target.value));
+  };
+  console.log(items);
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -24,9 +34,9 @@ function ShareList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/question?page=1&size=10`);
+        const response = await axios.get(`/question/questions`);
         console.log(response.data);
-        setQuestions(response.data.data); // 데이터는 response.data 안에 들어있습니다.
+        setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
@@ -58,26 +68,42 @@ function ShareList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions.map((item) => (
-            <ShareListContents
-              key={item.questionId}
-              id={item.questionId}
-              memberId={item.memberId}
-              title={item.questionTitle}
-              num={item.questionId}
-              writer={item.name}
-              date={item.questionCreated}
-              tag={item.locationTag}
-              view={item.views}
-            />
-          ))}
+          {questions
+            .slice(items * (page - 1), items * (page - 1) + items)
+            .map((item) => (
+              <ShareListContents
+                key={item.questionId}
+                id={item.questionId}
+                memberId={item.memberId}
+                title={item.questionTitle}
+                num={item.questionId}
+                writer={item.name}
+                date={item.questionCreated}
+                tag={item.locationTag}
+                view={item.views}
+              />
+            ))}
         </ContentsContainer>
         <Row>
+          <select className="items" onChange={itemChange}>
+            <option value="10">10개</option>
+            <option value="20">20개</option>
+            <option value="30">30개</option>
+          </select>
           <Link to="/writeForm">
             <button className="writing">글쓰기</button>
           </Link>
         </Row>
-        <Pagination />
+        <PaginationBox>
+          <Pagination
+            activePage={page}
+            itemsCountPerPage={items}
+            totalItemsCount={questions.length - 1}
+            prevPageText={'‹'}
+            nextPageText={'›'}
+            onChange={handlePageChange}
+          />
+        </PaginationBox>
         <SearchContainer>
           <select id="search">
             <option>제목+내용</option>
@@ -110,12 +136,9 @@ const ShareListContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 40px 24px;
-  justify-content: center;
 `;
 
 const ShareListContent = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
 `;
 
@@ -190,10 +213,18 @@ const ContentsTitle = styled.div`
 `;
 const Row = styled.div`
   display: flex;
-  justify-content: end;
-  align-items: center;
+  justify-content: space-between;
   margin: 12px 0 0;
   padding: 0 24px;
+  .items {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
   .writing {
     width: 100px;
     height: 40px;
@@ -202,6 +233,43 @@ const Row = styled.div`
     border-color: #d2d2d2;
     font-size: 16px;
     cursor: pointer;
+  }
+`;
+const PaginationBox = styled.div`
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  ul.pagination li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  ul.pagination li a {
+    color: black;
+    text-decoration: none;
+  }
+  ul.pagination li:hover {
+    background-color: hsl(210, 8%, 95%);
+  }
+  ul.pagination li.active a {
+    color: #ffffff;
+  }
+  ul.pagination li.active {
+    background-color: #008505;
+    border-color: #008505;
   }
 `;
 const SearchContainer = styled.div`
