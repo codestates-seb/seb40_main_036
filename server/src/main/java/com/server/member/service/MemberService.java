@@ -37,7 +37,7 @@ public class MemberService {
         return memberRepository.save(member);
     }
 
-    public String LoginMember(Member member){ // 리턴값을 토큰값으로~
+    public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
 
         //String memberEmail = member.getEmail();
         //String memberPassword = member.getPassword();
@@ -54,7 +54,8 @@ public class MemberService {
 
         //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
         //return mem;
-        return jwtTokenProvider.createToken(mem.getEmail());
+        mem.setToken(jwtTokenProvider.createToken(mem.getEmail()));
+        return mem;
     }
 
     public Member findMember(long memberId){

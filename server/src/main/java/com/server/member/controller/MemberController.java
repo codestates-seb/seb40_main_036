@@ -65,9 +65,9 @@ public class MemberController {
     @PostMapping("/login")
     public ResponseEntity<Object> loginMember(@RequestBody MemberLoginDto memberLoginDto) {
         Member member = memberMapper.memberLoginDtoMember(memberLoginDto);
-        String token = memberService.LoginMember(member);
+        Member response = memberService.LoginMember(member);
 
-        return new ResponseEntity<>(token, HttpStatus.OK);
+        return new ResponseEntity<>(memberMapper.memberToMemberResponseDto(response), HttpStatus.OK);
     }
 
 
