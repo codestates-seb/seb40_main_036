@@ -17,6 +17,7 @@ function ShareAnswerViewr({ answerContents, answerDate, user, id, memberid }) {
       }, 1000);
     }
   };
+
   return (
     <Container>
       <AnswerContents>

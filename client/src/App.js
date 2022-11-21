@@ -13,6 +13,7 @@ import WriteUpdate from './components/WriteUpdate';
 import Equipment from './components/Equipment';
 import WriteForm from './components/WriteForm';
 import LogoutNav from './components/LogoutNav';
+import AnswerEdit from './components/AnswerEdit';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/review" element={<ReviewList />} />
           <Route path="/equipment" element={<Equipment />} />
           <Route path="/share/:QuestionId" element={<ShareListLookup />} />
+          <Route path="/shareAnswer/:AnswerId" element={<AnswerEdit />} />
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
