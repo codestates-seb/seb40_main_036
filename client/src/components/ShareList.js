@@ -56,6 +56,7 @@ function ShareList() {
             <div className="title">제목</div>
             <div className="writer">작성자</div>
             <div className="date">작성일</div>
+            <div className="view">조회수</div>
           </ContentsTitle>
           {questions.map((item) => (
             <ShareListContents
@@ -67,6 +68,7 @@ function ShareList() {
               writer={item.name}
               date={item.questionCreated}
               tag={item.locationTag}
+              view={item.views}
             />
           ))}
         </ContentsContainer>
@@ -160,8 +162,6 @@ const ContentsContainer = styled.div`
 `;
 const ContentsTitle = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 10px 24px;
   font-size: 18px;
   font-weight: bold;
@@ -171,16 +171,20 @@ const ContentsTitle = styled.div`
   border-bottom-width: 1px;
   border-right-width: 0;
   color: black;
+  text-align: center;
   .num {
     width: 10%;
   }
   .title {
-    width: 65%;
+    width: 50%;
   }
   .writer {
     width: 15%;
   }
   .date {
+    width: 15%;
+  }
+  .view {
     width: 10%;
   }
 `;

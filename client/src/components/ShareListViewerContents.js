@@ -5,7 +5,7 @@ import axios from 'axios';
 function ShareLisViewerContents({ id, content, memberId }) {
   const navigate = useNavigate();
   const deleteClick = () => {
-    const result = window.confirm('답변을 삭제하시겠습니까?');
+    const result = window.confirm('질문을 삭제하시겠습니까?');
     if (
       result === true &&
       Number(sessionStorage.getItem('membeId')) === memberId
