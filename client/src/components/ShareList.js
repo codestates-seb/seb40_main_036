@@ -25,7 +25,6 @@ function ShareList() {
   const itemChange = (e) => {
     setItems(Number(e.target.value));
   };
-  console.log(items);
   useEffect(() => {
     const fetchQustion = async () => {
       try {
