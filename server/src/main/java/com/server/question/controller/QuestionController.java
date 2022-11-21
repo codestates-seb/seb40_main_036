@@ -8,6 +8,7 @@ import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.entity.Question;
 import com.server.question.mapper.QuestionMapper;
+import com.server.question.repository.QuestionRepository;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
@@ -31,6 +32,8 @@ public class QuestionController {
     private final QuestionService questionService;
 
     private final QuestionMapper questionMapper;
+
+    private final QuestionRepository questionRepository;
 
 
     @PostMapping
@@ -72,6 +75,13 @@ public class QuestionController {
     @GetMapping("/search/{word}")
     public ResponseEntity searchQuestion(@PathVariable("word") String word){
         List<Question> questionList=questionService.searchQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/questions")
+    public ResponseEntity getAllQuestions(){
+        List<Question> questionList=questionRepository.findAll();   // 바로 repository에서 데이터 가져옴
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
