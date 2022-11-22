@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-function ShareListContents({ id, num, title, writer, date }) {
+function ShareListContents({ id, num, tag, title, writer, date, view }) {
   return (
     <Container>
       <ContentsList>
         <div className="num">{num}</div>
-        <Link to={`/share/${id}`} className="title">
-          {title}
-        </Link>
+        <div className="titleBox">
+          <div className="tag">{tag}</div>
+          <Link to={`/share/${id}`} className="title">
+            {title}
+          </Link>
+        </div>
         <div className="writer">{writer}</div>
         <div className="date">{date}</div>
+        <div className="view">{view}</div>
       </ContentsList>
     </Container>
   );
@@ -22,8 +26,6 @@ const Container = styled.div``;
 
 const ContentsList = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 8px 24px;
   font-size: 16px;
   border: 1px solid black;
@@ -31,20 +33,39 @@ const ContentsList = styled.div`
   border-top-width: 0;
   border-bottom-width: 1px;
   border-right-width: 0;
+  text-align: center;
   a:link {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
     text-decoration: none;
   }
   .num {
     width: 10%;
   }
-  .title {
-    width: 65%;
-    color: inherit;
+  .titleBox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .title:hover {
+    text-decoration: underline;
+  }
+  .tag {
+    padding: 0 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    margin-right: 5px;
   }
   .writer {
     width: 15%;
   }
   .date {
+    width: 15%;
+  }
+  .view {
     width: 10%;
   }
 `;

@@ -3,38 +3,30 @@ import { useRef, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function AnswerPost() {
+function AnswerEdit() {
   const { QuestionId } = useParams();
+  const { AnswerId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = 'auto';
     textRef.current.style.height = textRef.current.scrollHeight + 'px';
   }, []);
 
-  const handleOnClick = () => {
-    if (AnswerPost.body !== '' && sessionStorage.getItem('membeId')) {
-      const data = {
-        answerContent: textRef.current.value,
-        questionId: `${QuestionId}`,
-        memberId: `${sessionStorage.getItem('membeId')}`,
-        name: `${sessionStorage.getItem('name')}`,
-      };
-      const headers = {
-        'Content-Type': 'application/json',
-        Authorization: `${localStorage.getItem('token')}`,
-      };
-      axios
-        .post(`/answer`, data, {
-          headers: headers,
-        })
-        .then(() => window.location.reload())
-        .catch((err) => console.log(err));
-    } else {
-      window.location.href = '/login';
-    }
+  const AnswerEditOnClick = () => {
+    const data = {
+      answerContent: textRef.current.value,
+      questionId: `${QuestionId}`,
+      memberId: `${sessionStorage.getItem('membeId')}`,
+      name: `${sessionStorage.getItem('name')}`,
+    };
+    console.log(data);
+    axios
+      .patch(`/answer/${AnswerId}`, data)
+      .then(() => window.location.reload())
+      .catch((err) => console.log(err));
   };
   return (
-    <Container>
+    <EditContainer>
       <Post>
         <div className="user"> {sessionStorage.getItem('name')}</div>
         <textarea
@@ -44,18 +36,18 @@ function AnswerPost() {
           onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
-          <button type="submit" onClick={handleOnClick}>
+          <button type="submit" onClick={AnswerEditOnClick}>
             등록
           </button>
         </div>
       </Post>
-    </Container>
+    </EditContainer>
   );
 }
 
-export default AnswerPost;
+export default AnswerEdit;
 
-const Container = styled.div`
+const EditContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
