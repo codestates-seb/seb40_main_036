@@ -2,7 +2,7 @@ import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { Link } from 'react-router-dom';
-import DropDown from './Dropdown';
+import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
@@ -75,7 +75,7 @@ function ShareList() {
             <h1>물품 나눔 게시판</h1>
           </Header>
           <SelectBox>
-            <DropDown />
+            <CityDown />
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -190,24 +190,6 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
-  .selectRegion {
-    width: 210px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .selectDistrict {
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
