@@ -2,9 +2,18 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {
   app.use(
-    ['/member', '/question', '/answer', '/stuffQuestion'],
+    [
+      '/member',
+      '/shelter',
+      '/reservation',
+      '/reservationInfo',
+      '/question',
+      '/answer',
+      '/stuffQuestion',
+      '/stuffAnswer',
+    ],
     createProxyMiddleware({
-      target: 'https://45ff-211-212-149-89.jp.ngrok.io',
+      target: 'https://eb30-14-39-204-244.jp.ngrok.io',
       changeOrigin: true,
     })
   );
