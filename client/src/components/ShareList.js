@@ -31,7 +31,7 @@ function ShareList() {
   };
   const handleSearchButton = () => {
     if (search.content !== undefined) {
-      axios.get(`/question/search/${search.title}`).then((response) => {
+      axios.get(`/question/search/${search.content}`).then((response) => {
         console.log(response);
         setQuestions(response.data);
         console.log(search);
@@ -41,6 +41,7 @@ function ShareList() {
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
+
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -50,7 +51,7 @@ function ShareList() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/question/questions`);
-        console.log(response.data);
+        console.log(response);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
