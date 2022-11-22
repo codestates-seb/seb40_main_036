@@ -14,6 +14,7 @@ import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -81,7 +82,7 @@ public class QuestionController {
 
     @GetMapping("/questions")
     public ResponseEntity getAllQuestions(){
-        List<Question> questionList=questionRepository.findAll();   // 바로 repository에서 데이터 가져옴
+        List<Question> questionList=questionRepository.findAll(Sort.by(Sort.Direction.DESC, "questionId"));  // 바로 repository에서 데이터 가져옴
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
