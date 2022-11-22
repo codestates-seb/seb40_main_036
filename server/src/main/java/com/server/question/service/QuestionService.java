@@ -80,6 +80,10 @@ public class QuestionService {
         return questionRepository.findByQuestionTitleContaining(word);
     }
 
+    public List<Question> searchNameQuestion(String word){
+        return questionRepository.findByNameContaining(word);
+    }
+
     public Page<Question> findQuestions(int page, int size){
         return questionRepository.findAll(PageRequest.of(page,size,
                 Sort.by("questionId").descending()));
