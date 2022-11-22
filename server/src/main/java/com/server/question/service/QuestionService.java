@@ -77,11 +77,11 @@ public class QuestionService {
     }
 
     public List<Question> searchQuestion(String word){
-        return questionRepository.findByQuestionTitleContaining(word);
+        return questionRepository.findByQuestionTitleContainingOrderByQuestionIdDesc(word);
     }
 
     public List<Question> searchNameQuestion(String word){
-        return questionRepository.findByNameContaining(word);
+        return questionRepository.findByNameContainingOrderByQuestionIdDesc(word);
     }
 
     public Page<Question> findQuestions(int page, int size){
