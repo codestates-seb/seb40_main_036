@@ -88,7 +88,7 @@ const SignUP = () => {
         console.log(response);
         console.log('User profile', response.data.memberId);
         console.log('User token', response.data.access_token);
-        localStorage.setItem('token', response.data.jwt); // 로컬스토리지에 토큰을 받아옴
+        localStorage.setItem('token', response.data.jwt);
         navigate('/login');
       })
       .catch((error) => {
