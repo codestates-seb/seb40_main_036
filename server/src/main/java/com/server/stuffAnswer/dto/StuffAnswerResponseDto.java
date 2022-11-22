@@ -18,6 +18,8 @@ public class StuffAnswerResponseDto {
 
     private Long memberId;
 
+    private String name;
+
     private String stuffAnswerContent;
 
     private LocalDate stuffAnswerCreated;

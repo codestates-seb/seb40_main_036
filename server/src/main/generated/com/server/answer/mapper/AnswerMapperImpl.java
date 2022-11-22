@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-18T10:55:35+0900",
+    date = "2022-11-22T10:07:28+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -27,6 +27,7 @@ public class AnswerMapperImpl implements AnswerMapper {
 
         answer.setQuestionId( answerPostDto.getQuestionId() );
         answer.setMemberId( answerPostDto.getMemberId() );
+        answer.setName( answerPostDto.getName() );
         answer.setAnswerContent( answerPostDto.getAnswerContent() );
 
         return answer;
@@ -58,6 +59,7 @@ public class AnswerMapperImpl implements AnswerMapper {
         answerResponseDto.answerId( answer.getAnswerId() );
         answerResponseDto.questionId( answer.getQuestionId() );
         answerResponseDto.memberId( answer.getMemberId() );
+        answerResponseDto.name( answer.getName() );
         answerResponseDto.answerContent( answer.getAnswerContent() );
         answerResponseDto.answerCreated( answer.getAnswerCreated() );
         answerResponseDto.answerModified( answer.getAnswerModified() );

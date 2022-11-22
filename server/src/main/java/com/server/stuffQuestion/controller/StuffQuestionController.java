@@ -1,5 +1,6 @@
 package com.server.stuffQuestion.controller;
 
+import com.server.answer.entity.Answer;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
 import com.server.stuffQuestion.dto.StuffQuestionPatchDto;
@@ -55,6 +56,9 @@ public class StuffQuestionController {
     public ResponseEntity getStuffQuestion(@PathVariable("stuffQuestionId") @Positive long Id){
 
         StuffQuestion stuffQuestion = stuffQuestionService.findStuffQuestion(Id);
+
+        stuffQuestion=stuffQuestionService.addViews(stuffQuestion);
+
 
         return new ResponseEntity<>(
 

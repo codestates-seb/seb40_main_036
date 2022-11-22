@@ -39,6 +39,4 @@ public class Reservation {
 
     private LocalDate reservationModified;
 
-    @OneToMany(mappedBy = "reservation")
-    private List<ReservationInfo> reservationInfos = new ArrayList<>();
 }

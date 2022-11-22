@@ -13,5 +13,5 @@ public class StuffQuestionPostDto {
 
     private String  stuffQuestionContent;
 
-    private String  stuffQuestionTag;
+    private String  locationTag;
 }

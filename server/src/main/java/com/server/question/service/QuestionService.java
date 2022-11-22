@@ -1,5 +1,7 @@
 package com.server.question.service;
 
+import com.server.answer.entity.Answer;
+import com.server.answer.repository.AnswerRepository;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
@@ -10,6 +12,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +25,8 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
 
     private final MemberRepository memberRepository;
+
+    private final AnswerRepository answerRepository;
 
 
     public Question createQuestion(Question question){
@@ -49,8 +55,8 @@ public class QuestionService {
         Optional.ofNullable(question.getQuestionContent())
                 .ifPresent(Content ->findquestion.setQuestionContent(Content));
         // 수용 가능 인원 수정
-        Optional.ofNullable(question.getQuestionTag())
-                .ifPresent(Tag->findquestion.setQuestionTag(Tag));
+        Optional.ofNullable(question.getLocationTag())
+                .ifPresent(Tag->findquestion.setLocationTag(Tag));
 
         findquestion.setQuestionModified(LocalDate.now());
 
@@ -71,17 +77,26 @@ public class QuestionService {
     }
 
     public List<Question> searchQuestion(String word){
-        return questionRepository.findByQuestionContentContaining(word);
+        return questionRepository.findByQuestionTitleContaining(word);
     }
 
     public Page<Question> findQuestions(int page, int size){
         return questionRepository.findAll(PageRequest.of(page,size,
-                Sort.by("memberId").descending()));
+                Sort.by("questionId").descending()));
     }
 
+    @Transactional
     public void deleteQuestion(long questionId){
-        Question question=findVerifiedQuestion(questionId);
-        questionRepository.delete(question);
+
+        if(!questionRepository.existsById(questionId)){
+            throw new BusinessLogicException(ExceptionCode.Question_NOT_FOUND);
+        }
+
+        List<Answer> answers=answerRepository.findByQuestionId(questionId);
+
+        answerRepository.deleteAll(answers);
+
+        questionRepository.deleteById(questionId);
     }
 
     public Question addViews(Question question){

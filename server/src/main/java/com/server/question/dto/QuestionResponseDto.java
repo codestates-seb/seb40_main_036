@@ -22,7 +22,7 @@ public class QuestionResponseDto {
 
     private String questionContent;
 
-    private String questionTag;
+    private String locationTag;
 
     private String views; // 조회수
 

@@ -1,7 +1,9 @@
 package com.server.shelter.entity;
 
+import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
 import com.server.reservationInfo.entity.ReservationInfo;
+import com.server.stuffQuestion.entity.StuffQuestion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,6 +46,9 @@ public class Shelter {
     private Reservation reservation;
 
     @OneToMany(mappedBy = "shelter")
-    private List<ReservationInfo> reservationInfos = new ArrayList<>();
+    private List<Question> questions = new ArrayList<>();
+
+    @OneToMany(mappedBy = "shelter")
+    private List<StuffQuestion> stuffQuestions = new ArrayList<>();
 
 }

@@ -19,7 +19,5 @@ public interface QuestionMapper {
 
     QuestionResponseDto questionToQuestionResponseDto (Question question);
 
-    QuestionResponseDto AnswersToQuestionResponseDto(Question question, List<Answer> answers);
-
     List<QuestionResponseDto> questionsToQuestionResponseDtos (List<Question> questions);
 }

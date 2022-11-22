@@ -1,6 +1,7 @@
 package com.server.question.repository;
 
 import com.server.question.entity.Question;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,5 +10,6 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
-    List<Question> findByQuestionContentContaining(String word);
+    List<Question> findByQuestionTitleContaining(String word);
+
 }

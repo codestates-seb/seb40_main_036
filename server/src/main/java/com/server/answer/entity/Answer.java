@@ -26,6 +26,9 @@ public class Answer {
     private Long memberId;
 
     @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
     private String answerContent;
 
     private LocalDate answerCreated;

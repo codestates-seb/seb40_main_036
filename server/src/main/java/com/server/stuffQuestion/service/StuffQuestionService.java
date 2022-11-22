@@ -3,6 +3,8 @@ package com.server.stuffQuestion.service;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
+import com.server.stuffAnswer.entity.StuffAnswer;
+import com.server.stuffAnswer.repository.StuffAnswerRepository;
 import com.server.stuffQuestion.entity.StuffQuestion;
 import com.server.stuffQuestion.repository.StuffQuestionRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +24,8 @@ public class StuffQuestionService {
     private final StuffQuestionRepository stuffQuestionRepository;
 
     private final MemberRepository memberRepository;
+
+    private final StuffAnswerRepository stuffAnswerRepository;
 
 
     public StuffQuestion createStuffQuestion(StuffQuestion stuffQuestion){
@@ -50,8 +54,8 @@ public class StuffQuestionService {
         Optional.ofNullable(stuffQuestion.getStuffQuestionContent())
                 .ifPresent(Content -> findStuffQuestion.setStuffQuestionContent(Content));
 
-        Optional.ofNullable(stuffQuestion.getStuffQuestionTag())
-                .ifPresent(Tag -> findStuffQuestion.setStuffQuestionTag(Tag));
+        Optional.ofNullable(stuffQuestion.getLocationTag())
+                .ifPresent(Tag -> findStuffQuestion.setLocationTag(Tag));
 
         findStuffQuestion.setStuffQuestionModified(LocalDate.now());
 
@@ -82,18 +86,25 @@ public class StuffQuestionService {
 
 
     public void deleteStuffQuestion(long stuffQuestionId){
-        StuffQuestion stuffQuestion = findVerifiedStuffQuestion(stuffQuestionId);
-        stuffQuestionRepository.delete(stuffQuestion);
+        if(!stuffQuestionRepository.existsById(stuffQuestionId)){
+            throw new BusinessLogicException(ExceptionCode.StuffQuestion_NOT_FOUND);
+        }
+
+        List<StuffAnswer> stuffAnswers=stuffAnswerRepository.findByStuffQuestionId(stuffQuestionId);
+
+        stuffAnswerRepository.deleteAll(stuffAnswers);
+
+        stuffQuestionRepository.deleteById(stuffQuestionId);
     }
 
-//    public StuffQuestion addViews(StuffQuestion stuffQuestion){
-//        long views = stuffQuestion.getViews();
-//        views++;
-//        stuffQuestion.setViews(views);
-//
-//        return stuffQuestionRepository.save(stuffQuestion);
-//
-//    }
+    public StuffQuestion addViews(StuffQuestion stuffQuestion){
+        long views = stuffQuestion.getViews();
+        views++;
+        stuffQuestion.setViews(views);
+
+        return stuffQuestionRepository.save(stuffQuestion);
+
+    }
 
 
 }

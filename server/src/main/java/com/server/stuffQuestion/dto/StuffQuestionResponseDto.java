@@ -22,9 +22,9 @@ public class StuffQuestionResponseDto {
 
     private String  stuffQuestionContent;
 
-    private String  stuffQuestionTag;
+    private String  locationTag;
 
-    // private long views; // 조회수
+    private long views; // 조회수
 
     private LocalDate stuffQuestionCreated;
 

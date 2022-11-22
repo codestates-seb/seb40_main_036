@@ -8,11 +8,13 @@ import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.entity.Question;
 import com.server.question.mapper.QuestionMapper;
+import com.server.question.repository.QuestionRepository;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -32,7 +34,8 @@ public class QuestionController {
 
     private final QuestionMapper questionMapper;
 
-    private final AnswerService answerService;
+    private final QuestionRepository questionRepository;
+
 
     @PostMapping
     public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
@@ -64,9 +67,8 @@ public class QuestionController {
 
         Question question = questionService.findQuestion(Id);
         question = questionService.addViews(question);
-        List<Answer> answers=answerService.findQuestionAnswers(Id);
 
-        return new ResponseEntity<>(questionMapper.AnswersToQuestionResponseDto(question,answers),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question),HttpStatus.OK);
 
     }
 
@@ -74,6 +76,13 @@ public class QuestionController {
     @GetMapping("/search/{word}")
     public ResponseEntity searchQuestion(@PathVariable("word") String word){
         List<Question> questionList=questionService.searchQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/questions")
+    public ResponseEntity getAllQuestions(){
+        List<Question> questionList=questionRepository.findAll(Sort.by(Sort.Direction.DESC, "questionId"));  // 바로 repository에서 데이터 가져옴
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }

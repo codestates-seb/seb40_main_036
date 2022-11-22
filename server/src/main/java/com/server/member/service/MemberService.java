@@ -1,6 +1,7 @@
 package com.server.member.service;
 
 
+import com.server.config.jwt.JwtTokenProvider;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.entity.Member;
@@ -21,6 +22,8 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     private final PasswordEncoder passwordEncoder;
+
+    private final JwtTokenProvider jwtTokenProvider;
 
     public Member createMember(Member member){
 
@@ -50,6 +53,8 @@ public class MemberService {
         }
 
         //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
+        //return mem;
+        mem.setToken(jwtTokenProvider.createToken(mem.getEmail()));
         return mem;
     }
 
