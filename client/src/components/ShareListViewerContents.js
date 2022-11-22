@@ -1,18 +1,34 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-
-function ShareLisViewerContents({ content }) {
+import axios from 'axios';
+function ShareLisViewerContents({ id, content, memberId }) {
+  const navigate = useNavigate();
+  const deleteClick = () => {
+    const result = window.confirm('질문을 삭제하시겠습니까?');
+    if (
+      result === true &&
+      Number(sessionStorage.getItem('membeId')) === memberId
+    ) {
+      setTimeout(() => {
+        axios
+          .delete(`/question/${id}`)
+          .then(() => navigate(`/share`))
+          .catch((err) => console.log(err));
+      }, 1000);
+    }
+  };
   return (
     <Container>
       <ShareListContents>
         <div className="contents">{content}</div>
       </ShareListContents>
-      <DeletEdit>
-        <div className="delete">삭제</div>
-        <Link to="/writeUpdate" style={{ textDecoration: 'none' }}>
-          <div className="edit">수정</div>
-        </Link>
-      </DeletEdit>
+      {memberId === Number(sessionStorage.getItem('membeId')) ? (
+        <DeletEdit>
+          <button onClick={deleteClick}>삭제</button>
+          <button className="edit">수정</button>
+        </DeletEdit>
+      ) : null}
     </Container>
   );
 }
@@ -42,7 +58,11 @@ const DeletEdit = styled.div`
   color: #838383;
   font-size: 18px;
   cursor: pointer;
-  .edit {
+  button {
+    cursor: pointer;
+    background-color: transparent;
     color: #838383;
+    font-size: 16px;
+    border: none;
   }
 `;
