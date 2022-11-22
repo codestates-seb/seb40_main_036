@@ -57,6 +57,7 @@ public class MemberMapperImpl implements MemberMapper {
         String name = null;
         String email = null;
         String phone = null;
+        String token = null;
 
         if ( member.getMemberId() != null ) {
             memberId = member.getMemberId();
@@ -64,8 +65,9 @@ public class MemberMapperImpl implements MemberMapper {
         name = member.getName();
         email = member.getEmail();
         phone = member.getPhone();
+        token = member.getToken();
 
-        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, name, email, phone );
+        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, name, email, phone, token );
 
         return memberResponseDto;
     }

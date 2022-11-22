@@ -49,4 +49,6 @@ public class Member {
     @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
     private List<StuffAnswer> stuffAnswers=new ArrayList<>();
 
+    private String token;
+
 }
