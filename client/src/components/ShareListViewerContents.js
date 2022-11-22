@@ -23,7 +23,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
       <ShareListContents>
         <div className="contents">{content}</div>
       </ShareListContents>
-      {memberId === Number(sessionStorage.getItem('membeId')) ? (
+      {memberId === Number(sessionStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
           <button className="edit">수정</button>

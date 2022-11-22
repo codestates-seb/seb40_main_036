@@ -12,25 +12,18 @@ function AnswerPost() {
   }, []);
 
   const handleOnClick = () => {
-    if (AnswerPost.body !== '' && sessionStorage.getItem('membeId')) {
+    if (AnswerPost.body !== '' && sessionStorage.getItem('memberId')) {
       const data = {
         answerContent: textRef.current.value,
         questionId: `${QuestionId}`,
-        memberId: `${sessionStorage.getItem('membeId')}`,
+        memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
-      const headers = {
-        'Content-Type': 'application/json',
-        Authorization: `${localStorage.getItem('token')}`,
-      };
+      console.log(data);
       axios
-        .post(`/answer`, data, {
-          headers: headers,
-        })
+        .post(`/answer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
-    } else {
-      window.location.href = '/login';
     }
   };
   return (

@@ -31,11 +31,13 @@ function ShareList() {
   };
   const handleSearchButton = () => {
     if (search.content !== undefined) {
-      axios.get(`/question/search/${search.content}`).then((response) => {
-        console.log(response);
-        setQuestions(response.data);
-        console.log(search);
-      });
+      axios
+        .get(`/question/search/${search.select}/${search.content}`)
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(search);
+        });
     }
     window.scrollTo(0, 0);
     setSearch({ select: 'title', content: '' });
@@ -130,7 +132,7 @@ function ShareList() {
               setSearch({ select: e.target.value, content: search.content })
             }
           >
-            <option value="titile">제목</option>
+            <option value="title">제목</option>
             <option value="content">내용</option>
             <option value="name">이름</option>
           </select>
@@ -144,13 +146,14 @@ function ShareList() {
               setSearch({ select: search.select, content: e.target.value })
             }
           />
-          <div className="searchClick" type="button">
-            <FaSearch
-              onClick={() => {
-                handleSearchButton();
-              }}
-            />
-          </div>
+          <button
+            className="searchClick"
+            onClick={() => {
+              handleSearchButton();
+            }}
+          >
+            <FaSearch />
+          </button>
         </SearchContainer>
       </ShareListContent>
     </ShareListContainer>
