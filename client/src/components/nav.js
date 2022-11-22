@@ -221,15 +221,14 @@ const Header = styled.header`
       text-decoration: none;
       font-weight: 400;
       display: inline-block;
-      font-size: 13px;
       width: 120px;
       border-radius: 0.75rem;
+      ${tablet} {
+        font-size: 13px;
+      }
     }
     ul a:hover {
       background: lightgray;
-    }
-    .navbar-member a {
-      width: 70px;
     }
   }
 `;
