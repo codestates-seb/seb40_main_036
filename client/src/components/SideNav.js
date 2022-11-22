@@ -2,10 +2,22 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { useState } from 'react';
+import axios from 'axios';
 
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
+
+  const PostReservation = () => {
+    axios
+      .post('/reservation', {
+        memberId: 1,
+        shelterId: props.shelterId,
+        num: count,
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
   return (
     <SideWrapper className={hide === true ? 'hide' : ''}>
       <div className="d-flex">
@@ -16,9 +28,11 @@ const SideNav = (props) => {
           />
         </div>
         <div className="pt128">
-          <div className="mb8 ta-center">{props.distance} m</div>
-          <div className="mb8 ta-center bold">{props.location}</div>
-          <div className="mb8 ta-center">45/350</div>
+          <div className="mb8 ta-center">
+            {(props.distance / 1000).toFixed(1)} km
+          </div>
+          <div className="mb8 ta-center bold">{props.title}</div>
+          <div className="mb8 ta-center">45/{props.capacity}</div>
           <div className="mb8 ta-center reservation">
             <FontAwesomeIcon icon={regular('user')} />
             {count > 0 ? (
@@ -27,11 +41,15 @@ const SideNav = (props) => {
               </button>
             ) : null}
             <p>{count}</p>
-            <button onClick={() => setCount(count + 1)}>
-              <FontAwesomeIcon icon={solid('plus')} />
-            </button>
+            {count < props.capacity ? (
+              <button onClick={() => setCount(count + 1)}>
+                <FontAwesomeIcon icon={solid('plus')} />
+              </button>
+            ) : null}
           </div>
-          <button className="reservation">예약하기</button>
+          <button className="reservation" onClick={PostReservation}>
+            예약하기
+          </button>
         </div>
       </div>
       <ArrowWrapper onClick={() => sethide(!hide)}>

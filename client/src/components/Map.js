@@ -6,14 +6,29 @@ import Marker from './../img/locationDotSolid.svg';
 import Circle from './../img/circleSolid.svg';
 import SideNav from '../components/SideNav';
 import axios from 'axios';
+import Incheon from '../static/Incheon.json';
 
 const { kakao } = window;
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
-
+var geocoder = new kakao.maps.services.Geocoder();
+const lists = Incheon.map((x) => {
+  let obj = {};
+  obj['title'] = x.shelter_name;
+  geocoder.addressSearch(x.geolocation, function (result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+      obj['latlng'] = new kakao.maps.LatLng(result[0].y, result[0].x);
+    }
+  });
+  obj['capacity'] = x.capacity;
+  obj['shelterId'] = x.shelter_id;
+  return obj;
+});
 const Map = (props) => {
   const [open, setopen] = useState(false);
   const [title, setTitle] = useState('');
   const [distance, setDistance] = useState('');
+  const [capacity, setCapacity] = useState('');
+  const [shelterId, setShelterId] = useState('');
 
   const Mapping = async () => {
     let container = document.getElementById('map');
@@ -21,7 +36,7 @@ const Map = (props) => {
       center: new kakao.maps.LatLng(props.x, props.y),
       level: 5,
     };
-    let map = await new kakao.maps.Map(container, options);
+    var map = await new kakao.maps.Map(container, options);
 
     var markerImage = new kakao.maps.MarkerImage(
       Marker,
@@ -53,7 +68,8 @@ const Map = (props) => {
         .then((res) => setDistance(res.data.distanceInfo.distance))
         .catch((err) => console.error(err));
     };
-    props.lists.forEach((i) => {
+
+    lists.forEach((i) => {
       let marker = new kakao.maps.Marker({
         map: map,
         position: i.latlng,
@@ -64,23 +80,28 @@ const Map = (props) => {
       kakao.maps.event.addListener(marker, 'click', () => {
         setopen(true);
         setTitle(marker.getTitle());
-        fetchRoute(props.y, props.x, i.x, i.y);
+        setCapacity(i.capacity);
+        setShelterId(i.shelterId);
+        fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
       });
     });
 
     props.setloading(false);
   };
-
   useEffect(() => {
     Mapping();
-    console.log(props.lists);
-    console.log(props.location);
   }, [props.x, props.y]);
 
   return (
     <>
       {open && (
-        <SideNav setopen={setopen} location={title} distance={distance} />
+        <SideNav
+          setopen={setopen}
+          title={title}
+          distance={distance}
+          capacity={capacity}
+          shelterId={shelterId}
+        />
       )}
       <LoadingIcon
         icon={solid('spinner')}
@@ -103,6 +124,7 @@ const LoadingIcon = styled(FontAwesomeIcon)`
   left: 50%;
   transform: translate(-50%, -50%);
   color: #008505;
+  z-index: 5;
 `;
 const MapWrapper = styled.div`
   width: 100%;
