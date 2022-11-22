@@ -11,5 +11,6 @@ import java.util.List;
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
     List<Question> findByQuestionTitleContaining(String word);
+    List<Question> findByNameContaining(String word);
 
 }

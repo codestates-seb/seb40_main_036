@@ -80,6 +80,13 @@ public class QuestionController {
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
 
+    @GetMapping("/search/name/{word}")
+    public ResponseEntity searchNameQuestion(@PathVariable("word") String word){
+        List<Question> questionList=questionService.searchNameQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
+
     @GetMapping("/questions")
     public ResponseEntity getAllQuestions(){
         List<Question> questionList=questionRepository.findAll(Sort.by(Sort.Direction.DESC, "questionId"));  // 바로 repository에서 데이터 가져옴
