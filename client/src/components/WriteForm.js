@@ -1,8 +1,48 @@
+import axios from 'axios';
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
 import Editor from './Editor';
 
 const WriteForm = () => {
+  // 초기값 - 제목, 내용
+  const [title, setTitle] = useState('');
+  const [contents, setContents] = useState(''); // eslint-disable-line no-unused-vars
+
+  const testRef = useRef(null);
+
+  const onChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const onChangeContents = () => {
+    testRef.current.handleBody();
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  // const onChangeContents = () => {
+  //   testRef.current.handleBody();
+  // };
+
+  const submit = () => {
+    if (title === '') {
+      return alert('제목을 입력하세요');
+    }
+    axios
+      .post('/stuffQuestion', {
+        memberId: sessionStorage.getItem('memberId'),
+        name: sessionStorage.getItem('name'),
+        stuffQuestionTitle: title,
+        stuffQuestionContent: contents,
+        locationTag: '중구',
+      })
+      .then((respone) => console.log(respone.data))
+      .catch((error) => {
+        // Handle error.
+        console.log('An error occurred:', error);
+      });
+  };
   return (
     <WriteFormStyle>
       <form className="input">
@@ -13,16 +53,22 @@ const WriteForm = () => {
             제목
           </label>
           <div className="titleInputDiv">
-            <input className="titleInput" type="text" id="titleWrite" />
+            <input
+              className="titleInput"
+              type="text"
+              id="titleWrite"
+              value={title}
+              onChange={onChangeTitle}
+            />
           </div>
         </div>
         <div>
           <div className="content">내용</div>
-          <Editor />
+          <Editor ref={testRef} onChange={onChangeContents} />
         </div>
       </form>
       <div className="reCancelBox">
-        <button className="registBox">
+        <button onClick={submit} className="registBox">
           <div className="registInput">등록</div>
         </button>
         <button className="cancelBox">
