@@ -35,6 +35,7 @@ const Login = () => {
         sessionStorage.setItem('email', inputId);
         sessionStorage.setItem('membeId', res.data.memberId);
         sessionStorage.setItem('name', res.data.name);
+        localStorage.setItem('token', res.data.token);
         // localStorage.setItem('authorization', res.headers.authorization); 백엔드에서 토큰 구현하면 로컬스토리지로
         window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
       })

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
-
 function ShareAnswerViewr({ answerContents, answerDate, user, id, memberid }) {
   const deleteClick = () => {
     const result = window.confirm('답변을 삭제하시겠습니까?');
@@ -21,21 +20,27 @@ function ShareAnswerViewr({ answerContents, answerDate, user, id, memberid }) {
   return (
     <Container>
       <AnswerContents>
-        <div className="userProfile">
-          <img src={Profile} alt="profile" />
+        <div className="answerTitle">
+          <div className="userBox">
+            <div className="userProfile">
+              <img src={Profile} alt="profile" />
+            </div>
+            <div className="user">
+              <div className="userName">{user}</div>
+              <div className="date">{answerDate}</div>
+            </div>
+          </div>
+          {memberid === Number(sessionStorage.getItem('membeId')) ? (
+            <DeletEdit>
+              <button onClick={deleteClick}>삭제</button>
+              <button className="edit">수정</button>
+            </DeletEdit>
+          ) : null}
         </div>
-        <div className="content">
-          <div className="userName">{user}</div>
+        <div className="contentsBox">
           <div className="contents">{answerContents}</div>
-          <div className="date">{answerDate}</div>
         </div>
       </AnswerContents>
-      {memberid === Number(sessionStorage.getItem('membeId')) ? (
-        <DeletEdit>
-          <button onClick={deleteClick}>삭제</button>
-          <button className="edit">수정</button>
-        </DeletEdit>
-      ) : null}
     </Container>
   );
 }
@@ -56,10 +61,14 @@ const Container = styled.div`
   padding: 20px 0;
 `;
 const AnswerContents = styled.div`
-  display: flex;
-  flex-direction: row;
-  -webkit-box-align: center;
-  align-items: center;
+  .answerTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  .userBox {
+    display: flex;
+    align-items: center;
+  }
   .userProfile {
     padding: 10px;
     img {
@@ -69,6 +78,10 @@ const AnswerContents = styled.div`
   .userName {
     font-weight: bold;
     font-size: 18px;
+  }
+  .contentsBox {
+    display: flex;
+    padding: 10px;
   }
   .contents {
     font-size: 16px;
@@ -80,6 +93,8 @@ const AnswerContents = styled.div`
 `;
 const DeletEdit = styled.div`
   display: flex;
+  padding-right: 30px;
+  justify-content: end;
   gap: 0px 5px;
   padding-left: 73px;
   button {

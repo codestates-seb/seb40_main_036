@@ -19,8 +19,14 @@ function AnswerPost() {
         memberId: `${sessionStorage.getItem('membeId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
+      const headers = {
+        'Content-Type': 'application/json',
+        Authorization: `${localStorage.getItem('token')}`,
+      };
       axios
-        .post(`/answer`, data)
+        .post(`/answer`, data, {
+          headers: headers,
+        })
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

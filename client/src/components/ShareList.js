@@ -1,29 +1,45 @@
 import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
-import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import DropDown from './Dropdown';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 function ShareList() {
+  const textRef = useRef();
   const [questions, setQuestions] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [items, setItems] = useState(10);
-
+  const [search, setSearch] = useState({
+    select: 'title',
+    content: '',
+  });
   const handlePageChange = (page) => {
     setPage(page);
   };
 
   const itemChange = (e) => {
     setItems(Number(e.target.value));
+  };
+  const handleSearchButton = () => {
+    if (search.content !== undefined) {
+      axios.get(`/question/search/${search.title}`).then((response) => {
+        console.log(response);
+        setQuestions(response.data);
+        console.log(search);
+      });
+    }
+    window.scrollTo(0, 0);
+    setSearch({ select: 'title', content: '' });
+    document.getElementById('search').value = 'title';
   };
   useEffect(() => {
     const fetchQustion = async () => {
@@ -90,7 +106,10 @@ function ShareList() {
             <option value="30">30개</option>
           </select>
           <Link to="/writeForm">
-            <button className="writing">글쓰기</button>
+            <button className="writing">
+              <FaPencilAlt />
+              글쓰기
+            </button>
           </Link>
         </Row>
         <PaginationBox>
@@ -104,21 +123,32 @@ function ShareList() {
           />
         </PaginationBox>
         <SearchContainer>
-          <select id="search">
-            <option>제목+내용</option>
-            <option>제목</option>
-            <option>내용</option>
-            <option>이름</option>
+          <select
+            id="search"
+            onChange={(e) =>
+              setSearch({ select: e.target.value, content: search.content })
+            }
+          >
+            <option value="titile">제목</option>
+            <option value="content">내용</option>
+            <option value="name">이름</option>
           </select>
           <input
-            type="text"
-            maxLength="20"
             className="searchInput"
-            name="search"
             placeholder="검색어를 입력해주세요."
+            value={search.content}
+            ref={textRef}
+            type="search"
+            onChange={(e) =>
+              setSearch({ select: search.select, content: e.target.value })
+            }
           />
-          <div className="searchClick">
-            <FaSearch />
+          <div className="searchClick" type="button">
+            <FaSearch
+              onClick={() => {
+                handleSearchButton();
+              }}
+            />
           </div>
         </SearchContainer>
       </ShareListContent>
