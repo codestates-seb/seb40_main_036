@@ -8,7 +8,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
     const result = window.confirm('질문을 삭제하시겠습니까?');
     if (
       result === true &&
-      Number(sessionStorage.getItem('membeId')) === memberId
+      Number(sessionStorage.getItem('memberId')) === memberId
     ) {
       setTimeout(() => {
         axios

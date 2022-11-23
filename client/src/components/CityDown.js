@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-const DropDown = () => {
+const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
+
   const state = useRef();
   const onChangeSelect = (e) => {
     const seoul = [
@@ -149,7 +150,12 @@ const DropDown = () => {
         <option value="경상북도">경상북도</option>
         <option value="경상남도">경상남도</option>
       </select>
-      <select className="selectDistrict" id="good" ref={state}>
+      <select
+        className="selectDistrict"
+        ref={state}
+        onChange={onChange}
+        value={value}
+      >
         <option>시/군/구 선택</option>
       </select>
     </SelectRegionStyle>
@@ -159,6 +165,7 @@ const DropDown = () => {
 export default DropDown;
 
 const SelectRegionStyle = styled.div`
+  display: flex;
   .selectRegion {
     width: 210px;
     height: 40px;
@@ -169,6 +176,8 @@ const SelectRegionStyle = styled.div`
     cursor: pointer;
   }
   .selectDistrict {
+    margin-right: 10px;
+    margin-left: 10px;
     width: 150px;
     height: 40px;
     border-radius: 5px;

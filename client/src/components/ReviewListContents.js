@@ -1,76 +1,71 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-function ReviewListContents() {
+function ShareListContents({ id, num, tag, title, writer, date, view }) {
   return (
     <Container>
-      <ContentsTitle>
-        <div className="num">번호</div>
-        <div className="title">제목</div>
-        <div className="writer">작성자</div>
-        <div className="date">작성일</div>
-      </ContentsTitle>
       <ContentsList>
-        <div className="num">01</div>
-        <div className="title">봉천 초등학교 정보입니다.</div>
-        <div className="writer">김코딩</div>
-        <div className="date">2022.11.11</div>
+        <div className="num">{num}</div>
+        <div className="titleBox">
+          <div className="tag">{tag}</div>
+          <Link to={`/share/${id}`} className="title">
+            {title}
+          </Link>
+        </div>
+        <div className="writer">{writer}</div>
+        <div className="date">{date}</div>
+        <div className="view">{view}</div>
       </ContentsList>
     </Container>
   );
 }
 
-export default ReviewListContents;
+export default ShareListContents;
 
-const Container = styled.div`
-  border: 2px solid black;
-  border-left-width: 0;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-  border-right-width: 0;
-`;
+const Container = styled.div``;
 
-const ContentsTitle = styled.div`
+const ContentsList = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 24px;
+  padding: 8px 24px;
+  font-size: 16px;
   border: 1px solid black;
   border-left-width: 0;
   border-top-width: 0;
   border-bottom-width: 1px;
   border-right-width: 0;
-  font-size: 18px;
-  font-weight: bold;
+  text-align: center;
+  a:link {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
   .num {
     width: 10%;
   }
-  .title {
-    width: 65%;
+  .titleBox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .title:hover {
+    text-decoration: underline;
+  }
+  .tag {
+    padding: 0 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    margin-right: 5px;
   }
   .writer {
     width: 15%;
   }
   .date {
-    width: 10%;
-  }
-`;
-
-const ContentsList = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 24px;
-  font-size: 16px;
-  .num {
-    width: 10%;
-  }
-  .title {
-    width: 65%;
-  }
-  .writer {
     width: 15%;
   }
-  .date {
+  .view {
     width: 10%;
   }
 `;

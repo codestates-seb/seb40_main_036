@@ -22,6 +22,8 @@ function ShareList() {
     select: 'title',
     content: '',
   });
+  const [Selected, setSelected] = useState();
+
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -67,6 +69,11 @@ function ShareList() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -75,7 +82,10 @@ function ShareList() {
             <h1>물품 나눔 게시판</h1>
           </Header>
           <SelectBox>
-            <CityDown />
+            <CityDown onChange={handleSelect} value={Selected} />
+            <div className="search">
+              <button>검색</button>
+            </div>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -190,6 +200,15 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
+  button {
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+    font-size: 16px;
+    cursor: pointer;
+  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
