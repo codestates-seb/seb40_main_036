@@ -15,6 +15,7 @@ import WriteForm from './components/WriteForm';
 import LogoutNav from './components/LogoutNav';
 import AnswerEdit from './components/AnswerEdit';
 import SearchBar from './components/SearchBar';
+import MyPage from './pages/MyPage';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/signup" element={<SignUP />}></Route>
           <Route path="/writeForm" element={<WriteForm />}></Route>
           <Route path="/writeUpdate" element={<WriteUpdate />}></Route>
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </div>

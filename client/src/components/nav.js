@@ -217,7 +217,7 @@ const Header = styled.header`
     }
     li,
     a {
-      color: black;
+      color: #666;
       text-decoration: none;
       font-weight: 400;
       display: inline-block;
@@ -228,7 +228,7 @@ const Header = styled.header`
       }
     }
     ul a:hover {
-      background: lightgray;
+      color: black;
     }
   }
 `;
