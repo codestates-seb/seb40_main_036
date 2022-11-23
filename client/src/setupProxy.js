@@ -13,7 +13,8 @@ module.exports = function (app) {
       '/stuffAnswer',
     ],
     createProxyMiddleware({
-      target: 'https://9fbd-211-214-195-126.jp.ngrok.io',
+      target:
+        'http://ec2-15-164-100-229.ap-northeast-2.compute.amazonaws.com:8080',
       changeOrigin: true,
     })
   );
