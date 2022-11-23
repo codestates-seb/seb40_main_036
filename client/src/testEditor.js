@@ -1,61 +1,84 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import ReactQuill from 'react-quill';
-import '../node_modules/react-quill/dist/quill.snow.css';
+import 'react-quill/dist/quill.snow.css';
+import styled from 'styled-components';
 
-const TestEditor = () => {
-  const [body, setBody] = useState('');
-
-  const handleBody = (e) => {
-    console.log(e);
-    setBody(e);
-  };
-
-  modules = {
-    toolbar: [
-      //[{ 'font': [] }],
-      [{ header: [1, 2, false] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [
-        { list: 'ordered' },
-        { list: 'bullet' },
-        { indent: '-1' },
-        { indent: '+1' },
+// eslint-disable-next-line react/display-name
+const TestEditor = ({ contents, onChangeContents }) => {
+  const modules = useMemo(
+    () => ({
+      toolbar: [
+        ['bold', 'italic', 'underline'],
+        [{ align: [] }],
+        [{ list: 'ordered' }, { list: 'bullet' }],
+        [{ size: ['small', false, 'large', 'huge'] }],
+        ['link', 'video'],
+        [{ color: [] }, { background: [] }],
       ],
-      ['link', 'image'],
-      [{ align: [] }, { color: [] }, { background: [] }], // dropdown with defaults from theme
-      ['clean'],
-    ],
-  };
+    }),
+    []
+  );
 
-  formats = [
-    //'font',
-    'header',
+  const formats = [
     'bold',
     'italic',
     'underline',
-    'strike',
-    'blockquote',
+    'align',
     'list',
-    'bullet',
-    'indent',
+    'size',
     'link',
     'image',
-    'align',
+    'video',
     'color',
     'background',
   ];
+
+  // const { quill, quillRef } = useQuill({ modules, formats });
+  // eslint-disable-next-line no-unused-vars
+  const [body, setBody] = useState('');
+  // const handleBody = (value) => {
+  //   console.log(value);
+  //   setBody(value);
+  // };
+
+  const onChangeValue = () => {
+    onChangeContents(contents);
+  };
+
+  // useEffect(() => {
+  //   if (quill) {
+  //     quill.on('text-change', () => {
+  //       setValue(quillRef.current.firstChild.innerHTML);
+  //     });
+  //   }
+  //   console.log(value, 'this is quill');
+  // }, [quill]);
+
   return (
-    <div>
-      <h2>text editor</h2>
+    <EditorStyle>
+      {/* <div className="editor">
+        <div ref={quillRef} />
+      </div> */}
       <ReactQuill
-        placeholder="write"
+        className="editor"
         modules={modules}
         formats={formats}
-        onChange={handleBody}
-        value={body}
+        value={contents}
+        onChange={onChangeValue}
       />
-    </div>
+    </EditorStyle>
   );
 };
 
 export default TestEditor;
+
+const EditorStyle = styled.div`
+  .editor {
+    text-align: center;
+    width: 983px;
+    height: 250px;
+    top: 495px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;

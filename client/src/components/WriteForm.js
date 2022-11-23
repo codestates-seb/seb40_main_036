@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
 import Editor from './Editor';
@@ -9,15 +9,13 @@ const WriteForm = () => {
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState(''); // eslint-disable-line no-unused-vars
 
-  const testRef = useRef(null);
-
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
   };
 
   // eslint-disable-next-line no-unused-vars
-  const onChangeContents = () => {
-    testRef.current.handleBody();
+  const onChangeContents = (e) => {
+    setContents(e.target.value);
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -28,6 +26,8 @@ const WriteForm = () => {
   const submit = () => {
     if (title === '') {
       return alert('제목을 입력하세요');
+    } else if (contents === '') {
+      return alert('내용을 입력하세요');
     }
     axios
       .post('/stuffQuestion', {
@@ -57,14 +57,21 @@ const WriteForm = () => {
               className="titleInput"
               type="text"
               id="titleWrite"
-              value={title}
+              value={title || ''}
               onChange={onChangeTitle}
             />
           </div>
         </div>
         <div>
           <div className="content">내용</div>
-          <Editor ref={testRef} onChange={onChangeContents} />
+          {/* <input
+            className="titleInput"
+            type="text"
+            id="titleWrite"
+            value={contents || ''}
+            onChange={onChangeContents}
+          /> */}
+          <Editor onChange={onChangeContents} contents={contents} />
         </div>
       </form>
       <div className="reCancelBox">
