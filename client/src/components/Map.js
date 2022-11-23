@@ -27,8 +27,10 @@ const lists = Incheon.map((x) => {
 });
 const Map = (props) => {
   const [open, setopen] = useState(false);
+  const [open2, setopen2] = useState(false);
   const [title, setTitle] = useState('');
   const [distance, setDistance] = useState('');
+  const [message, setmessage] = useState('예약이 완료되었습니다.');
   const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
@@ -106,6 +108,8 @@ const Map = (props) => {
           capacity={capacity}
           shelterId={shelterId}
           now={now}
+          setopen2={setopen2}
+          setmessage={setmessage}
         />
       )}
       <LoadingIcon
@@ -115,6 +119,12 @@ const Map = (props) => {
         pulse={true}
         style={props.loading ? { display: 'block' } : { display: 'none' }}
       />
+      {open2 && (
+        <Message>
+          {message}
+          <button onClick={() => window.location.reload()}>x</button>
+        </Message>
+      )}
       <MapWrapper id="map"></MapWrapper>
       <div id="centerAddr"></div>
     </>
@@ -122,7 +132,15 @@ const Map = (props) => {
 };
 
 export default Map;
-
+const Message = styled.div`
+  background: white;
+  border-radius: 0.25em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 8px;
+`;
 const LoadingIcon = styled(FontAwesomeIcon)`
   position: fixed;
   top: 50%;

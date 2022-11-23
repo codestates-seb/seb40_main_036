@@ -16,7 +16,15 @@ const SideNav = (props) => {
         num: count,
       })
       .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then(() => {
+        props.setopen(false);
+        props.setopen2(true);
+      })
+      .catch(() => {
+        props.setopen(false);
+        props.setopen2(true);
+        props.setmessage(`오류가 발생하였습니다.새로고침해주세요.`);
+      });
   };
   return (
     <SideWrapper className={hide === true ? 'hide' : ''}>
