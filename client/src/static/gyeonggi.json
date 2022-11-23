@@ -1,0 +1,9008 @@
+[
+  {
+    "shelter_id": 525,
+    "shelter_name": "가평고등학교 운동장",
+    "Geolocation": "경기도 가평군 가평읍 호반로 2601",
+    "capacity": 2543
+  },
+  {
+    "shelter_id": 526,
+    "shelter_name": "가평종합운동장",
+    "Geolocation": "경기도 가평군 가평읍 문화로 131",
+    "capacity": 5395
+  },
+  {
+    "shelter_id": 527,
+    "shelter_name": "가평중학교 운동장",
+    "Geolocation": "경기도 가평군 가평읍 광장로 10",
+    "capacity": 1704
+  },
+  {
+    "shelter_id": 528,
+    "shelter_name": "가평체육관",
+    "Geolocation": "경기도 가평군 가평읍 문화로 131",
+    "capacity": 973
+  },
+  {
+    "shelter_id": 529,
+    "shelter_name": "목동초등학교,가평북중학교 운동장",
+    "Geolocation": "경기도 가평군 북면 석장모루길 13",
+    "capacity": 1896
+  },
+  {
+    "shelter_id": 530,
+    "shelter_name": "미원초등학교 운동장",
+    "Geolocation": "경기도 가평군 설악면 신천중앙로120번길 11",
+    "capacity": 853
+  },
+  {
+    "shelter_id": 531,
+    "shelter_name": "상면초등학교 운동장",
+    "Geolocation": "경기도 가평군 상면 청군로 700-22",
+    "capacity": 1143
+  },
+  {
+    "shelter_id": 532,
+    "shelter_name": "상면초등학교 체육관",
+    "Geolocation": "경기도 가평군 상면 청군로 700-22",
+    "capacity": 285
+  },
+  {
+    "shelter_id": 533,
+    "shelter_name": "설악중고등학교 강당",
+    "Geolocation": "경기도 가평군 설악면 한양부로 21-1",
+    "capacity": 302
+  },
+  {
+    "shelter_id": 534,
+    "shelter_name": "설악중고등학교 운동장",
+    "Geolocation": "경기도 가평군 설악면 한양부로 21-1",
+    "capacity": 1125
+  },
+  {
+    "shelter_id": 535,
+    "shelter_name": "조종생활체육공원",
+    "Geolocation": "경기도 가평군 하면 현리 420-13",
+    "capacity": 4597
+  },
+  {
+    "shelter_id": 536,
+    "shelter_name": "조종초등학교 운동장",
+    "Geolocation": "경기도 가평군 조종면 조종새싹로 13-9",
+    "capacity": 1139
+  },
+  {
+    "shelter_id": 537,
+    "shelter_name": "청평중학교 운동장",
+    "Geolocation": "경기도 가평군 청평면 골안길 7",
+    "capacity": 1164
+  },
+  {
+    "shelter_id": 538,
+    "shelter_name": "청평초등학교 운동장",
+    "Geolocation": "경기도 가평군 청평면 잠곡로 27",
+    "capacity": 1196
+  },
+  {
+    "shelter_id": 539,
+    "shelter_name": "가람중학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 122",
+    "capacity": 1685
+  },
+  {
+    "shelter_id": 540,
+    "shelter_name": "가람초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 행신로311번길 78",
+    "capacity": 1973
+  },
+  {
+    "shelter_id": 541,
+    "shelter_name": "가좌초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 가좌2로 31",
+    "capacity": 1157
+  },
+  {
+    "shelter_id": 542,
+    "shelter_name": "고양고등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 삼송로 171",
+    "capacity": 848
+  },
+  {
+    "shelter_id": 543,
+    "shelter_name": "고양관산초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 통일로726번길 130",
+    "capacity": 701
+  },
+  {
+    "shelter_id": 544,
+    "shelter_name": "고양송산중학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 가좌2로 15",
+    "capacity": 1262
+  },
+  {
+    "shelter_id": 545,
+    "shelter_name": "고양신일초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 강선로 183",
+    "capacity": 2007
+  },
+  {
+    "shelter_id": 546,
+    "shelter_name": "고양제일중학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 통일로 820",
+    "capacity": 1830
+  },
+  {
+    "shelter_id": 547,
+    "shelter_name": "고양종합운동장",
+    "Geolocation": "경기도 고양시 일산서구 중앙로 1601",
+    "capacity": 6081
+  },
+  {
+    "shelter_id": 548,
+    "shelter_name": "고양종합운동장보조구장",
+    "Geolocation": "경기도 고양시 일산서구 중앙로 1601",
+    "capacity": 5212
+  },
+  {
+    "shelter_id": 549,
+    "shelter_name": "고양화수초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화수로 25",
+    "capacity": 1347
+  },
+  {
+    "shelter_id": 550,
+    "shelter_name": "능곡고등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 지도로 76",
+    "capacity": 2823
+  },
+  {
+    "shelter_id": 551,
+    "shelter_name": "능곡초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 토당로67번길 66",
+    "capacity": 3435
+  },
+  {
+    "shelter_id": 552,
+    "shelter_name": "대송중학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 송포로 49",
+    "capacity": 1618
+  },
+  {
+    "shelter_id": 553,
+    "shelter_name": "대화인조잔디축구장",
+    "Geolocation": "경기도 고양시 일산서구 대화로 168",
+    "capacity": 2533
+  },
+  {
+    "shelter_id": 554,
+    "shelter_name": "대화중학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 고양대로 348",
+    "capacity": 2364
+  },
+  {
+    "shelter_id": 555,
+    "shelter_name": "대화초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 송포로 50",
+    "capacity": 2780
+  },
+  {
+    "shelter_id": 556,
+    "shelter_name": "덕은중학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 중앙로176번길 18-29",
+    "capacity": 1355
+  },
+  {
+    "shelter_id": 557,
+    "shelter_name": "덕은초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 중앙로176번길 18-4",
+    "capacity": 4908
+  },
+  {
+    "shelter_id": 558,
+    "shelter_name": "덕이중학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 덕이동 산145-6",
+    "capacity": 815
+  },
+  {
+    "shelter_id": 559,
+    "shelter_name": "덕이초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 덕이로 104",
+    "capacity": 1569
+  },
+  {
+    "shelter_id": 560,
+    "shelter_name": "무원고등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 65",
+    "capacity": 1529
+  },
+  {
+    "shelter_id": 561,
+    "shelter_name": "무원초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 무원로 47",
+    "capacity": 2448
+  },
+  {
+    "shelter_id": 562,
+    "shelter_name": "문촌초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 주엽로 168",
+    "capacity": 2425
+  },
+  {
+    "shelter_id": 563,
+    "shelter_name": "문화초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 강선로 123",
+    "capacity": 2142
+  },
+  {
+    "shelter_id": 564,
+    "shelter_name": "발산중학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 고봉로 99",
+    "capacity": 2291
+  },
+  {
+    "shelter_id": 565,
+    "shelter_name": "백석인조잔디축구장",
+    "Geolocation": "경기도 고양시 일산동구 강송로 14",
+    "capacity": 2218
+  },
+  {
+    "shelter_id": 566,
+    "shelter_name": "백송초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 덕이동 350-2",
+    "capacity": 927
+  },
+  {
+    "shelter_id": 567,
+    "shelter_name": "백신고등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 백석로 8",
+    "capacity": 2485
+  },
+  {
+    "shelter_id": 568,
+    "shelter_name": "백신중학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 강촌로 89",
+    "capacity": 1828
+  },
+  {
+    "shelter_id": 569,
+    "shelter_name": "백양고등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 199",
+    "capacity": 956
+  },
+  {
+    "shelter_id": 570,
+    "shelter_name": "백양초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 238",
+    "capacity": 2199
+  },
+  {
+    "shelter_id": 571,
+    "shelter_name": "벽제초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 공릉천로 13",
+    "capacity": 2424
+  },
+  {
+    "shelter_id": 572,
+    "shelter_name": "삼송초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 세솔로 150",
+    "capacity": 709
+  },
+  {
+    "shelter_id": 573,
+    "shelter_name": "성라초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 호국로716번길 13-19",
+    "capacity": 2158
+  },
+  {
+    "shelter_id": 574,
+    "shelter_name": "성사초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 호국로834번길 89",
+    "capacity": 3318
+  },
+  {
+    "shelter_id": 575,
+    "shelter_name": "성석초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 문봉길 110",
+    "capacity": 197
+  },
+  {
+    "shelter_id": 576,
+    "shelter_name": "성신초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 성신로 104",
+    "capacity": 1148
+  },
+  {
+    "shelter_id": 577,
+    "shelter_name": "성저초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 성저로 92",
+    "capacity": 474
+  },
+  {
+    "shelter_id": 578,
+    "shelter_name": "소만초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 48",
+    "capacity": 2122
+  },
+  {
+    "shelter_id": 579,
+    "shelter_name": "송포초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 송산로 379",
+    "capacity": 957
+  },
+  {
+    "shelter_id": 580,
+    "shelter_name": "신원초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 신원동 119-2",
+    "capacity": 534
+  },
+  {
+    "shelter_id": 581,
+    "shelter_name": "아람초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 서정마을로 36",
+    "capacity": 904
+  },
+  {
+    "shelter_id": 582,
+    "shelter_name": "안곡초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 중산로 142",
+    "capacity": 758
+  },
+  {
+    "shelter_id": 583,
+    "shelter_name": "오마초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 주엽로 214",
+    "capacity": 1265
+  },
+  {
+    "shelter_id": 584,
+    "shelter_name": "용두초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 용두동 16-2",
+    "capacity": 1061
+  },
+  {
+    "shelter_id": 585,
+    "shelter_name": "용정초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 은빛로17번길 53",
+    "capacity": 748
+  },
+  {
+    "shelter_id": 586,
+    "shelter_name": "원당초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 마상로107번길 13",
+    "capacity": 3492
+  },
+  {
+    "shelter_id": 587,
+    "shelter_name": "일산고등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 원일로 53",
+    "capacity": 3988
+  },
+  {
+    "shelter_id": 588,
+    "shelter_name": "일산은행초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 은행마을로 70",
+    "capacity": 955
+  },
+  {
+    "shelter_id": 589,
+    "shelter_name": "일산초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 일중로15번길 38",
+    "capacity": 1320
+  },
+  {
+    "shelter_id": 590,
+    "shelter_name": "저동고등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 무궁화로 165",
+    "capacity": 2082
+  },
+  {
+    "shelter_id": 591,
+    "shelter_name": "정발고등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 정발산로 185",
+    "capacity": 1849
+  },
+  {
+    "shelter_id": 592,
+    "shelter_name": "정발초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 강송로 190",
+    "capacity": 1437
+  },
+  {
+    "shelter_id": 593,
+    "shelter_name": "주엽고등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 킨텍스로 341",
+    "capacity": 2285
+  },
+  {
+    "shelter_id": 594,
+    "shelter_name": "주엽초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 강선로 29",
+    "capacity": 2339
+  },
+  {
+    "shelter_id": 595,
+    "shelter_name": "중산인조잔디축구장",
+    "Geolocation": "경기도 고양시 일산동구 중산로 217",
+    "capacity": 2534
+  },
+  {
+    "shelter_id": 596,
+    "shelter_name": "중산중학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 탄중로 361",
+    "capacity": 833
+  },
+  {
+    "shelter_id": 597,
+    "shelter_name": "충장인조잔디축구장",
+    "Geolocation": "경기도 고양시 덕양구 행주내동 630",
+    "capacity": 2488
+  },
+  {
+    "shelter_id": 598,
+    "shelter_name": "풍동초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 숲속마을로 14-43",
+    "capacity": 886
+  },
+  {
+    "shelter_id": 599,
+    "shelter_name": "풍산초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산동구 숲속마을로 51",
+    "capacity": 130
+  },
+  {
+    "shelter_id": 600,
+    "shelter_name": "한산초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 덕이동 379-28",
+    "capacity": 965
+  },
+  {
+    "shelter_id": 601,
+    "shelter_name": "행남초등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 소만로 22",
+    "capacity": 1685
+  },
+  {
+    "shelter_id": 602,
+    "shelter_name": "행신중학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 22",
+    "capacity": 1227
+  },
+  {
+    "shelter_id": 603,
+    "shelter_name": "현산초등학교 운동장",
+    "Geolocation": "경기도 고양시 일산서구 산현로 87",
+    "capacity": 1512
+  },
+  {
+    "shelter_id": 604,
+    "shelter_name": "화수고등학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화수로 51",
+    "capacity": 2493
+  },
+  {
+    "shelter_id": 605,
+    "shelter_name": "화정중학교 운동장",
+    "Geolocation": "경기도 고양시 덕양구 화신로 343",
+    "capacity": 2370
+  },
+  {
+    "shelter_id": 606,
+    "shelter_name": "과천중앙공원",
+    "Geolocation": "경기도 과천시 도서관길 36",
+    "capacity": 14548
+  },
+  {
+    "shelter_id": 607,
+    "shelter_name": "과천초등학교 운동장",
+    "Geolocation": "경기도 과천시 온온사로 10",
+    "capacity": 1756
+  },
+  {
+    "shelter_id": 608,
+    "shelter_name": "관문체육공원",
+    "Geolocation": "경기도 과천시 중앙로 294",
+    "capacity": 54354
+  },
+  {
+    "shelter_id": 609,
+    "shelter_name": "문원체육공원",
+    "Geolocation": "경기도 과천시 문원로 56",
+    "capacity": 11150
+  },
+  {
+    "shelter_id": 610,
+    "shelter_name": "문원초등학교 운동장",
+    "Geolocation": "경기도 과천시 코오롱로 53",
+    "capacity": 1820
+  },
+  {
+    "shelter_id": 611,
+    "shelter_name": "주암체육소공원",
+    "Geolocation": "경기도 과천시 장군마을길 62-1",
+    "capacity": 2976
+  },
+  {
+    "shelter_id": 612,
+    "shelter_name": "가림중학교 운동장",
+    "Geolocation": "경기도 광명시 철망산로 71",
+    "capacity": 19996
+  },
+  {
+    "shelter_id": 613,
+    "shelter_name": "가림초등학교 운동장",
+    "Geolocation": "경기도 광명시 하안로 392",
+    "capacity": 16170
+  },
+  {
+    "shelter_id": 614,
+    "shelter_name": "광남중학교 운동장",
+    "Geolocation": "경기도 광명시 광명로 785",
+    "capacity": 17176
+  },
+  {
+    "shelter_id": 615,
+    "shelter_name": "광덕초등학교 운동장",
+    "Geolocation": "경기도 광명시 안양천로 495",
+    "capacity": 6909
+  },
+  {
+    "shelter_id": 616,
+    "shelter_name": "광명2동행정복지센터",
+    "Geolocation": "경기도 광명시 광명로 947",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 617,
+    "shelter_name": "광명3동주민센터",
+    "Geolocation": "경기도 광명시 광명로928번길 18-20",
+    "capacity": 20
+  },
+  {
+    "shelter_id": 618,
+    "shelter_name": "광명5동행정복지센터",
+    "Geolocation": "경기도 광명시 너부대로35번길 20",
+    "capacity": 70
+  },
+  {
+    "shelter_id": 619,
+    "shelter_name": "광명6동주민센터",
+    "Geolocation": "경기도 광명시 광명로791번길 6",
+    "capacity": 33
+  },
+  {
+    "shelter_id": 620,
+    "shelter_name": "광명7동행정복지센터",
+    "Geolocation": "경기도 광명시 새터로 13",
+    "capacity": 43
+  },
+  {
+    "shelter_id": 621,
+    "shelter_name": "광명고등학교 운동장",
+    "Geolocation": "경기도 광명시 연서로12번길 3-8",
+    "capacity": 1545
+  },
+  {
+    "shelter_id": 622,
+    "shelter_name": "광명남초등학교 운동장",
+    "Geolocation": "경기도 광명시 광명로 866-9",
+    "capacity": 12608
+  },
+  {
+    "shelter_id": 623,
+    "shelter_name": "광명동초등학교 운동장",
+    "Geolocation": "",
+    "capacity": 2550
+  },
+  {
+    "shelter_id": 624,
+    "shelter_name": "광명북고등학교 운동장",
+    "Geolocation": "경기도 광명시 오리로841번길 9",
+    "capacity": 13196
+  },
+  {
+    "shelter_id": 625,
+    "shelter_name": "광명북중학교 운동장",
+    "Geolocation": "경기도 광명시 오리로876번길 17",
+    "capacity": 9939
+  },
+  {
+    "shelter_id": 626,
+    "shelter_name": "광명북초등학교 운동장",
+    "Geolocation": "경기도 광명시 연서일로 25",
+    "capacity": 15490
+  },
+  {
+    "shelter_id": 627,
+    "shelter_name": "광명서초등학교 운동장",
+    "Geolocation": "경기도 광명시 너부대로 5",
+    "capacity": 12333
+  },
+  {
+    "shelter_id": 628,
+    "shelter_name": "광명시노인종합복지관",
+    "Geolocation": "경기도 광명시 소하로 25",
+    "capacity": 56
+  },
+  {
+    "shelter_id": 629,
+    "shelter_name": "광명역4공원",
+    "Geolocation": "",
+    "capacity": 2899
+  },
+  {
+    "shelter_id": 630,
+    "shelter_name": "광명종합사회복지관",
+    "Geolocation": "경기도 광명시 오리로 1018",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 631,
+    "shelter_name": "광명중학교 운동장",
+    "Geolocation": "경기도 광명시 시청로 127",
+    "capacity": 14382
+  },
+  {
+    "shelter_id": 632,
+    "shelter_name": "광명초등학교 운동장",
+    "Geolocation": "경기도 광명시 광이로 21",
+    "capacity": 14166
+  },
+  {
+    "shelter_id": 633,
+    "shelter_name": "광문고등학교 운동장",
+    "Geolocation": "경기도 광명시 원광명안로 39",
+    "capacity": 14545
+  },
+  {
+    "shelter_id": 634,
+    "shelter_name": "광문중학교 운동장",
+    "Geolocation": "경기도 광명시 덕단이로 43",
+    "capacity": 12583
+  },
+  {
+    "shelter_id": 635,
+    "shelter_name": "광문초등학교 운동장",
+    "Geolocation": "경기도 광명시 덕단이로 29",
+    "capacity": 12068
+  },
+  {
+    "shelter_id": 636,
+    "shelter_name": "광성초등학교 운동장",
+    "Geolocation": "경기도 광명시 시청로 121",
+    "capacity": 9423
+  },
+  {
+    "shelter_id": 637,
+    "shelter_name": "광일초등학교 운동장",
+    "Geolocation": "경기도 광명시 목감로 34-6",
+    "capacity": 17176
+  },
+  {
+    "shelter_id": 638,
+    "shelter_name": "광휘고등학교 운동장",
+    "Geolocation": "경기도 광명시 금당로 71",
+    "capacity": 12456
+  },
+  {
+    "shelter_id": 639,
+    "shelter_name": "광휘고등학교 운동장",
+    "Geolocation": "경기도 광명시 서원로 41",
+    "capacity": 11559
+  },
+  {
+    "shelter_id": 640,
+    "shelter_name": "구름산초등학교 운동장",
+    "Geolocation": "경기도 광명시 가림로 22",
+    "capacity": 11145
+  },
+  {
+    "shelter_id": 641,
+    "shelter_name": "구름산초등학교 운동장",
+    "Geolocation": "경기도 광명시 한내일로 5",
+    "capacity": 10549
+  },
+  {
+    "shelter_id": 642,
+    "shelter_name": "국민체육센터",
+    "Geolocation": "경기도 광명시 사성로 74",
+    "capacity": 257
+  },
+  {
+    "shelter_id": 643,
+    "shelter_name": "꿈동산공원",
+    "Geolocation": "",
+    "capacity": 1455
+  },
+  {
+    "shelter_id": 644,
+    "shelter_name": "너부대어린이공원",
+    "Geolocation": "",
+    "capacity": 1570
+  },
+  {
+    "shelter_id": 645,
+    "shelter_name": "다솜공원",
+    "Geolocation": "",
+    "capacity": 867
+  },
+  {
+    "shelter_id": 646,
+    "shelter_name": "명문고등학교 운동장",
+    "Geolocation": "경기도 광명시 광명로812번길 16",
+    "capacity": 15685
+  },
+  {
+    "shelter_id": 647,
+    "shelter_name": "서면초등학교 운동장",
+    "Geolocation": "경기도 광명시 오리로 402",
+    "capacity": 8412
+  },
+  {
+    "shelter_id": 648,
+    "shelter_name": "서면초등학교 운동장",
+    "Geolocation": "경기도 광명시 가림로 18",
+    "capacity": 14227
+  },
+  {
+    "shelter_id": 649,
+    "shelter_name": "소하1동 행정복지센터",
+    "Geolocation": "경기도 광명시 소하로 25",
+    "capacity": 74
+  },
+  {
+    "shelter_id": 650,
+    "shelter_name": "소하2동 행정복지센터",
+    "Geolocation": "경기도 광명시 성채로 52",
+    "capacity": 134
+  },
+  {
+    "shelter_id": 651,
+    "shelter_name": "소하고등학교 운동장",
+    "Geolocation": "경기도 광명시 소하일로 21",
+    "capacity": 14167
+  },
+  {
+    "shelter_id": 652,
+    "shelter_name": "소하고등학교 운동장",
+    "Geolocation": "경기도 광명시 안현로 80-1",
+    "capacity": 11241
+  },
+  {
+    "shelter_id": 653,
+    "shelter_name": "소하중학교 운동장",
+    "Geolocation": "경기도 광명시 소하일로 31",
+    "capacity": 11799
+  },
+  {
+    "shelter_id": 654,
+    "shelter_name": "소하중학교 운동장",
+    "Geolocation": "경기도 광명시 안현로 16",
+    "capacity": 12737
+  },
+  {
+    "shelter_id": 655,
+    "shelter_name": "소하초등학교 운동장",
+    "Geolocation": "경기도 광명시 철망산로 68",
+    "capacity": 11217
+  },
+  {
+    "shelter_id": 656,
+    "shelter_name": "소하초등학교 운동장",
+    "Geolocation": "경기도 광명시 소하일로 45",
+    "capacity": 12079
+  },
+  {
+    "shelter_id": 657,
+    "shelter_name": "스피돔 경륜장 주차장(P5, P6)",
+    "Geolocation": "경기도 광명시 광명로 721",
+    "capacity": 19394
+  },
+  {
+    "shelter_id": 658,
+    "shelter_name": "시민운동장",
+    "Geolocation": "경기도 광명시 시청로 20",
+    "capacity": 11110
+  },
+  {
+    "shelter_id": 659,
+    "shelter_name": "시민체육관",
+    "Geolocation": "경기도 광명시 가마산로 28",
+    "capacity": 10381
+  },
+  {
+    "shelter_id": 660,
+    "shelter_name": "시민체육관",
+    "Geolocation": "경기도 광명시 오리로 703",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 661,
+    "shelter_name": "신나는어린이공원",
+    "Geolocation": "",
+    "capacity": 1651
+  },
+  {
+    "shelter_id": 662,
+    "shelter_name": "안서중&경영회계고등학교 운동장",
+    "Geolocation": "경기도 광명시 영당안로 49",
+    "capacity": 1455
+  },
+  {
+    "shelter_id": 663,
+    "shelter_name": "안서중&경영회계고등학교 운동장",
+    "Geolocation": "경기도 광명시 기아로13번안길 9-9",
+    "capacity": 19903
+  },
+  {
+    "shelter_id": 664,
+    "shelter_name": "안서초등학교 운동장",
+    "Geolocation": "경기도 광명시 가학로 247-55",
+    "capacity": 11699
+  },
+  {
+    "shelter_id": 665,
+    "shelter_name": "안서초등학교 운동장",
+    "Geolocation": "경기도 광명시 영당로21번길 9",
+    "capacity": 2472
+  },
+  {
+    "shelter_id": 666,
+    "shelter_name": "안현초등학교 운동장",
+    "Geolocation": "",
+    "capacity": 9697
+  },
+  {
+    "shelter_id": 667,
+    "shelter_name": "연서초등학교 운동장",
+    "Geolocation": "경기도 광명시 안재로16번길 10",
+    "capacity": 1455
+  },
+  {
+    "shelter_id": 668,
+    "shelter_name": "온신초등학교 운동장",
+    "Geolocation": "",
+    "capacity": 19636
+  },
+  {
+    "shelter_id": 669,
+    "shelter_name": "온신초등학교 운동장",
+    "Geolocation": "경기도 광명시 범안로 657",
+    "capacity": 9091
+  },
+  {
+    "shelter_id": 670,
+    "shelter_name": "우리또래공원",
+    "Geolocation": "",
+    "capacity": 2332
+  },
+  {
+    "shelter_id": 671,
+    "shelter_name": "우리어린이공원",
+    "Geolocation": "",
+    "capacity": 1394
+  },
+  {
+    "shelter_id": 672,
+    "shelter_name": "운산고등학교 운동장",
+    "Geolocation": "경기도 광명시 한내일로 17",
+    "capacity": 10545
+  },
+  {
+    "shelter_id": 673,
+    "shelter_name": "운산고등학교 운동장",
+    "Geolocation": "",
+    "capacity": 8165
+  },
+  {
+    "shelter_id": 674,
+    "shelter_name": "진성고등학교 운동장",
+    "Geolocation": "",
+    "capacity": 1473
+  },
+  {
+    "shelter_id": 675,
+    "shelter_name": "철산1동주민센터",
+    "Geolocation": "경기도 광명시 사성로 121",
+    "capacity": 25
+  },
+  {
+    "shelter_id": 676,
+    "shelter_name": "철산2동행정복지센터",
+    "Geolocation": "경기도 광명시 시청로 94",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 677,
+    "shelter_name": "철산3동 주민센터",
+    "Geolocation": "경기도 광명시 철산로 56",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 678,
+    "shelter_name": "철산4동주민센터",
+    "Geolocation": "경기도 광명시 도덕공원로 60",
+    "capacity": 37
+  },
+  {
+    "shelter_id": 679,
+    "shelter_name": "철산중학교 운동장",
+    "Geolocation": "경기도 광명시 오리로876번길 27",
+    "capacity": 9939
+  },
+  {
+    "shelter_id": 680,
+    "shelter_name": "철산초등학교 운동장",
+    "Geolocation": "경기도 광명시 철산로 59",
+    "capacity": 9413
+  },
+  {
+    "shelter_id": 681,
+    "shelter_name": "충현고등학교 운동장",
+    "Geolocation": "경기도 광명시 오리로348번길 62",
+    "capacity": 15273
+  },
+  {
+    "shelter_id": 682,
+    "shelter_name": "충현고등학교 운동장",
+    "Geolocation": "",
+    "capacity": 8912
+  },
+  {
+    "shelter_id": 683,
+    "shelter_name": "충현중학교 운동장",
+    "Geolocation": "",
+    "capacity": 2482
+  },
+  {
+    "shelter_id": 684,
+    "shelter_name": "충현중학교 운동장",
+    "Geolocation": "경기도 광명시 서원로 42",
+    "capacity": 12279
+  },
+  {
+    "shelter_id": 685,
+    "shelter_name": "충현초등학교 운동장",
+    "Geolocation": "경기도 광명시 성채안로 16",
+    "capacity": 10384
+  },
+  {
+    "shelter_id": 686,
+    "shelter_name": "충현초등학교 운동장",
+    "Geolocation": "",
+    "capacity": 1760
+  },
+  {
+    "shelter_id": 687,
+    "shelter_name": "하안1동주민센터",
+    "Geolocation": "경기도 광명시 오리로 747",
+    "capacity": 77
+  },
+  {
+    "shelter_id": 688,
+    "shelter_name": "하안3동 주민센터",
+    "Geolocation": "경기도 광명시 금당로 28",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 689,
+    "shelter_name": "하안4동 주민센터",
+    "Geolocation": "경기도 광명시 안현로 54",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 690,
+    "shelter_name": "하안남초등학교 운동장",
+    "Geolocation": "경기도 광명시 오리로 703",
+    "capacity": 40697
+  },
+  {
+    "shelter_id": 691,
+    "shelter_name": "하안북중학교 운동장",
+    "Geolocation": "경기도 광명시 오리로 616",
+    "capacity": 12182
+  },
+  {
+    "shelter_id": 692,
+    "shelter_name": "하안북초등학교 운동장",
+    "Geolocation": "경기도 광명시 금당로 11-7",
+    "capacity": 11756
+  },
+  {
+    "shelter_id": 693,
+    "shelter_name": "하안종합사회복지관 강당",
+    "Geolocation": "",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 694,
+    "shelter_name": "하안중학교 운동장",
+    "Geolocation": "경기도 광명시 도덕공원로 5",
+    "capacity": 10463
+  },
+  {
+    "shelter_id": 695,
+    "shelter_name": "하안초등학교 운동장",
+    "Geolocation": "경기도 광명시 안현로 80-2",
+    "capacity": 11416
+  },
+  {
+    "shelter_id": 696,
+    "shelter_name": "하일초등학교 운동장",
+    "Geolocation": "경기도 광명시 철망산로 84",
+    "capacity": 10411
+  },
+  {
+    "shelter_id": 697,
+    "shelter_name": "학온동주민센터",
+    "Geolocation": "",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 698,
+    "shelter_name": "한내근린공원",
+    "Geolocation": "",
+    "capacity": 25583
+  },
+  {
+    "shelter_id": 699,
+    "shelter_name": "해오름공원",
+    "Geolocation": "",
+    "capacity": 5699
+  },
+  {
+    "shelter_id": 700,
+    "shelter_name": "경안1소공원",
+    "Geolocation": "경기도 광주시 경안동 9-38",
+    "capacity": 231
+  },
+  {
+    "shelter_id": 701,
+    "shelter_name": "경안2소공원",
+    "Geolocation": "경기도 광주시 경안동 8-10",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 702,
+    "shelter_name": "경안근린공원",
+    "Geolocation": "경기도 광주시 경안동 산17-18",
+    "capacity": 25180
+  },
+  {
+    "shelter_id": 703,
+    "shelter_name": "경안소공원",
+    "Geolocation": "경기도 광주시 경안동 254-34",
+    "capacity": 95
+  },
+  {
+    "shelter_id": 704,
+    "shelter_name": "경안중학교",
+    "Geolocation": "경기도 광주시 장지1길 6",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 705,
+    "shelter_name": "경안중학교 운동장",
+    "Geolocation": "경기도 광주시 장지1길 6",
+    "capacity": 1188
+  },
+  {
+    "shelter_id": 706,
+    "shelter_name": "곤지암 공설운동장",
+    "Geolocation": "경기도 광주시 곤지암읍 평촌길 12-137",
+    "capacity": 5909
+  },
+  {
+    "shelter_id": 707,
+    "shelter_name": "곤지암초등학교",
+    "Geolocation": "경기도 광주시 곤지암읍 곤지암로 70-13",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 708,
+    "shelter_name": "곤지암초등학교 운동장",
+    "Geolocation": "경기도 광주시 곤지암읍 곤지암로 70-13",
+    "capacity": 980
+  },
+  {
+    "shelter_id": 709,
+    "shelter_name": "광남 생활체육공원",
+    "Geolocation": "경기도 광주시 장지7길 63-2",
+    "capacity": 6289
+  },
+  {
+    "shelter_id": 710,
+    "shelter_name": "광남고등학교",
+    "Geolocation": "경기도 광주시 회안대로 350-32",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 711,
+    "shelter_name": "광남고등학교 운동장",
+    "Geolocation": "경기도 광주시 회안대로 350-32",
+    "capacity": 992
+  },
+  {
+    "shelter_id": 712,
+    "shelter_name": "광남중학교",
+    "Geolocation": "경기도 광주시 벼루개길42번길 50",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 713,
+    "shelter_name": "광남중학교 운동장",
+    "Geolocation": "경기도 광주시 벼루개길42번길 50",
+    "capacity": 1377
+  },
+  {
+    "shelter_id": 714,
+    "shelter_name": "광남초등학교",
+    "Geolocation": "경기도 광주시 고불로46번길 15",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 715,
+    "shelter_name": "광남초등학교 운동장",
+    "Geolocation": "경기도 광주시 고불로46번길 15",
+    "capacity": 2014
+  },
+  {
+    "shelter_id": 716,
+    "shelter_name": "광명초등학교",
+    "Geolocation": "경기도 광주시 문형산길 7",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 717,
+    "shelter_name": "광수중학교 운동장",
+    "Geolocation": "경기도 광주시 퇴촌면 도수길23번길 23",
+    "capacity": 1220
+  },
+  {
+    "shelter_id": 718,
+    "shelter_name": "광일중학교 운동장",
+    "Geolocation": "경기도 광주시 도척면 노곡로 32",
+    "capacity": 1483
+  },
+  {
+    "shelter_id": 719,
+    "shelter_name": "광주 공설운동장",
+    "Geolocation": "경기도 광주시 파발로 176",
+    "capacity": 3932
+  },
+  {
+    "shelter_id": 720,
+    "shelter_name": "광주고등학교",
+    "Geolocation": "경기도 광주시 수하길19번길 43",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 721,
+    "shelter_name": "광주고등학교 운동장",
+    "Geolocation": "경기도 광주시 수하길19번길 43",
+    "capacity": 1377
+  },
+  {
+    "shelter_id": 722,
+    "shelter_name": "광주광명초등학교 운동장",
+    "Geolocation": "경기도 광주시 문형산길 7",
+    "capacity": 461
+  },
+  {
+    "shelter_id": 723,
+    "shelter_name": "광주중앙고",
+    "Geolocation": "경기도 광주시 역동로63번길 1",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 724,
+    "shelter_name": "광주중앙고 운동장",
+    "Geolocation": "경기도 광주시 역동로 57-45",
+    "capacity": 1959
+  },
+  {
+    "shelter_id": 725,
+    "shelter_name": "광주중학교 운동장",
+    "Geolocation": "경기도 광주시 경안로42번길 11",
+    "capacity": 1851
+  },
+  {
+    "shelter_id": 726,
+    "shelter_name": "광주초등학교 운동장",
+    "Geolocation": "경기도 광주시 중앙로123번길 16-3",
+    "capacity": 1798
+  },
+  {
+    "shelter_id": 727,
+    "shelter_name": "광지원초등학교 운동장",
+    "Geolocation": "경기도 광주시 남한산성면 회안대로 1386",
+    "capacity": 557
+  },
+  {
+    "shelter_id": 728,
+    "shelter_name": "남종 공설운동장",
+    "Geolocation": "경기도 광주시 남종면 분원리 100",
+    "capacity": 6078
+  },
+  {
+    "shelter_id": 729,
+    "shelter_name": "남한산성 공설운동장",
+    "Geolocation": "경기도 광주시 남한산성면 상번천리 820",
+    "capacity": 2031
+  },
+  {
+    "shelter_id": 730,
+    "shelter_name": "남한산초등학교",
+    "Geolocation": "경기도 광주시 남한산성면 남한산성로 770",
+    "capacity": 849
+  },
+  {
+    "shelter_id": 731,
+    "shelter_name": "도곡초등학교",
+    "Geolocation": "경기도 광주시 초월읍 경충대로 1033-13",
+    "capacity": 125
+  },
+  {
+    "shelter_id": 732,
+    "shelter_name": "도곡초등학교 운동장",
+    "Geolocation": "경기도 광주시 초월읍 경충대로 1033-13",
+    "capacity": 1382
+  },
+  {
+    "shelter_id": 733,
+    "shelter_name": "도궁초등학교",
+    "Geolocation": "경기도 광주시 도척면 도척윗로 270",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 734,
+    "shelter_name": "도궁초등학교 운동장",
+    "Geolocation": "경기도 광주시 도척면 도척윗로 270",
+    "capacity": 1182
+  },
+  {
+    "shelter_id": 735,
+    "shelter_name": "도수초등학교",
+    "Geolocation": "경기도 광주시 퇴촌면 도수길 11",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 736,
+    "shelter_name": "도수초등학교 운동장",
+    "Geolocation": "경기도 광주시 퇴촌면 도수길 11",
+    "capacity": 1139
+  },
+  {
+    "shelter_id": 737,
+    "shelter_name": "도척 그린공원",
+    "Geolocation": "경기도 광주시 도척면 도척로 676",
+    "capacity": 9023
+  },
+  {
+    "shelter_id": 738,
+    "shelter_name": "도척초등학교 운동장",
+    "Geolocation": "경기도 광주시 도척면 노곡로 33",
+    "capacity": 1273
+  },
+  {
+    "shelter_id": 739,
+    "shelter_name": "도평초등학교 운동장",
+    "Geolocation": "경기도 광주시 초월읍 현산로 89-16",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 740,
+    "shelter_name": "매곡초등학교 운동장",
+    "Geolocation": "경기도 광주시 양벌로 303-5",
+    "capacity": 1160
+  },
+  {
+    "shelter_id": 741,
+    "shelter_name": "번천초등학교 운동장",
+    "Geolocation": "경기도 광주시 남한산성면 해공로 82",
+    "capacity": 690
+  },
+  {
+    "shelter_id": 742,
+    "shelter_name": "분원초등학교 운동장",
+    "Geolocation": "경기도 광주시 남종면 산수로 1642-1",
+    "capacity": 921
+  },
+  {
+    "shelter_id": 743,
+    "shelter_name": "삼리어린이공원",
+    "Geolocation": "경기도 광주시 곤지암읍 삼리 131-1",
+    "capacity": 453
+  },
+  {
+    "shelter_id": 744,
+    "shelter_name": "선동초등학교",
+    "Geolocation": "경기도 광주시 초월읍 산수로 198",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 745,
+    "shelter_name": "선동초등학교 운동장",
+    "Geolocation": "경기도 광주시 초월읍 동막골길 5",
+    "capacity": 1324
+  },
+  {
+    "shelter_id": 746,
+    "shelter_name": "안골소공원",
+    "Geolocation": "경기도 광주시 초월읍 서하리 471-3",
+    "capacity": 212
+  },
+  {
+    "shelter_id": 747,
+    "shelter_name": "양벌소공원",
+    "Geolocation": "경기도 광주시 오포읍 양벌리 1040-39",
+    "capacity": 596
+  },
+  {
+    "shelter_id": 748,
+    "shelter_name": "양벌초등학교 운동장",
+    "Geolocation": "경기도 광주시 양벌로 195-15",
+    "capacity": 975
+  },
+  {
+    "shelter_id": 749,
+    "shelter_name": "오포 공설운동장",
+    "Geolocation": "경기도 광주시 양촌길 77",
+    "capacity": 4190
+  },
+  {
+    "shelter_id": 750,
+    "shelter_name": "오포초등학교",
+    "Geolocation": "경기도 광주시 추자길 28-7",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 751,
+    "shelter_name": "오포초등학교 운동장",
+    "Geolocation": "경기도 광주시 추자길 28-7",
+    "capacity": 1307
+  },
+  {
+    "shelter_id": 752,
+    "shelter_name": "중대물빛공원",
+    "Geolocation": "경기도 광주시 순암로 307",
+    "capacity": 65529
+  },
+  {
+    "shelter_id": 753,
+    "shelter_name": "청석공원",
+    "Geolocation": "경기도 광주시 경안동 242",
+    "capacity": 58646
+  },
+  {
+    "shelter_id": 754,
+    "shelter_name": "초월1소공원(초월물류)",
+    "Geolocation": "경기도 광주시 초월읍 지월리 889",
+    "capacity": 443
+  },
+  {
+    "shelter_id": 755,
+    "shelter_name": "초월2소공원(초월물류)",
+    "Geolocation": "경기도 광주시 초월읍 무갑리 913",
+    "capacity": 1079
+  },
+  {
+    "shelter_id": 756,
+    "shelter_name": "초월초등학교",
+    "Geolocation": "경기도 광주시 초월읍 산수로 523",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 757,
+    "shelter_name": "초월초등학교 운동장",
+    "Geolocation": "경기도 광주시 초월읍 산수로 523",
+    "capacity": 1384
+  },
+  {
+    "shelter_id": 758,
+    "shelter_name": "탄벌소공원",
+    "Geolocation": "경기도 광주시 탄벌동 365-1",
+    "capacity": 165
+  },
+  {
+    "shelter_id": 759,
+    "shelter_name": "탄벌초등학교",
+    "Geolocation": "경기도 광주시 이배재로 20-12",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 760,
+    "shelter_name": "탄벌초등학교 운동장",
+    "Geolocation": "경기도 광주시 이배재로 20-12",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 761,
+    "shelter_name": "태전초등학교 운동장",
+    "Geolocation": "경기도 광주시 태봉로 56",
+    "capacity": 1434
+  },
+  {
+    "shelter_id": 762,
+    "shelter_name": "퇴촌 공설운동장",
+    "Geolocation": "경기도 광주시 퇴촌면 광동리 530",
+    "capacity": 5000
+  },
+  {
+    "shelter_id": 763,
+    "shelter_name": "갈매고등학교",
+    "Geolocation": "경기도 구리시 갈매순환로 75",
+    "capacity": 165
+  },
+  {
+    "shelter_id": 764,
+    "shelter_name": "갈매고등학교 운동장",
+    "Geolocation": "경기도 구리시 갈매순환로 75",
+    "capacity": 4606
+  },
+  {
+    "shelter_id": 765,
+    "shelter_name": "갈매사회복지관",
+    "Geolocation": "경기도 구리시 갈매순환로 143",
+    "capacity": 60
+  },
+  {
+    "shelter_id": 766,
+    "shelter_name": "갈매중앙공원",
+    "Geolocation": "경기도 구리시 산마루로 41",
+    "capacity": 10114
+  },
+  {
+    "shelter_id": 767,
+    "shelter_name": "갈매중학교 운동장",
+    "Geolocation": "경기도 구리시 갈매순환로 121",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 768,
+    "shelter_name": "갈매초등학교 운동장",
+    "Geolocation": "경기도 구리시 갈매중앙로 40",
+    "capacity": 3393
+  },
+  {
+    "shelter_id": 769,
+    "shelter_name": "교문중학교",
+    "Geolocation": "경기도 구리시 장자대로37번길 15",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 770,
+    "shelter_name": "교문초등학교",
+    "Geolocation": "경기도 구리시 안골로19번길 16",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 771,
+    "shelter_name": "구리체육관",
+    "Geolocation": "경기도 구리시 체육관로 131",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 772,
+    "shelter_name": "구리초등학교",
+    "Geolocation": "경기도 구리시 경춘로276번길 51",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 773,
+    "shelter_name": "구지초등학교",
+    "Geolocation": "경기도 구리시 건원대로76번길 40",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 774,
+    "shelter_name": "내동마을회관",
+    "Geolocation": "경기도 구리시 동구릉로389번길 58-9",
+    "capacity": 60
+  },
+  {
+    "shelter_id": 775,
+    "shelter_name": "늘푸른공원",
+    "Geolocation": "경기도 구리시 건원대로34번길 76",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 776,
+    "shelter_name": "동구하늘공원",
+    "Geolocation": "경기도 구리시 건원대로76번길 127",
+    "capacity": 4848
+  },
+  {
+    "shelter_id": 777,
+    "shelter_name": "밀알교회",
+    "Geolocation": "경기도 구리시 코스모스길215번길 96",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 778,
+    "shelter_name": "백문초등학교",
+    "Geolocation": "경기도 구리시 장자대로13번길 12",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 779,
+    "shelter_name": "부양공원",
+    "Geolocation": "경기도 구리시 체육관로74번길 62",
+    "capacity": 7842
+  },
+  {
+    "shelter_id": 780,
+    "shelter_name": "산마루초등학교",
+    "Geolocation": "경기도 구리시 갈매순환로 133",
+    "capacity": 198
+  },
+  {
+    "shelter_id": 781,
+    "shelter_name": "산마루초등학교 운동장",
+    "Geolocation": "경기도 구리시 갈매순환로 133",
+    "capacity": 3272
+  },
+  {
+    "shelter_id": 782,
+    "shelter_name": "삼보경로당",
+    "Geolocation": "경기도 구리시 건원대로 56",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 783,
+    "shelter_name": "수택초등학교",
+    "Geolocation": "경기도 구리시 검배로136번길 41",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 784,
+    "shelter_name": "아름마을공원",
+    "Geolocation": "경기도 구리시 동구릉로53번길 147",
+    "capacity": 5636
+  },
+  {
+    "shelter_id": 785,
+    "shelter_name": "이문안호수공원",
+    "Geolocation": "경기도 구리시 교문동 129-5",
+    "capacity": 15037
+  },
+  {
+    "shelter_id": 786,
+    "shelter_name": "인창중앙공원",
+    "Geolocation": "경기도 구리시 동구릉로66번길 29",
+    "capacity": 7030
+  },
+  {
+    "shelter_id": 787,
+    "shelter_name": "인창초등학교",
+    "Geolocation": "경기도 구리시 동구릉로 37-13",
+    "capacity": 850
+  },
+  {
+    "shelter_id": 788,
+    "shelter_name": "장자호수공원",
+    "Geolocation": "경기도 구리시 장자호수길 105",
+    "capacity": 63878
+  },
+  {
+    "shelter_id": 789,
+    "shelter_name": "토평공원",
+    "Geolocation": "경기도 구리시 벌말로 130-29",
+    "capacity": 10181
+  },
+  {
+    "shelter_id": 790,
+    "shelter_name": "관모초등학교 운동장",
+    "Geolocation": "경기도 군포시 곡란로8번길 35-22",
+    "capacity": 4455
+  },
+  {
+    "shelter_id": 791,
+    "shelter_name": "군포국민체육센터 운동장",
+    "Geolocation": "경기도 군포시 군포로 339",
+    "capacity": 13809
+  },
+  {
+    "shelter_id": 792,
+    "shelter_name": "군포대야초등학교 운동장",
+    "Geolocation": "경기도 군포시 대야2로 148",
+    "capacity": 2529
+  },
+  {
+    "shelter_id": 793,
+    "shelter_name": "군포중학교 운동장",
+    "Geolocation": "경기도 군포시 금당로124번길 19",
+    "capacity": 7380
+  },
+  {
+    "shelter_id": 794,
+    "shelter_name": "군포초등학교 운동장",
+    "Geolocation": "경기도 군포시 군포로 463",
+    "capacity": 9264
+  },
+  {
+    "shelter_id": 795,
+    "shelter_name": "궁내근린공원",
+    "Geolocation": "",
+    "capacity": 2266
+  },
+  {
+    "shelter_id": 796,
+    "shelter_name": "궁내초등학교 운동장",
+    "Geolocation": "경기도 군포시 수리산로 187",
+    "capacity": 4059
+  },
+  {
+    "shelter_id": 797,
+    "shelter_name": "금정제일공원",
+    "Geolocation": "",
+    "capacity": 6135
+  },
+  {
+    "shelter_id": 798,
+    "shelter_name": "금정초등학교 운동장",
+    "Geolocation": "경기도 군포시 금정로 40",
+    "capacity": 5454
+  },
+  {
+    "shelter_id": 799,
+    "shelter_name": "능안공원",
+    "Geolocation": "경기도 군포시 고산로677번길 17",
+    "capacity": 5042
+  },
+  {
+    "shelter_id": 800,
+    "shelter_name": "당동초등학교 운동장",
+    "Geolocation": "경기도 군포시 용호1로 34",
+    "capacity": 4777
+  },
+  {
+    "shelter_id": 801,
+    "shelter_name": "당정근린공원",
+    "Geolocation": "",
+    "capacity": 13681
+  },
+  {
+    "shelter_id": 802,
+    "shelter_name": "당정초등학교 운동장",
+    "Geolocation": "경기도 군포시 고산로151번길 26-24",
+    "capacity": 3271
+  },
+  {
+    "shelter_id": 803,
+    "shelter_name": "도장근린공원",
+    "Geolocation": "경기도 군포시 번영로 419",
+    "capacity": 2543
+  },
+  {
+    "shelter_id": 804,
+    "shelter_name": "도장초등학교 운동장",
+    "Geolocation": "경기도 군포시 번영로 371",
+    "capacity": 2589
+  },
+  {
+    "shelter_id": 805,
+    "shelter_name": "둔대초등학교 운동장",
+    "Geolocation": "경기도 군포시 호수로 305-14",
+    "capacity": 3014
+  },
+  {
+    "shelter_id": 806,
+    "shelter_name": "부곡중앙중학교 운동장",
+    "Geolocation": "경기도 군포시 송부로 241",
+    "capacity": 2755
+  },
+  {
+    "shelter_id": 807,
+    "shelter_name": "부곡중앙초등학교 운동장",
+    "Geolocation": "경기도 군포시 송부로273번길 7",
+    "capacity": 1911
+  },
+  {
+    "shelter_id": 808,
+    "shelter_name": "산본중앙공원",
+    "Geolocation": "경기도 군포시 산본로 367",
+    "capacity": 20151
+  },
+  {
+    "shelter_id": 809,
+    "shelter_name": "산본초등학교 운동장",
+    "Geolocation": "경기도 군포시 산본로386번길 60",
+    "capacity": 5704
+  },
+  {
+    "shelter_id": 810,
+    "shelter_name": "슬기공원",
+    "Geolocation": "",
+    "capacity": 2837
+  },
+  {
+    "shelter_id": 811,
+    "shelter_name": "시민체육광장 운동장",
+    "Geolocation": "경기도 군포시 산본로 267",
+    "capacity": 21696
+  },
+  {
+    "shelter_id": 812,
+    "shelter_name": "용호고등학교 운동장",
+    "Geolocation": "경기도 군포시 용호2로 10",
+    "capacity": 6849
+  },
+  {
+    "shelter_id": 813,
+    "shelter_name": "재궁근린공원",
+    "Geolocation": "경기도 군포시 오금로134번안길 5",
+    "capacity": 7030
+  },
+  {
+    "shelter_id": 814,
+    "shelter_name": "철쭉공원",
+    "Geolocation": "경기도 군포시 번영로 407",
+    "capacity": 22484
+  },
+  {
+    "shelter_id": 815,
+    "shelter_name": "초막골생태공원",
+    "Geolocation": "경기도 군포시 초막골길 216",
+    "capacity": 11694
+  },
+  {
+    "shelter_id": 816,
+    "shelter_name": "한세대학교 운동장",
+    "Geolocation": "경기도 군포시 한세로 30",
+    "capacity": 5073
+  },
+  {
+    "shelter_id": 817,
+    "shelter_name": "한우물근린공원",
+    "Geolocation": "",
+    "capacity": 8384
+  },
+  {
+    "shelter_id": 818,
+    "shelter_name": "흥진초등학교 운동장",
+    "Geolocation": "경기도 군포시 오금로 15-17",
+    "capacity": 4643
+  },
+  {
+    "shelter_id": 819,
+    "shelter_name": "감정초등학교 운동장",
+    "Geolocation": "경기도 김포시 중봉로 11",
+    "capacity": 1143
+  },
+  {
+    "shelter_id": 820,
+    "shelter_name": "걸포중앙공원",
+    "Geolocation": "경기도 김포시 걸포로 76",
+    "capacity": 40752
+  },
+  {
+    "shelter_id": 821,
+    "shelter_name": "고창중학교 운동장",
+    "Geolocation": "경기도 김포시 초당로 15",
+    "capacity": 1199
+  },
+  {
+    "shelter_id": 822,
+    "shelter_name": "고창초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강1로98번길 35",
+    "capacity": 1667
+  },
+  {
+    "shelter_id": 823,
+    "shelter_name": "고촌초등학교 운동장",
+    "Geolocation": "경기도 김포시 고촌읍 신곡로29번길 30",
+    "capacity": 730
+  },
+  {
+    "shelter_id": 824,
+    "shelter_name": "골드밸리 근린5호",
+    "Geolocation": "",
+    "capacity": 12821
+  },
+  {
+    "shelter_id": 825,
+    "shelter_name": "금파초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포대로926번길 74",
+    "capacity": 1544
+  },
+  {
+    "shelter_id": 826,
+    "shelter_name": "김포대명초등학교 운동장",
+    "Geolocation": "경기도 김포시 대곶면 대곶로20번길 17",
+    "capacity": 1476
+  },
+  {
+    "shelter_id": 827,
+    "shelter_name": "김포서초등학교 운동장",
+    "Geolocation": "경기도 김포시 봉화로 188",
+    "capacity": 1667
+  },
+  {
+    "shelter_id": 828,
+    "shelter_name": "김포신풍초등학교 운동장",
+    "Geolocation": "경기도 김포시 풍무로208번길 14",
+    "capacity": 1182
+  },
+  {
+    "shelter_id": 829,
+    "shelter_name": "김포제일고등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강11로 242",
+    "capacity": 1884
+  },
+  {
+    "shelter_id": 830,
+    "shelter_name": "김포제일공업고등학교 운동장",
+    "Geolocation": "경기도 김포시 봉화로 69",
+    "capacity": 1515
+  },
+  {
+    "shelter_id": 831,
+    "shelter_name": "김포초등학교 운동장",
+    "Geolocation": "경기도 김포시 북변중로65번길 4-24",
+    "capacity": 1970
+  },
+  {
+    "shelter_id": 832,
+    "shelter_name": "김포한가람초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강9로115번길 57",
+    "capacity": 802
+  },
+  {
+    "shelter_id": 833,
+    "shelter_name": "김포호수초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강4로420번길 87",
+    "capacity": 828
+  },
+  {
+    "shelter_id": 834,
+    "shelter_name": "나비초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강10로134번길 70",
+    "capacity": 665
+  },
+  {
+    "shelter_id": 835,
+    "shelter_name": "대곶초등학교 운동장",
+    "Geolocation": "경기도 김포시 대곶면 율생중앙로36번길 19",
+    "capacity": 1324
+  },
+  {
+    "shelter_id": 836,
+    "shelter_name": "마송제1근린공원",
+    "Geolocation": "",
+    "capacity": 10352
+  },
+  {
+    "shelter_id": 837,
+    "shelter_name": "마송중앙초등학교 운동장",
+    "Geolocation": "경기도 김포시 통진읍 마송1로 140",
+    "capacity": 1069
+  },
+  {
+    "shelter_id": 838,
+    "shelter_name": "마송초등학교 운동장",
+    "Geolocation": "경기도 김포시 통진읍 흥신로 315",
+    "capacity": 1110
+  },
+  {
+    "shelter_id": 839,
+    "shelter_name": "모담공원",
+    "Geolocation": "",
+    "capacity": 162501
+  },
+  {
+    "shelter_id": 840,
+    "shelter_name": "바다어린이공원",
+    "Geolocation": "",
+    "capacity": 581
+  },
+  {
+    "shelter_id": 841,
+    "shelter_name": "사우초등학교 운동장",
+    "Geolocation": "경기도 김포시 사우로 20",
+    "capacity": 1674
+  },
+  {
+    "shelter_id": 842,
+    "shelter_name": "서암초등학교 운동장",
+    "Geolocation": "경기도 김포시 통진읍 서암로184번길 9",
+    "capacity": 1464
+  },
+  {
+    "shelter_id": 843,
+    "shelter_name": "솔터고등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강7로22번길 109",
+    "capacity": 1022
+  },
+  {
+    "shelter_id": 844,
+    "shelter_name": "솔터체육공원",
+    "Geolocation": "경기도 김포시 김포한강3로 387",
+    "capacity": 58785
+  },
+  {
+    "shelter_id": 845,
+    "shelter_name": "수기1어린이공원",
+    "Geolocation": "",
+    "capacity": 520
+  },
+  {
+    "shelter_id": 846,
+    "shelter_name": "수원촌공원",
+    "Geolocation": "",
+    "capacity": 1408
+  },
+  {
+    "shelter_id": 847,
+    "shelter_name": "신곡중학교 운동장",
+    "Geolocation": "경기도 김포시 고촌읍 수기로 54-20",
+    "capacity": 496
+  },
+  {
+    "shelter_id": 848,
+    "shelter_name": "신양중학교 운동장",
+    "Geolocation": "경기도 김포시 양촌읍 양곡4로 243",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 849,
+    "shelter_name": "양곡 제4근린공원",
+    "Geolocation": "경기도 김포시 양촌읍 양곡2로30번길 46",
+    "capacity": 12988
+  },
+  {
+    "shelter_id": 850,
+    "shelter_name": "양곡고등학교 운동장",
+    "Geolocation": "경기도 김포시 양촌읍 양곡4로 138",
+    "capacity": 2970
+  },
+  {
+    "shelter_id": 851,
+    "shelter_name": "양도초등학교 운동장",
+    "Geolocation": "경기도 김포시 풍무로93번길 31",
+    "capacity": 1091
+  },
+  {
+    "shelter_id": 852,
+    "shelter_name": "운유초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강2로 239",
+    "capacity": 1274
+  },
+  {
+    "shelter_id": 853,
+    "shelter_name": "월곶초등학교 운동장",
+    "Geolocation": "경기도 김포시 월곶면 군하로276번길 28",
+    "capacity": 1123
+  },
+  {
+    "shelter_id": 854,
+    "shelter_name": "유현초등학교 운동장",
+    "Geolocation": "경기도 김포시 유현로33번길 50",
+    "capacity": 758
+  },
+  {
+    "shelter_id": 855,
+    "shelter_name": "은여울중학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강8로 173-48",
+    "capacity": 1111
+  },
+  {
+    "shelter_id": 856,
+    "shelter_name": "장기중학교 운동장",
+    "Geolocation": "경기도 김포시 청송로 5",
+    "capacity": 1727
+  },
+  {
+    "shelter_id": 857,
+    "shelter_name": "장기초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강2로 173",
+    "capacity": 670
+  },
+  {
+    "shelter_id": 858,
+    "shelter_name": "조류생태공원",
+    "Geolocation": "경기도 김포시 김포한강11로 455",
+    "capacity": 171301
+  },
+  {
+    "shelter_id": 859,
+    "shelter_name": "청송제1호 공원",
+    "Geolocation": "",
+    "capacity": 578
+  },
+  {
+    "shelter_id": 860,
+    "shelter_name": "통진초등학교 운동장",
+    "Geolocation": "경기도 김포시 통진읍 조강로 116",
+    "capacity": 1025
+  },
+  {
+    "shelter_id": 861,
+    "shelter_name": "푸른솔중학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강2로 328",
+    "capacity": 785
+  },
+  {
+    "shelter_id": 862,
+    "shelter_name": "풍무제1어린이공원",
+    "Geolocation": "",
+    "capacity": 2158
+  },
+  {
+    "shelter_id": 863,
+    "shelter_name": "풍무초등학교 운동장",
+    "Geolocation": "경기도 김포시 풍무로96번길 71",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 864,
+    "shelter_name": "하늘빛초등학교 운동장",
+    "Geolocation": "경기도 김포시 김포한강11로 374",
+    "capacity": 1273
+  },
+  {
+    "shelter_id": 865,
+    "shelter_name": "하성고등학교 운동장",
+    "Geolocation": "경기도 김포시 하성면 애기봉로806번길 30",
+    "capacity": 3249
+  },
+  {
+    "shelter_id": 866,
+    "shelter_name": "하성초등학교 운동장",
+    "Geolocation": "경기도 김포시 하성면 애기봉로 857",
+    "capacity": 1396
+  },
+  {
+    "shelter_id": 867,
+    "shelter_name": "하프공원",
+    "Geolocation": "",
+    "capacity": 625
+  },
+  {
+    "shelter_id": 868,
+    "shelter_name": "한강신도시 근린7호 공원",
+    "Geolocation": "",
+    "capacity": 30223
+  },
+  {
+    "shelter_id": 869,
+    "shelter_name": "한강신도시 제8호 어린이공원",
+    "Geolocation": "",
+    "capacity": 1485
+  },
+  {
+    "shelter_id": 870,
+    "shelter_name": "해뜰어린이공원",
+    "Geolocation": "",
+    "capacity": 921
+  },
+  {
+    "shelter_id": 871,
+    "shelter_name": "가양초등학교 운동장",
+    "Geolocation": "경기도 남양주시 수동면 비룡로1243번길 5-1",
+    "capacity": 717
+  },
+  {
+    "shelter_id": 872,
+    "shelter_name": "가운중학교 운동장",
+    "Geolocation": "경기도 남양주시 가운로2길 74",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 873,
+    "shelter_name": "광동중고등학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 장현로광동1길 10",
+    "capacity": 4723
+  },
+  {
+    "shelter_id": 874,
+    "shelter_name": "광릉중학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 진벌로 78-23",
+    "capacity": 2927
+  },
+  {
+    "shelter_id": 875,
+    "shelter_name": "금곡고등학교 운동장",
+    "Geolocation": "경기도 남양주시 경춘로992번길 10",
+    "capacity": 6787
+  },
+  {
+    "shelter_id": 876,
+    "shelter_name": "금곡중학교 운동장",
+    "Geolocation": "경기도 남양주시 경춘로 1008",
+    "capacity": 4713
+  },
+  {
+    "shelter_id": 877,
+    "shelter_name": "금남초등학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 북한강로 1506",
+    "capacity": 2601
+  },
+  {
+    "shelter_id": 878,
+    "shelter_name": "남양주 공업고등학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 경춘로 2206",
+    "capacity": 2909
+  },
+  {
+    "shelter_id": 879,
+    "shelter_name": "남양주 금곡초등학교 운동장",
+    "Geolocation": "경기도 남양주시 금곡로 65-6",
+    "capacity": 5454
+  },
+  {
+    "shelter_id": 880,
+    "shelter_name": "남양주 덕송초등학교 운동장",
+    "Geolocation": "경기도 남양주시 별내3로 356",
+    "capacity": 3098
+  },
+  {
+    "shelter_id": 881,
+    "shelter_name": "남양주 샛별초등학교 운동장",
+    "Geolocation": "경기도 남양주시 송산로307번길 50",
+    "capacity": 4681
+  },
+  {
+    "shelter_id": 882,
+    "shelter_name": "남양주 송촌초등학교 운동장",
+    "Geolocation": "경기도 남양주시 조안면 북한강로499번길 30",
+    "capacity": 3499
+  },
+  {
+    "shelter_id": 883,
+    "shelter_name": "남양주 양정초등학교 운동장",
+    "Geolocation": "경기도 남양주시 경춘로 468-33",
+    "capacity": 5454
+  },
+  {
+    "shelter_id": 884,
+    "shelter_name": "남양주 월문초등학교 운동장",
+    "Geolocation": "경기도 남양주시 와부읍 수레로 519",
+    "capacity": 4814
+  },
+  {
+    "shelter_id": 885,
+    "shelter_name": "남양주체육문화센터 운동장",
+    "Geolocation": "경기도 남양주시 다산지금로 91",
+    "capacity": 175730
+  },
+  {
+    "shelter_id": 886,
+    "shelter_name": "덕소중학교 운동장",
+    "Geolocation": "경기도 남양주시 와부읍 도곡길 7",
+    "capacity": 4989
+  },
+  {
+    "shelter_id": 887,
+    "shelter_name": "덕소초등학교 운동장",
+    "Geolocation": "경기도 남양주시 와부읍 수레로 17",
+    "capacity": 10573
+  },
+  {
+    "shelter_id": 888,
+    "shelter_name": "도심초등학교 운동장",
+    "Geolocation": "경기도 남양주시 와부읍 석실로 45",
+    "capacity": 5612
+  },
+  {
+    "shelter_id": 889,
+    "shelter_name": "도제원초등학교 운동장",
+    "Geolocation": "경기도 남양주시 퇴계원읍 경춘북로558번길 10-1",
+    "capacity": 9939
+  },
+  {
+    "shelter_id": 890,
+    "shelter_name": "마석고등학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 녹촌로 35",
+    "capacity": 5106
+  },
+  {
+    "shelter_id": 891,
+    "shelter_name": "미금초등학교 운동장",
+    "Geolocation": "경기도 남양주시 미금로56번길 32-13",
+    "capacity": 3631
+  },
+  {
+    "shelter_id": 892,
+    "shelter_name": "별가람중학교 운동장",
+    "Geolocation": "경기도 남양주시 별내3로 232",
+    "capacity": 3979
+  },
+  {
+    "shelter_id": 893,
+    "shelter_name": "별내초등학교 운동장",
+    "Geolocation": "경기도 남양주시 별내면 청학로92번길 38",
+    "capacity": 4001
+  },
+  {
+    "shelter_id": 894,
+    "shelter_name": "수동송천분교 운동장",
+    "Geolocation": "경기도 남양주시 수동면 비룡로586번길 98",
+    "capacity": 3757
+  },
+  {
+    "shelter_id": 895,
+    "shelter_name": "수동중학교 운동장",
+    "Geolocation": "경기도 남양주시 수동면 비룡로 790-22",
+    "capacity": 5818
+  },
+  {
+    "shelter_id": 896,
+    "shelter_name": "수동초등학교 운동장",
+    "Geolocation": "경기도 남양주시 수동면 비룡로 832",
+    "capacity": 5109
+  },
+  {
+    "shelter_id": 897,
+    "shelter_name": "양오중학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 양지로 261-31",
+    "capacity": 4739
+  },
+  {
+    "shelter_id": 898,
+    "shelter_name": "양오초등학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 양지로 261-35",
+    "capacity": 6671
+  },
+  {
+    "shelter_id": 899,
+    "shelter_name": "양지초등학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 진건오남로808번길 20-37",
+    "capacity": 6946
+  },
+  {
+    "shelter_id": 900,
+    "shelter_name": "어람중학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 진건오남로550번길 35",
+    "capacity": 6690
+  },
+  {
+    "shelter_id": 901,
+    "shelter_name": "에코랜드 축구장",
+    "Geolocation": "경기도 남양주시 별내면 청학로8번길 39",
+    "capacity": 15684
+  },
+  {
+    "shelter_id": 902,
+    "shelter_name": "연세중학교 운동장",
+    "Geolocation": "경기도 남양주시 조안면 북한강로 545",
+    "capacity": 5701
+  },
+  {
+    "shelter_id": 903,
+    "shelter_name": "오남중학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 진건오남로808번길 34",
+    "capacity": 5454
+  },
+  {
+    "shelter_id": 904,
+    "shelter_name": "오남체육문화센터 광장",
+    "Geolocation": "경기도 남양주시 오남읍 진건오남로577번길 11",
+    "capacity": 3284
+  },
+  {
+    "shelter_id": 905,
+    "shelter_name": "오남초등학교 운동장",
+    "Geolocation": "경기도 남양주시 오남읍 진건오남로 696",
+    "capacity": 712
+  },
+  {
+    "shelter_id": 906,
+    "shelter_name": "와부중학교 운동장",
+    "Geolocation": "경기도 남양주시 와부읍 월문천로 65",
+    "capacity": 4014
+  },
+  {
+    "shelter_id": 907,
+    "shelter_name": "장내중학교 운동장",
+    "Geolocation": "경기도 남양주시 평내로 37",
+    "capacity": 3878
+  },
+  {
+    "shelter_id": 908,
+    "shelter_name": "장현초등학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 장현천로 37",
+    "capacity": 3650
+  },
+  {
+    "shelter_id": 909,
+    "shelter_name": "조안초등학교 운동장",
+    "Geolocation": "경기도 남양주시 조안면 북한강로229번길 20",
+    "capacity": 5115
+  },
+  {
+    "shelter_id": 910,
+    "shelter_name": "주곡중학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 해밀예당1로 283",
+    "capacity": 5012
+  },
+  {
+    "shelter_id": 911,
+    "shelter_name": "진건중학교 운동장",
+    "Geolocation": "경기도 남양주시 진건읍 진건오남로 39",
+    "capacity": 8798
+  },
+  {
+    "shelter_id": 912,
+    "shelter_name": "진건초등학교 운동장",
+    "Geolocation": "경기도 남양주시 진건읍 사릉로 408-9",
+    "capacity": 7909
+  },
+  {
+    "shelter_id": 913,
+    "shelter_name": "진접고등학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 해밀예당2로 13",
+    "capacity": 3612
+  },
+  {
+    "shelter_id": 914,
+    "shelter_name": "차산초등학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 수레로 1105-23",
+    "capacity": 3545
+  },
+  {
+    "shelter_id": 915,
+    "shelter_name": "창현초등학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 녹촌로 12",
+    "capacity": 7250
+  },
+  {
+    "shelter_id": 916,
+    "shelter_name": "천마중학교 운동장",
+    "Geolocation": "경기도 남양주시 화도읍 먹갓로28번길 12",
+    "capacity": 3921
+  },
+  {
+    "shelter_id": 917,
+    "shelter_name": "퇴계원고등학교 운동장",
+    "Geolocation": "경기도 남양주시 퇴계원읍 퇴계원로 149",
+    "capacity": 4448
+  },
+  {
+    "shelter_id": 918,
+    "shelter_name": "퇴계원중학교 운동장",
+    "Geolocation": "경기도 남양주시 퇴계원읍 퇴계원로 49-8",
+    "capacity": 6684
+  },
+  {
+    "shelter_id": 919,
+    "shelter_name": "퇴계원초등학교 운동장",
+    "Geolocation": "경기도 남양주시 퇴계원읍 퇴계원로59번길 38-2",
+    "capacity": 5819
+  },
+  {
+    "shelter_id": 920,
+    "shelter_name": "판곡중학교 운동장",
+    "Geolocation": "경기도 남양주시 늘을1로 115",
+    "capacity": 5757
+  },
+  {
+    "shelter_id": 921,
+    "shelter_name": "평내초등학교 운동장",
+    "Geolocation": "경기도 남양주시 경춘로 1292-11",
+    "capacity": 4000
+  },
+  {
+    "shelter_id": 922,
+    "shelter_name": "평동초등학교 운동장",
+    "Geolocation": "경기도 남양주시 호평로68번길 16",
+    "capacity": 3894
+  },
+  {
+    "shelter_id": 923,
+    "shelter_name": "풍양초등학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 내각1로 31-1",
+    "capacity": 4606
+  },
+  {
+    "shelter_id": 924,
+    "shelter_name": "해밀초등학교 운동장",
+    "Geolocation": "경기도 남양주시 진접읍 해밀예당3로 103",
+    "capacity": 3830
+  },
+  {
+    "shelter_id": 925,
+    "shelter_name": "화접초등학교 운동장",
+    "Geolocation": "경기도 남양주시 별내중앙로 148",
+    "capacity": 2507
+  },
+  {
+    "shelter_id": 926,
+    "shelter_name": "동두천사동초등학교 운동장",
+    "Geolocation": "경기도 동두천시 생연로 51",
+    "capacity": 4364
+  },
+  {
+    "shelter_id": 927,
+    "shelter_name": "동두천송내초등학교 운동장",
+    "Geolocation": "경기도 동두천시 중앙로 52",
+    "capacity": 5455
+  },
+  {
+    "shelter_id": 928,
+    "shelter_name": "동두천신천초등학교 운동장",
+    "Geolocation": "경기도 동두천시 생연로9번길 20",
+    "capacity": 3818
+  },
+  {
+    "shelter_id": 929,
+    "shelter_name": "동두천여자중학교 운동장",
+    "Geolocation": "경기도 동두천시 평화로2452번길 31",
+    "capacity": 4364
+  },
+  {
+    "shelter_id": 930,
+    "shelter_name": "동두천외국어고등학교 운동장",
+    "Geolocation": "경기도 동두천시 지행로 145",
+    "capacity": 2909
+  },
+  {
+    "shelter_id": 931,
+    "shelter_name": "동두천중앙고등학교 운동장",
+    "Geolocation": "경기도 동두천시 평화로 2280",
+    "capacity": 9273
+  },
+  {
+    "shelter_id": 932,
+    "shelter_name": "동두천초등학교 운동장",
+    "Geolocation": "경기도 동두천시 평화로2460번길 4",
+    "capacity": 8485
+  },
+  {
+    "shelter_id": 933,
+    "shelter_name": "동두천탑동초등학교 운동장",
+    "Geolocation": "경기도 동두천시 탑신로 61",
+    "capacity": 3818
+  },
+  {
+    "shelter_id": 934,
+    "shelter_name": "동보초등학교 운동장",
+    "Geolocation": "경기도 동두천시 강변로640번길 31",
+    "capacity": 6000
+  },
+  {
+    "shelter_id": 935,
+    "shelter_name": "보산초등학교 운동장",
+    "Geolocation": "경기도 동두천시 중앙로 427",
+    "capacity": 4848
+  },
+  {
+    "shelter_id": 936,
+    "shelter_name": "보영여자중학교 운동장",
+    "Geolocation": "경기도 동두천시 동광로 124",
+    "capacity": 4024
+  },
+  {
+    "shelter_id": 937,
+    "shelter_name": "생연중학교 운동장",
+    "Geolocation": "경기도 동두천시 생연로 46",
+    "capacity": 5758
+  },
+  {
+    "shelter_id": 938,
+    "shelter_name": "생연초등학교 운동장",
+    "Geolocation": "경기도 동두천시 생골로 19",
+    "capacity": 6061
+  },
+  {
+    "shelter_id": 939,
+    "shelter_name": "소요초등학교 운동장",
+    "Geolocation": "경기도 동두천시 봉동로 64",
+    "capacity": 6667
+  },
+  {
+    "shelter_id": 940,
+    "shelter_name": "송내중앙중학교 운동장",
+    "Geolocation": "경기도 동두천시 중앙로 78",
+    "capacity": 3939
+  },
+  {
+    "shelter_id": 941,
+    "shelter_name": "시민회관 주차장",
+    "Geolocation": "경기도 동두천시 어수로 4",
+    "capacity": 3515
+  },
+  {
+    "shelter_id": 942,
+    "shelter_name": "신한대학교 제2캠퍼스(동두천캠퍼스)",
+    "Geolocation": "경기도 동두천시 벌마들로40번길 30",
+    "capacity": 9333
+  },
+  {
+    "shelter_id": 943,
+    "shelter_name": "이담초등학교 운동장",
+    "Geolocation": "경기도 동두천시 이담로 21",
+    "capacity": 3818
+  },
+  {
+    "shelter_id": 944,
+    "shelter_name": "종합운동장 보조구장",
+    "Geolocation": "경기도 동두천시 어등로 45",
+    "capacity": 17273
+  },
+  {
+    "shelter_id": 945,
+    "shelter_name": "지행초등학교 운동장",
+    "Geolocation": "경기도 동두천시 행선로 40",
+    "capacity": 5152
+  },
+  {
+    "shelter_id": 946,
+    "shelter_name": "경기예술고등학교",
+    "Geolocation": "경기도 부천시 석천로209번길 37",
+    "capacity": 613
+  },
+  {
+    "shelter_id": 947,
+    "shelter_name": "고리울초등학교",
+    "Geolocation": "경기도 부천시 고리울로 93",
+    "capacity": 936
+  },
+  {
+    "shelter_id": 948,
+    "shelter_name": "까치울중학교",
+    "Geolocation": "경기도 부천시 소사로 647",
+    "capacity": 653
+  },
+  {
+    "shelter_id": 949,
+    "shelter_name": "덕산고등학교",
+    "Geolocation": "경기도 부천시 오정로266번길 69",
+    "capacity": 700
+  },
+  {
+    "shelter_id": 950,
+    "shelter_name": "동산초등학교",
+    "Geolocation": "경기도 부천시 오정로251번길 50",
+    "capacity": 793
+  },
+  {
+    "shelter_id": 951,
+    "shelter_name": "범박고등학교",
+    "Geolocation": "경기도 부천시 범박로 27-1",
+    "capacity": 720
+  },
+  {
+    "shelter_id": 952,
+    "shelter_name": "부천송일초등학교",
+    "Geolocation": "경기도 부천시 경인로60번길 19",
+    "capacity": 1154
+  },
+  {
+    "shelter_id": 953,
+    "shelter_name": "부천양지초등학교",
+    "Geolocation": "경기도 부천시 안곡로 130",
+    "capacity": 560
+  },
+  {
+    "shelter_id": 954,
+    "shelter_name": "부천원일초등학교",
+    "Geolocation": "경기도 부천시 소사로819번길 46",
+    "capacity": 685
+  },
+  {
+    "shelter_id": 955,
+    "shelter_name": "부천일신중학교",
+    "Geolocation": "경기도 부천시 범안로96번길 44",
+    "capacity": 983
+  },
+  {
+    "shelter_id": 956,
+    "shelter_name": "부천종합운동장",
+    "Geolocation": "경기도 부천시 석천로 293",
+    "capacity": 1818
+  },
+  {
+    "shelter_id": 957,
+    "shelter_name": "부천중학교",
+    "Geolocation": "경기도 부천시 심중로75번길 64",
+    "capacity": 1098
+  },
+  {
+    "shelter_id": 958,
+    "shelter_name": "부천체육관",
+    "Geolocation": "경기도 부천시 소사로 482",
+    "capacity": 2333
+  },
+  {
+    "shelter_id": 959,
+    "shelter_name": "상동고등학교",
+    "Geolocation": "경기도 부천시 상이로 22",
+    "capacity": 720
+  },
+  {
+    "shelter_id": 960,
+    "shelter_name": "상미초등학교",
+    "Geolocation": "경기도 부천시 상이로 64",
+    "capacity": 1165
+  },
+  {
+    "shelter_id": 961,
+    "shelter_name": "상원고등학교",
+    "Geolocation": "경기도 부천시 상동로 10",
+    "capacity": 600
+  },
+  {
+    "shelter_id": 962,
+    "shelter_name": "상원초등학교",
+    "Geolocation": "경기도 부천시 부흥로 93",
+    "capacity": 728
+  },
+  {
+    "shelter_id": 963,
+    "shelter_name": "상인초등학교",
+    "Geolocation": "경기도 부천시 도약로 61",
+    "capacity": 1278
+  },
+  {
+    "shelter_id": 964,
+    "shelter_name": "상일고등학교",
+    "Geolocation": "경기도 부천시 부흥로 13",
+    "capacity": 760
+  },
+  {
+    "shelter_id": 965,
+    "shelter_name": "상일초등학교",
+    "Geolocation": "경기도 부천시 조마루로 57",
+    "capacity": 1042
+  },
+  {
+    "shelter_id": 966,
+    "shelter_name": "석천초등학교",
+    "Geolocation": "경기도 부천시 계남로 29",
+    "capacity": 1194
+  },
+  {
+    "shelter_id": 967,
+    "shelter_name": "성곡초등학교",
+    "Geolocation": "경기도 부천시 여월로 75",
+    "capacity": 710
+  },
+  {
+    "shelter_id": 968,
+    "shelter_name": "솔안초등학교",
+    "Geolocation": "경기도 부천시 경인로1185번길 27",
+    "capacity": 469
+  },
+  {
+    "shelter_id": 969,
+    "shelter_name": "송내고등학교",
+    "Geolocation": "경기도 부천시 서촌로20번길 13",
+    "capacity": 760
+  },
+  {
+    "shelter_id": 970,
+    "shelter_name": "수주고등학교",
+    "Geolocation": "경기도 부천시 역곡로 531",
+    "capacity": 786
+  },
+  {
+    "shelter_id": 971,
+    "shelter_name": "수주중학교",
+    "Geolocation": "경기도 부천시 역곡로 524",
+    "capacity": 863
+  },
+  {
+    "shelter_id": 972,
+    "shelter_name": "일신초등학교",
+    "Geolocation": "경기도 부천시 범안로96번길 26",
+    "capacity": 942
+  },
+  {
+    "shelter_id": 973,
+    "shelter_name": "중동초등학교",
+    "Geolocation": "경기도 부천시 심중로75번길 37",
+    "capacity": 782
+  },
+  {
+    "shelter_id": 974,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  미금로 121  (구미동)",
+    "capacity": 320
+  },
+  {
+    "shelter_id": 975,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  동판교로 258  (삼평동)",
+    "capacity": 561
+  },
+  {
+    "shelter_id": 976,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  판교역로14번길 42  (백현동)",
+    "capacity": 480
+  },
+  {
+    "shelter_id": 977,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  금곡로 243  (금곡동)",
+    "capacity": 280
+  },
+  {
+    "shelter_id": 978,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  대왕판교로959번길 48  (고등동)",
+    "capacity": 310
+  },
+  {
+    "shelter_id": 979,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  금상로58번길 22  (상대원동)",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 980,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  수내로90번길 26  (수내동)",
+    "capacity": 360
+  },
+  {
+    "shelter_id": 981,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  돌마로 303  (정자동)",
+    "capacity": 310
+  },
+  {
+    "shelter_id": 982,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  공원로370번길 29  (신흥동)",
+    "capacity": 480
+  },
+  {
+    "shelter_id": 983,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  수정로 233  (태평동)",
+    "capacity": 680
+  },
+  {
+    "shelter_id": 984,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  제일로123번길 9  (수진동)",
+    "capacity": 350
+  },
+  {
+    "shelter_id": 985,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  희망로534번길 3  (산성동)",
+    "capacity": 330
+  },
+  {
+    "shelter_id": 986,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 수정구  논골로36번길 33  (양지동)",
+    "capacity": 320
+  },
+  {
+    "shelter_id": 987,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  광명로 396  (금광동)",
+    "capacity": 410
+  },
+  {
+    "shelter_id": 988,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  자혜로32번길 10  (금광동)",
+    "capacity": 470
+  },
+  {
+    "shelter_id": 989,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  자혜로 55  (은행동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 990,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  순환로447번길 11  (은행동)",
+    "capacity": 320
+  },
+  {
+    "shelter_id": 991,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  희망로343번길 24  (상대원동)",
+    "capacity": 700
+  },
+  {
+    "shelter_id": 992,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  시민로 14(하대원동)",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 993,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 중원구  도촌남로 99  (도촌동)",
+    "capacity": 630
+  },
+  {
+    "shelter_id": 994,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  내정로174번길 19  (수내동)",
+    "capacity": 340
+  },
+  {
+    "shelter_id": 995,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  백현로243번길 12  (수내동)",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 996,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  황새울로 74  (정자동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 997,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  중앙공원로39번길 12  (서현동)",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 998,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  불정로406번길 17 (서현동)",
+    "capacity": 460
+  },
+  {
+    "shelter_id": 999,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  양현로 146  (이매동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1000,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  양현로 400  (야탑동)",
+    "capacity": 350
+  },
+  {
+    "shelter_id": 1001,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  야탑로 96-7  (야탑동)",
+    "capacity": 330
+  },
+  {
+    "shelter_id": 1002,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  서판교로74번길 11  (판교동)",
+    "capacity": 440
+  },
+  {
+    "shelter_id": 1003,
+    "shelter_name": "학교운동장",
+    "Geolocation": "경기도 성남시 분당구  판교원로117번길 11  (운중동)",
+    "capacity": 310
+  },
+  {
+    "shelter_id": 1004,
+    "shelter_name": "거북 어린이공원",
+    "Geolocation": "",
+    "capacity": 169
+  },
+  {
+    "shelter_id": 1005,
+    "shelter_name": "경기대학교 운동장",
+    "Geolocation": "경기도 수원시 영통구 광교산로 154-42",
+    "capacity": 868
+  },
+  {
+    "shelter_id": 1006,
+    "shelter_name": "고등 어린이공원",
+    "Geolocation": "",
+    "capacity": 103
+  },
+  {
+    "shelter_id": 1007,
+    "shelter_name": "고래등 어린이공원",
+    "Geolocation": "",
+    "capacity": 168
+  },
+  {
+    "shelter_id": 1008,
+    "shelter_name": "고렴공원",
+    "Geolocation": "",
+    "capacity": 845
+  },
+  {
+    "shelter_id": 1009,
+    "shelter_name": "고색중보들",
+    "Geolocation": "경기도 수원시 권선구 오목천로 276-1",
+    "capacity": 11070
+  },
+  {
+    "shelter_id": 1010,
+    "shelter_name": "고색체육공원",
+    "Geolocation": "경기도 수원시 권선구 오목천로152번길 29",
+    "capacity": 1080
+  },
+  {
+    "shelter_id": 1011,
+    "shelter_name": "광교공원",
+    "Geolocation": "경기도 수원시 장안구 광교산로 159",
+    "capacity": 2062
+  },
+  {
+    "shelter_id": 1012,
+    "shelter_name": "광교호수공원",
+    "Geolocation": "",
+    "capacity": 162042
+  },
+  {
+    "shelter_id": 1013,
+    "shelter_name": "교통 어린이공원",
+    "Geolocation": "",
+    "capacity": 202
+  },
+  {
+    "shelter_id": 1014,
+    "shelter_name": "교통공원",
+    "Geolocation": "경기도 수원시 영통구 덕영대로 1570",
+    "capacity": 2437
+  },
+  {
+    "shelter_id": 1015,
+    "shelter_name": "구운공원",
+    "Geolocation": "",
+    "capacity": 4206
+  },
+  {
+    "shelter_id": 1016,
+    "shelter_name": "권선구청 한마음광장",
+    "Geolocation": "",
+    "capacity": 160
+  },
+  {
+    "shelter_id": 1017,
+    "shelter_name": "권선중앙공원",
+    "Geolocation": "",
+    "capacity": 2107
+  },
+  {
+    "shelter_id": 1018,
+    "shelter_name": "꽃길 어린이공원",
+    "Geolocation": "",
+    "capacity": 132
+  },
+  {
+    "shelter_id": 1019,
+    "shelter_name": "꿈이랑 어린이공원",
+    "Geolocation": "",
+    "capacity": 650
+  },
+  {
+    "shelter_id": 1020,
+    "shelter_name": "꿈틀이 어린이공원",
+    "Geolocation": "",
+    "capacity": 128
+  },
+  {
+    "shelter_id": 1021,
+    "shelter_name": "누리문화공원",
+    "Geolocation": "",
+    "capacity": 1044
+  },
+  {
+    "shelter_id": 1022,
+    "shelter_name": "늘푸른공원(권선3공원)",
+    "Geolocation": "경기도 수원시 권선구 동탄원천로 818",
+    "capacity": 2708
+  },
+  {
+    "shelter_id": 1023,
+    "shelter_name": "다람쥐 어린이공원",
+    "Geolocation": "",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1024,
+    "shelter_name": "다람쥐 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 조원로111번길 33-23",
+    "capacity": 131
+  },
+  {
+    "shelter_id": 1025,
+    "shelter_name": "다산공원",
+    "Geolocation": "",
+    "capacity": 3352
+  },
+  {
+    "shelter_id": 1026,
+    "shelter_name": "당수체육공원",
+    "Geolocation": "경기도 수원시 권선구 당수로 235",
+    "capacity": 725
+  },
+  {
+    "shelter_id": 1027,
+    "shelter_name": "대부둑공원",
+    "Geolocation": "",
+    "capacity": 2024
+  },
+  {
+    "shelter_id": 1028,
+    "shelter_name": "동공원",
+    "Geolocation": "",
+    "capacity": 15645
+  },
+  {
+    "shelter_id": 1029,
+    "shelter_name": "동그라미 어린이공원",
+    "Geolocation": "",
+    "capacity": 122
+  },
+  {
+    "shelter_id": 1030,
+    "shelter_name": "동남보건대학교 운동장",
+    "Geolocation": "경기도 수원시 장안구 천천로74번길 50",
+    "capacity": 451
+  },
+  {
+    "shelter_id": 1031,
+    "shelter_name": "동말 어린이공원",
+    "Geolocation": "",
+    "capacity": 102
+  },
+  {
+    "shelter_id": 1032,
+    "shelter_name": "동물놀이 어린이공원",
+    "Geolocation": "",
+    "capacity": 129
+  },
+  {
+    "shelter_id": 1033,
+    "shelter_name": "두레뜰공원",
+    "Geolocation": "",
+    "capacity": 4315
+  },
+  {
+    "shelter_id": 1034,
+    "shelter_name": "드라마센터 어린이공원",
+    "Geolocation": "",
+    "capacity": 211
+  },
+  {
+    "shelter_id": 1035,
+    "shelter_name": "마루터기 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 산남로4번길 27",
+    "capacity": 145
+  },
+  {
+    "shelter_id": 1036,
+    "shelter_name": "마중공원",
+    "Geolocation": "",
+    "capacity": 5168
+  },
+  {
+    "shelter_id": 1037,
+    "shelter_name": "만석공원",
+    "Geolocation": "경기도 수원시 장안구 정조로 1067",
+    "capacity": 28464
+  },
+  {
+    "shelter_id": 1038,
+    "shelter_name": "망포공원",
+    "Geolocation": "경기도 수원시 영통구 영통로154번길 51-16",
+    "capacity": 1271
+  },
+  {
+    "shelter_id": 1039,
+    "shelter_name": "매여울공원",
+    "Geolocation": "경기도 수원시 영통구 동탄원천로915번길 36",
+    "capacity": 1521
+  },
+  {
+    "shelter_id": 1040,
+    "shelter_name": "매탄공원",
+    "Geolocation": "경기도 수원시 영통구 매탄로 185",
+    "capacity": 4795
+  },
+  {
+    "shelter_id": 1041,
+    "shelter_name": "매화공원",
+    "Geolocation": "",
+    "capacity": 1404
+  },
+  {
+    "shelter_id": 1042,
+    "shelter_name": "머내생태공원",
+    "Geolocation": "",
+    "capacity": 976
+  },
+  {
+    "shelter_id": 1043,
+    "shelter_name": "명당 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 권선로 830",
+    "capacity": 362
+  },
+  {
+    "shelter_id": 1044,
+    "shelter_name": "무지개 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 매여울로68번길 23",
+    "capacity": 129
+  },
+  {
+    "shelter_id": 1045,
+    "shelter_name": "물봉선 어린이공원",
+    "Geolocation": "",
+    "capacity": 139
+  },
+  {
+    "shelter_id": 1046,
+    "shelter_name": "물향기 공원",
+    "Geolocation": "",
+    "capacity": 10489
+  },
+  {
+    "shelter_id": 1047,
+    "shelter_name": "미래 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 매여울로10번길 14-20",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1048,
+    "shelter_name": "반달 어린이공원",
+    "Geolocation": "경기도 수원시 팔달구 장다리로219번길 16",
+    "capacity": 373
+  },
+  {
+    "shelter_id": 1049,
+    "shelter_name": "반달공원",
+    "Geolocation": "경기도 수원시 영통구 반달로 77",
+    "capacity": 1281
+  },
+  {
+    "shelter_id": 1050,
+    "shelter_name": "밤밭공원(천천1공원)",
+    "Geolocation": "",
+    "capacity": 843
+  },
+  {
+    "shelter_id": 1051,
+    "shelter_name": "방죽공원",
+    "Geolocation": "경기도 수원시 영통구 덕영대로1484번길 10-25",
+    "capacity": 1655
+  },
+  {
+    "shelter_id": 1052,
+    "shelter_name": "배다리공원",
+    "Geolocation": "경기도 수원시 권선구 산업로156번길 171-33",
+    "capacity": 1674
+  },
+  {
+    "shelter_id": 1053,
+    "shelter_name": "버드내 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 수원천로 24",
+    "capacity": 160
+  },
+  {
+    "shelter_id": 1054,
+    "shelter_name": "벽적골공원",
+    "Geolocation": "경기도 수원시 영통구 덕영대로1555번길 60",
+    "capacity": 1080
+  },
+  {
+    "shelter_id": 1055,
+    "shelter_name": "별솔 어린이공원",
+    "Geolocation": "",
+    "capacity": 136
+  },
+  {
+    "shelter_id": 1056,
+    "shelter_name": "사랑 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 구운로45번길 34-7",
+    "capacity": 190
+  },
+  {
+    "shelter_id": 1057,
+    "shelter_name": "산남 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 매봉로35번길 43",
+    "capacity": 127
+  },
+  {
+    "shelter_id": 1058,
+    "shelter_name": "산마루 어린이공원",
+    "Geolocation": "",
+    "capacity": 367
+  },
+  {
+    "shelter_id": 1059,
+    "shelter_name": "산샘 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 매원로11번길 8-16",
+    "capacity": 155
+  },
+  {
+    "shelter_id": 1060,
+    "shelter_name": "살구골공원",
+    "Geolocation": "경기도 수원시 영통구 매영로 366",
+    "capacity": 942
+  },
+  {
+    "shelter_id": 1061,
+    "shelter_name": "샘내공원(천천2공원)",
+    "Geolocation": "경기도 수원시 장안구 만석로5번길 21",
+    "capacity": 1216
+  },
+  {
+    "shelter_id": 1062,
+    "shelter_name": "샘터 어린이 공원",
+    "Geolocation": "",
+    "capacity": 149
+  },
+  {
+    "shelter_id": 1063,
+    "shelter_name": "서수원체육공원",
+    "Geolocation": "",
+    "capacity": 1924
+  },
+  {
+    "shelter_id": 1064,
+    "shelter_name": "서호공원",
+    "Geolocation": "",
+    "capacity": 50813
+  },
+  {
+    "shelter_id": 1065,
+    "shelter_name": "석산 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 금당로38번길 7",
+    "capacity": 124
+  },
+  {
+    "shelter_id": 1066,
+    "shelter_name": "선재미 어린이공원",
+    "Geolocation": "경기도 수원시 팔달구 수성로157번길 27-18",
+    "capacity": 126
+  },
+  {
+    "shelter_id": 1067,
+    "shelter_name": "선주리들공원",
+    "Geolocation": "경기도 수원시 영통구 동탄원천로915번길 33",
+    "capacity": 1521
+  },
+  {
+    "shelter_id": 1068,
+    "shelter_name": "성균관대학교 운동장",
+    "Geolocation": "경기도 수원시 장안구 서부로 2066",
+    "capacity": 928
+  },
+  {
+    "shelter_id": 1069,
+    "shelter_name": "소꼽놀이 어린이공원",
+    "Geolocation": "",
+    "capacity": 170
+  },
+  {
+    "shelter_id": 1070,
+    "shelter_name": "소정 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 파장로22번길 30",
+    "capacity": 387
+  },
+  {
+    "shelter_id": 1071,
+    "shelter_name": "솔뫼 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 천천로21번길 11",
+    "capacity": 482
+  },
+  {
+    "shelter_id": 1072,
+    "shelter_name": "수원종합운동장",
+    "Geolocation": "경기도 수원시 장안구 경수대로 893",
+    "capacity": 19207
+  },
+  {
+    "shelter_id": 1073,
+    "shelter_name": "숙지공원",
+    "Geolocation": "경기도 수원시 팔달구 화양로68번길 7-2",
+    "capacity": 1488
+  },
+  {
+    "shelter_id": 1074,
+    "shelter_name": "신곡 어린이공원",
+    "Geolocation": "",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1075,
+    "shelter_name": "신동수변공원",
+    "Geolocation": "경기도 수원시 영통구 권선로908번길 26-56",
+    "capacity": 2534
+  },
+  {
+    "shelter_id": 1076,
+    "shelter_name": "신아 어린이공원",
+    "Geolocation": "",
+    "capacity": 134
+  },
+  {
+    "shelter_id": 1077,
+    "shelter_name": "아주대학교 옥외운동장",
+    "Geolocation": "",
+    "capacity": 1360
+  },
+  {
+    "shelter_id": 1078,
+    "shelter_name": "어울림공원",
+    "Geolocation": "",
+    "capacity": 2786
+  },
+  {
+    "shelter_id": 1079,
+    "shelter_name": "여기산공원",
+    "Geolocation": "경기도 수원시 권선구 여기산로26번길 30",
+    "capacity": 3806
+  },
+  {
+    "shelter_id": 1080,
+    "shelter_name": "역마 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 경수대로 838",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1081,
+    "shelter_name": "연꽃 어린이공원",
+    "Geolocation": "",
+    "capacity": 181
+  },
+  {
+    "shelter_id": 1082,
+    "shelter_name": "연무 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 창훈로39번길 4",
+    "capacity": 129
+  },
+  {
+    "shelter_id": 1083,
+    "shelter_name": "연암공원",
+    "Geolocation": "",
+    "capacity": 10310
+  },
+  {
+    "shelter_id": 1084,
+    "shelter_name": "열림공원",
+    "Geolocation": "경기도 수원시 영통구 웰빙타운로 73",
+    "capacity": 12250
+  },
+  {
+    "shelter_id": 1085,
+    "shelter_name": "영통사공원",
+    "Geolocation": "경기도 수원시 영통구 봉영로 1658",
+    "capacity": 804
+  },
+  {
+    "shelter_id": 1086,
+    "shelter_name": "영통중앙공원",
+    "Geolocation": "경기도 수원시 영통구 청명로 151",
+    "capacity": 11404
+  },
+  {
+    "shelter_id": 1087,
+    "shelter_name": "영화 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 수성로340번길 30",
+    "capacity": 408
+  },
+  {
+    "shelter_id": 1088,
+    "shelter_name": "영흥공원",
+    "Geolocation": "",
+    "capacity": 3496
+  },
+  {
+    "shelter_id": 1089,
+    "shelter_name": "예술공원",
+    "Geolocation": "",
+    "capacity": 6813
+  },
+  {
+    "shelter_id": 1090,
+    "shelter_name": "오누이 어린이공원",
+    "Geolocation": "",
+    "capacity": 130
+  },
+  {
+    "shelter_id": 1091,
+    "shelter_name": "올림픽공원",
+    "Geolocation": "",
+    "capacity": 4676
+  },
+  {
+    "shelter_id": 1092,
+    "shelter_name": "옹달샘 어린이공원",
+    "Geolocation": "",
+    "capacity": 121
+  },
+  {
+    "shelter_id": 1093,
+    "shelter_name": "용화출 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 권중로7번길 18",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1094,
+    "shelter_name": "우정 어린이공원",
+    "Geolocation": "",
+    "capacity": 155
+  },
+  {
+    "shelter_id": 1095,
+    "shelter_name": "원천공원",
+    "Geolocation": "경기도 수원시 영통구 동탄원천로1109번길 61",
+    "capacity": 971
+  },
+  {
+    "shelter_id": 1096,
+    "shelter_name": "월드컵경기장 중앙광장",
+    "Geolocation": "경기도 수원시 팔달구 월드컵로 310",
+    "capacity": 1200
+  },
+  {
+    "shelter_id": 1097,
+    "shelter_name": "은하수 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 구운로86번길 20-21",
+    "capacity": 137
+  },
+  {
+    "shelter_id": 1098,
+    "shelter_name": "은하수공원",
+    "Geolocation": "",
+    "capacity": 752
+  },
+  {
+    "shelter_id": 1099,
+    "shelter_name": "일월공원",
+    "Geolocation": "",
+    "capacity": 1160
+  },
+  {
+    "shelter_id": 1100,
+    "shelter_name": "장교둑 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 세지로82번길 15-5",
+    "capacity": 165
+  },
+  {
+    "shelter_id": 1101,
+    "shelter_name": "장대산 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 장다리로 97",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1102,
+    "shelter_name": "장승배기 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 세지로42번길 25-8",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1103,
+    "shelter_name": "장안공원",
+    "Geolocation": "경기도 수원시 장안구 팔달로 238",
+    "capacity": 3120
+  },
+  {
+    "shelter_id": 1104,
+    "shelter_name": "장우 어린이공원",
+    "Geolocation": "",
+    "capacity": 214
+  },
+  {
+    "shelter_id": 1105,
+    "shelter_name": "재간령 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 경수대로235번길 68-4",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1106,
+    "shelter_name": "전원 어린이공원",
+    "Geolocation": "",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1107,
+    "shelter_name": "정자 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 송정로60번길 10-23",
+    "capacity": 259
+  },
+  {
+    "shelter_id": 1108,
+    "shelter_name": "정자공원",
+    "Geolocation": "경기도 수원시 장안구 만석로 65",
+    "capacity": 4202
+  },
+  {
+    "shelter_id": 1109,
+    "shelter_name": "정자문화공원",
+    "Geolocation": "경기도 수원시 장안구 이목로 24-25",
+    "capacity": 3120
+  },
+  {
+    "shelter_id": 1110,
+    "shelter_name": "지지대쉼터",
+    "Geolocation": "경기도 수원시 장안구 경수대로 1283",
+    "capacity": 2494
+  },
+  {
+    "shelter_id": 1111,
+    "shelter_name": "참새 어린이공원",
+    "Geolocation": "경기도 수원시 영통구 매탄로65번길 17",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1112,
+    "shelter_name": "창훈 어린이공원",
+    "Geolocation": "경기도 수원시 장안구 월드컵로418번길 31",
+    "capacity": 130
+  },
+  {
+    "shelter_id": 1113,
+    "shelter_name": "천천3공원",
+    "Geolocation": "경기도 수원시 장안구 덕영대로 623",
+    "capacity": 650
+  },
+  {
+    "shelter_id": 1114,
+    "shelter_name": "청록 어린이공원",
+    "Geolocation": "경기도 수원시 팔달구 경수대로616번길 32",
+    "capacity": 182
+  },
+  {
+    "shelter_id": 1115,
+    "shelter_name": "청소년문화공원",
+    "Geolocation": "",
+    "capacity": 7760
+  },
+  {
+    "shelter_id": 1116,
+    "shelter_name": "청정(권선)공원",
+    "Geolocation": "",
+    "capacity": 920
+  },
+  {
+    "shelter_id": 1117,
+    "shelter_name": "칙칙폭폭 어린이공원",
+    "Geolocation": "",
+    "capacity": 174
+  },
+  {
+    "shelter_id": 1118,
+    "shelter_name": "크레파스 어린이공원",
+    "Geolocation": "",
+    "capacity": 238
+  },
+  {
+    "shelter_id": 1119,
+    "shelter_name": "탑골 어린이공원",
+    "Geolocation": "",
+    "capacity": 124
+  },
+  {
+    "shelter_id": 1120,
+    "shelter_name": "탑동공원",
+    "Geolocation": "경기도 수원시 권선구 탑동로57번길 35",
+    "capacity": 1165
+  },
+  {
+    "shelter_id": 1121,
+    "shelter_name": "탑마루 어린이공원",
+    "Geolocation": "",
+    "capacity": 127
+  },
+  {
+    "shelter_id": 1122,
+    "shelter_name": "푸른지대 어린이공원",
+    "Geolocation": "",
+    "capacity": 128
+  },
+  {
+    "shelter_id": 1123,
+    "shelter_name": "풀샘 어린이공원",
+    "Geolocation": "",
+    "capacity": 156
+  },
+  {
+    "shelter_id": 1124,
+    "shelter_name": "하구운 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 구운로45번길 59-46",
+    "capacity": 159
+  },
+  {
+    "shelter_id": 1125,
+    "shelter_name": "하늬 어린이공원",
+    "Geolocation": "경기도 수원시 권선구 구운로73번길 10-14",
+    "capacity": 171
+  },
+  {
+    "shelter_id": 1126,
+    "shelter_name": "해늘찬 어린이공원",
+    "Geolocation": "",
+    "capacity": 182
+  },
+  {
+    "shelter_id": 1127,
+    "shelter_name": "혜령공원",
+    "Geolocation": "경기도 수원시 영통구 에듀타운로 91",
+    "capacity": 1625
+  },
+  {
+    "shelter_id": 1128,
+    "shelter_name": "화서공원",
+    "Geolocation": "",
+    "capacity": 2360
+  },
+  {
+    "shelter_id": 1129,
+    "shelter_name": "화성행궁 광장",
+    "Geolocation": "",
+    "capacity": 1303
+  },
+  {
+    "shelter_id": 1130,
+    "shelter_name": "황골공원",
+    "Geolocation": "경기도 수원시 영통구 영통로 530",
+    "capacity": 1201
+  },
+  {
+    "shelter_id": 1131,
+    "shelter_name": "황새말공원",
+    "Geolocation": "",
+    "capacity": 940
+  },
+  {
+    "shelter_id": 1132,
+    "shelter_name": "효원공원",
+    "Geolocation": "",
+    "capacity": 11331
+  },
+  {
+    "shelter_id": 1133,
+    "shelter_name": "효행공원",
+    "Geolocation": "경기도 수원시 장안구 경수대로 1274",
+    "capacity": 1984
+  },
+  {
+    "shelter_id": 1134,
+    "shelter_name": "검바위초등학교",
+    "Geolocation": "경기도 시흥시 수인로3247번길 59",
+    "capacity": 3035
+  },
+  {
+    "shelter_id": 1135,
+    "shelter_name": "경기자동차과학고등학교 운동장",
+    "Geolocation": "경기도 시흥시 금오로 103",
+    "capacity": 3126
+  },
+  {
+    "shelter_id": 1136,
+    "shelter_name": "군서초등학교 운동장",
+    "Geolocation": "경기도 시흥시 정왕천로427번길 30",
+    "capacity": 888
+  },
+  {
+    "shelter_id": 1137,
+    "shelter_name": "군자초등학교 운동장",
+    "Geolocation": "경기도 시흥시 군자로 539",
+    "capacity": 1047
+  },
+  {
+    "shelter_id": 1138,
+    "shelter_name": "논곡중학교",
+    "Geolocation": "경기도 시흥시 수인로2421번길 72",
+    "capacity": 576
+  },
+  {
+    "shelter_id": 1139,
+    "shelter_name": "논곡중학교 운동장",
+    "Geolocation": "경기도 시흥시 수인로2421번길 72",
+    "capacity": 1335
+  },
+  {
+    "shelter_id": 1140,
+    "shelter_name": "능곡초등학교 운동장",
+    "Geolocation": "경기도 시흥시 능곡중앙로 22",
+    "capacity": 687
+  },
+  {
+    "shelter_id": 1141,
+    "shelter_name": "대야초등학교",
+    "Geolocation": "경기도 시흥시 대골안길 31",
+    "capacity": 336
+  },
+  {
+    "shelter_id": 1142,
+    "shelter_name": "도일초등학교",
+    "Geolocation": "경기도 시흥시 군자로465번길 7",
+    "capacity": 2877
+  },
+  {
+    "shelter_id": 1143,
+    "shelter_name": "매화중학교 운동장",
+    "Geolocation": "경기도 시흥시 매화로 71",
+    "capacity": 980
+  },
+  {
+    "shelter_id": 1144,
+    "shelter_name": "매화초등학교 운동장",
+    "Geolocation": "경기도 시흥시 매화1로 62",
+    "capacity": 1629
+  },
+  {
+    "shelter_id": 1145,
+    "shelter_name": "목감초등학교 운동장",
+    "Geolocation": "경기도 시흥시 목감초등길 49",
+    "capacity": 376
+  },
+  {
+    "shelter_id": 1146,
+    "shelter_name": "비둘기공원",
+    "Geolocation": "",
+    "capacity": 19176
+  },
+  {
+    "shelter_id": 1147,
+    "shelter_name": "소망공원",
+    "Geolocation": "",
+    "capacity": 23075
+  },
+  {
+    "shelter_id": 1148,
+    "shelter_name": "송운중학교 운동장",
+    "Geolocation": "경기도 시흥시 옥구천동로 433-11",
+    "capacity": 1231
+  },
+  {
+    "shelter_id": 1149,
+    "shelter_name": "시흥능곡중학교",
+    "Geolocation": "경기도 시흥시 능곡로 117",
+    "capacity": 2494
+  },
+  {
+    "shelter_id": 1150,
+    "shelter_name": "시흥능곡초등학교",
+    "Geolocation": "경기도 시흥시 능곡중앙로 22",
+    "capacity": 2874
+  },
+  {
+    "shelter_id": 1151,
+    "shelter_name": "시흥매화중학교",
+    "Geolocation": "경기도 시흥시 매화로 71",
+    "capacity": 180
+  },
+  {
+    "shelter_id": 1152,
+    "shelter_name": "시흥매화초등학교",
+    "Geolocation": "경기도 시흥시 매화1로 62",
+    "capacity": 204
+  },
+  {
+    "shelter_id": 1153,
+    "shelter_name": "시흥장현초등학교",
+    "Geolocation": "경기도 시흥시 시청로80번길 5",
+    "capacity": 1742
+  },
+  {
+    "shelter_id": 1154,
+    "shelter_name": "신천초등학교 운동장",
+    "Geolocation": "경기도 시흥시 포도원로 88",
+    "capacity": 1524
+  },
+  {
+    "shelter_id": 1155,
+    "shelter_name": "연성중학교 운동장",
+    "Geolocation": "경기도 시흥시 하상로 14-7",
+    "capacity": 1314
+  },
+  {
+    "shelter_id": 1156,
+    "shelter_name": "옥구공원",
+    "Geolocation": "경기도 시흥시 서해안로 277",
+    "capacity": 101451
+  },
+  {
+    "shelter_id": 1157,
+    "shelter_name": "웃터골초등학교",
+    "Geolocation": "경기도 시흥시 은행고길 18",
+    "capacity": 2467
+  },
+  {
+    "shelter_id": 1158,
+    "shelter_name": "월곶중학교",
+    "Geolocation": "경기도 시흥시 월곶해안로 63",
+    "capacity": 2473
+  },
+  {
+    "shelter_id": 1159,
+    "shelter_name": "월곶중학교 운동장",
+    "Geolocation": "경기도 시흥시 월곶해안로 63",
+    "capacity": 865
+  },
+  {
+    "shelter_id": 1160,
+    "shelter_name": "은계중학교",
+    "Geolocation": "경기도 시흥시 대은로111번길 10",
+    "capacity": 2844
+  },
+  {
+    "shelter_id": 1161,
+    "shelter_name": "은계초등학교 운동장",
+    "Geolocation": "경기도 시흥시 대은로103번길 24",
+    "capacity": 702
+  },
+  {
+    "shelter_id": 1162,
+    "shelter_name": "장곡공원",
+    "Geolocation": "경기도 시흥시 진말로19번길 13",
+    "capacity": 995
+  },
+  {
+    "shelter_id": 1163,
+    "shelter_name": "포동체육생활공원 내 포동시민운동장",
+    "Geolocation": "",
+    "capacity": 2163
+  },
+  {
+    "shelter_id": 1164,
+    "shelter_name": "함현고등학교 운동장",
+    "Geolocation": "경기도 시흥시 역전로 463",
+    "capacity": 1090
+  },
+  {
+    "shelter_id": 1165,
+    "shelter_name": "함현중학교",
+    "Geolocation": "경기도 시흥시 아랫평안길 104",
+    "capacity": 2216
+  },
+  {
+    "shelter_id": 1166,
+    "shelter_name": "희망공원",
+    "Geolocation": "경기도 시흥시 군자천로131번길 64",
+    "capacity": 38480
+  },
+  {
+    "shelter_id": 1167,
+    "shelter_name": "각골경로당",
+    "Geolocation": "경기도 안산시 상록구 각골서로3길 12  (본오동)",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 1168,
+    "shelter_name": "각골초등학교",
+    "Geolocation": "경기도 안산시 상록구 본오동 석호로 384",
+    "capacity": 1200
+  },
+  {
+    "shelter_id": 1169,
+    "shelter_name": "감골운동장",
+    "Geolocation": "경기도 안산시 상록구 석호로 226",
+    "capacity": 1600
+  },
+  {
+    "shelter_id": 1170,
+    "shelter_name": "건지미경로당",
+    "Geolocation": "경기도 안산시 상록구 건지미길 21  (건건동)",
+    "capacity": 90
+  },
+  {
+    "shelter_id": 1171,
+    "shelter_name": "경기창작센터",
+    "Geolocation": "경기도 안산시 단원구 선감로 101-19  (선감동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1172,
+    "shelter_name": "경수중학교",
+    "Geolocation": "경기도 안산시 상록구 삼일로 678  (성포동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1173,
+    "shelter_name": "경수초등학교",
+    "Geolocation": "경기도 안산시 상록구 삼일로 670",
+    "capacity": 660
+  },
+  {
+    "shelter_id": 1174,
+    "shelter_name": "경안고등학교",
+    "Geolocation": "경기도 안산시 단원구 당곡로 93",
+    "capacity": 2440
+  },
+  {
+    "shelter_id": 1175,
+    "shelter_name": "경일관광경영고",
+    "Geolocation": "경기도 안산시 단원구 석수로 131  (선부동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1176,
+    "shelter_name": "경일초등학교",
+    "Geolocation": "경기도 안산시 상록구 성포로 47  (성포동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1177,
+    "shelter_name": "경일초등학교",
+    "Geolocation": "경기도 안산시 상록구 성포로 47",
+    "capacity": 2450
+  },
+  {
+    "shelter_id": 1178,
+    "shelter_name": "고잔1단지경로당",
+    "Geolocation": "경기도 안산시 단원구 고잔로 73  (고잔동, 주공1단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1179,
+    "shelter_name": "고잔2단지경로당",
+    "Geolocation": "경기도 안산시 단원구 예술대학로 30  (고잔동, 주공2단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1180,
+    "shelter_name": "고잔5단지경로당",
+    "Geolocation": "경기도 안산시 단원구 당곡1로 9  (고잔동, 중앙주공아파트5단지)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1181,
+    "shelter_name": "고잔6단지경로당",
+    "Geolocation": "경기도 안산시 단원구 예술대학로 105  (고잔동, 주공6단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1182,
+    "shelter_name": "고잔7단지경로당",
+    "Geolocation": "경기도 안산시 단원구 당곡3로 3  (고잔동, 주공7단지아파트)",
+    "capacity": 55
+  },
+  {
+    "shelter_id": 1183,
+    "shelter_name": "고잔8단지경로당",
+    "Geolocation": "경기도 안산시 단원구 당곡2로 29  (고잔동, 주공8단지아파트)",
+    "capacity": 70
+  },
+  {
+    "shelter_id": 1184,
+    "shelter_name": "고잔고등학교",
+    "Geolocation": "경기도 안산시 단원구 광덕2로 222",
+    "capacity": 1970
+  },
+  {
+    "shelter_id": 1185,
+    "shelter_name": "고잔고등학교",
+    "Geolocation": "경기도 안산시 단원구 광덕2로 222  (고잔동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1186,
+    "shelter_name": "고잔초등학교",
+    "Geolocation": "경기도 안산시 단원구 적금로 182",
+    "capacity": 4460
+  },
+  {
+    "shelter_id": 1187,
+    "shelter_name": "고잔초등학교",
+    "Geolocation": "경기도 안산시 단원구 적금로 182  (고잔동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1188,
+    "shelter_name": "관산중학교",
+    "Geolocation": "경기도 안산시 단원구 삼일로 184  (원곡동)",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 1189,
+    "shelter_name": "관산체육관",
+    "Geolocation": "경기도 안산시 단원구 원선로 93  (원곡동)",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1190,
+    "shelter_name": "관산초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선1로 68  (초지동)",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 1191,
+    "shelter_name": "관산초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선1로 68",
+    "capacity": 2140
+  },
+  {
+    "shelter_id": 1192,
+    "shelter_name": "구룡경로당",
+    "Geolocation": "경기도 안산시 상록구 구룡동길 10  (일동)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1193,
+    "shelter_name": "구룡운동장",
+    "Geolocation": "경기도 안산시 상록구 구룡체육관로 21",
+    "capacity": 950
+  },
+  {
+    "shelter_id": 1194,
+    "shelter_name": "구룡체육관",
+    "Geolocation": "경기도 안산시 상록구 구룡체육관로 21  (이동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1195,
+    "shelter_name": "군자종합사회복지관",
+    "Geolocation": "경기도 안산시 단원구 화정로 9  (선부동, 주공13, 14단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1196,
+    "shelter_name": "능길초등학교",
+    "Geolocation": "경기도 안산시 단원구 신길중앙로3길 8",
+    "capacity": 1710
+  },
+  {
+    "shelter_id": 1197,
+    "shelter_name": "단원중학교",
+    "Geolocation": "경기도 안산시 단원구 단원로 27",
+    "capacity": 1300
+  },
+  {
+    "shelter_id": 1198,
+    "shelter_name": "대남초등학교",
+    "Geolocation": "경기도 안산시 단원구 대남로 298",
+    "capacity": 910
+  },
+  {
+    "shelter_id": 1199,
+    "shelter_name": "대남초등학교",
+    "Geolocation": "경기도 안산시 단원구 대남로 298  (대부남동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1200,
+    "shelter_name": "대동초등학교",
+    "Geolocation": "경기도 안산시 단원구 솔따배기길 134-9",
+    "capacity": 860
+  },
+  {
+    "shelter_id": 1201,
+    "shelter_name": "대동초등학교",
+    "Geolocation": "경기도 안산시 단원구 솔따배기길 134-9  (대부동동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1202,
+    "shelter_name": "대부중고등학교",
+    "Geolocation": "경기도 안산시 단원구 대부중앙로 3  (대부북동)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1203,
+    "shelter_name": "대부초등학교",
+    "Geolocation": "경기도 안산시 단원구 대부중앙로 56",
+    "capacity": 1280
+  },
+  {
+    "shelter_id": 1204,
+    "shelter_name": "대은교회",
+    "Geolocation": "경기도 안산시 상록구 감골1로 35  (사동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1205,
+    "shelter_name": "덕성초등학교",
+    "Geolocation": "경기도 안산시 단원구 예술대학로 119",
+    "capacity": 1510
+  },
+  {
+    "shelter_id": 1206,
+    "shelter_name": "덕인초등학교",
+    "Geolocation": "경기도 안산시 단원구 와동공원로5안길22-6",
+    "capacity": 950
+  },
+  {
+    "shelter_id": 1207,
+    "shelter_name": "동막골경로당",
+    "Geolocation": "경기도 안산시 상록구 동막2길 28-13  (장상동)",
+    "capacity": 20
+  },
+  {
+    "shelter_id": 1208,
+    "shelter_name": "매화초등학교",
+    "Geolocation": "경기도 안산시 상록구 안산대학로 35",
+    "capacity": 4420
+  },
+  {
+    "shelter_id": 1209,
+    "shelter_name": "매화초등학교 체육관",
+    "Geolocation": "경기도 안산시 상록구 안산대학로 35  (이동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1210,
+    "shelter_name": "명성교회",
+    "Geolocation": "경기도 안산시 단원구 단원로 61  (고잔동)",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 1211,
+    "shelter_name": "반월중학교 (체육관)",
+    "Geolocation": "경기도 안산시 상록구 반월동",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1212,
+    "shelter_name": "반월초등학교",
+    "Geolocation": "경기도 안산시 상록구 건건로 39  (건건동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1213,
+    "shelter_name": "반월초등학교",
+    "Geolocation": "경기도 안산시 상록구 건건로 39",
+    "capacity": 1100
+  },
+  {
+    "shelter_id": 1214,
+    "shelter_name": "뱅골경로당",
+    "Geolocation": "경기도 안산시 단원구 중앙대로 396  (신길동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1215,
+    "shelter_name": "별망중학교",
+    "Geolocation": "경기도 안산시 단원구 초지1로 35",
+    "capacity": 3040
+  },
+  {
+    "shelter_id": 1216,
+    "shelter_name": "별망초등학교",
+    "Geolocation": "경기도 안산시 단원구 초지1로 51",
+    "capacity": 1220
+  },
+  {
+    "shelter_id": 1217,
+    "shelter_name": "본오2동주민센터",
+    "Geolocation": "경기도 안산시 상록구 각골로 75  (본오동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1218,
+    "shelter_name": "본오중학교",
+    "Geolocation": "경기도 안산시 상록구 본오로 90  (본오동)",
+    "capacity": 320
+  },
+  {
+    "shelter_id": 1219,
+    "shelter_name": "본오중학교",
+    "Geolocation": "경기도 안산시 상록구 본오로 90",
+    "capacity": 1090
+  },
+  {
+    "shelter_id": 1220,
+    "shelter_name": "본오초등학교",
+    "Geolocation": "경기도 안산시 상록구 각골서로 49",
+    "capacity": 1420
+  },
+  {
+    "shelter_id": 1221,
+    "shelter_name": "본원초등학교",
+    "Geolocation": "경기도 안산시 상록구 샘골로 83  (본오동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1222,
+    "shelter_name": "본원초등학교",
+    "Geolocation": "경기도 안산시 상록구 샘골로 83",
+    "capacity": 3150
+  },
+  {
+    "shelter_id": 1223,
+    "shelter_name": "부곡경로당",
+    "Geolocation": "경기도 안산시 상록구 부곡로1안길 30  (부곡동)",
+    "capacity": 15
+  },
+  {
+    "shelter_id": 1224,
+    "shelter_name": "부남경로당",
+    "Geolocation": "경기도 안산시 상록구 부곡로3길 6  (부곡동)",
+    "capacity": 15
+  },
+  {
+    "shelter_id": 1225,
+    "shelter_name": "부부로주차장",
+    "Geolocation": "경기도 안산시 단원구 원곡동 991-1,991-2",
+    "capacity": 1500
+  },
+  {
+    "shelter_id": 1226,
+    "shelter_name": "사리운동장",
+    "Geolocation": "경기도 안산시 상록구 충장로 50",
+    "capacity": 1280
+  },
+  {
+    "shelter_id": 1227,
+    "shelter_name": "삼익(아)경로당",
+    "Geolocation": "경기도 안산시 단원구 새뿔길 55  (신길동, 삼익아파트)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1228,
+    "shelter_name": "삼일초등학교",
+    "Geolocation": "경기도 안산시 상록구 월피로 42",
+    "capacity": 1330
+  },
+  {
+    "shelter_id": 1229,
+    "shelter_name": "상록고등학교",
+    "Geolocation": "경기도 안산시 상록구 반석로4길 34",
+    "capacity": 1340
+  },
+  {
+    "shelter_id": 1230,
+    "shelter_name": "상록중학교",
+    "Geolocation": "경기도 안산시 상록구 각골로4길 29",
+    "capacity": 1900
+  },
+  {
+    "shelter_id": 1231,
+    "shelter_name": "상록중학교",
+    "Geolocation": "경기도 안산시 상록구 각골로4길 29  (본오동)",
+    "capacity": 700
+  },
+  {
+    "shelter_id": 1232,
+    "shelter_name": "상록초등학교",
+    "Geolocation": "경기도 안산시 상록구 본오로 157  (본오동)",
+    "capacity": 60
+  },
+  {
+    "shelter_id": 1233,
+    "shelter_name": "샛뿔경로당",
+    "Geolocation": "경기도 안산시 단원구 새뿔길 28-1  (신길동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1234,
+    "shelter_name": "서울예술대학교",
+    "Geolocation": "경기도 안산시 단원구 예술대학로 171",
+    "capacity": 1990
+  },
+  {
+    "shelter_id": 1235,
+    "shelter_name": "석수초등학교",
+    "Geolocation": "경기도 안산시 단원구 석수로 93  (선부동)",
+    "capacity": 1200
+  },
+  {
+    "shelter_id": 1236,
+    "shelter_name": "석호중학교",
+    "Geolocation": "경기도 안산시 상록구 석호공원로 4길 8",
+    "capacity": 540
+  },
+  {
+    "shelter_id": 1237,
+    "shelter_name": "석호초등학교",
+    "Geolocation": "경기도 안산시 상록구 석호로 113  (사동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1238,
+    "shelter_name": "선부11단지경로당",
+    "Geolocation": "경기도 안산시 단원구 선부광장남로 111  (선부동, 주공11단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1239,
+    "shelter_name": "선부12단지경로당",
+    "Geolocation": "경기도 안산시 단원구 선부광장남로 111  (선부동, 주공11단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1240,
+    "shelter_name": "선부13단지경로당",
+    "Geolocation": "경기도 안산시 단원구 화정로 9  (선부동, 주공13, 14단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1241,
+    "shelter_name": "선부14단지경로당",
+    "Geolocation": "경기도 안산시 단원구 화정로 9  (선부동, 주공13, 14단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1242,
+    "shelter_name": "선부6단지경로당",
+    "Geolocation": "경기도 안산시 단원구 선부광장남로 13  (선부동, 주공6단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1243,
+    "shelter_name": "선부7단지경로당",
+    "Geolocation": "경기도 안산시 단원구 선부광장1로 187  (선부동, 주공7단지아파트)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1244,
+    "shelter_name": "선부고등학교",
+    "Geolocation": "경기도 안산시 단원구 지곡로 138",
+    "capacity": 1080
+  },
+  {
+    "shelter_id": 1245,
+    "shelter_name": "선부중학교",
+    "Geolocation": "경기도 안산시 단원구 달미로 95",
+    "capacity": 2250
+  },
+  {
+    "shelter_id": 1246,
+    "shelter_name": "선부중학교",
+    "Geolocation": "경기도 안산시 단원구 달미로 95  (선부동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1247,
+    "shelter_name": "선부초등학교",
+    "Geolocation": "경기도 안산시 단원구 달미로 24  (선부동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1248,
+    "shelter_name": "선일중학교",
+    "Geolocation": "경기도 안산시 단원구 선부광장 서로 59",
+    "capacity": 1570
+  },
+  {
+    "shelter_id": 1249,
+    "shelter_name": "선일초등학교",
+    "Geolocation": "경기도 안산시 단원구 선이로3길 40",
+    "capacity": 1410
+  },
+  {
+    "shelter_id": 1250,
+    "shelter_name": "선일초등학교",
+    "Geolocation": "경기도 안산시 단원구 선이로3길 40  (선부동)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1251,
+    "shelter_name": "성문교회",
+    "Geolocation": "경기도 안산시 단원구 관산2길 27  (원곡동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1252,
+    "shelter_name": "성안고등학교",
+    "Geolocation": "경기도 안산시 상록구 용신로 170",
+    "capacity": 1720
+  },
+  {
+    "shelter_id": 1253,
+    "shelter_name": "성안고등학교",
+    "Geolocation": "경기도 안산시 상록구 용신로 170  (사동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1254,
+    "shelter_name": "성안중학교",
+    "Geolocation": "경기도 안산시 상록구 석호로 81",
+    "capacity": 1660
+  },
+  {
+    "shelter_id": 1255,
+    "shelter_name": "성안초등학교",
+    "Geolocation": "경기도 안산시 상록구 삼리로 119",
+    "capacity": 2360
+  },
+  {
+    "shelter_id": 1256,
+    "shelter_name": "성포중학교",
+    "Geolocation": "경기도 안산시 상록구 월피로 73",
+    "capacity": 1720
+  },
+  {
+    "shelter_id": 1257,
+    "shelter_name": "성포초등학교",
+    "Geolocation": "경기도 안산시 상록구 안산천동로 90  (성포동)",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1258,
+    "shelter_name": "성포초등학교",
+    "Geolocation": "경기도 안산시 상록구 안산천동로 90",
+    "capacity": 820
+  },
+  {
+    "shelter_id": 1259,
+    "shelter_name": "소학경로당",
+    "Geolocation": "경기도 안산시 상록구 원당골3길 31  (수암동, )",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1260,
+    "shelter_name": "송호중학교",
+    "Geolocation": "경기도 안산시 단원구 광덕3로 240",
+    "capacity": 1510
+  },
+  {
+    "shelter_id": 1261,
+    "shelter_name": "송호초등학교",
+    "Geolocation": "경기도 안산시 단원구 한양대학로 183",
+    "capacity": 1800
+  },
+  {
+    "shelter_id": 1262,
+    "shelter_name": "수암교회",
+    "Geolocation": "경기도 안산시 상록구 장하로 316  (장상동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1263,
+    "shelter_name": "슬기초등학교",
+    "Geolocation": "경기도 안산시 단원구 안산천남로 53",
+    "capacity": 1050
+  },
+  {
+    "shelter_id": 1264,
+    "shelter_name": "시곡중학교",
+    "Geolocation": "경기도 안산시 상록구 감골로 123",
+    "capacity": 3690
+  },
+  {
+    "shelter_id": 1265,
+    "shelter_name": "시곡중학교",
+    "Geolocation": "경기도 안산시 상록구 사1동",
+    "capacity": 550
+  },
+  {
+    "shelter_id": 1266,
+    "shelter_name": "시곡초등학교",
+    "Geolocation": "경기도 안산시 상록구 감골1로 46",
+    "capacity": 2030
+  },
+  {
+    "shelter_id": 1267,
+    "shelter_name": "시곡초등학교",
+    "Geolocation": "경기도 안산시 상록구 감골1로 46  (사동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1268,
+    "shelter_name": "시낭운동장",
+    "Geolocation": "경기도 안산시 상록구 시낭로 45",
+    "capacity": 4000
+  },
+  {
+    "shelter_id": 1269,
+    "shelter_name": "시랑경로당",
+    "Geolocation": "경기도 안산시 상록구 정재로 28  (부곡동)",
+    "capacity": 15
+  },
+  {
+    "shelter_id": 1270,
+    "shelter_name": "신길고등학교",
+    "Geolocation": "경기도 안산시 단원구 신길로 45",
+    "capacity": 790
+  },
+  {
+    "shelter_id": 1271,
+    "shelter_name": "신길중학교",
+    "Geolocation": "경기도 안산시 단원구 신길로 81",
+    "capacity": 600
+  },
+  {
+    "shelter_id": 1272,
+    "shelter_name": "신길초등학교",
+    "Geolocation": "경기도 안산시 단원구 새뿔길 100",
+    "capacity": 1230
+  },
+  {
+    "shelter_id": 1273,
+    "shelter_name": "안산강서고등학교",
+    "Geolocation": "경기도 안산시 단원구 삼일로 367  (와동)",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 1274,
+    "shelter_name": "안산강서고등학교",
+    "Geolocation": "경기도 안산시 단원구 삼일로 367",
+    "capacity": 2540
+  },
+  {
+    "shelter_id": 1275,
+    "shelter_name": "안산경로당(수암동 462)",
+    "Geolocation": "경기도 안산시 상록구 원당골3길 31  (수암동, )",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 1276,
+    "shelter_name": "안산고등학교",
+    "Geolocation": "경기도 안산시 상록구 청룡4길 8  (장상동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1277,
+    "shelter_name": "안산공고등학교",
+    "Geolocation": "경기도 안산시 상록구 공고로 51",
+    "capacity": 1630
+  },
+  {
+    "shelter_id": 1278,
+    "shelter_name": "안산광덕초등학교",
+    "Geolocation": "경기도 안산시 상록구 안산천서로3길 6-7",
+    "capacity": 1700
+  },
+  {
+    "shelter_id": 1279,
+    "shelter_name": "안산교회",
+    "Geolocation": "경기도 안산시 상록구 원당골3길 29  (수암동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1280,
+    "shelter_name": "안산국제비즈니스고",
+    "Geolocation": "경기도 안산시 상록구 수인로 1981  (장상동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1281,
+    "shelter_name": "안산대학교",
+    "Geolocation": "경기도 안산시 상록구 안산대학로 155(일동)",
+    "capacity": 2000
+  },
+  {
+    "shelter_id": 1282,
+    "shelter_name": "안산동산고등학교",
+    "Geolocation": "경기도 안산시 상록구 충장로 56  (본오동)",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1283,
+    "shelter_name": "안산디자인문화고",
+    "Geolocation": "경기도 안산시 상록구 각골로 87  (본오동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1284,
+    "shelter_name": "안산디자인문화고등학교",
+    "Geolocation": "경기도 안산시 상록구 각골로 87",
+    "capacity": 1240
+  },
+  {
+    "shelter_id": 1285,
+    "shelter_name": "안산문화광장",
+    "Geolocation": "경기도 안산시 단원구 광덕대로 206",
+    "capacity": 2500
+  },
+  {
+    "shelter_id": 1286,
+    "shelter_name": "안산부곡중학교",
+    "Geolocation": "경기도 안산시 상록구 부곡로 15",
+    "capacity": 2010
+  },
+  {
+    "shelter_id": 1287,
+    "shelter_name": "안산부곡초등학교",
+    "Geolocation": "경기도 안산시 단원구 부곡로 73",
+    "capacity": 2500
+  },
+  {
+    "shelter_id": 1288,
+    "shelter_name": "안산서초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 67",
+    "capacity": 1360
+  },
+  {
+    "shelter_id": 1289,
+    "shelter_name": "안산서초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 67  (원곡동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1290,
+    "shelter_name": "안산석수초등학교",
+    "Geolocation": "경기도 안산시 단원구 석수로 93",
+    "capacity": 1240
+  },
+  {
+    "shelter_id": 1291,
+    "shelter_name": "안산원곡초등학교",
+    "Geolocation": "경기도 안산시 단원구 원곡초교길 9",
+    "capacity": 3690
+  },
+  {
+    "shelter_id": 1292,
+    "shelter_name": "안산중앙초등학교",
+    "Geolocation": "경기도 안산시 단원구 예술대학로 50",
+    "capacity": 3510
+  },
+  {
+    "shelter_id": 1293,
+    "shelter_name": "안산진흥초등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천동로 80",
+    "capacity": 1210
+  },
+  {
+    "shelter_id": 1294,
+    "shelter_name": "안산창촌초등학교",
+    "Geolocation": "경기도 안산시 상록구 건건5길 7",
+    "capacity": 460
+  },
+  {
+    "shelter_id": 1295,
+    "shelter_name": "안산청석초등학교",
+    "Geolocation": "경기도 안산시 상록구 해양1로 48",
+    "capacity": 1320
+  },
+  {
+    "shelter_id": 1296,
+    "shelter_name": "안산초등학교",
+    "Geolocation": "경기도 안산시 상록구 수암2길 13-7  (수암동)",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1297,
+    "shelter_name": "안산초등학교",
+    "Geolocation": "경기도 안산시 상록구 수암2길 13-7",
+    "capacity": 1560
+  },
+  {
+    "shelter_id": 1298,
+    "shelter_name": "안산해양중학교",
+    "Geolocation": "경기도 안산시 상록구 해양로 11",
+    "capacity": 1110
+  },
+  {
+    "shelter_id": 1299,
+    "shelter_name": "안산해양초등학교",
+    "Geolocation": "경기도 안산시 상록구 해양2로 28",
+    "capacity": 1210
+  },
+  {
+    "shelter_id": 1300,
+    "shelter_name": "안산화정초등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천서로 545",
+    "capacity": 3090
+  },
+  {
+    "shelter_id": 1301,
+    "shelter_name": "약수경로당",
+    "Geolocation": "경기도 안산시 상록구 각골로2안길 18  (본오동)",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 1302,
+    "shelter_name": "양곡경로당",
+    "Geolocation": "경기도 안산시 단원구 원본로3길 28  (원곡동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1303,
+    "shelter_name": "양지경로당",
+    "Geolocation": "경기도 안산시 단원구 원선로 33-1  (원곡동)",
+    "capacity": 60
+  },
+  {
+    "shelter_id": 1304,
+    "shelter_name": "양지고등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천동로 50  (고잔동)",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1305,
+    "shelter_name": "양지중학교",
+    "Geolocation": "경기도 안산시 단원구 천남로 119",
+    "capacity": 1610
+  },
+  {
+    "shelter_id": 1306,
+    "shelter_name": "양촌경로당",
+    "Geolocation": "경기도 안산시 상록구 양지마을1길 14  (사사동)",
+    "capacity": 75
+  },
+  {
+    "shelter_id": 1307,
+    "shelter_name": "올림픽기념관",
+    "Geolocation": "경기도 안산시 단원구 적금로 202  (고잔동)",
+    "capacity": 350
+  },
+  {
+    "shelter_id": 1308,
+    "shelter_name": "와동주민센터",
+    "Geolocation": "경기도 안산시 단원구 선부로 273  (와동)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1309,
+    "shelter_name": "와동중학교",
+    "Geolocation": "경기도 안산시 단원구 사세충열로 54",
+    "capacity": 2120
+  },
+  {
+    "shelter_id": 1310,
+    "shelter_name": "와동체육공원(운동장)",
+    "Geolocation": "경기도 안산시 단원구 와동공원로 109",
+    "capacity": 4500
+  },
+  {
+    "shelter_id": 1311,
+    "shelter_name": "와동초등학교",
+    "Geolocation": "경기도 안산시 단원구 사세충열로 26  (와동)",
+    "capacity": 270
+  },
+  {
+    "shelter_id": 1312,
+    "shelter_name": "와동초등학교",
+    "Geolocation": "경기도 안산시 단원구 사세충열로 26",
+    "capacity": 760
+  },
+  {
+    "shelter_id": 1313,
+    "shelter_name": "원곡경로당",
+    "Geolocation": "경기도 안산시 단원구 원곡경로당길 14  (원곡동)",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 1314,
+    "shelter_name": "원곡고등학교",
+    "Geolocation": "경기도 안산시 단원구 화랑로 15",
+    "capacity": 3720
+  },
+  {
+    "shelter_id": 1315,
+    "shelter_name": "원곡고등학교",
+    "Geolocation": "경기도 안산시 단원구 화랑로 15  (원곡동)",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 1316,
+    "shelter_name": "원곡중학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 81  (원곡동)",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1317,
+    "shelter_name": "원곡중학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 81",
+    "capacity": 2260
+  },
+  {
+    "shelter_id": 1318,
+    "shelter_name": "원일중학교",
+    "Geolocation": "경기도 안산시 단원구 석수로 32  (선부동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1319,
+    "shelter_name": "원일초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 113",
+    "capacity": 2540
+  },
+  {
+    "shelter_id": 1320,
+    "shelter_name": "원일초등학교",
+    "Geolocation": "경기도 안산시 단원구 원선로 113  (선부동)",
+    "capacity": 400
+  },
+  {
+    "shelter_id": 1321,
+    "shelter_name": "월광경로당",
+    "Geolocation": "경기도 안산시 상록구 광덕산1로 9-13  (월피동)",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 1322,
+    "shelter_name": "월성경로당",
+    "Geolocation": "경기도 안산시 상록구 안산천동로9길 11-1  (월피동)",
+    "capacity": 40
+  },
+  {
+    "shelter_id": 1323,
+    "shelter_name": "월피1단지경로당",
+    "Geolocation": "경기도 안산시 상록구 충장로 565  (월피동, 주공1단지아파트)",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 1324,
+    "shelter_name": "월피2단지경로당",
+    "Geolocation": "경기도 안산시 상록구 안산천동로 146  (월피동, 주공2단지아파트)",
+    "capacity": 34
+  },
+  {
+    "shelter_id": 1325,
+    "shelter_name": "월피3단지경로당",
+    "Geolocation": "경기도 안산시 상록구 안산천동로1길 10  (월피동, 주공3단지아파트)",
+    "capacity": 10
+  },
+  {
+    "shelter_id": 1326,
+    "shelter_name": "월피경로당",
+    "Geolocation": "경기도 안산시 상록구 시낭북로3길 12  (부곡동)",
+    "capacity": 20
+  },
+  {
+    "shelter_id": 1327,
+    "shelter_name": "은혜와진리교회",
+    "Geolocation": "경기도 안산시 단원구 화랑로 303  (고잔동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1328,
+    "shelter_name": "이호초등학교",
+    "Geolocation": "경기도 안산시 상록구 고목로3길 44  (본오동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1329,
+    "shelter_name": "이호초등학교",
+    "Geolocation": "경기도 안산시 상록구 고목로3길 44",
+    "capacity": 1080
+  },
+  {
+    "shelter_id": 1330,
+    "shelter_name": "장상3경로당",
+    "Geolocation": "경기도 안산시 상록구 청룡3길 22  (장상동, 안산연립)",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 1331,
+    "shelter_name": "장화경로당",
+    "Geolocation": "경기도 안산시 상록구 장화2길 20  (사동)",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1332,
+    "shelter_name": "정재초등학교",
+    "Geolocation": "경기도 안산시 상록구 정재초교길 11",
+    "capacity": 900
+  },
+  {
+    "shelter_id": 1333,
+    "shelter_name": "정지초등학교",
+    "Geolocation": "경기도 안산시 단원구 정지로 57  (선부동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1334,
+    "shelter_name": "정지초등학교",
+    "Geolocation": "경기도 안산시 단원구 정지로 57",
+    "capacity": 2360
+  },
+  {
+    "shelter_id": 1335,
+    "shelter_name": "중소기업진흥공단 중앙연수원",
+    "Geolocation": "경기도 안산시 단원구 연수원로 87  (원곡동)",
+    "capacity": 370
+  },
+  {
+    "shelter_id": 1336,
+    "shelter_name": "중앙경로당",
+    "Geolocation": "경기도 안산시 단원구 예술대학로2길 3-16  (고잔동)",
+    "capacity": 55
+  },
+  {
+    "shelter_id": 1337,
+    "shelter_name": "중앙중학교",
+    "Geolocation": "경기도 안산시 단원구 안산천서로 65",
+    "capacity": 3300
+  },
+  {
+    "shelter_id": 1338,
+    "shelter_name": "초당초등학교",
+    "Geolocation": "경기도 안산시 상록구 초당로 25",
+    "capacity": 1540
+  },
+  {
+    "shelter_id": 1339,
+    "shelter_name": "초당초등학교",
+    "Geolocation": "경기도 안산시 상록구 초당로 25  (사동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1340,
+    "shelter_name": "초지고등학교",
+    "Geolocation": "경기도 안산시 단원구 광덕1로 13",
+    "capacity": 1500
+  },
+  {
+    "shelter_id": 1341,
+    "shelter_name": "초지중학교",
+    "Geolocation": "경기도 안산시 단원구 광덕3로 48",
+    "capacity": 1330
+  },
+  {
+    "shelter_id": 1342,
+    "shelter_name": "초지초등학교",
+    "Geolocation": "경기도 안산시 단원구 초지로 153",
+    "capacity": 3040
+  },
+  {
+    "shelter_id": 1343,
+    "shelter_name": "팔곡초등학교",
+    "Geolocation": "경기도 안산시 상록구 팔곡두레길 71",
+    "capacity": 990
+  },
+  {
+    "shelter_id": 1344,
+    "shelter_name": "학현초등학교",
+    "Geolocation": "경기도 안산시 상록구 석호로 6",
+    "capacity": 910
+  },
+  {
+    "shelter_id": 1345,
+    "shelter_name": "한양(아)경로당",
+    "Geolocation": "경기도 안산시 상록구 안산천동로1길 9  (월피동, 한양아파트)",
+    "capacity": 30
+  },
+  {
+    "shelter_id": 1346,
+    "shelter_name": "한양대학교",
+    "Geolocation": "경기도 안산시 상록구 한양대학로 55 (정문주차장)",
+    "capacity": 1500
+  },
+  {
+    "shelter_id": 1347,
+    "shelter_name": "항호경로당",
+    "Geolocation": "경기도 안산시 상록구 항호1길 30-21  (사동)",
+    "capacity": 80
+  },
+  {
+    "shelter_id": 1348,
+    "shelter_name": "호동초등학교",
+    "Geolocation": "경기도 안산시 상록구 성호로 70  (일동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1349,
+    "shelter_name": "호동초등학교",
+    "Geolocation": "경기도 안산시 상록구 성호로 70",
+    "capacity": 3060
+  },
+  {
+    "shelter_id": 1350,
+    "shelter_name": "호원초등학교",
+    "Geolocation": "경기도 안산시 단원구 초지1로 100",
+    "capacity": 880
+  },
+  {
+    "shelter_id": 1351,
+    "shelter_name": "화랑유원지1주차장",
+    "Geolocation": "경기도 안산시 단원구 초지동 667",
+    "capacity": 6100
+  },
+  {
+    "shelter_id": 1352,
+    "shelter_name": "화랑초등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천동로 296  (와동)",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1353,
+    "shelter_name": "화랑초등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천동로 296",
+    "capacity": 2120
+  },
+  {
+    "shelter_id": 1354,
+    "shelter_name": "화정초등학교",
+    "Geolocation": "경기도 안산시 단원구 화정천서로 545  (선부동)",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1355,
+    "shelter_name": "가온고등학교 운동장",
+    "Geolocation": "경기도 안성시 샛터길 46",
+    "capacity": 7217
+  },
+  {
+    "shelter_id": 1356,
+    "shelter_name": "개산초등학교 운동장",
+    "Geolocation": "경기도 안성시 금광면 외개산길 42",
+    "capacity": 3879
+  },
+  {
+    "shelter_id": 1357,
+    "shelter_name": "개정초등학교 운동장",
+    "Geolocation": "경기도 안성시 미양면 미양로 72",
+    "capacity": 4121
+  },
+  {
+    "shelter_id": 1358,
+    "shelter_name": "경기창조고등학교운동장",
+    "Geolocation": "경기도 안성시 공도읍 공도5로 37",
+    "capacity": 3907
+  },
+  {
+    "shelter_id": 1359,
+    "shelter_name": "고삼초등학교 운동장",
+    "Geolocation": "경기도 안성시 고삼면 고삼호수로 37",
+    "capacity": 4505
+  },
+  {
+    "shelter_id": 1360,
+    "shelter_name": "공도중학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 공도로 115-12",
+    "capacity": 8006
+  },
+  {
+    "shelter_id": 1361,
+    "shelter_name": "공도초등학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 공도1로 9",
+    "capacity": 4061
+  },
+  {
+    "shelter_id": 1362,
+    "shelter_name": "광덕초등학교 운동장",
+    "Geolocation": "경기도 안성시 대덕면 내리1길 25",
+    "capacity": 6038
+  },
+  {
+    "shelter_id": 1363,
+    "shelter_name": "광선초등학교 운동장",
+    "Geolocation": "경기도 안성시 죽산면 개좌길 16",
+    "capacity": 3833
+  },
+  {
+    "shelter_id": 1364,
+    "shelter_name": "금광초등학교 운동장",
+    "Geolocation": "경기도 안성시 금광면 금광초교길 54",
+    "capacity": 5265
+  },
+  {
+    "shelter_id": 1365,
+    "shelter_name": "내혜홀초등학교 운동장",
+    "Geolocation": "경기도 안성시 내혜홀3길 29",
+    "capacity": 7444
+  },
+  {
+    "shelter_id": 1366,
+    "shelter_name": "대덕초등학교 운동장",
+    "Geolocation": "경기도 안성시 대덕면 모산로 84",
+    "capacity": 4592
+  },
+  {
+    "shelter_id": 1367,
+    "shelter_name": "동아방송예술대학교 운동장",
+    "Geolocation": "경기도 안성시 삼죽면 동아예대길 47",
+    "capacity": 8170
+  },
+  {
+    "shelter_id": 1368,
+    "shelter_name": "두원공과대학교 운동장",
+    "Geolocation": "경기도 안성시 죽산면 관음당길 51",
+    "capacity": 9298
+  },
+  {
+    "shelter_id": 1369,
+    "shelter_name": "두원공업고등학교 운동장",
+    "Geolocation": "경기도 안성시 미양면 미양로 727",
+    "capacity": 8404
+  },
+  {
+    "shelter_id": 1370,
+    "shelter_name": "마전초등학교 운동장",
+    "Geolocation": "경기도 안성시 삼죽면 서동대로 5915",
+    "capacity": 4853
+  },
+  {
+    "shelter_id": 1371,
+    "shelter_name": "만정중학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 송원길 21-6",
+    "capacity": 3233
+  },
+  {
+    "shelter_id": 1372,
+    "shelter_name": "만정초등학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 송원길 12",
+    "capacity": 3648
+  },
+  {
+    "shelter_id": 1373,
+    "shelter_name": "명덕초등학교 운동장",
+    "Geolocation": "경기도 안성시 대덕면 미륵로 16",
+    "capacity": 3499
+  },
+  {
+    "shelter_id": 1374,
+    "shelter_name": "명륜여자중학교 운동장",
+    "Geolocation": "경기도 안성시 장기로103번길 22",
+    "capacity": 2436
+  },
+  {
+    "shelter_id": 1375,
+    "shelter_name": "문기초등학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 서동대로 4424",
+    "capacity": 5537
+  },
+  {
+    "shelter_id": 1376,
+    "shelter_name": "미곡초등학교 운동장",
+    "Geolocation": "경기도 안성시 양성면 안성맞춤대로 2304-9",
+    "capacity": 4577
+  },
+  {
+    "shelter_id": 1377,
+    "shelter_name": "미양초등학교 운동장",
+    "Geolocation": "경기도 안성시 미양면 양지길 40",
+    "capacity": 4886
+  },
+  {
+    "shelter_id": 1378,
+    "shelter_name": "방초초등학교 운동장",
+    "Geolocation": "경기도 안성시 일죽면 사실로 86",
+    "capacity": 4286
+  },
+  {
+    "shelter_id": 1379,
+    "shelter_name": "보개초등학교 운동장",
+    "Geolocation": "경기도 안성시 보개면 복평길 18",
+    "capacity": 5474
+  },
+  {
+    "shelter_id": 1380,
+    "shelter_name": "보체초등학교 운동장",
+    "Geolocation": "경기도 안성시 미양면 보체길 47",
+    "capacity": 4000
+  },
+  {
+    "shelter_id": 1381,
+    "shelter_name": "비룡중학교 운동장",
+    "Geolocation": "경기도 안성시 남파로 116",
+    "capacity": 5833
+  },
+  {
+    "shelter_id": 1382,
+    "shelter_name": "비룡초등학교 운동장",
+    "Geolocation": "경기도 안성시 비룡로 78",
+    "capacity": 4560
+  },
+  {
+    "shelter_id": 1383,
+    "shelter_name": "산평초등학교 운동장",
+    "Geolocation": "경기도 안성시 서운면 서운로 58",
+    "capacity": 3641
+  },
+  {
+    "shelter_id": 1384,
+    "shelter_name": "삼죽초등학교 운동장",
+    "Geolocation": "경기도 안성시 삼죽면 삼죽초교길 20",
+    "capacity": 5898
+  },
+  {
+    "shelter_id": 1385,
+    "shelter_name": "서삼초등학교 운동장",
+    "Geolocation": "경기도 안성시 보개면 보개원삼로 1001",
+    "capacity": 2565
+  },
+  {
+    "shelter_id": 1386,
+    "shelter_name": "서운중학교 운동장",
+    "Geolocation": "경기도 안성시 서운면 바우덕이로 25",
+    "capacity": 9070
+  },
+  {
+    "shelter_id": 1387,
+    "shelter_name": "서운초등학교 운동장",
+    "Geolocation": "경기도 안성시 서운면 서운초교길 24",
+    "capacity": 3480
+  },
+  {
+    "shelter_id": 1388,
+    "shelter_name": "안법고등학교 운동장",
+    "Geolocation": "경기도 안성시 명륜길 66",
+    "capacity": 6056
+  },
+  {
+    "shelter_id": 1389,
+    "shelter_name": "안성고등학교 운동장",
+    "Geolocation": "경기도 안성시 금산길 57",
+    "capacity": 5012
+  },
+  {
+    "shelter_id": 1390,
+    "shelter_name": "안성몽실학교 운동장",
+    "Geolocation": "경기도 안성시 백성2길 59",
+    "capacity": 10121
+  },
+  {
+    "shelter_id": 1391,
+    "shelter_name": "안성여자고등학교 운동장",
+    "Geolocation": "경기도 안성시 남파로 73-10",
+    "capacity": 7067
+  },
+  {
+    "shelter_id": 1392,
+    "shelter_name": "안성여자중학교 운동장",
+    "Geolocation": "경기도 안성시 중앙2길 111",
+    "capacity": 9269
+  },
+  {
+    "shelter_id": 1393,
+    "shelter_name": "안성초등학교 운동장",
+    "Geolocation": "경기도 안성시 혜산로 13",
+    "capacity": 4916
+  },
+  {
+    "shelter_id": 1394,
+    "shelter_name": "안청중학교 운동장",
+    "Geolocation": "경기도 안성시 당목길 68",
+    "capacity": 6451
+  },
+  {
+    "shelter_id": 1395,
+    "shelter_name": "양성중학교 운동장",
+    "Geolocation": "경기도 안성시 양성면 양성로 51",
+    "capacity": 5384
+  },
+  {
+    "shelter_id": 1396,
+    "shelter_name": "양성초등학교 운동장",
+    "Geolocation": "경기도 안성시 양성면 옥단길 43",
+    "capacity": 5960
+  },
+  {
+    "shelter_id": 1397,
+    "shelter_name": "양진중학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 진사1길 37",
+    "capacity": 2678
+  },
+  {
+    "shelter_id": 1398,
+    "shelter_name": "양진초등학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 진사1길 14",
+    "capacity": 3838
+  },
+  {
+    "shelter_id": 1399,
+    "shelter_name": "용머리초등학교 운동장",
+    "Geolocation": "경기도 안성시 공도읍 기업단지로 57",
+    "capacity": 4931
+  },
+  {
+    "shelter_id": 1400,
+    "shelter_name": "원곡초등학교 운동장",
+    "Geolocation": "경기도 안성시 원곡면 가천중앙1길 51-17",
+    "capacity": 5441
+  },
+  {
+    "shelter_id": 1401,
+    "shelter_name": "일죽중고등학교 운동장",
+    "Geolocation": "경기도 안성시 일죽면 서동대로 7446",
+    "capacity": 8798
+  },
+  {
+    "shelter_id": 1402,
+    "shelter_name": "일죽초등학교 운동장",
+    "Geolocation": "경기도 안성시 일죽면 주래본죽로 72",
+    "capacity": 5595
+  },
+  {
+    "shelter_id": 1403,
+    "shelter_name": "죽산중학교 운동장",
+    "Geolocation": "경기도 안성시 죽산면 죽산향교길 52-9",
+    "capacity": 4944
+  },
+  {
+    "shelter_id": 1404,
+    "shelter_name": "죽산초등학교 운동장",
+    "Geolocation": "경기도 안성시 죽산면 죽산초교길 43",
+    "capacity": 4901
+  },
+  {
+    "shelter_id": 1405,
+    "shelter_name": "죽화초등학교 운동장",
+    "Geolocation": "경기도 안성시 일죽면 죽화로 297",
+    "capacity": 2575
+  },
+  {
+    "shelter_id": 1406,
+    "shelter_name": "한경대학교 운동장",
+    "Geolocation": "경기도 안성시 중앙로 327",
+    "capacity": 4319
+  },
+  {
+    "shelter_id": 1407,
+    "shelter_name": "한길학교 주차장",
+    "Geolocation": "경기도 안성시 고삼면 행복길 25",
+    "capacity": 1091
+  },
+  {
+    "shelter_id": 1408,
+    "shelter_name": "현매초등학교 운동장",
+    "Geolocation": "경기도 안성시 서운면 매향길 61",
+    "capacity": 2959
+  },
+  {
+    "shelter_id": 1409,
+    "shelter_name": "가납초등학교",
+    "Geolocation": "경기도 양주시 광적면 부흥로 793",
+    "capacity": 1082
+  },
+  {
+    "shelter_id": 1410,
+    "shelter_name": "가납초등학교 운동장",
+    "Geolocation": "경기도 양주시 광적면 부흥로 793",
+    "capacity": 4905
+  },
+  {
+    "shelter_id": 1411,
+    "shelter_name": "경동대학교 운동장",
+    "Geolocation": "경기도 양주시 경동대학로 27",
+    "capacity": 4267
+  },
+  {
+    "shelter_id": 1412,
+    "shelter_name": "고덕생활체육공원",
+    "Geolocation": "경기도 양주시 고덕로 187-55",
+    "capacity": 8160
+  },
+  {
+    "shelter_id": 1413,
+    "shelter_name": "고암중학교",
+    "Geolocation": "경기도 양주시 고암길 305-18",
+    "capacity": 353
+  },
+  {
+    "shelter_id": 1414,
+    "shelter_name": "고암중학교 운동장",
+    "Geolocation": "경기도 양주시 고암길 305-18",
+    "capacity": 10612
+  },
+  {
+    "shelter_id": 1415,
+    "shelter_name": "고암초등학교 운동장",
+    "Geolocation": "경기도 양주시 고암길 320",
+    "capacity": 7474
+  },
+  {
+    "shelter_id": 1416,
+    "shelter_name": "고읍도서관",
+    "Geolocation": "경기도 양주시 고읍남로 205",
+    "capacity": 204
+  },
+  {
+    "shelter_id": 1417,
+    "shelter_name": "광숭초등학교",
+    "Geolocation": "경기도 양주시 삼숭로58번길 100",
+    "capacity": 2889
+  },
+  {
+    "shelter_id": 1418,
+    "shelter_name": "광숭초등학교 운동장",
+    "Geolocation": "경기도 양주시 삼숭로58번길 100",
+    "capacity": 3188
+  },
+  {
+    "shelter_id": 1419,
+    "shelter_name": "나누리공원",
+    "Geolocation": "경기도 양주시 고읍남로 46",
+    "capacity": 34625
+  },
+  {
+    "shelter_id": 1420,
+    "shelter_name": "나리공원",
+    "Geolocation": "경기도 양주시 광사로 131-66",
+    "capacity": 29234
+  },
+  {
+    "shelter_id": 1421,
+    "shelter_name": "남면초등학교 양덕분교 운동장",
+    "Geolocation": "경기도 양주시 남면 은남로119번길 373",
+    "capacity": 961
+  },
+  {
+    "shelter_id": 1422,
+    "shelter_name": "남면초등학교 운동장",
+    "Geolocation": "경기도 양주시 남면 개나리18길 100",
+    "capacity": 4070
+  },
+  {
+    "shelter_id": 1423,
+    "shelter_name": "덕계고등학교",
+    "Geolocation": "경기도 양주시 평화로1489번길 34",
+    "capacity": 176
+  },
+  {
+    "shelter_id": 1424,
+    "shelter_name": "덕계고등학교 운동장",
+    "Geolocation": "경기도 양주시 평화로1489번길 34",
+    "capacity": 12963
+  },
+  {
+    "shelter_id": 1425,
+    "shelter_name": "덕계중학교 운동장",
+    "Geolocation": "경기도 양주시 평화로1416번길 66-13",
+    "capacity": 11584
+  },
+  {
+    "shelter_id": 1426,
+    "shelter_name": "덕계초등학교",
+    "Geolocation": "경기도 양주시 평화로1489번길 29",
+    "capacity": 3551
+  },
+  {
+    "shelter_id": 1427,
+    "shelter_name": "덕계초등학교 운동장",
+    "Geolocation": "경기도 양주시 평화로1489번길 29",
+    "capacity": 12964
+  },
+  {
+    "shelter_id": 1428,
+    "shelter_name": "덕도초등학교 운동장",
+    "Geolocation": "경기도 양주시 광적면 광적로224번길 122",
+    "capacity": 1798
+  },
+  {
+    "shelter_id": 1429,
+    "shelter_name": "덕산초등학교 운동장",
+    "Geolocation": "경기도 양주시 평화로 1418-6",
+    "capacity": 8376
+  },
+  {
+    "shelter_id": 1430,
+    "shelter_name": "덕정고등학교",
+    "Geolocation": "경기도 양주시 화합로 1488",
+    "capacity": 242
+  },
+  {
+    "shelter_id": 1431,
+    "shelter_name": "덕정고등학교 운동장",
+    "Geolocation": "경기도 양주시 화합로 1488",
+    "capacity": 10742
+  },
+  {
+    "shelter_id": 1432,
+    "shelter_name": "덕정중학교",
+    "Geolocation": "경기도 양주시 화합로 1397",
+    "capacity": 235
+  },
+  {
+    "shelter_id": 1433,
+    "shelter_name": "덕정중학교 운동장",
+    "Geolocation": "경기도 양주시 화합로 1397",
+    "capacity": 6365
+  },
+  {
+    "shelter_id": 1434,
+    "shelter_name": "덕정초등학교",
+    "Geolocation": "경기도 양주시 덕정1길 28",
+    "capacity": 363
+  },
+  {
+    "shelter_id": 1435,
+    "shelter_name": "덕정초등학교 운동장",
+    "Geolocation": "경기도 양주시 덕정1길 28",
+    "capacity": 6356
+  },
+  {
+    "shelter_id": 1436,
+    "shelter_name": "덕현중학교 운동장",
+    "Geolocation": "경기도 양주시 고읍로35번길 21",
+    "capacity": 2984
+  },
+  {
+    "shelter_id": 1437,
+    "shelter_name": "덕현초등학교 운동장",
+    "Geolocation": "경기도 양주시 부흥로 1989",
+    "capacity": 8004
+  },
+  {
+    "shelter_id": 1438,
+    "shelter_name": "백석초등학교",
+    "Geolocation": "경기도 양주시 백석읍 중앙로223번길 10-11",
+    "capacity": 614
+  },
+  {
+    "shelter_id": 1439,
+    "shelter_name": "봉암초등학교 운동장",
+    "Geolocation": "경기도 양주시 은현면 삼육사로 473",
+    "capacity": 1781
+  },
+  {
+    "shelter_id": 1440,
+    "shelter_name": "산북초등학교",
+    "Geolocation": "경기도 양주시 평화로1261번길 96-46",
+    "capacity": 19
+  },
+  {
+    "shelter_id": 1441,
+    "shelter_name": "산북초등학교 운동장",
+    "Geolocation": "경기도 양주시 평화로 1260-76",
+    "capacity": 4279
+  },
+  {
+    "shelter_id": 1442,
+    "shelter_name": "삼상초등학교",
+    "Geolocation": "경기도 양주시 장흥면 일영로 641",
+    "capacity": 180
+  },
+  {
+    "shelter_id": 1443,
+    "shelter_name": "삼상초등학교 운동장",
+    "Geolocation": "경기도 양주시 장흥면 일영로 641",
+    "capacity": 2530
+  },
+  {
+    "shelter_id": 1444,
+    "shelter_name": "삼숭중학교",
+    "Geolocation": "경기도 양주시 삼숭로38번길 136",
+    "capacity": 3232
+  },
+  {
+    "shelter_id": 1445,
+    "shelter_name": "삼숭중학교 운동장",
+    "Geolocation": "경기도 양주시 삼숭로38번길 136",
+    "capacity": 12153
+  },
+  {
+    "shelter_id": 1446,
+    "shelter_name": "삼숭초등학교",
+    "Geolocation": "경기도 양주시 삼숭로38번길 112",
+    "capacity": 2978
+  },
+  {
+    "shelter_id": 1447,
+    "shelter_name": "삼숭초등학교 운동장",
+    "Geolocation": "경기도 양주시 삼숭로38번길 112",
+    "capacity": 4150
+  },
+  {
+    "shelter_id": 1448,
+    "shelter_name": "상수초등학교 운동장",
+    "Geolocation": "경기도 양주시 남면 화합로 503",
+    "capacity": 1690
+  },
+  {
+    "shelter_id": 1449,
+    "shelter_name": "상패초등학교 운동장",
+    "Geolocation": "경기도 양주시 은현면 은현로312번길 121-208",
+    "capacity": 3455
+  },
+  {
+    "shelter_id": 1450,
+    "shelter_name": "송추초등학교 운동장",
+    "Geolocation": "경기도 양주시 장흥면 호국로 499",
+    "capacity": 5278
+  },
+  {
+    "shelter_id": 1451,
+    "shelter_name": "신지초등학교",
+    "Geolocation": "경기도 양주시 백석읍 양주산성로574번길 20",
+    "capacity": 3136
+  },
+  {
+    "shelter_id": 1452,
+    "shelter_name": "신지초등학교 운동장",
+    "Geolocation": "경기도 양주시 백석읍 양주산성로574번길 20",
+    "capacity": 3321
+  },
+  {
+    "shelter_id": 1453,
+    "shelter_name": "양주2동 주민센터",
+    "Geolocation": "경기도 양주시 고읍로 77",
+    "capacity": 185
+  },
+  {
+    "shelter_id": 1454,
+    "shelter_name": "양주덕현초등학교",
+    "Geolocation": "경기도 양주시 부흥로 1989",
+    "capacity": 1463
+  },
+  {
+    "shelter_id": 1455,
+    "shelter_name": "양주문화예술회관",
+    "Geolocation": "경기도 양주시 광적면 부흥로618번길 303",
+    "capacity": 848
+  },
+  {
+    "shelter_id": 1456,
+    "shelter_name": "양주백석고등학교",
+    "Geolocation": "경기도 양주시 백석읍 꿈나무로 205",
+    "capacity": 3619
+  },
+  {
+    "shelter_id": 1457,
+    "shelter_name": "양주백석고등학교 운동장",
+    "Geolocation": "경기도 양주시 백석읍 꿈나무로 205",
+    "capacity": 3122
+  },
+  {
+    "shelter_id": 1458,
+    "shelter_name": "양주희망도서관",
+    "Geolocation": "경기도 양주시 삼숭로38번길 78-47",
+    "capacity": 232
+  },
+  {
+    "shelter_id": 1459,
+    "shelter_name": "에코스포츠센터",
+    "Geolocation": "경기도 양주시 은현면 은남로 177",
+    "capacity": 406
+  },
+  {
+    "shelter_id": 1460,
+    "shelter_name": "연곡초등학교 운동장",
+    "Geolocation": "경기도 양주시 백석읍 월암로170번길 107",
+    "capacity": 2388
+  },
+  {
+    "shelter_id": 1461,
+    "shelter_name": "유양초등학교",
+    "Geolocation": "경기도 양주시 부흥로 1373-7",
+    "capacity": 297
+  },
+  {
+    "shelter_id": 1462,
+    "shelter_name": "유양초등학교 운동장",
+    "Geolocation": "경기도 양주시 부흥로 1373",
+    "capacity": 1841
+  },
+  {
+    "shelter_id": 1463,
+    "shelter_name": "율정초등학교 운동장",
+    "Geolocation": "경기도 양주시 옥정동로 245-41",
+    "capacity": 3222
+  },
+  {
+    "shelter_id": 1464,
+    "shelter_name": "은봉초등학교",
+    "Geolocation": "경기도 양주시 백석읍 꿈나무로 321",
+    "capacity": 3249
+  },
+  {
+    "shelter_id": 1465,
+    "shelter_name": "은봉초등학교 운동장",
+    "Geolocation": "경기도 양주시 백석읍 꿈나무로 321",
+    "capacity": 12225
+  },
+  {
+    "shelter_id": 1466,
+    "shelter_name": "은현초등학교 운동장",
+    "Geolocation": "경기도 양주시 은현면 화합로 912",
+    "capacity": 3686
+  },
+  {
+    "shelter_id": 1467,
+    "shelter_name": "장흥문화체육센터",
+    "Geolocation": "경기도 양주시 장흥면 호국로 176-14",
+    "capacity": 309
+  },
+  {
+    "shelter_id": 1468,
+    "shelter_name": "조양중학교",
+    "Geolocation": "경기도 양주시 광적면 부흥로 757",
+    "capacity": 469
+  },
+  {
+    "shelter_id": 1469,
+    "shelter_name": "조양중학교 운동장",
+    "Geolocation": "경기도 양주시 광적면 부흥로 757",
+    "capacity": 5434
+  },
+  {
+    "shelter_id": 1470,
+    "shelter_name": "천보초등학교",
+    "Geolocation": "경기도 양주시 옥정동로9가길 31-15",
+    "capacity": 273
+  },
+  {
+    "shelter_id": 1471,
+    "shelter_name": "천보초등학교 운동장",
+    "Geolocation": "경기도 양주시 옥정동로9가길 31-15",
+    "capacity": 5536
+  },
+  {
+    "shelter_id": 1472,
+    "shelter_name": "칠봉초등학교",
+    "Geolocation": "경기도 양주시 회정로 156",
+    "capacity": 120
+  },
+  {
+    "shelter_id": 1473,
+    "shelter_name": "칠봉초등학교 운동장",
+    "Geolocation": "경기도 양주시 회정로 156",
+    "capacity": 10141
+  },
+  {
+    "shelter_id": 1474,
+    "shelter_name": "토리근린공원",
+    "Geolocation": "경기도 양주시 고읍남로191번길 59",
+    "capacity": 56462
+  },
+  {
+    "shelter_id": 1475,
+    "shelter_name": "푸르네 근린공원",
+    "Geolocation": "경기도 양주시 고읍로 27",
+    "capacity": 13348
+  },
+  {
+    "shelter_id": 1476,
+    "shelter_name": "하늘물 공원",
+    "Geolocation": "경기도 양주시 고읍남로 205",
+    "capacity": 90971
+  },
+  {
+    "shelter_id": 1477,
+    "shelter_name": "한국외식과학고등학교",
+    "Geolocation": "경기도 양주시 남면 개나리18길 1",
+    "capacity": 696
+  },
+  {
+    "shelter_id": 1478,
+    "shelter_name": "한국외식과학고등학교 운동장",
+    "Geolocation": "경기도 양주시 남면 개나리18길 1",
+    "capacity": 5499
+  },
+  {
+    "shelter_id": 1479,
+    "shelter_name": "회정초등학교 운동장",
+    "Geolocation": "경기도 양주시 평화로 1567",
+    "capacity": 8235
+  },
+  {
+    "shelter_id": 1480,
+    "shelter_name": "회천1동 사무실, 창고",
+    "Geolocation": "경기도 양주시 덕정길 67",
+    "capacity": 231
+  },
+  {
+    "shelter_id": 1481,
+    "shelter_name": "회천중학교",
+    "Geolocation": "경기도 양주시 고암길 77",
+    "capacity": 3165
+  },
+  {
+    "shelter_id": 1482,
+    "shelter_name": "회천중학교 운동장",
+    "Geolocation": "경기도 양주시 고암길 77",
+    "capacity": 2590
+  },
+  {
+    "shelter_id": 1483,
+    "shelter_name": "회천초등학교",
+    "Geolocation": "경기도 양주시 고암길 73",
+    "capacity": 2407
+  },
+  {
+    "shelter_id": 1484,
+    "shelter_name": "회천초등학교 운동장",
+    "Geolocation": "경기도 양주시 고암길 73",
+    "capacity": 8989
+  },
+  {
+    "shelter_id": 1485,
+    "shelter_name": "효촌초등학교 운동장",
+    "Geolocation": "경기도 양주시 광적면 화합로248번길 18",
+    "capacity": 3982
+  },
+  {
+    "shelter_id": 1486,
+    "shelter_name": "강상 나루께 체육공원",
+    "Geolocation": "경기도 양평군 강상면 양평대교길 79",
+    "capacity": 143430
+  },
+  {
+    "shelter_id": 1487,
+    "shelter_name": "강하생활체육공원",
+    "Geolocation": "경기도 양평군 강하면 운심리57",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 1488,
+    "shelter_name": "개군중학교 학교운동장",
+    "Geolocation": "경기도 양평군 개군면 추읍로 15",
+    "capacity": 6909
+  },
+  {
+    "shelter_id": 1489,
+    "shelter_name": "단월레포츠공원",
+    "Geolocation": "경기도 양평군 단월면 보룡리산11-1",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 1490,
+    "shelter_name": "서종초등학교 학교운동장",
+    "Geolocation": "경기도 양평군 서종면 북한강로789번길 8",
+    "capacity": 6060
+  },
+  {
+    "shelter_id": 1491,
+    "shelter_name": "양동중고등학교 학교운동장",
+    "Geolocation": "경기도 양평군 양동면 쌍학리215-2",
+    "capacity": 6666
+  },
+  {
+    "shelter_id": 1492,
+    "shelter_name": "양서문화체육공원",
+    "Geolocation": "경기도 양평군 양서면 용담리425",
+    "capacity": 19393
+  },
+  {
+    "shelter_id": 1493,
+    "shelter_name": "양평다문초등학교학교운동장",
+    "Geolocation": "경기도 양평군 용문면 다문중앙2길 27",
+    "capacity": 6060
+  },
+  {
+    "shelter_id": 1494,
+    "shelter_name": "양평생활체육공원",
+    "Geolocation": "경기도 양평군 양평읍 양평체육공원길 24",
+    "capacity": 8538
+  },
+  {
+    "shelter_id": 1495,
+    "shelter_name": "양평초등학교 학교운동장",
+    "Geolocation": "경기도 양평군 양평읍 양근로 142",
+    "capacity": 5238
+  },
+  {
+    "shelter_id": 1496,
+    "shelter_name": "옥천레포츠공원",
+    "Geolocation": "경기도 양평군 옥천면 옥천리773-4",
+    "capacity": 8484
+  },
+  {
+    "shelter_id": 1497,
+    "shelter_name": "지평면사무소",
+    "Geolocation": "경기도 양평군 지평면 지평의병로116번길 1-1",
+    "capacity": 4606
+  },
+  {
+    "shelter_id": 1498,
+    "shelter_name": "청운레포츠공원",
+    "Geolocation": "경기도 양평군 청운면 청운체육공원길 52",
+    "capacity": 16642
+  },
+  {
+    "shelter_id": 1499,
+    "shelter_name": "가남초등학교",
+    "Geolocation": "경기도 여주시 가남읍 태평4길 2",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1500,
+    "shelter_name": "가산1리 마을회관",
+    "Geolocation": "경기도 여주시 대신면 가산2길 34",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1501,
+    "shelter_name": "강천초등학교",
+    "Geolocation": "경기도 여주시 강천면 간매3길 31",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1502,
+    "shelter_name": "경기관광고등학교",
+    "Geolocation": "경기도 여주시 대신면 여양로 1416",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1503,
+    "shelter_name": "교2통 마을회관",
+    "Geolocation": "경기도 여주시 교동2길 13",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1504,
+    "shelter_name": "능서복지회관",
+    "Geolocation": "경기도 여주시 능서면 양화로 913",
+    "capacity": 1200
+  },
+  {
+    "shelter_id": 1505,
+    "shelter_name": "대신중고등학교",
+    "Geolocation": "경기도 여주시 대신면 여양로 1196",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1506,
+    "shelter_name": "도리마을회관",
+    "Geolocation": "경기도 여주시 점동면 도리길 152",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1507,
+    "shelter_name": "매류초등학교",
+    "Geolocation": "경기도 여주시 능서면 양화로 592",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1508,
+    "shelter_name": "북내초등학교",
+    "Geolocation": "경기도 여주시 북내면 여양2로 304",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1509,
+    "shelter_name": "상백1리 마을회관",
+    "Geolocation": "경기도 여주시 흥천면 능북로 464",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1510,
+    "shelter_name": "상품초등학교",
+    "Geolocation": "경기도 여주시 산북면 금품1로 15",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1511,
+    "shelter_name": "세종국악당",
+    "Geolocation": "경기도 여주시 영릉로 125",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1512,
+    "shelter_name": "양촌리 마을회관",
+    "Geolocation": "경기도 여주시 대신면 양촌로 174-2",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1513,
+    "shelter_name": "여주시보건소",
+    "Geolocation": "경기도 여주시 여흥로160번길 14",
+    "capacity": 600
+  },
+  {
+    "shelter_id": 1514,
+    "shelter_name": "여주시여성회관",
+    "Geolocation": "경기도 여주시 신륵사길 6-6",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1515,
+    "shelter_name": "여주시장애인복지관",
+    "Geolocation": "경기도 여주시 청심로 150",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1516,
+    "shelter_name": "여주자영농업고등학교",
+    "Geolocation": "경기도 여주시 능서면 농도원1길 76",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1517,
+    "shelter_name": "여주종합운동장",
+    "Geolocation": "경기도 여주시 영릉로 123",
+    "capacity": 2200
+  },
+  {
+    "shelter_id": 1518,
+    "shelter_name": "여흥초등학교",
+    "Geolocation": "경기도 여주시 여양로 91",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1519,
+    "shelter_name": "오학2통 마을회관",
+    "Geolocation": "경기도 여주시 도예로 87",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1520,
+    "shelter_name": "율촌1리 마을회관",
+    "Geolocation": "경기도 여주시 대신면 율촌2길 39-26",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1521,
+    "shelter_name": "율촌3리 마을회관",
+    "Geolocation": "경기도 여주시 대신면 풍양1길 28",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1522,
+    "shelter_name": "이포1리 마을회관",
+    "Geolocation": "경기도 여주시 금사면 천양2길 14-11",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1523,
+    "shelter_name": "이포초등학교",
+    "Geolocation": "경기도 여주시 금사면 이여로 1237",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1524,
+    "shelter_name": "점동초등학교",
+    "Geolocation": "경기도 여주시 점동면 청안로 106",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1525,
+    "shelter_name": "천송2통 마을회관",
+    "Geolocation": "경기도 여주시 신륵1길 5",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1526,
+    "shelter_name": "하1통 마을회관",
+    "Geolocation": "경기도 여주시 여흥로69번길 10-7",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1527,
+    "shelter_name": "하2통 마을회관",
+    "Geolocation": "경기도 여주시 여흥로 50",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1528,
+    "shelter_name": "현암2통 마을회관",
+    "Geolocation": "경기도 여주시 평장길 81-4",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1529,
+    "shelter_name": "후포1리 마을회관",
+    "Geolocation": "경기도 여주시 대신면 산정길 8",
+    "capacity": 50
+  },
+  {
+    "shelter_id": 1530,
+    "shelter_name": "흥천초등학교",
+    "Geolocation": "경기도 여주시 흥천면 효자로 155",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1531,
+    "shelter_name": "군남초등학교 운동장",
+    "Geolocation": "경기도 연천군 군남면 진상17길 46",
+    "capacity": 4848
+  },
+  {
+    "shelter_id": 1532,
+    "shelter_name": "궁평초등학교 운동장",
+    "Geolocation": "경기도 연천군 청산면 궁평로45번길 52",
+    "capacity": 2303
+  },
+  {
+    "shelter_id": 1533,
+    "shelter_name": "대광초등학교 운동장",
+    "Geolocation": "경기도 연천군 신서면 연신로 1127-1",
+    "capacity": 5939
+  },
+  {
+    "shelter_id": 1534,
+    "shelter_name": "망곡산체육공원",
+    "Geolocation": "경기도 연천군 연천읍 연천로285번길 52",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 1535,
+    "shelter_name": "명정어린이공원",
+    "Geolocation": "",
+    "capacity": 375
+  },
+  {
+    "shelter_id": 1536,
+    "shelter_name": "백의초등학교",
+    "Geolocation": "경기도 연천군 청산면 청창로726번길 38",
+    "capacity": 34
+  },
+  {
+    "shelter_id": 1537,
+    "shelter_name": "백의초등학교 운동장",
+    "Geolocation": "경기도 연천군 청산면 청창로726번길 38",
+    "capacity": 4363
+  },
+  {
+    "shelter_id": 1538,
+    "shelter_name": "백학근린공원",
+    "Geolocation": "",
+    "capacity": 3878
+  },
+  {
+    "shelter_id": 1539,
+    "shelter_name": "백학중학교",
+    "Geolocation": "경기도 연천군 백학면 두일로 79",
+    "capacity": 25
+  },
+  {
+    "shelter_id": 1540,
+    "shelter_name": "백학중학교 운동장",
+    "Geolocation": "경기도 연천군 백학면 두일로 79",
+    "capacity": 5090
+  },
+  {
+    "shelter_id": 1541,
+    "shelter_name": "백학초등학교",
+    "Geolocation": "경기도 연천군 백학면 백학로40번길 23",
+    "capacity": 43
+  },
+  {
+    "shelter_id": 1542,
+    "shelter_name": "백학초등학교 운동장",
+    "Geolocation": "경기도 연천군 백학면 백학로40번길 23",
+    "capacity": 4363
+  },
+  {
+    "shelter_id": 1543,
+    "shelter_name": "상리초등학교 운동장",
+    "Geolocation": "경기도 연천군 연천읍 상리로 70",
+    "capacity": 3030
+  },
+  {
+    "shelter_id": 1544,
+    "shelter_name": "선곡교회",
+    "Geolocation": "경기도 연천군 군남면 군남로 596",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1545,
+    "shelter_name": "신서수변공원",
+    "Geolocation": "",
+    "capacity": 2895
+  },
+  {
+    "shelter_id": 1546,
+    "shelter_name": "연천 수레울아트홀 및 체육관",
+    "Geolocation": "경기도 연천군 연천읍 문화로 150",
+    "capacity": 562
+  },
+  {
+    "shelter_id": 1547,
+    "shelter_name": "연천노곡초등학교 운동장",
+    "Geolocation": "경기도 연천군 백학면 진목로 26",
+    "capacity": 2424
+  },
+  {
+    "shelter_id": 1548,
+    "shelter_name": "연천어린이공원",
+    "Geolocation": "",
+    "capacity": 2303
+  },
+  {
+    "shelter_id": 1549,
+    "shelter_name": "연천왕산초등학교 운동장",
+    "Geolocation": "경기도 연천군 미산면 왕산로 15",
+    "capacity": 3757
+  },
+  {
+    "shelter_id": 1550,
+    "shelter_name": "연천중,고등학교 운동장",
+    "Geolocation": "경기도 연천군 연천읍 연천로336번길 13",
+    "capacity": 7151
+  },
+  {
+    "shelter_id": 1551,
+    "shelter_name": "연천초등학교 운동장",
+    "Geolocation": "경기도 연천군 연천읍 연천로 228",
+    "capacity": 6303
+  },
+  {
+    "shelter_id": 1552,
+    "shelter_name": "옥산근린공원",
+    "Geolocation": "경기도 연천군 연천읍 차옥로 20",
+    "capacity": 7636
+  },
+  {
+    "shelter_id": 1553,
+    "shelter_name": "은대근린공원",
+    "Geolocation": "경기도 연천군 전곡읍 은전로 47",
+    "capacity": 21818
+  },
+  {
+    "shelter_id": 1554,
+    "shelter_name": "은대초등학교 운동장",
+    "Geolocation": "경기도 연천군 전곡읍 은대로 210",
+    "capacity": 3272
+  },
+  {
+    "shelter_id": 1555,
+    "shelter_name": "전곡고등학교 운동장",
+    "Geolocation": "경기도 연천군 전곡읍 전은길 9-89",
+    "capacity": 5818
+  },
+  {
+    "shelter_id": 1556,
+    "shelter_name": "전곡중학교",
+    "Geolocation": "경기도 연천군 전곡읍 전은길 43",
+    "capacity": 248
+  },
+  {
+    "shelter_id": 1557,
+    "shelter_name": "전곡중학교 운동장",
+    "Geolocation": "경기도 연천군 전곡읍 전은길 21",
+    "capacity": 6909
+  },
+  {
+    "shelter_id": 1558,
+    "shelter_name": "전곡초등학교 운동장",
+    "Geolocation": "경기도 연천군 전곡읍 선사로 433",
+    "capacity": 3272
+  },
+  {
+    "shelter_id": 1559,
+    "shelter_name": "조흥어린이공원",
+    "Geolocation": "",
+    "capacity": 787
+  },
+  {
+    "shelter_id": 1560,
+    "shelter_name": "청산중학교 운동장",
+    "Geolocation": "경기도 연천군 청산면 아우라지길 13-32",
+    "capacity": 4969
+  },
+  {
+    "shelter_id": 1561,
+    "shelter_name": "초성초등학교",
+    "Geolocation": "경기도 연천군 청산면 학담로 104",
+    "capacity": 44
+  },
+  {
+    "shelter_id": 1562,
+    "shelter_name": "초성초등학교 운동장",
+    "Geolocation": "경기도 연천군 청산면 학담로 104",
+    "capacity": 3515
+  },
+  {
+    "shelter_id": 1563,
+    "shelter_name": "현가근린공원",
+    "Geolocation": "경기도 연천군 연천읍 문화로 173",
+    "capacity": 7393
+  },
+  {
+    "shelter_id": 1564,
+    "shelter_name": "화진초등학교 운동장",
+    "Geolocation": "경기도 연천군 군남면 청정로 2289",
+    "capacity": 3878
+  },
+  {
+    "shelter_id": 1565,
+    "shelter_name": "휴먼시아어린이공원",
+    "Geolocation": "",
+    "capacity": 363
+  },
+  {
+    "shelter_id": 1566,
+    "shelter_name": "가수초등학교",
+    "Geolocation": "경기도 오산시 가수로 50",
+    "capacity": 3508
+  },
+  {
+    "shelter_id": 1567,
+    "shelter_name": "고현초등학교",
+    "Geolocation": "경기도 오산시 남부대로 459",
+    "capacity": 1704
+  },
+  {
+    "shelter_id": 1568,
+    "shelter_name": "광성초등학교",
+    "Geolocation": "경기도 오산시 수목원로 577-18",
+    "capacity": 3456
+  },
+  {
+    "shelter_id": 1569,
+    "shelter_name": "금암초등학교",
+    "Geolocation": "경기도 오산시 수청로 204-20",
+    "capacity": 5444
+  },
+  {
+    "shelter_id": 1570,
+    "shelter_name": "다온초등학교",
+    "Geolocation": "경기도 오산시 부산중앙로 37",
+    "capacity": 3144
+  },
+  {
+    "shelter_id": 1571,
+    "shelter_name": "대원초등학교",
+    "Geolocation": "경기도 오산시 경기대로25번길 45",
+    "capacity": 5661
+  },
+  {
+    "shelter_id": 1572,
+    "shelter_name": "대호중학교",
+    "Geolocation": "경기도 오산시 궐리사로29번길 19",
+    "capacity": 4010
+  },
+  {
+    "shelter_id": 1573,
+    "shelter_name": "대호초등학교",
+    "Geolocation": "경기도 오산시 궐리사로46번길 3",
+    "capacity": 2502
+  },
+  {
+    "shelter_id": 1574,
+    "shelter_name": "매홀중학교",
+    "Geolocation": "경기도 오산시 내삼미로48번길 17",
+    "capacity": 4525
+  },
+  {
+    "shelter_id": 1575,
+    "shelter_name": "매홀초등학교",
+    "Geolocation": "경기도 오산시 청학로147번길 10",
+    "capacity": 8998
+  },
+  {
+    "shelter_id": 1576,
+    "shelter_name": "문시초등학교",
+    "Geolocation": "경기도 오산시 수목원로 449",
+    "capacity": 4464
+  },
+  {
+    "shelter_id": 1577,
+    "shelter_name": "성산초등학교",
+    "Geolocation": "경기도 오산시 성호대로 43",
+    "capacity": 5770
+  },
+  {
+    "shelter_id": 1578,
+    "shelter_name": "성호고등학교",
+    "Geolocation": "경기도 오산시 동부대로436번길 46",
+    "capacity": 6715
+  },
+  {
+    "shelter_id": 1579,
+    "shelter_name": "성호초등학교",
+    "Geolocation": "경기도 오산시 성호새싹길 8",
+    "capacity": 11019
+  },
+  {
+    "shelter_id": 1580,
+    "shelter_name": "세미초등학교",
+    "Geolocation": "경기도 오산시 내삼미로 127",
+    "capacity": 3479
+  },
+  {
+    "shelter_id": 1581,
+    "shelter_name": "수청초등학교",
+    "Geolocation": "경기도 오산시 오산대역로 123",
+    "capacity": 2724
+  },
+  {
+    "shelter_id": 1582,
+    "shelter_name": "양산초등학교",
+    "Geolocation": "경기도 오산시 양산로 448",
+    "capacity": 6697
+  },
+  {
+    "shelter_id": 1583,
+    "shelter_name": "오산원당초등학교",
+    "Geolocation": "경기도 오산시 부원로87번길 37-7",
+    "capacity": 3261
+  },
+  {
+    "shelter_id": 1584,
+    "shelter_name": "오산원일초등학교",
+    "Geolocation": "경기도 오산시 오산로132번길 27",
+    "capacity": 2693
+  },
+  {
+    "shelter_id": 1585,
+    "shelter_name": "오산종합운동장",
+    "Geolocation": "경기도 오산시 경기동로 15",
+    "capacity": 12821
+  },
+  {
+    "shelter_id": 1586,
+    "shelter_name": "오산중학교",
+    "Geolocation": "경기도 오산시 청학로 43",
+    "capacity": 7886
+  },
+  {
+    "shelter_id": 1587,
+    "shelter_name": "오산초등학교",
+    "Geolocation": "경기도 오산시 가수로 16",
+    "capacity": 12714
+  },
+  {
+    "shelter_id": 1588,
+    "shelter_name": "운산초등학교",
+    "Geolocation": "경기도 오산시 운암로 72",
+    "capacity": 4658
+  },
+  {
+    "shelter_id": 1589,
+    "shelter_name": "운암제1근린공원",
+    "Geolocation": "경기도 오산시 운천로 154",
+    "capacity": 11141
+  },
+  {
+    "shelter_id": 1590,
+    "shelter_name": "운암중학교",
+    "Geolocation": "경기도 오산시 대원로 76",
+    "capacity": 6447
+  },
+  {
+    "shelter_id": 1591,
+    "shelter_name": "운암초등학교",
+    "Geolocation": "경기도 오산시 원동로 63",
+    "capacity": 6204
+  },
+  {
+    "shelter_id": 1592,
+    "shelter_name": "운천초등학교",
+    "Geolocation": "경기도 오산시 운암로 116",
+    "capacity": 7952
+  },
+  {
+    "shelter_id": 1593,
+    "shelter_name": "원동어린이공원",
+    "Geolocation": "경기도 오산시 오산로226번길 25",
+    "capacity": 842
+  },
+  {
+    "shelter_id": 1594,
+    "shelter_name": "원동초등학교",
+    "Geolocation": "경기도 오산시 오산로 92",
+    "capacity": 1745
+  },
+  {
+    "shelter_id": 1595,
+    "shelter_name": "죽미체육공원 다목적구장",
+    "Geolocation": "경기도 오산시 수청로 204-26",
+    "capacity": 4818
+  },
+  {
+    "shelter_id": 1596,
+    "shelter_name": "필봉초등학교",
+    "Geolocation": "경기도 오산시 수청로 124",
+    "capacity": 4978
+  },
+  {
+    "shelter_id": 1597,
+    "shelter_name": "화성초등학교",
+    "Geolocation": "경기도 오산시 내삼미로 18",
+    "capacity": 7726
+  },
+  {
+    "shelter_id": 1598,
+    "shelter_name": "갈뫼중학교 운동장",
+    "Geolocation": "경기도 의왕시 갈미로 61",
+    "capacity": 3847
+  },
+  {
+    "shelter_id": 1599,
+    "shelter_name": "갈뫼초등학교 운동장",
+    "Geolocation": "경기도 의왕시 갈미로 27",
+    "capacity": 3081
+  },
+  {
+    "shelter_id": 1600,
+    "shelter_name": "경기외국어고등학교 운동장",
+    "Geolocation": "경기도 의왕시 고산로105번길 30",
+    "capacity": 3696
+  },
+  {
+    "shelter_id": 1601,
+    "shelter_name": "고천중학교 운동장",
+    "Geolocation": "경기도 의왕시 백운로 25",
+    "capacity": 2647
+  },
+  {
+    "shelter_id": 1602,
+    "shelter_name": "고천체육공원",
+    "Geolocation": "경기도 의왕시 오전로 18",
+    "capacity": 18787
+  },
+  {
+    "shelter_id": 1603,
+    "shelter_name": "고천초등학교 운동장",
+    "Geolocation": "경기도 의왕시 효행로 10",
+    "capacity": 11545
+  },
+  {
+    "shelter_id": 1604,
+    "shelter_name": "내동초등학교 운동장",
+    "Geolocation": "경기도 의왕시 내손로 101",
+    "capacity": 4809
+  },
+  {
+    "shelter_id": 1605,
+    "shelter_name": "내손체육공원",
+    "Geolocation": "경기도 의왕시 내손공원길 39",
+    "capacity": 37050
+  },
+  {
+    "shelter_id": 1606,
+    "shelter_name": "내손초등학교 운동장",
+    "Geolocation": "경기도 의왕시 내손순환로 175",
+    "capacity": 4363
+  },
+  {
+    "shelter_id": 1607,
+    "shelter_name": "덕장중학교 운동장",
+    "Geolocation": "경기도 의왕시 덕장로 55",
+    "capacity": 3393
+  },
+  {
+    "shelter_id": 1608,
+    "shelter_name": "덕장초등학교 운동장",
+    "Geolocation": "경기도 의왕시 덕장로 33",
+    "capacity": 3339
+  },
+  {
+    "shelter_id": 1609,
+    "shelter_name": "모락고등학교 운동장",
+    "Geolocation": "경기도 의왕시 모락로 134",
+    "capacity": 3157
+  },
+  {
+    "shelter_id": 1610,
+    "shelter_name": "모락중학교 운동장",
+    "Geolocation": "경기도 의왕시 모락로 110",
+    "capacity": 4080
+  },
+  {
+    "shelter_id": 1611,
+    "shelter_name": "모락초등학교 운동장",
+    "Geolocation": "경기도 의왕시 보식골로 40",
+    "capacity": 2036
+  },
+  {
+    "shelter_id": 1612,
+    "shelter_name": "백운고등학교 운동장",
+    "Geolocation": "경기도 의왕시 내손순환로 136",
+    "capacity": 2726
+  },
+  {
+    "shelter_id": 1613,
+    "shelter_name": "백운중학교 운동장",
+    "Geolocation": "경기도 의왕시 안양판교로 168",
+    "capacity": 5564
+  },
+  {
+    "shelter_id": 1614,
+    "shelter_name": "백운초등학교 운동장",
+    "Geolocation": "경기도 의왕시 백운초등길 4",
+    "capacity": 8421
+  },
+  {
+    "shelter_id": 1615,
+    "shelter_name": "백운호수초등학교 운동장",
+    "Geolocation": "경기도 의왕시 백운중앙로 67",
+    "capacity": 3150
+  },
+  {
+    "shelter_id": 1616,
+    "shelter_name": "부곡체육공원",
+    "Geolocation": "경기도 의왕시 부곡공원길 6",
+    "capacity": 41823
+  },
+  {
+    "shelter_id": 1617,
+    "shelter_name": "오전초등학교 운동장",
+    "Geolocation": "경기도 의왕시 찬우물길 49",
+    "capacity": 13370
+  },
+  {
+    "shelter_id": 1618,
+    "shelter_name": "왕곡초등학교 운동장",
+    "Geolocation": "경기도 의왕시 왕곡로 58",
+    "capacity": 6129
+  },
+  {
+    "shelter_id": 1619,
+    "shelter_name": "우성고등학교 운동장",
+    "Geolocation": "경기도 의왕시 오전로 37",
+    "capacity": 10339
+  },
+  {
+    "shelter_id": 1620,
+    "shelter_name": "의왕고등학교 운동장",
+    "Geolocation": "경기도 의왕시 덕영대로 115",
+    "capacity": 5323
+  },
+  {
+    "shelter_id": 1621,
+    "shelter_name": "의왕덕성초등학교 운동장",
+    "Geolocation": "경기도 의왕시 덕영대로 123",
+    "capacity": 5433
+  },
+  {
+    "shelter_id": 1622,
+    "shelter_name": "의왕부곡중학교 운동장",
+    "Geolocation": "경기도 의왕시 부곡중학길 61",
+    "capacity": 5883
+  },
+  {
+    "shelter_id": 1623,
+    "shelter_name": "의왕부곡초등학교 운동장",
+    "Geolocation": "경기도 의왕시 철도박물관로 143",
+    "capacity": 17964
+  },
+  {
+    "shelter_id": 1624,
+    "shelter_name": "의왕중학교 운동장",
+    "Geolocation": "경기도 의왕시 등칙골길 28",
+    "capacity": 8147
+  },
+  {
+    "shelter_id": 1625,
+    "shelter_name": "의왕초등학교 운동장",
+    "Geolocation": "경기도 의왕시 모락로 56",
+    "capacity": 2990
+  },
+  {
+    "shelter_id": 1626,
+    "shelter_name": "포일초등학교 운동장",
+    "Geolocation": "경기도 의왕시 포일세거리로 51",
+    "capacity": 3826
+  },
+  {
+    "shelter_id": 1627,
+    "shelter_name": "가능동 주민센터",
+    "Geolocation": "경기도 의정부시 신촌로 35",
+    "capacity": 273
+  },
+  {
+    "shelter_id": 1628,
+    "shelter_name": "가능초등학교",
+    "Geolocation": "경기도 의정부시 의정로140번길 15",
+    "capacity": 5258
+  },
+  {
+    "shelter_id": 1629,
+    "shelter_name": "경민대학교 기념관",
+    "Geolocation": "경기도 의정부시 서부로 545",
+    "capacity": 461
+  },
+  {
+    "shelter_id": 1630,
+    "shelter_name": "경의초등학교",
+    "Geolocation": "경기도 의정부시 경의로 135",
+    "capacity": 8719
+  },
+  {
+    "shelter_id": 1631,
+    "shelter_name": "고산초등학교",
+    "Geolocation": "경기도 의정부시 고산로 121",
+    "capacity": 4337
+  },
+  {
+    "shelter_id": 1632,
+    "shelter_name": "곤제근린공원",
+    "Geolocation": "경기도 의정부시 송현로 123",
+    "capacity": 6303
+  },
+  {
+    "shelter_id": 1633,
+    "shelter_name": "금오초등학교",
+    "Geolocation": "경기도 의정부시 천보로 418",
+    "capacity": 3960
+  },
+  {
+    "shelter_id": 1634,
+    "shelter_name": "녹양동 주민센터",
+    "Geolocation": "경기도 의정부시 진등로 21",
+    "capacity": 128
+  },
+  {
+    "shelter_id": 1635,
+    "shelter_name": "녹양중학교",
+    "Geolocation": "경기도 의정부시 체육로 187",
+    "capacity": 12742
+  },
+  {
+    "shelter_id": 1636,
+    "shelter_name": "녹양초등학교",
+    "Geolocation": "경기도 의정부시 체육로 265-25",
+    "capacity": 3983
+  },
+  {
+    "shelter_id": 1637,
+    "shelter_name": "다리목근린공원",
+    "Geolocation": "경기도 의정부시 민락동 736-2",
+    "capacity": 1212
+  },
+  {
+    "shelter_id": 1638,
+    "shelter_name": "다온중학교",
+    "Geolocation": "경기도 의정부시 둔야로49번길 30",
+    "capacity": 3928
+  },
+  {
+    "shelter_id": 1639,
+    "shelter_name": "동암중학교",
+    "Geolocation": "경기도 의정부시 장곡로226번길 132",
+    "capacity": 176
+  },
+  {
+    "shelter_id": 1640,
+    "shelter_name": "발곡고등학교",
+    "Geolocation": "경기도 의정부시 동일로454번길 150",
+    "capacity": 3103
+  },
+  {
+    "shelter_id": 1641,
+    "shelter_name": "발곡고등학교",
+    "Geolocation": "경기도 의정부시 동일로454번길 150",
+    "capacity": 322
+  },
+  {
+    "shelter_id": 1642,
+    "shelter_name": "발곡초등학교",
+    "Geolocation": "경기도 의정부시 동일로454번길 74",
+    "capacity": 6074
+  },
+  {
+    "shelter_id": 1643,
+    "shelter_name": "배영초등학교",
+    "Geolocation": "경기도 의정부시 의정부동 229-2번지 의정부동",
+    "capacity": 2337
+  },
+  {
+    "shelter_id": 1644,
+    "shelter_name": "백석천근린공원",
+    "Geolocation": "경기도 의정부시 의정부동 553번지",
+    "capacity": 1939
+  },
+  {
+    "shelter_id": 1645,
+    "shelter_name": "버들개초등학교",
+    "Geolocation": "경기도 의정부시 체육로 201",
+    "capacity": 3976
+  },
+  {
+    "shelter_id": 1646,
+    "shelter_name": "부용고등학교",
+    "Geolocation": "경기도 의정부시 오목로 96",
+    "capacity": 306
+  },
+  {
+    "shelter_id": 1647,
+    "shelter_name": "부용고등학교",
+    "Geolocation": "경기도 의정부시 오목로 96",
+    "capacity": 7858
+  },
+  {
+    "shelter_id": 1648,
+    "shelter_name": "삼현초등학교",
+    "Geolocation": "경기도 의정부시 송양로 87",
+    "capacity": 190
+  },
+  {
+    "shelter_id": 1649,
+    "shelter_name": "상우고등학교",
+    "Geolocation": "경기도 의정부시 의정부동 611번지 의정부동",
+    "capacity": 2652
+  },
+  {
+    "shelter_id": 1650,
+    "shelter_name": "솔뫼초등학교",
+    "Geolocation": "경기도 의정부시 시민로 442",
+    "capacity": 5419
+  },
+  {
+    "shelter_id": 1651,
+    "shelter_name": "송산1동 주민센터",
+    "Geolocation": "경기도 의정부시 민락로 13",
+    "capacity": 133
+  },
+  {
+    "shelter_id": 1652,
+    "shelter_name": "송산사지근린공원",
+    "Geolocation": "경기도 의정부시 민락로 296",
+    "capacity": 48485
+  },
+  {
+    "shelter_id": 1653,
+    "shelter_name": "송양초등학교",
+    "Geolocation": "경기도 의정부시 송양로 49",
+    "capacity": 1575
+  },
+  {
+    "shelter_id": 1654,
+    "shelter_name": "송현고등학교",
+    "Geolocation": "경기도 의정부시 용민로 159",
+    "capacity": 288
+  },
+  {
+    "shelter_id": 1655,
+    "shelter_name": "신동초등학교",
+    "Geolocation": "경기도 의정부시 시민로179번길 42",
+    "capacity": 230
+  },
+  {
+    "shelter_id": 1656,
+    "shelter_name": "어룡초등학교",
+    "Geolocation": "경기도 의정부시 부용로 241",
+    "capacity": 4333
+  },
+  {
+    "shelter_id": 1657,
+    "shelter_name": "어룡초등학교",
+    "Geolocation": "경기도 의정부시 부용로 241",
+    "capacity": 223
+  },
+  {
+    "shelter_id": 1658,
+    "shelter_name": "역전근린공원",
+    "Geolocation": "경기도 의정부시 의정부동 222-20",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 1659,
+    "shelter_name": "오동초등학교",
+    "Geolocation": "경기도 의정부시 용민로 151",
+    "capacity": 4235
+  },
+  {
+    "shelter_id": 1660,
+    "shelter_name": "오동초등학교",
+    "Geolocation": "경기도 의정부시 용민로 151",
+    "capacity": 118
+  },
+  {
+    "shelter_id": 1661,
+    "shelter_name": "의순초등학교",
+    "Geolocation": "경기도 의정부시 부용로 77",
+    "capacity": 252
+  },
+  {
+    "shelter_id": 1662,
+    "shelter_name": "의순초등학교",
+    "Geolocation": "경기도 의정부시 부용로 77",
+    "capacity": 2424
+  },
+  {
+    "shelter_id": 1663,
+    "shelter_name": "의정부1동 주민센터",
+    "Geolocation": "경기도 의정부시 가능로152번길 14",
+    "capacity": 119
+  },
+  {
+    "shelter_id": 1664,
+    "shelter_name": "의정부3동 주민센터",
+    "Geolocation": "경기도 의정부시 경의로 120",
+    "capacity": 145
+  },
+  {
+    "shelter_id": 1665,
+    "shelter_name": "의정부고등학교",
+    "Geolocation": "경기도 의정부시 녹양로 29",
+    "capacity": 5358
+  },
+  {
+    "shelter_id": 1666,
+    "shelter_name": "의정부시상설야외무대",
+    "Geolocation": "경기도 의정부시 의정로 69",
+    "capacity": 10688
+  },
+  {
+    "shelter_id": 1667,
+    "shelter_name": "의정부시장애인종합복지관",
+    "Geolocation": "경기도 의정부시 용민로 160",
+    "capacity": 60
+  },
+  {
+    "shelter_id": 1668,
+    "shelter_name": "의정부시청 테니스장",
+    "Geolocation": "경기도 의정부시 시민로 1",
+    "capacity": 1436
+  },
+  {
+    "shelter_id": 1669,
+    "shelter_name": "의정부여자중학교",
+    "Geolocation": "경기도 의정부시 신흥로365번길 40",
+    "capacity": 5979
+  },
+  {
+    "shelter_id": 1670,
+    "shelter_name": "의정부여자중학교",
+    "Geolocation": "경기도 의정부시 신흥로365번길 10",
+    "capacity": 479
+  },
+  {
+    "shelter_id": 1671,
+    "shelter_name": "의정부용현초등학교",
+    "Geolocation": "경기도 의정부시 용민로 87",
+    "capacity": 4550
+  },
+  {
+    "shelter_id": 1672,
+    "shelter_name": "의정부장암초등학교",
+    "Geolocation": "경기도 의정부시 동일로 417",
+    "capacity": 4594
+  },
+  {
+    "shelter_id": 1673,
+    "shelter_name": "의정부중앙초등학교",
+    "Geolocation": "경기도 의정부시 의정부동 224번지",
+    "capacity": 3749
+  },
+  {
+    "shelter_id": 1674,
+    "shelter_name": "의정부중앙초등학교",
+    "Geolocation": "경기도 의정부시 의정부동 224번지 의정부동",
+    "capacity": 310
+  },
+  {
+    "shelter_id": 1675,
+    "shelter_name": "의정부중학교",
+    "Geolocation": "경기도 의정부시 가능로 75",
+    "capacity": 384
+  },
+  {
+    "shelter_id": 1676,
+    "shelter_name": "의정부청룡초등학교",
+    "Geolocation": "경기도 의정부시 장곡로322번길 21",
+    "capacity": 4352
+  },
+  {
+    "shelter_id": 1677,
+    "shelter_name": "의정부체육관",
+    "Geolocation": "경기도 의정부시 체육로 90",
+    "capacity": 1761
+  },
+  {
+    "shelter_id": 1678,
+    "shelter_name": "의정부초등학교",
+    "Geolocation": "경기도 의정부시 동일로522번길 30",
+    "capacity": 4434
+  },
+  {
+    "shelter_id": 1679,
+    "shelter_name": "의정부호동초등학교",
+    "Geolocation": "경기도 의정부시 호동로 45",
+    "capacity": 6804
+  },
+  {
+    "shelter_id": 1680,
+    "shelter_name": "의정부호원초등학교",
+    "Geolocation": "경기도 의정부시 전좌로156번길 20",
+    "capacity": 88
+  },
+  {
+    "shelter_id": 1681,
+    "shelter_name": "의정부호원초등학교",
+    "Geolocation": "경기도 의정부시 전좌로156번길 20",
+    "capacity": 3903
+  },
+  {
+    "shelter_id": 1682,
+    "shelter_name": "의정부효자초등학교",
+    "Geolocation": "경기도 의정부시 부용로204번길 16",
+    "capacity": 5385
+  },
+  {
+    "shelter_id": 1683,
+    "shelter_name": "자금동 주민센터",
+    "Geolocation": "경기도 의정부시 거북로 13",
+    "capacity": 85
+  },
+  {
+    "shelter_id": 1684,
+    "shelter_name": "장암동 주민센터",
+    "Geolocation": "경기도 의정부시 장곡로250번길 23",
+    "capacity": 98
+  },
+  {
+    "shelter_id": 1685,
+    "shelter_name": "종합운동장",
+    "Geolocation": "경기도 의정부시 체육로 90",
+    "capacity": 950
+  },
+  {
+    "shelter_id": 1686,
+    "shelter_name": "직동근린공원",
+    "Geolocation": "경기도 의정부시 호국로1162번길 73",
+    "capacity": 12121
+  },
+  {
+    "shelter_id": 1687,
+    "shelter_name": "푸른마당근린공원",
+    "Geolocation": "경기도 의정부시 민락로 279",
+    "capacity": 19070
+  },
+  {
+    "shelter_id": 1688,
+    "shelter_name": "해오름근린공원",
+    "Geolocation": "경기도 의정부시 녹양로 134",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 1689,
+    "shelter_name": "호암초등학교",
+    "Geolocation": "경기도 의정부시 호암로 47",
+    "capacity": 3799
+  },
+  {
+    "shelter_id": 1690,
+    "shelter_name": "호원2동 행정복지센터",
+    "Geolocation": "경기도 의정부시 신흥로 115",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1691,
+    "shelter_name": "호원고등학교",
+    "Geolocation": "경기도 의정부시 망월로 56",
+    "capacity": 331
+  },
+  {
+    "shelter_id": 1692,
+    "shelter_name": "호원고등학교",
+    "Geolocation": "경기도 의정부시 망월로 56",
+    "capacity": 3851
+  },
+  {
+    "shelter_id": 1693,
+    "shelter_name": "활기체육공원",
+    "Geolocation": "경기도 의정부시 민락로 299",
+    "capacity": 36767
+  },
+  {
+    "shelter_id": 1694,
+    "shelter_name": "회룡중학교",
+    "Geolocation": "경기도 의정부시 안말로 45",
+    "capacity": 335
+  },
+  {
+    "shelter_id": 1695,
+    "shelter_name": "회룡중학교",
+    "Geolocation": "경기도 의정부시 안말로 45",
+    "capacity": 6662
+  },
+  {
+    "shelter_id": 1696,
+    "shelter_name": "효자고등학교",
+    "Geolocation": "경기도 의정부시 부용로 165",
+    "capacity": 4727
+  },
+  {
+    "shelter_id": 1697,
+    "shelter_name": "효자고등학교",
+    "Geolocation": "경기도 의정부시 부용로 165",
+    "capacity": 289
+  },
+  {
+    "shelter_id": 1698,
+    "shelter_name": "효자중학교",
+    "Geolocation": "경기도 의정부시 부용로185번길 15",
+    "capacity": 4728
+  },
+  {
+    "shelter_id": 1699,
+    "shelter_name": "흥선동 행정복지센터",
+    "Geolocation": "경기도 의정부시 흥선로 20",
+    "capacity": 319
+  },
+  {
+    "shelter_id": 1700,
+    "shelter_name": "가산초등학교 운동장",
+    "Geolocation": "경기도 이천시 부발읍 황무로2065번길 112",
+    "capacity": 5139
+  },
+  {
+    "shelter_id": 1701,
+    "shelter_name": "나래초등학교 운동장",
+    "Geolocation": "경기도 이천시 장호원읍 이풍로63번길 114",
+    "capacity": 5553
+  },
+  {
+    "shelter_id": 1702,
+    "shelter_name": "단월초등학교 운동장",
+    "Geolocation": "경기도 이천시 단월로 98",
+    "capacity": 7093
+  },
+  {
+    "shelter_id": 1703,
+    "shelter_name": "대월중학교 운동장",
+    "Geolocation": "경기도 이천시 대월면 대평로150번길 20",
+    "capacity": 7715
+  },
+  {
+    "shelter_id": 1704,
+    "shelter_name": "대월초등학교 운동장",
+    "Geolocation": "경기도 이천시 대월면 대평로178번길 48",
+    "capacity": 4959
+  },
+  {
+    "shelter_id": 1705,
+    "shelter_name": "도암초등학교 운동장",
+    "Geolocation": "경기도 이천시 신둔면 증신로 550",
+    "capacity": 5006
+  },
+  {
+    "shelter_id": 1706,
+    "shelter_name": "도지초등학교 운동장",
+    "Geolocation": "경기도 이천시 백사면 청백리로 207",
+    "capacity": 4428
+  },
+  {
+    "shelter_id": 1707,
+    "shelter_name": "마장중학교 운동장",
+    "Geolocation": "경기도 이천시 마장면 마도로 23",
+    "capacity": 6309
+  },
+  {
+    "shelter_id": 1708,
+    "shelter_name": "마장초등학교 운동장",
+    "Geolocation": "경기도 이천시 마장면 오천로 130",
+    "capacity": 6231
+  },
+  {
+    "shelter_id": 1709,
+    "shelter_name": "매곡초등학교 운동장",
+    "Geolocation": "경기도 이천시 호법면 이섭대천로96번길 8",
+    "capacity": 2128
+  },
+  {
+    "shelter_id": 1710,
+    "shelter_name": "백사초등학교 운동장",
+    "Geolocation": "경기도 이천시 백사면 현방로 55",
+    "capacity": 4113
+  },
+  {
+    "shelter_id": 1711,
+    "shelter_name": "부발초등학교 운동장",
+    "Geolocation": "경기도 이천시 부발읍 무촌로 155",
+    "capacity": 4853
+  },
+  {
+    "shelter_id": 1712,
+    "shelter_name": "부원고등학교 운동장",
+    "Geolocation": "경기도 이천시 장호원읍 서동대로 8857",
+    "capacity": 5804
+  },
+  {
+    "shelter_id": 1713,
+    "shelter_name": "사동초등학교 운동장",
+    "Geolocation": "경기도 이천시 대월면 경충대로2003번길 124-87",
+    "capacity": 4339
+  },
+  {
+    "shelter_id": 1714,
+    "shelter_name": "설봉중학교 운동장",
+    "Geolocation": "경기도 이천시 향교로 117",
+    "capacity": 5852
+  },
+  {
+    "shelter_id": 1715,
+    "shelter_name": "설봉초등학교 운동장",
+    "Geolocation": "경기도 이천시 향교로 129",
+    "capacity": 363
+  },
+  {
+    "shelter_id": 1716,
+    "shelter_name": "설성초등학교 운동장",
+    "Geolocation": "경기도 이천시 설성면 진상미로264번길 21-165",
+    "capacity": 4008
+  },
+  {
+    "shelter_id": 1717,
+    "shelter_name": "송곡초등학교 운동장",
+    "Geolocation": "경기도 이천시 모가면 진상미로 1054",
+    "capacity": 4513
+  },
+  {
+    "shelter_id": 1718,
+    "shelter_name": "신둔체육공원",
+    "Geolocation": "경기도 이천시 신둔면 경충대로3234번길 37",
+    "capacity": 11721
+  },
+  {
+    "shelter_id": 1719,
+    "shelter_name": "신둔초등학교 운동장",
+    "Geolocation": "경기도 이천시 신둔면 경충대로3150번길 82-3",
+    "capacity": 5336
+  },
+  {
+    "shelter_id": 1720,
+    "shelter_name": "신하초등학교 운동장",
+    "Geolocation": "경기도 이천시 부발읍 경충대로2250번길 12",
+    "capacity": 6648
+  },
+  {
+    "shelter_id": 1721,
+    "shelter_name": "아미초등학교 운동장",
+    "Geolocation": "경기도 이천시 부발읍 신아로92번길 32",
+    "capacity": 5495
+  },
+  {
+    "shelter_id": 1722,
+    "shelter_name": "안흥초등학교 운동장",
+    "Geolocation": "경기도 이천시 영창로300번길 16",
+    "capacity": 14659
+  },
+  {
+    "shelter_id": 1723,
+    "shelter_name": "온천공원",
+    "Geolocation": "경기도 이천시 애련정로136번길 84",
+    "capacity": 15114
+  },
+  {
+    "shelter_id": 1724,
+    "shelter_name": "율면초등학교 운동장",
+    "Geolocation": "경기도 이천시 율면 고당로 48",
+    "capacity": 5648
+  },
+  {
+    "shelter_id": 1725,
+    "shelter_name": "이천고등학교 운동장",
+    "Geolocation": "경기도 이천시 아리역로16번길 1",
+    "capacity": 11788
+  },
+  {
+    "shelter_id": 1726,
+    "shelter_name": "이천공설운동장",
+    "Geolocation": "경기도 이천시 서희로 7-14",
+    "capacity": 13068
+  },
+  {
+    "shelter_id": 1727,
+    "shelter_name": "이천남초등학교 운동장",
+    "Geolocation": "경기도 이천시 경충대로2614번길 32",
+    "capacity": 7287
+  },
+  {
+    "shelter_id": 1728,
+    "shelter_name": "이천세무고등학교 운동장",
+    "Geolocation": "경기도 이천시 설성면 설성로15번길 26",
+    "capacity": 10015
+  },
+  {
+    "shelter_id": 1729,
+    "shelter_name": "이천세무서 앞 광장",
+    "Geolocation": "",
+    "capacity": 4112
+  },
+  {
+    "shelter_id": 1730,
+    "shelter_name": "이천송정초등학교 운동장",
+    "Geolocation": "경기도 이천시 영창로45번길 165",
+    "capacity": 4827
+  },
+  {
+    "shelter_id": 1731,
+    "shelter_name": "이천양정여자고등학교 운동장",
+    "Geolocation": "경기도 이천시 영창로 119",
+    "capacity": 10962
+  },
+  {
+    "shelter_id": 1732,
+    "shelter_name": "이천제일고등학교 운동장",
+    "Geolocation": "경기도 이천시 애련정로 26",
+    "capacity": 9333
+  },
+  {
+    "shelter_id": 1733,
+    "shelter_name": "이천중학교 운동장",
+    "Geolocation": "경기도 이천시 애련정로 50",
+    "capacity": 13242
+  },
+  {
+    "shelter_id": 1734,
+    "shelter_name": "이천초등학교 운동장",
+    "Geolocation": "경기도 이천시 서희로81번길 20",
+    "capacity": 7522
+  },
+  {
+    "shelter_id": 1735,
+    "shelter_name": "이현고등학교 운동장",
+    "Geolocation": "경기도 이천시 증신로 88",
+    "capacity": 4023
+  },
+  {
+    "shelter_id": 1736,
+    "shelter_name": "이황초등학교 운동장",
+    "Geolocation": "경기도 이천시 장호원읍 경충대로 456-20",
+    "capacity": 3572
+  },
+  {
+    "shelter_id": 1737,
+    "shelter_name": "장호원중학교 운동장",
+    "Geolocation": "경기도 이천시 장호원읍 샘재로 27-15",
+    "capacity": 11357
+  },
+  {
+    "shelter_id": 1738,
+    "shelter_name": "장호원초등학교 운동장",
+    "Geolocation": "경기도 이천시 장호원읍 장감로 46",
+    "capacity": 5478
+  },
+  {
+    "shelter_id": 1739,
+    "shelter_name": "증포중학교 운동장",
+    "Geolocation": "경기도 이천시 애련정로 218",
+    "capacity": 2081
+  },
+  {
+    "shelter_id": 1740,
+    "shelter_name": "증포초등학교 운동장",
+    "Geolocation": "경기도 이천시 이섭대천로 1418",
+    "capacity": 4328
+  },
+  {
+    "shelter_id": 1741,
+    "shelter_name": "진가초등학교 운동장",
+    "Geolocation": "경기도 이천시 모가면 진상미로 1321-14",
+    "capacity": 5185
+  },
+  {
+    "shelter_id": 1742,
+    "shelter_name": "표교초등학교 운동장",
+    "Geolocation": "경기도 이천시 마장면 중부대로609번길 28-1",
+    "capacity": 3818
+  },
+  {
+    "shelter_id": 1743,
+    "shelter_name": "한내초등학교 운동장",
+    "Geolocation": "경기도 이천시 갈산로 71",
+    "capacity": 3769
+  },
+  {
+    "shelter_id": 1744,
+    "shelter_name": "호법초등학교 운동장",
+    "Geolocation": "경기도 이천시 호법면 이섭대천로537번길 8",
+    "capacity": 4078
+  },
+  {
+    "shelter_id": 1745,
+    "shelter_name": "가온초등학교 운동장",
+    "Geolocation": "경기도 파주시 가온로 134",
+    "capacity": 1739
+  },
+  {
+    "shelter_id": 1746,
+    "shelter_name": "갈현초등학교 운동장",
+    "Geolocation": "경기도 파주시 탄현면 평화로591번길 76",
+    "capacity": 928
+  },
+  {
+    "shelter_id": 1747,
+    "shelter_name": "경기도 파주시 법원읍",
+    "Geolocation": "경기도 파주시 법원읍 술이홀로1333번길 69",
+    "capacity": 2868
+  },
+  {
+    "shelter_id": 1748,
+    "shelter_name": "광탄고등학교 운동장",
+    "Geolocation": "경기도 파주시 광탄면 혜음로1128번길 16",
+    "capacity": 1147
+  },
+  {
+    "shelter_id": 1749,
+    "shelter_name": "광탄체육공원",
+    "Geolocation": "경기도 파주시 광탄면 부흥로 12-5",
+    "capacity": 13986
+  },
+  {
+    "shelter_id": 1750,
+    "shelter_name": "교하고등학교 운동장",
+    "Geolocation": "경기도 파주시 책향기로 180",
+    "capacity": 1928
+  },
+  {
+    "shelter_id": 1751,
+    "shelter_name": "교하중학교 운동장",
+    "Geolocation": "경기도 파주시 책향기로 194",
+    "capacity": 2138
+  },
+  {
+    "shelter_id": 1752,
+    "shelter_name": "교하체육공원",
+    "Geolocation": "경기도 파주시 하지석길 165-75",
+    "capacity": 5230
+  },
+  {
+    "shelter_id": 1753,
+    "shelter_name": "교하초등학교 운동장",
+    "Geolocation": "경기도 파주시 동편길 13",
+    "capacity": 6167
+  },
+  {
+    "shelter_id": 1754,
+    "shelter_name": "금릉중학교 운동장",
+    "Geolocation": "경기도 파주시 후곡로 66",
+    "capacity": 2153
+  },
+  {
+    "shelter_id": 1755,
+    "shelter_name": "금릉초등학교 운동장",
+    "Geolocation": "경기도 파주시 후곡로 56",
+    "capacity": 1657
+  },
+  {
+    "shelter_id": 1756,
+    "shelter_name": "금촌고등학교 운동장",
+    "Geolocation": "경기도 파주시 쇠재1길 18",
+    "capacity": 2783
+  },
+  {
+    "shelter_id": 1757,
+    "shelter_name": "금촌중학교 운동장",
+    "Geolocation": "경기도 파주시 쇠재1길 21",
+    "capacity": 1594
+  },
+  {
+    "shelter_id": 1758,
+    "shelter_name": "금촌체육공원",
+    "Geolocation": "경기도 파주시 평화로 120",
+    "capacity": 44628
+  },
+  {
+    "shelter_id": 1759,
+    "shelter_name": "금촌초등학교 운동장",
+    "Geolocation": "경기도 파주시 동산3길 38-11",
+    "capacity": 7972
+  },
+  {
+    "shelter_id": 1760,
+    "shelter_name": "금향초등학교 운동장",
+    "Geolocation": "경기도 파주시 쇠재로 123",
+    "capacity": 1576
+  },
+  {
+    "shelter_id": 1761,
+    "shelter_name": "금화초등학교 운동장",
+    "Geolocation": "경기도 파주시 새꽃로 55",
+    "capacity": 5605
+  },
+  {
+    "shelter_id": 1762,
+    "shelter_name": "내포리체육공원",
+    "Geolocation": "경기도 파주시 문산읍 방촌로 1213-48",
+    "capacity": 6370
+  },
+  {
+    "shelter_id": 1763,
+    "shelter_name": "능안초등학교 운동장",
+    "Geolocation": "경기도 파주시 조리읍 능안로 145",
+    "capacity": 1710
+  },
+  {
+    "shelter_id": 1764,
+    "shelter_name": "동패고등학교 운동장",
+    "Geolocation": "경기도 파주시 교하로 350",
+    "capacity": 2152
+  },
+  {
+    "shelter_id": 1765,
+    "shelter_name": "동패중학교 운동장",
+    "Geolocation": "경기도 파주시 교하로 381",
+    "capacity": 2367
+  },
+  {
+    "shelter_id": 1766,
+    "shelter_name": "동패초등학교 운동장",
+    "Geolocation": "경기도 파주시 교하로 272",
+    "capacity": 2079
+  },
+  {
+    "shelter_id": 1767,
+    "shelter_name": "두일중학교 운동장",
+    "Geolocation": "경기도 파주시 책향기숲길 39",
+    "capacity": 1803
+  },
+  {
+    "shelter_id": 1768,
+    "shelter_name": "두일초등학교 운동장",
+    "Geolocation": "경기도 파주시 책향기숲길 47",
+    "capacity": 1600
+  },
+  {
+    "shelter_id": 1769,
+    "shelter_name": "마지초등학교 운동장",
+    "Geolocation": "경기도 파주시 적성면 칠중1길 39",
+    "capacity": 1563
+  },
+  {
+    "shelter_id": 1770,
+    "shelter_name": "문발초등학교 운동장",
+    "Geolocation": "경기도 파주시 노을빛로 21",
+    "capacity": 1827
+  },
+  {
+    "shelter_id": 1771,
+    "shelter_name": "문산고등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 당동1로 22",
+    "capacity": 3116
+  },
+  {
+    "shelter_id": 1772,
+    "shelter_name": "문산동중학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 독산로31번길 73-1",
+    "capacity": 3879
+  },
+  {
+    "shelter_id": 1773,
+    "shelter_name": "문산동초등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 선유울3길 85",
+    "capacity": 2255
+  },
+  {
+    "shelter_id": 1774,
+    "shelter_name": "문산북중학교  운동장",
+    "Geolocation": "경기도 파주시 문산읍 당동1로 22",
+    "capacity": 3116
+  },
+  {
+    "shelter_id": 1775,
+    "shelter_name": "문산체육공원",
+    "Geolocation": "경기도 파주시 문산읍 율곡로 408",
+    "capacity": 14861
+  },
+  {
+    "shelter_id": 1776,
+    "shelter_name": "문산초등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 문향로67번길 58",
+    "capacity": 1636
+  },
+  {
+    "shelter_id": 1777,
+    "shelter_name": "법원여자중학교 운동장",
+    "Geolocation": "경기도 파주시 법원읍 자운서원로 31",
+    "capacity": 3273
+  },
+  {
+    "shelter_id": 1778,
+    "shelter_name": "법원체육공원",
+    "Geolocation": "경기도 파주시 법원읍 술이홀로 679",
+    "capacity": 2840
+  },
+  {
+    "shelter_id": 1779,
+    "shelter_name": "봉일천중학교 운동장",
+    "Geolocation": "경기도 파주시 조리읍 두루봉로 47",
+    "capacity": 5807
+  },
+  {
+    "shelter_id": 1780,
+    "shelter_name": "봉일천초등학교 운동장",
+    "Geolocation": "경기도 파주시 조리읍 통일로 333",
+    "capacity": 3987
+  },
+  {
+    "shelter_id": 1781,
+    "shelter_name": "삼광중학교 운동장",
+    "Geolocation": "경기도 파주시 적성면 청송로 701",
+    "capacity": 3333
+  },
+  {
+    "shelter_id": 1782,
+    "shelter_name": "삼성초등학교 운동장",
+    "Geolocation": "경기도 파주시 탄현면 방촌로 1009-20",
+    "capacity": 1678
+  },
+  {
+    "shelter_id": 1783,
+    "shelter_name": "새금초등학교 운동장",
+    "Geolocation": "경기도 파주시 후곡로 104",
+    "capacity": 1164
+  },
+  {
+    "shelter_id": 1784,
+    "shelter_name": "석곶초등학교 운동장",
+    "Geolocation": "경기도 파주시 책향기로 451",
+    "capacity": 2238
+  },
+  {
+    "shelter_id": 1785,
+    "shelter_name": "선유중학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 독서울1길 37",
+    "capacity": 1715
+  },
+  {
+    "shelter_id": 1786,
+    "shelter_name": "세경고등학교 운동장",
+    "Geolocation": "경기도 파주시 파주읍 연풍리 445-0",
+    "capacity": 2455
+  },
+  {
+    "shelter_id": 1787,
+    "shelter_name": "신산초등학교 운동장",
+    "Geolocation": "경기도 파주시 광탄면 심궁로 13",
+    "capacity": 10548
+  },
+  {
+    "shelter_id": 1788,
+    "shelter_name": "신촌동 공터 1",
+    "Geolocation": "경기도 파주시 신촌동 725-4",
+    "capacity": 763
+  },
+  {
+    "shelter_id": 1789,
+    "shelter_name": "신촌동 공터 2",
+    "Geolocation": "경기도 파주시 신촌동 722-3",
+    "capacity": 1376
+  },
+  {
+    "shelter_id": 1790,
+    "shelter_name": "연풍초등학교 운동장",
+    "Geolocation": "경기도 파주시 파주읍 연풍초교길 25",
+    "capacity": 5455
+  },
+  {
+    "shelter_id": 1791,
+    "shelter_name": "와동초등학교 운동장",
+    "Geolocation": "경기도 파주시 금바위로 17",
+    "capacity": 2194
+  },
+  {
+    "shelter_id": 1792,
+    "shelter_name": "와석초등학교 운동장",
+    "Geolocation": "경기도 파주시 한빛로 7",
+    "capacity": 3024
+  },
+  {
+    "shelter_id": 1793,
+    "shelter_name": "운광초등학교 운동장",
+    "Geolocation": "경기도 파주시 한울로 90",
+    "capacity": 1653
+  },
+  {
+    "shelter_id": 1794,
+    "shelter_name": "운정고등학교 운동장",
+    "Geolocation": "경기도 파주시 와석순환로 267",
+    "capacity": 1728
+  },
+  {
+    "shelter_id": 1795,
+    "shelter_name": "운정지구 메아리공원",
+    "Geolocation": "경기도 파주시 동패동 1766",
+    "capacity": 40638
+  },
+  {
+    "shelter_id": 1796,
+    "shelter_name": "운정지구 오름공원",
+    "Geolocation": "경기도 파주시 야당동 993",
+    "capacity": 11480
+  },
+  {
+    "shelter_id": 1797,
+    "shelter_name": "운정초등학교 운동장",
+    "Geolocation": "경기도 파주시 와석순환로 35-34",
+    "capacity": 1358
+  },
+  {
+    "shelter_id": 1798,
+    "shelter_name": "웅담초등학교 운동장",
+    "Geolocation": "경기도 파주시 법원읍 수작골길 14",
+    "capacity": 2388
+  },
+  {
+    "shelter_id": 1799,
+    "shelter_name": "율곡중,고등학교 운동장",
+    "Geolocation": "경기도 파주시 법원읍 사임당로905번길 10",
+    "capacity": 4090
+  },
+  {
+    "shelter_id": 1800,
+    "shelter_name": "임진초등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 문향로17번길 36",
+    "capacity": 2302
+  },
+  {
+    "shelter_id": 1801,
+    "shelter_name": "자운학교 운동장",
+    "Geolocation": "경기도 파주시 교하로 220",
+    "capacity": 7323
+  },
+  {
+    "shelter_id": 1802,
+    "shelter_name": "자유초등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 방촌로 1722",
+    "capacity": 1958
+  },
+  {
+    "shelter_id": 1803,
+    "shelter_name": "장파초등학교 운동장",
+    "Geolocation": "경기도 파주시 파평면 장마루5길 11",
+    "capacity": 5533
+  },
+  {
+    "shelter_id": 1804,
+    "shelter_name": "지산중학교 운동장",
+    "Geolocation": "경기도 파주시 미래로 532",
+    "capacity": 1843
+  },
+  {
+    "shelter_id": 1805,
+    "shelter_name": "지산초등학교 운동장",
+    "Geolocation": "경기도 파주시 경의로 1274",
+    "capacity": 1609
+  },
+  {
+    "shelter_id": 1806,
+    "shelter_name": "천현초등학교 운동장",
+    "Geolocation": "경기도 파주시 법원읍 사임당로 875",
+    "capacity": 3114
+  },
+  {
+    "shelter_id": 1807,
+    "shelter_name": "청석초등학교 운동장",
+    "Geolocation": "경기도 파주시 청석로 330",
+    "capacity": 2142
+  },
+  {
+    "shelter_id": 1808,
+    "shelter_name": "청암초등학교 운동장",
+    "Geolocation": "경기도 파주시 청암로 16",
+    "capacity": 1623
+  },
+  {
+    "shelter_id": 1809,
+    "shelter_name": "탄현면 공터 1",
+    "Geolocation": "경기도 파주시 탄현면 헤이리마을길 70-21",
+    "capacity": 4408
+  },
+  {
+    "shelter_id": 1810,
+    "shelter_name": "통일동산(계절화원)",
+    "Geolocation": "경기도 파주시 탄현면 성동리 669-3",
+    "capacity": 6478
+  },
+  {
+    "shelter_id": 1811,
+    "shelter_name": "통일초등학교 운동장",
+    "Geolocation": "경기도 파주시 탄현면 사슴벌레로 14",
+    "capacity": 1616
+  },
+  {
+    "shelter_id": 1812,
+    "shelter_name": "파주고등학교 운동장",
+    "Geolocation": "경기도 파주시 문산읍 독산로31번길 39",
+    "capacity": 3879
+  },
+  {
+    "shelter_id": 1813,
+    "shelter_name": "파주광일중학교 운동장",
+    "Geolocation": "경기도 파주시 월롱면 함영골길 10",
+    "capacity": 2788
+  },
+  {
+    "shelter_id": 1814,
+    "shelter_name": "파주대원초등학교 운동장",
+    "Geolocation": "경기도 파주시 조리읍 대원로 30",
+    "capacity": 1215
+  },
+  {
+    "shelter_id": 1815,
+    "shelter_name": "파주초등학교 운동장",
+    "Geolocation": "경기도 파주시 파주읍 우계로53번길 15",
+    "capacity": 5455
+  },
+  {
+    "shelter_id": 1816,
+    "shelter_name": "파평초등학교 운동장",
+    "Geolocation": "경기도 파주시 파평면 파평산로478번길 37",
+    "capacity": 5759
+  },
+  {
+    "shelter_id": 1817,
+    "shelter_name": "한가람중학교 운동장",
+    "Geolocation": "경기도 파주시 금바위로 77",
+    "capacity": 1527
+  },
+  {
+    "shelter_id": 1818,
+    "shelter_name": "한가람초등학교 운동장",
+    "Geolocation": "경기도 파주시 금바위로 87",
+    "capacity": 5311
+  },
+  {
+    "shelter_id": 1819,
+    "shelter_name": "한민고등학교 운동장",
+    "Geolocation": "경기도 파주시 광탄면 혜음로 765",
+    "capacity": 2327
+  },
+  {
+    "shelter_id": 1820,
+    "shelter_name": "한빛고등학교 운동장",
+    "Geolocation": "경기도 파주시 한빛로 36",
+    "capacity": 1697
+  },
+  {
+    "shelter_id": 1821,
+    "shelter_name": "한빛중학교 운동장",
+    "Geolocation": "경기도 파주시 한빛로 56",
+    "capacity": 1455
+  },
+  {
+    "shelter_id": 1822,
+    "shelter_name": "한빛초등학교 운동장",
+    "Geolocation": "경기도 파주시 미래로408번길 77",
+    "capacity": 1527
+  },
+  {
+    "shelter_id": 1823,
+    "shelter_name": "해솔중학교 운동장",
+    "Geolocation": "경기도 파주시 해솔로 60",
+    "capacity": 1033
+  },
+  {
+    "shelter_id": 1824,
+    "shelter_name": "해솔초등학교 운동장",
+    "Geolocation": "경기도 파주시 해솔로 40",
+    "capacity": 1119
+  },
+  {
+    "shelter_id": 1825,
+    "shelter_name": "가사초등학교",
+    "Geolocation": "경기도 평택시 현덕면 기산2길 16",
+    "capacity": 758
+  },
+  {
+    "shelter_id": 1826,
+    "shelter_name": "갈곶초등학교",
+    "Geolocation": "경기도 평택시 진위면 엘지로 57",
+    "capacity": 220
+  },
+  {
+    "shelter_id": 1827,
+    "shelter_name": "갈곶초등학교",
+    "Geolocation": "경기도 평택시 진위면 엘지로 57",
+    "capacity": 909
+  },
+  {
+    "shelter_id": 1828,
+    "shelter_name": "경기물류고등학교",
+    "Geolocation": "경기도 평택시 안중읍 안현로 403",
+    "capacity": 1515
+  },
+  {
+    "shelter_id": 1829,
+    "shelter_name": "도곡중학교",
+    "Geolocation": "경기도 평택시 포승읍 여술로 58",
+    "capacity": 150
+  },
+  {
+    "shelter_id": 1830,
+    "shelter_name": "도곡중학교",
+    "Geolocation": "경기도 평택시 포승읍 여술로 58",
+    "capacity": 788
+  },
+  {
+    "shelter_id": 1831,
+    "shelter_name": "동삭초등학교",
+    "Geolocation": "경기도 평택시 동삭로 370",
+    "capacity": 1030
+  },
+  {
+    "shelter_id": 1832,
+    "shelter_name": "라온중학교",
+    "Geolocation": "경기도 평택시 경기대로1376번길 38-6",
+    "capacity": 758
+  },
+  {
+    "shelter_id": 1833,
+    "shelter_name": "라온중학교",
+    "Geolocation": "경기도 평택시 경기대로1376번길 38-6",
+    "capacity": 800
+  },
+  {
+    "shelter_id": 1834,
+    "shelter_name": "반지초등학교",
+    "Geolocation": "경기도 평택시 이충로 7",
+    "capacity": 250
+  },
+  {
+    "shelter_id": 1835,
+    "shelter_name": "반지초등학교",
+    "Geolocation": "경기도 평택시 이충로 7",
+    "capacity": 606
+  },
+  {
+    "shelter_id": 1836,
+    "shelter_name": "복창초등학교",
+    "Geolocation": "경기도 평택시 서정북로 3",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 1837,
+    "shelter_name": "부용초등학교",
+    "Geolocation": "경기도 평택시 팽성읍 동서촌로 65",
+    "capacity": 1757
+  },
+  {
+    "shelter_id": 1838,
+    "shelter_name": "비전초등학교",
+    "Geolocation": "경기도 평택시 비전1로57번길 63",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1839,
+    "shelter_name": "비전초등학교",
+    "Geolocation": "경기도 평택시 비전1로57번길 63",
+    "capacity": 1424
+  },
+  {
+    "shelter_id": 1840,
+    "shelter_name": "서탄초등학교",
+    "Geolocation": "경기도 평택시 서탄면 금암2길 121",
+    "capacity": 1182
+  },
+  {
+    "shelter_id": 1841,
+    "shelter_name": "송북초등학교",
+    "Geolocation": "경기도 평택시 지산로 90",
+    "capacity": 1667
+  },
+  {
+    "shelter_id": 1842,
+    "shelter_name": "송탄고등학교",
+    "Geolocation": "경기도 평택시 정암로 142",
+    "capacity": 1424
+  },
+  {
+    "shelter_id": 1843,
+    "shelter_name": "송탄초등학교",
+    "Geolocation": "경기도 평택시 막곡길 67",
+    "capacity": 909
+  },
+  {
+    "shelter_id": 1844,
+    "shelter_name": "송탄초등학교",
+    "Geolocation": "경기도 평택시 막곡길 67",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1845,
+    "shelter_name": "안중고등학교 운동장",
+    "Geolocation": "경기도 평택시 안중읍 안중믿음길 32",
+    "capacity": 2182
+  },
+  {
+    "shelter_id": 1846,
+    "shelter_name": "오성초등학교",
+    "Geolocation": "경기도 평택시 오성면 숙성시장길 15",
+    "capacity": 1636
+  },
+  {
+    "shelter_id": 1847,
+    "shelter_name": "원정초등학교",
+    "Geolocation": "경기도 평택시 포승읍 평택항로 469",
+    "capacity": 939
+  },
+  {
+    "shelter_id": 1848,
+    "shelter_name": "이충고등학교",
+    "Geolocation": "경기도 평택시 이충로35번길 50",
+    "capacity": 848
+  },
+  {
+    "shelter_id": 1849,
+    "shelter_name": "이충고등학교 (체육관)",
+    "Geolocation": "경기도 평택시 이충로35번길 50",
+    "capacity": 210
+  },
+  {
+    "shelter_id": 1850,
+    "shelter_name": "이충중학교",
+    "Geolocation": "경기도 평택시 이충로35번길 5",
+    "capacity": 200
+  },
+  {
+    "shelter_id": 1851,
+    "shelter_name": "이충초등학교",
+    "Geolocation": "경기도 평택시 이충로 93-5",
+    "capacity": 300
+  },
+  {
+    "shelter_id": 1852,
+    "shelter_name": "이화초등학교",
+    "Geolocation": "경기도 평택시 평남로 906",
+    "capacity": 276
+  },
+  {
+    "shelter_id": 1853,
+    "shelter_name": "장당중학교",
+    "Geolocation": "경기도 평택시 장당길 40",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 1854,
+    "shelter_name": "장당초등학교",
+    "Geolocation": "경기도 평택시 장당길 40",
+    "capacity": 100
+  },
+  {
+    "shelter_id": 1855,
+    "shelter_name": "중앙초등학교",
+    "Geolocation": "경기도 평택시 세교로 11",
+    "capacity": 1136
+  },
+  {
+    "shelter_id": 1856,
+    "shelter_name": "지산초등학교",
+    "Geolocation": "경기도 평택시 지산2로 57",
+    "capacity": 727
+  },
+  {
+    "shelter_id": 1857,
+    "shelter_name": "진위고등학교",
+    "Geolocation": "경기도 평택시 진위면 진위서로 47",
+    "capacity": 2212
+  },
+  {
+    "shelter_id": 1858,
+    "shelter_name": "진위초등학교",
+    "Geolocation": "경기도 평택시 진위면 봉남길 49",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 1859,
+    "shelter_name": "청담중학교",
+    "Geolocation": "경기도 평택시 팽성읍 부용로56번길 20",
+    "capacity": 1718
+  },
+  {
+    "shelter_id": 1860,
+    "shelter_name": "평일초등학교",
+    "Geolocation": "경기도 평택시 평남로 626",
+    "capacity": 2363
+  },
+  {
+    "shelter_id": 1861,
+    "shelter_name": "평택지산초등학교",
+    "Geolocation": "경기도 평택시 지산2로 57",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1862,
+    "shelter_name": "평택초등학교",
+    "Geolocation": "경기도 평택시 원평2로 4",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 1863,
+    "shelter_name": "포승중학교",
+    "Geolocation": "경기도 평택시 포승읍 서동대로 1138",
+    "capacity": 2273
+  },
+  {
+    "shelter_id": 1864,
+    "shelter_name": "합정초등학교",
+    "Geolocation": "경기도 평택시 평택4로 11",
+    "capacity": 939
+  },
+  {
+    "shelter_id": 1865,
+    "shelter_name": "합정초등학교",
+    "Geolocation": "경기도 평택시 평택4로 11",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1866,
+    "shelter_name": "현덕초등학교",
+    "Geolocation": "경기도 평택시 현덕면 현덕로 1254",
+    "capacity": 970
+  },
+  {
+    "shelter_id": 1867,
+    "shelter_name": "홍원초등학교",
+    "Geolocation": "경기도 평택시 포승읍 외원길 26",
+    "capacity": 909
+  },
+  {
+    "shelter_id": 1868,
+    "shelter_name": "효명중학교",
+    "Geolocation": "경기도 평택시 송탄로 51",
+    "capacity": 1667
+  },
+  {
+    "shelter_id": 1869,
+    "shelter_name": "가산초 운동장",
+    "Geolocation": "경기도 포천시 가산면 가산로309번길 25",
+    "capacity": 2182
+  },
+  {
+    "shelter_id": 1870,
+    "shelter_name": "갈월중 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 죽엽산로 56-12",
+    "capacity": 1273
+  },
+  {
+    "shelter_id": 1871,
+    "shelter_name": "경북중 운동장",
+    "Geolocation": "경기도 포천시 가산면 감암길 16",
+    "capacity": 1758
+  },
+  {
+    "shelter_id": 1872,
+    "shelter_name": "관인고 운동장",
+    "Geolocation": "경기도 포천시 관인면 관인로 20",
+    "capacity": 2485
+  },
+  {
+    "shelter_id": 1873,
+    "shelter_name": "관인초 운동장",
+    "Geolocation": "경기도 포천시 관인면 관인로 5",
+    "capacity": 1418
+  },
+  {
+    "shelter_id": 1874,
+    "shelter_name": "금주초 운동장",
+    "Geolocation": "경기도 포천시 영중면 궁들길 50",
+    "capacity": 1000
+  },
+  {
+    "shelter_id": 1875,
+    "shelter_name": "내촌중 운동장",
+    "Geolocation": "경기도 포천시 내촌면 금강로2259번길 7-7",
+    "capacity": 2509
+  },
+  {
+    "shelter_id": 1876,
+    "shelter_name": "내촌초 운동장",
+    "Geolocation": "경기도 포천시 내촌면 내촌로 88",
+    "capacity": 1970
+  },
+  {
+    "shelter_id": 1877,
+    "shelter_name": "노곡초 운동장",
+    "Geolocation": "경기도 포천시 이동면 성장로869번길 4",
+    "capacity": 1448
+  },
+  {
+    "shelter_id": 1878,
+    "shelter_name": "대경중 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 봉솔로 23",
+    "capacity": 1545
+  },
+  {
+    "shelter_id": 1879,
+    "shelter_name": "도평초 운동장",
+    "Geolocation": "경기도 포천시 이동면 도리돌길 21",
+    "capacity": 1152
+  },
+  {
+    "shelter_id": 1880,
+    "shelter_name": "동남고 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 솔모루로3번길 69",
+    "capacity": 2615
+  },
+  {
+    "shelter_id": 1881,
+    "shelter_name": "삼정초 운동장",
+    "Geolocation": "경기도 포천시 신북면 청신로947번길 17",
+    "capacity": 667
+  },
+  {
+    "shelter_id": 1882,
+    "shelter_name": "선단초 운동장",
+    "Geolocation": "경기도 포천시 삼육사로2111번길 29",
+    "capacity": 1364
+  },
+  {
+    "shelter_id": 1883,
+    "shelter_name": "송우고 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 태봉로 125",
+    "capacity": 958
+  },
+  {
+    "shelter_id": 1884,
+    "shelter_name": "송우중 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 송선로 18",
+    "capacity": 485
+  },
+  {
+    "shelter_id": 1885,
+    "shelter_name": "송우초등학교",
+    "Geolocation": "경기도 포천시 소흘읍 송우로 42",
+    "capacity": 1435
+  },
+  {
+    "shelter_id": 1886,
+    "shelter_name": "신봉초등학교",
+    "Geolocation": "경기도 포천시 소흘읍 송우로 98",
+    "capacity": 1894
+  },
+  {
+    "shelter_id": 1887,
+    "shelter_name": "신북초 운동장",
+    "Geolocation": "경기도 포천시 신북면 청신로 2079-19",
+    "capacity": 1385
+  },
+  {
+    "shelter_id": 1888,
+    "shelter_name": "영북고 운동장",
+    "Geolocation": "경기도 포천시 영북면 영북로 136",
+    "capacity": 1636
+  },
+  {
+    "shelter_id": 1889,
+    "shelter_name": "영북중 운동장",
+    "Geolocation": "경기도 포천시 영북면 영북로 214",
+    "capacity": 2152
+  },
+  {
+    "shelter_id": 1890,
+    "shelter_name": "영북초 운동장",
+    "Geolocation": "경기도 포천시 영북면 영북로148번길 46",
+    "capacity": 1879
+  },
+  {
+    "shelter_id": 1891,
+    "shelter_name": "영중중 운동장",
+    "Geolocation": "경기도 포천시 영중면 양문로1길 23",
+    "capacity": 2303
+  },
+  {
+    "shelter_id": 1892,
+    "shelter_name": "영중초 운동장",
+    "Geolocation": "경기도 포천시 영중면 호국로 3054",
+    "capacity": 1515
+  },
+  {
+    "shelter_id": 1893,
+    "shelter_name": "영평초 운동장",
+    "Geolocation": "경기도 포천시 영중면 전영로1429번길 5",
+    "capacity": 1273
+  },
+  {
+    "shelter_id": 1894,
+    "shelter_name": "왕방초 운동장",
+    "Geolocation": "경기도 포천시 신북면 학동로 52",
+    "capacity": 1848
+  },
+  {
+    "shelter_id": 1895,
+    "shelter_name": "외북초 운동장",
+    "Geolocation": "경기도 포천시 신북면 포천로 2199",
+    "capacity": 1152
+  },
+  {
+    "shelter_id": 1896,
+    "shelter_name": "운담초 운동장",
+    "Geolocation": "경기도 포천시 일동면 화동로 1239",
+    "capacity": 1418
+  },
+  {
+    "shelter_id": 1897,
+    "shelter_name": "유암초 운동장",
+    "Geolocation": "경기도 포천시 가산면 유교로88번길 8",
+    "capacity": 742
+  },
+  {
+    "shelter_id": 1898,
+    "shelter_name": "이곡초 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 이곡길 5",
+    "capacity": 897
+  },
+  {
+    "shelter_id": 1899,
+    "shelter_name": "이동중 운동장",
+    "Geolocation": "경기도 포천시 이동면 늠바위1길 13",
+    "capacity": 2312
+  },
+  {
+    "shelter_id": 1900,
+    "shelter_name": "이동초 운동장",
+    "Geolocation": "경기도 포천시 이동면 화동로 2034",
+    "capacity": 2473
+  },
+  {
+    "shelter_id": 1901,
+    "shelter_name": "일동고 운동장",
+    "Geolocation": "경기도 포천시 일동면 화동로1079번길 28",
+    "capacity": 3585
+  },
+  {
+    "shelter_id": 1902,
+    "shelter_name": "일동초 운동장",
+    "Geolocation": "경기도 포천시 일동면 화동로 1019",
+    "capacity": 1818
+  },
+  {
+    "shelter_id": 1903,
+    "shelter_name": "정교초 운동장",
+    "Geolocation": "경기도 포천시 가산면 정금로 77",
+    "capacity": 1152
+  },
+  {
+    "shelter_id": 1904,
+    "shelter_name": "창수초 운동장",
+    "Geolocation": "경기도 포천시 창수면 옥수로58번길 4",
+    "capacity": 1333
+  },
+  {
+    "shelter_id": 1905,
+    "shelter_name": "청성초 운동장",
+    "Geolocation": "경기도 포천시 군내면 솔밭길 12-1",
+    "capacity": 1697
+  },
+  {
+    "shelter_id": 1906,
+    "shelter_name": "추산초 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 솔모루로3번길 52-20",
+    "capacity": 1591
+  },
+  {
+    "shelter_id": 1907,
+    "shelter_name": "축석초 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 무란1길 25",
+    "capacity": 1242
+  },
+  {
+    "shelter_id": 1908,
+    "shelter_name": "태봉초 운동장",
+    "Geolocation": "경기도 포천시 소흘읍 송선로 8",
+    "capacity": 1303
+  },
+  {
+    "shelter_id": 1909,
+    "shelter_name": "포천고 운동장",
+    "Geolocation": "경기도 포천시 원모루로 40",
+    "capacity": 3680
+  },
+  {
+    "shelter_id": 1910,
+    "shelter_name": "포천일고 운동장",
+    "Geolocation": "경기도 포천시 군내면 청군로 3426",
+    "capacity": 2939
+  },
+  {
+    "shelter_id": 1911,
+    "shelter_name": "포천중 운동장",
+    "Geolocation": "경기도 포천시 신북면 중앙로207번길 65",
+    "capacity": 2545
+  },
+  {
+    "shelter_id": 1912,
+    "shelter_name": "포천초 운동장",
+    "Geolocation": "경기도 포천시 신읍길 40",
+    "capacity": 1576
+  },
+  {
+    "shelter_id": 1913,
+    "shelter_name": "화현초 운동장",
+    "Geolocation": "경기도 포천시 화현면 달인동로1길 29",
+    "capacity": 1091
+  },
+  {
+    "shelter_id": 1914,
+    "shelter_name": "고골초등학교 운동장",
+    "Geolocation": "경기도 하남시 대성로 90",
+    "capacity": 198
+  },
+  {
+    "shelter_id": 1915,
+    "shelter_name": "동부중학교 운동장",
+    "Geolocation": "경기도 하남시 신평로 15",
+    "capacity": 56
+  },
+  {
+    "shelter_id": 1916,
+    "shelter_name": "동부초등학교 운동장",
+    "Geolocation": "경기도 하남시 역말로 55",
+    "capacity": 462
+  },
+  {
+    "shelter_id": 1917,
+    "shelter_name": "서부초등학교 운동장",
+    "Geolocation": "경기도 하남시 서하남로 161",
+    "capacity": 198
+  },
+  {
+    "shelter_id": 1918,
+    "shelter_name": "신장초등학교 운동장",
+    "Geolocation": "경기도 하남시 신평로 100",
+    "capacity": 603
+  },
+  {
+    "shelter_id": 1919,
+    "shelter_name": "위례초등학교 운동장",
+    "Geolocation": "경기도 하남시 위례순환로 333",
+    "capacity": 287
+  },
+  {
+    "shelter_id": 1920,
+    "shelter_name": "하남천현초등학교 운동장",
+    "Geolocation": "경기도 하남시 천현로 45",
+    "capacity": 514
+  },
+  {
+    "shelter_id": 1921,
+    "shelter_name": "한국애니메이션고 운동장",
+    "Geolocation": "경기도 하남시 검단산로 223",
+    "capacity": 222
+  },
+  {
+    "shelter_id": 1922,
+    "shelter_name": "갈담초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 갈담초교길 24",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 1923,
+    "shelter_name": "갈천초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 발안로 701-23",
+    "capacity": 10244
+  },
+  {
+    "shelter_id": 1924,
+    "shelter_name": "고정초등학교 운동장",
+    "Geolocation": "경기도 화성시 송산면 공룡로 326",
+    "capacity": 7109
+  },
+  {
+    "shelter_id": 1925,
+    "shelter_name": "구봉초등학교 운동장",
+    "Geolocation": "경기도 화성시 병점1로 105",
+    "capacity": 5323
+  },
+  {
+    "shelter_id": 1926,
+    "shelter_name": "금곡초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄문화센터로 13",
+    "capacity": 3538
+  },
+  {
+    "shelter_id": 1927,
+    "shelter_name": "기산초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄지성로 344",
+    "capacity": 3446
+  },
+  {
+    "shelter_id": 1928,
+    "shelter_name": "기안중학교 운동장",
+    "Geolocation": "경기도 화성시 효행로291번길 29",
+    "capacity": 3372
+  },
+  {
+    "shelter_id": 1929,
+    "shelter_name": "기안초등학교 운동장",
+    "Geolocation": "경기도 화성시 기안길 18",
+    "capacity": 8614
+  },
+  {
+    "shelter_id": 1930,
+    "shelter_name": "남양초등학교 운동장",
+    "Geolocation": "경기도 화성시 남양읍 남양시장로55번길 7",
+    "capacity": 6723
+  },
+  {
+    "shelter_id": 1931,
+    "shelter_name": "노진초등학교 운동장",
+    "Geolocation": "경기도 화성시 장안면 화곡로 166",
+    "capacity": 4012
+  },
+  {
+    "shelter_id": 1932,
+    "shelter_name": "능동고등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄원천로 315-26",
+    "capacity": 3435
+  },
+  {
+    "shelter_id": 1933,
+    "shelter_name": "능동중학교 운동장",
+    "Geolocation": "경기도 화성시 동탄원천로 289-17",
+    "capacity": 2880
+  },
+  {
+    "shelter_id": 1934,
+    "shelter_name": "능동초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄원천로 315-27",
+    "capacity": 3769
+  },
+  {
+    "shelter_id": 1935,
+    "shelter_name": "대양초등학교 운동장",
+    "Geolocation": "경기도 화성시 남양읍 시청로32번길 74-2",
+    "capacity": 1881
+  },
+  {
+    "shelter_id": 1936,
+    "shelter_name": "도이초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 행정동로 87",
+    "capacity": 3625
+  },
+  {
+    "shelter_id": 1937,
+    "shelter_name": "동양초등학교 운동장",
+    "Geolocation": "경기도 화성시 남양읍 시청로45번길 11",
+    "capacity": 3733
+  },
+  {
+    "shelter_id": 1938,
+    "shelter_name": "동탄고등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄공원로1길 26-7",
+    "capacity": 3385
+  },
+  {
+    "shelter_id": 1939,
+    "shelter_name": "동탄목동중학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로20길 52",
+    "capacity": 4766
+  },
+  {
+    "shelter_id": 1940,
+    "shelter_name": "동탄초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄감배산로 26",
+    "capacity": 3328
+  },
+  {
+    "shelter_id": 1941,
+    "shelter_name": "동학초등학교 운동장",
+    "Geolocation": "경기도 화성시 영통로27번길 46",
+    "capacity": 4883
+  },
+  {
+    "shelter_id": 1942,
+    "shelter_name": "동화초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 동화새터길 130",
+    "capacity": 3272
+  },
+  {
+    "shelter_id": 1943,
+    "shelter_name": "마도초등학교 운동장",
+    "Geolocation": "경기도 화성시 마도면 석교로 157",
+    "capacity": 3806
+  },
+  {
+    "shelter_id": 1944,
+    "shelter_name": "마산초등학교 운동장",
+    "Geolocation": "경기도 화성시 송산면 송산포도로 582",
+    "capacity": 10454
+  },
+  {
+    "shelter_id": 1945,
+    "shelter_name": "무봉초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄청계로 303-34",
+    "capacity": 1924
+  },
+  {
+    "shelter_id": 1946,
+    "shelter_name": "반석초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄반석로 22",
+    "capacity": 3242
+  },
+  {
+    "shelter_id": 1947,
+    "shelter_name": "반송고등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄반석로 21",
+    "capacity": 4671
+  },
+  {
+    "shelter_id": 1948,
+    "shelter_name": "반송초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄솔빛로 14",
+    "capacity": 2557
+  },
+  {
+    "shelter_id": 1949,
+    "shelter_name": "반월초등학교 운동장",
+    "Geolocation": "경기도 화성시 효행로 1281-23",
+    "capacity": 3305
+  },
+  {
+    "shelter_id": 1950,
+    "shelter_name": "발안초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 발안로 8",
+    "capacity": 6690
+  },
+  {
+    "shelter_id": 1951,
+    "shelter_name": "방교초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄산척로1길 11",
+    "capacity": 3231
+  },
+  {
+    "shelter_id": 1952,
+    "shelter_name": "배양초등학교 운동장",
+    "Geolocation": "경기도 화성시 융건로 90",
+    "capacity": 3179
+  },
+  {
+    "shelter_id": 1953,
+    "shelter_name": "벌말초등학교 운동장",
+    "Geolocation": "경기도 화성시 떡전골로 34",
+    "capacity": 2980
+  },
+  {
+    "shelter_id": 1954,
+    "shelter_name": "병점초등학교 운동장",
+    "Geolocation": "경기도 화성시 경기대로 1052",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 1955,
+    "shelter_name": "봉담초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 진등3길 15",
+    "capacity": 10275
+  },
+  {
+    "shelter_id": 1956,
+    "shelter_name": "비봉초등학교 운동장",
+    "Geolocation": "경기도 화성시 비봉면 양노로 71",
+    "capacity": 5800
+  },
+  {
+    "shelter_id": 1957,
+    "shelter_name": "사창초등학교 운동장",
+    "Geolocation": "경기도 화성시 양감면 정문회화로 7",
+    "capacity": 4641
+  },
+  {
+    "shelter_id": 1958,
+    "shelter_name": "삼괴고등학교 운동장",
+    "Geolocation": "경기도 화성시 우정읍 장안로 35",
+    "capacity": 11629
+  },
+  {
+    "shelter_id": 1959,
+    "shelter_name": "상봉초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 상봉길 52",
+    "capacity": 3747
+  },
+  {
+    "shelter_id": 1960,
+    "shelter_name": "상신초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 상신초교길 52",
+    "capacity": 4418
+  },
+  {
+    "shelter_id": 1961,
+    "shelter_name": "새봄초등학교 운동장",
+    "Geolocation": "경기도 화성시 병점노을로 19",
+    "capacity": 500
+  },
+  {
+    "shelter_id": 1962,
+    "shelter_name": "서신중학교 운동장",
+    "Geolocation": "경기도 화성시 서신면 바다뜰길 49-9",
+    "capacity": 3275
+  },
+  {
+    "shelter_id": 1963,
+    "shelter_name": "서신초등학교 운동장",
+    "Geolocation": "경기도 화성시 서신면 매화3길 17",
+    "capacity": 5563
+  },
+  {
+    "shelter_id": 1964,
+    "shelter_name": "서연고등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로4가길 6",
+    "capacity": 3512
+  },
+  {
+    "shelter_id": 1965,
+    "shelter_name": "서연초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로4가길 25",
+    "capacity": 952
+  },
+  {
+    "shelter_id": 1966,
+    "shelter_name": "석우초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄시범한빛길 32",
+    "capacity": 3856
+  },
+  {
+    "shelter_id": 1967,
+    "shelter_name": "석천초등학교 운동장",
+    "Geolocation": "경기도 화성시 우정읍 석천길 52",
+    "capacity": 3636
+  },
+  {
+    "shelter_id": 1968,
+    "shelter_name": "세정초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로12길 74",
+    "capacity": 3553
+  },
+  {
+    "shelter_id": 1969,
+    "shelter_name": "솔빛초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄반석로 84",
+    "capacity": 2753
+  },
+  {
+    "shelter_id": 1970,
+    "shelter_name": "송라초등학교 운동장",
+    "Geolocation": "경기도 화성시 매송면 푸른들판로 1970-16",
+    "capacity": 3312
+  },
+  {
+    "shelter_id": 1971,
+    "shelter_name": "송린초등학교 운동장",
+    "Geolocation": "경기도 화성시 수노을1로 253",
+    "capacity": 2000
+  },
+  {
+    "shelter_id": 1972,
+    "shelter_name": "송산초등학교 운동장",
+    "Geolocation": "경기도 화성시 송산면 사강시장길 15-9",
+    "capacity": 2816
+  },
+  {
+    "shelter_id": 1973,
+    "shelter_name": "수기초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 수기웃말길 27",
+    "capacity": 12320
+  },
+  {
+    "shelter_id": 1974,
+    "shelter_name": "수영초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 수영로 63",
+    "capacity": 3935
+  },
+  {
+    "shelter_id": 1975,
+    "shelter_name": "수현중학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 상리3길 136",
+    "capacity": 4210
+  },
+  {
+    "shelter_id": 1976,
+    "shelter_name": "숲속초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄공원로2길 10",
+    "capacity": 6278
+  },
+  {
+    "shelter_id": 1977,
+    "shelter_name": "아인초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로시범길 219",
+    "capacity": 2246
+  },
+  {
+    "shelter_id": 1978,
+    "shelter_name": "안녕초등학교 운동장",
+    "Geolocation": "경기도 화성시 화산로 2",
+    "capacity": 1204
+  },
+  {
+    "shelter_id": 1979,
+    "shelter_name": "안화고등학교 운동장",
+    "Geolocation": "경기도 화성시 병점3로 132-19",
+    "capacity": 3973
+  },
+  {
+    "shelter_id": 1980,
+    "shelter_name": "안화초등학교 운동장",
+    "Geolocation": "경기도 화성시 병점3로 132-5",
+    "capacity": 2858
+  },
+  {
+    "shelter_id": 1981,
+    "shelter_name": "양감초등학교 운동장",
+    "Geolocation": "경기도 화성시 양감면 초록로 49",
+    "capacity": 5454
+  },
+  {
+    "shelter_id": 1982,
+    "shelter_name": "여울초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄감배산로 95",
+    "capacity": 2800
+  },
+  {
+    "shelter_id": 1983,
+    "shelter_name": "영천초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄영천로 36",
+    "capacity": 3272
+  },
+  {
+    "shelter_id": 1984,
+    "shelter_name": "예당중학교 운동장",
+    "Geolocation": "경기도 화성시 노작로 226-35",
+    "capacity": 5006
+  },
+  {
+    "shelter_id": 1985,
+    "shelter_name": "예당초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄반석로 245",
+    "capacity": 6378
+  },
+  {
+    "shelter_id": 1986,
+    "shelter_name": "예솔초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로22길 13",
+    "capacity": 3133
+  },
+  {
+    "shelter_id": 1987,
+    "shelter_name": "예원초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄반석로 259",
+    "capacity": 3505
+  },
+  {
+    "shelter_id": 1988,
+    "shelter_name": "와우초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 식골길 14",
+    "capacity": 3553
+  },
+  {
+    "shelter_id": 1989,
+    "shelter_name": "왕배초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로12길 101",
+    "capacity": 3680
+  },
+  {
+    "shelter_id": 1990,
+    "shelter_name": "우정초등학교 운동장",
+    "Geolocation": "경기도 화성시 우정읍 버들로 136",
+    "capacity": 3178
+  },
+  {
+    "shelter_id": 1991,
+    "shelter_name": "월문초등학교 운동장",
+    "Geolocation": "경기도 화성시 팔탄면 버들로 1537",
+    "capacity": 6183
+  },
+  {
+    "shelter_id": 1992,
+    "shelter_name": "율목초등학교 운동장",
+    "Geolocation": "경기도 화성시 영통로50번길 19",
+    "capacity": 3376
+  },
+  {
+    "shelter_id": 1993,
+    "shelter_name": "장명초등학교 운동장",
+    "Geolocation": "경기도 화성시 장안면 장명길 19-8",
+    "capacity": 5671
+  },
+  {
+    "shelter_id": 1994,
+    "shelter_name": "정남초등학교 운동장",
+    "Geolocation": "경기도 화성시 정남면 만년로 516",
+    "capacity": 4067
+  },
+  {
+    "shelter_id": 1995,
+    "shelter_name": "정림초등학교 운동장",
+    "Geolocation": "경기도 화성시 정남면 망월길 69",
+    "capacity": 1616
+  },
+  {
+    "shelter_id": 1996,
+    "shelter_name": "정현초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄산척로 122",
+    "capacity": 2972
+  },
+  {
+    "shelter_id": 1997,
+    "shelter_name": "제암초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 발안서로 21",
+    "capacity": 2835
+  },
+  {
+    "shelter_id": 1998,
+    "shelter_name": "진안초등학교 운동장",
+    "Geolocation": "경기도 화성시 병점4로 97",
+    "capacity": 3876
+  },
+  {
+    "shelter_id": 1999,
+    "shelter_name": "청계중학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로시범길 47",
+    "capacity": 4196
+  },
+  {
+    "shelter_id": 2000,
+    "shelter_name": "청계초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄대로시범길 39",
+    "capacity": 2363
+  },
+  {
+    "shelter_id": 2001,
+    "shelter_name": "청룡초등학교 운동장",
+    "Geolocation": "경기도 화성시 비봉면 주석로 610",
+    "capacity": 9315
+  },
+  {
+    "shelter_id": 2002,
+    "shelter_name": "청목초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로21길 10",
+    "capacity": 2930
+  },
+  {
+    "shelter_id": 2003,
+    "shelter_name": "청원초등학교 운동장",
+    "Geolocation": "경기도 화성시 마도면 해운로 794",
+    "capacity": 11606
+  },
+  {
+    "shelter_id": 2004,
+    "shelter_name": "태안초등학교 운동장",
+    "Geolocation": "경기도 화성시 병점3로 77",
+    "capacity": 2909
+  },
+  {
+    "shelter_id": 2005,
+    "shelter_name": "팔탄초등학교 운동장",
+    "Geolocation": "경기도 화성시 팔탄면 마당바위로31번길 6",
+    "capacity": 4848
+  },
+  {
+    "shelter_id": 2006,
+    "shelter_name": "푸른중학교 운동장",
+    "Geolocation": "경기도 화성시 동탄공원로 21-24",
+    "capacity": 4579
+  },
+  {
+    "shelter_id": 2007,
+    "shelter_name": "푸른초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄공원로 21-38",
+    "capacity": 3393
+  },
+  {
+    "shelter_id": 2008,
+    "shelter_name": "하길중학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 상신하길로274번길 10",
+    "capacity": 4414
+  },
+  {
+    "shelter_id": 2009,
+    "shelter_name": "하길초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 상신하길로273번길 45",
+    "capacity": 3173
+  },
+  {
+    "shelter_id": 2010,
+    "shelter_name": "학동초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄지성로 79-17",
+    "capacity": 3200
+  },
+  {
+    "shelter_id": 2011,
+    "shelter_name": "한마음초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄숲속로 69-6",
+    "capacity": 2952
+  },
+  {
+    "shelter_id": 2012,
+    "shelter_name": "한백고등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로26길 21",
+    "capacity": 4094
+  },
+  {
+    "shelter_id": 2013,
+    "shelter_name": "한백초등학교 운동장",
+    "Geolocation": "경기도 화성시 동탄순환대로26길 37",
+    "capacity": 2427
+  },
+  {
+    "shelter_id": 2014,
+    "shelter_name": "한울초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 행정중앙1로 25",
+    "capacity": 3054
+  },
+  {
+    "shelter_id": 2015,
+    "shelter_name": "해운초등학교 운동장",
+    "Geolocation": "경기도 화성시 서신면 궁평항로 1374-6",
+    "capacity": 3875
+  },
+  {
+    "shelter_id": 2016,
+    "shelter_name": "행정초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 행정중앙1로 77",
+    "capacity": 3356
+  },
+  {
+    "shelter_id": 2017,
+    "shelter_name": "향남초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 왜골길 7",
+    "capacity": 11301
+  },
+  {
+    "shelter_id": 2018,
+    "shelter_name": "호연초등학교 운동장",
+    "Geolocation": "경기도 화성시 장지동 925",
+    "capacity": 610
+  },
+  {
+    "shelter_id": 2019,
+    "shelter_name": "화산초등학교 운동장",
+    "Geolocation": "경기도 화성시 화산중앙로64번길 17",
+    "capacity": 11909
+  },
+  {
+    "shelter_id": 2020,
+    "shelter_name": "화성매송초등학교 운동장",
+    "Geolocation": "경기도 화성시 매송면 화성로 2403",
+    "capacity": 3998
+  },
+  {
+    "shelter_id": 2021,
+    "shelter_name": "화성장안초등학교 운동장",
+    "Geolocation": "경기도 화성시 장안면 조암동로 8-5",
+    "capacity": 4206
+  },
+  {
+    "shelter_id": 2022,
+    "shelter_name": "화성화수초등학교 운동장",
+    "Geolocation": "경기도 화성시 우정읍 화수동길 145",
+    "capacity": 8305
+  },
+  {
+    "shelter_id": 2023,
+    "shelter_name": "화원초등학교 운동장",
+    "Geolocation": "경기도 화성시 향남읍 하길로 59",
+    "capacity": 3692
+  },
+  {
+    "shelter_id": 2024,
+    "shelter_name": "활초초등학교 운동장",
+    "Geolocation": "경기도 화성시 남양읍 안석길111번길 106",
+    "capacity": 6393
+  },
+  {
+    "shelter_id": 2025,
+    "shelter_name": "효행초등학교 운동장",
+    "Geolocation": "경기도 화성시 봉담읍 와우로 16",
+    "capacity": 2250
+  }
+]
