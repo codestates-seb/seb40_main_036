@@ -8,7 +8,7 @@ function ReviewListContents({ id, num, tag, title, writer, date, view }) {
         <div className="num">{num}</div>
         <div className="titleBox">
           <div className="tag">{tag}</div>
-          <Link to={`/share/${id}`} className="title">
+          <Link to={`/Review/${id}`} className="title">
             {title}
           </Link>
         </div>

@@ -1,38 +1,35 @@
 import styled from 'styled-components';
-import { useRef, useCallback, useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useRef, useCallback } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function AnswerEdit() {
-  const location = useLocation();
+function ReviewAnswerPost() {
   const { QuestionId } = useParams();
-  const { AnswerId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = 'auto';
     textRef.current.style.height = textRef.current.scrollHeight + 'px';
   }, []);
 
-  const AnswerEditOnClick = () => {
-    const data = {
-      answerContent: textRef.current.value,
-      questionId: `${QuestionId}`,
-      memberId: `${sessionStorage.getItem('memberId')}`,
-      name: `${sessionStorage.getItem('name')}`,
-    };
-    console.log(data);
-    axios
-      .patch(`/answer/${AnswerId}`, data)
-      .then(() => window.location.reload())
-      .catch((err) => console.log(err));
+  const handleOnClick = () => {
+    if (ReviewAnswerPost.body !== '' && sessionStorage.getItem('memberId')) {
+      const data = {
+        stuffAnswerContent: textRef.current.value,
+        stuffQuestionId: `${QuestionId}`,
+        memberId: `${sessionStorage.getItem('memberId')}`,
+        name: `${sessionStorage.getItem('name')}`,
+      };
+      console.log(data);
+      axios
+        .post(`/stuffAnswer`, data)
+        .then(() => window.location.reload())
+        .catch((err) => console.log(err));
+    }
   };
-  useEffect(() => {
-    textRef.current.value = location.state;
-    console.log(location);
-  }, [location.state]);
   return (
-    <EditContainer>
+    <Container>
       <Post>
+        <div className="user"> {sessionStorage.getItem('name')}</div>
         <textarea
           className="answer"
           ref={textRef}
@@ -40,18 +37,18 @@ function AnswerEdit() {
           onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
-          <button className="submit" type="submit" onClick={AnswerEditOnClick}>
-            수정
+          <button type="submit" onClick={handleOnClick}>
+            등록
           </button>
         </div>
       </Post>
-    </EditContainer>
+    </Container>
   );
 }
 
-export default AnswerEdit;
+export default ReviewAnswerPost;
 
-const EditContainer = styled.div`
+const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
