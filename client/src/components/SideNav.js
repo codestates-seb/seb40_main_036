@@ -51,9 +51,20 @@ const SideNav = (props) => {
               ) : null}
             </div>
           </div>
-          <button className="reservation" onClick={PostReservation}>
-            예약하기
-          </button>
+          {count < props.capacity - props.now + 1 ? (
+            <div className="reservationtext green">예약이 가능합니다.</div>
+          ) : (
+            <div className="reservationtext red">
+              예약가능인원보다 많습니다. 다른 대피소를 이용해주세요.
+            </div>
+          )}
+          {count < props.capacity - props.now + 1 ? (
+            <button className="reservation" onClick={PostReservation}>
+              예약하기
+            </button>
+          ) : (
+            <button className="reservation disabled">예약하기</button>
+          )}
         </div>
       </div>
       <ArrowWrapper onClick={() => sethide(!hide)}>
@@ -99,6 +110,17 @@ const SideWrapper = styled.aside`
   .bold {
     font-weight: bold;
   }
+  div.reservationtext {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    &.red {
+      color: #dc3545;
+    }
+    &.green {
+      color: #28a745;
+    }
+  }
   div.reservation {
     display: flex;
     justify-content: space-between;
@@ -139,6 +161,9 @@ const SideWrapper = styled.aside`
     color: white;
     width: 100%;
     font-weight: 600;
+    &.disabled {
+      background: #c77d7d;
+    }
   }
   &.hide {
     left: -400px;
