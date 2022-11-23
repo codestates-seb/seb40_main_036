@@ -3,16 +3,21 @@ package com.server.reservation.dto;
 import lombok.*;
 import java.time.LocalDate;
 
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class ReservationResponseDto {
+
     private long reservationId;
+
     private long memberId;
+
     private long shelterId;
-    private long num;
+
+    private int num;
+
     private LocalDate reservationCreated;
+
     private LocalDate reservationModified;
+
 }

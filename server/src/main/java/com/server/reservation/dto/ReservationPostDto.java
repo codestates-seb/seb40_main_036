@@ -10,7 +10,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReservationPostDto {
+
     private long memberId;
+
     private long shelterId;
+
     private int num;
+
 }

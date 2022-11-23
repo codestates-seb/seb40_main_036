@@ -37,6 +37,20 @@ public class ShelterMapperImpl implements ShelterMapper {
     }
 
     @Override
+    public List<Shelter> shelterPostDtosToShelters(List<ShelterPostDto> shelterPostDtos) {
+        if ( shelterPostDtos == null ) {
+            return null;
+        }
+
+        List<Shelter> list = new ArrayList<Shelter>( shelterPostDtos.size() );
+        for ( ShelterPostDto shelterPostDto : shelterPostDtos ) {
+            list.add( shelterPostDtoToShelter( shelterPostDto ) );
+        }
+
+        return list;
+    }
+
+    @Override
     public Shelter shelterPatchDtoToShelter(ShelterPatchDto shelterPatchDto) {
         if ( shelterPatchDto == null ) {
             return null;

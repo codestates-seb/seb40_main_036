@@ -33,11 +33,11 @@ public class ShelterController {
     private final ShelterMapper shelterMapper;
 
     @PostMapping
-    public ResponseEntity postShelter(@Valid @RequestBody ShelterPostDto shelterPostDto){
+    public ResponseEntity postShelter(@Valid @RequestBody List<ShelterPostDto> shelterPostDtos){
 
-        Shelter shelter = shelterService.createShelter(shelterMapper.shelterPostDtoToShelter(shelterPostDto));
+        List<Shelter> shelters = shelterService.createShelter(shelterMapper.shelterPostDtosToShelters(shelterPostDtos));
         return new ResponseEntity<>(
-                shelterMapper.shelterToShelterResponseDto(shelter),
+                shelterMapper.sheltersToShelterResponseDtos(shelters),
                 HttpStatus.CREATED);
     }
 

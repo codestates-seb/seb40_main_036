@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface ShelterRepository extends JpaRepository<Shelter,Long> {
+
+    Shelter findByShelterId(long shelterId);
     List<Shelter> findByGeolocationContaining (String location);
 
 }
