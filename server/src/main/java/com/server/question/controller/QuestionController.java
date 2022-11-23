@@ -73,9 +73,9 @@ public class QuestionController {
     }
 
 
-    @GetMapping("/search/{word}")
+    @GetMapping("/search/title/{word}")
     public ResponseEntity searchQuestion(@PathVariable("word") String word){
-        List<Question> questionList=questionService.searchQuestion(word);
+        List<Question> questionList=questionService.searchTitleQuestion(word);
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
@@ -83,6 +83,13 @@ public class QuestionController {
     @GetMapping("/search/name/{word}")
     public ResponseEntity searchNameQuestion(@PathVariable("word") String word){
         List<Question> questionList=questionService.searchNameQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/search/content/{word}")
+    public ResponseEntity searchContentQuestion(@PathVariable("word") String word){
+        List<Question> questionList=questionService.searchContentQuestion(word);
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
