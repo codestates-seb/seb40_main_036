@@ -11,6 +11,7 @@ import Incheon from '../static/Incheon.json';
 const { kakao } = window;
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
 var geocoder = new kakao.maps.services.Geocoder();
+
 const lists = Incheon.map((x) => {
   let obj = {};
   obj['title'] = x.shelter_name;
@@ -19,7 +20,7 @@ const lists = Incheon.map((x) => {
       obj['latlng'] = new kakao.maps.LatLng(result[0].y, result[0].x);
     }
   });
-  obj['now'] = Math.floor(Math.random() * x.capacity);
+  obj['now'] = Math.floor(Math.random() * x.capacity); //나중에 바꿔야댐
   obj['capacity'] = x.capacity;
   obj['shelterId'] = x.shelter_id;
   return obj;
