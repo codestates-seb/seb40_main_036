@@ -1,10 +1,10 @@
-import { forwardRef, useImperativeHandle, useMemo, useState } from 'react';
-import ReactQuill from 'react-quill';
+import { useEffect, useMemo, useState } from 'react';
+import { useQuill } from 'react-quilljs';
 import 'react-quill/dist/quill.snow.css';
 import styled from 'styled-components';
 
 // eslint-disable-next-line react/display-name
-const Editor = forwardRef((onChange, ref) => {
+const Editor = ({ onChange, contents }) => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -33,44 +33,35 @@ const Editor = forwardRef((onChange, ref) => {
     'background',
   ];
 
-  // const { quill, quillRef } = useQuill({ modules, formats });
   // eslint-disable-next-line no-unused-vars
   const [body, setBody] = useState('');
-  // const handleBody = (value) => {
-  //   console.log(value);
-  //   setBody(value);
-  // };
-  const handleBody = (e) => {
-    setBody(e);
+  const onChangeBody = (e) => {
+    setBody(e.target.value);
   };
-  useImperativeHandle(ref, () => ({
-    handleBody,
-  }));
 
-  // useEffect(() => {
-  //   if (quill) {
-  //     quill.on('text-change', () => {
-  //       setValue(quillRef.current.firstChild.innerHTML);
-  //     });
-  //   }
-  //   console.log(value, 'this is quill');
-  // }, [quill]);
+  const { quill, quillRef } = useQuill({ modules, formats, onChangeBody });
+
+  // eslint-disable-next-line no-unused-vars
+
+  useEffect(() => {
+    if (quill) {
+      quill.on('text-change', () => {
+        // const text = quill.getText();
+        // console.log(text);
+        console.log(quill.root.innerHTML);
+      });
+    }
+  }, [quill]);
 
   return (
     <EditorStyle>
-      {/* <div className="editor">
-        <div ref={quillRef} />
-      </div> */}
-      <ReactQuill
-        className="editor"
-        modules={modules}
-        formats={formats}
-        onChange={onChange}
-        ref={ref}
-      />
+      <div className="editor">
+        <input ref={quillRef} onChange={onChange} />
+        <div>{contents}</div>
+      </div>
     </EditorStyle>
   );
-});
+};
 
 export default Editor;
 
