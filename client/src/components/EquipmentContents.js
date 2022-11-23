@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-
+import { Link } from 'react-router-dom';
 function EquipmentContents() {
   return (
     <Container>
@@ -9,10 +9,16 @@ function EquipmentContents() {
           <div className="tagContainer">
             <div className="tag">구로구</div>
           </div>
-          <div className="title">봉천 초등학교 비품 현황입니다.</div>
+          <Link to={`/equipmentLook`} className="title">
+            봉천 초등학교 비품 현황입니다.
+          </Link>
         </Header>
         <Contents>
-          <div className="contents">물 : 20개, 이불: 30개 , 햇반 : 50개</div>
+          <div className="contentsBox">
+            <Link to={`/equipmentLook`} className="contents">
+              물 : 20개, 이불: 30개 , 햇반 : 50개
+            </Link>
+          </div>
           <div className="date">2022.11.11</div>
         </Contents>
         <User>
@@ -49,7 +55,7 @@ const ContentsList = styled.div`
 const Header = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 20px 15px 10px 15px;
   .tag {
     padding: 0 10px;
     align-items: center;
@@ -61,21 +67,37 @@ const Header = styled.div`
     font-size: 17px;
     font-weight: bold;
   }
+  a:link {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 const Contents = styled.div`
-  padding: 10px;
-  .contents {
-    margin: 0 0 24px;
+  padding: 15px;
+  .contentsBox {
+    margin-bottom: 10px;
   }
   .date {
     font-size: 15px;
     color: #838383;
   }
+  a:link {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 const User = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   border-top: 1px solid #d2d2d2;
   .userProfile {
     padding-right: 5px;

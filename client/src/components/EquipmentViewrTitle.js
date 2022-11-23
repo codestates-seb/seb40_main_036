@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
 
-function ReviewListViewerTitle() {
+function EquipmentViewrTitle() {
   return (
     <Container>
-      <ReviewContentsHeader>
+      <EquipmentContentsHeader>
         <div className="linkBox">
-          <Link to={'/Review'} className="listLink">
-            대피소 후기 및 정보
+          <Link to={'/equipment'} className="listLink">
+            비품현황
           </Link>
         </div>
-        <ReviewContentsTitle>
+        <EquipmentContentsTitle>
           <div className="header">
             <div className="tagContainer">
               <div className="tag">구로구</div>
@@ -27,13 +27,13 @@ function ReviewListViewerTitle() {
               <div className="date">2022.11.11</div>
             </div>
           </div>
-        </ReviewContentsTitle>
-      </ReviewContentsHeader>
+        </EquipmentContentsTitle>
+      </EquipmentContentsHeader>
     </Container>
   );
 }
 
-export default ReviewListViewerTitle;
+export default EquipmentViewrTitle;
 
 const Container = styled.div`
   display: flex;
@@ -47,7 +47,7 @@ const Container = styled.div`
   border-bottom-width: 1px;
   border-right-width: 0;
 `;
-const ReviewContentsHeader = styled.div`
+const EquipmentContentsHeader = styled.div`
   a:link {
     text-decoration: none;
   }
@@ -58,7 +58,7 @@ const ReviewContentsHeader = styled.div`
     color: #008505;
   }
 `;
-const ReviewContentsTitle = styled.div`
+const EquipmentContentsTitle = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
