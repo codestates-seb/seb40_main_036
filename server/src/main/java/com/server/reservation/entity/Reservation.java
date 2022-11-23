@@ -24,13 +24,11 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long reservationId;
 
-    @OneToOne
-    @JoinColumn(name = "memberId")
-    private Member member;
+    @Column(nullable = false)
+    private Long memberId;
 
-    @OneToOne
-    @JoinColumn(name = "shelterId")
-    private Shelter shelter;
+    @Column(nullable = false)
+    private Long shelterId;
 
     @Column(nullable = false)
     private int num;
@@ -39,4 +37,11 @@ public class Reservation {
 
     private LocalDate reservationModified;
 
+    @OneToOne
+    @JoinColumn(name = "memberId",insertable = false,updatable = false)
+    private Member member;
+
+    @OneToOne
+    @JoinColumn(name = "shelterId",insertable = false,updatable = false)
+    private Shelter shelter;
 }

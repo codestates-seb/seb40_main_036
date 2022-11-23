@@ -12,6 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ShelterMapper {
     Shelter shelterPostDtoToShelter(ShelterPostDto shelterPostDto);
+    List<Shelter> shelterPostDtosToShelters(List<ShelterPostDto> shelterPostDtos);
     Shelter shelterPatchDtoToShelter(ShelterPatchDto shelterPatchDto);
     ShelterResponseDto shelterToShelterResponseDto(Shelter shelter);
     List<ShelterResponseDto> sheltersToShelterResponseDtos(List<Shelter> shelters);

@@ -2,17 +2,18 @@ package com.server.reservationInfo.dto;
 
 import lombok.*;
 
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class ReservationInfoResponseDto {
-    private long reservationInfoId;
-    //private long reservationId;
+
+    private long reservationInfoId; // 전체 대피소 예약번호
+
     private String shelterName;
-    private String location;
+
     private String geolocation;
+
     private int capacity;
-    private int num;
+
+    private int reservedNum;
 }
