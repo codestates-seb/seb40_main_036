@@ -1,9 +1,6 @@
-import Pagination from './pagination';
 import styled from 'styled-components';
 import EquipmentContents from './EquipmentContents';
-
-import { FaSearch } from 'react-icons/fa';
-import DropDown from './Dropdown';
+import CityDown from './CityDown';
 
 function Equipment() {
   return (
@@ -14,32 +11,15 @@ function Equipment() {
             <h1>비품 현황</h1>
           </Header>
           <SelectBox>
-            <DropDown />
+            <CityDown />
+            <Row>
+              <button className="writing">글쓰기</button>
+            </Row>
           </SelectBox>
         </ShareListTitle>
-        <EquipmentContents />
-        <Row>
-          <button className="writing">글쓰기</button>
-        </Row>
-        <Pagination />
-        <SearchContainer>
-          <select id="search">
-            <option>제목+내용</option>
-            <option>제목</option>
-            <option>내용</option>
-            <option>기관</option>
-          </select>
-          <input
-            type="text"
-            maxLength="20"
-            className="searchInput"
-            name="search"
-            placeholder="검색어를 입력해주세요."
-          />
-          <div className="searchClick">
-            <FaSearch />
-          </div>
-        </SearchContainer>
+        <ContentsContainer>
+          <EquipmentContents />
+        </ContentsContainer>
       </ShareListContent>
     </ShareListContainer>
   );
@@ -65,6 +45,11 @@ const ShareListContent = styled.div`
 
 const ShareListTitle = styled.div`
   padding: 24px 24px 0;
+  border: 2px solid black;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 2px;
+  border-right-width: 0;
 `;
 
 const Header = styled.div`
@@ -75,9 +60,9 @@ const Header = styled.div`
 
 const SelectBox = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 0 12px;
+  margin: 24px 0;
   .selectRegion {
     width: 210px;
     height: 40px;
@@ -100,9 +85,7 @@ const SelectBox = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: end;
-  align-items: center;
-  margin: 12px 0 0;
-  padding: 0 24px;
+
   .writing {
     width: 100px;
     height: 40px;
@@ -113,35 +96,4 @@ const Row = styled.div`
     cursor: pointer;
   }
 `;
-const SearchContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  select {
-    cursor: pointer;
-    font-size: 16px;
-    width: 110px;
-    border-radius: 5px 0 0 5px;
-    border-color: #919eab;
-  }
-  .searchInput {
-    font-size: 16px;
-    width: 450px;
-    height: 40px;
-    padding: 15px;
-    background: #ffffff;
-    border: 1px solid #919eab;
-    border-right: 0px;
-    border-left: 0px;
-  }
-  .searchClick {
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #919eab;
-    font-size: 24px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
-`;
+const ContentsContainer = styled.div``;

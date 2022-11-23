@@ -36,7 +36,7 @@ function ShareList() {
       axios
         .get(`/question/search/${search.select}/${search.content}`)
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
           setQuestions(response.data);
           console.log(search);
         });
