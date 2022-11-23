@@ -75,8 +75,17 @@ public class StuffQuestionService {
 
     public StuffQuestion findStuffQuestion(long stuffQuestionID){return findVerifiedStuffQuestion(stuffQuestionID);}
 
-        public List<StuffQuestion> searchStuffQuestion(String word){
-            return stuffQuestionRepository.findByStuffQuestionContentContaining(word);
+
+    public List<StuffQuestion> searchTitleStuffQuestion(String word){
+        return stuffQuestionRepository.findByStuffQuestionTitleContainingOrderByStuffQuestionIdDesc(word);
+    }
+
+    public List<StuffQuestion> searchNameStuffQuestion(String word){
+        return stuffQuestionRepository.findByNameContainingOrderByStuffQuestionIdDesc(word);
+    }
+
+    public List<StuffQuestion> searchContentStuffQuestion(String word){
+        return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(word);
     }
 
     public Page<StuffQuestion> findStuffQuestions(int page, int size){

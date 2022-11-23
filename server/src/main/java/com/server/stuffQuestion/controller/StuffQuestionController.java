@@ -7,11 +7,14 @@ import com.server.stuffQuestion.dto.StuffQuestionPatchDto;
 import com.server.stuffQuestion.dto.StuffQuestionPostDto;
 import com.server.stuffQuestion.entity.StuffQuestion;
 import com.server.stuffQuestion.mapper.StuffQuestionMapper;
+import com.server.stuffQuestion.repository.StuffQuestionRepository;
 import com.server.stuffQuestion.service.StuffQuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,11 +26,14 @@ import java.util.List;
 @RequestMapping("/stuffQuestion")
 @Validated
 @RequiredArgsConstructor
+@Transactional
 public class StuffQuestionController {
 
     private final StuffQuestionService stuffQuestionService;
 
     private final StuffQuestionMapper stuffQuestionMapper;
+
+    private final StuffQuestionRepository stuffQuestionRepository;
 
     @PostMapping
     public ResponseEntity postStuffQuestion(@Valid @RequestBody StuffQuestionPostDto stuffQuestionPostDto){
@@ -66,12 +72,36 @@ public class StuffQuestionController {
 
     }
 
-    @GetMapping("/search/{word}")
-    public ResponseEntity searchStuffQuestion(@PathVariable("word") String word){
-        List<StuffQuestion> stuffQuestionList = stuffQuestionService.searchStuffQuestion(word);
+    @GetMapping("/search/title/{word}")
+    public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTitleStuffQuestion(word);
 
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList), HttpStatus.OK);
     }
+
+
+    @GetMapping("/search/name/{word}")
+    public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchNameStuffQuestion(word);
+
+        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/search/content/{word}")
+    public ResponseEntity searchContentStuffQuestion(@PathVariable("word") String word){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchContentStuffQuestion(word);
+
+        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/stuffQuestions")
+    public ResponseEntity getAllStuffQuestions(){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionRepository.findAll(Sort.by(Sort.Direction.DESC, "stuffQuestionId"));  // 바로 repository에서 데이터 가져옴
+
+        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
+    }
+
+
 
     @GetMapping
     public ResponseEntity getStuffQuestions(@Positive @RequestParam int page,
