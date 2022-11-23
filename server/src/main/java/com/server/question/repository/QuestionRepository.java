@@ -11,6 +11,9 @@ import java.util.List;
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
     List<Question> findByQuestionTitleContainingOrderByQuestionIdDesc(String word);
+
     List<Question> findByNameContainingOrderByQuestionIdDesc(String word);
+
+    List<Question> findByQuestionContentContainingOrderByQuestionIdDesc(String word);
 
 }
