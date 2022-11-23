@@ -20,7 +20,6 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
@@ -94,6 +93,7 @@ public class QuestionService {
                 Sort.by("questionId").descending()));
     }
 
+    @Transactional
     public void deleteQuestion(long questionId){
 
         if(!questionRepository.existsById(questionId)){

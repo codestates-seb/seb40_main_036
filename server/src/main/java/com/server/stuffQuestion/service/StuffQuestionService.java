@@ -21,7 +21,6 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class StuffQuestionService {
 
     private final StuffQuestionRepository stuffQuestionRepository;
@@ -96,7 +95,7 @@ public class StuffQuestionService {
                     Sort.by("stuffQuestionId").descending()));
     }
 
-
+    @Transactional
     public void deleteStuffQuestion(long stuffQuestionId){
         if(!stuffQuestionRepository.existsById(stuffQuestionId)){
             throw new BusinessLogicException(ExceptionCode.StuffQuestion_NOT_FOUND);
