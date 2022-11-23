@@ -58,7 +58,7 @@ const SideNav = (props) => {
               예약가능인원보다 많습니다. 다른 대피소를 이용해주세요.
             </div>
           )}
-          {count < props.capacity - props.now + 1 ? (
+          {count < props.capacity - props.now + 1 && 0 < count ? (
             <button className="reservation" onClick={PostReservation}>
               예약하기
             </button>
