@@ -4,10 +4,9 @@ import Map from '../components/Map';
 import axios from 'axios';
 
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
-
 const Main = () => {
-  const [locationX, setlocationX] = useState(33.450701);
-  const [locationY, setlocationY] = useState(126.570667);
+  const [locationX, setlocationX] = useState(37.490196614);
+  const [locationY, setlocationY] = useState(126.723447491);
   const [loading, setloading] = useState(false);
   const [location, setLocation] = useState('');
 
