@@ -8,7 +8,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
     const result = window.confirm('질문을 삭제하시겠습니까?');
     if (
       result === true &&
-      Number(sessionStorage.getItem('membeId')) === memberId
+      Number(sessionStorage.getItem('memberId')) === memberId
     ) {
       setTimeout(() => {
         axios
@@ -23,7 +23,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
       <ShareListContents>
         <div className="contents">{content}</div>
       </ShareListContents>
-      {memberId === Number(sessionStorage.getItem('membeId')) ? (
+      {memberId === Number(sessionStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
           <button className="edit">수정</button>

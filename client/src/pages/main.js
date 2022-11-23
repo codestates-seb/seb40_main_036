@@ -5,11 +5,10 @@ import axios from 'axios';
 
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
 const Main = () => {
-  const [locationX, setlocationX] = useState(33.450701);
-  const [locationY, setlocationY] = useState(126.570667);
+  const [locationX, setlocationX] = useState(37.490196614);
+  const [locationY, setlocationY] = useState(126.723447491);
   const [loading, setloading] = useState(false);
   const [location, setLocation] = useState('');
-  const [lists, setLists] = useState([]);
 
   const GetCity = (x, y) => {
     const options1 = {
@@ -29,27 +28,14 @@ const Main = () => {
     };
     axios
       .request(options1)
-      .then((res) => {
+      .then((res) =>
         setLocation(
           `${res.data.addressInfo.city_do} ${res.data.addressInfo.gu_gun}`
-        );
-        console.log(res);
-      })
+        )
+      )
       .catch(function (error) {
         console.error(error);
       });
-  };
-  const GetList = () => {
-    if (location !== '') {
-      axios
-        .get(`/shelter/search/${location}`, {
-          headers: { 'ngrok-skip-browser-warning': '111' },
-        })
-        .then((res) => {
-          setLists(res.data);
-          console.log(res.data);
-        });
-    }
   };
 
   const getLocation = () => {
@@ -57,11 +43,10 @@ const Main = () => {
       // GPS를 지원하면
       setloading(true);
       navigator.geolocation.getCurrentPosition(
-        async function (position) {
+        function (position) {
           setlocationX(position.coords.latitude);
           setlocationY(position.coords.longitude);
-          await GetCity(position.coords.latitude, position.coords.longitude);
-          await GetList();
+          GetCity(position.coords.latitude, position.coords.longitude);
         },
         function (error) {
           console.error(error);
@@ -85,7 +70,6 @@ const Main = () => {
         loading={loading}
         setloading={setloading}
         location={location}
-        lists={lists}
       />
       <Positionrelative>
         <button onClick={getLocation}>가장 가까운 대피소찾기</button>

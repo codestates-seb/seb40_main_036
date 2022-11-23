@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { useRef, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
+import { useRef, useCallback, useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function AnswerEdit() {
+  const location = useLocation();
   const { QuestionId } = useParams();
   const { AnswerId } = useParams();
   const textRef = useRef();
@@ -16,7 +17,7 @@ function AnswerEdit() {
     const data = {
       answerContent: textRef.current.value,
       questionId: `${QuestionId}`,
-      memberId: `${sessionStorage.getItem('membeId')}`,
+      memberId: `${sessionStorage.getItem('memberId')}`,
       name: `${sessionStorage.getItem('name')}`,
     };
     console.log(data);
@@ -25,10 +26,13 @@ function AnswerEdit() {
       .then(() => window.location.reload())
       .catch((err) => console.log(err));
   };
+  useEffect(() => {
+    textRef.current.value = location.state;
+    console.log(location);
+  }, [location.state]);
   return (
     <EditContainer>
       <Post>
-        <div className="user"> {sessionStorage.getItem('name')}</div>
         <textarea
           className="answer"
           ref={textRef}
@@ -36,8 +40,8 @@ function AnswerEdit() {
           onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
-          <button type="submit" onClick={AnswerEditOnClick}>
-            등록
+          <button className="submit" type="submit" onClick={AnswerEditOnClick}>
+            수정
           </button>
         </div>
       </Post>

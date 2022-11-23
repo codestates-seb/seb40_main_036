@@ -2,7 +2,7 @@ import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
 import { Link } from 'react-router-dom';
-import DropDown from './Dropdown';
+import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
@@ -22,6 +22,8 @@ function ShareList() {
     select: 'title',
     content: '',
   });
+  const [Selected, setSelected] = useState();
+
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -31,11 +33,13 @@ function ShareList() {
   };
   const handleSearchButton = () => {
     if (search.content !== undefined) {
-      axios.get(`/question/search/${search.content}`).then((response) => {
-        console.log(response);
-        setQuestions(response.data);
-        console.log(search);
-      });
+      axios
+        .get(`/question/search/${search.select}/${search.content}`)
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(search);
+        });
     }
     window.scrollTo(0, 0);
     setSearch({ select: 'title', content: '' });
@@ -65,6 +69,11 @@ function ShareList() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -73,7 +82,10 @@ function ShareList() {
             <h1>물품 나눔 게시판</h1>
           </Header>
           <SelectBox>
-            <DropDown />
+            <CityDown onChange={handleSelect} value={Selected} />
+            <div className="search">
+              <button>검색</button>
+            </div>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -130,7 +142,7 @@ function ShareList() {
               setSearch({ select: e.target.value, content: search.content })
             }
           >
-            <option value="titile">제목</option>
+            <option value="title">제목</option>
             <option value="content">내용</option>
             <option value="name">이름</option>
           </select>
@@ -144,13 +156,14 @@ function ShareList() {
               setSearch({ select: search.select, content: e.target.value })
             }
           />
-          <div className="searchClick" type="button">
-            <FaSearch
-              onClick={() => {
-                handleSearchButton();
-              }}
-            />
-          </div>
+          <button
+            className="searchClick"
+            onClick={() => {
+              handleSearchButton();
+            }}
+          >
+            <FaSearch />
+          </button>
         </SearchContainer>
       </ShareListContent>
     </ShareListContainer>
@@ -187,22 +200,13 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
-  .selectRegion {
-    width: 210px;
+  button {
+    width: 100px;
     height: 40px;
+    background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .selectDistrict {
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
     cursor: pointer;
   }
 `;
