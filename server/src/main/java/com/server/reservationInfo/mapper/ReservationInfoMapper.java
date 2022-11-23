@@ -13,7 +13,7 @@ public interface ReservationInfoMapper{
         // reservationInfoId
         reservationInfoResponseDto.setReservationInfoId(reservationInfo.getReservationInfoId()); // long
         // reservationId
-        reservationInfoResponseDto.setReservationId(reservationInfo.getReservation().getReservationId()); // long
+        //reservationInfoResponseDto.setReservationId(reservationInfo.getReservation().getReservationId()); // long
         // shelterName
         reservationInfoResponseDto.setShelterName(reservationInfo.getShelter().getShelterName()); // String
         // location
@@ -32,7 +32,7 @@ public interface ReservationInfoMapper{
                 .map(reservationInfo -> ReservationInfoResponseDto
                 .builder()
                         .reservationInfoId(reservationInfo.getReservationInfoId())
-                        .reservationId(reservationInfo.getReservation().getReservationId())
+                        //.reservationId(reservationInfo.getReservation().getReservationId())
                         .shelterName(reservationInfo.getShelter().getShelterName())
                         .location(reservationInfo.getShelter().getLocation())
                         .geolocation(reservationInfo.getShelter().getGeolocation())

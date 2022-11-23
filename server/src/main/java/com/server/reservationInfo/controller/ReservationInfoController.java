@@ -23,7 +23,7 @@ public class ReservationInfoController {
     private final ReservationInfoService reservationInfoService;
     private final ReservationInfoMapper reservationInfoMapper;
 
-    // post가 없는데 어떻게 이걸 get하지?
+    // post가 없는데 어떻게 이걸 get하지? -> post는 reservationService create에서 진행함
 
     @GetMapping("/{reservationInfoId}")
     public ResponseEntity getReservationInfo(@PathVariable("reservationInfoId")
