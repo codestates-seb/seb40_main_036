@@ -1,4194 +1,4718 @@
 [
   {
-    "No": 1,
-    "location": "강화군",
-    "name": "인천광역시 학생종합 수련원 운동장",
-    "uuid": 28710025,
-    "geolocation": "인천광역시 강화군 화도면 해안남로 2463",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 2,
-    "location": "강화군",
-    "name": "인천광역시 학생종합수련원 공터",
-    "uuid": 28710024,
-    "geolocation": "인천광역시 강화군 화도면 해안남로 2463-12",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 3,
-    "location": "강화군",
-    "name": "심도중학교운동장",
-    "uuid": 28710047,
-    "geolocation": "인천광역시 강화군 화도면 마니산로 703-20",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 4,
-    "location": "강화군",
-    "name": "서도초중고등학교 운동장",
-    "uuid": 28710046,
-    "geolocation": "인천광역시 강화군 서도면 주문도길 173",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 5,
-    "location": "강화군",
-    "name": "해명초등학교 운동장",
-    "uuid": 28710045,
-    "geolocation": "인천광역시 강화군 삼산면 삼산남로 345",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 6,
-    "location": "강화군",
-    "name": "승영중학교 운동장",
-    "uuid": 28710044,
-    "geolocation": "인천광역시 강화군 삼산면 삼산북로473번길 47",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 7,
-    "location": "강화군",
-    "name": "삼산초등학교 운동장",
-    "uuid": 28710043,
-    "geolocation": "인천광역시 강화군 삼산면 삼산북로 451",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 8,
-    "location": "강화군",
-    "name": "난정초등학교 운동장",
-    "uuid": 28710042,
-    "geolocation": "인천광역시 강화군 교동면 교동서로378번길 28",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 9,
-    "location": "강화군",
-    "name": "지석초등학교 운동장",
-    "uuid": 28710041,
-    "geolocation": "인천광역시 강화군 교동면 교동북로 275-1",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 10,
-    "location": "강화군",
-    "name": "교동중고등학교 운동장",
-    "uuid": 28710040,
-    "geolocation": "인천광역시 강화군 교동면 교동남로 77",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 11,
-    "location": "강화군",
-    "name": "교동초등학교 운동장",
-    "uuid": 28710039,
-    "geolocation": "인천광역시 강화군 교동면 대룡안길 29",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 12,
-    "location": "강화군",
-    "name": "송해초등학교 운동장",
-    "uuid": 28710038,
-    "geolocation": "인천광역시 강화군 송해면 전망대로 93-12",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 13,
-    "location": "강화군",
-    "name": "양사초등학교 운동장",
-    "uuid": 28710037,
-    "geolocation": "인천광역시 강화군 양사면 덕하로 145",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 14,
-    "location": "강화군",
-    "name": "하점초등학교 운동장",
-    "uuid": 28710036,
-    "geolocation": "인천광역시 강화군 하점면 강화대로 1190",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 15,
-    "location": "강화군",
-    "name": "강서중학교 운동장",
-    "uuid": 28710035,
-    "geolocation": "인천광역시 강화군 하점면 강화서로 909-19",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 16,
-    "location": "강화군",
-    "name": "명신초등학교 운동장",
-    "uuid": 28710034,
-    "geolocation": "인천광역시 강화군 하점면 강화서로560번길 22",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 17,
-    "location": "강화군",
-    "name": "내가면 황청리 공터 1",
-    "uuid": 28710032,
-    "geolocation": "인천광역시 강화군 내가면 황청포구로 339",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 18,
-    "location": "강화군",
-    "name": "내가초등학교 운동장",
-    "uuid": 28710031,
-    "geolocation": "인천광역시 강화군 내가면 강화서로 264",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 19,
-    "location": "강화군",
-    "name": "삼량중고등학교운동장",
-    "uuid": 28710030,
-    "geolocation": "인천광역시 강화군 내가면 강화서로 184",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 20,
-    "location": "강화군",
-    "name": "조산초등학교 운동장",
-    "uuid": 28710029,
-    "geolocation": "인천광역시 강화군 양도면 강화남로 510",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 21,
-    "location": "강화군",
-    "name": "양도초등학교 운동장",
-    "uuid": 28710028,
-    "geolocation": "인천광역시 강화군 양도면 강화남로 1036",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 22,
-    "location": "강화군",
-    "name": "동광중학교운동장",
-    "uuid": 28710027,
-    "geolocation": "인천광역시 강화군 양도면 강화남로 704",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 23,
-    "location": "강화군",
-    "name": "인천광역시 학생교육원 흥왕체험학습",
-    "uuid": 28710026,
-    "geolocation": "인천광역시 강화군 화도면 해안남로 1854",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 24,
-    "location": "강화군",
-    "name": "마니산청소년 수련원 운동장",
-    "uuid": 28710023,
-    "geolocation": "인천광역시 강화군 화도면 동녘말길220번길 33",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 25,
-    "location": "강화군",
-    "name": "화이트하우스 수련원 운동장",
-    "uuid": 28710022,
-    "geolocation": "인천광역시 강화군 화도면 마니산로543번길 19",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 26,
-    "location": "강화군",
-    "name": "화도초등학교운동장",
-    "uuid": 28710020,
-    "geolocation": "인천광역시 강화군 화도면 마니산로 717",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 27,
-    "location": "강화군",
-    "name": "선두2리 마을회관 공터",
-    "uuid": 28710019,
-    "geolocation": "인천광역시 강화군 길상면 보리고개로 13",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 28,
-    "location": "강화군",
-    "name": "온수2리 마을회관 공터",
-    "uuid": 28710018,
-    "geolocation": "인천광역시 강화군 길상면 온수길36번길 7-1",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 29,
-    "location": "강화군",
-    "name": "초지1리 마을회관 공터",
-    "uuid": 28710017,
-    "geolocation": "인천광역시 강화군 길상면 길상로95번길 37-13",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 30,
-    "location": "강화군",
-    "name": "길직2리 마을회관 공터",
-    "uuid": 28710016,
-    "geolocation": "인천광역시 강화군 길상면 강화동로 144",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 31,
-    "location": "강화군",
-    "name": "동검리 마을회관 공터",
-    "uuid": 28710015,
-    "geolocation": "인천광역시 강화군 길상면 동검길154번길 36-19",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 32,
-    "location": "강화군",
-    "name": "강남중학교 운동장",
-    "uuid": 28710014,
-    "geolocation": "인천광역시 강화군 길상면 강화남로 62-2",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 33,
-    "location": "강화군",
-    "name": "길상초등학교 운동장",
-    "uuid": 28710013,
-    "geolocation": "인천광역시 강화군 길상면 삼랑성길 22",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 34,
-    "location": "강화군",
-    "name": "삼성초등학교운동장",
-    "uuid": 28710012,
-    "geolocation": "인천광역시 강화군 불은면 중앙로 609",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 35,
-    "location": "강화군",
-    "name": "불은초등학교 운동장",
-    "uuid": 28710011,
-    "geolocation": "인천광역시 강화군 불은면 불은남로544번길 9",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 36,
-    "location": "강화군",
-    "name": "선원초등학교 운동장",
-    "uuid": 28710010,
-    "geolocation": "인천광역시 강화군 선원면 강화동로 924",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 37,
-    "location": "강화군",
-    "name": "갑룡초교운동장",
-    "uuid": 28710009,
-    "geolocation": "인천광역시 강화군 강화읍 갑룡길 88",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 38,
-    "location": "강화군",
-    "name": "합일초등학교운동장",
-    "uuid": 28710008,
-    "geolocation": "인천광역시 강화군 강화읍 합일길 3",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 39,
-    "location": "강화군",
-    "name": "강화초등학교운동장",
-    "uuid": 28710007,
-    "geolocation": "인천광역시 강화군 강화읍 북문길 36",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 40,
-    "location": "강화군",
-    "name": "강화중학교운동장",
-    "uuid": 28710006,
-    "geolocation": "인천광역시 강화군 강화읍 동문로 53",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 41,
-    "location": "강화군",
-    "name": "강화여고운동장",
-    "uuid": 28710005,
-    "geolocation": "인천광역시 강화군 강화읍 송악길 57",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 42,
-    "location": "강화군",
-    "name": "덕신고등학교운동장",
-    "uuid": 28710004,
-    "geolocation": "인천광역시 강화군 강화읍 고비고개로 45",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 43,
-    "location": "강화군",
-    "name": "강화고등학교운동장",
-    "uuid": 28710003,
-    "geolocation": "인천광역시 강화군 강화읍 고비고개로 20",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 44,
-    "location": "강화군",
-    "name": "강화공설운동장",
-    "uuid": 28710002,
-    "geolocation": "인천광역시 강화군 강화읍 고비고개로19번길 12",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 45,
-    "location": "계양구",
-    "name": "효성고등학교 운동장",
-    "uuid": 28245091,
-    "geolocation": "인천광역시 계양구 새벌로171번길 21",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 46,
-    "location": "계양구",
-    "name": "효성초등학교 운동장",
-    "uuid": 28245096,
-    "geolocation": "인천광역시 계양구 안남로 601",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 47,
-    "location": "계양구",
-    "name": "효성중학교 운동장",
-    "uuid": 28245095,
-    "geolocation": "인천광역시 계양구 안남로 607",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 48,
-    "location": "계양구",
-    "name": "효성서초등학교 운동장",
-    "uuid": 28245094,
-    "geolocation": "인천광역시 계양구 봉오대로 457",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 49,
-    "location": "계양구",
-    "name": "효성동초등학교 운동장",
-    "uuid": 28245093,
-    "geolocation": "인천광역시 계양구 새벌로171번길 4",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 50,
-    "location": "계양구",
-    "name": "효성남초등학교 운동장",
-    "uuid": 28245092,
-    "geolocation": "인천광역시 계양구 새벌로 125",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 51,
-    "location": "계양구",
-    "name": "화전초등학교 운동장",
-    "uuid": 28245090,
-    "geolocation": "인천광역시 계양구 효서로303번길 8",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 52,
-    "location": "계양구",
-    "name": "해서초등학교 운동장",
-    "uuid": 28245089,
-    "geolocation": "인천광역시 계양구 계산로 42-1",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 53,
-    "location": "계양구",
-    "name": "작전초등학교 운동장",
-    "uuid": 28245088,
-    "geolocation": "인천광역시 계양구 주부토로 456",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 54,
-    "location": "계양구",
-    "name": "작전중학교 운동장",
-    "uuid": 28245087,
-    "geolocation": "인천광역시 계양구 주부토로448번길 16",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 55,
-    "location": "계양구",
-    "name": "작전여자고등학교 운동장",
-    "uuid": 28245086,
-    "geolocation": "인천광역시 계양구 주부토로426번길 15",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 56,
-    "location": "계양구",
-    "name": "작전고등학교 운동장",
-    "uuid": 28245085,
-    "geolocation": "인천광역시 계양구 봉오대로729번길 27",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 57,
-    "location": "계양구",
-    "name": "작동초등학교 운동장",
-    "uuid": 28245084,
-    "geolocation": "인천광역시 계양구 까치말로 35",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 58,
-    "location": "계양구",
-    "name": "임학중학교 운동장",
-    "uuid": 28245083,
-    "geolocation": "인천광역시 계양구 장제로 894",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 59,
-    "location": "계양구",
-    "name": "안남중학교 운동장",
-    "uuid": 28245082,
-    "geolocation": "인천광역시 계양구 계산새로33번길 5",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 60,
-    "location": "계양구",
-    "name": "예일고등학교 운동장",
-    "uuid": 28245081,
-    "geolocation": "인천광역시 계양구 박촌로 23",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 61,
-    "location": "계양구",
-    "name": "양촌초등학교 운동장",
-    "uuid": 28245080,
-    "geolocation": "인천광역시 계양구 장제로 954",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 62,
-    "location": "계양구",
-    "name": "양촌중학교 운동장",
-    "uuid": 28245079,
-    "geolocation": "인천광역시 계양구 장제로948번길 13",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 63,
-    "location": "계양구",
-    "name": "안산초등학교 운동장",
-    "uuid": 28245078,
-    "geolocation": "인천광역시 계양구 임학서로 15",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 64,
-    "location": "계양구",
-    "name": "안남초등학교 운동장",
-    "uuid": 28245077,
-    "geolocation": "인천광역시 계양구 경명대로1114번길 26",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 65,
-    "location": "계양구",
-    "name": "안남고등학교 운동장",
-    "uuid": 28245076,
-    "geolocation": "인천광역시 계양구 아나지로308번길 9",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 66,
-    "location": "계양구",
-    "name": "신대초등학교 운동장",
-    "uuid": 28245075,
-    "geolocation": "인천광역시 계양구 계산새로 133",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 67,
-    "location": "계양구",
-    "name": "소양초등학교 운동장",
-    "uuid": 28245074,
-    "geolocation": "인천광역시 계양구 박촌로 53",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 68,
-    "location": "계양구",
-    "name": "세원고등학교 운동장",
-    "uuid": 28245073,
-    "geolocation": "인천광역시 계양구 장제로 966",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 69,
-    "location": "계양구",
-    "name": "성지초등학교 운동장",
-    "uuid": 28245072,
-    "geolocation": "인천광역시 계양구 아나지로247번길 8",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 70,
-    "location": "계양구",
-    "name": "서운초등학교 운동장",
-    "uuid": 28245071,
-    "geolocation": "인천광역시 계양구 서운로 12",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 71,
-    "location": "계양구",
-    "name": "서운중학교 운동장",
-    "uuid": 28245070,
-    "geolocation": "인천광역시 계양구 아나지로 467",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 72,
-    "location": "계양구",
-    "name": "서운고등학교 운동장",
-    "uuid": 28245069,
-    "geolocation": "인천광역시 계양구 아나지로 481",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 73,
-    "location": "계양구",
-    "name": "북인천중학교 운동장",
-    "uuid": 28245068,
-    "geolocation": "인천광역시 계양구 계산로22번길 6",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 74,
-    "location": "계양구",
-    "name": "북인천여자중학교 운동장",
-    "uuid": 28245067,
-    "geolocation": "인천광역시 계양구 아나지로85번길 12",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 75,
-    "location": "계양구",
-    "name": "부현초등학교 운동장",
-    "uuid": 28245066,
-    "geolocation": "인천광역시 계양구 장제로755번길 30",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 76,
-    "location": "계양구",
-    "name": "부현동초등학교 운동장",
-    "uuid": 28245065,
-    "geolocation": "인천광역시 계양구 용종로 5",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 77,
-    "location": "계양구",
-    "name": "부평초등학교 운동장",
-    "uuid": 28245064,
-    "geolocation": "인천광역시 계양구 어사대로 20",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 78,
-    "location": "계양구",
-    "name": "병방초등학교 운동장",
-    "uuid": 28245063,
-    "geolocation": "인천광역시 계양구 병방로 2",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 79,
-    "location": "계양구",
-    "name": "예일중학교 운동장",
-    "uuid": 28245062,
-    "geolocation": "인천광역시 계양구 장제로995번길 39",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 80,
-    "location": "계양구",
-    "name": "명현초등학교 운동장",
-    "uuid": 28245061,
-    "geolocation": "인천광역시 계양구 봉오대로569번길 10",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 81,
-    "location": "계양구",
-    "name": "명현중학교 운동장",
-    "uuid": 28245060,
-    "geolocation": "인천광역시 계양구 안남로554번길 26",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 82,
-    "location": "계양구",
-    "name": "동양중학교 운동장",
-    "uuid": 28245059,
-    "geolocation": "인천광역시 계양구 당미길 56",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 83,
-    "location": "계양구",
-    "name": "당산초등학교 운동장",
-    "uuid": 28245058,
-    "geolocation": "인천광역시 계양구 동양로 122",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 84,
-    "location": "계양구",
-    "name": "길주초등학교 운동장",
-    "uuid": 28245057,
-    "geolocation": "인천광역시 계양구 용종로 90",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 85,
-    "location": "계양구",
-    "name": "귤현초등학교 운동장",
-    "uuid": 28245056,
-    "geolocation": "인천광역시 계양구 귤현길 15",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 86,
-    "location": "계양구",
-    "name": "계양초등학교 상야분교 운동장",
-    "uuid": 28245055,
-    "geolocation": "인천광역시 계양구 벌말로 572-1",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 87,
-    "location": "계양구",
-    "name": "계양초등학교 운동장",
-    "uuid": 28245054,
-    "geolocation": "인천광역시 계양구 장제로 1288",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 88,
-    "location": "계양구",
-    "name": "계양중학교 운동장",
-    "uuid": 28245053,
-    "geolocation": "인천광역시 계양구 장제로1181번길 9",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 89,
-    "location": "계양구",
-    "name": "계양고등학교 운동장",
-    "uuid": 28245052,
-    "geolocation": "인천광역시 계양구 계양문화로 177",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 90,
-    "location": "계양구",
-    "name": "계수중학교 운동장",
-    "uuid": 28245051,
-    "geolocation": "인천광역시 계양구 살라리로2번길 25",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 91,
-    "location": "계양구",
-    "name": "계산초등학교 운동장",
-    "uuid": 28245050,
-    "geolocation": "인천광역시 계양구 경명대로 1005",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 92,
-    "location": "계양구",
-    "name": "계산중학교 운동장",
-    "uuid": 28245049,
-    "geolocation": "인천광역시 계양구 도두리로 67-16",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 93,
-    "location": "계양구",
-    "name": "계산여자중학교 운동장",
-    "uuid": 28245048,
-    "geolocation": "인천광역시 계양구 장제로755번길 16",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 94,
-    "location": "계양구",
-    "name": "계산여자고등학교 운동장",
-    "uuid": 28245047,
-    "geolocation": "인천광역시 계양구 계산새로 131",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 95,
-    "location": "계양구",
-    "name": "계산공업고등학교 운동장",
-    "uuid": 28245046,
-    "geolocation": "인천광역시 계양구 도두리로 47",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 96,
-    "location": "계양구",
-    "name": "계산고등학교 운동장",
-    "uuid": 28245045,
-    "geolocation": "인천광역시 계양구 주부토로 588",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 97,
-    "location": "계양구",
-    "name": "경인교대부속초등학교 운동장",
-    "uuid": 28245044,
-    "geolocation": "인천광역시 계양구 안남로 612",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 98,
-    "location": "계양구",
-    "name": "동양공원 1",
-    "uuid": 28245043,
-    "geolocation": "인천광역시 계양구 당미길 27",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 99,
-    "location": "계양구",
-    "name": "작전공원 2",
-    "uuid": 28245041,
-    "geolocation": "인천광역시 계양구 계양문화로 1",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 100,
-    "location": "계양구",
-    "name": "이촌공원",
-    "uuid": 28245040,
-    "geolocation": "인천광역시 계양구 안남로 606",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 101,
-    "location": "계양구",
-    "name": "계산체육공원",
-    "uuid": 28245039,
-    "geolocation": "인천광역시 계양구 주부토로 570",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 102,
-    "location": "계양구",
-    "name": "된밭공원",
-    "uuid": 28245037,
-    "geolocation": "인천광역시 계양구 주부토로 430",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 103,
-    "location": "계양구",
-    "name": "서운공원",
-    "uuid": 28245036,
-    "geolocation": "인천광역시 계양구 효서로 397",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 104,
-    "location": "계양구",
-    "name": "까치공원",
-    "uuid": 28245035,
-    "geolocation": "인천광역시 계양구 도두리로 22",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 105,
-    "location": "계양구",
-    "name": "계양교통공원",
-    "uuid": 28245034,
-    "geolocation": "인천광역시 계양구 계산새로 122",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 106,
-    "location": "계양구",
-    "name": "오조산공원",
-    "uuid": 28245033,
-    "geolocation": "인천광역시 계양구 오조산공원로 35",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 107,
-    "location": "계양구",
-    "name": "들놀이공원",
-    "uuid": 28245032,
-    "geolocation": "인천광역시 계양구 양지로 109",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 108,
-    "location": "계양구",
-    "name": "계산1공원",
-    "uuid": 28245031,
-    "geolocation": "인천광역시 계양구 경명대로1052번길 6",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 109,
-    "location": "계양구",
-    "name": "살나리공원",
-    "uuid": 28245030,
-    "geolocation": "인천광역시 계양구 살라리로12번길 7",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 110,
-    "location": "계양구",
-    "name": "서녘공원",
-    "uuid": 28245029,
-    "geolocation": "인천광역시 계양구 당미3길 19",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 111,
-    "location": "계양구",
-    "name": "모텡이공원",
-    "uuid": 28245028,
-    "geolocation": "인천광역시 계양구 양지말1길 6",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 112,
-    "location": "계양구",
-    "name": "양지말공원",
-    "uuid": 28245027,
-    "geolocation": "인천광역시 계양구 양지말길 41",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 113,
-    "location": "계양구",
-    "name": "장터공원",
-    "uuid": 28245026,
-    "geolocation": "인천광역시 계양구 황어로134번길 15",
-    "updatedate": "2021-06-28"
-  },
-  {
-    "No": 114,
-    "location": "계양구",
-    "name": "중앙공원",
-    "uuid": 28245025,
-    "geolocation": "인천광역시 계양구 장기로9번길 13",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 115,
-    "location": "계양구",
-    "name": "장기공원",
-    "uuid": 28245024,
-    "geolocation": "인천광역시 계양구 장기서로20번길 28",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 116,
-    "location": "계양구",
-    "name": "동산공원",
-    "uuid": 28245023,
-    "geolocation": "인천광역시 계양구 황어로115번길 23",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 117,
-    "location": "계양구",
-    "name": "동양택지2공원",
-    "uuid": 28245022,
-    "geolocation": "인천광역시 계양구 동양로 120",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 118,
-    "location": "계양구",
-    "name": "동양택지1공원",
-    "uuid": 28245021,
-    "geolocation": "인천광역시 계양구 동양로 73",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 119,
-    "location": "계양구",
-    "name": "굴재공원",
-    "uuid": 28245020,
-    "geolocation": "인천광역시 계양구 굴재길 6",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 120,
-    "location": "계양구",
-    "name": "안골공원",
-    "uuid": 28245019,
-    "geolocation": "인천광역시 계양구 장군봉길 30",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 121,
-    "location": "계양구",
-    "name": "샘터공원",
-    "uuid": 28245018,
-    "geolocation": "인천광역시 계양구 화단봉길 7",
-    "updatedate": "2021-06-28"
-  },
-  {
-    "No": 122,
-    "location": "계양구",
-    "name": "개나리공원",
-    "uuid": 28245016,
-    "geolocation": "인천광역시 계양구 계산새로 41",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 123,
-    "location": "계양구",
-    "name": "초정공원",
-    "uuid": 28245012,
-    "geolocation": "인천광역시 계양구 계양문화로 154",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 124,
-    "location": "계양구",
-    "name": "학마을공원",
-    "uuid": 28245011,
-    "geolocation": "인천광역시 계양구 용종로 115",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 125,
-    "location": "계양구",
-    "name": "임학공원",
-    "uuid": 28245010,
-    "geolocation": "인천광역시 계양구 병방시장로 11",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 126,
-    "location": "계양구",
-    "name": "병방공원",
-    "uuid": 28245009,
-    "geolocation": "인천광역시 계양구 병방시장로55번길 4",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 127,
-    "location": "계양구",
-    "name": "방축공원",
-    "uuid": 28245008,
-    "geolocation": "인천광역시 계양구 장제로933번길 17",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 128,
-    "location": "계양구",
-    "name": "고향골공원",
-    "uuid": 28245007,
-    "geolocation": "인천광역시 계양구 향교로21번길 15",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 129,
-    "location": "계양구",
-    "name": "낙원공원",
-    "uuid": 28245006,
-    "geolocation": "인천광역시 계양구 임학동로 54",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 130,
-    "location": "계양구",
-    "name": "안남공원",
-    "uuid": 28245005,
-    "geolocation": "인천광역시 계양구 주부토로529번길 9",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 131,
-    "location": "계양구",
-    "name": "부일공원",
-    "uuid": 28245004,
-    "geolocation": "인천광역시 계양구 경명대로1045번길 14",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 132,
-    "location": "계양구",
-    "name": "작전공원 1",
-    "uuid": 28245003,
-    "geolocation": "인천광역시 계양구 아나지로299번길 6",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 133,
-    "location": "계양구",
-    "name": "효성공원",
-    "uuid": 28245002,
-    "geolocation": "인천광역시 계양구 새벌로111번길 7",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 134,
-    "location": "남동구",
-    "name": "시청 본관 잔디밭(인천애뜰)",
-    "uuid": 28200212,
-    "geolocation": "인천광역시 남동구 미래로 43",
-    "updatedate": "2021-07-08"
-  },
-  {
-    "No": 135,
-    "location": "남동구",
-    "name": "바람어린이공원",
-    "uuid": 28200053,
-    "geolocation": "인천광역시 남동구 앵고개로 789",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 136,
-    "location": "남동구",
-    "name": "나루소공원",
-    "uuid": 28200052,
-    "geolocation": "인천광역시 남동구 소래역남로 28",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 137,
-    "location": "남동구",
-    "name": "한아름근린공원",
-    "uuid": 28200051,
-    "geolocation": "인천광역시 남동구 논고개로 51",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 138,
-    "location": "남동구",
-    "name": "논현포대근린공원",
-    "uuid": 28200050,
-    "geolocation": "인천광역시 남동구 은봉로 142",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 139,
-    "location": "남동구",
-    "name": "논현중앙근린공원",
-    "uuid": 28200049,
-    "geolocation": "인천광역시 남동구 청능대로 609",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 140,
-    "location": "남동구",
-    "name": "오봉근린공원",
-    "uuid": 28200048,
-    "geolocation": "인천광역시 남동구 논고개로334번길 28",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 141,
-    "location": "남동구",
-    "name": "물빛근린공원",
-    "uuid": 28200047,
-    "geolocation": "인천광역시 남동구 서창방산로 34",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 142,
-    "location": "남동구",
-    "name": "어울근린공원",
-    "uuid": 28200046,
-    "geolocation": "인천광역시 남동구 서창남순환로 157",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 143,
-    "location": "남동구",
-    "name": "서창근린공원",
-    "uuid": 28200045,
-    "geolocation": "인천광역시 남동구 독곡로16번길 9",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 144,
-    "location": "남동구",
-    "name": "구월근린공원",
-    "uuid": 28200044,
-    "geolocation": "인천광역시 남동구 호구포로857번길 23",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 145,
-    "location": "남동구",
-    "name": "동방초등학교 운동장",
-    "uuid": 28200042,
-    "geolocation": "인천광역시 남동구 논현역로 31",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 146,
-    "location": "남동구",
-    "name": "인천시청 운동장",
-    "uuid": 28200041,
-    "geolocation": "인천광역시 남동구 정각로 35",
-    "updatedate": "2020-01-30"
-  },
-  {
-    "No": 147,
-    "location": "남동구",
-    "name": "논현초등학교 운동장",
-    "uuid": 28200039,
-    "geolocation": "인천광역시 남동구 소래역로 102",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 148,
-    "location": "남동구",
-    "name": "논곡초등학교 운동장",
-    "uuid": 28200038,
-    "geolocation": "인천광역시 남동구 함박뫼로 429",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 149,
-    "location": "남동구",
-    "name": "장도초등학교 운동장",
-    "uuid": 28200037,
-    "geolocation": "인천광역시 남동구 포구로 112",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 150,
-    "location": "남동구",
-    "name": "도림초등학교 운동장",
-    "uuid": 28200036,
-    "geolocation": "인천광역시 남동구 논고개로334번길 21",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 151,
-    "location": "남동구",
-    "name": "남촌초등학교 운동장",
-    "uuid": 28200035,
-    "geolocation": "인천광역시 남동구 남촌로 101",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 152,
-    "location": "남동구",
-    "name": "서창중학교 운동장",
-    "uuid": 28200034,
-    "geolocation": "인천광역시 남동구 독곡로60번길 16",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 153,
-    "location": "남동구",
-    "name": "서창초등학교 운동장",
-    "uuid": 28200033,
-    "geolocation": "인천광역시 남동구 장아산로174번길 8",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 154,
-    "location": "남동구",
-    "name": "만수초등학교 운동장",
-    "uuid": 28200032,
-    "geolocation": "인천광역시 남동구 소래로 652",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 155,
-    "location": "남동구",
-    "name": "담방초등학교 운동장",
-    "uuid": 28200031,
-    "geolocation": "인천광역시 남동구 매소홀로 1027",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 156,
-    "location": "남동구",
-    "name": "남동초등학교 운동장",
-    "uuid": 28200030,
-    "geolocation": "인천광역시 남동구 장승남로33번길 10",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 157,
-    "location": "남동구",
-    "name": "남동중학교 운동장",
-    "uuid": 28200029,
-    "geolocation": "인천광역시 남동구 담방로 7",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 158,
-    "location": "남동구",
-    "name": "만월중학교 운동장",
-    "uuid": 28200028,
-    "geolocation": "인천광역시 남동구 서창남순환로 22",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 159,
-    "location": "남동구",
-    "name": "만수중학교 운동장",
-    "uuid": 28200027,
-    "geolocation": "인천광역시 남동구 인수로 13",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 160,
-    "location": "남동구",
-    "name": "인수초등학교 운동장",
-    "uuid": 28200026,
-    "geolocation": "인천광역시 남동구 인수로 3",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 161,
-    "location": "남동구",
-    "name": "만수여자중학교 운동장",
-    "uuid": 28200025,
-    "geolocation": "인천광역시 남동구 만수로50번길 22-36",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 162,
-    "location": "남동구",
-    "name": "조동초등학교 운동장",
-    "uuid": 28200024,
-    "geolocation": "인천광역시 남동구 백범로124번길 164",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 163,
-    "location": "남동구",
-    "name": "만수북중학교 운동장",
-    "uuid": 28200023,
-    "geolocation": "인천광역시 남동구 만수서로 117",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 164,
-    "location": "남동구",
-    "name": "인동초등학교 운동장",
-    "uuid": 28200022,
-    "geolocation": "인천광역시 남동구 백범로248번길 38",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 165,
-    "location": "남동구",
-    "name": "동부초등학교 운동장",
-    "uuid": 28200021,
-    "geolocation": "인천광역시 남동구 만수서로33번길 25",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 166,
-    "location": "남동구",
-    "name": "만수북초등학교 운동장",
-    "uuid": 28200020,
-    "geolocation": "인천광역시 남동구 백범로180번길 25",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 167,
-    "location": "남동구",
-    "name": "주원초등학교 운동장",
-    "uuid": 28200019,
-    "geolocation": "인천광역시 남동구 주안로259번길 28",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 168,
-    "location": "남동구",
-    "name": "석정초등학교 운동장",
-    "uuid": 28200018,
-    "geolocation": "인천광역시 남동구 석정로539번길 32",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 169,
-    "location": "남동구",
-    "name": "약산초등학교 운동장",
-    "uuid": 28200017,
-    "geolocation": "인천광역시 남동구 간석로26번길 10",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 170,
-    "location": "남동구",
-    "name": "상아초등학교 운동장",
-    "uuid": 28200016,
-    "geolocation": "인천광역시 남동구 석산로184번길 66",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 171,
-    "location": "남동구",
-    "name": "간석여자중학교 운동장",
-    "uuid": 28200015,
-    "geolocation": "인천광역시 남동구 간석로25번길 13",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 172,
-    "location": "남동구",
-    "name": "인제고등학교 운동장",
-    "uuid": 28200014,
-    "geolocation": "인천광역시 남동구 석산로197번길 19",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 173,
-    "location": "남동구",
-    "name": "상인천초등학교 운동장",
-    "uuid": 28200013,
-    "geolocation": "인천광역시 남동구 석산로141번길 29",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 174,
-    "location": "남동구",
-    "name": "인천예술고등학교 운동장",
-    "uuid": 28200012,
-    "geolocation": "인천광역시 남동구 구월로115번길 36",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 175,
-    "location": "남동구",
-    "name": "신월초등학교 운동장",
-    "uuid": 28200011,
-    "geolocation": "인천광역시 남동구 인주대로776번길 14",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 176,
-    "location": "남동구",
-    "name": "구월서초등학교 운동장",
-    "uuid": 28200010,
-    "geolocation": "인천광역시 남동구 문화서로77번길 14",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 177,
-    "location": "남동구",
-    "name": "동인천중학교 운동장",
-    "uuid": 28200009,
-    "geolocation": "인천광역시 남동구 구월남로57번길 12",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 178,
-    "location": "남동구",
-    "name": "간석초등학교 운동장",
-    "uuid": 28200008,
-    "geolocation": "인천광역시 남동구 석산로208번길 37",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 179,
-    "location": "남동구",
-    "name": "정각초등학교 운동장",
-    "uuid": 28200007,
-    "geolocation": "인천광역시 남동구 구월로 228",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 180,
-    "location": "남동구",
-    "name": "석천초등학교 운동장",
-    "uuid": 28200006,
-    "geolocation": "인천광역시 남동구 남동대로 828",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 181,
-    "location": "남동구",
-    "name": "성리초등학교 운동장",
-    "uuid": 28200005,
-    "geolocation": "인천광역시 남동구 성리로 32-2",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 182,
-    "location": "남동구",
-    "name": "구월여자중학교 운동장",
-    "uuid": 28200004,
-    "geolocation": "인천광역시 남동구 성말로13번길 78",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 183,
-    "location": "남동구",
-    "name": "구월초등학교 운동장",
-    "uuid": 28200003,
-    "geolocation": "인천광역시 남동구 인주대로721번길 49",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 184,
-    "location": "남동구",
-    "name": "만월초등학교 운동장",
-    "uuid": 28200002,
-    "geolocation": "인천광역시 남동구 선수촌로 28",
-    "updatedate": "2019-11-14"
-  },
-  {
-    "No": 185,
-    "location": "동구",
-    "name": "영화관광경영고등학교 운동장",
-    "uuid": 28140013,
-    "geolocation": "인천광역시 동구 우각로 39",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 186,
-    "location": "동구",
-    "name": "동명초등학교 운동장",
-    "uuid": 28140012,
-    "geolocation": "인천광역시 동구 송림로70번길 10",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 187,
-    "location": "동구",
-    "name": "인천산업정보학교 운동장",
-    "uuid": 28140011,
-    "geolocation": "인천광역시 동구 금창로 31",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 188,
-    "location": "동구",
-    "name": "만석초등학교 운동장",
-    "uuid": 28140010,
-    "geolocation": "인천광역시 동구 제물량로 412",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 189,
-    "location": "동구",
-    "name": "송현초등학교",
-    "uuid": 28140009,
-    "geolocation": "인천광역시 동구 송화로 45",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 190,
-    "location": "동구",
-    "name": "화도진중학교 운동장",
-    "uuid": 28140008,
-    "geolocation": "인천광역시 동구 화수로 64",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 191,
-    "location": "동구",
-    "name": "송림초등학교 운동장",
-    "uuid": 28140007,
-    "geolocation": "인천광역시 동구 화도진로 10",
-    "updatedate": "2021-12-24"
-  },
-  {
-    "No": 192,
-    "location": "동구",
-    "name": "서흥초등학교 운동장",
-    "uuid": 28140006,
-    "geolocation": "인천광역시 동구 샛골로 189",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 193,
-    "location": "동구",
-    "name": "재능고등학교 운동장",
-    "uuid": 28140005,
-    "geolocation": "인천광역시 동구 재능로 178",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 194,
-    "location": "동구",
-    "name": "창영초등학교 운동장",
-    "uuid": 28140004,
-    "geolocation": "인천광역시 동구 우각로15번길 16",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 195,
-    "location": "동구",
-    "name": "서림초등학교 운동장",
-    "uuid": 28140003,
-    "geolocation": "인천광역시 동구 금곡로 105",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 196,
-    "location": "동구",
-    "name": "동산고등학교 운동장",
-    "uuid": 28140002,
-    "geolocation": "인천광역시 동구 동산로 58",
-    "updatedate": "2019-11-20"
-  },
-  {
-    "No": 197,
-    "location": "미추홀구",
-    "name": "선인고등학교운동장",
-    "uuid": 28177025,
-    "geolocation": "인천광역시 미추홀구 석정로 181",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 198,
-    "location": "미추홀구",
-    "name": "인하대학교대운동장",
-    "uuid": 28177023,
-    "geolocation": "인천광역시 미추홀구 인하로 100",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 199,
-    "location": "미추홀구",
-    "name": "선인중학교 운동장",
-    "uuid": 28140025,
-    "geolocation": "인천광역시 미추홀구 석정로 165-37",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 200,
-    "location": "미추홀구",
-    "name": "인화여자고등학교 운동장",
-    "uuid": 28177052,
-    "geolocation": "인천광역시 미추홀구 석정로 151",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 201,
-    "location": "미추홀구",
-    "name": "인천전자마이스터고등학교",
-    "uuid": 28177035,
-    "geolocation": "인천광역시 미추홀구 석정로 165-80",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 202,
-    "location": "미추홀구",
-    "name": "인천대제물포캠퍼스대운동장",
-    "uuid": 28177026,
-    "geolocation": "인천광역시 미추홀구 숙골로135번길 9",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 203,
-    "location": "미추홀구",
-    "name": "인화여자중학교운동장",
-    "uuid": 28177024,
-    "geolocation": "인천광역시 미추홀구 석정로 183",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 204,
-    "location": "미추홀구",
-    "name": "정석항공과학고등학교운동장",
-    "uuid": 28177004,
-    "geolocation": "인천광역시 미추홀구 인하로 104",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 205,
-    "location": "미추홀구",
-    "name": "학산초등학교",
-    "uuid": 28177053,
-    "geolocation": "인천광역시 미추홀구 한나루로357번길 66",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 206,
-    "location": "미추홀구",
-    "name": "용현여자중학교 운동장",
-    "uuid": 28177051,
-    "geolocation": "인천광역시 미추홀구 낙섬동로 28",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 207,
-    "location": "미추홀구",
-    "name": "용학초등학교 운동장",
-    "uuid": 28177050,
-    "geolocation": "인천광역시 미추홀구 용정공원로83번길 9",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 208,
-    "location": "미추홀구",
-    "name": "문학정보고등학교 운동장",
-    "uuid": 28177049,
-    "geolocation": "인천광역시 미추홀구 소성로350번길 29",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 209,
-    "location": "미추홀구",
-    "name": "경원초등학교 운동장",
-    "uuid": 28177048,
-    "geolocation": "인천광역시 미추홀구 경인로 511",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 210,
-    "location": "미추홀구",
-    "name": "제물포여자중학교 운동장",
-    "uuid": 28177047,
-    "geolocation": "인천광역시 미추홀구 인주대로470번길 20",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 211,
-    "location": "미추홀구",
-    "name": "인항고등학교",
-    "uuid": 28177046,
-    "geolocation": "인천광역시 미추홀구 매소홀로 135",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 212,
-    "location": "미추홀구",
-    "name": "인주초등학교 운동장",
-    "uuid": 28177045,
-    "geolocation": "인천광역시 미추홀구 매소홀로475번길 53",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 213,
-    "location": "미추홀구",
-    "name": "연학초등학교 운동장",
-    "uuid": 28177044,
-    "geolocation": "인천광역시 미추홀구 주승로 20",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 214,
-    "location": "미추홀구",
-    "name": "숭의초등학교 운동장",
-    "uuid": 28177043,
-    "geolocation": "인천광역시 미추홀구 장천로 99",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 215,
-    "location": "미추홀구",
-    "name": "관교여자중학교 운동장",
-    "uuid": 28177042,
-    "geolocation": "인천광역시 미추홀구 경원대로 691",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 216,
-    "location": "미추홀구",
-    "name": "승학초등학교 운동장",
-    "uuid": 28177040,
-    "geolocation": "인천광역시 미추홀구 주승로 259",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 217,
-    "location": "미추홀구",
-    "name": "관교중학교 운동장",
-    "uuid": 28177039,
-    "geolocation": "인천광역시 미추홀구 경원대로670번길 19",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 218,
-    "location": "미추홀구",
-    "name": "인천남중학교 운동장",
-    "uuid": 28177038,
-    "geolocation": "인천광역시 미추홀구 수봉로 16-23",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 219,
-    "location": "미추홀구",
-    "name": "용현중학교 운동장",
-    "uuid": 28177037,
-    "geolocation": "인천광역시 미추홀구 낙섬동로 16",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 220,
-    "location": "미추홀구",
-    "name": "남인천여자중학교 운동장",
-    "uuid": 28177034,
-    "geolocation": "인천광역시 미추홀구 인하로 426",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 221,
-    "location": "미추홀구",
-    "name": "수봉근린공원",
-    "uuid": 28177033,
-    "geolocation": "인천광역시 미추홀구 수봉안길 84",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 222,
-    "location": "미추홀구",
-    "name": "산성어린이공원",
-    "uuid": 28177032,
-    "geolocation": "인천광역시 미추홀구 문학길 157",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 223,
-    "location": "미추홀구",
-    "name": "다솔어린이공원",
-    "uuid": 28177031,
-    "geolocation": "인천광역시 미추홀구 경인로 505",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 224,
-    "location": "미추홀구",
-    "name": "주안체육공원",
-    "uuid": 28177030,
-    "geolocation": "인천광역시 미추홀구 주안서로43번길 20",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 225,
-    "location": "미추홀구",
-    "name": "석바위근린공원",
-    "uuid": 28177029,
-    "geolocation": "인천광역시 미추홀구 구월남로 33",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 226,
-    "location": "미추홀구",
-    "name": "용정근린공원",
-    "uuid": 28177028,
-    "geolocation": "인천광역시 미추홀구 낙섬동로 68-26",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 227,
-    "location": "미추홀구",
-    "name": "쑥골어린이공원",
-    "uuid": 28177027,
-    "geolocation": "인천광역시 미추홀구 장고개로50번길 33",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 228,
-    "location": "미추홀구",
-    "name": "인천비즈니스고등학교운동장",
-    "uuid": 28177022,
-    "geolocation": "인천광역시 미추홀구 장고개로 31",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 229,
-    "location": "미추홀구",
-    "name": "인천문학초등학교운동장",
-    "uuid": 28177021,
-    "geolocation": "인천광역시 미추홀구 매소홀로 553",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 230,
-    "location": "미추홀구",
-    "name": "관교초등학교운동장",
-    "uuid": 28177020,
-    "geolocation": "인천광역시 미추홀구 인하로 414",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 231,
-    "location": "미추홀구",
-    "name": "인천주안남초등학교운동장",
-    "uuid": 28177019,
-    "geolocation": "인천광역시 미추홀구 인주대로434번길 11",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 232,
-    "location": "미추홀구",
-    "name": "인천남부초등학교운동장",
-    "uuid": 28177018,
-    "geolocation": "인천광역시 미추홀구 인주대로366번길 22",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 233,
-    "location": "미추홀구",
-    "name": "석암초등학교운동장",
-    "uuid": 28177017,
-    "geolocation": "인천광역시 미추홀구 주안동로 46",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 234,
-    "location": "미추홀구",
-    "name": "인천주안북초등학교운동장",
-    "uuid": 28177016,
-    "geolocation": "인천광역시 미추홀구 석정로375번길 14",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 235,
-    "location": "미추홀구",
-    "name": "인천고등학교운동장",
-    "uuid": 28177015,
-    "geolocation": "인천광역시 미추홀구 경원대로 804",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 236,
-    "location": "미추홀구",
-    "name": "주안초등학교운동장",
-    "uuid": 28177014,
-    "geolocation": "인천광역시 미추홀구 남주길69번길 16",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 237,
-    "location": "미추홀구",
-    "name": "인천기계공업고등학교운동장",
-    "uuid": 28177013,
-    "geolocation": "인천광역시 미추홀구 한나루로 545",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 238,
-    "location": "미추홀구",
-    "name": "인천서화초등학교운동장",
-    "uuid": 28177012,
-    "geolocation": "인천광역시 미추홀구 송림로 250",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 239,
-    "location": "미추홀구",
-    "name": "인천대화초등학교운동장",
-    "uuid": 28177011,
-    "geolocation": "인천광역시 미추홀구 석정로301번길 13",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 240,
-    "location": "미추홀구",
-    "name": "인천도화초등학교운동장",
-    "uuid": 28177010,
-    "geolocation": "인천광역시 미추홀구 경인로 242",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 241,
-    "location": "미추홀구",
-    "name": "인하사대부속중고등학교운동장",
-    "uuid": 28177009,
-    "geolocation": "인천광역시 미추홀구 재넘이길123번길 29",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 242,
-    "location": "미추홀구",
-    "name": "학익고등학교운동장",
-    "uuid": 28177008,
-    "geolocation": "인천광역시 미추홀구 한나루로358번길 23-22",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 243,
-    "location": "미추홀구",
-    "name": "인천백학초등학교운동장",
-    "uuid": 28177007,
-    "geolocation": "인천광역시 미추홀구 매소홀로446번길 25",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 244,
-    "location": "미추홀구",
-    "name": "학익초등학교운동장",
-    "uuid": 28177006,
-    "geolocation": "인천광역시 미추홀구 한나루로403번길 122",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 245,
-    "location": "미추홀구",
-    "name": "용현초등학교운동장",
-    "uuid": 28177005,
-    "geolocation": "인천광역시 미추홀구 낙섬동로 83",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 246,
-    "location": "미추홀구",
-    "name": "용일초등학교운동장",
-    "uuid": 28177003,
-    "geolocation": "인천광역시 미추홀구 인주대로 244",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 247,
-    "location": "미추홀구",
-    "name": "용정초등학교운동장",
-    "uuid": 28177002,
-    "geolocation": "인천광역시 미추홀구 독정안길 26",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 248,
-    "location": "부평구",
-    "name": "인천부평서초등학교 운동장",
-    "uuid": 28237201,
-    "geolocation": "인천광역시 부평구 부평문화로53번길 19",
-    "updatedate": "-"
-  },
-  {
-    "No": 249,
-    "location": "부평구",
-    "name": "서부동공원",
-    "uuid": 28237502,
-    "geolocation": "인천광역시 부평구 경원대로1367번길 50-4",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 250,
-    "location": "부평구",
-    "name": "인천영선고등학교 운동장",
-    "uuid": 28237408,
-    "geolocation": "인천광역시 부평구 체육관로 177",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 251,
-    "location": "부평구",
-    "name": "인천한길초등학교 운동장",
-    "uuid": 28237406,
-    "geolocation": "인천광역시 부평구 영성중로 32",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 252,
-    "location": "부평구",
-    "name": "부광중학교 운동장",
-    "uuid": 28237404,
-    "geolocation": "인천광역시 부평구 충선로 140",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 253,
-    "location": "부평구",
-    "name": "부개고등학교 운동장",
-    "uuid": 28237402,
-    "geolocation": "인천광역시 부평구 수변로57번길 36",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 254,
-    "location": "부평구",
-    "name": "부광여자고등학교 운동장",
-    "uuid": 28237400,
-    "geolocation": "인천광역시 부평구 충선로 143",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 255,
-    "location": "부평구",
-    "name": "부평동중학교 운동장",
-    "uuid": 28237398,
-    "geolocation": "인천광역시 부평구 수변로107번길 4",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 256,
-    "location": "부평구",
-    "name": "인천갈산중학교 운동장",
-    "uuid": 28237396,
-    "geolocation": "인천광역시 부평구 주부토로 166",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 257,
-    "location": "부평구",
-    "name": "진산중학교 운동장",
-    "uuid": 28237272,
-    "geolocation": "인천광역시 부평구 충선로234번길 70",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 258,
-    "location": "부평구",
-    "name": "인천부내초등학교 운동장",
-    "uuid": 28237270,
-    "geolocation": "인천광역시 부평구 수변로 129",
-    "updatedate": "2021-04-02"
-  },
-  {
-    "No": 259,
-    "location": "부평구",
-    "name": "인천부일초등학교 운동장",
-    "uuid": 28237268,
-    "geolocation": "인천광역시 부평구 부흥북로 175",
-    "updatedate": "2021-07-28"
-  },
-  {
-    "No": 260,
-    "location": "부평구",
-    "name": "구산어린이공원",
-    "uuid": 28237126,
-    "geolocation": "인천광역시 부평구 일신로 124-44",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 261,
-    "location": "부평구",
-    "name": "하정공원(85호공원)",
-    "uuid": 28237125,
-    "geolocation": "인천광역시 부평구 열우물로50번길 29",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 262,
-    "location": "부평구",
-    "name": "수정공원(84호공원)",
-    "uuid": 28237124,
-    "geolocation": "인천광역시 부평구 열우물로50번길 88",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 263,
-    "location": "부평구",
-    "name": "일신어린이공원(일신1호공원)",
-    "uuid": 28237123,
-    "geolocation": "인천광역시 부평구 경인로1118번길 80",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 264,
-    "location": "부평구",
-    "name": "새울공원(부개3공원)",
-    "uuid": 28237118,
-    "geolocation": "인천광역시 부평구 길주남로 170",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 265,
-    "location": "부평구",
-    "name": "신궁동공원(부개1공원)",
-    "uuid": 28237116,
-    "geolocation": "인천광역시 부평구 부개로 75-12",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 266,
-    "location": "부평구",
-    "name": "세모공원",
-    "uuid": 28237115,
-    "geolocation": "인천광역시 부평구 수변로57번길 58",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 267,
-    "location": "부평구",
-    "name": "부이공원",
-    "uuid": 28237114,
-    "geolocation": "인천광역시 부평구 수변로37번길 15-6",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 268,
-    "location": "부평구",
-    "name": "나비공원",
-    "uuid": 28237113,
-    "geolocation": "인천광역시 부평구 평천로 26-47",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 269,
-    "location": "부평구",
-    "name": "마분공원(82호공원)",
-    "uuid": 28237112,
-    "geolocation": "인천광역시 부평구 경인로1092번길 29",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 270,
-    "location": "부평구",
-    "name": "사랑샘공원",
-    "uuid": 28237111,
-    "geolocation": "인천광역시 부평구 충선로 356",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 271,
-    "location": "부평구",
-    "name": "동심공원(삼산1-4공원)",
-    "uuid": 28237109,
-    "geolocation": "인천광역시 부평구 수변로 264",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 272,
-    "location": "부평구",
-    "name": "햇살공원(삼산1-1공원)",
-    "uuid": 28237105,
-    "geolocation": "인천광역시 부평구 장제로340번길 13",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 273,
-    "location": "부평구",
-    "name": "십정체육공원",
-    "uuid": 28237104,
-    "geolocation": "인천광역시 부평구 열우물로 176",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 274,
-    "location": "부평구",
-    "name": "나래공원(삼산2-7공원)",
-    "uuid": 28237103,
-    "geolocation": "인천광역시 부평구 영성중로 24",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 275,
-    "location": "부평구",
-    "name": "백운공원",
-    "uuid": 28237101,
-    "geolocation": "인천광역시 부평구 경원대로 1168",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 276,
-    "location": "부평구",
-    "name": "도드리공원(삼산2-5공원)",
-    "uuid": 28237100,
-    "geolocation": "인천광역시 부평구 영성중로 44",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 277,
-    "location": "부평구",
-    "name": "뫼골문화공원",
-    "uuid": 28237099,
-    "geolocation": "인천광역시 부평구 세월천로 82",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 278,
-    "location": "부평구",
-    "name": "가족공원(삼산2-4공원)",
-    "uuid": 28237098,
-    "geolocation": "인천광역시 부평구 영성서로 36",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 279,
-    "location": "부평구",
-    "name": "갈산근린공원",
-    "uuid": 28237097,
-    "geolocation": "인천광역시 부평구 부평대로296번길 71",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 280,
-    "location": "부평구",
-    "name": "박물관공원",
-    "uuid": 28237096,
-    "geolocation": "인천광역시 부평구 수변로 305",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 281,
-    "location": "부평구",
-    "name": "만월공원",
-    "uuid": 28237095,
-    "geolocation": "인천광역시 부평구 호구포로 1167",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 282,
-    "location": "부평구",
-    "name": "상상공원(삼산2-2공원)",
-    "uuid": 28237094,
-    "geolocation": "인천광역시 부평구 영성로 31",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 283,
-    "location": "부평구",
-    "name": "대갈공원(갈산8공원)",
-    "uuid": 28237093,
-    "geolocation": "인천광역시 부평구 장제로249번길 9-4",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 284,
-    "location": "부평구",
-    "name": "하동공원",
-    "uuid": 28237092,
-    "geolocation": "인천광역시 부평구 배곶로40번길 7-6",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 285,
-    "location": "부평구",
-    "name": "마당공원(갈산7공원)",
-    "uuid": 28237091,
-    "geolocation": "인천광역시 부평구 주부토로146번길 21",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 286,
-    "location": "부평구",
-    "name": "산곡중학교 운동장",
-    "uuid": 28237090,
-    "geolocation": "인천광역시 부평구 원적로300번길 14",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 287,
-    "location": "부평구",
-    "name": "쉼터공원(갈산6공원)",
-    "uuid": 28237089,
-    "geolocation": "인천광역시 부평구 주부토로145번길 41",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 288,
-    "location": "부평구",
-    "name": "반월공원(갈산5공원)",
-    "uuid": 28237088,
-    "geolocation": "인천광역시 부평구 갈월동로 32",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 289,
-    "location": "부평구",
-    "name": "동암공원",
-    "uuid": 28237087,
-    "geolocation": "인천광역시 부평구 동암남로8번길 24",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 290,
-    "location": "부평구",
-    "name": "대월공원(갈산4공원)",
-    "uuid": 28237086,
-    "geolocation": "인천광역시 부평구 갈월서로 19",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 291,
-    "location": "부평구",
-    "name": "약산공원",
-    "uuid": 28237084,
-    "geolocation": "인천광역시 부평구 동암산로33번길 6-16",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 292,
-    "location": "부평구",
-    "name": "새갈공원(갈산2공원)",
-    "uuid": 28237083,
-    "geolocation": "인천광역시 부평구 갈월동로 68",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 293,
-    "location": "부평구",
-    "name": "상꾸지공원(갈산1공원)",
-    "uuid": 28237082,
-    "geolocation": "인천광역시 부평구 주부토로 213",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 294,
-    "location": "부평구",
-    "name": "갈월공원(갈산9공원)",
-    "uuid": 28237081,
-    "geolocation": "인천광역시 부평구 부평대로260번길 13-8",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 295,
-    "location": "부평구",
-    "name": "법성공원",
-    "uuid": 28237080,
-    "geolocation": "인천광역시 부평구 동암산로 60",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 296,
-    "location": "부평구",
-    "name": "신복공원(76호공원)",
-    "uuid": 28237079,
-    "geolocation": "인천광역시 부평구 장제로222번길 16",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 297,
-    "location": "부평구",
-    "name": "석정공원",
-    "uuid": 28237078,
-    "geolocation": "인천광역시 부평구 백범로478번길 11",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 298,
-    "location": "부평구",
-    "name": "중부동공원(부평3호공원)",
-    "uuid": 28237077,
-    "geolocation": "인천광역시 부평구 부흥북로 96",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 299,
-    "location": "부평구",
-    "name": "샘터공원",
-    "uuid": 28237076,
-    "geolocation": "인천광역시 부평구 열우물로49번길 37-3",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 300,
-    "location": "부평구",
-    "name": "부흥공원(부평3호공원)",
-    "uuid": 28237075,
-    "geolocation": "인천광역시 부평구 장제로110번길 16",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 301,
-    "location": "부평구",
-    "name": "열우물공원",
-    "uuid": 28237074,
-    "geolocation": "인천광역시 부평구 열우물로101번길 17",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 302,
-    "location": "부평구",
-    "name": "하촌공원(81호공원)",
-    "uuid": 28237073,
-    "geolocation": "인천광역시 부평구 충선로24번길 35-4",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 303,
-    "location": "부평구",
-    "name": "시냇물공원",
-    "uuid": 28237072,
-    "geolocation": "인천광역시 부평구 충선로 270",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 304,
-    "location": "부평구",
-    "name": "부들공원",
-    "uuid": 28237070,
-    "geolocation": "인천광역시 부평구 평천로 522",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 305,
-    "location": "부평구",
-    "name": "건강공원",
-    "uuid": 28237069,
-    "geolocation": "인천광역시 부평구 평천로 531",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 306,
-    "location": "부평구",
-    "name": "교통공원",
-    "uuid": 28237068,
-    "geolocation": "인천광역시 부평구 영성동로18번길 45",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 307,
-    "location": "부평구",
-    "name": "밤골공원",
-    "uuid": 28237067,
-    "geolocation": "인천광역시 부평구 동수로120번길 43",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 308,
-    "location": "부평구",
-    "name": "영성공원",
-    "uuid": 28237066,
-    "geolocation": "인천광역시 부평구 부평북로 428",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 309,
-    "location": "부평구",
-    "name": "후정공원",
-    "uuid": 28237065,
-    "geolocation": "인천광역시 부평구 영성서로 57",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 310,
-    "location": "부평구",
-    "name": "방촌공원",
-    "uuid": 28237064,
-    "geolocation": "인천광역시 부평구 부개로 1",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 311,
-    "location": "부평구",
-    "name": "세영공원",
-    "uuid": 28237063,
-    "geolocation": "인천광역시 부평구 충선로 120",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 312,
-    "location": "부평구",
-    "name": "청운공원",
-    "uuid": 28237062,
-    "geolocation": "인천광역시 부평구 수변로 189",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 313,
-    "location": "부평구",
-    "name": "부개공원",
-    "uuid": 28237061,
-    "geolocation": "인천광역시 부평구 수변로 225",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 314,
-    "location": "부평구",
-    "name": "대촌공원",
-    "uuid": 28237060,
-    "geolocation": "인천광역시 부평구 수변로 121",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 315,
-    "location": "부평구",
-    "name": "사근공원",
-    "uuid": 28237059,
-    "geolocation": "인천광역시 부평구 주부토로 151",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 316,
-    "location": "부평구",
-    "name": "굴포공원",
-    "uuid": 28237058,
-    "geolocation": "인천광역시 부평구 주부토로 157",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 317,
-    "location": "부평구",
-    "name": "마장공원",
-    "uuid": 28237057,
-    "geolocation": "인천광역시 부평구 안남로 203",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 318,
-    "location": "부평구",
-    "name": "신트리공원",
-    "uuid": 28237056,
-    "geolocation": "인천광역시 부평구 주부토로 128",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 319,
-    "location": "부평구",
-    "name": "백운초등학교 운동장",
-    "uuid": 28237055,
-    "geolocation": "인천광역시 부평구 아트센터로 130",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 320,
-    "location": "부평구",
-    "name": "상정초등학교 운동장",
-    "uuid": 28237052,
-    "geolocation": "인천광역시 부평구 상정로 50",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 321,
-    "location": "부평구",
-    "name": "십정초등학교 운동장",
-    "uuid": 28237051,
-    "geolocation": "인천광역시 부평구 배곶북로 10-6",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 322,
-    "location": "부평구",
-    "name": "일신초등학교 운동장",
-    "uuid": 28237050,
-    "geolocation": "인천광역시 부평구 항동로75번길 36",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 323,
-    "location": "부평구",
-    "name": "부개서초등학교 운동장",
-    "uuid": 28237046,
-    "geolocation": "인천광역시 부평구 부일로 39",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 324,
-    "location": "부평구",
-    "name": "부평여자중학교 운동장",
-    "uuid": 28237045,
-    "geolocation": "인천광역시 부평구 부평문화로 193-1",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 325,
-    "location": "부평구",
-    "name": "부개초등학교 운동장",
-    "uuid": 28237044,
-    "geolocation": "인천광역시 부평구 마분로 9",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 326,
-    "location": "부평구",
-    "name": "갈산초등학교 운동장",
-    "uuid": 28237039,
-    "geolocation": "인천광역시 부평구 갈월동로 55",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 327,
-    "location": "부평구",
-    "name": "갈월초등학교 운동장",
-    "uuid": 28237038,
-    "geolocation": "인천광역시 부평구 주부토로 165",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 328,
-    "location": "부평구",
-    "name": "부평공업고등학교 운동장",
-    "uuid": 28237037,
-    "geolocation": "인천광역시 부평구 주부토로 194",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 329,
-    "location": "부평구",
-    "name": "부평북초등학교 운동장",
-    "uuid": 28237036,
-    "geolocation": "인천광역시 부평구 주부토로 292",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 330,
-    "location": "부평구",
-    "name": "청천중학교 운동장",
-    "uuid": 28237035,
-    "geolocation": "인천광역시 부평구 마장로364번길 23",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 331,
-    "location": "부평구",
-    "name": "용마초등학교 운동장",
-    "uuid": 28237034,
-    "geolocation": "인천광역시 부평구 세월천로30번길 58",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 332,
-    "location": "부평구",
-    "name": "부평공원",
-    "uuid": 28237031,
-    "geolocation": "인천광역시 부평구 부평공원로 44",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 333,
-    "location": "부평구",
-    "name": "원적산공원",
-    "uuid": 28237030,
-    "geolocation": "인천광역시 부평구 세월천로137번길 60",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 334,
-    "location": "부평구",
-    "name": "마장초등학교 운동장",
-    "uuid": 28237025,
-    "geolocation": "인천광역시 부평구 안남로 266",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 335,
-    "location": "부평구",
-    "name": "청천초등학교 운동장",
-    "uuid": 28237024,
-    "geolocation": "인천광역시 부평구 산청로127번길 12-5",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 336,
-    "location": "부평구",
-    "name": "미산초등학교 운동장",
-    "uuid": 28237023,
-    "geolocation": "인천광역시 부평구 원적로 391",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 337,
-    "location": "부평구",
-    "name": "마곡초등학교 운동장",
-    "uuid": 28237018,
-    "geolocation": "인천광역시 부평구 마곡로27번길 16",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 338,
-    "location": "부평구",
-    "name": "산곡초등학교 운동장",
-    "uuid": 28237017,
-    "geolocation": "인천광역시 부평구 길주로354번길 39",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 339,
-    "location": "부평구",
-    "name": "부흥초등학교 운동장",
-    "uuid": 28237014,
-    "geolocation": "인천광역시 부평구 부흥로366번길 34",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 340,
-    "location": "부평구",
-    "name": "부평고등학교 운동장",
-    "uuid": 28237011,
-    "geolocation": "인천광역시 부평구 부흥북로 43",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 341,
-    "location": "부평구",
-    "name": "부평서여자중학교 운동장",
-    "uuid": 28237008,
-    "geolocation": "인천광역시 부평구 경원대로 1213",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 342,
-    "location": "부평구",
-    "name": "신촌초등학교 운동장",
-    "uuid": 28237007,
-    "geolocation": "인천광역시 부평구 경원대로 1215",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 343,
-    "location": "부평구",
-    "name": "부일여자중학교 운동장",
-    "uuid": 28237006,
-    "geolocation": "인천광역시 부평구 동수로 8",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 344,
-    "location": "부평구",
-    "name": "부원초등학교 운동장",
-    "uuid": 28237003,
-    "geolocation": "인천광역시 부평구 원적로472번길 29",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 345,
-    "location": "부평구",
-    "name": "십정녹지",
-    "uuid": 28237002,
-    "geolocation": "인천광역시 부평구 경원대로 1018",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 346,
-    "location": "서구",
-    "name": "인천아시아드주경기장 주차장",
-    "uuid": 28260526,
-    "geolocation": "인천광역시 서구 염곡로 731",
-    "updatedate": "2021-07-07"
-  },
-  {
-    "No": 347,
-    "location": "서구",
-    "name": "검암중학교 운동장",
-    "uuid": 28260274,
-    "geolocation": "인천광역시 서구 검암로29번길 12",
-    "updatedate": "2021-07-07"
-  },
-  {
-    "No": 348,
-    "location": "서구",
-    "name": "가정여자중학교 운동장",
-    "uuid": 28260121,
-    "geolocation": "인천광역시 서구 고래울로28번길 13",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 349,
-    "location": "서구",
-    "name": "가좌여자중학교 운동장",
-    "uuid": 28260008,
-    "geolocation": "인천광역시 서구 서달로 110",
-    "updatedate": "2019-11-15"
-  },
-  {
-    "No": 350,
-    "location": "서구",
-    "name": "가현중학교 운동장",
-    "uuid": 28260125,
-    "geolocation": "인천광역시 서구 염곡로 409",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 351,
-    "location": "서구",
-    "name": "신현고등학교 운동장",
-    "uuid": 28260124,
-    "geolocation": "인천광역시 서구 염곡로 401",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 352,
-    "location": "서구",
-    "name": "신현중학교 운동장",
-    "uuid": 28260123,
-    "geolocation": "인천광역시 서구 원창로131번길 23",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 353,
-    "location": "서구",
-    "name": "가림고등학교 운동장",
-    "uuid": 28260122,
-    "geolocation": "인천광역시 서구 원적로 58",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 354,
-    "location": "서구",
-    "name": "간재울중학교 운동장",
-    "uuid": 28260120,
-    "geolocation": "인천광역시 서구 승학로450번길 17-13",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 355,
-    "location": "서구",
-    "name": "은지초등학교 운동장",
-    "uuid": 28260119,
-    "geolocation": "인천광역시 서구 승학로572번길 22",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 356,
-    "location": "서구",
-    "name": "왕길초등학교 운동장",
-    "uuid": 28260118,
-    "geolocation": "인천광역시 서구 봉수대로1440번길 20",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 357,
-    "location": "서구",
-    "name": "목향초등학교 운동장",
-    "uuid": 28260117,
-    "geolocation": "인천광역시 서구 고산후로 375",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 358,
-    "location": "서구",
-    "name": "원당고등학교 운동장",
-    "uuid": 28260116,
-    "geolocation": "인천광역시 서구 고산로40번길 30",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 359,
-    "location": "서구",
-    "name": "원당중학교 운동장",
-    "uuid": 28260115,
-    "geolocation": "인천광역시 서구 고산로40번길 22",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 360,
-    "location": "서구",
-    "name": "원당초등학교 운동장",
-    "uuid": 28260114,
-    "geolocation": "인천광역시 서구 원당대로820번길 16",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 361,
-    "location": "서구",
-    "name": "당하중학교 운동장",
-    "uuid": 28260113,
-    "geolocation": "인천광역시 서구 청마로 38",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 362,
-    "location": "서구",
-    "name": "당하초등학교 운동장",
-    "uuid": 28260112,
-    "geolocation": "인천광역시 서구 청마로 144",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 363,
-    "location": "서구",
-    "name": "마전중학교 운동장",
-    "uuid": 28260111,
-    "geolocation": "인천광역시 서구 완정로 91",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 364,
-    "location": "서구",
-    "name": "마전초등학교 운동장",
-    "uuid": 28260110,
-    "geolocation": "인천광역시 서구 완정로34번길 23",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 365,
-    "location": "서구",
-    "name": "능내초등학교 운동장",
-    "uuid": 28260109,
-    "geolocation": "인천광역시 서구 검단로540번길 23",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 366,
-    "location": "서구",
-    "name": "검단고등학교 운동장",
-    "uuid": 28260108,
-    "geolocation": "인천광역시 서구 검단로540번길 7",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 367,
-    "location": "서구",
-    "name": "검단중학교 운동장",
-    "uuid": 28260107,
-    "geolocation": "인천광역시 서구 완정로188번길 12",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 368,
-    "location": "서구",
-    "name": "검단초등학교 운동장",
-    "uuid": 28260106,
-    "geolocation": "인천광역시 서구 검단로609번길 11",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 369,
-    "location": "서구",
-    "name": "가원초등학교 운동장",
-    "uuid": 28260105,
-    "geolocation": "인천광역시 서구 청중로478번길 6",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 370,
-    "location": "서구",
-    "name": "청라고등학교 운동장",
-    "uuid": 28260104,
-    "geolocation": "인천광역시 서구 담지로86번길 16-14",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 371,
-    "location": "서구",
-    "name": "청라중학교 운동장",
-    "uuid": 28260103,
-    "geolocation": "인천광역시 서구 청라라임로 112",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 372,
-    "location": "서구",
-    "name": "청라초등학교 운동장",
-    "uuid": 28260102,
-    "geolocation": "인천광역시 서구 청라에메랄드로 139",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 373,
-    "location": "서구",
-    "name": "초은고등학교 운동장",
-    "uuid": 28260101,
-    "geolocation": "인천광역시 서구 청라에메랄드로 42",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 374,
-    "location": "서구",
-    "name": "초은중학교 운동장",
-    "uuid": 28260100,
-    "geolocation": "인천광역시 서구 청라라임로 10",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 375,
-    "location": "서구",
-    "name": "초은초등학교 운동장",
-    "uuid": 28260099,
-    "geolocation": "인천광역시 서구 청라에메랄드로 33",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 376,
-    "location": "서구",
-    "name": "공촌초등학교 운동장",
-    "uuid": 28260098,
-    "geolocation": "인천광역시 서구 심곡로188번길 21",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 377,
-    "location": "서구",
-    "name": "경서초등학교 운동장",
-    "uuid": 28260097,
-    "geolocation": "인천광역시 서구 경서로31번길 31",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 378,
-    "location": "서구",
-    "name": "청람중학교 운동장",
-    "uuid": 28260096,
-    "geolocation": "인천광역시 서구 청라커낼로 335",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 379,
-    "location": "서구",
-    "name": "청람초등학교 운동장",
-    "uuid": 28260095,
-    "geolocation": "인천광역시 서구 청라커낼로 336",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 380,
-    "location": "서구",
-    "name": "경명초등학교 운동장",
-    "uuid": 28260094,
-    "geolocation": "인천광역시 서구 크리스탈로 130",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 381,
-    "location": "서구",
-    "name": "도담초등학교 운동장",
-    "uuid": 28260093,
-    "geolocation": "인천광역시 서구 청라커낼로 217",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 382,
-    "location": "서구",
-    "name": "청일초등학교 운동장",
-    "uuid": 28260092,
-    "geolocation": "인천광역시 서구 크리스탈로 46",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 383,
-    "location": "서구",
-    "name": "해원고등학교 운동장",
-    "uuid": 28260091,
-    "geolocation": "인천광역시 서구 청라사파이어로140번길 25",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 384,
-    "location": "서구",
-    "name": "해원중학교 운동장",
-    "uuid": 28260090,
-    "geolocation": "인천광역시 서구 청라한내로 21",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 385,
-    "location": "서구",
-    "name": "해원초등학교 운동장",
-    "uuid": 28260089,
-    "geolocation": "인천광역시 서구 청라사파이어로140번길 5",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 386,
-    "location": "서구",
-    "name": "종다리공원",
-    "uuid": 28260087,
-    "geolocation": "인천광역시 서구 검단로 449",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 387,
-    "location": "서구",
-    "name": "계명공원",
-    "uuid": 28260085,
-    "geolocation": "인천광역시 서구 연희로46번길 6",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 388,
-    "location": "서구",
-    "name": "서곶근린공원 ,주차장",
-    "uuid": 28260084,
-    "geolocation": "인천광역시 서구 심곡로 163",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 389,
-    "location": "서구",
-    "name": "간촌공원",
-    "uuid": 28260083,
-    "geolocation": "인천광역시 서구 간촌로 13",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 390,
-    "location": "서구",
-    "name": "모통공원",
-    "uuid": 28260080,
-    "geolocation": "인천광역시 서구 심곡로 81",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 391,
-    "location": "서구",
-    "name": "불로지구4호공원",
-    "uuid": 28260078,
-    "geolocation": "인천광역시 서구 검단로744번3길 14",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 392,
-    "location": "서구",
-    "name": "마전1공원",
-    "uuid": 28260073,
-    "geolocation": "인천광역시 서구 완정로188번길 26",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 393,
-    "location": "서구",
-    "name": "능내공원",
-    "uuid": 28260072,
-    "geolocation": "인천광역시 서구 검단로540번길 41",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 394,
-    "location": "서구",
-    "name": "검단2호공원",
-    "uuid": 28260071,
-    "geolocation": "인천광역시 서구 완정로156번안길 35",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 395,
-    "location": "서구",
-    "name": "장모루근린공원",
-    "uuid": 28260068,
-    "geolocation": "인천광역시 서구 도요지로189번길 141",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 396,
-    "location": "서구",
-    "name": "시립테니스장",
-    "uuid": 28260067,
-    "geolocation": "인천광역시 서구 가좌로11번길 13",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 397,
-    "location": "서구",
-    "name": "왕길근린공원",
-    "uuid": 28260065,
-    "geolocation": "인천광역시 서구 검단로 427",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 398,
-    "location": "서구",
-    "name": "대평공원",
-    "uuid": 28260062,
-    "geolocation": "인천광역시 서구 대평로56번길 25",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 399,
-    "location": "서구",
-    "name": "신촌공원",
-    "uuid": 28260054,
-    "geolocation": "인천광역시 서구 길주로75번길 17",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 400,
-    "location": "서구",
-    "name": "석남체육공원",
-    "uuid": 28260053,
-    "geolocation": "인천광역시 서구 가정로294번길 20",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 401,
-    "location": "서구",
-    "name": "당하지구3호공원",
-    "uuid": 28260041,
-    "geolocation": "인천광역시 서구 청마로148번길 15",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 402,
-    "location": "서구",
-    "name": "당하제1호공원",
-    "uuid": 28260040,
-    "geolocation": "인천광역시 서구 서곶로 840",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 403,
-    "location": "서구",
-    "name": "공촌공원",
-    "uuid": 28260038,
-    "geolocation": "인천광역시 서구 경명대로680번길 9",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 404,
-    "location": "서구",
-    "name": "갈매공원",
-    "uuid": 28260037,
-    "geolocation": "인천광역시 서구 경명대로707번길 29",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 405,
-    "location": "서구",
-    "name": "주물공단공원",
-    "uuid": 28260036,
-    "geolocation": "인천광역시 서구 사렴로 71",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 406,
-    "location": "서구",
-    "name": "청라1호근린공원",
-    "uuid": 28260035,
-    "geolocation": "인천광역시 서구 로봇랜드로249번길 114-1",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 407,
-    "location": "서구",
-    "name": "중동공원",
-    "uuid": 28260034,
-    "geolocation": "인천광역시 서구 서곶로 527",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 408,
-    "location": "서구",
-    "name": "간재울공원",
-    "uuid": 28260033,
-    "geolocation": "인천광역시 서구 승학로472번길 9",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 409,
-    "location": "서구",
-    "name": "가좌근린공원",
-    "uuid": 28260031,
-    "geolocation": "인천광역시 서구 장고개로 255",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 410,
-    "location": "서구",
-    "name": "창신초등학교 운동장",
-    "uuid": 28260030,
-    "geolocation": "인천광역시 서구 고산후로161번길 6",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 411,
-    "location": "서구",
-    "name": "단봉초등학교 운동장",
-    "uuid": 28260029,
-    "geolocation": "인천광역시 서구 단봉로 122",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 412,
-    "location": "서구",
-    "name": "서곶초등학교 운동장",
-    "uuid": 28260028,
-    "geolocation": "인천광역시 서구 대평로56번길 9",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 413,
-    "location": "서구",
-    "name": "서곶중학교 운동장",
-    "uuid": 28260027,
-    "geolocation": "인천광역시 서구 대평로56번길 22",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 414,
-    "location": "서구",
-    "name": "심곡초등학교 운동장",
-    "uuid": 28260026,
-    "geolocation": "인천광역시 서구 심곡로 116",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 415,
-    "location": "서구",
-    "name": "신현북초등학교 운동장",
-    "uuid": 28260025,
-    "geolocation": "인천광역시 서구 원창로 147",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 416,
-    "location": "서구",
-    "name": "신현초등학교 운동장",
-    "uuid": 28260024,
-    "geolocation": "인천광역시 서구 율도로77번길 1",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 417,
-    "location": "서구",
-    "name": "가현초등학교 운동장",
-    "uuid": 28260023,
-    "geolocation": "인천광역시 서구 염곡로 417",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 418,
-    "location": "서구",
-    "name": "천마초등학교 운동장",
-    "uuid": 28260022,
-    "geolocation": "인천광역시 서구 서달로 58-5",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 419,
-    "location": "서구",
-    "name": "석남서초등학교 운동장",
-    "uuid": 28260021,
-    "geolocation": "인천광역시 서구 건지로249번길 6",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 420,
-    "location": "서구",
-    "name": "신석초등학교 운동장",
-    "uuid": 28260020,
-    "geolocation": "인천광역시 서구 새오개로 9",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 421,
-    "location": "서구",
-    "name": "석남초등학교 운동장",
-    "uuid": 28260019,
-    "geolocation": "인천광역시 서구 서달로130번길 4",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 422,
-    "location": "서구",
-    "name": "불로초등학교 운동장",
-    "uuid": 28260018,
-    "geolocation": "인천광역시 서구 검단로744번1길 50",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 423,
-    "location": "서구",
-    "name": "불로중학교 운동장",
-    "uuid": 28260017,
-    "geolocation": "인천광역시 서구 고산후로 363",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 424,
-    "location": "서구",
-    "name": "백석중학교 운동장",
-    "uuid": 28260016,
-    "geolocation": "인천광역시 서구 한들3로 60",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 425,
-    "location": "서구",
-    "name": "발산초등학교 운동장",
-    "uuid": 28260015,
-    "geolocation": "인천광역시 서구 고산후로78번길 6",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 426,
-    "location": "서구",
-    "name": "금곡초등학교 운동장",
-    "uuid": 28260014,
-    "geolocation": "인천광역시 서구 완정로228번길 19",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 427,
-    "location": "서구",
-    "name": "간재울초등학교 운동장",
-    "uuid": 28260013,
-    "geolocation": "인천광역시 서구 승학로 433",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 428,
-    "location": "서구",
-    "name": "검암초등학교 운동장",
-    "uuid": 28260012,
-    "geolocation": "인천광역시 서구 승학로599번길 45",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 429,
-    "location": "서구",
-    "name": "백석초등학교 운동장",
-    "uuid": 28260011,
-    "geolocation": "인천광역시 서구 청마로 55",
-    "updatedate": "2019-12-02"
-  },
-  {
-    "No": 430,
-    "location": "서구",
-    "name": "동인천여자중학교 운동장",
-    "uuid": 28260010,
-    "geolocation": "인천광역시 서구 여우재로112번길 13",
-    "updatedate": "2019-11-27"
-  },
-  {
-    "No": 431,
-    "location": "서구",
-    "name": "가정초등학교 운동장",
-    "uuid": 28260009,
-    "geolocation": "인천광역시 서구 장고개로 336-1",
-    "updatedate": "2019-11-28"
-  },
-  {
-    "No": 432,
-    "location": "서구",
-    "name": "가좌초등학교 운동장",
-    "uuid": 28260007,
-    "geolocation": "인천광역시 서구 장고개로309번길 5",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 433,
-    "location": "서구",
-    "name": "건지초등학교 운동장",
-    "uuid": 28260006,
-    "geolocation": "인천광역시 서구 건지로318번길 39",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 434,
-    "location": "서구",
-    "name": "가좌중학교 운동장",
-    "uuid": 28260005,
-    "geolocation": "인천광역시 서구 건지로334번길 31",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 435,
-    "location": "서구",
-    "name": "봉화초등학교 운동장",
-    "uuid": 28260004,
-    "geolocation": "인천광역시 서구 건지로250번길 43",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 436,
-    "location": "서구",
-    "name": "봉수초등학교 운동장",
-    "uuid": 28260003,
-    "geolocation": "인천광역시 서구 봉오대로267번길 11-4",
-    "updatedate": "2019-11-26"
-  },
-  {
-    "No": 437,
-    "location": "서구",
-    "name": "가석초등학교 운동장",
-    "uuid": 28260002,
-    "geolocation": "인천광역시 서구 서달로 174",
-    "updatedate": "2019-11-05"
-  },
-  {
-    "No": 438,
-    "location": "연수구",
-    "name": "문남공원",
-    "uuid": 28185005,
-    "geolocation": "인천광역시 연수구 새말로55번길 37",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 439,
-    "location": "연수구",
-    "name": "체육공원",
-    "uuid": 28185016,
-    "geolocation": "인천광역시 연수구 청능대로 205",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 440,
-    "location": "연수구",
-    "name": "능허대공원",
-    "uuid": 28185018,
-    "geolocation": "인천광역시 연수구 능허대로 109",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 441,
-    "location": "연수구",
-    "name": "해돋이공원",
-    "uuid": 28185017,
-    "geolocation": "인천광역시 연수구 해돋이로 51",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 442,
-    "location": "연수구",
-    "name": "센트럴 파크",
-    "uuid": 28185015,
-    "geolocation": "인천광역시 연수구 컨벤시아대로 160",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 443,
-    "location": "연수구",
-    "name": "부수지공원",
-    "uuid": 28185014,
-    "geolocation": "인천광역시 연수구 원인재로 104",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 444,
-    "location": "연수구",
-    "name": "동춘공원",
-    "uuid": 28185013,
-    "geolocation": "인천광역시 연수구 먼우금로 107",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 445,
-    "location": "연수구",
-    "name": "동막공원",
-    "uuid": 28185012,
-    "geolocation": "인천광역시 연수구 원인재로 39",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 446,
-    "location": "연수구",
-    "name": "양지공원",
-    "uuid": 28185011,
-    "geolocation": "인천광역시 연수구 용담로117번길 16",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 447,
-    "location": "연수구",
-    "name": "용담공원",
-    "uuid": 28185010,
-    "geolocation": "인천광역시 연수구 용담로 49",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 448,
-    "location": "연수구",
-    "name": "대학공원",
-    "uuid": 28185009,
-    "geolocation": "인천광역시 연수구 함박뫼로 160",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 449,
-    "location": "연수구",
-    "name": "문화공원",
-    "uuid": 28185008,
-    "geolocation": "인천광역시 연수구 새말로 120",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 450,
-    "location": "연수구",
-    "name": "솔안 공원",
-    "uuid": 28185007,
-    "geolocation": "인천광역시 연수구 원인재로 170",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 451,
-    "location": "연수구",
-    "name": "솔밭 공원",
-    "uuid": 28185006,
-    "geolocation": "인천광역시 연수구 원인재로 246",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 452,
-    "location": "연수구",
-    "name": "선학 공원",
-    "uuid": 28185004,
-    "geolocation": "인천광역시 연수구 비류대로 583",
-    "updatedate": "2019-11-25"
-  },
-  {
-    "No": 453,
-    "location": "옹진군",
-    "name": "백령 중고등학교 운동장",
-    "uuid": 28720049,
-    "geolocation": "인천광역시 옹진군 백령면 백령로 708",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 454,
-    "location": "옹진군",
-    "name": "백령 종합운동장",
-    "uuid": 28720048,
-    "geolocation": "인천광역시 옹진군 백령면 백령남로 450",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 455,
-    "location": "옹진군",
-    "name": "연평초중고등학교 운동장",
-    "uuid": 28720047,
-    "geolocation": "인천광역시 옹진군 연평면 연평로137번길 101",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 456,
-    "location": "옹진군",
-    "name": "연평 종합운동장",
-    "uuid": 28720046,
-    "geolocation": "인천광역시 옹진군 연평면 연평로 178",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 457,
-    "location": "옹진군",
-    "name": "승봉분교운동장",
-    "uuid": 28720044,
-    "geolocation": "인천광역시 옹진군 자월면 승봉로67번길 43-18",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 458,
-    "location": "옹진군",
-    "name": "주차장",
-    "uuid": 28720043,
-    "geolocation": "인천광역시 옹진군 덕적면 덕적북로 721",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 459,
-    "location": "옹진군",
-    "name": "운동장",
-    "uuid": 28720040,
-    "geolocation": "인천광역시 옹진군 대청면 대청남로 528",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 460,
-    "location": "옹진군",
-    "name": "대청초등학교운동장",
-    "uuid": 28720039,
-    "geolocation": "인천광역시 옹진군 대청면 대청로244번길 110",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 461,
-    "location": "옹진군",
-    "name": "옥죽포어구적치장",
-    "uuid": 28720037,
-    "geolocation": "인천광역시 옹진군 대청면 대청북로 124",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 462,
-    "location": "옹진군",
-    "name": "건어장",
-    "uuid": 28720036,
-    "geolocation": "인천광역시 옹진군 북도면 장봉로605번길 155",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 463,
-    "location": "옹진군",
-    "name": "물량장",
-    "uuid": 28720035,
-    "geolocation": "인천광역시 옹진군 북도면 장봉로 71",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 464,
-    "location": "옹진군",
-    "name": "물량장",
-    "uuid": 28720033,
-    "geolocation": "인천광역시 옹진군 북도면 신도로 11",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 465,
-    "location": "옹진군",
-    "name": "물량장",
-    "uuid": 28720030,
-    "geolocation": "인천광역시 옹진군 덕적면 덕적북로518번길 44",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 466,
-    "location": "옹진군",
-    "name": "십리포주차장",
-    "uuid": 28720026,
-    "geolocation": "인천광역시 옹진군 영흥면 영흥북로 411",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 467,
-    "location": "옹진군",
-    "name": "십리포주차장",
-    "uuid": 28720025,
-    "geolocation": "인천광역시 옹진군 영흥면 영흥북로 378",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 468,
-    "location": "옹진군",
-    "name": "선재초운동장",
-    "uuid": 28720022,
-    "geolocation": "인천광역시 옹진군 영흥면 선재로34번길 197",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 469,
-    "location": "옹진군",
-    "name": "영흥중운동장",
-    "uuid": 28720021,
-    "geolocation": "인천광역시 옹진군 영흥면 내동로 107",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 470,
-    "location": "옹진군",
-    "name": "영흥초운동장",
-    "uuid": 28720020,
-    "geolocation": "인천광역시 옹진군 영흥면 영흥로 440-8",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 471,
-    "location": "옹진군",
-    "name": "이작2리목섬족구장",
-    "uuid": 28720019,
-    "geolocation": "인천광역시 옹진군 자월면 소이작로 245",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 472,
-    "location": "옹진군",
-    "name": "이작분교운동장",
-    "uuid": 28720018,
-    "geolocation": "인천광역시 옹진군 자월면 대이작로 66",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 473,
-    "location": "옹진군",
-    "name": "자월분교운동장",
-    "uuid": 28720017,
-    "geolocation": "인천광역시 옹진군 자월면 자월서로 177",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 474,
-    "location": "옹진군",
-    "name": "체육시설",
-    "uuid": 28720016,
-    "geolocation": "인천광역시 옹진군 덕적면 덕적남로 564-43",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 475,
-    "location": "옹진군",
-    "name": "덕적초중고등학교 운동장",
-    "uuid": 28720015,
-    "geolocation": "인천광역시 옹진군 덕적면 덕적남로 15",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 476,
-    "location": "옹진군",
-    "name": "소청분교운동장",
-    "uuid": 28720014,
-    "geolocation": "인천광역시 옹진군 대청면 소청동로 69-13",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 477,
-    "location": "옹진군",
-    "name": "대청중고등학교 운동장",
-    "uuid": 28720011,
-    "geolocation": "인천광역시 옹진군 대청면 대청로244번길 116-45",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 478,
-    "location": "옹진군",
-    "name": "답동종합운동장",
-    "uuid": 28720008,
-    "geolocation": "인천광역시 옹진군 대청면 대청로 80",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 479,
-    "location": "옹진군",
-    "name": "삼목초장봉분교",
-    "uuid": 28720007,
-    "geolocation": "인천광역시 옹진군 북도면 장봉로 551",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 480,
-    "location": "옹진군",
-    "name": "시도리운동장",
-    "uuid": 28720004,
-    "geolocation": "인천광역시 옹진군 북도면 시도로86번길 54",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 481,
-    "location": "옹진군",
-    "name": "공원",
-    "uuid": 28720002,
-    "geolocation": "인천광역시 옹진군 북도면 모도로 76",
-    "updatedate": "2019-11-21"
-  },
-  {
-    "No": 482,
-    "location": "중구",
-    "name": "인천국제공항 화물터미널 남측2번주차장",
-    "uuid": 28110079,
-    "geolocation": "인천광역시 중구 공항동로193번길 112",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 483,
-    "location": "중구",
-    "name": "인천국제공항 화물터미널 북측2번주차장",
-    "uuid": 28110077,
-    "geolocation": "인천광역시 중구 공항동로295번길 77-96",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 484,
-    "location": "중구",
-    "name": "인천국제공항 제2여객터미널 썬큰가든",
-    "uuid": 28110075,
-    "geolocation": "인천광역시 중구 제2터미널대로 444-1",
-    "updatedate": "2019-11-19"
-  },
-  {
-    "No": 485,
-    "location": "중구",
-    "name": "인천국제공항 화물터미널 남측4번주차장",
-    "uuid": 28110080,
-    "geolocation": "인천광역시 중구 공항동로193번길 66",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 486,
-    "location": "중구",
-    "name": "인천국제공항 화물터미널 북측4번주차장",
-    "uuid": 28110078,
-    "geolocation": "인천광역시 중구 공항동로295번길 59",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 487,
-    "location": "중구",
-    "name": "인천국제공항 제2여객터미널 제2합동청사주차장",
-    "uuid": 28110074,
-    "geolocation": "인천광역시 중구 제2터미널대로 444",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 488,
-    "location": "중구",
-    "name": "인천국제공항 제1국제여객터미널 서측귀빈주차장",
-    "uuid": 28110073,
-    "geolocation": "인천광역시 중구 공항로 302",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 489,
-    "location": "중구",
-    "name": "인천국제공항 제1국제여객터미널 장기주차장",
-    "uuid": 28110072,
-    "geolocation": "인천광역시 중구 공항로 421",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 490,
-    "location": "중구",
-    "name": "영종하늘체육공원",
-    "uuid": 28110087,
-    "geolocation": "인천광역시 중구 하늘중앙로 224",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 491,
-    "location": "중구",
-    "name": "연안부두 해양광장",
-    "uuid": 28110086,
-    "geolocation": "인천광역시 중구 연안부두로 38",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 492,
-    "location": "중구",
-    "name": "율목공원",
-    "uuid": 28110085,
-    "geolocation": "인천광역시 중구 율목로 35",
-    "updatedate": "2019-11-06"
-  },
-  {
-    "No": 493,
-    "location": "중구",
-    "name": "답동소공원",
-    "uuid": 28110084,
-    "geolocation": "인천광역시 중구 우현로 26",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 494,
-    "location": "중구",
-    "name": "공항합동청사 잔디광장",
-    "uuid": 28110083,
-    "geolocation": "인천광역시 중구 공항로424번길 45",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 495,
-    "location": "중구",
-    "name": "공항합동청사 축구장",
-    "uuid": 28110082,
-    "geolocation": "인천광역시 중구 공항로424번길 47",
-    "updatedate": "2019-11-12"
-  },
-  {
-    "No": 496,
-    "location": "중구",
-    "name": "인천국제공항 화물터미널 남측5번주차장",
-    "uuid": 28110081,
-    "geolocation": "인천광역시 중구 공항동로193번길 26",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 497,
-    "location": "중구",
-    "name": "인천국제공항 제2여객터미널 장기주차장",
-    "uuid": 28110076,
-    "geolocation": "인천광역시 중구 제2터미널대로 346",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 498,
-    "location": "중구",
-    "name": "인천국제공항 제1여객터미널 동측귀빈주차장",
-    "uuid": 28110071,
-    "geolocation": "인천광역시 중구 공항로 240",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 499,
-    "location": "중구",
-    "name": "용유초등학교 무의분교장 운동장",
-    "uuid": 28110069,
-    "geolocation": "인천광역시 중구 대무의로 302-17",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 500,
-    "location": "중구",
-    "name": "용유중학교 운동장",
-    "uuid": 28110068,
-    "geolocation": "인천광역시 중구 남북로87번길 4",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 501,
-    "location": "중구",
-    "name": "영마루공원",
-    "uuid": 28110066,
-    "geolocation": "인천광역시 중구 영종대로 77",
-    "updatedate": "2019-11-13"
-  },
-  {
-    "No": 502,
-    "location": "중구",
-    "name": "유수지공원",
-    "uuid": 28110065,
-    "geolocation": "인천광역시 중구 신도시북로 31-35",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 503,
-    "location": "중구",
-    "name": "운남초등학교 운동장",
-    "uuid": 28110064,
-    "geolocation": "인천광역시 중구 운남서로 38",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 504,
-    "location": "중구",
-    "name": "운서초등학교 운동장",
-    "uuid": 28110063,
-    "geolocation": "인천광역시 중구 운서2로 57",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 505,
-    "location": "중구",
-    "name": "영종초등학교 운동장",
-    "uuid": 28110062,
-    "geolocation": "인천광역시 중구 하늘달빛로 133",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 506,
-    "location": "중구",
-    "name": "인천공항초등학교 운동장",
-    "uuid": 28110061,
-    "geolocation": "인천광역시 중구 신도시남로 43",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 507,
-    "location": "중구",
-    "name": "인천공항중학교 운동장",
-    "uuid": 28110060,
-    "geolocation": "인천광역시 중구 영종대로27번길 49",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 508,
-    "location": "중구",
-    "name": "삼목초등학교 운동장",
-    "uuid": 28110059,
-    "geolocation": "인천광역시 중구 신도시북로 42",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 509,
-    "location": "중구",
-    "name": "송월초등학교 운동장",
-    "uuid": 28110058,
-    "geolocation": "인천광역시 중구 자유공원로 106-7",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 510,
-    "location": "중구",
-    "name": "자유공원",
-    "uuid": 28110057,
-    "geolocation": "인천광역시 중구 제물량로232번길 46",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 511,
-    "location": "중구",
-    "name": "월미공원",
-    "uuid": 28110056,
-    "geolocation": "인천광역시 중구 월미로 131-3",
-    "updatedate": "2019-12-06"
-  },
-  {
-    "No": 512,
-    "location": "중구",
-    "name": "제물포고등학교 운동장",
-    "uuid": 28110055,
-    "geolocation": "인천광역시 중구 자유공원로 58-9",
-    "updatedate": "2019-11-08"
-  },
-  {
-    "No": 513,
-    "location": "중구",
-    "name": "인일여자고등학교 운동장",
-    "uuid": 28110054,
-    "geolocation": "인천광역시 중구 참외전로72번길 10",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 514,
-    "location": "중구",
-    "name": "인천정보산업고등학교",
-    "uuid": 28110053,
-    "geolocation": "인천광역시 중구 참외전로 192",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 515,
-    "location": "중구",
-    "name": "광성중학교 운동장",
-    "uuid": 28110052,
-    "geolocation": "인천광역시 중구 참외전로244번길 47",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 516,
-    "location": "중구",
-    "name": "인천신흥초등학교 운동장",
-    "uuid": 28110051,
-    "geolocation": "인천광역시 중구 제물량로 134",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 517,
-    "location": "중구",
-    "name": "신흥중학교 운동장",
-    "uuid": 28110050,
-    "geolocation": "인천광역시 중구 인항로24번길 38",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 518,
-    "location": "중구",
-    "name": "신흥여자중학교 운동장",
-    "uuid": 28110049,
-    "geolocation": "인천광역시 중구 인항로24번길 37",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 519,
-    "location": "중구",
-    "name": "인천신광초등학교 운동장",
-    "uuid": 28110048,
-    "geolocation": "인천광역시 중구 인중로 63",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 520,
-    "location": "중구",
-    "name": "인천신선초등학교 운동장",
-    "uuid": 28110047,
-    "geolocation": "인천광역시 중구 축항대로291번길 33",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 521,
-    "location": "중구",
-    "name": "인천연안초등학교 운동장",
-    "uuid": 28110046,
-    "geolocation": "인천광역시 중구 연안부두로33번길 53",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 522,
-    "location": "중구",
-    "name": "인성초등학교 운동장",
-    "uuid": 28110045,
-    "geolocation": "인천광역시 중구 신포로39번길 42",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 523,
-    "location": "중구",
-    "name": "인성여자중학교 운동장",
-    "uuid": 28110044,
-    "geolocation": "인천광역시 중구 홍예문로 39",
-    "updatedate": "2019-11-07"
-  },
-  {
-    "No": 524,
-    "location": "중구",
-    "name": "송도중학교 운동장",
-    "uuid": 28110043,
-    "geolocation": "인천광역시 중구 제물량로 123",
-    "updatedate": "2019-11-07"
+   "shelter_id": 1,
+   "location": "강화군",
+   "shelter_name": "인천광역시 학생종합 수련원 운동장",
+   "uuid": 28710025,
+   "geolocation": "인천광역시 강화군 화도면 해안남로 2463",
+   "updatedate": "11/19/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 2,
+   "location": "강화군",
+   "shelter_name": "인천광역시 학생종합수련원 공터",
+   "uuid": 28710024,
+   "geolocation": "인천광역시 강화군 화도면 해안남로 2463-12",
+   "updatedate": "11/19/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 3,
+   "location": "강화군",
+   "shelter_name": "심도중학교운동장",
+   "uuid": 28710047,
+   "geolocation": "인천광역시 강화군 화도면 마니산로 703-20",
+   "updatedate": "11/13/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 4,
+   "location": "강화군",
+   "shelter_name": "서도초중고등학교 운동장",
+   "uuid": 28710046,
+   "geolocation": "인천광역시 강화군 서도면 주문도길 173",
+   "updatedate": "11/14/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 5,
+   "location": "강화군",
+   "shelter_name": "해명초등학교 운동장",
+   "uuid": 28710045,
+   "geolocation": "인천광역시 강화군 삼산면 삼산남로 345",
+   "updatedate": "11/14/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 6,
+   "location": "강화군",
+   "shelter_name": "승영중학교 운동장",
+   "uuid": 28710044,
+   "geolocation": "인천광역시 강화군 삼산면 삼산북로473번길 47",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 7,
+   "location": "강화군",
+   "shelter_name": "삼산초등학교 운동장",
+   "uuid": 28710043,
+   "geolocation": "인천광역시 강화군 삼산면 삼산북로 451",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 8,
+   "location": "강화군",
+   "shelter_name": "난정초등학교 운동장",
+   "uuid": 28710042,
+   "geolocation": "인천광역시 강화군 교동면 교동서로378번길 28",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 9,
+   "location": "강화군",
+   "shelter_name": "지석초등학교 운동장",
+   "uuid": 28710041,
+   "geolocation": "인천광역시 강화군 교동면 교동북로 275-1",
+   "updatedate": "11/14/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 10,
+   "location": "강화군",
+   "shelter_name": "교동중고등학교 운동장",
+   "uuid": 28710040,
+   "geolocation": "인천광역시 강화군 교동면 교동남로 77",
+   "updatedate": "11/14/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 11,
+   "location": "강화군",
+   "shelter_name": "교동초등학교 운동장",
+   "uuid": 28710039,
+   "geolocation": "인천광역시 강화군 교동면 대룡안길 29",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 12,
+   "location": "강화군",
+   "shelter_name": "송해초등학교 운동장",
+   "uuid": 28710038,
+   "geolocation": "인천광역시 강화군 송해면 전망대로 93-12",
+   "updatedate": "11/14/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 13,
+   "location": "강화군",
+   "shelter_name": "양사초등학교 운동장",
+   "uuid": 28710037,
+   "geolocation": "인천광역시 강화군 양사면 덕하로 145",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 14,
+   "location": "강화군",
+   "shelter_name": "하점초등학교 운동장",
+   "uuid": 28710036,
+   "geolocation": "인천광역시 강화군 하점면 강화대로 1190",
+   "updatedate": "11/14/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 15,
+   "location": "강화군",
+   "shelter_name": "강서중학교 운동장",
+   "uuid": 28710035,
+   "geolocation": "인천광역시 강화군 하점면 강화서로 909-19",
+   "updatedate": "11/14/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 16,
+   "location": "강화군",
+   "shelter_name": "명신초등학교 운동장",
+   "uuid": 28710034,
+   "geolocation": "인천광역시 강화군 하점면 강화서로560번길 22",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 17,
+   "location": "강화군",
+   "shelter_name": "내가면 황청리 공터 1",
+   "uuid": 28710032,
+   "geolocation": "인천광역시 강화군 내가면 황청포구로 339",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 18,
+   "location": "강화군",
+   "shelter_name": "내가초등학교 운동장",
+   "uuid": 28710031,
+   "geolocation": "인천광역시 강화군 내가면 강화서로 264",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 19,
+   "location": "강화군",
+   "shelter_name": "삼량중고등학교운동장",
+   "uuid": 28710030,
+   "geolocation": "인천광역시 강화군 내가면 강화서로 184",
+   "updatedate": "11/14/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 20,
+   "location": "강화군",
+   "shelter_name": "조산초등학교 운동장",
+   "uuid": 28710029,
+   "geolocation": "인천광역시 강화군 양도면 강화남로 510",
+   "updatedate": "11/14/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 21,
+   "location": "강화군",
+   "shelter_name": "양도초등학교 운동장",
+   "uuid": 28710028,
+   "geolocation": "인천광역시 강화군 양도면 강화남로 1036",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 22,
+   "location": "강화군",
+   "shelter_name": "동광중학교운동장",
+   "uuid": 28710027,
+   "geolocation": "인천광역시 강화군 양도면 강화남로 704",
+   "updatedate": "11/14/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 23,
+   "location": "강화군",
+   "shelter_name": "인천광역시 학생교육원 흥왕체험학습",
+   "uuid": 28710026,
+   "geolocation": "인천광역시 강화군 화도면 해안남로 1854",
+   "updatedate": "11/20/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 24,
+   "location": "강화군",
+   "shelter_name": "마니산청소년 수련원 운동장",
+   "uuid": 28710023,
+   "geolocation": "인천광역시 강화군 화도면 동녘말길220번길 33",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 25,
+   "location": "강화군",
+   "shelter_name": "화이트하우스 수련원 운동장",
+   "uuid": 28710022,
+   "geolocation": "인천광역시 강화군 화도면 마니산로543번길 19",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 26,
+   "location": "강화군",
+   "shelter_name": "화도초등학교운동장",
+   "uuid": 28710020,
+   "geolocation": "인천광역시 강화군 화도면 마니산로 717",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 27,
+   "location": "강화군",
+   "shelter_name": "선두2리 마을회관 공터",
+   "uuid": 28710019,
+   "geolocation": "인천광역시 강화군 길상면 보리고개로 13",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 28,
+   "location": "강화군",
+   "shelter_name": "온수2리 마을회관 공터",
+   "uuid": 28710018,
+   "geolocation": "인천광역시 강화군 길상면 온수길36번길 7-1",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 29,
+   "location": "강화군",
+   "shelter_name": "초지1리 마을회관 공터",
+   "uuid": 28710017,
+   "geolocation": "인천광역시 강화군 길상면 길상로95번길 37-13",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 30,
+   "location": "강화군",
+   "shelter_name": "길직2리 마을회관 공터",
+   "uuid": 28710016,
+   "geolocation": "인천광역시 강화군 길상면 강화동로 144",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 31,
+   "location": "강화군",
+   "shelter_name": "동검리 마을회관 공터",
+   "uuid": 28710015,
+   "geolocation": "인천광역시 강화군 길상면 동검길154번길 36-19",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 32,
+   "location": "강화군",
+   "shelter_name": "강남중학교 운동장",
+   "uuid": 28710014,
+   "geolocation": "인천광역시 강화군 길상면 강화남로 62-2",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 33,
+   "location": "강화군",
+   "shelter_name": "길상초등학교 운동장",
+   "uuid": 28710013,
+   "geolocation": "인천광역시 강화군 길상면 삼랑성길 22",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 34,
+   "location": "강화군",
+   "shelter_name": "삼성초등학교운동장",
+   "uuid": 28710012,
+   "geolocation": "인천광역시 강화군 불은면 중앙로 609",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 35,
+   "location": "강화군",
+   "shelter_name": "불은초등학교 운동장",
+   "uuid": 28710011,
+   "geolocation": "인천광역시 강화군 불은면 불은남로544번길 9",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 36,
+   "location": "강화군",
+   "shelter_name": "선원초등학교 운동장",
+   "uuid": 28710010,
+   "geolocation": "인천광역시 강화군 선원면 강화동로 924",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 37,
+   "location": "강화군",
+   "shelter_name": "갑룡초교운동장",
+   "uuid": 28710009,
+   "geolocation": "인천광역시 강화군 강화읍 갑룡길 88",
+   "updatedate": "11/15/2019",
+   "capacity": 20
+  },
+  {
+   "shelter_id": 38,
+   "location": "강화군",
+   "shelter_name": "합일초등학교운동장",
+   "uuid": 28710008,
+   "geolocation": "인천광역시 강화군 강화읍 합일길 3",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 39,
+   "location": "강화군",
+   "shelter_name": "강화초등학교운동장",
+   "uuid": 28710007,
+   "geolocation": "인천광역시 강화군 강화읍 북문길 36",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 40,
+   "location": "강화군",
+   "shelter_name": "강화중학교운동장",
+   "uuid": 28710006,
+   "geolocation": "인천광역시 강화군 강화읍 동문로 53",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 41,
+   "location": "강화군",
+   "shelter_name": "강화여고운동장",
+   "uuid": 28710005,
+   "geolocation": "인천광역시 강화군 강화읍 송악길 57",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 42,
+   "location": "강화군",
+   "shelter_name": "덕신고등학교운동장",
+   "uuid": 28710004,
+   "geolocation": "인천광역시 강화군 강화읍 고비고개로 45",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 43,
+   "location": "강화군",
+   "shelter_name": "강화고등학교운동장",
+   "uuid": 28710003,
+   "geolocation": "인천광역시 강화군 강화읍 고비고개로 20",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 44,
+   "location": "강화군",
+   "shelter_name": "강화공설운동장",
+   "uuid": 28710002,
+   "geolocation": "인천광역시 강화군 강화읍 고비고개로19번길 12",
+   "updatedate": "11/19/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 45,
+   "location": "계양구",
+   "shelter_name": "효성고등학교 운동장",
+   "uuid": 28245091,
+   "geolocation": "인천광역시 계양구 새벌로171번길 21",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 46,
+   "location": "계양구",
+   "shelter_name": "효성초등학교 운동장",
+   "uuid": 28245096,
+   "geolocation": "인천광역시 계양구 안남로 601",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 47,
+   "location": "계양구",
+   "shelter_name": "효성중학교 운동장",
+   "uuid": 28245095,
+   "geolocation": "인천광역시 계양구 안남로 607",
+   "updatedate": "11/21/2019",
+   "capacity": 20
+  },
+  {
+   "shelter_id": 48,
+   "location": "계양구",
+   "shelter_name": "효성서초등학교 운동장",
+   "uuid": 28245094,
+   "geolocation": "인천광역시 계양구 봉오대로 457",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 49,
+   "location": "계양구",
+   "shelter_name": "효성동초등학교 운동장",
+   "uuid": 28245093,
+   "geolocation": "인천광역시 계양구 새벌로171번길 4",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 50,
+   "location": "계양구",
+   "shelter_name": "효성남초등학교 운동장",
+   "uuid": 28245092,
+   "geolocation": "인천광역시 계양구 새벌로 125",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 51,
+   "location": "계양구",
+   "shelter_name": "화전초등학교 운동장",
+   "uuid": 28245090,
+   "geolocation": "인천광역시 계양구 효서로303번길 8",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 52,
+   "location": "계양구",
+   "shelter_name": "해서초등학교 운동장",
+   "uuid": 28245089,
+   "geolocation": "인천광역시 계양구 계산로 42-1",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 53,
+   "location": "계양구",
+   "shelter_name": "작전초등학교 운동장",
+   "uuid": 28245088,
+   "geolocation": "인천광역시 계양구 주부토로 456",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 54,
+   "location": "계양구",
+   "shelter_name": "작전중학교 운동장",
+   "uuid": 28245087,
+   "geolocation": "인천광역시 계양구 주부토로448번길 16",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 55,
+   "location": "계양구",
+   "shelter_name": "작전여자고등학교 운동장",
+   "uuid": 28245086,
+   "geolocation": "인천광역시 계양구 주부토로426번길 15",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 56,
+   "location": "계양구",
+   "shelter_name": "작전고등학교 운동장",
+   "uuid": 28245085,
+   "geolocation": "인천광역시 계양구 봉오대로729번길 27",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 57,
+   "location": "계양구",
+   "shelter_name": "작동초등학교 운동장",
+   "uuid": 28245084,
+   "geolocation": "인천광역시 계양구 까치말로 35",
+   "updatedate": "11/21/2019",
+   "capacity": 20
+  },
+  {
+   "shelter_id": 58,
+   "location": "계양구",
+   "shelter_name": "임학중학교 운동장",
+   "uuid": 28245083,
+   "geolocation": "인천광역시 계양구 장제로 894",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 59,
+   "location": "계양구",
+   "shelter_name": "안남중학교 운동장",
+   "uuid": 28245082,
+   "geolocation": "인천광역시 계양구 계산새로33번길 5",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 60,
+   "location": "계양구",
+   "shelter_name": "예일고등학교 운동장",
+   "uuid": 28245081,
+   "geolocation": "인천광역시 계양구 박촌로 23",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 61,
+   "location": "계양구",
+   "shelter_name": "양촌초등학교 운동장",
+   "uuid": 28245080,
+   "geolocation": "인천광역시 계양구 장제로 954",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 62,
+   "location": "계양구",
+   "shelter_name": "양촌중학교 운동장",
+   "uuid": 28245079,
+   "geolocation": "인천광역시 계양구 장제로948번길 13",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 63,
+   "location": "계양구",
+   "shelter_name": "안산초등학교 운동장",
+   "uuid": 28245078,
+   "geolocation": "인천광역시 계양구 임학서로 15",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 64,
+   "location": "계양구",
+   "shelter_name": "안남초등학교 운동장",
+   "uuid": 28245077,
+   "geolocation": "인천광역시 계양구 경명대로1114번길 26",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 65,
+   "location": "계양구",
+   "shelter_name": "안남고등학교 운동장",
+   "uuid": 28245076,
+   "geolocation": "인천광역시 계양구 아나지로308번길 9",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 66,
+   "location": "계양구",
+   "shelter_name": "신대초등학교 운동장",
+   "uuid": 28245075,
+   "geolocation": "인천광역시 계양구 계산새로 133",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 67,
+   "location": "계양구",
+   "shelter_name": "소양초등학교 운동장",
+   "uuid": 28245074,
+   "geolocation": "인천광역시 계양구 박촌로 53",
+   "updatedate": "11/21/2019",
+   "capacity": 20
+  },
+  {
+   "shelter_id": 68,
+   "location": "계양구",
+   "shelter_name": "세원고등학교 운동장",
+   "uuid": 28245073,
+   "geolocation": "인천광역시 계양구 장제로 966",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 69,
+   "location": "계양구",
+   "shelter_name": "성지초등학교 운동장",
+   "uuid": 28245072,
+   "geolocation": "인천광역시 계양구 아나지로247번길 8",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 70,
+   "location": "계양구",
+   "shelter_name": "서운초등학교 운동장",
+   "uuid": 28245071,
+   "geolocation": "인천광역시 계양구 서운로 12",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 71,
+   "location": "계양구",
+   "shelter_name": "서운중학교 운동장",
+   "uuid": 28245070,
+   "geolocation": "인천광역시 계양구 아나지로 467",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 72,
+   "location": "계양구",
+   "shelter_name": "서운고등학교 운동장",
+   "uuid": 28245069,
+   "geolocation": "인천광역시 계양구 아나지로 481",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 73,
+   "location": "계양구",
+   "shelter_name": "북인천중학교 운동장",
+   "uuid": 28245068,
+   "geolocation": "인천광역시 계양구 계산로22번길 6",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 74,
+   "location": "계양구",
+   "shelter_name": "북인천여자중학교 운동장",
+   "uuid": 28245067,
+   "geolocation": "인천광역시 계양구 아나지로85번길 12",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 75,
+   "location": "계양구",
+   "shelter_name": "부현초등학교 운동장",
+   "uuid": 28245066,
+   "geolocation": "인천광역시 계양구 장제로755번길 30",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 76,
+   "location": "계양구",
+   "shelter_name": "부현동초등학교 운동장",
+   "uuid": 28245065,
+   "geolocation": "인천광역시 계양구 용종로 5",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 77,
+   "location": "계양구",
+   "shelter_name": "부평초등학교 운동장",
+   "uuid": 28245064,
+   "geolocation": "인천광역시 계양구 어사대로 20",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 78,
+   "location": "계양구",
+   "shelter_name": "병방초등학교 운동장",
+   "uuid": 28245063,
+   "geolocation": "인천광역시 계양구 병방로 2",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 79,
+   "location": "계양구",
+   "shelter_name": "예일중학교 운동장",
+   "uuid": 28245062,
+   "geolocation": "인천광역시 계양구 장제로995번길 39",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 80,
+   "location": "계양구",
+   "shelter_name": "명현초등학교 운동장",
+   "uuid": 28245061,
+   "geolocation": "인천광역시 계양구 봉오대로569번길 10",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 81,
+   "location": "계양구",
+   "shelter_name": "명현중학교 운동장",
+   "uuid": 28245060,
+   "geolocation": "인천광역시 계양구 안남로554번길 26",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 82,
+   "location": "계양구",
+   "shelter_name": "동양중학교 운동장",
+   "uuid": 28245059,
+   "geolocation": "인천광역시 계양구 당미길 56",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 83,
+   "location": "계양구",
+   "shelter_name": "당산초등학교 운동장",
+   "uuid": 28245058,
+   "geolocation": "인천광역시 계양구 동양로 122",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 84,
+   "location": "계양구",
+   "shelter_name": "길주초등학교 운동장",
+   "uuid": 28245057,
+   "geolocation": "인천광역시 계양구 용종로 90",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 85,
+   "location": "계양구",
+   "shelter_name": "귤현초등학교 운동장",
+   "uuid": 28245056,
+   "geolocation": "인천광역시 계양구 귤현길 15",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 86,
+   "location": "계양구",
+   "shelter_name": "계양초등학교 상야분교 운동장",
+   "uuid": 28245055,
+   "geolocation": "인천광역시 계양구 벌말로 572-1",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 87,
+   "location": "계양구",
+   "shelter_name": "계양초등학교 운동장",
+   "uuid": 28245054,
+   "geolocation": "인천광역시 계양구 장제로 1288",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 88,
+   "location": "계양구",
+   "shelter_name": "계양중학교 운동장",
+   "uuid": 28245053,
+   "geolocation": "인천광역시 계양구 장제로1181번길 9",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 89,
+   "location": "계양구",
+   "shelter_name": "계양고등학교 운동장",
+   "uuid": 28245052,
+   "geolocation": "인천광역시 계양구 계양문화로 177",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 90,
+   "location": "계양구",
+   "shelter_name": "계수중학교 운동장",
+   "uuid": 28245051,
+   "geolocation": "인천광역시 계양구 살라리로2번길 25",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 91,
+   "location": "계양구",
+   "shelter_name": "계산초등학교 운동장",
+   "uuid": 28245050,
+   "geolocation": "인천광역시 계양구 경명대로 1005",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 92,
+   "location": "계양구",
+   "shelter_name": "계산중학교 운동장",
+   "uuid": 28245049,
+   "geolocation": "인천광역시 계양구 도두리로 67-16",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 93,
+   "location": "계양구",
+   "shelter_name": "계산여자중학교 운동장",
+   "uuid": 28245048,
+   "geolocation": "인천광역시 계양구 장제로755번길 16",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 94,
+   "location": "계양구",
+   "shelter_name": "계산여자고등학교 운동장",
+   "uuid": 28245047,
+   "geolocation": "인천광역시 계양구 계산새로 131",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 95,
+   "location": "계양구",
+   "shelter_name": "계산공업고등학교 운동장",
+   "uuid": 28245046,
+   "geolocation": "인천광역시 계양구 도두리로 47",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 96,
+   "location": "계양구",
+   "shelter_name": "계산고등학교 운동장",
+   "uuid": 28245045,
+   "geolocation": "인천광역시 계양구 주부토로 588",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 97,
+   "location": "계양구",
+   "shelter_name": "경인교대부속초등학교 운동장",
+   "uuid": 28245044,
+   "geolocation": "인천광역시 계양구 안남로 612",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 98,
+   "location": "계양구",
+   "shelter_name": "동양공원 1",
+   "uuid": 28245043,
+   "geolocation": "인천광역시 계양구 당미길 27",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 99,
+   "location": "계양구",
+   "shelter_name": "작전공원 2",
+   "uuid": 28245041,
+   "geolocation": "인천광역시 계양구 계양문화로 1",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 100,
+   "location": "계양구",
+   "shelter_name": "이촌공원",
+   "uuid": 28245040,
+   "geolocation": "인천광역시 계양구 안남로 606",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 101,
+   "location": "계양구",
+   "shelter_name": "계산체육공원",
+   "uuid": 28245039,
+   "geolocation": "인천광역시 계양구 주부토로 570",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 102,
+   "location": "계양구",
+   "shelter_name": "된밭공원",
+   "uuid": 28245037,
+   "geolocation": "인천광역시 계양구 주부토로 430",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 103,
+   "location": "계양구",
+   "shelter_name": "서운공원",
+   "uuid": 28245036,
+   "geolocation": "인천광역시 계양구 효서로 397",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 104,
+   "location": "계양구",
+   "shelter_name": "까치공원",
+   "uuid": 28245035,
+   "geolocation": "인천광역시 계양구 도두리로 22",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 105,
+   "location": "계양구",
+   "shelter_name": "계양교통공원",
+   "uuid": 28245034,
+   "geolocation": "인천광역시 계양구 계산새로 122",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 106,
+   "location": "계양구",
+   "shelter_name": "오조산공원",
+   "uuid": 28245033,
+   "geolocation": "인천광역시 계양구 오조산공원로 35",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 107,
+   "location": "계양구",
+   "shelter_name": "들놀이공원",
+   "uuid": 28245032,
+   "geolocation": "인천광역시 계양구 양지로 109",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 108,
+   "location": "계양구",
+   "shelter_name": "계산1공원",
+   "uuid": 28245031,
+   "geolocation": "인천광역시 계양구 경명대로1052번길 6",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 109,
+   "location": "계양구",
+   "shelter_name": "살나리공원",
+   "uuid": 28245030,
+   "geolocation": "인천광역시 계양구 살라리로12번길 7",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 110,
+   "location": "계양구",
+   "shelter_name": "서녘공원",
+   "uuid": 28245029,
+   "geolocation": "인천광역시 계양구 당미3길 19",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 111,
+   "location": "계양구",
+   "shelter_name": "모텡이공원",
+   "uuid": 28245028,
+   "geolocation": "인천광역시 계양구 양지말1길 6",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 112,
+   "location": "계양구",
+   "shelter_name": "양지말공원",
+   "uuid": 28245027,
+   "geolocation": "인천광역시 계양구 양지말길 41",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 113,
+   "location": "계양구",
+   "shelter_name": "장터공원",
+   "uuid": 28245026,
+   "geolocation": "인천광역시 계양구 황어로134번길 15",
+   "updatedate": "6/28/2021",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 114,
+   "location": "계양구",
+   "shelter_name": "중앙공원",
+   "uuid": 28245025,
+   "geolocation": "인천광역시 계양구 장기로9번길 13",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 115,
+   "location": "계양구",
+   "shelter_name": "장기공원",
+   "uuid": 28245024,
+   "geolocation": "인천광역시 계양구 장기서로20번길 28",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 116,
+   "location": "계양구",
+   "shelter_name": "동산공원",
+   "uuid": 28245023,
+   "geolocation": "인천광역시 계양구 황어로115번길 23",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 117,
+   "location": "계양구",
+   "shelter_name": "동양택지2공원",
+   "uuid": 28245022,
+   "geolocation": "인천광역시 계양구 동양로 120",
+   "updatedate": "11/21/2019",
+   "capacity": 20
+  },
+  {
+   "shelter_id": 118,
+   "location": "계양구",
+   "shelter_name": "동양택지1공원",
+   "uuid": 28245021,
+   "geolocation": "인천광역시 계양구 동양로 73",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 119,
+   "location": "계양구",
+   "shelter_name": "굴재공원",
+   "uuid": 28245020,
+   "geolocation": "인천광역시 계양구 굴재길 6",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 120,
+   "location": "계양구",
+   "shelter_name": "안골공원",
+   "uuid": 28245019,
+   "geolocation": "인천광역시 계양구 장군봉길 30",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 121,
+   "location": "계양구",
+   "shelter_name": "샘터공원",
+   "uuid": 28245018,
+   "geolocation": "인천광역시 계양구 화단봉길 7",
+   "updatedate": "6/28/2021",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 122,
+   "location": "계양구",
+   "shelter_name": "개나리공원",
+   "uuid": 28245016,
+   "geolocation": "인천광역시 계양구 계산새로 41",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 123,
+   "location": "계양구",
+   "shelter_name": "초정공원",
+   "uuid": 28245012,
+   "geolocation": "인천광역시 계양구 계양문화로 154",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 124,
+   "location": "계양구",
+   "shelter_name": "학마을공원",
+   "uuid": 28245011,
+   "geolocation": "인천광역시 계양구 용종로 115",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 125,
+   "location": "계양구",
+   "shelter_name": "임학공원",
+   "uuid": 28245010,
+   "geolocation": "인천광역시 계양구 병방시장로 11",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 126,
+   "location": "계양구",
+   "shelter_name": "병방공원",
+   "uuid": 28245009,
+   "geolocation": "인천광역시 계양구 병방시장로55번길 4",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 127,
+   "location": "계양구",
+   "shelter_name": "방축공원",
+   "uuid": 28245008,
+   "geolocation": "인천광역시 계양구 장제로933번길 17",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 128,
+   "location": "계양구",
+   "shelter_name": "고향골공원",
+   "uuid": 28245007,
+   "geolocation": "인천광역시 계양구 향교로21번길 15",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 129,
+   "location": "계양구",
+   "shelter_name": "낙원공원",
+   "uuid": 28245006,
+   "geolocation": "인천광역시 계양구 임학동로 54",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 130,
+   "location": "계양구",
+   "shelter_name": "안남공원",
+   "uuid": 28245005,
+   "geolocation": "인천광역시 계양구 주부토로529번길 9",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 131,
+   "location": "계양구",
+   "shelter_name": "부일공원",
+   "uuid": 28245004,
+   "geolocation": "인천광역시 계양구 경명대로1045번길 14",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 132,
+   "location": "계양구",
+   "shelter_name": "작전공원 1",
+   "uuid": 28245003,
+   "geolocation": "인천광역시 계양구 아나지로299번길 6",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 133,
+   "location": "계양구",
+   "shelter_name": "효성공원",
+   "uuid": 28245002,
+   "geolocation": "인천광역시 계양구 새벌로111번길 7",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 134,
+   "location": "남동구",
+   "shelter_name": "시청 본관 잔디밭(인천애뜰)",
+   "uuid": 28200212,
+   "geolocation": "인천광역시 남동구 미래로 43",
+   "updatedate": "7/8/2021",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 135,
+   "location": "남동구",
+   "shelter_name": "바람어린이공원",
+   "uuid": 28200053,
+   "geolocation": "인천광역시 남동구 앵고개로 789",
+   "updatedate": "11/12/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 136,
+   "location": "남동구",
+   "shelter_name": "나루소공원",
+   "uuid": 28200052,
+   "geolocation": "인천광역시 남동구 소래역남로 28",
+   "updatedate": "11/12/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 137,
+   "location": "남동구",
+   "shelter_name": "한아름근린공원",
+   "uuid": 28200051,
+   "geolocation": "인천광역시 남동구 논고개로 51",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 138,
+   "location": "남동구",
+   "shelter_name": "논현포대근린공원",
+   "uuid": 28200050,
+   "geolocation": "인천광역시 남동구 은봉로 142",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 139,
+   "location": "남동구",
+   "shelter_name": "논현중앙근린공원",
+   "uuid": 28200049,
+   "geolocation": "인천광역시 남동구 청능대로 609",
+   "updatedate": "11/12/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 140,
+   "location": "남동구",
+   "shelter_name": "오봉근린공원",
+   "uuid": 28200048,
+   "geolocation": "인천광역시 남동구 논고개로334번길 28",
+   "updatedate": "11/12/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 141,
+   "location": "남동구",
+   "shelter_name": "물빛근린공원",
+   "uuid": 28200047,
+   "geolocation": "인천광역시 남동구 서창방산로 34",
+   "updatedate": "11/12/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 142,
+   "location": "남동구",
+   "shelter_name": "어울근린공원",
+   "uuid": 28200046,
+   "geolocation": "인천광역시 남동구 서창남순환로 157",
+   "updatedate": "11/12/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 143,
+   "location": "남동구",
+   "shelter_name": "서창근린공원",
+   "uuid": 28200045,
+   "geolocation": "인천광역시 남동구 독곡로16번길 9",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 144,
+   "location": "남동구",
+   "shelter_name": "구월근린공원",
+   "uuid": 28200044,
+   "geolocation": "인천광역시 남동구 호구포로857번길 23",
+   "updatedate": "11/12/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 145,
+   "location": "남동구",
+   "shelter_name": "동방초등학교 운동장",
+   "uuid": 28200042,
+   "geolocation": "인천광역시 남동구 논현역로 31",
+   "updatedate": "11/12/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 146,
+   "location": "남동구",
+   "shelter_name": "인천시청 운동장",
+   "uuid": 28200041,
+   "geolocation": "인천광역시 남동구 정각로 35",
+   "updatedate": "1/30/2020",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 147,
+   "location": "남동구",
+   "shelter_name": "논현초등학교 운동장",
+   "uuid": 28200039,
+   "geolocation": "인천광역시 남동구 소래역로 102",
+   "updatedate": "11/12/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 148,
+   "location": "남동구",
+   "shelter_name": "논곡초등학교 운동장",
+   "uuid": 28200038,
+   "geolocation": "인천광역시 남동구 함박뫼로 429",
+   "updatedate": "11/12/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 149,
+   "location": "남동구",
+   "shelter_name": "장도초등학교 운동장",
+   "uuid": 28200037,
+   "geolocation": "인천광역시 남동구 포구로 112",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 150,
+   "location": "남동구",
+   "shelter_name": "도림초등학교 운동장",
+   "uuid": 28200036,
+   "geolocation": "인천광역시 남동구 논고개로334번길 21",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 151,
+   "location": "남동구",
+   "shelter_name": "남촌초등학교 운동장",
+   "uuid": 28200035,
+   "geolocation": "인천광역시 남동구 남촌로 101",
+   "updatedate": "11/12/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 152,
+   "location": "남동구",
+   "shelter_name": "서창중학교 운동장",
+   "uuid": 28200034,
+   "geolocation": "인천광역시 남동구 독곡로60번길 16",
+   "updatedate": "11/12/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 153,
+   "location": "남동구",
+   "shelter_name": "서창초등학교 운동장",
+   "uuid": 28200033,
+   "geolocation": "인천광역시 남동구 장아산로174번길 8",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 154,
+   "location": "남동구",
+   "shelter_name": "만수초등학교 운동장",
+   "uuid": 28200032,
+   "geolocation": "인천광역시 남동구 소래로 652",
+   "updatedate": "11/12/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 155,
+   "location": "남동구",
+   "shelter_name": "담방초등학교 운동장",
+   "uuid": 28200031,
+   "geolocation": "인천광역시 남동구 매소홀로 1027",
+   "updatedate": "11/12/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 156,
+   "location": "남동구",
+   "shelter_name": "남동초등학교 운동장",
+   "uuid": 28200030,
+   "geolocation": "인천광역시 남동구 장승남로33번길 10",
+   "updatedate": "11/12/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 157,
+   "location": "남동구",
+   "shelter_name": "남동중학교 운동장",
+   "uuid": 28200029,
+   "geolocation": "인천광역시 남동구 담방로 7",
+   "updatedate": "11/12/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 158,
+   "location": "남동구",
+   "shelter_name": "만월중학교 운동장",
+   "uuid": 28200028,
+   "geolocation": "인천광역시 남동구 서창남순환로 22",
+   "updatedate": "11/12/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 159,
+   "location": "남동구",
+   "shelter_name": "만수중학교 운동장",
+   "uuid": 28200027,
+   "geolocation": "인천광역시 남동구 인수로 13",
+   "updatedate": "11/14/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 160,
+   "location": "남동구",
+   "shelter_name": "인수초등학교 운동장",
+   "uuid": 28200026,
+   "geolocation": "인천광역시 남동구 인수로 3",
+   "updatedate": "11/14/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 161,
+   "location": "남동구",
+   "shelter_name": "만수여자중학교 운동장",
+   "uuid": 28200025,
+   "geolocation": "인천광역시 남동구 만수로50번길 22-36",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 162,
+   "location": "남동구",
+   "shelter_name": "조동초등학교 운동장",
+   "uuid": 28200024,
+   "geolocation": "인천광역시 남동구 백범로124번길 164",
+   "updatedate": "11/14/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 163,
+   "location": "남동구",
+   "shelter_name": "만수북중학교 운동장",
+   "uuid": 28200023,
+   "geolocation": "인천광역시 남동구 만수서로 117",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 164,
+   "location": "남동구",
+   "shelter_name": "인동초등학교 운동장",
+   "uuid": 28200022,
+   "geolocation": "인천광역시 남동구 백범로248번길 38",
+   "updatedate": "11/14/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 165,
+   "location": "남동구",
+   "shelter_name": "동부초등학교 운동장",
+   "uuid": 28200021,
+   "geolocation": "인천광역시 남동구 만수서로33번길 25",
+   "updatedate": "11/14/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 166,
+   "location": "남동구",
+   "shelter_name": "만수북초등학교 운동장",
+   "uuid": 28200020,
+   "geolocation": "인천광역시 남동구 백범로180번길 25",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 167,
+   "location": "남동구",
+   "shelter_name": "주원초등학교 운동장",
+   "uuid": 28200019,
+   "geolocation": "인천광역시 남동구 주안로259번길 28",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 168,
+   "location": "남동구",
+   "shelter_name": "석정초등학교 운동장",
+   "uuid": 28200018,
+   "geolocation": "인천광역시 남동구 석정로539번길 32",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 169,
+   "location": "남동구",
+   "shelter_name": "약산초등학교 운동장",
+   "uuid": 28200017,
+   "geolocation": "인천광역시 남동구 간석로26번길 10",
+   "updatedate": "11/14/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 170,
+   "location": "남동구",
+   "shelter_name": "상아초등학교 운동장",
+   "uuid": 28200016,
+   "geolocation": "인천광역시 남동구 석산로184번길 66",
+   "updatedate": "11/14/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 171,
+   "location": "남동구",
+   "shelter_name": "간석여자중학교 운동장",
+   "uuid": 28200015,
+   "geolocation": "인천광역시 남동구 간석로25번길 13",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 172,
+   "location": "남동구",
+   "shelter_name": "인제고등학교 운동장",
+   "uuid": 28200014,
+   "geolocation": "인천광역시 남동구 석산로197번길 19",
+   "updatedate": "11/14/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 173,
+   "location": "남동구",
+   "shelter_name": "상인천초등학교 운동장",
+   "uuid": 28200013,
+   "geolocation": "인천광역시 남동구 석산로141번길 29",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 174,
+   "location": "남동구",
+   "shelter_name": "인천예술고등학교 운동장",
+   "uuid": 28200012,
+   "geolocation": "인천광역시 남동구 구월로115번길 36",
+   "updatedate": "11/14/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 175,
+   "location": "남동구",
+   "shelter_name": "신월초등학교 운동장",
+   "uuid": 28200011,
+   "geolocation": "인천광역시 남동구 인주대로776번길 14",
+   "updatedate": "11/14/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 176,
+   "location": "남동구",
+   "shelter_name": "구월서초등학교 운동장",
+   "uuid": 28200010,
+   "geolocation": "인천광역시 남동구 문화서로77번길 14",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 177,
+   "location": "남동구",
+   "shelter_name": "동인천중학교 운동장",
+   "uuid": 28200009,
+   "geolocation": "인천광역시 남동구 구월남로57번길 12",
+   "updatedate": "11/14/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 178,
+   "location": "남동구",
+   "shelter_name": "간석초등학교 운동장",
+   "uuid": 28200008,
+   "geolocation": "인천광역시 남동구 석산로208번길 37",
+   "updatedate": "11/14/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 179,
+   "location": "남동구",
+   "shelter_name": "정각초등학교 운동장",
+   "uuid": 28200007,
+   "geolocation": "인천광역시 남동구 구월로 228",
+   "updatedate": "11/14/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 180,
+   "location": "남동구",
+   "shelter_name": "석천초등학교 운동장",
+   "uuid": 28200006,
+   "geolocation": "인천광역시 남동구 남동대로 828",
+   "updatedate": "11/14/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 181,
+   "location": "남동구",
+   "shelter_name": "성리초등학교 운동장",
+   "uuid": 28200005,
+   "geolocation": "인천광역시 남동구 성리로 32-2",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 182,
+   "location": "남동구",
+   "shelter_name": "구월여자중학교 운동장",
+   "uuid": 28200004,
+   "geolocation": "인천광역시 남동구 성말로13번길 78",
+   "updatedate": "11/14/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 183,
+   "location": "남동구",
+   "shelter_name": "구월초등학교 운동장",
+   "uuid": 28200003,
+   "geolocation": "인천광역시 남동구 인주대로721번길 49",
+   "updatedate": "11/14/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 184,
+   "location": "남동구",
+   "shelter_name": "만월초등학교 운동장",
+   "uuid": 28200002,
+   "geolocation": "인천광역시 남동구 선수촌로 28",
+   "updatedate": "11/14/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 185,
+   "location": "동구",
+   "shelter_name": "영화관광경영고등학교 운동장",
+   "uuid": 28140013,
+   "geolocation": "인천광역시 동구 우각로 39",
+   "updatedate": "11/20/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 186,
+   "location": "동구",
+   "shelter_name": "동명초등학교 운동장",
+   "uuid": 28140012,
+   "geolocation": "인천광역시 동구 송림로70번길 10",
+   "updatedate": "11/20/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 187,
+   "location": "동구",
+   "shelter_name": "인천산업정보학교 운동장",
+   "uuid": 28140011,
+   "geolocation": "인천광역시 동구 금창로 31",
+   "updatedate": "11/20/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 188,
+   "location": "동구",
+   "shelter_name": "만석초등학교 운동장",
+   "uuid": 28140010,
+   "geolocation": "인천광역시 동구 제물량로 412",
+   "updatedate": "11/20/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 189,
+   "location": "동구",
+   "shelter_name": "송현초등학교",
+   "uuid": 28140009,
+   "geolocation": "인천광역시 동구 송화로 45",
+   "updatedate": "11/20/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 190,
+   "location": "동구",
+   "shelter_name": "화도진중학교 운동장",
+   "uuid": 28140008,
+   "geolocation": "인천광역시 동구 화수로 64",
+   "updatedate": "11/20/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 191,
+   "location": "동구",
+   "shelter_name": "송림초등학교 운동장",
+   "uuid": 28140007,
+   "geolocation": "인천광역시 동구 화도진로 10",
+   "updatedate": "12/24/2021",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 192,
+   "location": "동구",
+   "shelter_name": "서흥초등학교 운동장",
+   "uuid": 28140006,
+   "geolocation": "인천광역시 동구 샛골로 189",
+   "updatedate": "11/20/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 193,
+   "location": "동구",
+   "shelter_name": "재능고등학교 운동장",
+   "uuid": 28140005,
+   "geolocation": "인천광역시 동구 재능로 178",
+   "updatedate": "11/20/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 194,
+   "location": "동구",
+   "shelter_name": "창영초등학교 운동장",
+   "uuid": 28140004,
+   "geolocation": "인천광역시 동구 우각로15번길 16",
+   "updatedate": "11/20/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 195,
+   "location": "동구",
+   "shelter_name": "서림초등학교 운동장",
+   "uuid": 28140003,
+   "geolocation": "인천광역시 동구 금곡로 105",
+   "updatedate": "11/20/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 196,
+   "location": "동구",
+   "shelter_name": "동산고등학교 운동장",
+   "uuid": 28140002,
+   "geolocation": "인천광역시 동구 동산로 58",
+   "updatedate": "11/20/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 197,
+   "location": "미추홀구",
+   "shelter_name": "선인고등학교운동장",
+   "uuid": 28177025,
+   "geolocation": "인천광역시 미추홀구 석정로 181",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 198,
+   "location": "미추홀구",
+   "shelter_name": "인하대학교대운동장",
+   "uuid": 28177023,
+   "geolocation": "인천광역시 미추홀구 인하로 100",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 199,
+   "location": "미추홀구",
+   "shelter_name": "선인중학교 운동장",
+   "uuid": 28140025,
+   "geolocation": "인천광역시 미추홀구 석정로 165-37",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 200,
+   "location": "미추홀구",
+   "shelter_name": "인화여자고등학교 운동장",
+   "uuid": 28177052,
+   "geolocation": "인천광역시 미추홀구 석정로 151",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 201,
+   "location": "미추홀구",
+   "shelter_name": "인천전자마이스터고등학교",
+   "uuid": 28177035,
+   "geolocation": "인천광역시 미추홀구 석정로 165-80",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 202,
+   "location": "미추홀구",
+   "shelter_name": "인천대제물포캠퍼스대운동장",
+   "uuid": 28177026,
+   "geolocation": "인천광역시 미추홀구 숙골로135번길 9",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 203,
+   "location": "미추홀구",
+   "shelter_name": "인화여자중학교운동장",
+   "uuid": 28177024,
+   "geolocation": "인천광역시 미추홀구 석정로 183",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 204,
+   "location": "미추홀구",
+   "shelter_name": "정석항공과학고등학교운동장",
+   "uuid": 28177004,
+   "geolocation": "인천광역시 미추홀구 인하로 104",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 205,
+   "location": "미추홀구",
+   "shelter_name": "학산초등학교",
+   "uuid": 28177053,
+   "geolocation": "인천광역시 미추홀구 한나루로357번길 66",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 206,
+   "location": "미추홀구",
+   "shelter_name": "용현여자중학교 운동장",
+   "uuid": 28177051,
+   "geolocation": "인천광역시 미추홀구 낙섬동로 28",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 207,
+   "location": "미추홀구",
+   "shelter_name": "용학초등학교 운동장",
+   "uuid": 28177050,
+   "geolocation": "인천광역시 미추홀구 용정공원로83번길 9",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 208,
+   "location": "미추홀구",
+   "shelter_name": "문학정보고등학교 운동장",
+   "uuid": 28177049,
+   "geolocation": "인천광역시 미추홀구 소성로350번길 29",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 209,
+   "location": "미추홀구",
+   "shelter_name": "경원초등학교 운동장",
+   "uuid": 28177048,
+   "geolocation": "인천광역시 미추홀구 경인로 511",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 210,
+   "location": "미추홀구",
+   "shelter_name": "제물포여자중학교 운동장",
+   "uuid": 28177047,
+   "geolocation": "인천광역시 미추홀구 인주대로470번길 20",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 211,
+   "location": "미추홀구",
+   "shelter_name": "인항고등학교",
+   "uuid": 28177046,
+   "geolocation": "인천광역시 미추홀구 매소홀로 135",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 212,
+   "location": "미추홀구",
+   "shelter_name": "인주초등학교 운동장",
+   "uuid": 28177045,
+   "geolocation": "인천광역시 미추홀구 매소홀로475번길 53",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 213,
+   "location": "미추홀구",
+   "shelter_name": "연학초등학교 운동장",
+   "uuid": 28177044,
+   "geolocation": "인천광역시 미추홀구 주승로 20",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 214,
+   "location": "미추홀구",
+   "shelter_name": "숭의초등학교 운동장",
+   "uuid": 28177043,
+   "geolocation": "인천광역시 미추홀구 장천로 99",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 215,
+   "location": "미추홀구",
+   "shelter_name": "관교여자중학교 운동장",
+   "uuid": 28177042,
+   "geolocation": "인천광역시 미추홀구 경원대로 691",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 216,
+   "location": "미추홀구",
+   "shelter_name": "승학초등학교 운동장",
+   "uuid": 28177040,
+   "geolocation": "인천광역시 미추홀구 주승로 259",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 217,
+   "location": "미추홀구",
+   "shelter_name": "관교중학교 운동장",
+   "uuid": 28177039,
+   "geolocation": "인천광역시 미추홀구 경원대로670번길 19",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 218,
+   "location": "미추홀구",
+   "shelter_name": "인천남중학교 운동장",
+   "uuid": 28177038,
+   "geolocation": "인천광역시 미추홀구 수봉로 16-23",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 219,
+   "location": "미추홀구",
+   "shelter_name": "용현중학교 운동장",
+   "uuid": 28177037,
+   "geolocation": "인천광역시 미추홀구 낙섬동로 16",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 220,
+   "location": "미추홀구",
+   "shelter_name": "남인천여자중학교 운동장",
+   "uuid": 28177034,
+   "geolocation": "인천광역시 미추홀구 인하로 426",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 221,
+   "location": "미추홀구",
+   "shelter_name": "수봉근린공원",
+   "uuid": 28177033,
+   "geolocation": "인천광역시 미추홀구 수봉안길 84",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 222,
+   "location": "미추홀구",
+   "shelter_name": "산성어린이공원",
+   "uuid": 28177032,
+   "geolocation": "인천광역시 미추홀구 문학길 157",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 223,
+   "location": "미추홀구",
+   "shelter_name": "다솔어린이공원",
+   "uuid": 28177031,
+   "geolocation": "인천광역시 미추홀구 경인로 505",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 224,
+   "location": "미추홀구",
+   "shelter_name": "주안체육공원",
+   "uuid": 28177030,
+   "geolocation": "인천광역시 미추홀구 주안서로43번길 20",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 225,
+   "location": "미추홀구",
+   "shelter_name": "석바위근린공원",
+   "uuid": 28177029,
+   "geolocation": "인천광역시 미추홀구 구월남로 33",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 226,
+   "location": "미추홀구",
+   "shelter_name": "용정근린공원",
+   "uuid": 28177028,
+   "geolocation": "인천광역시 미추홀구 낙섬동로 68-26",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 227,
+   "location": "미추홀구",
+   "shelter_name": "쑥골어린이공원",
+   "uuid": 28177027,
+   "geolocation": "인천광역시 미추홀구 장고개로50번길 33",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 228,
+   "location": "미추홀구",
+   "shelter_name": "인천비즈니스고등학교운동장",
+   "uuid": 28177022,
+   "geolocation": "인천광역시 미추홀구 장고개로 31",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 229,
+   "location": "미추홀구",
+   "shelter_name": "인천문학초등학교운동장",
+   "uuid": 28177021,
+   "geolocation": "인천광역시 미추홀구 매소홀로 553",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 230,
+   "location": "미추홀구",
+   "shelter_name": "관교초등학교운동장",
+   "uuid": 28177020,
+   "geolocation": "인천광역시 미추홀구 인하로 414",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 231,
+   "location": "미추홀구",
+   "shelter_name": "인천주안남초등학교운동장",
+   "uuid": 28177019,
+   "geolocation": "인천광역시 미추홀구 인주대로434번길 11",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 232,
+   "location": "미추홀구",
+   "shelter_name": "인천남부초등학교운동장",
+   "uuid": 28177018,
+   "geolocation": "인천광역시 미추홀구 인주대로366번길 22",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 233,
+   "location": "미추홀구",
+   "shelter_name": "석암초등학교운동장",
+   "uuid": 28177017,
+   "geolocation": "인천광역시 미추홀구 주안동로 46",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 234,
+   "location": "미추홀구",
+   "shelter_name": "인천주안북초등학교운동장",
+   "uuid": 28177016,
+   "geolocation": "인천광역시 미추홀구 석정로375번길 14",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 235,
+   "location": "미추홀구",
+   "shelter_name": "인천고등학교운동장",
+   "uuid": 28177015,
+   "geolocation": "인천광역시 미추홀구 경원대로 804",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 236,
+   "location": "미추홀구",
+   "shelter_name": "주안초등학교운동장",
+   "uuid": 28177014,
+   "geolocation": "인천광역시 미추홀구 남주길69번길 16",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 237,
+   "location": "미추홀구",
+   "shelter_name": "인천기계공업고등학교운동장",
+   "uuid": 28177013,
+   "geolocation": "인천광역시 미추홀구 한나루로 545",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 238,
+   "location": "미추홀구",
+   "shelter_name": "인천서화초등학교운동장",
+   "uuid": 28177012,
+   "geolocation": "인천광역시 미추홀구 송림로 250",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 239,
+   "location": "미추홀구",
+   "shelter_name": "인천대화초등학교운동장",
+   "uuid": 28177011,
+   "geolocation": "인천광역시 미추홀구 석정로301번길 13",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 240,
+   "location": "미추홀구",
+   "shelter_name": "인천도화초등학교운동장",
+   "uuid": 28177010,
+   "geolocation": "인천광역시 미추홀구 경인로 242",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 241,
+   "location": "미추홀구",
+   "shelter_name": "인하사대부속중고등학교운동장",
+   "uuid": 28177009,
+   "geolocation": "인천광역시 미추홀구 재넘이길123번길 29",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 242,
+   "location": "미추홀구",
+   "shelter_name": "학익고등학교운동장",
+   "uuid": 28177008,
+   "geolocation": "인천광역시 미추홀구 한나루로358번길 23-22",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 243,
+   "location": "미추홀구",
+   "shelter_name": "인천백학초등학교운동장",
+   "uuid": 28177007,
+   "geolocation": "인천광역시 미추홀구 매소홀로446번길 25",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 244,
+   "location": "미추홀구",
+   "shelter_name": "학익초등학교운동장",
+   "uuid": 28177006,
+   "geolocation": "인천광역시 미추홀구 한나루로403번길 122",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 245,
+   "location": "미추홀구",
+   "shelter_name": "용현초등학교운동장",
+   "uuid": 28177005,
+   "geolocation": "인천광역시 미추홀구 낙섬동로 83",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 246,
+   "location": "미추홀구",
+   "shelter_name": "용일초등학교운동장",
+   "uuid": 28177003,
+   "geolocation": "인천광역시 미추홀구 인주대로 244",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 247,
+   "location": "미추홀구",
+   "shelter_name": "용정초등학교운동장",
+   "uuid": 28177002,
+   "geolocation": "인천광역시 미추홀구 독정안길 26",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 248,
+   "location": "부평구",
+   "shelter_name": "인천부평서초등학교 운동장",
+   "uuid": 28237201,
+   "geolocation": "인천광역시 부평구 부평문화로53번길 19",
+   "updatedate": "-",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 249,
+   "location": "부평구",
+   "shelter_name": "서부동공원",
+   "uuid": 28237502,
+   "geolocation": "인천광역시 부평구 경원대로1367번길 50-4",
+   "updatedate": "4/2/2021",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 250,
+   "location": "부평구",
+   "shelter_name": "인천영선고등학교 운동장",
+   "uuid": 28237408,
+   "geolocation": "인천광역시 부평구 체육관로 177",
+   "updatedate": "4/2/2021",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 251,
+   "location": "부평구",
+   "shelter_name": "인천한길초등학교 운동장",
+   "uuid": 28237406,
+   "geolocation": "인천광역시 부평구 영성중로 32",
+   "updatedate": "4/2/2021",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 252,
+   "location": "부평구",
+   "shelter_name": "부광중학교 운동장",
+   "uuid": 28237404,
+   "geolocation": "인천광역시 부평구 충선로 140",
+   "updatedate": "4/2/2021",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 253,
+   "location": "부평구",
+   "shelter_name": "부개고등학교 운동장",
+   "uuid": 28237402,
+   "geolocation": "인천광역시 부평구 수변로57번길 36",
+   "updatedate": "4/2/2021",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 254,
+   "location": "부평구",
+   "shelter_name": "부광여자고등학교 운동장",
+   "uuid": 28237400,
+   "geolocation": "인천광역시 부평구 충선로 143",
+   "updatedate": "4/2/2021",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 255,
+   "location": "부평구",
+   "shelter_name": "부평동중학교 운동장",
+   "uuid": 28237398,
+   "geolocation": "인천광역시 부평구 수변로107번길 4",
+   "updatedate": "4/2/2021",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 256,
+   "location": "부평구",
+   "shelter_name": "인천갈산중학교 운동장",
+   "uuid": 28237396,
+   "geolocation": "인천광역시 부평구 주부토로 166",
+   "updatedate": "4/2/2021",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 257,
+   "location": "부평구",
+   "shelter_name": "진산중학교 운동장",
+   "uuid": 28237272,
+   "geolocation": "인천광역시 부평구 충선로234번길 70",
+   "updatedate": "4/2/2021",
+   "capacity": 239
+  },
+  {
+   "shelter_id": 258,
+   "location": "부평구",
+   "shelter_name": "인천부내초등학교 운동장",
+   "uuid": 28237270,
+   "geolocation": "인천광역시 부평구 수변로 129",
+   "updatedate": "4/2/2021",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 259,
+   "location": "부평구",
+   "shelter_name": "인천부일초등학교 운동장",
+   "uuid": 28237268,
+   "geolocation": "인천광역시 부평구 부흥북로 175",
+   "updatedate": "7/28/2021",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 260,
+   "location": "부평구",
+   "shelter_name": "구산어린이공원",
+   "uuid": 28237126,
+   "geolocation": "인천광역시 부평구 일신로 124-44",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 261,
+   "location": "부평구",
+   "shelter_name": "하정공원(85호공원)",
+   "uuid": 28237125,
+   "geolocation": "인천광역시 부평구 열우물로50번길 29",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 262,
+   "location": "부평구",
+   "shelter_name": "수정공원(84호공원)",
+   "uuid": 28237124,
+   "geolocation": "인천광역시 부평구 열우물로50번길 88",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 263,
+   "location": "부평구",
+   "shelter_name": "일신어린이공원(일신1호공원)",
+   "uuid": 28237123,
+   "geolocation": "인천광역시 부평구 경인로1118번길 80",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 264,
+   "location": "부평구",
+   "shelter_name": "새울공원(부개3공원)",
+   "uuid": 28237118,
+   "geolocation": "인천광역시 부평구 길주남로 170",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 265,
+   "location": "부평구",
+   "shelter_name": "신궁동공원(부개1공원)",
+   "uuid": 28237116,
+   "geolocation": "인천광역시 부평구 부개로 75-12",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 266,
+   "location": "부평구",
+   "shelter_name": "세모공원",
+   "uuid": 28237115,
+   "geolocation": "인천광역시 부평구 수변로57번길 58",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 267,
+   "location": "부평구",
+   "shelter_name": "부이공원",
+   "uuid": 28237114,
+   "geolocation": "인천광역시 부평구 수변로37번길 15-6",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 268,
+   "location": "부평구",
+   "shelter_name": "나비공원",
+   "uuid": 28237113,
+   "geolocation": "인천광역시 부평구 평천로 26-47",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 269,
+   "location": "부평구",
+   "shelter_name": "마분공원(82호공원)",
+   "uuid": 28237112,
+   "geolocation": "인천광역시 부평구 경인로1092번길 29",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 270,
+   "location": "부평구",
+   "shelter_name": "사랑샘공원",
+   "uuid": 28237111,
+   "geolocation": "인천광역시 부평구 충선로 356",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 271,
+   "location": "부평구",
+   "shelter_name": "동심공원(삼산1-4공원)",
+   "uuid": 28237109,
+   "geolocation": "인천광역시 부평구 수변로 264",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 272,
+   "location": "부평구",
+   "shelter_name": "햇살공원(삼산1-1공원)",
+   "uuid": 28237105,
+   "geolocation": "인천광역시 부평구 장제로340번길 13",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 273,
+   "location": "부평구",
+   "shelter_name": "십정체육공원",
+   "uuid": 28237104,
+   "geolocation": "인천광역시 부평구 열우물로 176",
+   "updatedate": "11/27/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 274,
+   "location": "부평구",
+   "shelter_name": "나래공원(삼산2-7공원)",
+   "uuid": 28237103,
+   "geolocation": "인천광역시 부평구 영성중로 24",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 275,
+   "location": "부평구",
+   "shelter_name": "백운공원",
+   "uuid": 28237101,
+   "geolocation": "인천광역시 부평구 경원대로 1168",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 276,
+   "location": "부평구",
+   "shelter_name": "도드리공원(삼산2-5공원)",
+   "uuid": 28237100,
+   "geolocation": "인천광역시 부평구 영성중로 44",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 277,
+   "location": "부평구",
+   "shelter_name": "뫼골문화공원",
+   "uuid": 28237099,
+   "geolocation": "인천광역시 부평구 세월천로 82",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 278,
+   "location": "부평구",
+   "shelter_name": "가족공원(삼산2-4공원)",
+   "uuid": 28237098,
+   "geolocation": "인천광역시 부평구 영성서로 36",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 279,
+   "location": "부평구",
+   "shelter_name": "갈산근린공원",
+   "uuid": 28237097,
+   "geolocation": "인천광역시 부평구 부평대로296번길 71",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 280,
+   "location": "부평구",
+   "shelter_name": "박물관공원",
+   "uuid": 28237096,
+   "geolocation": "인천광역시 부평구 수변로 305",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 281,
+   "location": "부평구",
+   "shelter_name": "만월공원",
+   "uuid": 28237095,
+   "geolocation": "인천광역시 부평구 호구포로 1167",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 282,
+   "location": "부평구",
+   "shelter_name": "상상공원(삼산2-2공원)",
+   "uuid": 28237094,
+   "geolocation": "인천광역시 부평구 영성로 31",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 283,
+   "location": "부평구",
+   "shelter_name": "대갈공원(갈산8공원)",
+   "uuid": 28237093,
+   "geolocation": "인천광역시 부평구 장제로249번길 9-4",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 284,
+   "location": "부평구",
+   "shelter_name": "하동공원",
+   "uuid": 28237092,
+   "geolocation": "인천광역시 부평구 배곶로40번길 7-6",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 285,
+   "location": "부평구",
+   "shelter_name": "마당공원(갈산7공원)",
+   "uuid": 28237091,
+   "geolocation": "인천광역시 부평구 주부토로146번길 21",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 286,
+   "location": "부평구",
+   "shelter_name": "산곡중학교 운동장",
+   "uuid": 28237090,
+   "geolocation": "인천광역시 부평구 원적로300번길 14",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 287,
+   "location": "부평구",
+   "shelter_name": "쉼터공원(갈산6공원)",
+   "uuid": 28237089,
+   "geolocation": "인천광역시 부평구 주부토로145번길 41",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 288,
+   "location": "부평구",
+   "shelter_name": "반월공원(갈산5공원)",
+   "uuid": 28237088,
+   "geolocation": "인천광역시 부평구 갈월동로 32",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 289,
+   "location": "부평구",
+   "shelter_name": "동암공원",
+   "uuid": 28237087,
+   "geolocation": "인천광역시 부평구 동암남로8번길 24",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 290,
+   "location": "부평구",
+   "shelter_name": "대월공원(갈산4공원)",
+   "uuid": 28237086,
+   "geolocation": "인천광역시 부평구 갈월서로 19",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 291,
+   "location": "부평구",
+   "shelter_name": "약산공원",
+   "uuid": 28237084,
+   "geolocation": "인천광역시 부평구 동암산로33번길 6-16",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 292,
+   "location": "부평구",
+   "shelter_name": "새갈공원(갈산2공원)",
+   "uuid": 28237083,
+   "geolocation": "인천광역시 부평구 갈월동로 68",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 293,
+   "location": "부평구",
+   "shelter_name": "상꾸지공원(갈산1공원)",
+   "uuid": 28237082,
+   "geolocation": "인천광역시 부평구 주부토로 213",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 294,
+   "location": "부평구",
+   "shelter_name": "갈월공원(갈산9공원)",
+   "uuid": 28237081,
+   "geolocation": "인천광역시 부평구 부평대로260번길 13-8",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 295,
+   "location": "부평구",
+   "shelter_name": "법성공원",
+   "uuid": 28237080,
+   "geolocation": "인천광역시 부평구 동암산로 60",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 296,
+   "location": "부평구",
+   "shelter_name": "신복공원(76호공원)",
+   "uuid": 28237079,
+   "geolocation": "인천광역시 부평구 장제로222번길 16",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 297,
+   "location": "부평구",
+   "shelter_name": "석정공원",
+   "uuid": 28237078,
+   "geolocation": "인천광역시 부평구 백범로478번길 11",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 298,
+   "location": "부평구",
+   "shelter_name": "중부동공원(부평3호공원)",
+   "uuid": 28237077,
+   "geolocation": "인천광역시 부평구 부흥북로 96",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 299,
+   "location": "부평구",
+   "shelter_name": "샘터공원",
+   "uuid": 28237076,
+   "geolocation": "인천광역시 부평구 열우물로49번길 37-3",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 300,
+   "location": "부평구",
+   "shelter_name": "부흥공원(부평3호공원)",
+   "uuid": 28237075,
+   "geolocation": "인천광역시 부평구 장제로110번길 16",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 301,
+   "location": "부평구",
+   "shelter_name": "열우물공원",
+   "uuid": 28237074,
+   "geolocation": "인천광역시 부평구 열우물로101번길 17",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 302,
+   "location": "부평구",
+   "shelter_name": "하촌공원(81호공원)",
+   "uuid": 28237073,
+   "geolocation": "인천광역시 부평구 충선로24번길 35-4",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 303,
+   "location": "부평구",
+   "shelter_name": "시냇물공원",
+   "uuid": 28237072,
+   "geolocation": "인천광역시 부평구 충선로 270",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 304,
+   "location": "부평구",
+   "shelter_name": "부들공원",
+   "uuid": 28237070,
+   "geolocation": "인천광역시 부평구 평천로 522",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 305,
+   "location": "부평구",
+   "shelter_name": "건강공원",
+   "uuid": 28237069,
+   "geolocation": "인천광역시 부평구 평천로 531",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 306,
+   "location": "부평구",
+   "shelter_name": "교통공원",
+   "uuid": 28237068,
+   "geolocation": "인천광역시 부평구 영성동로18번길 45",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 307,
+   "location": "부평구",
+   "shelter_name": "밤골공원",
+   "uuid": 28237067,
+   "geolocation": "인천광역시 부평구 동수로120번길 43",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 308,
+   "location": "부평구",
+   "shelter_name": "영성공원",
+   "uuid": 28237066,
+   "geolocation": "인천광역시 부평구 부평북로 428",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 309,
+   "location": "부평구",
+   "shelter_name": "후정공원",
+   "uuid": 28237065,
+   "geolocation": "인천광역시 부평구 영성서로 57",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 310,
+   "location": "부평구",
+   "shelter_name": "방촌공원",
+   "uuid": 28237064,
+   "geolocation": "인천광역시 부평구 부개로 1",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 311,
+   "location": "부평구",
+   "shelter_name": "세영공원",
+   "uuid": 28237063,
+   "geolocation": "인천광역시 부평구 충선로 120",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 312,
+   "location": "부평구",
+   "shelter_name": "청운공원",
+   "uuid": 28237062,
+   "geolocation": "인천광역시 부평구 수변로 189",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 313,
+   "location": "부평구",
+   "shelter_name": "부개공원",
+   "uuid": 28237061,
+   "geolocation": "인천광역시 부평구 수변로 225",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 314,
+   "location": "부평구",
+   "shelter_name": "대촌공원",
+   "uuid": 28237060,
+   "geolocation": "인천광역시 부평구 수변로 121",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 315,
+   "location": "부평구",
+   "shelter_name": "사근공원",
+   "uuid": 28237059,
+   "geolocation": "인천광역시 부평구 주부토로 151",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 316,
+   "location": "부평구",
+   "shelter_name": "굴포공원",
+   "uuid": 28237058,
+   "geolocation": "인천광역시 부평구 주부토로 157",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 317,
+   "location": "부평구",
+   "shelter_name": "마장공원",
+   "uuid": 28237057,
+   "geolocation": "인천광역시 부평구 안남로 203",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 318,
+   "location": "부평구",
+   "shelter_name": "신트리공원",
+   "uuid": 28237056,
+   "geolocation": "인천광역시 부평구 주부토로 128",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 319,
+   "location": "부평구",
+   "shelter_name": "백운초등학교 운동장",
+   "uuid": 28237055,
+   "geolocation": "인천광역시 부평구 아트센터로 130",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 320,
+   "location": "부평구",
+   "shelter_name": "상정초등학교 운동장",
+   "uuid": 28237052,
+   "geolocation": "인천광역시 부평구 상정로 50",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 321,
+   "location": "부평구",
+   "shelter_name": "십정초등학교 운동장",
+   "uuid": 28237051,
+   "geolocation": "인천광역시 부평구 배곶북로 10-6",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 322,
+   "location": "부평구",
+   "shelter_name": "일신초등학교 운동장",
+   "uuid": 28237050,
+   "geolocation": "인천광역시 부평구 항동로75번길 36",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 323,
+   "location": "부평구",
+   "shelter_name": "부개서초등학교 운동장",
+   "uuid": 28237046,
+   "geolocation": "인천광역시 부평구 부일로 39",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 324,
+   "location": "부평구",
+   "shelter_name": "부평여자중학교 운동장",
+   "uuid": 28237045,
+   "geolocation": "인천광역시 부평구 부평문화로 193-1",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 325,
+   "location": "부평구",
+   "shelter_name": "부개초등학교 운동장",
+   "uuid": 28237044,
+   "geolocation": "인천광역시 부평구 마분로 9",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 326,
+   "location": "부평구",
+   "shelter_name": "갈산초등학교 운동장",
+   "uuid": 28237039,
+   "geolocation": "인천광역시 부평구 갈월동로 55",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 327,
+   "location": "부평구",
+   "shelter_name": "갈월초등학교 운동장",
+   "uuid": 28237038,
+   "geolocation": "인천광역시 부평구 주부토로 165",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 328,
+   "location": "부평구",
+   "shelter_name": "부평공업고등학교 운동장",
+   "uuid": 28237037,
+   "geolocation": "인천광역시 부평구 주부토로 194",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 329,
+   "location": "부평구",
+   "shelter_name": "부평북초등학교 운동장",
+   "uuid": 28237036,
+   "geolocation": "인천광역시 부평구 주부토로 292",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 330,
+   "location": "부평구",
+   "shelter_name": "청천중학교 운동장",
+   "uuid": 28237035,
+   "geolocation": "인천광역시 부평구 마장로364번길 23",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 331,
+   "location": "부평구",
+   "shelter_name": "용마초등학교 운동장",
+   "uuid": 28237034,
+   "geolocation": "인천광역시 부평구 세월천로30번길 58",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 332,
+   "location": "부평구",
+   "shelter_name": "부평공원",
+   "uuid": 28237031,
+   "geolocation": "인천광역시 부평구 부평공원로 44",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 333,
+   "location": "부평구",
+   "shelter_name": "원적산공원",
+   "uuid": 28237030,
+   "geolocation": "인천광역시 부평구 세월천로137번길 60",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 334,
+   "location": "부평구",
+   "shelter_name": "마장초등학교 운동장",
+   "uuid": 28237025,
+   "geolocation": "인천광역시 부평구 안남로 266",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 335,
+   "location": "부평구",
+   "shelter_name": "청천초등학교 운동장",
+   "uuid": 28237024,
+   "geolocation": "인천광역시 부평구 산청로127번길 12-5",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 336,
+   "location": "부평구",
+   "shelter_name": "미산초등학교 운동장",
+   "uuid": 28237023,
+   "geolocation": "인천광역시 부평구 원적로 391",
+   "updatedate": "11/15/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 337,
+   "location": "부평구",
+   "shelter_name": "마곡초등학교 운동장",
+   "uuid": 28237018,
+   "geolocation": "인천광역시 부평구 마곡로27번길 16",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 338,
+   "location": "부평구",
+   "shelter_name": "산곡초등학교 운동장",
+   "uuid": 28237017,
+   "geolocation": "인천광역시 부평구 길주로354번길 39",
+   "updatedate": "11/15/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 339,
+   "location": "부평구",
+   "shelter_name": "부흥초등학교 운동장",
+   "uuid": 28237014,
+   "geolocation": "인천광역시 부평구 부흥로366번길 34",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 340,
+   "location": "부평구",
+   "shelter_name": "부평고등학교 운동장",
+   "uuid": 28237011,
+   "geolocation": "인천광역시 부평구 부흥북로 43",
+   "updatedate": "11/15/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 341,
+   "location": "부평구",
+   "shelter_name": "부평서여자중학교 운동장",
+   "uuid": 28237008,
+   "geolocation": "인천광역시 부평구 경원대로 1213",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 342,
+   "location": "부평구",
+   "shelter_name": "신촌초등학교 운동장",
+   "uuid": 28237007,
+   "geolocation": "인천광역시 부평구 경원대로 1215",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 343,
+   "location": "부평구",
+   "shelter_name": "부일여자중학교 운동장",
+   "uuid": 28237006,
+   "geolocation": "인천광역시 부평구 동수로 8",
+   "updatedate": "11/15/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 344,
+   "location": "부평구",
+   "shelter_name": "부원초등학교 운동장",
+   "uuid": 28237003,
+   "geolocation": "인천광역시 부평구 원적로472번길 29",
+   "updatedate": "11/15/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 345,
+   "location": "부평구",
+   "shelter_name": "십정녹지",
+   "uuid": 28237002,
+   "geolocation": "인천광역시 부평구 경원대로 1018",
+   "updatedate": "11/15/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 346,
+   "location": "서구",
+   "shelter_name": "인천아시아드주경기장 주차장",
+   "uuid": 28260526,
+   "geolocation": "인천광역시 서구 염곡로 731",
+   "updatedate": "7/7/2021",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 347,
+   "location": "서구",
+   "shelter_name": "검암중학교 운동장",
+   "uuid": 28260274,
+   "geolocation": "인천광역시 서구 검암로29번길 12",
+   "updatedate": "7/7/2021",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 348,
+   "location": "서구",
+   "shelter_name": "가정여자중학교 운동장",
+   "uuid": 28260121,
+   "geolocation": "인천광역시 서구 고래울로28번길 13",
+   "updatedate": "11/26/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 349,
+   "location": "서구",
+   "shelter_name": "가좌여자중학교 운동장",
+   "uuid": 28260008,
+   "geolocation": "인천광역시 서구 서달로 110",
+   "updatedate": "11/15/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 350,
+   "location": "서구",
+   "shelter_name": "가현중학교 운동장",
+   "uuid": 28260125,
+   "geolocation": "인천광역시 서구 염곡로 409",
+   "updatedate": "11/7/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 351,
+   "location": "서구",
+   "shelter_name": "신현고등학교 운동장",
+   "uuid": 28260124,
+   "geolocation": "인천광역시 서구 염곡로 401",
+   "updatedate": "11/26/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 352,
+   "location": "서구",
+   "shelter_name": "신현중학교 운동장",
+   "uuid": 28260123,
+   "geolocation": "인천광역시 서구 원창로131번길 23",
+   "updatedate": "11/7/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 353,
+   "location": "서구",
+   "shelter_name": "가림고등학교 운동장",
+   "uuid": 28260122,
+   "geolocation": "인천광역시 서구 원적로 58",
+   "updatedate": "11/7/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 354,
+   "location": "서구",
+   "shelter_name": "간재울중학교 운동장",
+   "uuid": 28260120,
+   "geolocation": "인천광역시 서구 승학로450번길 17-13",
+   "updatedate": "11/6/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 355,
+   "location": "서구",
+   "shelter_name": "은지초등학교 운동장",
+   "uuid": 28260119,
+   "geolocation": "인천광역시 서구 승학로572번길 22",
+   "updatedate": "11/6/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 356,
+   "location": "서구",
+   "shelter_name": "왕길초등학교 운동장",
+   "uuid": 28260118,
+   "geolocation": "인천광역시 서구 봉수대로1440번길 20",
+   "updatedate": "11/6/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 357,
+   "location": "서구",
+   "shelter_name": "목향초등학교 운동장",
+   "uuid": 28260117,
+   "geolocation": "인천광역시 서구 고산후로 375",
+   "updatedate": "12/2/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 358,
+   "location": "서구",
+   "shelter_name": "원당고등학교 운동장",
+   "uuid": 28260116,
+   "geolocation": "인천광역시 서구 고산로40번길 30",
+   "updatedate": "11/6/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 359,
+   "location": "서구",
+   "shelter_name": "원당중학교 운동장",
+   "uuid": 28260115,
+   "geolocation": "인천광역시 서구 고산로40번길 22",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 360,
+   "location": "서구",
+   "shelter_name": "원당초등학교 운동장",
+   "uuid": 28260114,
+   "geolocation": "인천광역시 서구 원당대로820번길 16",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 361,
+   "location": "서구",
+   "shelter_name": "당하중학교 운동장",
+   "uuid": 28260113,
+   "geolocation": "인천광역시 서구 청마로 38",
+   "updatedate": "11/6/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 362,
+   "location": "서구",
+   "shelter_name": "당하초등학교 운동장",
+   "uuid": 28260112,
+   "geolocation": "인천광역시 서구 청마로 144",
+   "updatedate": "11/7/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 363,
+   "location": "서구",
+   "shelter_name": "마전중학교 운동장",
+   "uuid": 28260111,
+   "geolocation": "인천광역시 서구 완정로 91",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 364,
+   "location": "서구",
+   "shelter_name": "마전초등학교 운동장",
+   "uuid": 28260110,
+   "geolocation": "인천광역시 서구 완정로34번길 23",
+   "updatedate": "11/6/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 365,
+   "location": "서구",
+   "shelter_name": "능내초등학교 운동장",
+   "uuid": 28260109,
+   "geolocation": "인천광역시 서구 검단로540번길 23",
+   "updatedate": "11/26/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 366,
+   "location": "서구",
+   "shelter_name": "검단고등학교 운동장",
+   "uuid": 28260108,
+   "geolocation": "인천광역시 서구 검단로540번길 7",
+   "updatedate": "11/26/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 367,
+   "location": "서구",
+   "shelter_name": "검단중학교 운동장",
+   "uuid": 28260107,
+   "geolocation": "인천광역시 서구 완정로188번길 12",
+   "updatedate": "11/26/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 368,
+   "location": "서구",
+   "shelter_name": "검단초등학교 운동장",
+   "uuid": 28260106,
+   "geolocation": "인천광역시 서구 검단로609번길 11",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 369,
+   "location": "서구",
+   "shelter_name": "가원초등학교 운동장",
+   "uuid": 28260105,
+   "geolocation": "인천광역시 서구 청중로478번길 6",
+   "updatedate": "11/6/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 370,
+   "location": "서구",
+   "shelter_name": "청라고등학교 운동장",
+   "uuid": 28260104,
+   "geolocation": "인천광역시 서구 담지로86번길 16-14",
+   "updatedate": "11/8/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 371,
+   "location": "서구",
+   "shelter_name": "청라중학교 운동장",
+   "uuid": 28260103,
+   "geolocation": "인천광역시 서구 청라라임로 112",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 372,
+   "location": "서구",
+   "shelter_name": "청라초등학교 운동장",
+   "uuid": 28260102,
+   "geolocation": "인천광역시 서구 청라에메랄드로 139",
+   "updatedate": "11/6/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 373,
+   "location": "서구",
+   "shelter_name": "초은고등학교 운동장",
+   "uuid": 28260101,
+   "geolocation": "인천광역시 서구 청라에메랄드로 42",
+   "updatedate": "11/6/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 374,
+   "location": "서구",
+   "shelter_name": "초은중학교 운동장",
+   "uuid": 28260100,
+   "geolocation": "인천광역시 서구 청라라임로 10",
+   "updatedate": "11/6/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 375,
+   "location": "서구",
+   "shelter_name": "초은초등학교 운동장",
+   "uuid": 28260099,
+   "geolocation": "인천광역시 서구 청라에메랄드로 33",
+   "updatedate": "11/6/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 376,
+   "location": "서구",
+   "shelter_name": "공촌초등학교 운동장",
+   "uuid": 28260098,
+   "geolocation": "인천광역시 서구 심곡로188번길 21",
+   "updatedate": "11/26/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 377,
+   "location": "서구",
+   "shelter_name": "경서초등학교 운동장",
+   "uuid": 28260097,
+   "geolocation": "인천광역시 서구 경서로31번길 31",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 378,
+   "location": "서구",
+   "shelter_name": "청람중학교 운동장",
+   "uuid": 28260096,
+   "geolocation": "인천광역시 서구 청라커낼로 335",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 379,
+   "location": "서구",
+   "shelter_name": "청람초등학교 운동장",
+   "uuid": 28260095,
+   "geolocation": "인천광역시 서구 청라커낼로 336",
+   "updatedate": "11/6/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 380,
+   "location": "서구",
+   "shelter_name": "경명초등학교 운동장",
+   "uuid": 28260094,
+   "geolocation": "인천광역시 서구 크리스탈로 130",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 381,
+   "location": "서구",
+   "shelter_name": "도담초등학교 운동장",
+   "uuid": 28260093,
+   "geolocation": "인천광역시 서구 청라커낼로 217",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 382,
+   "location": "서구",
+   "shelter_name": "청일초등학교 운동장",
+   "uuid": 28260092,
+   "geolocation": "인천광역시 서구 크리스탈로 46",
+   "updatedate": "11/6/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 383,
+   "location": "서구",
+   "shelter_name": "해원고등학교 운동장",
+   "uuid": 28260091,
+   "geolocation": "인천광역시 서구 청라사파이어로140번길 25",
+   "updatedate": "11/6/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 384,
+   "location": "서구",
+   "shelter_name": "해원중학교 운동장",
+   "uuid": 28260090,
+   "geolocation": "인천광역시 서구 청라한내로 21",
+   "updatedate": "11/8/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 385,
+   "location": "서구",
+   "shelter_name": "해원초등학교 운동장",
+   "uuid": 28260089,
+   "geolocation": "인천광역시 서구 청라사파이어로140번길 5",
+   "updatedate": "11/8/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 386,
+   "location": "서구",
+   "shelter_name": "종다리공원",
+   "uuid": 28260087,
+   "geolocation": "인천광역시 서구 검단로 449",
+   "updatedate": "11/26/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 387,
+   "location": "서구",
+   "shelter_name": "계명공원",
+   "uuid": 28260085,
+   "geolocation": "인천광역시 서구 연희로46번길 6",
+   "updatedate": "12/2/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 388,
+   "location": "서구",
+   "shelter_name": "서곶근린공원 ,주차장",
+   "uuid": 28260084,
+   "geolocation": "인천광역시 서구 심곡로 163",
+   "updatedate": "12/2/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 389,
+   "location": "서구",
+   "shelter_name": "간촌공원",
+   "uuid": 28260083,
+   "geolocation": "인천광역시 서구 간촌로 13",
+   "updatedate": "12/2/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 390,
+   "location": "서구",
+   "shelter_name": "모통공원",
+   "uuid": 28260080,
+   "geolocation": "인천광역시 서구 심곡로 81",
+   "updatedate": "11/27/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 391,
+   "location": "서구",
+   "shelter_name": "불로지구4호공원",
+   "uuid": 28260078,
+   "geolocation": "인천광역시 서구 검단로744번3길 14",
+   "updatedate": "11/27/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 392,
+   "location": "서구",
+   "shelter_name": "마전1공원",
+   "uuid": 28260073,
+   "geolocation": "인천광역시 서구 완정로188번길 26",
+   "updatedate": "11/28/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 393,
+   "location": "서구",
+   "shelter_name": "능내공원",
+   "uuid": 28260072,
+   "geolocation": "인천광역시 서구 검단로540번길 41",
+   "updatedate": "11/28/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 394,
+   "location": "서구",
+   "shelter_name": "검단2호공원",
+   "uuid": 28260071,
+   "geolocation": "인천광역시 서구 완정로156번안길 35",
+   "updatedate": "11/28/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 395,
+   "location": "서구",
+   "shelter_name": "장모루근린공원",
+   "uuid": 28260068,
+   "geolocation": "인천광역시 서구 도요지로189번길 141",
+   "updatedate": "12/2/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 396,
+   "location": "서구",
+   "shelter_name": "시립테니스장",
+   "uuid": 28260067,
+   "geolocation": "인천광역시 서구 가좌로11번길 13",
+   "updatedate": "12/2/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 397,
+   "location": "서구",
+   "shelter_name": "왕길근린공원",
+   "uuid": 28260065,
+   "geolocation": "인천광역시 서구 검단로 427",
+   "updatedate": "11/28/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 398,
+   "location": "서구",
+   "shelter_name": "대평공원",
+   "uuid": 28260062,
+   "geolocation": "인천광역시 서구 대평로56번길 25",
+   "updatedate": "12/2/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 399,
+   "location": "서구",
+   "shelter_name": "신촌공원",
+   "uuid": 28260054,
+   "geolocation": "인천광역시 서구 길주로75번길 17",
+   "updatedate": "12/2/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 400,
+   "location": "서구",
+   "shelter_name": "석남체육공원",
+   "uuid": 28260053,
+   "geolocation": "인천광역시 서구 가정로294번길 20",
+   "updatedate": "11/28/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 401,
+   "location": "서구",
+   "shelter_name": "당하지구3호공원",
+   "uuid": 28260041,
+   "geolocation": "인천광역시 서구 청마로148번길 15",
+   "updatedate": "11/28/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 402,
+   "location": "서구",
+   "shelter_name": "당하제1호공원",
+   "uuid": 28260040,
+   "geolocation": "인천광역시 서구 서곶로 840",
+   "updatedate": "11/28/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 403,
+   "location": "서구",
+   "shelter_name": "공촌공원",
+   "uuid": 28260038,
+   "geolocation": "인천광역시 서구 경명대로680번길 9",
+   "updatedate": "11/28/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 404,
+   "location": "서구",
+   "shelter_name": "갈매공원",
+   "uuid": 28260037,
+   "geolocation": "인천광역시 서구 경명대로707번길 29",
+   "updatedate": "11/28/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 405,
+   "location": "서구",
+   "shelter_name": "주물공단공원",
+   "uuid": 28260036,
+   "geolocation": "인천광역시 서구 사렴로 71",
+   "updatedate": "12/2/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 406,
+   "location": "서구",
+   "shelter_name": "청라1호근린공원",
+   "uuid": 28260035,
+   "geolocation": "인천광역시 서구 로봇랜드로249번길 114-1",
+   "updatedate": "11/28/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 407,
+   "location": "서구",
+   "shelter_name": "중동공원",
+   "uuid": 28260034,
+   "geolocation": "인천광역시 서구 서곶로 527",
+   "updatedate": "11/28/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 408,
+   "location": "서구",
+   "shelter_name": "간재울공원",
+   "uuid": 28260033,
+   "geolocation": "인천광역시 서구 승학로472번길 9",
+   "updatedate": "11/27/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 409,
+   "location": "서구",
+   "shelter_name": "가좌근린공원",
+   "uuid": 28260031,
+   "geolocation": "인천광역시 서구 장고개로 255",
+   "updatedate": "11/27/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 410,
+   "location": "서구",
+   "shelter_name": "창신초등학교 운동장",
+   "uuid": 28260030,
+   "geolocation": "인천광역시 서구 고산후로161번길 6",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 411,
+   "location": "서구",
+   "shelter_name": "단봉초등학교 운동장",
+   "uuid": 28260029,
+   "geolocation": "인천광역시 서구 단봉로 122",
+   "updatedate": "11/27/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 412,
+   "location": "서구",
+   "shelter_name": "서곶초등학교 운동장",
+   "uuid": 28260028,
+   "geolocation": "인천광역시 서구 대평로56번길 9",
+   "updatedate": "11/27/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 413,
+   "location": "서구",
+   "shelter_name": "서곶중학교 운동장",
+   "uuid": 28260027,
+   "geolocation": "인천광역시 서구 대평로56번길 22",
+   "updatedate": "11/27/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 414,
+   "location": "서구",
+   "shelter_name": "심곡초등학교 운동장",
+   "uuid": 28260026,
+   "geolocation": "인천광역시 서구 심곡로 116",
+   "updatedate": "11/27/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 415,
+   "location": "서구",
+   "shelter_name": "신현북초등학교 운동장",
+   "uuid": 28260025,
+   "geolocation": "인천광역시 서구 원창로 147",
+   "updatedate": "11/27/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 416,
+   "location": "서구",
+   "shelter_name": "신현초등학교 운동장",
+   "uuid": 28260024,
+   "geolocation": "인천광역시 서구 율도로77번길 1",
+   "updatedate": "11/27/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 417,
+   "location": "서구",
+   "shelter_name": "가현초등학교 운동장",
+   "uuid": 28260023,
+   "geolocation": "인천광역시 서구 염곡로 417",
+   "updatedate": "11/8/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 418,
+   "location": "서구",
+   "shelter_name": "천마초등학교 운동장",
+   "uuid": 28260022,
+   "geolocation": "인천광역시 서구 서달로 58-5",
+   "updatedate": "11/27/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 419,
+   "location": "서구",
+   "shelter_name": "석남서초등학교 운동장",
+   "uuid": 28260021,
+   "geolocation": "인천광역시 서구 건지로249번길 6",
+   "updatedate": "11/27/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 420,
+   "location": "서구",
+   "shelter_name": "신석초등학교 운동장",
+   "uuid": 28260020,
+   "geolocation": "인천광역시 서구 새오개로 9",
+   "updatedate": "12/2/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 421,
+   "location": "서구",
+   "shelter_name": "석남초등학교 운동장",
+   "uuid": 28260019,
+   "geolocation": "인천광역시 서구 서달로130번길 4",
+   "updatedate": "11/27/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 422,
+   "location": "서구",
+   "shelter_name": "불로초등학교 운동장",
+   "uuid": 28260018,
+   "geolocation": "인천광역시 서구 검단로744번1길 50",
+   "updatedate": "11/27/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 423,
+   "location": "서구",
+   "shelter_name": "불로중학교 운동장",
+   "uuid": 28260017,
+   "geolocation": "인천광역시 서구 고산후로 363",
+   "updatedate": "12/2/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 424,
+   "location": "서구",
+   "shelter_name": "백석중학교 운동장",
+   "uuid": 28260016,
+   "geolocation": "인천광역시 서구 한들3로 60",
+   "updatedate": "12/2/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 425,
+   "location": "서구",
+   "shelter_name": "발산초등학교 운동장",
+   "uuid": 28260015,
+   "geolocation": "인천광역시 서구 고산후로78번길 6",
+   "updatedate": "12/2/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 426,
+   "location": "서구",
+   "shelter_name": "금곡초등학교 운동장",
+   "uuid": 28260014,
+   "geolocation": "인천광역시 서구 완정로228번길 19",
+   "updatedate": "11/27/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 427,
+   "location": "서구",
+   "shelter_name": "간재울초등학교 운동장",
+   "uuid": 28260013,
+   "geolocation": "인천광역시 서구 승학로 433",
+   "updatedate": "11/27/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 428,
+   "location": "서구",
+   "shelter_name": "검암초등학교 운동장",
+   "uuid": 28260012,
+   "geolocation": "인천광역시 서구 승학로599번길 45",
+   "updatedate": "11/27/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 429,
+   "location": "서구",
+   "shelter_name": "백석초등학교 운동장",
+   "uuid": 28260011,
+   "geolocation": "인천광역시 서구 청마로 55",
+   "updatedate": "12/2/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 430,
+   "location": "서구",
+   "shelter_name": "동인천여자중학교 운동장",
+   "uuid": 28260010,
+   "geolocation": "인천광역시 서구 여우재로112번길 13",
+   "updatedate": "11/27/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 431,
+   "location": "서구",
+   "shelter_name": "가정초등학교 운동장",
+   "uuid": 28260009,
+   "geolocation": "인천광역시 서구 장고개로 336-1",
+   "updatedate": "11/28/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 432,
+   "location": "서구",
+   "shelter_name": "가좌초등학교 운동장",
+   "uuid": 28260007,
+   "geolocation": "인천광역시 서구 장고개로309번길 5",
+   "updatedate": "11/26/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 433,
+   "location": "서구",
+   "shelter_name": "건지초등학교 운동장",
+   "uuid": 28260006,
+   "geolocation": "인천광역시 서구 건지로318번길 39",
+   "updatedate": "11/26/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 434,
+   "location": "서구",
+   "shelter_name": "가좌중학교 운동장",
+   "uuid": 28260005,
+   "geolocation": "인천광역시 서구 건지로334번길 31",
+   "updatedate": "11/26/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 435,
+   "location": "서구",
+   "shelter_name": "봉화초등학교 운동장",
+   "uuid": 28260004,
+   "geolocation": "인천광역시 서구 건지로250번길 43",
+   "updatedate": "11/26/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 436,
+   "location": "서구",
+   "shelter_name": "봉수초등학교 운동장",
+   "uuid": 28260003,
+   "geolocation": "인천광역시 서구 봉오대로267번길 11-4",
+   "updatedate": "11/26/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 437,
+   "location": "서구",
+   "shelter_name": "가석초등학교 운동장",
+   "uuid": 28260002,
+   "geolocation": "인천광역시 서구 서달로 174",
+   "updatedate": "11/5/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 438,
+   "location": "연수구",
+   "shelter_name": "문남공원",
+   "uuid": 28185005,
+   "geolocation": "인천광역시 연수구 새말로55번길 37",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 439,
+   "location": "연수구",
+   "shelter_name": "체육공원",
+   "uuid": 28185016,
+   "geolocation": "인천광역시 연수구 청능대로 205",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 440,
+   "location": "연수구",
+   "shelter_name": "능허대공원",
+   "uuid": 28185018,
+   "geolocation": "인천광역시 연수구 능허대로 109",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 441,
+   "location": "연수구",
+   "shelter_name": "해돋이공원",
+   "uuid": 28185017,
+   "geolocation": "인천광역시 연수구 해돋이로 51",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 442,
+   "location": "연수구",
+   "shelter_name": "센트럴 파크",
+   "uuid": 28185015,
+   "geolocation": "인천광역시 연수구 컨벤시아대로 160",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 443,
+   "location": "연수구",
+   "shelter_name": "부수지공원",
+   "uuid": 28185014,
+   "geolocation": "인천광역시 연수구 원인재로 104",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 444,
+   "location": "연수구",
+   "shelter_name": "동춘공원",
+   "uuid": 28185013,
+   "geolocation": "인천광역시 연수구 먼우금로 107",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 445,
+   "location": "연수구",
+   "shelter_name": "동막공원",
+   "uuid": 28185012,
+   "geolocation": "인천광역시 연수구 원인재로 39",
+   "updatedate": "11/25/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 446,
+   "location": "연수구",
+   "shelter_name": "양지공원",
+   "uuid": 28185011,
+   "geolocation": "인천광역시 연수구 용담로117번길 16",
+   "updatedate": "11/25/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 447,
+   "location": "연수구",
+   "shelter_name": "용담공원",
+   "uuid": 28185010,
+   "geolocation": "인천광역시 연수구 용담로 49",
+   "updatedate": "11/25/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 448,
+   "location": "연수구",
+   "shelter_name": "대학공원",
+   "uuid": 28185009,
+   "geolocation": "인천광역시 연수구 함박뫼로 160",
+   "updatedate": "11/25/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 449,
+   "location": "연수구",
+   "shelter_name": "문화공원",
+   "uuid": 28185008,
+   "geolocation": "인천광역시 연수구 새말로 120",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 450,
+   "location": "연수구",
+   "shelter_name": "솔안 공원",
+   "uuid": 28185007,
+   "geolocation": "인천광역시 연수구 원인재로 170",
+   "updatedate": "11/25/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 451,
+   "location": "연수구",
+   "shelter_name": "솔밭 공원",
+   "uuid": 28185006,
+   "geolocation": "인천광역시 연수구 원인재로 246",
+   "updatedate": "11/25/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 452,
+   "location": "연수구",
+   "shelter_name": "선학 공원",
+   "uuid": 28185004,
+   "geolocation": "인천광역시 연수구 비류대로 583",
+   "updatedate": "11/25/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 453,
+   "location": "옹진군",
+   "shelter_name": "백령 중고등학교 운동장",
+   "uuid": 28720049,
+   "geolocation": "인천광역시 옹진군 백령면 백령로 708",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 454,
+   "location": "옹진군",
+   "shelter_name": "백령 종합운동장",
+   "uuid": 28720048,
+   "geolocation": "인천광역시 옹진군 백령면 백령남로 450",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 455,
+   "location": "옹진군",
+   "shelter_name": "연평초중고등학교 운동장",
+   "uuid": 28720047,
+   "geolocation": "인천광역시 옹진군 연평면 연평로137번길 101",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 456,
+   "location": "옹진군",
+   "shelter_name": "연평 종합운동장",
+   "uuid": 28720046,
+   "geolocation": "인천광역시 옹진군 연평면 연평로 178",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 457,
+   "location": "옹진군",
+   "shelter_name": "승봉분교운동장",
+   "uuid": 28720044,
+   "geolocation": "인천광역시 옹진군 자월면 승봉로67번길 43-18",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 458,
+   "location": "옹진군",
+   "shelter_name": "주차장",
+   "uuid": 28720043,
+   "geolocation": "인천광역시 옹진군 덕적면 덕적북로 721",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 459,
+   "location": "옹진군",
+   "shelter_name": "운동장",
+   "uuid": 28720040,
+   "geolocation": "인천광역시 옹진군 대청면 대청남로 528",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 460,
+   "location": "옹진군",
+   "shelter_name": "대청초등학교운동장",
+   "uuid": 28720039,
+   "geolocation": "인천광역시 옹진군 대청면 대청로244번길 110",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 461,
+   "location": "옹진군",
+   "shelter_name": "옥죽포어구적치장",
+   "uuid": 28720037,
+   "geolocation": "인천광역시 옹진군 대청면 대청북로 124",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 462,
+   "location": "옹진군",
+   "shelter_name": "건어장",
+   "uuid": 28720036,
+   "geolocation": "인천광역시 옹진군 북도면 장봉로605번길 155",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 463,
+   "location": "옹진군",
+   "shelter_name": "물량장",
+   "uuid": 28720035,
+   "geolocation": "인천광역시 옹진군 북도면 장봉로 71",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 464,
+   "location": "옹진군",
+   "shelter_name": "물량장",
+   "uuid": 28720033,
+   "geolocation": "인천광역시 옹진군 북도면 신도로 11",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 465,
+   "location": "옹진군",
+   "shelter_name": "물량장",
+   "uuid": 28720030,
+   "geolocation": "인천광역시 옹진군 덕적면 덕적북로518번길 44",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 466,
+   "location": "옹진군",
+   "shelter_name": "십리포주차장",
+   "uuid": 28720026,
+   "geolocation": "인천광역시 옹진군 영흥면 영흥북로 411",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 467,
+   "location": "옹진군",
+   "shelter_name": "십리포주차장",
+   "uuid": 28720025,
+   "geolocation": "인천광역시 옹진군 영흥면 영흥북로 378",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 468,
+   "location": "옹진군",
+   "shelter_name": "선재초운동장",
+   "uuid": 28720022,
+   "geolocation": "인천광역시 옹진군 영흥면 선재로34번길 197",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 469,
+   "location": "옹진군",
+   "shelter_name": "영흥중운동장",
+   "uuid": 28720021,
+   "geolocation": "인천광역시 옹진군 영흥면 내동로 107",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 470,
+   "location": "옹진군",
+   "shelter_name": "영흥초운동장",
+   "uuid": 28720020,
+   "geolocation": "인천광역시 옹진군 영흥면 영흥로 440-8",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 471,
+   "location": "옹진군",
+   "shelter_name": "이작2리목섬족구장",
+   "uuid": 28720019,
+   "geolocation": "인천광역시 옹진군 자월면 소이작로 245",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 472,
+   "location": "옹진군",
+   "shelter_name": "이작분교운동장",
+   "uuid": 28720018,
+   "geolocation": "인천광역시 옹진군 자월면 대이작로 66",
+   "updatedate": "11/21/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 473,
+   "location": "옹진군",
+   "shelter_name": "자월분교운동장",
+   "uuid": 28720017,
+   "geolocation": "인천광역시 옹진군 자월면 자월서로 177",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 474,
+   "location": "옹진군",
+   "shelter_name": "체육시설",
+   "uuid": 28720016,
+   "geolocation": "인천광역시 옹진군 덕적면 덕적남로 564-43",
+   "updatedate": "11/21/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 475,
+   "location": "옹진군",
+   "shelter_name": "덕적초중고등학교 운동장",
+   "uuid": 28720015,
+   "geolocation": "인천광역시 옹진군 덕적면 덕적남로 15",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 476,
+   "location": "옹진군",
+   "shelter_name": "소청분교운동장",
+   "uuid": 28720014,
+   "geolocation": "인천광역시 옹진군 대청면 소청동로 69-13",
+   "updatedate": "11/21/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 477,
+   "location": "옹진군",
+   "shelter_name": "대청중고등학교 운동장",
+   "uuid": 28720011,
+   "geolocation": "인천광역시 옹진군 대청면 대청로244번길 116-45",
+   "updatedate": "11/21/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 478,
+   "location": "옹진군",
+   "shelter_name": "답동종합운동장",
+   "uuid": 28720008,
+   "geolocation": "인천광역시 옹진군 대청면 대청로 80",
+   "updatedate": "11/21/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 479,
+   "location": "옹진군",
+   "shelter_name": "삼목초장봉분교",
+   "uuid": 28720007,
+   "geolocation": "인천광역시 옹진군 북도면 장봉로 551",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 480,
+   "location": "옹진군",
+   "shelter_name": "시도리운동장",
+   "uuid": 28720004,
+   "geolocation": "인천광역시 옹진군 북도면 시도로86번길 54",
+   "updatedate": "11/21/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 481,
+   "location": "옹진군",
+   "shelter_name": "공원",
+   "uuid": 28720002,
+   "geolocation": "인천광역시 옹진군 북도면 모도로 76",
+   "updatedate": "11/21/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 482,
+   "location": "중구",
+   "shelter_name": "인천국제공항 화물터미널 남측2번주차장",
+   "uuid": 28110079,
+   "geolocation": "인천광역시 중구 공항동로193번길 112",
+   "updatedate": "11/19/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 483,
+   "location": "중구",
+   "shelter_name": "인천국제공항 화물터미널 북측2번주차장",
+   "uuid": 28110077,
+   "geolocation": "인천광역시 중구 공항동로295번길 77-96",
+   "updatedate": "11/19/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 484,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제2여객터미널 썬큰가든",
+   "uuid": 28110075,
+   "geolocation": "인천광역시 중구 제2터미널대로 444-1",
+   "updatedate": "11/19/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 485,
+   "location": "중구",
+   "shelter_name": "인천국제공항 화물터미널 남측4번주차장",
+   "uuid": 28110080,
+   "geolocation": "인천광역시 중구 공항동로193번길 66",
+   "updatedate": "11/13/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 486,
+   "location": "중구",
+   "shelter_name": "인천국제공항 화물터미널 북측4번주차장",
+   "uuid": 28110078,
+   "geolocation": "인천광역시 중구 공항동로295번길 59",
+   "updatedate": "11/13/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 487,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제2여객터미널 제2합동청사주차장",
+   "uuid": 28110074,
+   "geolocation": "인천광역시 중구 제2터미널대로 444",
+   "updatedate": "11/13/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 488,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제1국제여객터미널 서측귀빈주차장",
+   "uuid": 28110073,
+   "geolocation": "인천광역시 중구 공항로 302",
+   "updatedate": "11/13/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 489,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제1국제여객터미널 장기주차장",
+   "uuid": 28110072,
+   "geolocation": "인천광역시 중구 공항로 421",
+   "updatedate": "11/13/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 490,
+   "location": "중구",
+   "shelter_name": "영종하늘체육공원",
+   "uuid": 28110087,
+   "geolocation": "인천광역시 중구 하늘중앙로 224",
+   "updatedate": "11/6/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 491,
+   "location": "중구",
+   "shelter_name": "연안부두 해양광장",
+   "uuid": 28110086,
+   "geolocation": "인천광역시 중구 연안부두로 38",
+   "updatedate": "11/8/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 492,
+   "location": "중구",
+   "shelter_name": "율목공원",
+   "uuid": 28110085,
+   "geolocation": "인천광역시 중구 율목로 35",
+   "updatedate": "11/6/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 493,
+   "location": "중구",
+   "shelter_name": "답동소공원",
+   "uuid": 28110084,
+   "geolocation": "인천광역시 중구 우현로 26",
+   "updatedate": "11/7/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 494,
+   "location": "중구",
+   "shelter_name": "공항합동청사 잔디광장",
+   "uuid": 28110083,
+   "geolocation": "인천광역시 중구 공항로424번길 45",
+   "updatedate": "11/8/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 495,
+   "location": "중구",
+   "shelter_name": "공항합동청사 축구장",
+   "uuid": 28110082,
+   "geolocation": "인천광역시 중구 공항로424번길 47",
+   "updatedate": "11/12/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 496,
+   "location": "중구",
+   "shelter_name": "인천국제공항 화물터미널 남측5번주차장",
+   "uuid": 28110081,
+   "geolocation": "인천광역시 중구 공항동로193번길 26",
+   "updatedate": "11/13/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 497,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제2여객터미널 장기주차장",
+   "uuid": 28110076,
+   "geolocation": "인천광역시 중구 제2터미널대로 346",
+   "updatedate": "11/13/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 498,
+   "location": "중구",
+   "shelter_name": "인천국제공항 제1여객터미널 동측귀빈주차장",
+   "uuid": 28110071,
+   "geolocation": "인천광역시 중구 공항로 240",
+   "updatedate": "11/7/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 499,
+   "location": "중구",
+   "shelter_name": "용유초등학교 무의분교장 운동장",
+   "uuid": 28110069,
+   "geolocation": "인천광역시 중구 대무의로 302-17",
+   "updatedate": "11/8/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 500,
+   "location": "중구",
+   "shelter_name": "용유중학교 운동장",
+   "uuid": 28110068,
+   "geolocation": "인천광역시 중구 남북로87번길 4",
+   "updatedate": "11/8/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 501,
+   "location": "중구",
+   "shelter_name": "영마루공원",
+   "uuid": 28110066,
+   "geolocation": "인천광역시 중구 영종대로 77",
+   "updatedate": "11/13/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 502,
+   "location": "중구",
+   "shelter_name": "유수지공원",
+   "uuid": 28110065,
+   "geolocation": "인천광역시 중구 신도시북로 31-35",
+   "updatedate": "11/8/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 503,
+   "location": "중구",
+   "shelter_name": "운남초등학교 운동장",
+   "uuid": 28110064,
+   "geolocation": "인천광역시 중구 운남서로 38",
+   "updatedate": "11/8/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 504,
+   "location": "중구",
+   "shelter_name": "운서초등학교 운동장",
+   "uuid": 28110063,
+   "geolocation": "인천광역시 중구 운서2로 57",
+   "updatedate": "11/8/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 505,
+   "location": "중구",
+   "shelter_name": "영종초등학교 운동장",
+   "uuid": 28110062,
+   "geolocation": "인천광역시 중구 하늘달빛로 133",
+   "updatedate": "11/8/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 506,
+   "location": "중구",
+   "shelter_name": "인천공항초등학교 운동장",
+   "uuid": 28110061,
+   "geolocation": "인천광역시 중구 신도시남로 43",
+   "updatedate": "11/8/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 507,
+   "location": "중구",
+   "shelter_name": "인천공항중학교 운동장",
+   "uuid": 28110060,
+   "geolocation": "인천광역시 중구 영종대로27번길 49",
+   "updatedate": "11/8/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 508,
+   "location": "중구",
+   "shelter_name": "삼목초등학교 운동장",
+   "uuid": 28110059,
+   "geolocation": "인천광역시 중구 신도시북로 42",
+   "updatedate": "11/8/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 509,
+   "location": "중구",
+   "shelter_name": "송월초등학교 운동장",
+   "uuid": 28110058,
+   "geolocation": "인천광역시 중구 자유공원로 106-7",
+   "updatedate": "11/8/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 510,
+   "location": "중구",
+   "shelter_name": "자유공원",
+   "uuid": 28110057,
+   "geolocation": "인천광역시 중구 제물량로232번길 46",
+   "updatedate": "11/8/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 511,
+   "location": "중구",
+   "shelter_name": "월미공원",
+   "uuid": 28110056,
+   "geolocation": "인천광역시 중구 월미로 131-3",
+   "updatedate": "12/6/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 512,
+   "location": "중구",
+   "shelter_name": "제물포고등학교 운동장",
+   "uuid": 28110055,
+   "geolocation": "인천광역시 중구 자유공원로 58-9",
+   "updatedate": "11/8/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 513,
+   "location": "중구",
+   "shelter_name": "인일여자고등학교 운동장",
+   "uuid": 28110054,
+   "geolocation": "인천광역시 중구 참외전로72번길 10",
+   "updatedate": "11/7/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 514,
+   "location": "중구",
+   "shelter_name": "인천정보산업고등학교",
+   "uuid": 28110053,
+   "geolocation": "인천광역시 중구 참외전로 192",
+   "updatedate": "11/7/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 515,
+   "location": "중구",
+   "shelter_name": "광성중학교 운동장",
+   "uuid": 28110052,
+   "geolocation": "인천광역시 중구 참외전로244번길 47",
+   "updatedate": "11/7/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 516,
+   "location": "중구",
+   "shelter_name": "인천신흥초등학교 운동장",
+   "uuid": 28110051,
+   "geolocation": "인천광역시 중구 제물량로 134",
+   "updatedate": "11/7/2019",
+   "capacity": 100
+  },
+  {
+   "shelter_id": 517,
+   "location": "중구",
+   "shelter_name": "신흥중학교 운동장",
+   "uuid": 28110050,
+   "geolocation": "인천광역시 중구 인항로24번길 38",
+   "updatedate": "11/7/2019",
+   "capacity": 80
+  },
+  {
+   "shelter_id": 518,
+   "location": "중구",
+   "shelter_name": "신흥여자중학교 운동장",
+   "uuid": 28110049,
+   "geolocation": "인천광역시 중구 인항로24번길 37",
+   "updatedate": "11/7/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 519,
+   "location": "중구",
+   "shelter_name": "인천신광초등학교 운동장",
+   "uuid": 28110048,
+   "geolocation": "인천광역시 중구 인중로 63",
+   "updatedate": "11/7/2019",
+   "capacity": 220
+  },
+  {
+   "shelter_id": 520,
+   "location": "중구",
+   "shelter_name": "인천신선초등학교 운동장",
+   "uuid": 28110047,
+   "geolocation": "인천광역시 중구 축항대로291번길 33",
+   "updatedate": "11/7/2019",
+   "capacity": 300
+  },
+  {
+   "shelter_id": 521,
+   "location": "중구",
+   "shelter_name": "인천연안초등학교 운동장",
+   "uuid": 28110046,
+   "geolocation": "인천광역시 중구 연안부두로33번길 53",
+   "updatedate": "11/7/2019",
+   "capacity": 200
+  },
+  {
+   "shelter_id": 522,
+   "location": "중구",
+   "shelter_name": "인성초등학교 운동장",
+   "uuid": 28110045,
+   "geolocation": "인천광역시 중구 신포로39번길 42",
+   "updatedate": "11/7/2019",
+   "capacity": 240
+  },
+  {
+   "shelter_id": 523,
+   "location": "중구",
+   "shelter_name": "인성여자중학교 운동장",
+   "uuid": 28110044,
+   "geolocation": "인천광역시 중구 홍예문로 39",
+   "updatedate": "11/7/2019",
+   "capacity": 120
+  },
+  {
+   "shelter_id": 524,
+   "location": "중구",
+   "shelter_name": "송도중학교 운동장",
+   "uuid": 28110043,
+   "geolocation": "인천광역시 중구 제물량로 123",
+   "updatedate": "11/7/2019",
+   "capacity": 100
   }
 ]

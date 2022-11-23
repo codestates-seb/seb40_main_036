@@ -2,10 +2,30 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { useState } from 'react';
+import axios from 'axios';
 
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
+
+  const PostReservation = () => {
+    axios
+      .post('/reservation', {
+        memberId: 1,
+        shelterId: props.shelterId,
+        num: count,
+      })
+      .then((res) => console.log(res))
+      .then(() => {
+        props.setopen(false);
+        props.setopen2(true);
+      })
+      .catch(() => {
+        props.setopen(false);
+        props.setopen2(true);
+        props.setmessage(`오류가 발생하였습니다.새로고침해주세요.`);
+      });
+  };
   return (
     <SideWrapper className={hide === true ? 'hide' : ''}>
       <div className="d-flex">
@@ -16,22 +36,43 @@ const SideNav = (props) => {
           />
         </div>
         <div className="pt128">
-          <div className="mb8 ta-center">{props.distance} m</div>
-          <div className="mb8 ta-center bold">{props.location}</div>
-          <div className="mb8 ta-center">45/350</div>
+          <div className="mb8 ta-center">
+            {(props.distance / 1000).toFixed(1)} km
+          </div>
+          <div className="mb8 ta-center bold">{props.title}</div>
+          <div className="mb8 ta-center">
+            {props.now}/{props.capacity}
+          </div>
           <div className="mb8 ta-center reservation">
             <FontAwesomeIcon icon={regular('user')} />
-            {count > 0 ? (
-              <button onClick={() => setCount(count - 1)}>
-                <FontAwesomeIcon icon={solid('minus')} />
-              </button>
-            ) : null}
-            <p>{count}</p>
-            <button onClick={() => setCount(count + 1)}>
-              <FontAwesomeIcon icon={solid('plus')} />
-            </button>
+            <div className={count > 0 ? 'minus' : 'plus'}>
+              {count > 0 ? (
+                <button onClick={() => setCount(count - 1)}>
+                  <FontAwesomeIcon icon={solid('minus')} />
+                </button>
+              ) : null}
+              <p>{count}</p>
+              {count < props.capacity - props.now ? (
+                <button onClick={() => setCount(count + 1)}>
+                  <FontAwesomeIcon icon={solid('plus')} />
+                </button>
+              ) : null}
+            </div>
           </div>
-          <button className="reservation">예약하기</button>
+          {count < props.capacity - props.now + 1 ? (
+            <div className="reservationtext green">예약이 가능합니다.</div>
+          ) : (
+            <div className="reservationtext red">
+              예약가능인원보다 많습니다. 다른 대피소를 이용해주세요.
+            </div>
+          )}
+          {count < props.capacity - props.now + 1 && 0 < count ? (
+            <button className="reservation" onClick={PostReservation}>
+              예약하기
+            </button>
+          ) : (
+            <button className="reservation disabled">예약하기</button>
+          )}
         </div>
       </div>
       <ArrowWrapper onClick={() => sethide(!hide)}>
@@ -77,6 +118,17 @@ const SideWrapper = styled.aside`
   .bold {
     font-weight: bold;
   }
+  div.reservationtext {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 8px;
+    &.red {
+      color: #dc3545;
+    }
+    &.green {
+      color: #28a745;
+    }
+  }
   div.reservation {
     display: flex;
     justify-content: space-between;
@@ -87,8 +139,20 @@ const SideWrapper = styled.aside`
     > svg {
       margin-right: 16px;
     }
+    > div {
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto;
+      &.plus {
+        justify-content: right;
+      }
+      button,
+      p {
+        flex: 0 1 33.3333%;
+      }
+    }
     button {
-      padding: 8px 10px;
+      padding: 10px;
       border-radius: 50%;
       border: 2px solid black;
       background: white;
@@ -105,6 +169,9 @@ const SideWrapper = styled.aside`
     color: white;
     width: 100%;
     font-weight: 600;
+    &.disabled {
+      background: #c77d7d;
+    }
   }
   &.hide {
     left: -400px;
