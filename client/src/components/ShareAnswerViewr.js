@@ -2,58 +2,69 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
 import { useRef, useCallback, useState } from 'react';
-
 function ShareAnswerViewr({
-  questionId,
   answerContents,
   answerDate,
   user,
   id,
   memberid,
+  questionId,
 }) {
+  const [modal, setModal] = useState(false);
+  const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = 'auto';
     textRef.current.style.height = textRef.current.scrollHeight + 'px';
   }, []);
-  const textRef = useRef();
-  const [visible, setVisible] = useState(false);
-  const editOnClick = () => {
-    if (Number(sessionStorage.getItem('membeId')) === memberid) {
+
+  const AnswerEditOnClick = () => {
+    if (Number(sessionStorage.getItem('memberId')) === memberid) {
       const data = {
         answerContent: textRef.current.value,
         questionId: `${questionId}`,
-        memberId: `${sessionStorage.getItem('membeId')}`,
+        memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
+      console.log(data);
       axios
         .patch(`/answer/${id}`, data)
-        .then(() => setVisible(false))
+        .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
   };
-  const editBox = (
-    <Container>
+
+  const editing = (
+    <EditContainer>
       <Post>
         <textarea
           className="answer"
           ref={textRef}
+          defaultValue={answerContents}
           placeholder="댓글을 입력해 주세요."
           onInput={handleResizeHeight}
         ></textarea>
         <div className="submitButon">
-          <button type="submit" onClick={editOnClick}>
-            등록
+          <button className="cencel" onClick={() => setModal(false)}>
+            취소
           </button>
-          <button type="Cancel">취소</button>
+          <button
+            className="submit"
+            type="submit"
+            onClick={() => {
+              AnswerEditOnClick();
+            }}
+          >
+            수정
+          </button>
         </div>
       </Post>
-    </Container>
+    </EditContainer>
   );
   const deleteClick = () => {
     const result = window.confirm('답변을 삭제하시겠습니까?');
     if (
       result === true &&
-      Number(sessionStorage.getItem('membeId')) === memberid
+      Number(sessionStorage.getItem('memberId')) === memberid
     ) {
       setTimeout(() => {
         axios
@@ -77,23 +88,26 @@ function ShareAnswerViewr({
               <div className="date">{answerDate}</div>
             </div>
           </div>
-          {memberid === Number(sessionStorage.getItem('membeId')) ? (
+          {memberid === Number(sessionStorage.getItem('memberId')) ? (
             <DeletEdit>
               <button onClick={deleteClick}>삭제</button>
               <button
                 className="edit"
                 onClick={() => {
-                  setVisible(!visible);
+                  setModal(!modal);
                 }}
               >
-                수정
+                {modal ? null : '수정'}
               </button>
-              {visible && editBox}
             </DeletEdit>
           ) : null}
         </div>
         <div className="contentsBox">
-          <div className="contents">{answerContents}</div>
+          {modal === false ? (
+            <div className="contents">{answerContents}</div>
+          ) : (
+            editing
+          )}
         </div>
       </AnswerContents>
     </AnswerContainer>
@@ -137,6 +151,7 @@ const AnswerContents = styled.div`
   .contentsBox {
     display: flex;
     padding: 10px;
+    padding-left: 20px;
   }
   .contents {
     font-size: 16px;
@@ -160,11 +175,10 @@ const DeletEdit = styled.div`
     border: none;
   }
 `;
-const Container = styled.div`
+const EditContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: 1254px;
-  padding: 20px 0;
 `;
 const Post = styled.div`
   border: 1px solid #d2d2d2;
@@ -186,7 +200,7 @@ const Post = styled.div`
   textarea:focus {
     outline: none;
   }
-  button {
+  .submit {
     background-color: #008505;
     color: #ffffff;
     border: none;
@@ -196,6 +210,18 @@ const Post = styled.div`
     cursor: pointer;
     :hover {
       background-color: #005603;
+    }
+  }
+  .cencel {
+    margin-right: 5px;
+    background-color: #ffffff;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    :hover {
+      background-color: #d2d2d2;
     }
   }
 `;
