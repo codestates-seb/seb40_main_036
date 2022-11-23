@@ -12,6 +12,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.time.LocalDate;
 
 import java.util.List;
@@ -19,6 +21,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class StuffQuestionService {
 
     private final StuffQuestionRepository stuffQuestionRepository;
@@ -75,8 +78,17 @@ public class StuffQuestionService {
 
     public StuffQuestion findStuffQuestion(long stuffQuestionID){return findVerifiedStuffQuestion(stuffQuestionID);}
 
-        public List<StuffQuestion> searchStuffQuestion(String word){
-            return stuffQuestionRepository.findByStuffQuestionContentContaining(word);
+
+    public List<StuffQuestion> searchTitleStuffQuestion(String word){
+        return stuffQuestionRepository.findByStuffQuestionTitleContainingOrderByStuffQuestionIdDesc(word);
+    }
+
+    public List<StuffQuestion> searchNameStuffQuestion(String word){
+        return stuffQuestionRepository.findByNameContainingOrderByStuffQuestionIdDesc(word);
+    }
+
+    public List<StuffQuestion> searchContentStuffQuestion(String word){
+        return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(word);
     }
 
     public Page<StuffQuestion> findStuffQuestions(int page, int size){
@@ -105,6 +117,4 @@ public class StuffQuestionService {
         return stuffQuestionRepository.save(stuffQuestion);
 
     }
-
-
 }

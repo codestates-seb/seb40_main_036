@@ -18,7 +18,7 @@ public class ReservationInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long reservationInfoId;
+    private long reservationInfoId; // 전체 대피소 예약번호
 
     @ManyToOne
     @JoinColumn(name = "shelterId")
@@ -28,15 +28,15 @@ public class ReservationInfo {
     @JoinColumn(name = "reservationId")
     private Reservation reservation;
 
-    private long reservationInfo;
+    //private long reservationInfo;   // 해당 대피소 예약번호?
 
     private String shelterName;
 
-    private String location;
+    //private String location;
 
     private String geolocation;
 
     private int capacity;
 
-    private int num;
+    private int num;    // 예약 인원수
 }

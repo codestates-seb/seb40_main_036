@@ -20,6 +20,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
@@ -76,12 +77,16 @@ public class QuestionService {
         return findVerifiedQuestion(questionId);
     }
 
-    public List<Question> searchQuestion(String word){
-        return questionRepository.findByQuestionTitleContaining(word);
+    public List<Question> searchTitleQuestion(String word){
+        return questionRepository.findByQuestionTitleContainingOrderByQuestionIdDesc(word);
     }
 
     public List<Question> searchNameQuestion(String word){
-        return questionRepository.findByNameContaining(word);
+        return questionRepository.findByNameContainingOrderByQuestionIdDesc(word);
+    }
+
+    public List<Question> searchContentQuestion(String word){
+        return questionRepository.findByQuestionContentContainingOrderByQuestionIdDesc(word);
     }
 
     public Page<Question> findQuestions(int page, int size){
@@ -89,7 +94,6 @@ public class QuestionService {
                 Sort.by("questionId").descending()));
     }
 
-    @Transactional
     public void deleteQuestion(long questionId){
 
         if(!questionRepository.existsById(questionId)){

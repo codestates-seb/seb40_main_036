@@ -1,9 +1,5 @@
 package com.server.question.controller;
 
-import com.server.answer.entity.Answer;
-import com.server.answer.repository.AnswerRepository;
-import com.server.answer.service.AnswerService;
-import com.server.member.entity.Member;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.entity.Question;
@@ -11,15 +7,14 @@ import com.server.question.mapper.QuestionMapper;
 import com.server.question.repository.QuestionRepository;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
-import com.server.response.SingleResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 import java.util.List;
@@ -28,6 +23,7 @@ import java.util.List;
 @RequestMapping("/question")
 @Validated
 @RequiredArgsConstructor
+@Transactional
 public class QuestionController {
 
     private final QuestionService questionService;
@@ -73,9 +69,9 @@ public class QuestionController {
     }
 
 
-    @GetMapping("/search/{word}")
+    @GetMapping("/search/title/{word}")
     public ResponseEntity searchQuestion(@PathVariable("word") String word){
-        List<Question> questionList=questionService.searchQuestion(word);
+        List<Question> questionList=questionService.searchTitleQuestion(word);
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
@@ -83,6 +79,13 @@ public class QuestionController {
     @GetMapping("/search/name/{word}")
     public ResponseEntity searchNameQuestion(@PathVariable("word") String word){
         List<Question> questionList=questionService.searchNameQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
+
+    @GetMapping("/search/content/{word}")
+    public ResponseEntity searchContentQuestion(@PathVariable("word") String word){
+        List<Question> questionList=questionService.searchContentQuestion(word);
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }

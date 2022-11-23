@@ -5,6 +5,7 @@ import com.server.exception.ExceptionCode;
 import com.server.member.service.MemberService;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.repository.ReservationRepository;
+import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.reservationInfo.repository.ReservationInfoRepository;
 import com.server.shelter.service.ShelterService;
 import lombok.RequiredArgsConstructor;
@@ -35,11 +36,19 @@ public class ReservationService {
 
         reservation.setReservationCreated(LocalDate.now());
 
-        Reservation savedReservation = saveReservation(reservation);
+        // reservationId가 reservationInfo에 넣어져야하니 save가 먼저 진행되어야함
+        Reservation savedReservation = reservationRepository.save(saveReservation(reservation));
 
-        
+        // 예약을 생성할때 "예약정보와 대피소 정보"를 reservationInfo에 저장
+        ReservationInfo reservationInfo=new ReservationInfo();
+        reservationInfo.setShelterName(reservation.getShelter().getShelterName());
+        reservationInfo.setGeolocation(reservation.getShelter().getGeolocation());
+        reservationInfo.setCapacity(reservation.getShelter().getCapacity());
+        reservationInfo.setNum(reservation.getNum());
 
-        return reservationRepository.save(savedReservation);
+        reservationInfoRepository.save(reservationInfo);
+
+        return savedReservation;
 
     }
 
