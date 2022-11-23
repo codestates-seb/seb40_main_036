@@ -32,20 +32,24 @@ const SideNav = (props) => {
             {(props.distance / 1000).toFixed(1)} km
           </div>
           <div className="mb8 ta-center bold">{props.title}</div>
-          <div className="mb8 ta-center">45/{props.capacity}</div>
+          <div className="mb8 ta-center">
+            {props.now}/{props.capacity}
+          </div>
           <div className="mb8 ta-center reservation">
             <FontAwesomeIcon icon={regular('user')} />
-            {count > 0 ? (
-              <button onClick={() => setCount(count - 1)}>
-                <FontAwesomeIcon icon={solid('minus')} />
-              </button>
-            ) : null}
-            <p>{count}</p>
-            {count < props.capacity ? (
-              <button onClick={() => setCount(count + 1)}>
-                <FontAwesomeIcon icon={solid('plus')} />
-              </button>
-            ) : null}
+            <div className={count > 0 ? 'minus' : 'plus'}>
+              {count > 0 ? (
+                <button onClick={() => setCount(count - 1)}>
+                  <FontAwesomeIcon icon={solid('minus')} />
+                </button>
+              ) : null}
+              <p>{count}</p>
+              {count < props.capacity - props.now ? (
+                <button onClick={() => setCount(count + 1)}>
+                  <FontAwesomeIcon icon={solid('plus')} />
+                </button>
+              ) : null}
+            </div>
           </div>
           <button className="reservation" onClick={PostReservation}>
             예약하기
@@ -105,8 +109,20 @@ const SideWrapper = styled.aside`
     > svg {
       margin-right: 16px;
     }
+    > div {
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto;
+      &.plus {
+        justify-content: right;
+      }
+      button,
+      p {
+        flex: 0 1 33.3333%;
+      }
+    }
     button {
-      padding: 8px 10px;
+      padding: 10px;
       border-radius: 50%;
       border: 2px solid black;
       background: white;

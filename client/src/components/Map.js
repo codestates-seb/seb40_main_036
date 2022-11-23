@@ -19,6 +19,7 @@ const lists = Incheon.map((x) => {
       obj['latlng'] = new kakao.maps.LatLng(result[0].y, result[0].x);
     }
   });
+  obj['now'] = Math.floor(Math.random() * x.capacity);
   obj['capacity'] = x.capacity;
   obj['shelterId'] = x.shelter_id;
   return obj;
@@ -27,6 +28,7 @@ const Map = (props) => {
   const [open, setopen] = useState(false);
   const [title, setTitle] = useState('');
   const [distance, setDistance] = useState('');
+  const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
 
@@ -82,6 +84,7 @@ const Map = (props) => {
         setTitle(marker.getTitle());
         setCapacity(i.capacity);
         setShelterId(i.shelterId);
+        setNow(i.now);
         fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
       });
     });
@@ -101,6 +104,7 @@ const Map = (props) => {
           distance={distance}
           capacity={capacity}
           shelterId={shelterId}
+          now={now}
         />
       )}
       <LoadingIcon
