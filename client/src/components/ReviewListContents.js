@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-function ShareListContents({ id, num, tag, title, writer, date, view }) {
+function ReviewListContents({ id, num, tag, title, writer, date, view }) {
   return (
     <Container>
       <ContentsList>
@@ -20,7 +20,7 @@ function ShareListContents({ id, num, tag, title, writer, date, view }) {
   );
 }
 
-export default ShareListContents;
+export default ReviewListContents;
 
 const Container = styled.div``;
 
