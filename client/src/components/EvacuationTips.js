@@ -3,7 +3,9 @@ import { useState } from 'react';
 import EarthquakeTipsContents from './EarthquakeTipsContents';
 import CongestionTips from './CongestionTips';
 import DownpourTipsContents from './DownpourTips';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function EvacuationTips() {
   const [Selected, setSelected] = useState('earthquake');
   const handleSelect = (e) => {
@@ -61,6 +63,12 @@ const TipsTitle = styled.div`
 const Header = styled.div`
   h1 {
     font-size: 27px;
+    ${tablet} {
+      font-size: 24px;
+    }
+    ${mobile} {
+      font-size: 21px;
+    }
   }
 `;
 const Content = styled.div``;
@@ -71,15 +79,21 @@ const SelectBox = styled.div`
   margin: 0 0 12px;
 
   select {
-    width: 130px;
-    height: 45px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     :focus {
       outline: none;
+    }
+    ${tablet} {
+      font-size: 18px;
+    }
+    ${mobile} {
+      font-size: 16px;
     }
   }
 `;

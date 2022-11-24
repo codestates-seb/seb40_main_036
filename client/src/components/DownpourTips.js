@@ -35,7 +35,7 @@ const TipsContents = styled.div`
     flex-direction: column;
   }
   img {
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
   }
 `;

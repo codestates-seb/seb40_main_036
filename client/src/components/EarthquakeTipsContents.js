@@ -34,9 +34,11 @@ const TipsContainer = styled.div`
 const TipsContents = styled.div`
   .earthquake {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   img {
-    max-width: 670px;
+    max-width: 800px;
     width: 100%;
     padding: 2px;
   }
