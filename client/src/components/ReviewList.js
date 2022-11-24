@@ -104,13 +104,13 @@ function ReviewList() {
             .slice(items * (page - 1), items * (page - 1) + items)
             .map((item) => (
               <ReviewListContents
-                key={item.stuffQuestionId}
-                id={item.stuffQuestionId}
+                key={item.shelterQuestionId}
+                id={item.shelterQuestionId}
                 memberId={item.memberId}
-                title={item.stuffQuestionTitle}
-                num={item.stuffQuestionId}
+                title={item.shelterQuestionTitle}
+                num={item.shelterQuestionId}
                 writer={item.name}
-                date={item.stuffQuestionCreated}
+                date={item.shelterQuestionCreated}
                 tag={item.locationTag}
                 view={item.views}
               />

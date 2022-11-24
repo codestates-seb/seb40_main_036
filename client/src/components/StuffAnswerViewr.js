@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
 import { useRef, useCallback, useState } from 'react';
-function ReviewAnswerViewr({
+function StuffAnswerViewr({
   answerContents,
   answerDate,
   user,
@@ -20,14 +20,14 @@ function ReviewAnswerViewr({
   const AnswerEditOnClick = () => {
     if (Number(sessionStorage.getItem('memberId')) === memberid) {
       const data = {
-        shelterAnswerConten: textRef.current.value,
-        shelterQuestionId: `${questionId}`,
+        stuffAnswerContent: textRef.current.value,
+        stuffQuestionId: `${questionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .patch(`/shelterAnswer/${id}`, data)
+        .patch(`/stuffAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -114,7 +114,7 @@ function ReviewAnswerViewr({
   );
 }
 
-export default ReviewAnswerViewr;
+export default StuffAnswerViewr;
 
 const AnswerContainer = styled.div`
   display: flex;

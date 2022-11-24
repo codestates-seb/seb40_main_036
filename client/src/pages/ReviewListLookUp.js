@@ -24,7 +24,7 @@ function ReviewListLookup() {
         const response = await axios.get(`/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setQuestions(response.data.data);
-        setAnswer(response.data.data.stuffAnswers); // 데이터는 response.body 안에 들어있습니다.
+        setAnswer(response.data.data.shelterAnswers); // 데이터는 response.body 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
@@ -42,32 +42,32 @@ function ReviewListLookup() {
         {questions.length !== 0 && (
           <>
             <ReviewListViewerTitle
-              key={questions.stuffQuestionId}
-              title={questions.stuffQuestionTitle}
-              date={questions.stuffQuestionCreated}
+              key={questions.shelterQuestionId}
+              title={questions.shelterQuestionTitle}
+              date={questions.shelterQuestionCreated}
               name={questions.name}
-              modifie={questions.stuffQuestionModifed}
+              modifie={questions.shelterQuestionModifed}
               tag={questions.locationTag}
             />
             <ReviewListViewerContents
-              id={questions.stuffQuestionId}
-              title={questions.stuffQuestionTitle}
-              content={questions.stuffQuestionContent}
+              id={questions.shelterQuestionId}
+              title={questions.shelterQuestionTitle}
+              content={questions.shelterQuestionContent}
               user={questions.name}
-              questionId={questions.stuffQuestionId}
+              questionId={questions.shelterQuestionId}
               memberId={questions.memberId}
             />
           </>
         )}
         {answer.map((item) => (
           <ReviewAnswerViewr
-            key={item.stuffAnswerId}
-            questionId={item.stuffQuestionId}
-            id={item.stuffAnswerId}
+            key={item.shelterAnswerId}
+            questionId={item.shelterQuestionId}
+            id={item.shelterAnswerId}
             memberid={item.memberId}
             user={item.name}
-            answerContents={item.stuffAnswerContent}
-            answerDate={item.stuffAnswerCreated}
+            answerContents={item.shelterAnswerContent}
+            answerDate={item.shelterAnswerCreated}
           />
         ))}
         <ReviewAnswerPost />

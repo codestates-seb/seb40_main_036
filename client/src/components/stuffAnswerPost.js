@@ -3,7 +3,7 @@ import { useRef, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function ReviewAnswerPost() {
+function stuffAnswerPost() {
   const { QuestionId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
@@ -13,19 +13,19 @@ function ReviewAnswerPost() {
 
   const handleOnClick = () => {
     if (
-      ReviewAnswerPost.body !== '' &&
+      stuffAnswerPost.body !== '' &&
       textRef.current.value !== '' &&
       sessionStorage.getItem('memberId')
     ) {
       const data = {
-        shelterAnswerContent: textRef.current.value,
-        shelterQuestionId: `${QuestionId}`,
+        stuffAnswerConten: textRef.current.value,
+        stuffQuestionId: `${QuestionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .post(`/shelterAnswer`, data)
+        .post(`/stuffAnswer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -50,7 +50,7 @@ function ReviewAnswerPost() {
   );
 }
 
-export default ReviewAnswerPost;
+export default stuffAnswerPost;
 
 const Container = styled.div`
   margin: 0 auto;

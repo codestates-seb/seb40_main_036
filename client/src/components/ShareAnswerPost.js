@@ -14,7 +14,7 @@ function AnswerPost() {
   const handleOnClick = () => {
     if (
       AnswerPost.body !== '' &&
-      textRef !== '' &&
+      textRef.current.value !== '' &&
       sessionStorage.getItem('memberId')
     ) {
       const data = {

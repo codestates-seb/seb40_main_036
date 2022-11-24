@@ -14,7 +14,7 @@ function ReviewListViewerTitle({ title, name, date, tag }) {
         <ReviewContentsTitle>
           <div className="header">
             <div className="tagContainer">
-              <div className="tag">{tag}</div>
+              {tag !== '' ? <div className="tag">{tag}</div> : null}
             </div>
             <h1>{title}</h1>
           </div>
