@@ -1,13 +1,17 @@
 package com.server.reservationInfo.controller;
 
+import com.server.question.entity.Question;
 import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.reservationInfo.mapper.ReservationInfoMapper;
+import com.server.reservationInfo.repository.ReservationInfoRepository;
 import com.server.reservationInfo.service.ReservationInfoService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
+import com.server.shelterQuestion.entity.ShelterQuestion;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +28,7 @@ import java.util.List;
 public class ReservationInfoController {
     private final ReservationInfoService reservationInfoService;
     private final ReservationInfoMapper reservationInfoMapper;
-
-    // post가 없는데 어떻게 이걸 get하지? -> post는 reservationService create에서 진행함
+    private final ReservationInfoRepository reservationInfoRepository;
 
 
     @GetMapping("/{reservationInfoId}")
@@ -50,4 +53,12 @@ public class ReservationInfoController {
                         pageReservationInfos),
                 HttpStatus.OK);
     }
+
+    @GetMapping("/reservationInfos")
+    public ResponseEntity getAllReservationInfos(){
+        List<ReservationInfo> reservationInfoList=reservationInfoRepository.findAll(Sort.by(Sort.Direction.ASC, "reservationInfoId"));  // 바로 repository에서 데이터 가져옴
+
+        return new ResponseEntity<>(reservationInfoMapper.reservationInfosToReservationInfoResponseDtos(reservationInfoList),HttpStatus.OK);
+    }
 }
+
