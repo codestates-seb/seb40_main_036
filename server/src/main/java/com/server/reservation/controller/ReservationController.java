@@ -39,14 +39,14 @@ public class ReservationController {
                 new SingleResponseDto<>(reservationMapper.reservationToReservationResponseDto(reservation)), HttpStatus.CREATED);
     }
 
-    @PatchMapping("/{reservationId}")
-    public ResponseEntity patchReservation(@PathVariable("reservationId") @Positive long Id,
-                                       @Valid @RequestBody ReservationPatchDto reservationPatchDto) {
-        reservationPatchDto.setReservationId(Id);
-        Reservation response = reservationService.updateReservation(reservationMapper.reservationPatchDtoToReservation(reservationPatchDto));
-
-        return new ResponseEntity<>(reservationMapper.reservationToReservationResponseDto(response), HttpStatus.OK);
-    }
+//    @PatchMapping("/{reservationId}")
+//    public ResponseEntity patchReservation(@PathVariable("reservationId") @Positive long Id,
+//                                       @Valid @RequestBody ReservationPatchDto reservationPatchDto) {
+//        reservationPatchDto.setReservationId(Id);
+//        Reservation response = reservationService.updateReservation(reservationMapper.reservationPatchDtoToReservation(reservationPatchDto));
+//
+//        return new ResponseEntity<>(reservationMapper.reservationToReservationResponseDto(response), HttpStatus.OK);
+//    }
 
     @GetMapping("/{reservationId}")
     public ResponseEntity getReservation(@PathVariable("reservationId")

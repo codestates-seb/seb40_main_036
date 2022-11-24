@@ -36,9 +36,9 @@ public class ReservationService {
 
         Reservation reservedPerson=reservationRepository.findByMemberId(reservation.getMemberId());
 
-        if(reservedPerson!=null){
-            updateReservation(reservedPerson);  // 기존에 예약한 사람이면 업데이트 메서드로 이동
-        }
+//        if(reservedPerson!=null){
+//            updateReservation(reservedPerson);  // 기존에 예약한 사람이면 업데이트 메서드로 이동
+//        }
 
         // 회원이 존재하는지 확인
         memberService.findVerifiedMember(reservation.getMemberId()); // 있으면 넘어가고 없으면 예외문구뜸
@@ -58,22 +58,22 @@ public class ReservationService {
     }
 
 
-    public Reservation updateReservation(Reservation reservation){
-        // ReservationId 확인
-        Reservation findReservation = findVerifiedReservation(reservation.getReservationId());
-        // 대피소 장소 수정
-        Optional.ofNullable(reservation.getShelter())
-                .ifPresent(shelterId->findReservation.setShelter(shelterId));
-        // 예약 인원 수정
-        Optional.ofNullable(reservation.getNum())
-                .ifPresent(Num->findReservation.setNum(Num));
-        // 예약 시간 수정
-        findReservation.setReservationModified(LocalDate.now());
-
-        updateReservationInfo(reservation); // ReservationInfo 업데이트
-
-        return reservationRepository.save(findReservation);
-    }
+//    public Reservation updateReservation(Reservation reservation){
+//        // ReservationId 확인
+//        Reservation findReservation = findVerifiedReservation(reservation.getReservationId());
+//        // 대피소 장소 수정
+//        Optional.ofNullable(reservation.getShelter())
+//                .ifPresent(shelterId->findReservation.setShelter(shelterId));
+//        // 예약 인원 수정
+//        Optional.ofNullable(reservation.getNum())
+//                .ifPresent(Num->findReservation.setNum(Num));
+//        // 예약 시간 수정
+//        findReservation.setReservationModified(LocalDate.now());
+//
+//        updateReservationInfo(reservation); // ReservationInfo 업데이트
+//
+//        return reservationRepository.save(findReservation);
+//    }
 
     public void updateReservationInfo(Reservation reservation){
         /////////////////////////////////////////////////////////////////////////////////////////////////////
