@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
 import { useRef, useCallback, useState } from 'react';
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ShareAnswerViewr({
   answerContents,
   answerDate,
@@ -222,6 +225,12 @@ const Post = styled.div`
     cursor: pointer;
     :hover {
       background-color: #d2d2d2;
+    }
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
     }
   }
 `;

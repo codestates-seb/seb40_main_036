@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
 import { useRef, useCallback, useState } from 'react';
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ReviewAnswerViewr({
   answerContents,
   answerDate,
@@ -142,11 +145,23 @@ const AnswerContents = styled.div`
     padding: 10px;
     img {
       width: 53px;
+      ${tablet} {
+        width: 48px;
+      }
+      ${mobile} {
+        width: 44px;
+      }
     }
   }
   .userName {
     font-weight: bold;
     font-size: 18px;
+    ${tablet} {
+      font-size: 16px;
+    }
+    ${mobile} {
+      font-size: 14px;
+    }
   }
   .contentsBox {
     display: flex;
@@ -155,6 +170,12 @@ const AnswerContents = styled.div`
   }
   .contents {
     font-size: 16px;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .date {
     font-size: 14px;
@@ -173,6 +194,12 @@ const DeletEdit = styled.div`
     color: #838383;
     font-size: 16px;
     border: none;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;
 const EditContainer = styled.div`
@@ -196,6 +223,12 @@ const Post = styled.div`
     width: 100%;
     border: none;
     font-size: 16px;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   textarea:focus {
     outline: none;

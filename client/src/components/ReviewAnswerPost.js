@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { useRef, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ReviewAnswerPost() {
   const { QuestionId } = useParams();
   const textRef = useRef();
@@ -65,13 +67,14 @@ const Post = styled.div`
     padding: 15px 15px 0 15px;
     font-weight: bold;
     font-size: 18px;
+    ${tablet} {
+      font-size: 16px;
+    }
+    ${mobile} {
+      font-size: 14px;
+    }
   }
 
-  .submitButon {
-    display: flex;
-    justify-content: end;
-    padding: 0 15px 15px 15px;
-  }
   textarea {
     border-radius: 10px;
     padding: 15px 15px 0 15px;
@@ -79,11 +82,23 @@ const Post = styled.div`
     width: 100%;
     border: none;
     font-size: 16px;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   textarea:focus {
     outline: none;
   }
+  .submitButon {
+    display: flex;
+    justify-content: end;
+    padding: 0 15px 15px 15px;
+  }
   button {
+    font-size: 16px;
     background-color: #008505;
     color: #ffffff;
     border: none;
@@ -93,6 +108,16 @@ const Post = styled.div`
     cursor: pointer;
     :hover {
       background-color: #005603;
+    }
+    ${tablet} {
+      font-size: 14px;
+      width: 75px;
+      height: 35px;
+    }
+    ${mobile} {
+      font-size: 12px;
+      width: 70px;
+      height: 30px;
     }
   }
 `;
