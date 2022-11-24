@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-23T14:34:59+0900",
+    date = "2022-11-24T18:06:51+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -66,6 +66,7 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         String stuffQuestionContent = null;
         String locationTag = null;
         long views = 0L;
+        long countAnswer = 0L;
         LocalDate stuffQuestionCreated = null;
         LocalDate stuffQuestionModified = null;
         List<StuffAnswerResponseDto> stuffAnswers = null;
@@ -77,11 +78,12 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         stuffQuestionContent = stuffQuestion.getStuffQuestionContent();
         locationTag = stuffQuestion.getLocationTag();
         views = stuffQuestion.getViews();
+        countAnswer = stuffQuestion.getCountAnswer();
         stuffQuestionCreated = stuffQuestion.getStuffQuestionCreated();
         stuffQuestionModified = stuffQuestion.getStuffQuestionModified();
         stuffAnswers = stuffAnswerListToStuffAnswerResponseDtoList( stuffQuestion.getStuffAnswers() );
 
-        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, locationTag, views, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
+        StuffQuestionResponseDto stuffQuestionResponseDto = new StuffQuestionResponseDto( stuffQuestionId, memberId, name, stuffQuestionTitle, stuffQuestionContent, locationTag, views, countAnswer, stuffQuestionCreated, stuffQuestionModified, stuffAnswers );
 
         return stuffQuestionResponseDto;
     }

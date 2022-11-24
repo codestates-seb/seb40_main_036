@@ -28,15 +28,11 @@ public class ReservationInfo {
     @JoinColumn(name = "reservationId")
     private Reservation reservation;
 
-    //private long reservationInfo;   // 해당 대피소 예약번호?
-
     private String shelterName;
-
-    //private String location;
 
     private String geolocation;
 
-    private int capacity;
+    private int capacity;   // 수용 가능인원
 
-    private int num;    // 예약 인원수
+    private int reservedNum;    // 현재 예약된 인원수
 }

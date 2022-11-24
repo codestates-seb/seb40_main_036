@@ -9,10 +9,12 @@ import java.util.List;
 @Repository
 public interface StuffQuestionRepository extends JpaRepository<StuffQuestion, Long> {
 
+    StuffQuestion findByStuffQuestionId(long stuffQuestionId);
     List<StuffQuestion> findByStuffQuestionTitleContainingOrderByStuffQuestionIdDesc(String word);
 
     List<StuffQuestion> findByNameContainingOrderByStuffQuestionIdDesc(String word);
 
     List<StuffQuestion> findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(String word);
+    List<StuffQuestion> findByLocationTagContainingOrderByStuffQuestionIdDesc(String word);
 
 }

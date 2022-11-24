@@ -21,7 +21,6 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class StuffQuestionService {
 
     private final StuffQuestionRepository stuffQuestionRepository;
@@ -38,6 +37,8 @@ public class StuffQuestionService {
         }
 
         stuffQuestion.setStuffQuestionCreated(LocalDate.now());
+
+        stuffQuestion.setCountAnswer(0);
 
         return stuffQuestionRepository.save(stuffQuestion);
     }
@@ -91,12 +92,16 @@ public class StuffQuestionService {
         return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(word);
     }
 
+    public List<StuffQuestion> searchTagStuffQuestion(String word){
+        return stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(word);
+    }
+
     public Page<StuffQuestion> findStuffQuestions(int page, int size){
             return stuffQuestionRepository.findAll(PageRequest.of(page,size,
                     Sort.by("stuffQuestionId").descending()));
     }
 
-
+    @Transactional
     public void deleteStuffQuestion(long stuffQuestionId){
         if(!stuffQuestionRepository.existsById(stuffQuestionId)){
             throw new BusinessLogicException(ExceptionCode.StuffQuestion_NOT_FOUND);

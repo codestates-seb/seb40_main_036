@@ -1,6 +1,5 @@
 package com.server.shelter.controller;
 
-import com.server.member.entity.Member;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
 import com.server.shelter.dto.ShelterPatchDto;
@@ -9,15 +8,12 @@ import com.server.shelter.entity.Shelter;
 import com.server.shelter.mapper.ShelterMapper;
 import com.server.shelter.service.ShelterService;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 import java.util.List;
@@ -27,17 +23,18 @@ import java.util.List;
 @AllArgsConstructor
 @Validated
 @RequestMapping("/shelter")
+@Transactional
 public class ShelterController {
 
     private final ShelterService shelterService;
     private final ShelterMapper shelterMapper;
 
     @PostMapping
-    public ResponseEntity postShelter(@Valid @RequestBody ShelterPostDto shelterPostDto){
+    public ResponseEntity postShelter(@Valid @RequestBody List<ShelterPostDto> shelterPostDtos){
 
-        Shelter shelter = shelterService.createShelter(shelterMapper.shelterPostDtoToShelter(shelterPostDto));
+        List<Shelter> shelters = shelterService.createShelter(shelterMapper.shelterPostDtosToShelters(shelterPostDtos));
         return new ResponseEntity<>(
-                shelterMapper.shelterToShelterResponseDto(shelter),
+                shelterMapper.sheltersToShelterResponseDtos(shelters),
                 HttpStatus.CREATED);
     }
 

@@ -3,8 +3,10 @@ package com.server.stuffAnswer.service;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
+import com.server.question.entity.Question;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffAnswer.repository.StuffAnswerRepository;
+import com.server.stuffQuestion.entity.StuffQuestion;
 import com.server.stuffQuestion.repository.StuffQuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -36,6 +38,19 @@ public class StuffAnswerService {
         }
 
         stuffAnswer.setStuffAnswerCreated(LocalDate.now());
+
+        /////////////////////////////////////////////////////////////
+        // 답변 개수 갱신
+
+        StuffQuestion stuffQuestion=stuffQuestionRepository.findByStuffQuestionId(stuffAnswer.getStuffQuestionId());
+
+        Long count=stuffQuestion.getCountAnswer();
+        count++;
+        stuffQuestion.setCountAnswer(count);
+
+        stuffQuestionRepository.save(stuffQuestion);
+
+        /////////////////////////////////////////////////////////////
 
         return stuffAnswerRepository.save(stuffAnswer);
     }
@@ -85,6 +100,20 @@ public class StuffAnswerService {
 
     public void deleteStuffAnswer(long stuffAnswerId) {
         StuffAnswer stuffAnswer = findVerifiedStuffAnswer(stuffAnswerId);
+
+        /////////////////////////////////////////////////////////////
+        // 답변 개수 갱신
+
+        StuffQuestion stuffQuestion=stuffQuestionRepository.findByStuffQuestionId(stuffAnswer.getStuffQuestionId());
+
+        Long count=stuffQuestion.getCountAnswer();
+        count--;
+        stuffQuestion.setCountAnswer(count);
+
+        stuffQuestionRepository.save(stuffQuestion);
+
+        /////////////////////////////////////////////////////////////
+
         stuffAnswerRepository.delete(stuffAnswer);
 
     }

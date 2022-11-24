@@ -20,7 +20,6 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
@@ -37,6 +36,8 @@ public class QuestionService {
         }
 
         question.setQuestionCreated(LocalDate.now());
+
+        question.setCountAnswer(0);
 
         return questionRepository.save(question);
     }
@@ -89,11 +90,15 @@ public class QuestionService {
         return questionRepository.findByQuestionContentContainingOrderByQuestionIdDesc(word);
     }
 
+    public List<Question> searchTagQuestion(String word){
+        return questionRepository.findByLocationTagContainingOrderByQuestionIdDesc(word);
+    }
     public Page<Question> findQuestions(int page, int size){
         return questionRepository.findAll(PageRequest.of(page,size,
                 Sort.by("questionId").descending()));
     }
 
+    @Transactional
     public void deleteQuestion(long questionId){
 
         if(!questionRepository.existsById(questionId)){
