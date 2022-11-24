@@ -83,9 +83,6 @@ function ShareList() {
           </Header>
           <SelectBox>
             <CityDown onChange={handleSelect} value={Selected} />
-            <div className="search">
-              <button>검색</button>
-            </div>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -192,6 +189,12 @@ const ShareListTitle = styled.div`
 const Header = styled.div`
   h1 {
     font-size: 27px;
+    ${tablet} {
+      font-size: 24px;
+    }
+    ${mobile} {
+      font-size: 21px;
+    }
   }
 `;
 
@@ -200,15 +203,6 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
-  button {
-    width: 100px;
-    height: 40px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    cursor: pointer;
-  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
@@ -218,6 +212,7 @@ const ContentsContainer = styled.div`
   border-right-width: 0;
 `;
 const ContentsTitle = styled.div`
+  align-items: center;
   display: flex;
   padding: 10px 24px;
   font-size: 18px;
@@ -229,17 +224,23 @@ const ContentsTitle = styled.div`
   border-right-width: 0;
   color: black;
   text-align: center;
+  ${tablet} {
+    font-size: 15px;
+  }
+  ${mobile} {
+    font-size: 13px;
+  }
   .num {
     width: 10%;
   }
   .title {
-    width: 45%;
+    width: 40%;
   }
   .writer {
     width: 20%;
   }
   .date {
-    width: 15%;
+    width: 20%;
   }
   .view {
     width: 10%;
@@ -251,25 +252,39 @@ const Row = styled.div`
   margin: 12px 0 0;
   padding: 0 24px;
   .items {
-    width: 100px;
-    height: 40px;
+    padding: 7px 20px;
+    height: auto;
+    width: auto;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
-    padding: 10px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .writing {
-    width: 100px;
-    height: 40px;
+    padding: 7px 20px;
+    width: auto;
+    height: auto;
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;
 const PaginationBox = styled.div`
+  margin-top: 3px;
   .pagination {
     display: flex;
     justify-content: center;
@@ -290,6 +305,16 @@ const PaginationBox = styled.div`
     border-radius: 3px;
     margin-left: 2px;
     margin-right: 2px;
+    ${tablet} {
+      font-size: 14px;
+      width: 30px;
+      height: 30px;
+    }
+    ${mobile} {
+      font-size: 12px;
+      width: 25px;
+      height: 25px;
+    }
   }
   ul.pagination li a {
     color: black;
@@ -309,13 +334,19 @@ const PaginationBox = styled.div`
 const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
   select {
     cursor: pointer;
     font-size: 16px;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .searchInput {
     font-size: 16px;
@@ -326,6 +357,12 @@ const SearchContainer = styled.div`
     border: 1px solid #919eab;
     border-right: 0px;
     border-left: 0px;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .searchClick {
     width: 60px;
@@ -336,5 +373,11 @@ const SearchContainer = styled.div`
     font-size: 24px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    ${tablet} {
+      font-size: 21px;
+    }
+    ${mobile} {
+      font-size: 18px;
+    }
   }
 `;

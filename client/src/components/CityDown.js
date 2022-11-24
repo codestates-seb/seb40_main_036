@@ -1,6 +1,9 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
 
@@ -167,23 +170,34 @@ export default DropDown;
 const SelectRegionStyle = styled.div`
   display: flex;
   .selectRegion {
-    width: 210px;
-    height: 40px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .selectDistrict {
-    margin-right: 10px;
     margin-left: 10px;
-    width: 150px;
-    height: 40px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;

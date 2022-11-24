@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ReviewListViewerTitle({ title, name, date, tag }) {
   return (
     <Container>
@@ -67,14 +69,27 @@ const ReviewContentsTitle = styled.div`
     display: flex;
   }
   .tag {
+    font-size: 16px;
     padding: 5px 15px;
     align-items: center;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
     margin-right: 5px;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   h1 {
     font-size: 22px;
+    ${tablet} {
+      font-size: 20px;
+    }
+    ${mobile} {
+      font-size: 18px;
+    }
   }
   .userContainer {
     display: flex;
@@ -86,6 +101,12 @@ const ReviewContentsTitle = styled.div`
     margin: 5px;
     img {
       width: 53px;
+      ${tablet} {
+        width: 48px;
+      }
+      ${mobile} {
+        width: 44px;
+      }
     }
   }
   .user {
@@ -96,9 +117,21 @@ const ReviewContentsTitle = styled.div`
   .userName {
     font-size: 18px;
     font-weight: bold;
+    ${tablet} {
+      font-size: 16px;
+    }
+    ${mobile} {
+      font-size: 14px;
+    }
   }
   .date {
     font-size: 16px;
     color: #838383;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;

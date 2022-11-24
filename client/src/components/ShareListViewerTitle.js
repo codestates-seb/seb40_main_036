@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ShareListViewer({ title, name, date, tag }) {
   return (
     <Container>

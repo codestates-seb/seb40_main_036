@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ReviewListContents({ id, num, tag, title, writer, date, view }) {
   return (
     <Container>
@@ -47,7 +49,7 @@ const ContentsList = styled.div`
   }
   .titleBox {
     padding-left: 10px;
-    width: 45%;
+    width: 40%;
     display: flex;
     align-items: center;
     .title:hover {
@@ -65,9 +67,15 @@ const ContentsList = styled.div`
     width: 20%;
   }
   .date {
-    width: 15%;
+    width: 20%;
   }
   .view {
     width: 10%;
+  }
+  ${tablet} {
+    font-size: 14px;
+  }
+  ${mobile} {
+    font-size: 12px;
   }
 `;

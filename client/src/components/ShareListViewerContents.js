@@ -2,6 +2,9 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function ShareLisViewerContents({ id, content, memberId }) {
   const navigate = useNavigate();
   const deleteClick = () => {
@@ -50,7 +53,15 @@ const Container = styled.div`
 `;
 const ShareListContents = styled.div`
   padding: 20px 0 30px 0;
-  font-size: 18px;
+  .contents {
+    font-size: 18px;
+    ${tablet} {
+      font-size: 16px;
+    }
+    ${mobile} {
+      font-size: 14px;
+    }
+  }
 `;
 const DeletEdit = styled.div`
   display: flex;
@@ -64,5 +75,11 @@ const DeletEdit = styled.div`
     color: #838383;
     font-size: 16px;
     border: none;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;
