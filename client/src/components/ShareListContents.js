@@ -54,6 +54,7 @@ const ContentsList = styled.div`
       text-decoration: underline;
     }
     .tag {
+      width: 64px;
       padding: 0 10px;
       border: 1px solid #d2d2d2;
       border-radius: 5px;

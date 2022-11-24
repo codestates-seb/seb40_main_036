@@ -41,7 +41,6 @@ export default EquipmentContents;
 
 const Container = styled.div``;
 const ContentsList = styled.div`
-  width: 350x;
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   transition: box-shadow 0.25s ease-in 0s, transform 0.2s ease-in 0s;
@@ -55,8 +54,12 @@ const ContentsList = styled.div`
 const Header = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px 15px 10px 15px;
+  padding: 20px 15px 0 15px;
   .tag {
+    margin: 0px 0px 2.5px;
+    align-items: center;
+    text-align: center;
+    width: 64px;
     padding: 0 10px;
     align-items: center;
     border: 1px solid #d2d2d2;
@@ -64,8 +67,14 @@ const Header = styled.div`
     margin-right: 5px;
   }
   .title {
-    font-size: 17px;
     font-weight: bold;
+    font-size: 17px;
+    margin: 0px 0px 2.5px;
+    line-height: 1.5;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   a:link {
     color: inherit;

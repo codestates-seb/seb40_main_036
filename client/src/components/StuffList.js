@@ -4,7 +4,11 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
-function Equipment() {
+
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
+function StuffList() {
   const textRef = useRef();
   const [questions, setQuestions] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -55,9 +59,9 @@ function Equipment() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
-    <ShareListContainer>
-      <ShareListContent>
-        <ShareListTitle>
+    <StuffListContainer>
+      <StuffListContent>
+        <StuffListTitle>
           <Header>
             <h1>비품 현황</h1>
           </Header>
@@ -100,7 +104,7 @@ function Equipment() {
               </button>
             </Row>
           </SearchBox>
-        </ShareListTitle>
+        </StuffListTitle>
         <SelectBox>
           <CityDown />
         </SelectBox>
@@ -120,14 +124,14 @@ function Equipment() {
             />
           ))}
         </ContentsContainer>
-      </ShareListContent>
-    </ShareListContainer>
+      </StuffListContent>
+    </StuffListContainer>
   );
 }
 
-export default Equipment;
+export default StuffList;
 
-const ShareListContainer = styled.div`
+const StuffListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -137,13 +141,11 @@ const ShareListContainer = styled.div`
   justify-content: center;
 `;
 
-const ShareListContent = styled.div`
-  display: flex;
-  flex-direction: column;
+const StuffListContent = styled.div`
   width: 100%;
 `;
 
-const ShareListTitle = styled.div`
+const StuffListTitle = styled.div`
   padding: 24px 24px 0;
   border: 2px solid black;
   border-left-width: 0;
@@ -155,6 +157,12 @@ const ShareListTitle = styled.div`
 const Header = styled.div`
   h1 {
     font-size: 27px;
+    ${tablet} {
+      font-size: 24px;
+    }
+    ${mobile} {
+      font-size: 21px;
+    }
   }
 `;
 
@@ -166,23 +174,41 @@ const SearchBox = styled.div`
 `;
 const SearchContainer = styled.div`
   display: flex;
-  justify-content: center;
+  ${tablet} {
+    width: 77%;
+  }
+  ${mobile} {
+    width: 70%;
+  }
   select {
     cursor: pointer;
     font-size: 16px;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .searchInput {
     font-size: 16px;
-    width: 450px;
-    height: 40px;
-    padding: 15px;
+    width: 400px;
+    height: auto;
+    padding: 10px 15px;
     background: #ffffff;
     border: 1px solid #919eab;
     border-right: 0px;
     border-left: 0px;
+    ${tablet} {
+      font-size: 14px;
+      padding: 9px 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
   .searchClick {
     width: 60px;
@@ -193,6 +219,12 @@ const SearchContainer = styled.div`
     font-size: 24px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    ${tablet} {
+      font-size: 21px;
+    }
+    ${mobile} {
+      font-size: 18px;
+    }
   }
 `;
 const Row = styled.div`
@@ -200,13 +232,20 @@ const Row = styled.div`
   justify-content: end;
 
   .writing {
-    width: 100px;
-    height: 40px;
+    padding: 7px 13px;
+    width: auto;
+    height: auto;
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 14px;
+    }
+    ${mobile} {
+      font-size: 12px;
+    }
   }
 `;
 const SelectBox = styled.div`
@@ -217,9 +256,8 @@ const SelectBox = styled.div`
 `;
 
 const ContentsContainer = styled.div`
-  display: grid; /*grid, gird-inline */
-  grid-template-columns: repeat(4, 345px);
-  grid-template-rows: minmax(280px auto);
-  gap: 3px 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 5px;
   justify-content: center;
 `;
