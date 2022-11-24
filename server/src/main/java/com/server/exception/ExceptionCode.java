@@ -11,6 +11,8 @@ public enum ExceptionCode {
     ReservationInfo_NOT_FOUND(404, "ReservationInfo not found"),
     StuffAnswer_NOT_FOUND(404, "StuffAnswer not found"),
     StuffQuestion_NOT_FOUND(404, "StuffQuestion not found"),
+    ShelterQuestion_NOT_FOUND(404, "ShelterQuestion not found"),
+    ShelterAnswer_NOT_FOUND(404, "ShelterAnswer not found"),
 
     MEMBER_EXISTS(409, "MEMBER exists"),
     SHELTER_EXISTS(409, "Shelter exists"),
@@ -19,7 +21,10 @@ public enum ExceptionCode {
     RESERVATION_EXISTS(409, "Reservation exists"),
     RESERVATIONINFO_EXISTS(409, "ReservationInfo exists"),
     STUFFQUESTION_EXISTS(409, "StuffQuestion exists"),
-    STUFFANSWER_EXISTS(409, "StuffAnswer exists");
+    STUFFANSWER_EXISTS(409, "StuffAnswer exists"),
+    SHELTERQUESTION_EXISTS(409, "ShelterQuestion exists"),
+    SHELTERANSWER_EXISTS(409, "ShelterAnswer exists");
+
 
     @Getter
     private int status;
