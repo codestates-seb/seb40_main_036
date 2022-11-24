@@ -76,6 +76,7 @@ function Equipment() {
               <input
                 className="searchInput"
                 placeholder="검색어를 입력해주세요."
+                value={search.content}
                 ref={textRef}
                 type="search"
                 onChange={(e) =>
@@ -128,11 +129,11 @@ export default Equipment;
 
 const ShareListContainer = styled.div`
   width: 100%;
-  max-width: 1254px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 10px;
   justify-content: center;
 `;
 
@@ -217,8 +218,8 @@ const SelectBox = styled.div`
 
 const ContentsContainer = styled.div`
   display: grid; /*grid, gird-inline */
-  grid-template-columns: repeat(3, 398px);
-  grid-template-rows: minmax(300px auto);
-  grid-gap: 5px 5px;
+  grid-template-columns: repeat(4, 345px);
+  grid-template-rows: minmax(280px auto);
+  gap: 3px 3px;
   justify-content: center;
 `;

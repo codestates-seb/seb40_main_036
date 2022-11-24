@@ -46,21 +46,22 @@ const ContentsList = styled.div`
     width: 10%;
   }
   .titleBox {
-    width: 50%;
+    padding-left: 10px;
+    width: 45%;
     display: flex;
     align-items: center;
-  }
-  .title:hover {
-    text-decoration: underline;
-  }
-  .tag {
-    padding: 0 10px;
-    border: 1px solid #d2d2d2;
-    border-radius: 5px;
-    margin-right: 5px;
+    .title:hover {
+      text-decoration: underline;
+    }
+    .tag {
+      padding: 0 10px;
+      border: 1px solid #d2d2d2;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
   }
   .writer {
-    width: 15%;
+    width: 20%;
   }
   .date {
     width: 15%;

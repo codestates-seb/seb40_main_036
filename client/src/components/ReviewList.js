@@ -179,11 +179,11 @@ export default ReviewList;
 
 const ShareListContainer = styled.div`
   width: 100%;
-  max-width: 1254px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 10px;
 `;
 
 const ShareListContent = styled.div`
@@ -238,10 +238,10 @@ const ContentsTitle = styled.div`
     width: 10%;
   }
   .title {
-    width: 50%;
+    width: 45%;
   }
   .writer {
-    width: 15%;
+    width: 20%;
   }
   .date {
     width: 15%;

@@ -46,7 +46,8 @@ const ContentsList = styled.div`
     width: 10%;
   }
   .titleBox {
-    width: 50%;
+    padding-left: 10px;
+    width: 45%;
     display: flex;
     align-items: center;
     .title:hover {
@@ -60,7 +61,7 @@ const ContentsList = styled.div`
     }
   }
   .writer {
-    width: 15%;
+    width: 20%;
   }
   .date {
     width: 15%;

@@ -15,7 +15,7 @@ function EquipmentContents({ id, tag, title, content, writer, date, view }) {
         </Header>
         <Contents>
           <div className="contentsBox">
-            <Link to={`/stuffLook/${id}}`} className="contents">
+            <Link to={`/stuffLook/${id}`} className="contents">
               {content}
             </Link>
           </div>
@@ -45,12 +45,11 @@ const ContentsList = styled.div`
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   transition: box-shadow 0.25s ease-in 0s, transform 0.2s ease-in 0s;
-  margin: 1rem;
-  overflow: hidden;
+  margin: 0.8rem;
   display: flex;
   flex-direction: column;
   :hover {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
   }
 `;
 const Header = styled.div`
@@ -81,6 +80,18 @@ const Contents = styled.div`
   padding: 15px;
   .contentsBox {
     margin-bottom: 10px;
+  }
+  .contents {
+    margin: 0px 0px 1.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    height: 73px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .date {
     font-size: 15px;
