@@ -2,6 +2,7 @@ package com.server.reservationInfo.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.repository.ReservationRepository;
 import com.server.reservationInfo.entity.ReservationInfo;
@@ -32,8 +33,9 @@ public class ReservationInfoService {
 
     public Page<ReservationInfo> findReservationInfos(int page, int size){
         return reservationInfoRepository.findAll(PageRequest.of(page,size,
-                Sort.by("reservationIdInfo").descending()));
+                Sort.by("reservationInfoId").ascending()));
     }
+
 
     public ReservationInfo findVerifiedReservationInfo(long reservationInfoId){
         Optional<ReservationInfo> optionalReservationInfo=
