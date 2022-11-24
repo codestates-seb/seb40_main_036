@@ -34,7 +34,7 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(`/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);

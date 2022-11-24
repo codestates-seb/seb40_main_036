@@ -1,9 +1,59 @@
 import styled from 'styled-components';
 import StuffListContents from './StuffListContents';
-import { useRef } from 'react';
+import CityDown from './CityDown';
+import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
+import axios from 'axios';
 function Equipment() {
   const textRef = useRef();
+  const [questions, setQuestions] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [search, setSearch] = useState({
+    select: 'title',
+    content: '',
+  });
+  const handleSearchButton = () => {
+    if (search.content !== undefined) {
+      axios
+        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(search);
+        });
+    }
+    window.scrollTo(0, 0);
+    setSearch({ select: 'title', content: '' });
+    document.getElementById('search').value = 'title';
+  };
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
+    }
+  };
+  useEffect(() => {
+    const fetchQustion = async () => {
+      try {
+        // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
+        setError(null);
+        setQuestions(null);
+        // loading 상태를 true 로 바꿉니다.
+        setLoading(true);
+        const response = await axios.get(`/stuffQuestion/stuffQuestions`);
+        console.log(response.data);
+        setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
+      } catch (e) {
+        setError(e);
+      }
+      setLoading(false);
+    };
+
+    fetchQustion();
+  }, []);
+  if (loading) return <div>로딩중..</div>;
+  if (error) return <div>에러가 발생했습니다</div>;
+  if (!questions) return <div>질문이 없습니다.</div>;
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -13,7 +63,12 @@ function Equipment() {
           </Header>
           <SearchBox>
             <SearchContainer>
-              <select id="search">
+              <select
+                id="search"
+                onChange={(e) =>
+                  setSearch({ select: e.target.value, content: search.content })
+                }
+              >
                 <option value="title">제목</option>
                 <option value="content">내용</option>
                 <option value="name">이름</option>
@@ -23,8 +78,17 @@ function Equipment() {
                 placeholder="검색어를 입력해주세요."
                 ref={textRef}
                 type="search"
+                onChange={(e) =>
+                  setSearch({ select: search.select, content: e.target.value })
+                }
+                onKeyDown={handleEnter}
               />
-              <button className="searchClick">
+              <button
+                className="searchClick"
+                onClick={() => {
+                  handleSearchButton();
+                }}
+              >
                 <FaSearch />
               </button>
             </SearchContainer>
@@ -36,7 +100,25 @@ function Equipment() {
             </Row>
           </SearchBox>
         </ShareListTitle>
-        <StuffListContents />
+        <SelectBox>
+          <CityDown />
+        </SelectBox>
+        <ContentsContainer>
+          {questions.map((item) => (
+            <StuffListContents
+              key={item.stuffQuestionId}
+              id={item.stuffQuestionId}
+              memberId={item.memberId}
+              title={item.stuffQuestionTitle}
+              content={item.stuffQuestionContent}
+              num={item.stuffQuestionId}
+              writer={item.name}
+              date={item.stuffQuestionCreated}
+              tag={item.locationTag}
+              view={item.views}
+            />
+          ))}
+        </ContentsContainer>
       </ShareListContent>
     </ShareListContainer>
   );
@@ -125,4 +207,18 @@ const Row = styled.div`
     font-size: 16px;
     cursor: pointer;
   }
+`;
+const SelectBox = styled.div`
+  padding: 20px 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+`;
+
+const ContentsContainer = styled.div`
+  display: grid; /*grid, gird-inline */
+  grid-template-columns: repeat(3, 398px);
+  grid-template-rows: minmax(300px auto);
+  grid-gap: 5px 5px;
+  justify-content: center;
 `;

@@ -1,35 +1,36 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
-import CityDown from './CityDown';
-function EquipmentContents() {
+function EquipmentContents({ id, tag, title, content, writer, date, view }) {
   return (
     <Container>
-      <SelectBox>
-        <CityDown />
-      </SelectBox>
       <ContentsList>
         <Header>
           <div className="tagContainer">
-            <div className="tag">구로구</div>
+            <div className="tag">{tag}</div>
           </div>
-          <Link to={`/stuffLook`} className="title">
-            봉천 초등학교 비품 현황입니다.
+          <Link to={`/stuffLook/${id}`} className="title">
+            {title}
           </Link>
         </Header>
         <Contents>
           <div className="contentsBox">
-            <Link to={`/equipmentLook`} className="contents">
-              물 : 20개, 이불: 30개 , 햇반 : 50개
+            <Link to={`/stuffLook/${id}}`} className="contents">
+              {content}
             </Link>
           </div>
-          <div className="date">2022.11.11</div>
+          <div className="dateBox">
+            <div className="date">{date}</div>
+          </div>
         </Contents>
         <User>
-          <div className="userProfile">
-            <img src={Profile} alt="profile" />
+          <div className="userBox">
+            <div className="userProfile">
+              <img src={Profile} alt="profile" />
+            </div>
+            <div className="writer">{writer}</div>
           </div>
-          <div className="writer">봉천 초등학교</div>
+          <div className="view">조회수: {view}</div>
         </User>
       </ContentsList>
     </Container>
@@ -38,26 +39,18 @@ function EquipmentContents() {
 
 export default EquipmentContents;
 
-const Container = styled.div`
-  padding: 20px;
-`;
-const SelectBox = styled.div`
-  display: flex;
-  justify-content: end;
-  align-items: center;
-`;
+const Container = styled.div``;
 const ContentsList = styled.div`
-  width: 20rem;
-  background: var(--bg-element1);
+  width: 350x;
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
-  transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+  transition: box-shadow 0.25s ease-in 0s, transform 0.2s ease-in 0s;
   margin: 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   :hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
   }
 `;
 const Header = styled.div`
@@ -104,13 +97,19 @@ const Contents = styled.div`
 `;
 const User = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 20px;
   border-top: 1px solid #d2d2d2;
-  .userProfile {
-    padding-right: 5px;
-    img {
-      width: 28px;
+
+  .userBox {
+    display: flex;
+    align-items: center;
+    .userProfile {
+      padding-right: 5px;
+      img {
+        width: 28px;
+      }
     }
   }
 `;

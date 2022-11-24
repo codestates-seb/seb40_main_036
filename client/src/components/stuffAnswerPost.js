@@ -18,7 +18,7 @@ function stuffAnswerPost() {
       sessionStorage.getItem('memberId')
     ) {
       const data = {
-        stuffAnswerConten: textRef.current.value,
+        stuffAnswerContent: textRef.current.value,
         stuffQuestionId: `${QuestionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,

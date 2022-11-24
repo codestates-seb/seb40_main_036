@@ -15,7 +15,7 @@ module.exports = function (app) {
       '/shelterAnswer',
     ],
     createProxyMiddleware({
-      target: 'https://08e4-14-39-204-244.jp.ngrok.io/',
+      target: 'https://548c-14-39-204-244.jp.ngrok.io/',
       changeOrigin: true,
     })
   );

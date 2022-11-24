@@ -2,29 +2,29 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
 
-function EquipmentViewrTitle() {
+function EquipmentViewrTitle({ title, name, date, tag }) {
   return (
     <Container>
       <EquipmentContentsHeader>
         <div className="linkBox">
-          <Link to={'/equipment'} className="listLink">
+          <Link to={'/stuffList'} className="listLink">
             비품현황
           </Link>
         </div>
         <EquipmentContentsTitle>
           <div className="header">
             <div className="tagContainer">
-              <div className="tag">구로구</div>
+              {tag !== '' ? <div className="tag">{tag}</div> : null}
             </div>
-            <h1>봉천 초등학교 비품 현황입니다.</h1>
+            <h1>{title}</h1>
           </div>
           <div className="userContainer">
             <div className="userProfile">
               <img src={Profile} alt="profile" />
             </div>
             <div className="user">
-              <div className="userName">봉천초등학교</div>
-              <div className="date">2022.11.11</div>
+              <div className="userName">{name}</div>
+              <div className="date">{date}</div>
             </div>
           </div>
         </EquipmentContentsTitle>

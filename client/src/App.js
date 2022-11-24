@@ -41,7 +41,7 @@ function App() {
           <Route path="/stuffList" element={<StuffList />} />
           <Route path="/share/:QuestionId" element={<ShareListLookup />} />
           <Route path="/Review/:QuestionId" element={<ReviewListLookup />} />
-          <Route path="/stuffLook" element={<StuffListLookup />} />
+          <Route path="/stuffLook/:QuestionId" element={<StuffListLookup />} />
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>

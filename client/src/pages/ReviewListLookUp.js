@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ReviewAnswerPost from '../components/ReviewAnswerPost';
-import ReviewAnswerViewr from '../components/ReviewAnswerViewr';
+import ReviewAnswerViewer from '../components/ReviewAnswerViewer';
 import ReviewListViewerTitle from '../components/ReviewListViewerTitle';
 import ReviewListViewerContents from '../components/ReviewListViewerContents';
 function ReviewListLookup() {
@@ -60,7 +60,7 @@ function ReviewListLookup() {
           </>
         )}
         {answer.map((item) => (
-          <ReviewAnswerViewr
+          <ReviewAnswerViewer
             key={item.shelterAnswerId}
             questionId={item.shelterQuestionId}
             id={item.shelterAnswerId}
