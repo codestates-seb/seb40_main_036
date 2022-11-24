@@ -7,7 +7,7 @@ function ShareListContents({ id, num, tag, title, writer, date, view }) {
       <ContentsList>
         <div className="num">{num}</div>
         <div className="titleBox">
-          <div className="tag">{tag}</div>
+          {tag !== '' ? <div className="tag">{tag}</div> : null}
           <Link to={`/share/${id}`} className="title">
             {title}
           </Link>

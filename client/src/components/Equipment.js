@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import EquipmentContents from './EquipmentContents';
 import CityDown from './CityDown';
-
+import { useRef } from 'react';
+import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 function Equipment() {
+  const textRef = useRef();
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -13,11 +15,30 @@ function Equipment() {
           <SelectBox>
             <CityDown />
             <Row>
-              <button className="writing">글쓰기</button>
+              <button className="writing">
+                <FaPencilAlt />
+                글쓰기
+              </button>
             </Row>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
+          <SearchContainer>
+            <select id="search">
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+              <option value="name">이름</option>
+            </select>
+            <input
+              className="searchInput"
+              placeholder="검색어를 입력해주세요."
+              ref={textRef}
+              type="search"
+            />
+            <button className="searchClick">
+              <FaSearch />
+            </button>
+          </SearchContainer>
           <EquipmentContents />
         </ContentsContainer>
       </ShareListContent>
@@ -97,3 +118,35 @@ const Row = styled.div`
   }
 `;
 const ContentsContainer = styled.div``;
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  select {
+    cursor: pointer;
+    font-size: 16px;
+    width: 110px;
+    border-radius: 5px 0 0 5px;
+    border-color: #919eab;
+  }
+  .searchInput {
+    font-size: 16px;
+    width: 450px;
+    height: 40px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #919eab;
+    border-right: 0px;
+    border-left: 0px;
+  }
+  .searchClick {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #919eab;
+    font-size: 24px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+`;
