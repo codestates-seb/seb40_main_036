@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import EquipmentContents from './EquipmentContents';
-import CityDown from './CityDown';
+import StuffListContents from './StuffListContents';
 import { useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 function Equipment() {
@@ -12,35 +11,32 @@ function Equipment() {
           <Header>
             <h1>비품 현황</h1>
           </Header>
-          <SelectBox>
-            <CityDown />
+          <SearchBox>
+            <SearchContainer>
+              <select id="search">
+                <option value="title">제목</option>
+                <option value="content">내용</option>
+                <option value="name">이름</option>
+              </select>
+              <input
+                className="searchInput"
+                placeholder="검색어를 입력해주세요."
+                ref={textRef}
+                type="search"
+              />
+              <button className="searchClick">
+                <FaSearch />
+              </button>
+            </SearchContainer>
             <Row>
               <button className="writing">
                 <FaPencilAlt />
                 글쓰기
               </button>
             </Row>
-          </SelectBox>
+          </SearchBox>
         </ShareListTitle>
-        <ContentsContainer>
-          <SearchContainer>
-            <select id="search">
-              <option value="title">제목</option>
-              <option value="content">내용</option>
-              <option value="name">이름</option>
-            </select>
-            <input
-              className="searchInput"
-              placeholder="검색어를 입력해주세요."
-              ref={textRef}
-              type="search"
-            />
-            <button className="searchClick">
-              <FaSearch />
-            </button>
-          </SearchContainer>
-          <EquipmentContents />
-        </ContentsContainer>
+        <StuffListContents />
       </ShareListContent>
     </ShareListContainer>
   );
@@ -79,49 +75,15 @@ const Header = styled.div`
   }
 `;
 
-const SelectBox = styled.div`
+const SearchBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 24px 0;
-  .selectRegion {
-    width: 210px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .selectDistrict {
-    width: 150px;
-    height: 40px;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-  }
 `;
-const Row = styled.div`
-  display: flex;
-  justify-content: end;
-
-  .writing {
-    width: 100px;
-    height: 40px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    cursor: pointer;
-  }
-`;
-const ContentsContainer = styled.div``;
 const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px;
   select {
     cursor: pointer;
     font-size: 16px;
@@ -147,6 +109,20 @@ const SearchContainer = styled.div`
     border: 1px solid #919eab;
     font-size: 24px;
     border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+`;
+const Row = styled.div`
+  display: flex;
+  justify-content: end;
+
+  .writing {
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-color: #d2d2d2;
+    font-size: 16px;
     cursor: pointer;
   }
 `;

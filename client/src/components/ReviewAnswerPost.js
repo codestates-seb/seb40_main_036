@@ -14,14 +14,14 @@ function ReviewAnswerPost() {
   const handleOnClick = () => {
     if (ReviewAnswerPost.body !== '' && sessionStorage.getItem('memberId')) {
       const data = {
-        stuffAnswerContent: textRef.current.value,
-        stuffQuestionId: `${QuestionId}`,
+        shelterQuestionContent: textRef.current.value,
+        shelterQuestionId: `${QuestionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .post(`/stuffAnswer`, data)
+        .post(`/shelterQuestion`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     }

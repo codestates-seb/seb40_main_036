@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
+import CityDown from './CityDown';
 function EquipmentContents() {
   return (
     <Container>
+      <SelectBox>
+        <CityDown />
+      </SelectBox>
       <ContentsList>
         <Header>
           <div className="tagContainer">
             <div className="tag">구로구</div>
           </div>
-          <Link to={`/equipmentLook`} className="title">
+          <Link to={`/stuffLook`} className="title">
             봉천 초등학교 비품 현황입니다.
           </Link>
         </Header>
@@ -37,7 +41,11 @@ export default EquipmentContents;
 const Container = styled.div`
   padding: 20px;
 `;
-
+const SelectBox = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+`;
 const ContentsList = styled.div`
   width: 20rem;
   background: var(--bg-element1);

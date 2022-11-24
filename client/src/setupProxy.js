@@ -11,6 +11,8 @@ module.exports = function (app) {
       '/answer',
       '/stuffQuestion',
       '/stuffAnswer',
+      '/shelterQuestion',
+      '/shelterAnswer',
     ],
     createProxyMiddleware({
       target:

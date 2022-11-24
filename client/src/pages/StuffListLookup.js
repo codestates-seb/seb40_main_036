@@ -1,18 +1,18 @@
-import EquipmentViewrTitle from '../components/EquipmentViewrTitle';
-import EquipmentViewrContents from '../components/EquipmentViewrContents';
+import StuffListViewrTitle from '../components/StuffListViewrTitle';
+import StuffListViewrContents from '../components/StuffListViewrContents';
 import styled from 'styled-components';
-function EquipmentLookup() {
+function StuffListLookup() {
   return (
     <Contents>
       <Container>
-        <EquipmentViewrTitle />
-        <EquipmentViewrContents />
+        <StuffListViewrTitle />
+        <StuffListViewrContents />
       </Container>
     </Contents>
   );
 }
 
-export default EquipmentLookup;
+export default StuffListLookup;
 const Contents = styled.div`
   margin-top: 60px;
   display: flex;

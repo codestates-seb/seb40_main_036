@@ -12,7 +12,11 @@ function AnswerPost() {
   }, []);
 
   const handleOnClick = () => {
-    if (AnswerPost.body !== '' && sessionStorage.getItem('memberId')) {
+    if (
+      AnswerPost.body !== '' &&
+      textRef !== '' &&
+      sessionStorage.getItem('memberId')
+    ) {
       const data = {
         answerContent: textRef.current.value,
         questionId: `${QuestionId}`,

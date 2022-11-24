@@ -45,7 +45,11 @@ function ShareList() {
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
-
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
+    }
+  };
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -155,6 +159,7 @@ function ShareList() {
             onChange={(e) =>
               setSearch({ select: search.select, content: e.target.value })
             }
+            onKeyDown={handleEnter}
           />
           <button
             className="searchClick"

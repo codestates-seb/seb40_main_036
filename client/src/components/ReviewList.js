@@ -45,7 +45,11 @@ function ReviewList() {
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
-
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
+    }
+  };
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -54,7 +58,7 @@ function ReviewList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/stuffQuestion/stuffQuestions`);
+        const response = await axios.get(`/shelterQuestion/shelterQuestions`);
         console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
@@ -155,6 +159,7 @@ function ReviewList() {
             onChange={(e) =>
               setSearch({ select: search.select, content: e.target.value })
             }
+            onKeyDown={handleEnter}
           />
           <button
             className="searchClick"
