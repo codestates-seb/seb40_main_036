@@ -86,7 +86,7 @@ public class ReservationService {
         ReservationInfo reservationInfo=reservationInfoRepository.findByshelterName(shelter.getShelterName());  
 
         // reservationInfo에 저장된 쉘터 아이디에 부합한 예약 정보들 추출 
-        List<Reservation> reservations = reservationRepository.findByShelterId(reservation.getReservationId());
+        List<Reservation> reservations = reservationRepository.findByShelterId(reservation.getShelterId());
 
         int sum=0;
         for(Reservation reservationList:reservations){
