@@ -39,6 +39,8 @@ public class StuffQuestion {
 
     private long views; // 조회수
 
+    private long countAnswer; // 답변 개수
+
     private LocalDate stuffQuestionCreated;
 
     private LocalDate stuffQuestionModified;

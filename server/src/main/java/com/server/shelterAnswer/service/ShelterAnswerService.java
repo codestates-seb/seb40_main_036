@@ -3,8 +3,10 @@ package com.server.shelterAnswer.service;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
+import com.server.question.entity.Question;
 import com.server.shelterAnswer.entity.ShelterAnswer;
 import com.server.shelterAnswer.repository.ShelterAnswerRepository;
+import com.server.shelterQuestion.entity.ShelterQuestion;
 import com.server.shelterQuestion.repository.ShelterQuestionRepository;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffAnswer.repository.StuffAnswerRepository;
@@ -38,6 +40,19 @@ public class ShelterAnswerService {
         }
 
         shelterAnswer.setShelterAnswerCreated(LocalDate.now());
+
+        /////////////////////////////////////////////////////////////
+        // 답변 개수 갱신
+
+        ShelterQuestion shelterQuestion=shelterQuestionRepository.findByShelterQuestionId(shelterAnswer.getShelterQuestionId());
+
+        Long count=shelterQuestion.getCountAnswer();
+        count++;
+        shelterQuestion.setCountAnswer(count);
+
+        shelterQuestionRepository.save(shelterQuestion);
+
+        /////////////////////////////////////////////////////////////
 
         return shelterAnswerRepository.save(shelterAnswer);
     }

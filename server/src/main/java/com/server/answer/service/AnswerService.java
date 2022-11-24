@@ -5,6 +5,7 @@ import com.server.answer.repository.AnswerRepository;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.repository.MemberRepository;
+import com.server.question.entity.Question;
 import com.server.question.repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -36,6 +37,19 @@ public class AnswerService {
         }
 
         answer.setAnswerCreated(LocalDate.now());
+
+        /////////////////////////////////////////////////////////////
+        // 답변 개수 갱신
+
+        Question question=questionRepository.findByQuestionId(answer.getQuestionId());
+
+        Long count=question.getCountAnswer();
+        count++;
+        question.setCountAnswer(count);
+
+        questionRepository.save(question);
+
+        /////////////////////////////////////////////////////////////
 
         return answerRepository.save(answer);
 
@@ -83,6 +97,20 @@ public class AnswerService {
 
     public void deleteAnswer(long answerId){
         Answer answer= findVerifiedAnswer(answerId);
+
+        /////////////////////////////////////////////////////////////
+        // 답변 개수 갱신
+
+        Question question=questionRepository.findByQuestionId(answer.getQuestionId());
+
+        Long count=question.getCountAnswer();
+        count--;
+        question.setCountAnswer(count);
+
+        questionRepository.save(question);
+
+        /////////////////////////////////////////////////////////////
+
         answerRepository.delete(answer);
 
     }

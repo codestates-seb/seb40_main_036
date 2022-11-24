@@ -10,10 +10,12 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
+    Question findByQuestionId(long questionId);
     List<Question> findByQuestionTitleContainingOrderByQuestionIdDesc(String word);
 
     List<Question> findByNameContainingOrderByQuestionIdDesc(String word);
 
     List<Question> findByQuestionContentContainingOrderByQuestionIdDesc(String word);
+    List<Question> findByLocationTagContainingOrderByQuestionIdDesc(String word);
 
 }

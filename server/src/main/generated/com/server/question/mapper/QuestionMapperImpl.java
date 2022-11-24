@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-24T13:32:53+0900",
-    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+    date = "2022-11-24T17:33:51+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class QuestionMapperImpl implements QuestionMapper {
@@ -65,7 +65,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         String questionTitle = null;
         String questionContent = null;
         String locationTag = null;
-        String views = null;
+        long views = 0L;
+        long countAnswer = 0L;
         LocalDate questionCreated = null;
         LocalDate questionModified = null;
         List<AnswerResponseDto> answers = null;
@@ -76,12 +77,13 @@ public class QuestionMapperImpl implements QuestionMapper {
         questionTitle = question.getQuestionTitle();
         questionContent = question.getQuestionContent();
         locationTag = question.getLocationTag();
-        views = String.valueOf( question.getViews() );
+        views = question.getViews();
+        countAnswer = question.getCountAnswer();
         questionCreated = question.getQuestionCreated();
         questionModified = question.getQuestionModified();
         answers = answerListToAnswerResponseDtoList( question.getAnswers() );
 
-        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, locationTag, views, questionCreated, questionModified, answers );
+        QuestionResponseDto questionResponseDto = new QuestionResponseDto( questionId, memberId, name, questionTitle, questionContent, locationTag, views, countAnswer, questionCreated, questionModified, answers );
 
         return questionResponseDto;
     }

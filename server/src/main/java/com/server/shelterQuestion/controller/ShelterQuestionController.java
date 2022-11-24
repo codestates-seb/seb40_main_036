@@ -92,6 +92,13 @@ public class ShelterQuestionController {
         return new ResponseEntity<>(shelterQuestionMapper.shelterQuestionsToShelterQuestionResponseDtos(shelterQuestionList),HttpStatus.OK);
     }
 
+    @GetMapping("/search/tag/{word}")
+    public ResponseEntity searchTagShelterQuestion(@PathVariable("word") String word){
+        List<ShelterQuestion> shelterQuestionList=shelterQuestionService.searchTagShelterQuestion(word);
+
+        return new ResponseEntity<>(shelterQuestionMapper.shelterQuestionsToShelterQuestionResponseDtos(shelterQuestionList),HttpStatus.OK);
+    }
+
     @GetMapping("/shelterQuestions")
     public ResponseEntity getAllShelterQuestions(){
         List<ShelterQuestion> shelterQuestionList=shelterQuestionRepository.findAll(Sort.by(Sort.Direction.DESC, "shelterQuestionId"));  // 바로 repository에서 데이터 가져옴

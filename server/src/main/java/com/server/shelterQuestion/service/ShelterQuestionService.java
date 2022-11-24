@@ -36,6 +36,8 @@ public class ShelterQuestionService {
 
         shelterQuestion.setShelterQuestionCreated(LocalDate.now());
 
+        shelterQuestion.setCountAnswer(0);
+
         return shelterQuestionRepository.save(shelterQuestion);
     }
 
@@ -87,6 +89,10 @@ public class ShelterQuestionService {
 
     public List<ShelterQuestion> searchContentShelterQuestion(String word){
         return shelterQuestionRepository.findByShelterQuestionContentContainingOrderByShelterQuestionIdDesc(word);
+    }
+
+    public List<ShelterQuestion> searchTagShelterQuestion(String word){
+        return shelterQuestionRepository.findByLocationTagContainingOrderByShelterQuestionIdDesc(word);
     }
 
     public Page<ShelterQuestion> findShelterQuestions(int page, int size){

@@ -38,6 +38,8 @@ public class StuffQuestionService {
 
         stuffQuestion.setStuffQuestionCreated(LocalDate.now());
 
+        stuffQuestion.setCountAnswer(0);
+
         return stuffQuestionRepository.save(stuffQuestion);
     }
 
@@ -88,6 +90,10 @@ public class StuffQuestionService {
 
     public List<StuffQuestion> searchContentStuffQuestion(String word){
         return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(word);
+    }
+
+    public List<StuffQuestion> searchTagStuffQuestion(String word){
+        return stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(word);
     }
 
     public Page<StuffQuestion> findStuffQuestions(int page, int size){

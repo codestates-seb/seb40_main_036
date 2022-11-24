@@ -9,10 +9,12 @@ import java.util.List;
 @Repository
 public interface ShelterQuestionRepository extends JpaRepository<ShelterQuestion, Long> {
 
+    ShelterQuestion findByShelterQuestionId(long shelterQuestionId);
     List<ShelterQuestion> findByShelterQuestionTitleContainingOrderByShelterQuestionIdDesc(String word);
 
     List<ShelterQuestion> findByNameContainingOrderByShelterQuestionIdDesc(String word);
 
     List<ShelterQuestion> findByShelterQuestionContentContainingOrderByShelterQuestionIdDesc(String word);
+    List<ShelterQuestion> findByLocationTagContainingOrderByShelterQuestionIdDesc(String word);
 
 }

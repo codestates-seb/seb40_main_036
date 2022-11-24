@@ -90,12 +90,20 @@ public class QuestionController {
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
 
+    @GetMapping("/search/tag/{word}")
+    public ResponseEntity searchTagQuestion(@PathVariable("word") String word){
+        List<Question> questionList=questionService.searchTagQuestion(word);
+
+        return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
+    }
     @GetMapping("/questions")
     public ResponseEntity getAllQuestions(){
         List<Question> questionList=questionRepository.findAll(Sort.by(Sort.Direction.DESC, "questionId"));  // 바로 repository에서 데이터 가져옴
 
         return new ResponseEntity<>(questionMapper.questionsToQuestionResponseDtos(questionList),HttpStatus.OK);
     }
+
+
 
     @GetMapping
     public ResponseEntity getQuestions(@Positive @RequestParam int page,

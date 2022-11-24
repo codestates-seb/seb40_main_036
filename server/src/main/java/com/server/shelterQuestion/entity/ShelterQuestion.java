@@ -39,6 +39,8 @@ public class ShelterQuestion {
 
     private long views; // 조회수
 
+    private long countAnswer;
+
     private LocalDate shelterQuestionCreated;
 
     private LocalDate shelterQuestionModified;
