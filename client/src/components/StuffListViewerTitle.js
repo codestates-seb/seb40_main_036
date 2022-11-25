@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function EquipmentViewrTitle({ title, name, date, tag }) {
   return (
     <Container>
@@ -56,6 +58,12 @@ const EquipmentContentsHeader = styled.div`
   }
   .listLink {
     color: #008505;
+    ${tablet} {
+      font-size: 0.8rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+    }
   }
 `;
 const EquipmentContentsTitle = styled.div`
@@ -67,14 +75,27 @@ const EquipmentContentsTitle = styled.div`
     display: flex;
   }
   .tag {
-    padding: 5px 15px;
+    padding: 4px 15px;
     align-items: center;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
     margin-right: 5px;
+    ${tablet} {
+      font-size: 0.8rem;
+      padding: 3px 15px;
+    }
+    ${mobile} {
+      font-size: 0.6rem;
+    }
   }
   h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
+    ${tablet} {
+      font-size: 1.2rem;
+    }
+    ${mobile} {
+      font-size: 0.9rem;
+    }
   }
   .userContainer {
     display: flex;
@@ -85,7 +106,13 @@ const EquipmentContentsTitle = styled.div`
   .userProfile {
     margin: 5px;
     img {
-      width: 53px;
+      width: 3.3rem;
+      ${tablet} {
+        width: 2.7rem;
+      }
+      ${mobile} {
+        width: 2rem;
+      }
     }
   }
   .user {
@@ -94,11 +121,23 @@ const EquipmentContentsTitle = styled.div`
     flex-direction: column;
   }
   .userName {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
+    ${tablet} {
+      font-size: 1.05rem;
+    }
+    ${mobile} {
+      font-size: 0.9rem;
+    }
   }
   .date {
-    font-size: 16px;
+    font-size: 1rem;
     color: #838383;
+    ${tablet} {
+      font-size: 0.8rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+    }
   }
 `;

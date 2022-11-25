@@ -66,7 +66,7 @@ function StuffList() {
             <h1>비품 현황</h1>
           </Header>
           <SearchBox>
-            <SearchContainer>
+            <div className="searchContainer">
               <select
                 id="search"
                 onChange={(e) =>
@@ -96,13 +96,13 @@ function StuffList() {
               >
                 <FaSearch />
               </button>
-            </SearchContainer>
-            <Row>
-              <button className="writing">
+            </div>
+            <div className="row">
+              <button className="writingBox">
                 <FaPencilAlt />
-                글쓰기
+                <div className="writing">글쓰기</div>
               </button>
-            </Row>
+            </div>
           </SearchBox>
         </StuffListTitle>
         <SelectBox>
@@ -146,22 +146,26 @@ const StuffListContent = styled.div`
 `;
 
 const StuffListTitle = styled.div`
-  padding: 24px 24px 0;
+  padding: 1.5rem 1.5rem 0;
   border: 2px solid black;
   border-left-width: 0;
   border-top-width: 0;
   border-bottom-width: 2px;
   border-right-width: 0;
+
+  ${mobile} {
+    padding: 1.2rem 1.2rem 0;
+  }
 `;
 
 const Header = styled.div`
   h1 {
-    font-size: 27px;
+    font-size: 1.68rem;
     ${tablet} {
-      font-size: 24px;
+      font-size: 1.58rem;
     }
     ${mobile} {
-      font-size: 21px;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -171,83 +175,91 @@ const SearchBox = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 24px 0;
-`;
-const SearchContainer = styled.div`
-  display: flex;
-  ${tablet} {
-    width: 77%;
-  }
-  ${mobile} {
-    width: 70%;
-  }
-  select {
-    cursor: pointer;
-    font-size: 16px;
-    width: 110px;
-    border-radius: 5px 0 0 5px;
-    border-color: #919eab;
-    ${tablet} {
-      font-size: 14px;
-    }
-    ${mobile} {
-      font-size: 12px;
-    }
-  }
-  .searchInput {
-    font-size: 16px;
-    width: 400px;
-    height: auto;
-    padding: 10px 15px;
-    background: #ffffff;
-    border: 1px solid #919eab;
-    border-right: 0px;
-    border-left: 0px;
-    ${tablet} {
-      font-size: 14px;
-      padding: 9px 14px;
-    }
-    ${mobile} {
-      font-size: 12px;
-    }
-  }
-  .searchClick {
-    width: 60px;
+  .searchContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #919eab;
-    font-size: 24px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    ${tablet} {
-      font-size: 21px;
+    width: 70%;
+    select {
+      cursor: pointer;
+      font-size: 1rem;
+      width: 110px;
+      border-radius: 5px 0 0 5px;
+      border-color: #919eab;
+      ${tablet} {
+        font-size: 0.9rem;
+      }
+      ${mobile} {
+        font-size: 0.7rem;
+      }
     }
-    ${mobile} {
-      font-size: 18px;
+    .searchInput {
+      font-size: 1rem;
+      width: 25rem;
+      height: 2.5rem;
+      padding: 10px 15px;
+      background: #ffffff;
+      border: 1px solid #919eab;
+      border-right: 0px;
+      border-left: 0px;
+      ${tablet} {
+        font-size: 0.9rem;
+        height: 2.3rem;
+      }
+      ${mobile} {
+        font-size: 0.7rem;
+        height: 2.1rem;
+      }
+    }
+    .searchClick {
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #919eab;
+      font-size: 1.5rem;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      ${tablet} {
+        font-size: 1.2rem;
+        height: 2.3rem;
+      }
+      ${mobile} {
+        font-size: 1rem;
+        height: 2.1rem;
+      }
+    }
+  }
+  .row {
+    .writingBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px 13px;
+      width: 6.25rem;
+      height: 2.5rem;
+      background-color: #ffffff;
+      border-radius: 5px;
+      border-color: #d2d2d2;
+      font-size: 1rem;
+      cursor: pointer;
+      ${tablet} {
+        font-size: 0.9rem;
+        width: 5.4rem;
+        height: 2.3rem;
+      }
+      ${mobile} {
+        font-size: 1rem;
+        width: 2.8rem;
+        height: 2.1rem;
+      }
+    }
+    .writing {
+      ${mobile} {
+        display: none;
+      }
     }
   }
 `;
-const Row = styled.div`
-  display: flex;
-  justify-content: end;
 
-  .writing {
-    padding: 7px 13px;
-    width: auto;
-    height: auto;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    cursor: pointer;
-    ${tablet} {
-      font-size: 14px;
-    }
-    ${mobile} {
-      font-size: 12px;
-    }
-  }
-`;
 const SelectBox = styled.div`
   padding: 20px 0;
   display: flex;
