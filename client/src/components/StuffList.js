@@ -127,8 +127,8 @@ function StuffList() {
         <SelectBox>
           <CityDown
             onChange={(e) => {
-              handleDrop(e);
               handleTagSearchButton(e);
+              handleDrop(e);
             }}
             value={drop}
           />
