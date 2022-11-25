@@ -19,11 +19,12 @@ const SideNav = (props) => {
       .then(() => {
         props.setopen(false);
         props.setopen2(true);
+        props.setmessage('예약이 완료되었습니다.');
       })
       .catch(() => {
         props.setopen(false);
         props.setopen2(true);
-        props.setmessage(`오류가 발생하였습니다.새로고침해주세요.`);
+        props.setmessage('오류가 발생하였습니다.새로고침해주세요.');
       });
   };
   return (
