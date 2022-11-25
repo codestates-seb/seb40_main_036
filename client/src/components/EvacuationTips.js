@@ -62,12 +62,12 @@ const TipsTitle = styled.div`
 
 const Header = styled.div`
   h1 {
-    font-size: 27px;
+    font-size: 1.68rem;
     ${tablet} {
-      font-size: 24px;
+      font-size: 1.55rem;
     }
     ${mobile} {
-      font-size: 21px;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -79,21 +79,25 @@ const SelectBox = styled.div`
   margin: 0 0 12px;
 
   select {
-    width: auto;
-    height: auto;
+    width: 130px;
+    height: 45px;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 20px;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    padding: 10px 13px;
     cursor: pointer;
     :focus {
       outline: none;
     }
     ${tablet} {
-      font-size: 18px;
+      font-size: 1.12rem;
+      width: 120px;
+      height: 40px;
     }
     ${mobile} {
-      font-size: 16px;
+      font-size: 0.9rem;
+      width: 100px;
+      height: 37px;
     }
   }
 `;
