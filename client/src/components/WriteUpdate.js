@@ -1,6 +1,38 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Editor from './Editor';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+
 const WriteUpdate = () => {
+  const [title, setTitle] = useState('');
+  const [contents, setContents] = useState('');
+
+  const { questionId } = useParams();
+
+  const onChangeTitle = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const onChangeContents = (el) => {
+    setContents(el);
+  };
+
+  useEffect(() => {
+    const getBoard = async () => {
+      const { data } = await axios.get(`/question/${questionId}`);
+      return data;
+    };
+    getBoard().then((result) => {
+      setTitle(result.questionTitle);
+      setContents(result.questionContent);
+    });
+  }, []);
+
+  // const canSubmit = useCallback(() => {
+  //   return contents !== '' && title !== '';
+  // }, [title, contents]);
+
   return (
     <WriteUpdateStyle>
       <form>
@@ -9,12 +41,18 @@ const WriteUpdate = () => {
             제목
           </label>
           <div className="titleInputDiv">
-            <input className="titleInput" type="text" id="titleWrite" />
+            <input
+              className="titleInput"
+              type="text"
+              id="titleWrite"
+              value={title || ''}
+              onChange={onChangeTitle}
+            />
           </div>
         </div>
         <div>
           <div className="content">내용</div>
-          <Editor />
+          <Editor onchange={onChangeContents} value={contents} />
         </div>
       </form>
       <div className="reCancelBox">

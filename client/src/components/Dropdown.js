@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-const DropDown = () => {
+const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
   const state = useRef();
   const onChangeSelect = (e) => {
@@ -149,7 +149,13 @@ const DropDown = () => {
         <option value="경상북도">경상북도</option>
         <option value="경상남도">경상남도</option>
       </select>
-      <select className="selectDistrict" id="good" ref={state}>
+      <select
+        className="selectDistrict"
+        id="good"
+        ref={state}
+        onChange={onChange}
+        value={value}
+      >
         <option>시/군/구 선택</option>
       </select>
     </SelectRegionStyle>

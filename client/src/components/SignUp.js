@@ -25,8 +25,8 @@ const SignUP = () => {
     const currentName = e.target.value;
     setInputName(currentName);
 
-    if (currentName.length < 2 || currentName.length > 5) {
-      setNameMessage('닉네임은 2글자 이상 5글자 이하로 입력해주세요!');
+    if (currentName.length < 2 || currentName.length > 8) {
+      setNameMessage('닉네임은 2글자 이상 8글자 이하로 입력해주세요!');
       setIsName(false);
     } else {
       setNameMessage('사용가능한 닉네임 입니다.');

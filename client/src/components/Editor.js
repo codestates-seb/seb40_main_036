@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useQuill } from 'react-quilljs';
+import { useMemo } from 'react';
+import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import styled from 'styled-components';
 
 // eslint-disable-next-line react/display-name
-const Editor = ({ onChange, contents }) => {
+const Editor = ({ onChange, value }) => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -33,32 +33,15 @@ const Editor = ({ onChange, contents }) => {
     'background',
   ];
 
-  // eslint-disable-next-line no-unused-vars
-  const [body, setBody] = useState('');
-  const onChangeBody = (e) => {
-    setBody(e.target.value);
-  };
-
-  const { quill, quillRef } = useQuill({ modules, formats, onChangeBody });
-
-  // eslint-disable-next-line no-unused-vars
-
-  useEffect(() => {
-    if (quill) {
-      quill.on('text-change', () => {
-        // const text = quill.getText();
-        // console.log(text);
-        console.log(quill.root.innerHTML);
-      });
-    }
-  }, [quill]);
-
   return (
     <EditorStyle>
-      <div className="editor">
-        <input ref={quillRef} onChange={onChange} />
-        <div>{contents}</div>
-      </div>
+      <ReactQuill
+        className="editor"
+        modules={modules}
+        formats={formats}
+        onChange={onChange}
+        value={value}
+      />
     </EditorStyle>
   );
 };
