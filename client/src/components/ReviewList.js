@@ -193,12 +193,12 @@ const ShareListTitle = styled.div`
 
 const Header = styled.div`
   h1 {
-    font-size: 27px;
+    font-size: 1.68rem;
     ${tablet} {
-      font-size: 24px;
+      font-size: 1.55rem;
     }
     ${mobile} {
-      font-size: 21px;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -217,9 +217,10 @@ const ContentsContainer = styled.div`
   border-right-width: 0;
 `;
 const ContentsTitle = styled.div`
+  align-items: center;
   display: flex;
   padding: 10px 24px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   border: 1px solid black;
   border-left-width: 0;
@@ -229,10 +230,10 @@ const ContentsTitle = styled.div`
   color: black;
   text-align: center;
   ${tablet} {
-    font-size: 15px;
+    font-size: 1rem;
   }
   ${mobile} {
-    font-size: 13px;
+    font-size: 0.8rem;
   }
   .num {
     width: 10%;
@@ -256,34 +257,42 @@ const Row = styled.div`
   margin: 12px 0 0;
   padding: 0 24px;
   .items {
-    padding: 7px 20px;
-    height: auto;
-    width: auto;
+    padding: 7px 13px;
+    width: 6.25rem;
+    height: 2.5rem;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
+      width: 5.4rem;
+      height: 2.3rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.75rem;
+      width: 5rem;
+      height: 2.1rem;
     }
   }
   .writing {
-    padding: 7px 20px;
-    width: auto;
-    height: auto;
+    padding: 7px 13px;
+    width: 6.25rem;
+    height: 2.5rem;
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
+      width: 5.4rem;
+      height: 2.3rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.75rem;
+      width: 5rem;
+      height: 2rem;
     }
   }
 `;
@@ -305,17 +314,17 @@ const PaginationBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     border-radius: 3px;
     margin-left: 2px;
     margin-right: 2px;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.95rem;
       width: 30px;
       height: 30px;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
       width: 25px;
       height: 25px;
     }
@@ -341,19 +350,19 @@ const SearchContainer = styled.div`
   padding: 15px;
   select {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   }
   .searchInput {
-    font-size: 16px;
+    font-size: 1rem;
     width: 450px;
     height: 40px;
     padding: 15px;
@@ -362,10 +371,12 @@ const SearchContainer = styled.div`
     border-right: 0px;
     border-left: 0px;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
+      height: 2.3rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
+      height: 2.1rem;
     }
   }
   .searchClick {
@@ -374,14 +385,16 @@ const SearchContainer = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #919eab;
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     ${tablet} {
-      font-size: 21px;
+      font-size: 1.2rem;
+      height: 2.3rem;
     }
     ${mobile} {
-      font-size: 18px;
+      font-size: 1rem;
+      height: 2.1rem;
     }
   }
 `;

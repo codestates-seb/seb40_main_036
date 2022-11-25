@@ -66,58 +66,57 @@ const Post = styled.div`
   .user {
     padding: 15px 15px 0 15px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
     ${tablet} {
-      font-size: 16px;
+      font-size: 1.1rem;
     }
     ${mobile} {
-      font-size: 14px;
+      font-size: 0.8rem;
     }
   }
 
+  .submitButon {
+    display: flex;
+    justify-content: end;
+    padding: 0 15px 15px 15px;
+    button {
+      background-color: #008505;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      width: 5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      :hover {
+        background-color: #005603;
+      }
+      ${tablet} {
+        font-size: 0.8rem;
+        width: 4.5rem;
+        height: 2.2rem;
+      }
+      ${mobile} {
+        font-size: 0.7rem;
+        width: 4.2rem;
+        height: 2rem;
+      }
+    }
+  }
   textarea {
     border-radius: 10px;
     padding: 15px 15px 0 15px;
     resize: none;
     width: 100%;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.8rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.7rem;
     }
   }
   textarea:focus {
     outline: none;
-  }
-  .submitButon {
-    display: flex;
-    justify-content: end;
-    padding: 0 15px 15px 15px;
-  }
-  button {
-    font-size: 16px;
-    background-color: #008505;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-    :hover {
-      background-color: #005603;
-    }
-    ${tablet} {
-      font-size: 14px;
-      width: 75px;
-      height: 35px;
-    }
-    ${mobile} {
-      font-size: 12px;
-      width: 70px;
-      height: 30px;
-    }
   }
 `;

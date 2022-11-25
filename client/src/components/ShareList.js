@@ -380,7 +380,7 @@ const SearchContainer = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #919eab;
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     ${tablet} {

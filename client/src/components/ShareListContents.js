@@ -86,10 +86,4 @@ const ContentsList = styled.div`
   .view {
     width: 10%;
   }
-  ${tablet} {
-    font-size: 14px;
-  }
-  ${mobile} {
-    font-size: 12px;
-  }
 `;

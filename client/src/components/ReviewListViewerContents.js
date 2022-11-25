@@ -53,37 +53,37 @@ const Container = styled.div`
 `;
 const ReviewListContents = styled.div`
   padding: 20px 0 30px 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   ${tablet} {
-    font-size: 16px;
+    font-size: 1rem;
   }
   ${mobile} {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 `;
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
   color: #838383;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   ${tablet} {
-    font-size: 16px;
+    font-size: 1.1rem;
   }
   ${mobile} {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.8rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.7rem;
     }
   }
 `;

@@ -144,23 +144,23 @@ const AnswerContents = styled.div`
   .userProfile {
     padding: 10px;
     img {
-      width: 53px;
+      width: 3.3rem;
       ${tablet} {
-        width: 48px;
+        width: 2.7rem;
       }
       ${mobile} {
-        width: 44px;
+        width: 2rem;
       }
     }
   }
   .userName {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
     ${tablet} {
-      font-size: 16px;
+      font-size: 1.05rem;
     }
     ${mobile} {
-      font-size: 14px;
+      font-size: 0.9rem;
     }
   }
   .contentsBox {
@@ -169,17 +169,23 @@ const AnswerContents = styled.div`
     padding-left: 20px;
   }
   .contents {
-    font-size: 16px;
+    font-size: 1.2rem;
     ${tablet} {
-      font-size: 14px;
+      font-size: 1rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   }
   .date {
-    font-size: 14px;
+    font-size: 0.8rem;
     color: #838383;
+    ${tablet} {
+      font-size: 0.7rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+    }
   }
 `;
 const DeletEdit = styled.div`
@@ -192,13 +198,13 @@ const DeletEdit = styled.div`
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.85rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   }
 `;
@@ -222,12 +228,12 @@ const Post = styled.div`
     resize: none;
     width: 100%;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.8rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.7rem;
     }
   }
   textarea:focus {
@@ -238,11 +244,21 @@ const Post = styled.div`
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    width: 80px;
-    height: 40px;
+    width: 5rem;
+    height: 2.5rem;
     cursor: pointer;
     :hover {
       background-color: #005603;
+    }
+    ${tablet} {
+      font-size: 0.8rem;
+      width: 4.5rem;
+      height: 2.2rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+      width: 4.2rem;
+      height: 2rem;
     }
   }
   .cencel {
@@ -250,11 +266,21 @@ const Post = styled.div`
     background-color: #ffffff;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
-    width: 80px;
-    height: 40px;
+    width: 5rem;
+    height: 2.5rem;
     cursor: pointer;
     :hover {
       background-color: #d2d2d2;
+    }
+    ${tablet} {
+      font-size: 0.8rem;
+      width: 4.5rem;
+      height: 2.2rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+      width: 4.2rem;
+      height: 2rem;
     }
   }
 `;
