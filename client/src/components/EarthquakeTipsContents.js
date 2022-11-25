@@ -23,7 +23,7 @@ const TipsContainer = styled.div`
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 1254px;
+  max-width: 1400px;
   border: 2px solid black;
   border-left-width: 0;
   border-top-width: 2px;
@@ -38,7 +38,8 @@ const TipsContents = styled.div`
     flex-direction: column;
   }
   img {
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
+    padding: 2px;
   }
 `;

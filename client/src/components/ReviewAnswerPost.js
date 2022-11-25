@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { useRef, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
-function AnswerPost() {
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
+function ReviewAnswerPost() {
   const { QuestionId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
@@ -12,16 +14,20 @@ function AnswerPost() {
   }, []);
 
   const handleOnClick = () => {
-    if (AnswerPost.body !== '' && sessionStorage.getItem('memberId')) {
+    if (
+      ReviewAnswerPost.body !== '' &&
+      textRef.current.value !== '' &&
+      sessionStorage.getItem('memberId')
+    ) {
       const data = {
-        answerContent: textRef.current.value,
-        questionId: `${QuestionId}`,
+        shelterAnswerContent: textRef.current.value,
+        shelterQuestionId: `${QuestionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .post(`/answer`, data)
+        .post(`/shelterAnswer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -46,7 +52,7 @@ function AnswerPost() {
   );
 }
 
-export default AnswerPost;
+export default ReviewAnswerPost;
 
 const Container = styled.div`
   margin: 0 auto;
@@ -60,13 +66,41 @@ const Post = styled.div`
   .user {
     padding: 15px 15px 0 15px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
+    ${tablet} {
+      font-size: 1.1rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+    }
   }
 
   .submitButon {
     display: flex;
     justify-content: end;
     padding: 0 15px 15px 15px;
+    button {
+      background-color: #008505;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      width: 5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      :hover {
+        background-color: #005603;
+      }
+      ${tablet} {
+        font-size: 0.8rem;
+        width: 4.5rem;
+        height: 2.2rem;
+      }
+      ${mobile} {
+        font-size: 0.7rem;
+        width: 4.2rem;
+        height: 2rem;
+      }
+    }
   }
   textarea {
     border-radius: 10px;
@@ -74,21 +108,15 @@ const Post = styled.div`
     resize: none;
     width: 100%;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
+    ${tablet} {
+      font-size: 0.8rem;
+    }
+    ${mobile} {
+      font-size: 0.7rem;
+    }
   }
   textarea:focus {
     outline: none;
-  }
-  button {
-    background-color: #008505;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-    :hover {
-      background-color: #005603;
-    }
   }
 `;

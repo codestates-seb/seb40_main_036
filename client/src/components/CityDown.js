@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
-
   const state = useRef();
   const onChangeSelect = (e) => {
     const seoul = [
@@ -136,7 +137,6 @@ const DropDown = ({ onChange, value }) => {
     }
     setSelectValue(currentRegion);
   };
-
   return (
     <SelectRegionStyle>
       <select
@@ -152,11 +152,12 @@ const DropDown = ({ onChange, value }) => {
       </select>
       <select
         className="selectDistrict"
+        id="good"
         ref={state}
         onChange={onChange}
         value={value}
       >
-        <option>시/군/구 선택</option>
+        <option value={value}>시/군/구 선택</option>
       </select>
     </SelectRegionStyle>
   );
@@ -166,24 +167,40 @@ export default DropDown;
 
 const SelectRegionStyle = styled.div`
   display: flex;
+
   .selectRegion {
-    width: 210px;
-    height: 40px;
+    width: 13rem;
+    height: 2.5rem;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 7px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 0.9rem;
+      width: 12rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+      width: 10rem;
+      height: 2.1rem;
+    }
   }
   .selectDistrict {
-    margin-right: 10px;
     margin-left: 10px;
-    width: 150px;
-    height: 40px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     border-color: #d2d2d2;
     font-size: 16px;
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
+    ${tablet} {
+      font-size: 0.9rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+    }
   }
 `;
