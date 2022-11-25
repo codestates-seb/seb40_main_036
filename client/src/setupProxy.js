@@ -14,7 +14,7 @@ module.exports = function (app) {
     ],
     createProxyMiddleware({
       target:
-        'http://ec2-43-201-38-207.ap-northeast-2.compute.amazonaws.com:8080',
+        'http://ec2-3-35-10-141.ap-northeast-2.compute.amazonaws.com:8080',
       changeOrigin: true,
     })
   );

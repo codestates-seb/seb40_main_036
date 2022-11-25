@@ -153,6 +153,8 @@ const Map = (props) => {
   };
   useEffect(() => {
     fetch();
+  }, []);
+  useEffect(() => {
     Mapping();
   }, [props.x, props.y]);
 
