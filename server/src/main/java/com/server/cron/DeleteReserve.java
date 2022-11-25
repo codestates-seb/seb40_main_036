@@ -14,7 +14,6 @@ import java.util.List;
 @SpringBootApplication
 @EnableScheduling
 @RequiredArgsConstructor
-@Transactional
 public class DeleteReserve {
     private final ReservationRepository reservationRepository;
     private final ReservationInfoRepository reservationInfoRepository;
