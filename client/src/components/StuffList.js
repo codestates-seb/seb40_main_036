@@ -17,7 +17,8 @@ function StuffList() {
     select: 'title',
     content: '',
   });
-  const [drop, setDrop] = useState('');
+  const [drop, setDrop] = useState();
+
   const handleDrop = (e) => {
     setDrop(e.target.value);
   };
@@ -125,13 +126,10 @@ function StuffList() {
           </SearchBox>
         </StuffListTitle>
         <SelectBox>
-          <CityDown
-            onChange={(e) => {
-              handleTagSearchButton(e);
-              handleDrop(e);
-            }}
-            value={drop}
-          />
+          <CityDown onChange={handleDrop} value={drop} />
+          <button className="tagSearch" onClick={handleTagSearchButton}>
+            <FaSearch />
+          </button>
         </SelectBox>
         <ContentsContainer>
           {questions.map((item) => (
@@ -291,6 +289,25 @@ const SelectBox = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 
 const ContentsContainer = styled.div`

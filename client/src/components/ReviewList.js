@@ -22,7 +22,25 @@ function ReviewList() {
     select: 'title',
     content: '',
   });
+  const [drop, setDrop] = useState();
 
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/shelterQuestion/search/tag/${drop} `)
+
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(drop);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -80,7 +98,10 @@ function ReviewList() {
             <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
-            <CityDown />
+            <CityDown onChange={handleDrop} value={drop} />
+            <button className="tagSearch" onClick={handleTagSearchButton}>
+              <FaSearch />
+            </button>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -203,6 +224,25 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;

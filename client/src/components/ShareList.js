@@ -22,8 +22,25 @@ function ShareList() {
     select: 'title',
     content: '',
   });
-  const [Selected, setSelected] = useState();
+  const [drop, setDrop] = useState();
 
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/question/search/tag/${drop} `)
+
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(drop);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -36,7 +53,7 @@ function ShareList() {
       axios
         .get(`/question/search/${search.select}/${search.content}`)
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
           setQuestions(response.data);
           console.log(search);
         });
@@ -55,7 +72,7 @@ function ShareList() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/question/questions`);
-        console.log(response.data);
+        console.log(response);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
@@ -69,11 +86,6 @@ function ShareList() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
-  const handleSelect = (e) => {
-    setSelected(e.target.value);
-    console.log(e.target.value);
-  };
-
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -82,7 +94,10 @@ function ShareList() {
             <h1>물품 나눔 게시판</h1>
           </Header>
           <SelectBox>
-            <CityDown onChange={handleSelect} value={Selected} />
+            <CityDown onChange={handleDrop} value={drop} />
+            <button className="tagSearch" onClick={handleTagSearchButton}>
+              <FaSearch />
+            </button>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -207,6 +222,25 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
