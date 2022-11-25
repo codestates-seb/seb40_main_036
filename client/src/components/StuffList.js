@@ -4,25 +4,86 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
+// import InfiniteScroll from 'react-infinite-scroller';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffList() {
   const textRef = useRef();
-  const [questions, setQuestions] = useState(null);
+  const [questions, setQuestions] = useState(null); //데이터 저장
+  const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
   });
   const [drop, setDrop] = useState();
+  // const [fetching, setFetching] = useState(false); // 추가 데이터를 로드하는지 아닌지를 담기위한 state
+  // const [paging, setPaging] = useState({ next: undefined }); // API로부터 받아온 다음 페이지 데이터를 저장
+  // const fetchFeeds = async () => {
+  //   // 로딩중인 상태로 전환
+  //   setLoading(true);
 
+  //   await axios
+  //     .get(`/stuffQuestion?page=${paging}&size=10`)
+  //     .then((response) => {
+  //       // GET 요청으로 받아온 데이터를 state에 잘 넣어줍니다
+  //       setQuestions(response.data.data);
+  //       console.log(response);
+  //       setPaging(response.data.pageInfo.page);
+  //       console.log(paging);
+  //     })
+  //     .catch((error) => {
+  //       // Error 핸들링
+  //       console.log(error);
+  //     });
+  //   // 로딩중이지 않은 상태로 전환
+  //   setLoading(false);
+  // };
+
+  // // 컴포넌트가 마운트되면 해당 함수를 호출해서 초기 데이터를 받아옵니다.
+  // useEffect(() => {
+  //   fetchFeeds();
+  // }, []);
+
+  // const fetchMoreFeeds = async () => {
+  //   // 추가 데이터를 로드하는 상태로 전환
+  //   setFetching(true);
+
+  //   // API로부터 받아온 페이징 데이터를 이용해 다음 데이터를 로드
+  //   await axios.get(paging.next).then((response) => {
+  //     const fetchedData = response.data.data; // 피드 데이터 부분
+  //     // 기존 데이터 배열과 새로 받아온 데이터 배열을 합쳐 새 배열을 만들고 state에 저장한다.
+  //     const mergedData = questions.concat(...fetchedData);
+  //     setQuestions(mergedData);
+  //   });
+  //   // 추가 데이터 로드 끝
+  //   setFetching(false);
+  // };
+
+  // // 스크롤 이벤트 핸들러
+  // const handleScroll = () => {
+  //   const scrollHeight = document.documentElement.scrollHeight;
+  //   const scrollTop = document.documentElement.scrollTop;
+  //   const clientHeight = document.documentElement.clientHeight;
+  //   if (scrollTop + clientHeight >= scrollHeight && fetching === false) {
+  //     // 페이지 끝에 도달하면 추가 데이터를 받아온다
+  //     fetchMoreFeeds();
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   // scroll event listener 등록
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     // scroll event listener 해제
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // });
   const handleDrop = (e) => {
     setDrop(e.target.value);
   };
-
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
@@ -56,6 +117,7 @@ function StuffList() {
       handleSearchButton();
     }
   };
+
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -64,9 +126,9 @@ function StuffList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/stuffQuestion/stuffQuestions`);
+        const response = await axios.get(`/stuffQuestion?page=1&size=20`);
         console.log(response.data);
-        setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
+        setQuestions(response.data.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
