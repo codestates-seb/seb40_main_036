@@ -19,10 +19,9 @@ public class DeleteReserve {
     private final ReservationRepository reservationRepository;
     private final ReservationInfoRepository reservationInfoRepository;
 
-        // @Scheduled(cron = "*/200 * * * * *") // 매일매일 100초 뒤에 아래의 코드를 실행하겠다.
-        // @Scheduled(cron = "0 0 0/1 * * *") // 매일매일 1시간 마다 아래의 코드를 실행하겠다.
-        // @Scheduled(cron = "0 0 0 * * *") // 매일매일 0시에 아래의 코드를 실행하겠다.
-        @Scheduled(cron = "0 0 0/1 * * *")
+        // @Scheduled(cron="*/200 * * * * *") // 매일매일 100초 뒤에 아래의 코드를 실행하겠다.
+
+        @Scheduled(cron = "0 0 0 * * *") // 매일매일 0시에 아래의 코드를 실행하겠다.
         public void run(){
         reservationRepository.deleteAll();
             List<ReservationInfo> reservationInfoList=reservationInfoRepository.findAll();
