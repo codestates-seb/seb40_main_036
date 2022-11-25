@@ -29,16 +29,18 @@ const Map = (props) => {
       setReservationInfos(res.data.map((x) => x.reservedNum));
     });
   };
-  const lists = gyeongi.map((x) => {
-    let obj = {};
-    obj['title'] = x.shelter_name;
-    obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
-    // obj['now'] = reservationInfos[x.shelter_id];
-    obj['now'] = Math.floor(Math.random() * x.capacity);
-    obj['capacity'] = x.capacity;
-    obj['shelterId'] = x.shelter_id;
-    return obj;
-  });
+  const lists =
+    gyeongi &&
+    gyeongi.map((x) => {
+      let obj = {};
+      obj['title'] = x.shelter_name;
+      obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
+      // obj['now'] = reservationInfos[x.shelter_id];
+      obj['now'] = Math.floor(Math.random() * x.capacity);
+      obj['capacity'] = x.capacity;
+      obj['shelterId'] = x.shelter_id;
+      return obj;
+    });
 
   const listsGreen = lists.filter(
     (x) => Math.floor(x.capacity * 0.3333) > x.now
