@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
-import { useRef, useCallback, useState } from 'react';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-function ShareAnswerViewr({
+import { useRef, useCallback, useState } from 'react';
+function StuffAnswerViewr({
   answerContents,
   answerDate,
   user,
@@ -23,14 +23,14 @@ function ShareAnswerViewr({
   const AnswerEditOnClick = () => {
     if (Number(sessionStorage.getItem('memberId')) === memberid) {
       const data = {
-        answerContent: textRef.current.value,
-        questionId: `${questionId}`,
+        stuffAnswerContent: textRef.current.value,
+        stuffQuestionId: `${questionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .patch(`/answer/${id}`, data)
+        .patch(`/stuffAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -71,7 +71,7 @@ function ShareAnswerViewr({
     ) {
       setTimeout(() => {
         axios
-          .delete(`/answer/${id}`)
+          .delete(`/stuffAnswer/${id}`)
           .then(() => window.location.reload())
           .catch((err) => console.log(err));
       }, 1000);
@@ -117,7 +117,7 @@ function ShareAnswerViewr({
   );
 }
 
-export default ShareAnswerViewr;
+export default StuffAnswerViewr;
 
 const AnswerContainer = styled.div`
   display: flex;

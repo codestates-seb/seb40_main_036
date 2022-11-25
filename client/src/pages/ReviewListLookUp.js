@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import ShareAnswerPost from '../components/ShareAnswerPost';
-import ShareAnswerViewr from '../components/ShareAnswerViewr';
-import ShareListViewerTitle from '../components/ShareListViewerTitle';
-import ShareListViewerContents from '../components/ShareListViewerContents';
-function ShareListLookup() {
+import ReviewAnswerPost from '../components/ReviewAnswerPost';
+import ReviewAnswerViewer from '../components/ReviewAnswerViewer';
+import ReviewListViewerTitle from '../components/ReviewListViewerTitle';
+import ReviewListViewerContents from '../components/ReviewListViewerContents';
+function ReviewListLookup() {
   const { QuestionId } = useParams();
   const [questions, setQuestions] = useState(null);
   const [answer, setAnswer] = useState(null);
@@ -21,10 +21,10 @@ function ShareListLookup() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/question/${QuestionId}`);
-        console.log(response.data);
-        setQuestions(response.data);
-        setAnswer(response.data.answers); // 데이터는 response.body 안에 들어있습니다.
+        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
+        console.log(response.data.data);
+        setQuestions(response.data.data);
+        setAnswer(response.data.data.shelterAnswers); // 데이터는 response.body 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
@@ -41,42 +41,42 @@ function ShareListLookup() {
       <Container>
         {questions.length !== 0 && (
           <>
-            <ShareListViewerTitle
-              key={questions.questionId}
-              title={questions.questionTitle}
-              date={questions.questionCreated}
+            <ReviewListViewerTitle
+              key={questions.shelterQuestionId}
+              title={questions.shelterQuestionTitle}
+              date={questions.shelterQuestionCreated}
               name={questions.name}
-              modifie={questions.questionModified}
+              modifie={questions.shelterQuestionModifed}
               tag={questions.locationTag}
             />
-            <ShareListViewerContents
-              id={questions.questionId}
-              title={questions.questionTitle}
-              content={questions.questionContent}
-              user={questions.questionWriter}
-              questionId={questions.questionId}
+            <ReviewListViewerContents
+              id={questions.shelterQuestionId}
+              title={questions.shelterQuestionTitle}
+              content={questions.shelterQuestionContent}
+              user={questions.name}
+              questionId={questions.shelterQuestionId}
               memberId={questions.memberId}
             />
           </>
         )}
         {answer.map((item) => (
-          <ShareAnswerViewr
-            key={item.answerId}
-            questionId={item.questionId}
-            id={item.answerId}
+          <ReviewAnswerViewer
+            key={item.shelterAnswerId}
+            questionId={item.shelterQuestionId}
+            id={item.shelterAnswerId}
             memberid={item.memberId}
             user={item.name}
-            answerContents={item.answerContent}
-            answerDate={item.answerCreated}
+            answerContents={item.shelterAnswerContent}
+            answerDate={item.shelterAnswerCreated}
           />
         ))}
-        <ShareAnswerPost />
+        <ReviewAnswerPost />
       </Container>
     </Contents>
   );
 }
 
-export default ShareListLookup;
+export default ReviewListLookup;
 const Contents = styled.div`
   margin-top: 60px;
   display: flex;

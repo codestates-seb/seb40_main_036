@@ -10,12 +10,12 @@ import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
 import WriteUpdate from './components/WriteUpdate';
-import Equipment from './components/Equipment';
+import StuffList from './components/StuffList';
 import WriteForm from './components/WriteForm';
 import LogoutNav from './components/LogoutNav';
-import AnswerEdit from './components/AnswerEdit';
-import SearchBar from './components/SearchBar';
 import MyPage from './pages/MyPage';
+import ReviewListLookup from './pages/ReviewListLookUp';
+import StuffListLookup from './pages/StuffListLookup';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -38,10 +38,10 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
           <Route path="/review" element={<ReviewList />} />
-          <Route path="/equipment" element={<Equipment />} />
+          <Route path="/stuffList" element={<StuffList />} />
           <Route path="/share/:QuestionId" element={<ShareListLookup />} />
-          <Route path="/share/search/:word" element={<SearchBar />} />
-          <Route path="/shareAnswer/:AnswerId" element={<AnswerEdit />} />
+          <Route path="/Review/:QuestionId" element={<ReviewListLookup />} />
+          <Route path="/stuffLook/:QuestionId" element={<StuffListLookup />} />
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>

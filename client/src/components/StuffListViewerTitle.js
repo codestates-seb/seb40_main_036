@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-function ShareListViewer({ title, name, date, tag }) {
+function EquipmentViewrTitle({ title, name, date, tag }) {
   return (
     <Container>
-      <ShareContentsHeader>
+      <EquipmentContentsHeader>
         <div className="linkBox">
-          <Link to={'/share'} className="listLink">
-            물품 나눔 게시판
+          <Link to={'/stuffList'} className="listLink">
+            비품현황
           </Link>
         </div>
-        <ShareContentsTitle>
+        <EquipmentContentsTitle>
           <div className="header">
             <div className="tagContainer">
               {tag !== '' ? <div className="tag">{tag}</div> : null}
@@ -29,13 +29,13 @@ function ShareListViewer({ title, name, date, tag }) {
               <div className="date">{date}</div>
             </div>
           </div>
-        </ShareContentsTitle>
-      </ShareContentsHeader>
+        </EquipmentContentsTitle>
+      </EquipmentContentsHeader>
     </Container>
   );
 }
 
-export default ShareListViewer;
+export default EquipmentViewrTitle;
 
 const Container = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ const Container = styled.div`
   border-bottom-width: 1px;
   border-right-width: 0;
 `;
-const ShareContentsHeader = styled.div`
+const EquipmentContentsHeader = styled.div`
   a:link {
     text-decoration: none;
   }
@@ -66,7 +66,7 @@ const ShareContentsHeader = styled.div`
     }
   }
 `;
-const ShareContentsTitle = styled.div`
+const EquipmentContentsTitle = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;

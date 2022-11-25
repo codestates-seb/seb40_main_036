@@ -3,7 +3,9 @@ import { useState } from 'react';
 import EarthquakeTipsContents from './EarthquakeTipsContents';
 import CongestionTips from './CongestionTips';
 import DownpourTipsContents from './DownpourTips';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function EvacuationTips() {
   const [Selected, setSelected] = useState('earthquake');
   const handleSelect = (e) => {
@@ -40,11 +42,11 @@ export default EvacuationTips;
 
 const TipstContainer = styled.div`
   width: 100%;
-  max-width: 1254px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 10px;
   justify-content: center;
 `;
 
@@ -60,7 +62,13 @@ const TipsTitle = styled.div`
 
 const Header = styled.div`
   h1 {
-    font-size: 27px;
+    font-size: 1.68rem;
+    ${tablet} {
+      font-size: 1.55rem;
+    }
+    ${mobile} {
+      font-size: 1.3rem;
+    }
   }
 `;
 const Content = styled.div``;
@@ -75,11 +83,21 @@ const SelectBox = styled.div`
     height: 45px;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.2rem;
+    padding: 10px 13px;
     cursor: pointer;
     :focus {
       outline: none;
+    }
+    ${tablet} {
+      font-size: 1.12rem;
+      width: 120px;
+      height: 40px;
+    }
+    ${mobile} {
+      font-size: 0.9rem;
+      width: 100px;
+      height: 37px;
     }
   }
 `;

@@ -36,7 +36,7 @@ function ShareList() {
       axios
         .get(`/question/search/${search.select}/${search.content}`)
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
           setQuestions(response.data);
           console.log(search);
         });
@@ -55,7 +55,7 @@ function ShareList() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/question/questions`);
-        console.log(response);
+        console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
@@ -83,9 +83,6 @@ function ShareList() {
           </Header>
           <SelectBox>
             <CityDown onChange={handleSelect} value={Selected} />
-            <div className="search">
-              <button>검색</button>
-            </div>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -109,6 +106,7 @@ function ShareList() {
                 date={item.questionCreated}
                 tag={item.locationTag}
                 view={item.views}
+                count={item.countAnswer}
               />
             ))}
         </ContentsContainer>
@@ -174,11 +172,11 @@ export default ShareList;
 
 const ShareListContainer = styled.div`
   width: 100%;
-  max-width: 1254px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
+  padding: 40px 10px;
 `;
 
 const ShareListContent = styled.div`
@@ -187,11 +185,20 @@ const ShareListContent = styled.div`
 
 const ShareListTitle = styled.div`
   padding: 24px 24px 0;
+  ${mobile} {
+    padding: 1.2rem 1.2rem 0;
+  }
 `;
 
 const Header = styled.div`
   h1 {
-    font-size: 27px;
+    font-size: 1.68rem;
+    ${tablet} {
+      font-size: 1.55rem;
+    }
+    ${mobile} {
+      font-size: 1.3rem;
+    }
   }
 `;
 
@@ -200,15 +207,6 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
-  button {
-    width: 100px;
-    height: 40px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border-color: #d2d2d2;
-    font-size: 16px;
-    cursor: pointer;
-  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
@@ -218,9 +216,13 @@ const ContentsContainer = styled.div`
   border-right-width: 0;
 `;
 const ContentsTitle = styled.div`
+  ${mobile} {
+    padding: 8px 10px;
+  }
+  align-items: center;
   display: flex;
   padding: 10px 24px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   border: 1px solid black;
   border-left-width: 0;
@@ -229,17 +231,23 @@ const ContentsTitle = styled.div`
   border-right-width: 0;
   color: black;
   text-align: center;
+  ${tablet} {
+    font-size: 1rem;
+  }
+  ${mobile} {
+    font-size: 0.8rem;
+  }
   .num {
     width: 10%;
   }
   .title {
-    width: 50%;
+    width: 40%;
   }
   .writer {
-    width: 15%;
+    width: 20%;
   }
   .date {
-    width: 15%;
+    width: 20%;
   }
   .view {
     width: 10%;
@@ -251,25 +259,47 @@ const Row = styled.div`
   margin: 12px 0 0;
   padding: 0 24px;
   .items {
-    width: 100px;
-    height: 40px;
+    padding: 7px 13px;
+    width: 6.25rem;
+    height: 2.5rem;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1rem;
     cursor: pointer;
+    ${tablet} {
+      font-size: 0.9rem;
+      width: 5.4rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 0.75rem;
+      width: 5rem;
+      height: 2.1rem;
+    }
   }
   .writing {
-    width: 100px;
-    height: 40px;
+    padding: 7px 13px;
+    width: 6.25rem;
+    height: 2.5rem;
     background-color: #ffffff;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
+    ${tablet} {
+      font-size: 0.9rem;
+      width: 5.4rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 0.75rem;
+      width: 5rem;
+      height: 2rem;
+    }
   }
 `;
 const PaginationBox = styled.div`
+  margin-top: 3px;
   .pagination {
     display: flex;
     justify-content: center;
@@ -286,10 +316,20 @@ const PaginationBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     border-radius: 3px;
     margin-left: 2px;
     margin-right: 2px;
+    ${tablet} {
+      font-size: 0.95rem;
+      width: 30px;
+      height: 30px;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+      width: 25px;
+      height: 25px;
+    }
   }
   ul.pagination li a {
     color: black;
@@ -309,16 +349,22 @@ const PaginationBox = styled.div`
 const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
   select {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     width: 110px;
     border-radius: 5px 0 0 5px;
     border-color: #919eab;
+    ${tablet} {
+      font-size: 0.9rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+    }
   }
   .searchInput {
-    font-size: 16px;
+    font-size: 1rem;
     width: 450px;
     height: 40px;
     padding: 15px;
@@ -326,6 +372,14 @@ const SearchContainer = styled.div`
     border: 1px solid #919eab;
     border-right: 0px;
     border-left: 0px;
+    ${tablet} {
+      font-size: 0.9rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+      height: 2.1rem;
+    }
   }
   .searchClick {
     width: 60px;
@@ -333,8 +387,16 @@ const SearchContainer = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #919eab;
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      height: 2.1rem;
+    }
   }
 `;

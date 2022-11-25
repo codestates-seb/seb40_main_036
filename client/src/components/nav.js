@@ -55,7 +55,7 @@ const Nav = () => {
               <ul>
                 <li className="sm-dblock">비품</li>
                 <li>
-                  <Link to="/equipment">비품 현황</Link>
+                  <Link to="/stuffList">비품 현황</Link>
                 </li>
               </ul>
               <ul>

@@ -1,12 +1,12 @@
+import StuffListViewerTitle from '../components/StuffListViewerTitle';
+import StuffListViewerContents from '../components/StuffListViewerContents';
+import StuffAnswerPost from '../components/stuffAnswerPost';
+import StuffAnswerViewer from '../components/StuffAnswerViewr';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import ShareAnswerPost from '../components/ShareAnswerPost';
-import ShareAnswerViewr from '../components/ShareAnswerViewr';
-import ShareListViewerTitle from '../components/ShareListViewerTitle';
-import ShareListViewerContents from '../components/ShareListViewerContents';
-function ShareListLookup() {
+function StuffListLookup() {
   const { QuestionId } = useParams();
   const [questions, setQuestions] = useState(null);
   const [answer, setAnswer] = useState(null);
@@ -21,10 +21,10 @@ function ShareListLookup() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
         console.log(response.data);
-        setQuestions(response.data);
-        setAnswer(response.data.answers); // 데이터는 response.body 안에 들어있습니다.
+        setQuestions(response.data.data);
+        setAnswer(response.data.data.stuffAnswers); // 데이터는 response.body 안에 들어있습니다.
       } catch (e) {
         setError(e);
       }
@@ -41,42 +41,42 @@ function ShareListLookup() {
       <Container>
         {questions.length !== 0 && (
           <>
-            <ShareListViewerTitle
-              key={questions.questionId}
-              title={questions.questionTitle}
-              date={questions.questionCreated}
+            <StuffListViewerTitle
+              key={questions.stuffQuestionId}
+              title={questions.stuffQuestionTitle}
+              date={questions.stuffQuestionCreated}
               name={questions.name}
-              modifie={questions.questionModified}
+              modifie={questions.stuffQuestionModifed}
               tag={questions.locationTag}
             />
-            <ShareListViewerContents
-              id={questions.questionId}
-              title={questions.questionTitle}
-              content={questions.questionContent}
-              user={questions.questionWriter}
-              questionId={questions.questionId}
+            <StuffListViewerContents
+              id={questions.stuffQuestionId}
+              title={questions.stuffQuestionTitle}
+              content={questions.stuffQuestionContent}
+              user={questions.name}
+              questionId={questions.stuffQuestionId}
               memberId={questions.memberId}
             />
           </>
         )}
         {answer.map((item) => (
-          <ShareAnswerViewr
-            key={item.answerId}
-            questionId={item.questionId}
-            id={item.answerId}
+          <StuffAnswerViewer
+            key={item.stuffAnswerId}
+            questionId={item.stuffQuestionId}
+            id={item.stuffAnswerId}
             memberid={item.memberId}
             user={item.name}
-            answerContents={item.answerContent}
-            answerDate={item.answerCreated}
+            answerContents={item.stuffAnswerContent}
+            answerDate={item.stuffAnswerCreated}
           />
         ))}
-        <ShareAnswerPost />
+        <StuffAnswerPost />
       </Container>
     </Contents>
   );
 }
 
-export default ShareListLookup;
+export default StuffListLookup;
 const Contents = styled.div`
   margin-top: 60px;
   display: flex;
