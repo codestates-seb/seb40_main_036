@@ -1,7 +1,7 @@
 package com.server.reservation.mapper;
 
 import com.server.member.entity.Member;
-import com.server.reservation.dto.ReservationPatchDto;
+//import com.server.reservation.dto.ReservationPatchDto;
 import com.server.reservation.dto.ReservationPostDto;
 import com.server.reservation.dto.ReservationResponseDto;
 import com.server.reservation.entity.Reservation;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public interface ReservationMapper {
     Reservation reservationPostDtoToReservation(ReservationPostDto reservationPostDto);
 
-    Reservation reservationPatchDtoToReservation(ReservationPatchDto reservationPatchDto);
+//    Reservation reservationPatchDtoToReservation(ReservationPatchDto reservationPatchDto);
     // ReservationResponseDto reservationToReservationResponseDto(Reservation reservation);
 
     ReservationResponseDto reservationToReservationResponseDto(Reservation reservation);

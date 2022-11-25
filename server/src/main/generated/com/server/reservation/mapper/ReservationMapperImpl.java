@@ -1,6 +1,5 @@
 package com.server.reservation.mapper;
 
-import com.server.reservation.dto.ReservationPatchDto;
 import com.server.reservation.dto.ReservationPostDto;
 import com.server.reservation.dto.ReservationResponseDto;
 import com.server.reservation.entity.Reservation;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-24T18:06:51+0900",
+    date = "2022-11-24T23:50:49+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -34,22 +33,6 @@ public class ReservationMapperImpl implements ReservationMapper {
     }
 
     @Override
-    public Reservation reservationPatchDtoToReservation(ReservationPatchDto reservationPatchDto) {
-        if ( reservationPatchDto == null ) {
-            return null;
-        }
-
-        Reservation reservation = new Reservation();
-
-        reservation.setReservationId( reservationPatchDto.getReservationId() );
-        reservation.setMemberId( reservationPatchDto.getMemberId() );
-        reservation.setShelterId( reservationPatchDto.getShelterId() );
-        reservation.setNum( reservationPatchDto.getNum() );
-
-        return reservation;
-    }
-
-    @Override
     public ReservationResponseDto reservationToReservationResponseDto(Reservation reservation) {
         if ( reservation == null ) {
             return null;
@@ -60,7 +43,6 @@ public class ReservationMapperImpl implements ReservationMapper {
         long shelterId = 0L;
         int num = 0;
         LocalDate reservationCreated = null;
-        LocalDate reservationModified = null;
 
         if ( reservation.getReservationId() != null ) {
             reservationId = reservation.getReservationId();
@@ -73,9 +55,8 @@ public class ReservationMapperImpl implements ReservationMapper {
         }
         num = reservation.getNum();
         reservationCreated = reservation.getReservationCreated();
-        reservationModified = reservation.getReservationModified();
 
-        ReservationResponseDto reservationResponseDto = new ReservationResponseDto( reservationId, memberId, shelterId, num, reservationCreated, reservationModified );
+        ReservationResponseDto reservationResponseDto = new ReservationResponseDto( reservationId, memberId, shelterId, num, reservationCreated );
 
         return reservationResponseDto;
     }

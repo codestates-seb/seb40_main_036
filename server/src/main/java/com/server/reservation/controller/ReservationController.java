@@ -1,7 +1,7 @@
 package com.server.reservation.controller;
 
 import com.server.member.service.MemberService;
-import com.server.reservation.dto.ReservationPatchDto;
+//import com.server.reservation.dto.ReservationPatchDto;
 import com.server.reservation.dto.ReservationPostDto;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.mapper.ReservationMapper;
