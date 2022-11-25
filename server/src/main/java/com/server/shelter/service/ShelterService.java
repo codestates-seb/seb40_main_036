@@ -29,7 +29,7 @@ public class ShelterService {
 
         for(Shelter shelter:shelters) { // 각 대피소마다 reservationInfo를 생성
             ReservationInfo reservationInfo = new ReservationInfo();    // 새 reservationInfo생성
-    
+
             reservationInfo.setShelterName(shelter.getShelterName());   // reservationInfo와 연결된 대피소 이름 기입
             reservationInfo.setGeolocation(shelter.getGeolocation());   // reservationInfo에 대피소 장소 기입
             reservationInfo.setCapacity(shelter.getCapacity()); // reservationInfo에 대피소에 들어갈 수 있는 총원 기입

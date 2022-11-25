@@ -41,7 +41,7 @@ public class ShelterController {
 
     @GetMapping("/{shelterId}")
     public ResponseEntity getShelter(@PathVariable("shelterId")
-                                    @Positive long Id) {
+                                     @Positive long Id) {
         Shelter shelter = shelterService.findShelter(Id);
 
         return new ResponseEntity<>(
@@ -52,7 +52,7 @@ public class ShelterController {
 
     @GetMapping
     public ResponseEntity getShelters(@Positive @RequestParam int page,
-                                     @Positive @RequestParam int size) {
+                                      @Positive @RequestParam int size) {
         Page<Shelter> pageMembers = shelterService.findShelters(page-1, size);
         List<Shelter> shelters = pageMembers.getContent();// 내용까지도
 
@@ -73,7 +73,7 @@ public class ShelterController {
 
     @DeleteMapping("/{shelterId}")
     public ResponseEntity deleteShelter(@PathVariable("shelterId")
-                                       @Positive long Id){
+                                        @Positive long Id){
 
         shelterService.deleteShelter(Id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -81,7 +81,7 @@ public class ShelterController {
 
     @PatchMapping("/{shelterId}")
     public ResponseEntity patchShelter(@PathVariable("shelterId") @Positive long Id,
-                                    @Valid @RequestBody ShelterPatchDto shelterPatchDto) {
+                                       @Valid @RequestBody ShelterPatchDto shelterPatchDto) {
         shelterPatchDto.setShelterId(Id);
         Shelter response = shelterService.updateShelter(shelterMapper.shelterPatchDtoToShelter(shelterPatchDto));
 
