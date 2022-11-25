@@ -18,6 +18,6 @@ public class ReservationResponseDto {
 
     private LocalDate reservationCreated;
 
-    private LocalDate reservationModified;
+//    private LocalDate reservationModified;
 
 }
