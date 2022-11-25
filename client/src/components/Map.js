@@ -26,7 +26,7 @@ const Map = (props) => {
   console.log(reservationInfos);
   const fetch = () => {
     axios.get('/reservationInfo/reservationInfos').then((res) => {
-      setReservationInfos(res.data.map((x) => x.reservedNum));
+      setReservationInfos(res.data && res.data.map((x) => x.reservedNum));
     });
   };
   const lists =
