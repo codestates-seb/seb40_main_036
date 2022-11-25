@@ -22,35 +22,6 @@ const Map = (props) => {
   const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
-  const [reservationInfos, setReservationInfos] = useState([]);
-  console.log(reservationInfos);
-  const fetch = () => {
-    axios.get('/reservationInfo/reservationInfos').then((res) => {
-      setReservationInfos(res.data && res.data.map((x) => x.reservedNum));
-    });
-  };
-  const lists =
-    gyeongi &&
-    gyeongi.map((x) => {
-      let obj = {};
-      obj['title'] = x.shelter_name;
-      obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
-      obj['now'] = reservationInfos[x.shelter_id];
-      //obj['now'] = Math.floor(Math.random() * x.capacity);
-      obj['capacity'] = x.capacity;
-      obj['shelterId'] = x.shelter_id;
-      return obj;
-    });
-
-  const listsGreen = lists.filter(
-    (x) => Math.floor(x.capacity * 0.3333) > x.now
-  );
-  const listsYellow = lists.filter(
-    (x) =>
-      Math.floor(x.capacity * 0.3333) <= x.now &&
-      Math.floor(x.capacity * 0.6666) >= x.now
-  );
-  const listsRed = lists.filter((x) => Math.floor(x.capacity * 0.6666) < x.now);
 
   const Mapping = async () => {
     let container = document.getElementById('map');
@@ -59,6 +30,37 @@ const Map = (props) => {
       level: 5,
     };
     var map = await new kakao.maps.Map(container, options);
+    const reserve = await axios
+      .get('/reservationInfo/reservationInfos')
+      .catch((err) => console.log(err));
+    const reservationInfos = reserve.data;
+
+    const lists =
+      gyeongi &&
+      gyeongi.map((x) => {
+        let obj = {};
+        obj['title'] = x.shelter_name;
+        obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
+        reservationInfos[x.shelter_id - 1].reservedNum > 0
+          ? (obj['now'] = reservationInfos[x.shelter_id - 1]['reservedNum'])
+          : (obj['now'] = 0);
+
+        obj['capacity'] = x.capacity;
+        obj['shelterId'] = x.shelter_id;
+        return obj;
+      });
+    console.log(lists);
+    const listsGreen = lists.filter(
+      (x) => Math.floor(x.capacity * 0.3333) > x.now
+    );
+    const listsYellow = lists.filter(
+      (x) =>
+        Math.floor(x.capacity * 0.3333) <= x.now &&
+        Math.floor(x.capacity * 0.6666) >= x.now
+    );
+    const listsRed = lists.filter(
+      (x) => Math.floor(x.capacity * 0.6666) < x.now
+    );
 
     var OliveGreen = new kakao.maps.MarkerImage(
       GreenOlive,
@@ -153,12 +155,10 @@ const Map = (props) => {
 
     props.setloading(false);
   };
-  useEffect(() => {
-    fetch();
-  }, []);
+
   useEffect(() => {
     Mapping();
-  }, [props.x, props.y]);
+  }, [props.x, props.y, props.reservationInfos]);
 
   return (
     <>
