@@ -18,8 +18,7 @@ public class DeleteReserve {
     private final ReservationRepository reservationRepository;
     private final ReservationInfoRepository reservationInfoRepository;
 
-//    @Scheduled(cron = "0 0 0 * * *")
-        @Scheduled(cron="*/100 * * * * *")
+        @Scheduled(cron = "0 0 0 * * *")
         public void run(){
         reservationRepository.deleteAll();
         reservationInfoRepository.deleteAll();
