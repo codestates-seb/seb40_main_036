@@ -2,29 +2,17 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import Marker from './../img/locationDotSolid.svg';
+import GreenOlive from './../img/locationDotSolidGreen.svg';
+import YellowOlive from './../img/locationDotSolidYellow.svg';
+import RedOlive from './../img/locationDotSolidRed.svg';
 import Circle from './../img/circleSolid.svg';
 import SideNav from '../components/SideNav';
 import axios from 'axios';
-import Incheon from '../static/Incheon.json';
+import gyeongi from '../static/gyeongi.json';
 
 const { kakao } = window;
 const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
-var geocoder = new kakao.maps.services.Geocoder();
 
-const lists = Incheon.map((x) => {
-  let obj = {};
-  obj['title'] = x.shelter_name;
-  geocoder.addressSearch(x.geolocation, function (result, status) {
-    if (status === kakao.maps.services.Status.OK) {
-      obj['latlng'] = new kakao.maps.LatLng(result[0].y, result[0].x);
-    }
-  });
-  obj['now'] = Math.floor(Math.random() * x.capacity); //나중에 바꿔야댐
-  obj['capacity'] = x.capacity;
-  obj['shelterId'] = x.shelter_id;
-  return obj;
-});
 const Map = (props) => {
   const [open, setopen] = useState(false);
   const [open2, setopen2] = useState(false);
@@ -34,6 +22,33 @@ const Map = (props) => {
   const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
+  const [reservationInfos, setReservationInfos] = useState([]);
+  console.log(reservationInfos);
+  const fetch = () => {
+    axios.get('/reservationInfo/reservationInfos').then((res) => {
+      setReservationInfos(res.data.map((x) => x.reservedNum));
+    });
+  };
+  const lists = gyeongi.map((x) => {
+    let obj = {};
+    obj['title'] = x.shelter_name;
+    obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
+    // obj['now'] = reservationInfos[x.shelter_id];
+    obj['now'] = Math.floor(Math.random() * x.capacity);
+    obj['capacity'] = x.capacity;
+    obj['shelterId'] = x.shelter_id;
+    return obj;
+  });
+
+  const listsGreen = lists.filter(
+    (x) => Math.floor(x.capacity * 0.3333) > x.now
+  );
+  const listsYellow = lists.filter(
+    (x) =>
+      Math.floor(x.capacity * 0.3333) <= x.now &&
+      Math.floor(x.capacity * 0.6666) >= x.now
+  );
+  const listsRed = lists.filter((x) => Math.floor(x.capacity * 0.6666) < x.now);
 
   const Mapping = async () => {
     let container = document.getElementById('map');
@@ -43,8 +58,16 @@ const Map = (props) => {
     };
     var map = await new kakao.maps.Map(container, options);
 
-    var markerImage = new kakao.maps.MarkerImage(
-      Marker,
+    var OliveGreen = new kakao.maps.MarkerImage(
+      GreenOlive,
+      new kakao.maps.Size(31, 35)
+    );
+    var OliveYellow = new kakao.maps.MarkerImage(
+      YellowOlive,
+      new kakao.maps.Size(31, 35)
+    );
+    var OliveRed = new kakao.maps.MarkerImage(
+      RedOlive,
       new kakao.maps.Size(31, 35)
     );
     new kakao.maps.Marker({
@@ -74,12 +97,46 @@ const Map = (props) => {
         .catch((err) => console.error(err));
     };
 
-    lists.forEach((i) => {
+    listsGreen.forEach((i) => {
       let marker = new kakao.maps.Marker({
         map: map,
         position: i.latlng,
         title: i.title,
-        image: markerImage,
+        image: OliveGreen,
+        clickable: true,
+      });
+      kakao.maps.event.addListener(marker, 'click', () => {
+        setopen(true);
+        setTitle(marker.getTitle());
+        setCapacity(i.capacity);
+        setShelterId(i.shelterId);
+        setNow(i.now);
+        fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
+      });
+    });
+    listsYellow.forEach((i) => {
+      let marker = new kakao.maps.Marker({
+        map: map,
+        position: i.latlng,
+        title: i.title,
+        image: OliveYellow,
+        clickable: true,
+      });
+      kakao.maps.event.addListener(marker, 'click', () => {
+        setopen(true);
+        setTitle(marker.getTitle());
+        setCapacity(i.capacity);
+        setShelterId(i.shelterId);
+        setNow(i.now);
+        fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
+      });
+    });
+    listsRed.forEach((i) => {
+      let marker = new kakao.maps.Marker({
+        map: map,
+        position: i.latlng,
+        title: i.title,
+        image: OliveRed,
         clickable: true,
       });
       kakao.maps.event.addListener(marker, 'click', () => {
@@ -94,6 +151,9 @@ const Map = (props) => {
 
     props.setloading(false);
   };
+  useEffect(() => {
+    fetch();
+  }, []);
   useEffect(() => {
     Mapping();
   }, [props.x, props.y]);
@@ -120,10 +180,12 @@ const Map = (props) => {
         style={props.loading ? { display: 'block' } : { display: 'none' }}
       />
       {open2 && (
-        <Message>
-          {message}
-          <button onClick={() => window.location.reload()}>x</button>
-        </Message>
+        <Overlay>
+          <Message>
+            {message}
+            <button onClick={() => window.location.reload()}>x</button>
+          </Message>
+        </Overlay>
       )}
       <MapWrapper id="map"></MapWrapper>
       <div id="centerAddr"></div>
@@ -132,6 +194,15 @@ const Map = (props) => {
 };
 
 export default Map;
+const Overlay = styled.div`
+  content: '';
+  position: fixed;
+  background: rgba(0, 0, 0, 0.25);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`;
 const Message = styled.div`
   background: white;
   border-radius: 0.25em;
@@ -140,6 +211,15 @@ const Message = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 16px 8px;
+  button {
+    border: none;
+    padding: 4px 8px;
+    background: transparent;
+
+    &:hover {
+      background: lightgray;
+    }
+  }
 `;
 const LoadingIcon = styled(FontAwesomeIcon)`
   position: fixed;
