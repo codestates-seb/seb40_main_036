@@ -1,43 +1,85 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
-import Editor from './Editor';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import { useNavigate } from 'react-router-dom';
 
 const WriteForm = () => {
+  const modules = useMemo(
+    () => ({
+      toolbar: [
+        ['bold', 'italic', 'underline'],
+        [{ list: 'ordered' }, { list: 'bullet' }],
+        [{ size: ['small', false, 'large', 'huge'] }],
+        ['link', 'video'],
+        [{ color: [] }, { background: [] }],
+      ],
+    }),
+    []
+  );
+
+  const formats = [
+    'bold',
+    'italic',
+    'underline',
+    'list',
+    'size',
+    'link',
+    'image',
+    'video',
+    'color',
+    'background',
+  ];
+
   // 초기값 - 제목, 내용
   const [title, setTitle] = useState('');
   const [contents, setContents] = useState(''); // eslint-disable-line no-unused-vars
+
+  // 지역 선택 드롭다운
+  const [drop, setDrop] = useState('');
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
   };
 
   // eslint-disable-next-line no-unused-vars
-  const onChangeContents = (e) => {
-    setContents(e.target.value);
+  const onChangeContents = (el) => {
+    setContents(el);
   };
 
-  // eslint-disable-next-line no-unused-vars
-  // const onChangeContents = () => {
-  //   testRef.current.handleBody();
-  // };
+  // const extractTextPattern = /(<([^>]+)>)/gi;
+  // let a = contents.replace(extractTextPattern, '');
+  // console.log(a);
+
+  // 지역 구 받아오는 값
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const navigate = useNavigate();
 
   const submit = () => {
-    if (title === '') {
+    if (drop === '') {
+      return alert('지역을 선택하세요');
+    } else if (title === '') {
       return alert('제목을 입력하세요');
     } else if (contents === '') {
       return alert('내용을 입력하세요');
     }
     axios
-      .post('/stuffQuestion', {
+      .post('/question', {
         memberId: sessionStorage.getItem('memberId'),
         name: sessionStorage.getItem('name'),
-        stuffQuestionTitle: title,
-        stuffQuestionContent: contents,
-        locationTag: '중구',
+        questionTitle: title,
+        questionContent: contents,
+        locationTag: drop,
       })
-      .then((respone) => console.log(respone.data))
+      .then((response) => {
+        console.log(response);
+        navigate('/share');
+      })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
@@ -47,7 +89,7 @@ const WriteForm = () => {
     <WriteFormStyle>
       <form className="input">
         <div className="region">지역선택</div>
-        <DropDown />
+        <DropDown onChange={handleDrop} value={drop} />
         <div className="title">
           <label className="titleText" htmlFor="titleWrite">
             제목
@@ -64,14 +106,15 @@ const WriteForm = () => {
         </div>
         <div>
           <div className="content">내용</div>
-          {/* <input
-            className="titleInput"
-            type="text"
-            id="titleWrite"
-            value={contents || ''}
-            onChange={onChangeContents}
-          /> */}
-          <Editor onChange={onChangeContents} contents={contents} />
+          <EditorStyle>
+            <ReactQuill
+              className="editor"
+              modules={modules}
+              formats={formats}
+              value={contents}
+              onChange={onChangeContents}
+            />
+          </EditorStyle>
         </div>
       </form>
       <div className="reCancelBox">
@@ -171,5 +214,16 @@ const WriteFormStyle = styled.div`
   .cancelInput {
     font-weight: 600;
     font-size: 20px;
+  }
+`;
+
+const EditorStyle = styled.div`
+  .editor {
+    text-align: center;
+    width: 983px;
+    height: 250px;
+    top: 495px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;

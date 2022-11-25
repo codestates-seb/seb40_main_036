@@ -1,7 +1,10 @@
 // import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import Parser from 'html-react-parser';
+
 function ShareLisViewerContents({ id, content, memberId }) {
   const navigate = useNavigate();
   const deleteClick = () => {
@@ -21,12 +24,14 @@ function ShareLisViewerContents({ id, content, memberId }) {
   return (
     <Container>
       <ShareListContents>
-        <div className="contents">{content}</div>
+        <div className="contents">{Parser(content)}</div>
       </ShareListContents>
       {memberId === Number(sessionStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
-          <button className="edit">수정</button>
+          <Link to="/writeUpdate">
+            <button className="edit">수정</button>
+          </Link>
         </DeletEdit>
       ) : null}
     </Container>
