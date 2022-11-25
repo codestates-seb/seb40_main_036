@@ -1,12 +1,10 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
-
   const state = useRef();
   const onChangeSelect = (e) => {
     const seoul = [
@@ -139,7 +137,6 @@ const DropDown = ({ onChange, value }) => {
     }
     setSelectValue(currentRegion);
   };
-
   return (
     <SelectRegionStyle>
       <select
@@ -155,11 +152,12 @@ const DropDown = ({ onChange, value }) => {
       </select>
       <select
         className="selectDistrict"
+        id="good"
         ref={state}
         onChange={onChange}
         value={value}
       >
-        <option>시/군/구 선택</option>
+        <option value={value}>시/군/구 선택</option>
       </select>
     </SelectRegionStyle>
   );

@@ -22,7 +22,6 @@ function ReviewList() {
     select: 'title',
     content: '',
   });
-  const [Selected, setSelected] = useState();
 
   const handlePageChange = (page) => {
     setPage(page);
@@ -73,11 +72,6 @@ function ReviewList() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
-  const handleSelect = (e) => {
-    setSelected(e.target.value);
-    console.log(e.target.value);
-  };
-
   return (
     <ShareListContainer>
       <ShareListContent>
@@ -86,7 +80,7 @@ function ReviewList() {
             <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
-            <CityDown onChange={handleSelect} value={Selected} />
+            <CityDown />
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>

@@ -17,6 +17,25 @@ function StuffList() {
     select: 'title',
     content: '',
   });
+  const [drop, setDrop] = useState('');
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/stuffQuestion/search/tag/${drop} `)
+
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(drop);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
@@ -106,7 +125,13 @@ function StuffList() {
           </SearchBox>
         </StuffListTitle>
         <SelectBox>
-          <CityDown />
+          <CityDown
+            onChange={(e) => {
+              handleDrop(e);
+              handleTagSearchButton(e);
+            }}
+            value={drop}
+          />
         </SelectBox>
         <ContentsContainer>
           {questions.map((item) => (
@@ -262,7 +287,7 @@ const SearchBox = styled.div`
 `;
 
 const SelectBox = styled.div`
-  padding: 20px 0;
+  padding: 20px 18px;
   display: flex;
   justify-content: end;
   align-items: center;
