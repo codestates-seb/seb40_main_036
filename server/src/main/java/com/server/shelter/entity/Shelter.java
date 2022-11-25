@@ -2,7 +2,6 @@ package com.server.shelter.entity;
 
 import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
-import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.stuffQuestion.entity.StuffQuestion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,19 +24,16 @@ public class Shelter {
     private Long shelterId;
 
     @Column (nullable = false)
-    private String location; // 군
-
-    @Column (nullable = false)
     private String shelterName; // 대피소 이름
-
-    @Column (nullable = false)
-    private int uuid; // 대피소 고유 번호
 
     @Column (nullable = false)
     private String geolocation; // 대피소 주소
 
     @Column (nullable = false)
-    private String updatedate; // 대피소 정보 수정 날짜
+    private String x; // 위도
+
+    @Column (nullable = false)
+    private String y; // 경도
 
     @Column (nullable = false)
     private int capacity; // 대피소 수용가능 인원

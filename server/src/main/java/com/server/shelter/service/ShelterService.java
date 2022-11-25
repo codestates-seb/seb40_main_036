@@ -2,7 +2,6 @@ package com.server.shelter.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
-import com.server.member.entity.Member;
 import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.reservationInfo.repository.ReservationInfoRepository;
 import com.server.shelter.entity.Shelter;
@@ -14,7 +13,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.Column;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +24,7 @@ public class ShelterService {
 
     private final ReservationInfoRepository reservationInfoRepository;
 
+    @Transactional
     public List<Shelter> createShelter(List<Shelter> shelters){ // 쉘터 목록을 JSON으로 저장
 
         for(Shelter shelter:shelters) { // 각 대피소마다 reservationInfo를 생성
@@ -46,21 +45,19 @@ public class ShelterService {
     public Shelter updateShelter(Shelter shelter){
         // shelterId 확인
         Shelter findShelter = findVerifiedShelter(shelter.getShelterId());
-        // location 수정
-        Optional.ofNullable(shelter.getLocation())
-                .ifPresent(location ->findShelter.setLocation(location));
         // shelterName 수정
         Optional.ofNullable(shelter.getShelterName())
                 .ifPresent(shelterName->findShelter.setShelterName(shelterName));
         // uuid 대피소 고유 번호 수정
-        Optional.ofNullable(shelter.getUuid())
-                .ifPresent(uuid->findShelter.setUuid(uuid));
         // geolocation 수정
         Optional.ofNullable(shelter.getGeolocation())
                 .ifPresent(geolocation ->findShelter.setGeolocation(geolocation));
         // updatedate 수정
-        Optional.ofNullable(shelter.getUpdatedate())
-                .ifPresent(updatedate ->findShelter.setUpdatedate(updatedate));
+        Optional.ofNullable(shelter.getX())
+                .ifPresent(updatedate ->findShelter.setX(updatedate));
+
+        Optional.ofNullable(shelter.getY())
+                .ifPresent(updatedate ->findShelter.setY(updatedate));
         // 수용 가능 인원 수정
         Optional.ofNullable(shelter.getCapacity())
                 .ifPresent(Capacity->findShelter.setCapacity(Capacity));

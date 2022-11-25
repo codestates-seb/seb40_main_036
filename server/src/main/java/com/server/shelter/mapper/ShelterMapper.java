@@ -6,7 +6,6 @@ import com.server.shelter.dto.ShelterResponseDto;
 import com.server.shelter.entity.Shelter;
 import org.mapstruct.Mapper;
 
-import javax.persistence.ManyToOne;
 import java.util.List;
 
 @Mapper(componentModel = "spring")

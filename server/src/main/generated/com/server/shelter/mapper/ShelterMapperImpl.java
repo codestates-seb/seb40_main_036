@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-25T17:39:35+0900",
-    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+    date = "2022-11-25T18:35:38+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class ShelterMapperImpl implements ShelterMapper {
@@ -28,8 +28,8 @@ public class ShelterMapperImpl implements ShelterMapper {
         shelter.setShelterId( shelterPostDto.getShelterId() );
         shelter.setShelterName( shelterPostDto.getShelterName() );
         shelter.setGeolocation( shelterPostDto.getGeolocation() );
-        shelter.setY( shelterPostDto.getY() );
         shelter.setX( shelterPostDto.getX() );
+        shelter.setY( shelterPostDto.getY() );
         shelter.setCapacity( shelterPostDto.getCapacity() );
 
         return shelter;
@@ -60,8 +60,8 @@ public class ShelterMapperImpl implements ShelterMapper {
         shelter.setShelterId( shelterPatchDto.getShelterId() );
         shelter.setShelterName( shelterPatchDto.getShelterName() );
         shelter.setGeolocation( shelterPatchDto.getGeolocation() );
-        shelter.setY( shelterPatchDto.getY() );
         shelter.setX( shelterPatchDto.getX() );
+        shelter.setY( shelterPatchDto.getY() );
         shelter.setCapacity( shelterPatchDto.getCapacity() );
 
         return shelter;
@@ -78,8 +78,8 @@ public class ShelterMapperImpl implements ShelterMapper {
         shelterResponseDto.setShelterId( shelter.getShelterId() );
         shelterResponseDto.setShelterName( shelter.getShelterName() );
         shelterResponseDto.setGeolocation( shelter.getGeolocation() );
-        shelterResponseDto.setY( shelter.getY() );
         shelterResponseDto.setX( shelter.getX() );
+        shelterResponseDto.setY( shelter.getY() );
         shelterResponseDto.setCapacity( shelter.getCapacity() );
 
         return shelterResponseDto;
