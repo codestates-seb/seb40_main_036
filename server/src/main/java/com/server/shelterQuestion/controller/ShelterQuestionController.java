@@ -24,6 +24,7 @@ import java.util.List;
 @RequestMapping("/shelterQuestion")
 @Validated
 @RequiredArgsConstructor
+@Transactional
 public class ShelterQuestionController {
 
     private final ShelterQuestionService shelterQuestionService;
