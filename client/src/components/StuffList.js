@@ -121,6 +121,7 @@ function StuffList() {
               date={item.stuffQuestionCreated}
               tag={item.locationTag}
               view={item.views}
+              count={item.countAnswer}
             />
           ))}
         </ContentsContainer>

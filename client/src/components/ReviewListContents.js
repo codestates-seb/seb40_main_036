@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-function ReviewListContents({ id, num, tag, title, writer, date, view }) {
+function ReviewListContents({
+  id,
+  num,
+  tag,
+  title,
+  writer,
+  date,
+  view,
+  count,
+}) {
   return (
     <Container>
       <ContentsList>
@@ -13,6 +22,7 @@ function ReviewListContents({ id, num, tag, title, writer, date, view }) {
           <Link to={`/Review/${id}`} className="title">
             {title}
           </Link>
+          <div className="count">({count})</div>
         </div>
         <div className="writer">{writer}</div>
         <div className="date">{date}</div>
@@ -27,6 +37,9 @@ export default ReviewListContents;
 const Container = styled.div``;
 
 const ContentsList = styled.div`
+  ${mobile} {
+    padding: 8px 10px;
+  }
   display: flex;
   padding: 8px 24px;
   font-size: 1rem;
@@ -62,6 +75,14 @@ const ContentsList = styled.div`
     .title:hover {
       text-decoration: underline;
     }
+    .title {
+      width: 60%;
+      line-height: 1;
+      word-break: break-word;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
     .tag {
       width: 64px;
       padding: 0 10px;
@@ -70,9 +91,23 @@ const ContentsList = styled.div`
       margin-right: 5px;
       ${tablet} {
         width: 60px;
+        padding: 0 8px;
+        font-size: 0.9rem;
       }
       ${mobile} {
-        width: 55px;
+        width: 50px;
+        padding: 0 1px;
+        font-size: 0.7rem;
+      }
+    }
+    .count {
+      margin-left: 3px;
+      color: #008505;
+      ${tablet} {
+        font-size: 0.9rem;
+      }
+      ${mobile} {
+        font-size: 0.8rem;
       }
     }
   }

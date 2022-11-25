@@ -169,19 +169,24 @@ export default DropDown;
 
 const SelectRegionStyle = styled.div`
   display: flex;
+
   .selectRegion {
-    width: auto;
-    height: auto;
+    width: 13rem;
+    height: 2.5rem;
     border-radius: 5px;
     border-color: #d2d2d2;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 7px;
     cursor: pointer;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
+      width: 12rem;
+      height: 2.3rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
+      width: 10rem;
+      height: 2.1rem;
     }
   }
   .selectDistrict {
@@ -194,10 +199,10 @@ const SelectRegionStyle = styled.div`
     padding: 7px;
     cursor: pointer;
     ${tablet} {
-      font-size: 14px;
+      font-size: 0.9rem;
     }
     ${mobile} {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   }
 `;

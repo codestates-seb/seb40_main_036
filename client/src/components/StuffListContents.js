@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
-function EquipmentContents({ id, tag, title, content, writer, date, view }) {
+function EquipmentContents({
+  id,
+  tag,
+  title,
+  content,
+  writer,
+  date,
+  view,
+  count,
+}) {
   return (
     <Container>
       <ContentsList>
@@ -21,6 +30,7 @@ function EquipmentContents({ id, tag, title, content, writer, date, view }) {
           </div>
           <div className="dateBox">
             <div className="date">{date}</div>
+            <div className="count">댓글: {count}</div>
           </div>
         </Contents>
         <User>
@@ -86,7 +96,7 @@ const Header = styled.div`
   }
 `;
 const Contents = styled.div`
-  padding: 15px;
+  padding: 17px;
   .contentsBox {
     margin-bottom: 10px;
   }
@@ -102,9 +112,17 @@ const Contents = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .date {
-    font-size: 15px;
-    color: #838383;
+  .dateBox {
+    display: flex;
+    justify-content: space-between;
+    .date {
+      font-size: 15px;
+      color: #838383;
+    }
+    .count {
+      font-size: 15px;
+      color: #838383;
+    }
   }
   a:link {
     color: inherit;
@@ -119,7 +137,7 @@ const User = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 18px;
   border-top: 1px solid #d2d2d2;
 
   .userBox {
@@ -131,5 +149,8 @@ const User = styled.div`
         width: 28px;
       }
     }
+  }
+  .view {
+    font-size: 0.9rem;
   }
 `;

@@ -110,6 +110,7 @@ function ReviewList() {
                 date={item.shelterQuestionCreated}
                 tag={item.locationTag}
                 view={item.views}
+                count={item.countAnswer}
               />
             ))}
         </ContentsContainer>
@@ -217,6 +218,9 @@ const ContentsContainer = styled.div`
   border-right-width: 0;
 `;
 const ContentsTitle = styled.div`
+  ${mobile} {
+    padding: 8px 10px;
+  }
   align-items: center;
   display: flex;
   padding: 10px 24px;

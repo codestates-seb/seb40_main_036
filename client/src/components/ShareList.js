@@ -55,7 +55,7 @@ function ShareList() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/question/questions`);
-        console.log(response);
+        console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
@@ -106,6 +106,7 @@ function ShareList() {
                 date={item.questionCreated}
                 tag={item.locationTag}
                 view={item.views}
+                count={item.countAnswer}
               />
             ))}
         </ContentsContainer>
@@ -184,6 +185,9 @@ const ShareListContent = styled.div`
 
 const ShareListTitle = styled.div`
   padding: 24px 24px 0;
+  ${mobile} {
+    padding: 1.2rem 1.2rem 0;
+  }
 `;
 
 const Header = styled.div`
@@ -212,6 +216,9 @@ const ContentsContainer = styled.div`
   border-right-width: 0;
 `;
 const ContentsTitle = styled.div`
+  ${mobile} {
+    padding: 8px 10px;
+  }
   align-items: center;
   display: flex;
   padding: 10px 24px;
