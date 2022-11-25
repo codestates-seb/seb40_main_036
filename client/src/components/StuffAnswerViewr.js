@@ -201,10 +201,10 @@ const DeletEdit = styled.div`
     font-size: 1rem;
     border: none;
     ${tablet} {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
     ${mobile} {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
 `;

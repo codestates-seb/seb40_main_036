@@ -68,7 +68,7 @@ const Header = styled.div`
   }
   .title {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 1.2rem;
     margin: 0px 0px 2.5px;
     line-height: 1.5;
     word-break: break-word;

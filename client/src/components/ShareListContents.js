@@ -30,7 +30,7 @@ const Container = styled.div``;
 const ContentsList = styled.div`
   display: flex;
   padding: 8px 24px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid black;
   border-left-width: 0;
   border-top-width: 0;
@@ -38,6 +38,12 @@ const ContentsList = styled.div`
   border-right-width: 0;
   text-align: center;
   align-items: center;
+  ${tablet} {
+    font-size: 0.9rem;
+  }
+  ${mobile} {
+    font-size: 0.8rem;
+  }
   a:link {
     color: inherit;
     text-decoration: none;
@@ -63,6 +69,12 @@ const ContentsList = styled.div`
       border: 1px solid #d2d2d2;
       border-radius: 5px;
       margin-right: 5px;
+      ${tablet} {
+        width: 60px;
+      }
+      ${mobile} {
+        width: 55px;
+      }
     }
   }
   .writer {

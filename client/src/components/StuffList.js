@@ -162,10 +162,10 @@ const Header = styled.div`
   h1 {
     font-size: 1.68rem;
     ${tablet} {
-      font-size: 1.58rem;
+      font-size: 1.55rem;
     }
     ${mobile} {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
 `;
@@ -188,7 +188,7 @@ const SearchBox = styled.div`
         font-size: 0.9rem;
       }
       ${mobile} {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
       }
     }
     .searchInput {
@@ -205,7 +205,7 @@ const SearchBox = styled.div`
         height: 2.3rem;
       }
       ${mobile} {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         height: 2.1rem;
       }
     }
