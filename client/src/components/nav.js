@@ -150,7 +150,7 @@ const Header = styled.header`
         display: none;
       }
       ul {
-        max-width: 500px;
+        max-width: 550px;
         width: 100%;
       }
       li.nav-title {
