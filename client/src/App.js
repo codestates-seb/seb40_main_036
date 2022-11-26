@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line no-unused-vars
+import Intro from './pages/Intro';
 import Main from './pages/main';
 import Nav from './components/nav';
 import ShareList from './components/ShareList';
@@ -35,7 +36,8 @@ function App() {
         {/* isLogin 값이 true라면 로그아웃이 있는 헤더로 아니라면 그냥 헤더로 변환 */}
         {isLogin ? <LogoutNav isLogin={isLogin} /> : <Nav />}
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Intro />} />
+          <Route path="/map" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
           <Route path="/review" element={<ReviewList />} />
           <Route path="/stuffList" element={<StuffList />} />
