@@ -6,7 +6,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useNavigate } from 'react-router-dom';
 
-const WriteForm = () => {
+const WriteForm = ({ questionId }) => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -69,7 +69,7 @@ const WriteForm = () => {
       return alert('내용을 입력하세요');
     }
     axios
-      .post('/question', {
+      .post(`/question/${questionId}`, {
         memberId: sessionStorage.getItem('memberId'),
         name: sessionStorage.getItem('name'),
         questionTitle: title,

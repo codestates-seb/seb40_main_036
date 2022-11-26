@@ -5,7 +5,6 @@ import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useParams } from 'react-router-dom';
-// import { useParams } from 'react-router-dom';
 
 const WriteUpdate = () => {
   const modules = useMemo(
@@ -41,15 +40,12 @@ const WriteUpdate = () => {
   // 지역 선택 드롭다운
   const [drop, setDrop] = useState('');
 
-  const [test, setTest] = useState(null);
   const { QuestionId } = useParams();
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        setTest(null);
         const response = await axios.get(`/question/${QuestionId}`);
         console.log(response.data);
-        setTest(response.data.questionId);
       } catch (e) {
         console.log(e);
       }
@@ -87,7 +83,7 @@ const WriteUpdate = () => {
       return alert('내용을 입력하세요');
     }
     axios
-      .patch(`/question/${test}}`, {
+      .patch(`/question/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: contents,

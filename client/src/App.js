@@ -46,7 +46,10 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
           <Route path="/writeForm" element={<WriteForm />}></Route>
-          <Route path="/writeUpdate" element={<WriteUpdate />}></Route>
+          <Route
+            path="/writeUpdate/:QuestionId"
+            element={<WriteUpdate />}
+          ></Route>
           <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>

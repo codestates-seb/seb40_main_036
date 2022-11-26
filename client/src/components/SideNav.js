@@ -1,17 +1,29 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [memberId, setMemberId] = useState(0);
 
+  useEffect(() => {
+    if (sessionStorage.getItem('email') === null) {
+      // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
+    } else {
+      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
+      // 로그인 상태 변경
+      setIsLogin(true);
+      setMemberId(sessionStorage.getItem('memberId'));
+    }
+  }, []);
   const PostReservation = () => {
     axios
       .post('/reservation', {
-        memberId: 1,
+        memberId: memberId,
         shelterId: props.shelterId,
         num: count,
       })
@@ -19,11 +31,12 @@ const SideNav = (props) => {
       .then(() => {
         props.setopen(false);
         props.setopen2(true);
+        props.setmessage('예약이 완료되었습니다.');
       })
       .catch(() => {
         props.setopen(false);
         props.setopen2(true);
-        props.setmessage(`오류가 발생하였습니다.새로고침해주세요.`);
+        props.setmessage('오류가 발생하였습니다.새로고침해주세요.');
       });
   };
   return (
@@ -46,27 +59,31 @@ const SideNav = (props) => {
           <div className="mb8 ta-center reservation">
             <FontAwesomeIcon icon={regular('user')} />
             <div className={count > 0 ? 'minus' : 'plus'}>
-              {count > 0 ? (
+              {isLogin && count > 0 ? (
                 <button onClick={() => setCount(count - 1)}>
                   <FontAwesomeIcon icon={solid('minus')} />
                 </button>
               ) : null}
               <p>{count}</p>
-              {count < props.capacity - props.now ? (
+              {isLogin && count < props.capacity - props.now ? (
                 <button onClick={() => setCount(count + 1)}>
                   <FontAwesomeIcon icon={solid('plus')} />
                 </button>
               ) : null}
             </div>
           </div>
-          {count < props.capacity - props.now + 1 ? (
+          {isLogin && count < props.capacity - props.now + 1 ? (
             <div className="reservationtext green">예약이 가능합니다.</div>
-          ) : (
+          ) : isLogin ? (
             <div className="reservationtext red">
               예약가능인원보다 많습니다. 다른 대피소를 이용해주세요.
             </div>
+          ) : (
+            <div className="reservationtext red">
+              비회원은 이용하실 수 없습니다.
+            </div>
           )}
-          {count < props.capacity - props.now + 1 && 0 < count ? (
+          {isLogin && count < props.capacity - props.now + 1 && 0 < count ? (
             <button className="reservation" onClick={PostReservation}>
               예약하기
             </button>
