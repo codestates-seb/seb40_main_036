@@ -1,12 +1,13 @@
 import axios from 'axios';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
-const WriteForm = () => {
+const WriteUpdate = () => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -40,8 +41,23 @@ const WriteForm = () => {
   // 지역 선택 드롭다운
   const [drop, setDrop] = useState('');
 
-  const { questionId } = useParams();
-  console.log(questionId);
+  const [test, setTest] = useState(null);
+  const { QuestionId } = useParams();
+  useEffect(() => {
+    const fetchQustion = async () => {
+      try {
+        setTest(null);
+        const response = await axios.get(`/question/${QuestionId}`);
+        console.log(response.data);
+        setTest(response.data.questionId);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    fetchQustion();
+  }, [QuestionId]);
+
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -71,7 +87,7 @@ const WriteForm = () => {
       return alert('내용을 입력하세요');
     }
     axios
-      .patch(`/question/1`, {
+      .patch(`/question/${test}}`, {
         memberId: sessionStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: contents,
@@ -130,7 +146,7 @@ const WriteForm = () => {
   );
 };
 
-export default WriteForm;
+export default WriteUpdate;
 
 const WriteFormStyle = styled.div`
   width: 1180px;
