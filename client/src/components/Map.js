@@ -49,7 +49,6 @@ const Map = (props) => {
         obj['shelterId'] = x.shelter_id;
         return obj;
       });
-    console.log(lists);
     const listsGreen = lists.filter(
       (x) => Math.floor(x.capacity * 0.3333) > x.now
     );
