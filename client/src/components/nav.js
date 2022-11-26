@@ -67,6 +67,15 @@ const Nav = () => {
                   <Link to="/review">대피소 후기</Link>
                 </li>
               </ul>
+              <ul className="flex">
+                <li className="sm-dblock">계정</li>
+                <li>
+                  <Link to="/login">로그인</Link>
+                </li>
+                <li>
+                  <Link to="/signup">회원가입</Link>
+                </li>
+              </ul>
             </div>
           )}
           <div className="responsive-bar">

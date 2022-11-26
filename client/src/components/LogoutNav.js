@@ -72,6 +72,13 @@ const LogoutNav = () => {
                   <Link to="/review">대피소 후기</Link>
                 </li>
               </ul>
+              <ul>
+                <li className="sm-dblock">계정</li>
+                <li>
+                  <Link onClick={onClickLogout}>로그아웃</Link>
+                  {/*로그아웃 버튼*/}
+                </li>
+              </ul>
             </div>
           )}
           <div className="responsive-bar">
