@@ -20,12 +20,11 @@ public class ReservationInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long reservationInfoId; // 전체 대피소 예약번호
 
-    @ManyToOne
-    @JoinColumn(name = "shelterId")
+    @OneToOne
+    @JoinColumn(name = "shelterId",insertable = false,updatable = false)
     private Shelter shelter;
 
-    @ManyToOne
-    @JoinColumn(name = "reservationId")
+    @OneToMany(mappedBy = "reservationInfo")
     private Reservation reservation;
 
     private String shelterName;
