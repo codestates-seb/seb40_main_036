@@ -40,7 +40,7 @@ public class Shelter {
     private int capacity; // 대피소 수용가능 인원
 
     @OneToMany(mappedBy = "shelter")
-    private Reservation reservation;
+    private List<Reservation> reservations;
 
     @OneToOne(mappedBy = "shelter")
     private ReservationInfo reservationInfo;

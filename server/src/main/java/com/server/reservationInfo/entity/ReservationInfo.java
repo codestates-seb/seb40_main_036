@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,7 +26,7 @@ public class ReservationInfo {
     private Shelter shelter;
 
     @OneToMany(mappedBy = "reservationInfo")
-    private Reservation reservation;
+    private List<Reservation> reservations;
 
     private String shelterName;
 
