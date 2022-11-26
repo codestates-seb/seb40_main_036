@@ -32,6 +32,7 @@ const Nav = () => {
               <li className="nav-title">대피요령</li>
               <li className="nav-title">비품</li>
               <li className="nav-title">커뮤니티</li>
+              <li className="nav-title">대피소 예약</li>
             </ul>
           </div>
           <div className="navbar-member flex">
@@ -46,36 +47,44 @@ const Nav = () => {
           </div>
           {!Ishide && (
             <div className="navbar-slide">
-              <ul className="">
-                <li className="sm-dblock">대피요령</li>
-                <li>
-                  <Link to="Tips">재난별 대피요령</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">비품</li>
-                <li>
-                  <Link to="/stuffList">비품 현황</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">커뮤니티</li>
-                <li>
-                  <Link to="/share">물품 나눔</Link>
-                </li>
-                <li>
-                  <Link to="/review">대피소 후기</Link>
-                </li>
-              </ul>
-              <ul className="flex">
-                <li className="sm-dblock">계정</li>
-                <li>
-                  <Link to="/login">로그인</Link>
-                </li>
-                <li>
-                  <Link to="/signup">회원가입</Link>
-                </li>
-              </ul>
+              <div>
+                <ul className="">
+                  <li className="sm-dblock">대피요령</li>
+                  <li>
+                    <Link to="Tips">재난별 대피요령</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">비품</li>
+                  <li>
+                    <Link to="/stuffList">비품 현황</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">커뮤니티</li>
+                  <li>
+                    <Link to="/share">물품 나눔</Link>
+                  </li>
+                  <li>
+                    <Link to="/review">대피소 후기</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">대피소 예약</li>
+                  <li>
+                    <Link to="/map">대피소 예약하기</Link>
+                  </li>
+                </ul>
+                <ul className="flex">
+                  <li className="sm-dblock">계정</li>
+                  <li className="sm-dblock">
+                    <Link to="/login">로그인</Link>
+                  </li>
+                  <li className="sm-dblock">
+                    <Link to="/signup">회원가입</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           )}
           <div className="responsive-bar">
@@ -140,6 +149,10 @@ const Header = styled.header`
       ${tablet} {
         display: none;
       }
+      ul {
+        max-width: 500px;
+        width: 100%;
+      }
       li.nav-title {
         padding: 4px 24px;
       }
@@ -174,8 +187,18 @@ const Header = styled.header`
       border-top: none;
       border-bottom-left-radius: 15px;
       padding-bottom: 8px;
+      > div {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        ${tablet} {
+          flex-direction: column;
+        }
+      }
       ul {
-        width: 120px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
       }
       .sm-dblock {
         display: none;

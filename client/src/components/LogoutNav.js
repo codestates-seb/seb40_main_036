@@ -51,34 +51,36 @@ const LogoutNav = () => {
           </div>
           {!Ishide && (
             <div className="navbar-slide">
-              <ul className="">
-                <li className="sm-dblock">대피요령</li>
-                <li>
-                  <Link to="Tips">재난별 대피요령</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">비품</li>
-                <li>
-                  <Link to="/stuffList">비품 현황</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">커뮤니티</li>
-                <li>
-                  <Link to="/share">물품 나눔</Link>
-                </li>
-                <li>
-                  <Link to="/review">대피소 후기</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">계정</li>
-                <li>
-                  <Link onClick={onClickLogout}>로그아웃</Link>
-                  {/*로그아웃 버튼*/}
-                </li>
-              </ul>
+              <div>
+                <ul className="">
+                  <li className="sm-dblock">대피요령</li>
+                  <li>
+                    <Link to="Tips">재난별 대피요령</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">비품</li>
+                  <li>
+                    <Link to="/stuffList">비품 현황</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">커뮤니티</li>
+                  <li>
+                    <Link to="/share">물품 나눔</Link>
+                  </li>
+                  <li>
+                    <Link to="/review">대피소 후기</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">계정</li>
+                  <li>
+                    <Link onClick={onClickLogout}>로그아웃</Link>
+                    {/*로그아웃 버튼*/}
+                  </li>
+                </ul>
+              </div>
             </div>
           )}
           <div className="responsive-bar">
@@ -144,6 +146,10 @@ const Header = styled.header`
       ${tablet} {
         display: none;
       }
+      ul {
+        max-width: 500px;
+        width: 100%;
+      }
       li.nav-title {
         padding: 4px 24px;
       }
@@ -178,8 +184,18 @@ const Header = styled.header`
       border-top: none;
       border-bottom-left-radius: 15px;
       padding-bottom: 8px;
+      > div {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        ${tablet} {
+          flex-direction: column;
+        }
+      }
       ul {
-        width: 120px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
       }
       .sm-dblock {
         display: none;
