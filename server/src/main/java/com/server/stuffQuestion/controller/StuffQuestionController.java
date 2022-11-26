@@ -8,6 +8,7 @@ import com.server.stuffQuestion.entity.StuffQuestion;
 import com.server.stuffQuestion.mapper.StuffQuestionMapper;
 import com.server.stuffQuestion.repository.StuffQuestionRepository;
 import com.server.stuffQuestion.service.StuffQuestionService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="StuffQuestion API")
 public class StuffQuestionController {
 
     private final StuffQuestionService stuffQuestionService;

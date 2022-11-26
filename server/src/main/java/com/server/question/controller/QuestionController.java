@@ -7,6 +7,7 @@ import com.server.question.mapper.QuestionMapper;
 import com.server.question.repository.QuestionRepository;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
@@ -24,6 +25,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="Question API")
 public class QuestionController {
 
     private final QuestionService questionService;

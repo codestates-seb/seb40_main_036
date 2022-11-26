@@ -7,6 +7,7 @@ import com.server.shelter.dto.ShelterPostDto;
 import com.server.shelter.entity.Shelter;
 import com.server.shelter.mapper.ShelterMapper;
 import com.server.shelter.service.ShelterService;
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequestMapping("/shelter")
 @Transactional
+@Api(tags ="Shelter API")
 public class ShelterController {
 
     private final ShelterService shelterService;

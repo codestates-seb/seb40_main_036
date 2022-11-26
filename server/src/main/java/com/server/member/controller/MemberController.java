@@ -7,6 +7,9 @@ import com.server.member.mapper.MemberMapper;
 import com.server.member.service.MemberService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -22,6 +25,7 @@ import java.util.List;
 @RequestMapping("/member")
 @AllArgsConstructor
 @Validated
+@Api(tags ="Member API")
 public class MemberController {
 
     private final MemberService memberService;

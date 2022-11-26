@@ -8,6 +8,7 @@ import com.server.shelterQuestion.entity.ShelterQuestion;
 import com.server.shelterQuestion.mapper.ShelterQuestionMapper;
 import com.server.shelterQuestion.repository.ShelterQuestionRepository;
 import com.server.shelterQuestion.service.ShelterQuestionService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="ShelterQuestion API")
 public class ShelterQuestionController {
 
     private final ShelterQuestionService shelterQuestionService;

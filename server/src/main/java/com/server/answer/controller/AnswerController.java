@@ -8,6 +8,7 @@ import com.server.answer.entity.Answer;
 import com.server.answer.service.AnswerService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="Answer API")
 public class AnswerController {
 
     private final AnswerService answerService;
