@@ -59,17 +59,18 @@ function StuffListLookup() {
             />
           </>
         )}
-        {answer.map((item) => (
-          <StuffAnswerViewer
-            key={item.stuffAnswerId}
-            questionId={item.stuffQuestionId}
-            id={item.stuffAnswerId}
-            memberid={item.memberId}
-            user={item.name}
-            answerContents={item.stuffAnswerContent}
-            answerDate={item.stuffAnswerCreated}
-          />
-        ))}
+        {answer &&
+          answer.map((item) => (
+            <StuffAnswerViewer
+              key={item.stuffAnswerId}
+              questionId={item.stuffQuestionId}
+              id={item.stuffAnswerId}
+              memberid={item.memberId}
+              user={item.name}
+              answerContents={item.stuffAnswerContent}
+              answerDate={item.stuffAnswerCreated}
+            />
+          ))}
         <StuffAnswerPost />
       </Container>
     </Contents>

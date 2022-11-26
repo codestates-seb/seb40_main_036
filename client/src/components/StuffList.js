@@ -194,21 +194,22 @@ function StuffList() {
           </button>
         </SelectBox>
         <ContentsContainer>
-          {questions.map((item) => (
-            <StuffListContents
-              key={item.stuffQuestionId}
-              id={item.stuffQuestionId}
-              memberId={item.memberId}
-              title={item.stuffQuestionTitle}
-              content={item.stuffQuestionContent}
-              num={item.stuffQuestionId}
-              writer={item.name}
-              date={item.stuffQuestionCreated}
-              tag={item.locationTag}
-              view={item.views}
-              count={item.countAnswer}
-            />
-          ))}
+          {questions &&
+            questions.map((item) => (
+              <StuffListContents
+                key={item.stuffQuestionId}
+                id={item.stuffQuestionId}
+                memberId={item.memberId}
+                title={item.stuffQuestionTitle}
+                content={item.stuffQuestionContent}
+                num={item.stuffQuestionId}
+                writer={item.name}
+                date={item.stuffQuestionCreated}
+                tag={item.locationTag}
+                view={item.views}
+                count={item.countAnswer}
+              />
+            ))}
         </ContentsContainer>
       </StuffListContent>
     </StuffListContainer>
