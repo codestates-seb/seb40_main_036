@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import WOW from 'wowjs';
-//import Mapimg1 from './../img/MapImg1.png';
 import Mockup1 from './../img/mobileMockup.png';
 import Mockup2 from './../img/pcMockup.png';
-import MapIcon2 from './../img/mapIcon2.png';
+import Mapimg1 from './../img/MapImg1.png';
 import Social from './../img/social-media.png';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -22,7 +21,7 @@ const OddContents = (props) => {
                 key={i}
                 className="wow fadeIn"
                 data-wow-delay={`0.${i + 1}s`}
-                alt="MapImage1"
+                alt={`Intro Img ${i}`}
                 src={x}
               />
             ))}
@@ -118,7 +117,7 @@ const Intro = () => {
             모델을 제안합니다.
           </>
         }
-        img={[MapIcon2]}
+        img={[Mapimg1]}
         extra={
           <div className="btn-group">
             <Link to="/map" className="wow flipInX btn" data-wow-delay=".6s">
@@ -133,7 +132,7 @@ const Intro = () => {
             이웃과 함께, <span className="font-bold">[대피소 후기]</span>
           </>
         }
-        img={[Social]}
+        img={[Mockup2, Social]}
         paragraph={'우리동네 대피소에는 어떤 후기가 있을까요?'}
         extra={
           <div className="btn-group">
@@ -204,14 +203,14 @@ const IntroWrapper = styled.div`
       flex-direction: column;
     }
     > div {
-      flex: 0 1 25%;
+      flex: 0 1 33.3333%;
       margin: 25px;
       ${tablet} {
         margin: 15px;
       }
     }
     .imgWrapper {
-      flex: 0 1 66.6666%;
+      flex: 0 1 50%;
       display: flex;
       justify-content: center;
       border-radius: 0.25em;
