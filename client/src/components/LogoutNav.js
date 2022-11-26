@@ -39,6 +39,7 @@ const LogoutNav = () => {
               <li className="nav-title">대피요령</li>
               <li className="nav-title">비품</li>
               <li className="nav-title">커뮤니티</li>
+              <li className="nav-title">대피소 예약</li>
             </ul>
           </div>
           <div className="navbar-member flex">
@@ -74,8 +75,14 @@ const LogoutNav = () => {
                   </li>
                 </ul>
                 <ul>
-                  <li className="sm-dblock">계정</li>
+                  <li className="sm-dblock">대피소 예약</li>
                   <li>
+                    <Link to="/map">대피소 예약하기</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li className="sm-dblock">계정</li>
+                  <li className="sm-dblock">
                     <Link onClick={onClickLogout}>로그아웃</Link>
                     {/*로그아웃 버튼*/}
                   </li>
@@ -147,7 +154,7 @@ const Header = styled.header`
         display: none;
       }
       ul {
-        max-width: 500px;
+        max-width: 550px;
         width: 100%;
       }
       li.nav-title {
@@ -185,7 +192,7 @@ const Header = styled.header`
       border-bottom-left-radius: 15px;
       padding-bottom: 8px;
       > div {
-        max-width: 500px;
+        max-width: 550px;
         width: 100%;
         display: flex;
         ${tablet} {
