@@ -1,6 +1,9 @@
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import Parser from 'html-react-parser';
+
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -23,12 +26,14 @@ function StuffLisViewerContents({ id, content, memberId }) {
   return (
     <Container>
       <StuffListContents>
-        <div className="contents">{content}</div>
+        <div className="contents">{Parser(content)}</div>
       </StuffListContents>
       {memberId === Number(sessionStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
-          <button className="edit">수정</button>
+          <Link to={`/stuffWriteUpdate/${id}`}>
+            <button className="edit">수정</button>
+          </Link>
         </DeletEdit>
       ) : null}
     </Container>

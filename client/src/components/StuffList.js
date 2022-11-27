@@ -4,6 +4,7 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -117,10 +118,12 @@ function StuffList() {
               </button>
             </div>
             <div className="row">
-              <button className="writingBox">
-                <FaPencilAlt />
-                <div className="writing">글쓰기</div>
-              </button>
+              <Link to="/stuffWriteForm">
+                <button className="writingBox">
+                  <FaPencilAlt />
+                  <div className="writing">글쓰기</div>
+                </button>
+              </Link>
             </div>
           </SearchBox>
         </StuffListTitle>

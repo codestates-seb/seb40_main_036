@@ -116,7 +116,7 @@ function ShareList() {
             <option value="20">20개</option>
             <option value="30">30개</option>
           </select>
-          <Link to="/writeForm">
+          <Link to="/questionWriteForm">
             <button className="writing">
               <FaPencilAlt />
               글쓰기

@@ -33,7 +33,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
       {memberId === Number(sessionStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
-          <Link to={`/writeUpdate/${id}`}>
+          <Link to={`/questionWriteUpdate/${id}`}>
             <button className="edit">수정</button>
           </Link>
         </DeletEdit>

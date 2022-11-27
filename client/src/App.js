@@ -9,13 +9,15 @@ import SignUP from './components/SignUp';
 import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
-import WriteUpdate from './components/WriteUpdate';
 import StuffList from './components/StuffList';
-import WriteForm from './components/WriteForm';
 import LogoutNav from './components/LogoutNav';
 import MyPage from './pages/MyPage';
 import ReviewListLookup from './pages/ReviewListLookUp';
 import StuffListLookup from './pages/StuffListLookup';
+import QuestionWriteForm from './components/QuestionWriteForm';
+import QuestionWriteUpdate from './components/QuestionWriteUpdate';
+import StuffWriteForm from './components/StuffWriteForm';
+import StuffWriteUpdate from './components/StuffWriteUpdate';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -45,11 +47,19 @@ function App() {
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
-          <Route path="/writeForm" element={<WriteForm />}></Route>
           <Route
-            path="/writeUpdate/:QuestionId"
-            element={<WriteUpdate />}
+            path="/questionWriteForm"
+            element={<QuestionWriteForm />}
           ></Route>
+          <Route
+            path="/questionWriteUpdate/:QuestionId"
+            element={<QuestionWriteUpdate />}
+          ></Route>
+          <Route path="/stuffWriteForm" element={<StuffWriteForm />} />
+          <Route
+            path="/stuffWriteUpdate/:QuestionId"
+            element={<StuffWriteUpdate />}
+          />
           <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>

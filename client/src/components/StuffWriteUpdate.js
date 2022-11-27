@@ -6,7 +6,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const WriteUpdate = () => {
+const StuffWriteUpdate = () => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -33,25 +33,23 @@ const WriteUpdate = () => {
     'background',
   ];
 
-  // 초기값 - 제목, 내용
-  // eslint-disable-next-line no-unused-vars
-  const [title, setTitle] = useState('');
-  const [contents, setContents] = useState(''); // eslint-disable-line no-unused-vars
-
   // 지역 선택 드롭다운
   const [drop, setDrop] = useState('');
 
   const { QuestionId } = useParams();
+
   // eslint-disable-next-line no-unused-vars
-  const [test, setTest] = useState('');
-  const [testcon, setTestcon] = useState('');
+  // 글 수정 초기값
+  const [title, setTest] = useState('');
+  const [content, setContent] = useState('');
+
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
-        console.log(response.data);
-        setTest(response.data.questionTitle);
-        setTestcon(response.data.questionContent);
+        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
+        console.log(response.data.data);
+        setTest(response.data.data.stuffQuestionTitle);
+        setContent(response.data.data.stuffQuestionContent);
       } catch (e) {
         console.log(e);
       }
@@ -61,13 +59,13 @@ const WriteUpdate = () => {
   }, [QuestionId]);
 
   // eslint-disable-next-line no-unused-vars
-  const onChangeTitle = (e) => {
+  const updateTitle = (e) => {
     setTest(e.target.value);
   };
 
   // eslint-disable-next-line no-unused-vars
-  const onChangeContents = (el) => {
-    setTestcon(el);
+  const updateContents = (el) => {
+    setContent(el);
   };
 
   // 지역 구 받아오는 값
@@ -80,21 +78,21 @@ const WriteUpdate = () => {
   const update = () => {
     if (drop === '') {
       return alert('지역을 선택하세요');
-    } else if (test === '') {
+    } else if (title === '') {
       return alert('제목을 입력하세요');
-    } else if (testcon === '') {
+    } else if (content === '') {
       return alert('내용을 입력하세요');
     }
     axios
-      .patch(`/question/${QuestionId}`, {
+      .patch(`/stuffQuestion/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
-        questionTitle: test,
-        questionContent: testcon,
+        stuffQuestionTitle: title,
+        stuffQuestionContent: content,
         locationTag: drop,
       })
       .then((response) => {
         console.log(response);
-        navigate(`/share/${QuestionId}`);
+        navigate(`/stuffLook/${QuestionId}`);
       })
       .catch((error) => {
         // Handle error.
@@ -116,8 +114,8 @@ const WriteUpdate = () => {
               className="titleInput"
               type="text"
               id="titleWrite"
-              value={test || ''}
-              onChange={onChangeTitle}
+              value={title || ''}
+              onChange={updateTitle}
             />
           </div>
         </div>
@@ -128,8 +126,8 @@ const WriteUpdate = () => {
               className="editor"
               modules={modules}
               formats={formats}
-              value={testcon || ''}
-              onChange={onChangeContents}
+              value={content || ''}
+              onChange={updateContents}
             />
           </EditorStyle>
         </div>
@@ -146,7 +144,7 @@ const WriteUpdate = () => {
   );
 };
 
-export default WriteUpdate;
+export default StuffWriteUpdate;
 
 const WriteFormStyle = styled.div`
   width: 1180px;

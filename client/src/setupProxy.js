@@ -15,8 +15,7 @@ module.exports = function (app) {
       '/shelterAnswer',
     ],
     createProxyMiddleware({
-      target:
-        'http://ec2-43-201-83-32.ap-northeast-2.compute.amazonaws.com:8080',
+      target: 'https://e071-2001-e60-8798-7654-5594-c20b-6051-3258.jp.ngrok.io',
       changeOrigin: true,
     })
   );

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import Parser from 'html-react-parser';
+
 function EquipmentContents({
   id,
   tag,
@@ -25,7 +28,7 @@ function EquipmentContents({
         <Contents>
           <div className="contentsBox">
             <Link to={`/stuffLook/${id}`} className="contents">
-              {content}
+              {Parser(content)}
             </Link>
           </div>
           <div className="dateBox">
