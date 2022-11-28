@@ -1,38 +1,40 @@
-name: GitHub Pages
 
+name: deploy
 on:
   push:
-    branches:
-      - dev  # Set a branch name to trigger deployment
-  pull_request:
+    branches: [dev]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+
+    env:
+      CI: false
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
       - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.101.0'
-
-      - name: Build
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - name: Install modules
+        run: npm install
+      - name: Run test codes
+        run: npm run test
+      - name: Build project
         run: npm run build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        # If you're changing the branch from main,
-        # also change the `main` in `refs/heads/main`
-        # below accordingly.
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: Deploy build outputs
+        uses: appleboy/scp-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PEM_KEY }}
+          port: ${{ secrets.PORT }}
+          source: "build/*"
+          strip_components: 1
+          target: "/var/www/html"
