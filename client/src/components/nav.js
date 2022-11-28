@@ -150,7 +150,7 @@ const Header = styled.header`
         display: none;
       }
       ul {
-        max-width: 550px;
+        max-width: 600px;
         width: 100%;
       }
       li.nav-title {
@@ -188,7 +188,7 @@ const Header = styled.header`
       border-bottom-left-radius: 15px;
       padding-bottom: 8px;
       > div {
-        max-width: 550px;
+        max-width: 600px;
         width: 100%;
         display: flex;
         ${tablet} {

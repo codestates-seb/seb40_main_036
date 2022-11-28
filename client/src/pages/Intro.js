@@ -14,21 +14,31 @@ const OddContents = (props) => {
   return (
     <div className="Wrapper">
       <div className="subWrapper">
-        <div className="imgWrapper" data-wow-iteration="1">
+        <div className="imgWrapper">
           {props.img &&
             props.img.map((x, i) => (
               <img
                 key={i}
                 className="wow fadeIn"
                 data-wow-delay={`0.${i + 1}s`}
+                data-wow-duration="1.5s"
                 alt={`Intro Img ${i}`}
                 src={x}
               />
             ))}
         </div>
         <div className="fd-column ta-left">
-          <h1 className="wow fadeInRight font-light title">{props.title}</h1>
-          <p className="wow fadeInUp" data-wow-delay=".3s">
+          <h1
+            className="wow fadeInRight font-light title"
+            data-wow-duration="1.5s"
+          >
+            {props.title}
+          </h1>
+          <p
+            className="wow fadeInUp"
+            data-wow-delay=".3s"
+            data-wow-duration="1.5s"
+          >
             {props.paragraph}
           </p>
           {props.extra}
@@ -42,19 +52,29 @@ const EvenContents = (props) => {
     <div className="Wrapper">
       <div className="subWrapper">
         <div className="fd-column ta-left">
-          <h1 className="wow fadeInRight font-bold title">{props.title}</h1>
-          <p className="wow fadeInUp" data-wow-delay=".3s">
+          <h1
+            className="wow fadeInRight font-light title"
+            data-wow-duration="1.5s"
+          >
+            {props.title}
+          </h1>
+          <p
+            className="wow fadeInUp"
+            data-wow-delay=".3s"
+            data-wow-duration="1.5s"
+          >
             {props.paragraph}
           </p>
           {props.extra}
         </div>
-        <div className="imgWrapper" data-wow-iteration="1">
+        <div className="imgWrapper">
           {props.img &&
             props.img.map((x, i) => (
               <img
                 key={i}
                 className="wow fadeIn"
                 data-wow-delay={`0.${i + 1}s`}
+                data-wow-duration="1.5s"
                 alt="MapImage1"
                 src={x}
               />
@@ -107,7 +127,7 @@ const Intro = () => {
         }
       />
       <EvenContents
-        title={'SALIDA?'}
+        title={<span className="font-bold">SALIDA?</span>}
         paragraph={
           <>
             스페인어로 출구를 의미하는 [Salida]는 지진 발생 후 지진 대피소로
@@ -138,6 +158,22 @@ const Intro = () => {
           <div className="btn-group">
             <Link to="/review" className="wow flipInX btn" data-wow-delay=".6s">
               대피소 후기 보러가기
+            </Link>
+          </div>
+        }
+      />
+      <EvenContents
+        title={
+          <>
+            우리동네 대피소는? <span className="font-bold">비품확인</span>
+          </>
+        }
+        img={[Mockup2, Social]}
+        paragraph={'우리동네 대피소 비품을 알고싶다면?'}
+        extra={
+          <div className="btn-group">
+            <Link to="/review" className="wow flipInX btn" data-wow-delay=".6s">
+              비품확인 보러가기
             </Link>
           </div>
         }
@@ -201,6 +237,7 @@ const IntroWrapper = styled.div`
     }
     ${mobile} {
       flex-direction: column;
+      align-items: baseline;
     }
     > div {
       flex: 0 1 33.3333%;
@@ -216,7 +253,6 @@ const IntroWrapper = styled.div`
       border-radius: 0.25em;
       overflow: hidden;
       position: relative;
-      align-self: stretch;
       ${tablet} {
         flex: 0 1 50%;
       }
