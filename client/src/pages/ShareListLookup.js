@@ -59,18 +59,17 @@ function ShareListLookup() {
             />
           </>
         )}
-        {answer &&
-          answer.map((item) => (
-            <ShareAnswerViewr
-              key={item.answerId}
-              questionId={item.questionId}
-              id={item.answerId}
-              memberid={item.memberId}
-              user={item.name}
-              answerContents={item.answerContent}
-              answerDate={item.answerCreated}
-            />
-          ))}
+        {answer.map((item) => (
+          <ShareAnswerViewr
+            key={item.answerId}
+            questionId={item.questionId}
+            id={item.answerId}
+            memberid={item.memberId}
+            user={item.name}
+            answerContents={item.answerContent}
+            answerDate={item.answerCreated}
+          />
+        ))}
         <ShareAnswerPost />
       </Container>
     </Contents>

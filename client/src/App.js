@@ -10,12 +10,16 @@ import SignUP from './components/SignUp';
 import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
-import WriteUpdate from './components/WriteUpdate';
 import StuffList from './components/StuffList';
-import WriteForm from './components/WriteForm';
 import MyPage from './pages/MyPage';
 import ReviewListLookup from './pages/ReviewListLookUp';
 import StuffListLookup from './pages/StuffListLookup';
+import StuffWriteForm from './components/StuffWriteForm';
+import StuffWriteUpdate from './components/StuffWriteUpdate';
+import ShareWriteForm from './components/ShareWriteForm';
+import ShareWriteUpdate from './components/ShareWriteUpdate';
+import ShelterWriteForm from './components/ShelterWriteForm';
+import ShelterWriteUpdate from './components/ShelterWriteUpdate';
 
 function App() {
   return (
@@ -34,8 +38,21 @@ function App() {
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
-          <Route path="/writeForm" element={<WriteForm />}></Route>
-          <Route path="/writeUpdate" element={<WriteUpdate />}></Route>
+          <Route path="/shareWriteForm" element={<ShareWriteForm />}></Route>
+          <Route
+            path="/shareWriteUpdate/:QuestionId"
+            element={<ShareWriteUpdate />}
+          ></Route>
+          <Route path="/stuffWriteForm" element={<StuffWriteForm />} />
+          <Route
+            path="/stuffWriteUpdate/:QuestionId"
+            element={<StuffWriteUpdate />}
+          />
+          <Route path="/shelterWriteForm" element={<ShelterWriteForm />} />
+          <Route
+            path="/shelterWriteUpdate/:QuestionId"
+            element={<ShelterWriteUpdate />}
+          />
           <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>

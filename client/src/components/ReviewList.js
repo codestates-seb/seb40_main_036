@@ -145,7 +145,7 @@ function ReviewList() {
             <option value="20">20개</option>
             <option value="30">30개</option>
           </select>
-          <Link to="/writeForm">
+          <Link to="/shelterWriteForm">
             <button className="writing">
               <FaPencilAlt />
               글쓰기

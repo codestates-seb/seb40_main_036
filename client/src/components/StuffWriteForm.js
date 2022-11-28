@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const WriteForm = () => {
+const StuffWriteForm = () => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -69,16 +69,16 @@ const WriteForm = () => {
       return alert('내용을 입력하세요');
     }
     axios
-      .post('/question', {
+      .post(`/stuffQuestion`, {
         memberId: sessionStorage.getItem('memberId'),
         name: sessionStorage.getItem('name'),
-        questionTitle: title,
-        questionContent: contents,
+        stuffQuestionTitle: title,
+        stuffQuestionContent: contents,
         locationTag: drop,
       })
       .then((response) => {
         console.log(response);
-        navigate('/share');
+        navigate('/stuffList');
       })
       .catch((error) => {
         // Handle error.
@@ -121,15 +121,17 @@ const WriteForm = () => {
         <button onClick={submit} className="registBox">
           <div className="registInput">등록</div>
         </button>
-        <button className="cancelBox">
-          <div className="cancelInput">취소</div>
-        </button>
+        <Link to="/stuffList" style={{ textDecoration: 'none' }}>
+          <button className="cancelBox">
+            <div className="cancelInput">취소</div>
+          </button>
+        </Link>
       </div>
     </WriteFormStyle>
   );
 };
 
-export default WriteForm;
+export default StuffWriteForm;
 
 const WriteFormStyle = styled.div`
   width: 1180px;

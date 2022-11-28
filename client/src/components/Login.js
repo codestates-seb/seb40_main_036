@@ -40,9 +40,9 @@ const Login = () => {
         // localStorage.setItem('authorization', res.headers.authorization); 백엔드에서 토큰 구현하면 로컬스토리지로
         window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
       })
-      .catch((e) => {
-        console.log(e.response.data);
-        return '이메일 혹은 비밀번호를 확인하세요.';
+      .catch((err) => {
+        console.log(err);
+        alert('이메일 혹은 비밀번호를 확인하세요.');
       });
   };
 

@@ -4,6 +4,7 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import InfiniteScroll from 'react-infinite-scroller';
 import { DotPulse, DotSpinner } from '@uiball/loaders';
 
@@ -188,10 +189,12 @@ function StuffList() {
               </button>
             </div>
             <div className="row">
-              <button className="writingBox">
-                <FaPencilAlt />
-                <div className="writing">글쓰기</div>
-              </button>
+              <Link to="/stuffWriteForm" style={{ textDecoration: 'none' }}>
+                <button className="writingBox">
+                  <FaPencilAlt />
+                  <div className="writing">글쓰기</div>
+                </button>
+              </Link>
             </div>
           </SearchBox>
         </StuffListTitle>

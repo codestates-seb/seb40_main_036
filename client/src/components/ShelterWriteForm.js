@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const WriteForm = () => {
+const ShelterWriteForm = () => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -40,8 +40,6 @@ const WriteForm = () => {
   // 지역 선택 드롭다운
   const [drop, setDrop] = useState('');
 
-  const { questionId } = useParams();
-  console.log(questionId);
   const onChangeTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -60,9 +58,9 @@ const WriteForm = () => {
     setDrop(e.target.value);
   };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const update = () => {
+  const submit = () => {
     if (drop === '') {
       return alert('지역을 선택하세요');
     } else if (title === '') {
@@ -71,21 +69,22 @@ const WriteForm = () => {
       return alert('내용을 입력하세요');
     }
     axios
-      .patch(`/question/1`, {
+      .post(`/shelterQuestion`, {
         memberId: sessionStorage.getItem('memberId'),
-        questionTitle: title,
-        questionContent: contents,
+        name: sessionStorage.getItem('name'),
+        shelterQuestionTitle: title,
+        shelterQuestionContent: contents,
         locationTag: drop,
       })
       .then((response) => {
         console.log(response);
+        navigate('/review');
       })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
       });
   };
-
   return (
     <WriteFormStyle>
       <form className="input">
@@ -119,18 +118,20 @@ const WriteForm = () => {
         </div>
       </form>
       <div className="reCancelBox">
-        <button onClick={update} className="registBox">
-          <div className="registInput">수정</div>
+        <button onClick={submit} className="registBox">
+          <div className="registInput">등록</div>
         </button>
-        <button className="cancelBox">
-          <div className="cancelInput">취소</div>
-        </button>
+        <Link to="/review" style={{ textDecoration: 'none' }}>
+          <button className="cancelBox">
+            <div className="cancelInput">취소</div>
+          </button>
+        </Link>
       </div>
     </WriteFormStyle>
   );
 };
 
-export default WriteForm;
+export default ShelterWriteForm;
 
 const WriteFormStyle = styled.div`
   width: 1180px;
