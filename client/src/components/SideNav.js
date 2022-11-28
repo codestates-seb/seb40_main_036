@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
@@ -30,13 +30,32 @@ const SideNav = (props) => {
       .then((res) => console.log(res))
       .then(() => {
         props.setopen(false);
-        props.setopen2(true);
-        props.setmessage('예약이 완료되었습니다.');
+        Swal.fire({
+          icon: 'success',
+          title: '예약완료',
+          text: '성공적으로 예약되었습니다.',
+          confirmButtonText: '확인',
+        }).then((res) => {
+          if (res.isConfirmed) {
+            window.location.reload();
+          }
+        });
       })
+
       .catch(() => {
         props.setopen(false);
-        props.setopen2(true);
-        props.setmessage('오류가 발생하였습니다.새로고침해주세요.');
+        Swal.fire({
+          icon: 'warning',
+          title: '오류',
+          text: '알수 없는 오류가 발생하였습니다.',
+          confirmButtonText: '새로고침',
+        }).then((res) => {
+          if (res.isConfirmed) {
+            window.location.reload();
+          } else {
+            //취소
+          }
+        });
       });
   };
   return (
