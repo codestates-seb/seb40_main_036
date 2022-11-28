@@ -76,7 +76,7 @@ const SignUP = () => {
     }
   };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onClickSignUp = (e) => {
     if (inputName === '') {
@@ -104,7 +104,7 @@ const SignUP = () => {
         console.log(response);
         console.log('User profile', response.data.memberId);
         console.log('User token', response.data.access_token);
-        // navigate('/login');
+        navigate('/login');
       })
       .catch((error) => {
         // Handle error.

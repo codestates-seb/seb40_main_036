@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Logo from './../img/SalidaLogo.png';
 import { useState } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   // 초기값 - 이메일, 비밀번호
@@ -22,12 +23,20 @@ const Login = () => {
   };
 
   const onClickLogin = (event) => {
-    if (inputId === '') {
-      setIdMessage('아이디를 입력하세요');
-    } else if (inputPw === '') {
-      setPasswordMessage('비밀번호를 입력하세요');
-    }
     event.preventDefault();
+    if (inputId === '' && inputPw === '') {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 실패!',
+        text: '이메일과 비밀번호 먼저 입력하세요!',
+      });
+    }
+    if (inputId === '') {
+      return setIdMessage('아이디를 입력하세요');
+    } else if (inputPw === '') {
+      return setPasswordMessage('비밀번호를 입력하세요');
+    }
+
     axios
       .post(
         '/member/login',
@@ -51,7 +60,12 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
-        alert('이메일 혹은 비밀번호를 잘못 잘못 입력했습니다.');
+        Swal.fire({
+          icon: 'error',
+          title: '이메일 또는 비밀번호를 잘못 입력했습니다',
+          text: '입력하신 내용을 다시 확인해주세요.',
+          width: '40em',
+        });
       });
   };
 
