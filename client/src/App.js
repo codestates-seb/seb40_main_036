@@ -24,7 +24,7 @@ import ShelterWriteUpdate from './components/ShelterWriteUpdate';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename="/seb40_main_036">
+      <BrowserRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Intro />} />
