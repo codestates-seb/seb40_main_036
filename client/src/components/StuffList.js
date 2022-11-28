@@ -6,7 +6,7 @@ import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import InfiniteScroll from 'react-infinite-scroller';
-import { DotPulse } from '@uiball/loaders';
+import { DotSpinner } from '@uiball/loaders';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -30,9 +30,9 @@ function StuffList() {
       console.log('불러오기');
       // loading 상태를 true 로 바꿉니다.
       setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/stuffQuestion?page=${pageNum}&size=10`
+        `/stuffQuestion?page=${pageNum}&size=15`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
@@ -180,7 +180,7 @@ function StuffList() {
             ))}
           <Loader>
             {totalPage > pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
-            {loading && <DotPulse size={80} speed={0.9} color="#008505" />}
+            {loading && <DotSpinner size={80} speed={0.9} color="#008505" />}
           </Loader>
         </ContentsContainer>
       </StuffListContent>
@@ -359,9 +359,8 @@ const ContentsContainer = styled.div`
 `;
 
 const Loader = styled.div`
-  width: 760px;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0 0 16px 0;
+  align-items: center;
 `;
