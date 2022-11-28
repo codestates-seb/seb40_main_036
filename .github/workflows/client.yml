@@ -1,22 +1,38 @@
-# .github/workflows/client.yml
-name: client
+name: GitHub Pages
+
 on:
   push:
     branches:
-      - dev
+      - dev  # Set a branch name to trigger deployment
+  pull_request:
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout source code.
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm i
-        working-directory: ./client
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.101.0'
+
       - name: Build
         run: npm run build
-        working-directory: ./client
-      - name: Deploy to gh-pages
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        # If you're changing the branch from main,
+        # also change the `main` in `refs/heads/main`
+        # below accordingly.
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          publish_dir: ./build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
