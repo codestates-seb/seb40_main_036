@@ -9,6 +9,10 @@ const Login = () => {
   const [inputId, setInputId] = useState('');
   const [inputPw, setInputPw] = useState('');
 
+  // 오류메세지 상태
+  const [idMessage, setIdMessage] = useState('');
+  const [passwordMessage, setPasswordMessage] = useState('');
+
   const onChangeId = (e) => {
     setInputId(e.target.value);
   };
@@ -17,9 +21,14 @@ const Login = () => {
     setInputPw(e.target.value);
   };
 
-  const onClickLogin = async (event) => {
+  const onClickLogin = (event) => {
+    if (inputId === '') {
+      setIdMessage('아이디를 입력하세요');
+    } else if (inputPw === '') {
+      setPasswordMessage('비밀번호를 입력하세요');
+    }
     event.preventDefault();
-    return await axios
+    axios
       .post(
         '/member/login',
         {
@@ -42,7 +51,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
-        alert('이메일 혹은 비밀번호를 확인하세요.');
+        alert('이메일 혹은 비밀번호를 잘못 잘못 입력했습니다.');
       });
   };
 
@@ -67,6 +76,7 @@ const Login = () => {
                   onChange={onChangeId}
                 />
               </div>
+              <div className="msgEmail">{idMessage}</div>
             </div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="pwWrite">
@@ -81,6 +91,7 @@ const Login = () => {
                   onChange={onChangePw}
                 />
               </div>
+              <div className="msgPw">{passwordMessage}</div>
             </div>
             <button onClick={onClickLogin}>로그인</button>
             <div className="accountExistence">
@@ -105,12 +116,12 @@ const LoginInput = styled.div`
   }
   .idPwText {
     display: flex;
-    padding: 3px;
+    padding-bottom: 5px;
     font-weight: 500;
     font-size: 16px;
   }
   .idPwInput {
-    width: 289px;
+    width: 350px;
     height: 35px;
     left: 571px;
     top: 436px;
@@ -119,6 +130,18 @@ const LoginInput = styled.div`
   }
   .idPwBox {
     margin-bottom: 25px;
+  }
+  .msgEmail {
+    padding-top: 5px;
+    font-size: 12px;
+    color: red;
+    font-weight: 450;
+  }
+  .msgPw {
+    padding-top: 5px;
+    font-size: 12px;
+    color: red;
+    font-weight: 450;
   }
   button {
     color: white;
@@ -132,7 +155,8 @@ const LoginInput = styled.div`
     margin-top: 10px;
   }
   .accountExistence {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
   }
   .accountExistence a {
@@ -141,8 +165,8 @@ const LoginInput = styled.div`
   }
 `;
 const LoginForm = styled.div`
-  width: 340px;
-  height: 458px;
+  width: 400px;
+  height: 100%;
   margin: 150px auto;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
