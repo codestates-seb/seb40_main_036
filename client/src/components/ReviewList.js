@@ -6,6 +6,7 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
+import { DotSpinner } from '@uiball/loaders';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -86,7 +87,15 @@ function ReviewList() {
 
     fetchQustion();
   }, []);
-  if (loading) return <div>로딩중..</div>;
+  if (loading)
+    return (
+      <div>
+        {' '}
+        <Loading>
+          <DotSpinner size={80} speed={0.9} color="#008505" />
+        </Loading>
+      </div>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
@@ -190,7 +199,13 @@ function ReviewList() {
 }
 
 export default ReviewList;
-
+const Loading = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const ShareListContainer = styled.div`
   width: 100%;
   max-width: 1400px;

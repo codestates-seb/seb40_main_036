@@ -1,86 +1,109 @@
 import styled from 'styled-components';
 import StuffListContents from './StuffListContents';
 import CityDown from './CityDown';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 // import InfiniteScroll from 'react-infinite-scroller';
+import { DotPulse, DotSpinner } from '@uiball/loaders';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffList() {
   const textRef = useRef();
-  const [questions, setQuestions] = useState(null); //데이터 저장
-  const [error, setError] = useState();
+  const [pageEnd, setPageEnd] = useState();
+  const [questions, setQuestions] = useState(); //데이터 저장
+  const [page, setPage] = useState(1);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  // const [totalPage, setTotalPage] = useState();
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
   });
   const [drop, setDrop] = useState();
-  // const [fetching, setFetching] = useState(false); // 추가 데이터를 로드하는지 아닌지를 담기위한 state
-  // const [paging, setPaging] = useState({ next: undefined }); // API로부터 받아온 다음 페이지 데이터를 저장
-  // const fetchFeeds = async () => {
-  //   // 로딩중인 상태로 전환
+
+  const fetchQustion = useCallback(async () => {
+    try {
+      // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
+      setError(null);
+      setQuestions(null);
+      // loading 상태를 true 로 바꿉니다.
+      setLoading(true);
+      const response = await axios.get(`/stuffQuestion?page=${page}&size=10`);
+      console.log(response.data);
+      setQuestions(questions.concat(response.data.data));
+      // setTotalPage(response.data.pageInfo.totalPages);
+      // console.log(response.data.pageInfo.totalPages);
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
+  }, [page]);
+
+  useEffect(() => {
+    fetchQustion(page);
+  }, [page]);
+  const handleObserver = useCallback((entries) => {
+    const target = entries[0];
+    if (target.isIntersecting && !loading) {
+      setPage((page) => page + 1);
+      console.log(page);
+    }
+  }, []);
+
+  useEffect(() => {
+    const option = {
+      root: null,
+      rootMargin: '30px',
+      threshold: 1.0,
+    };
+    const observer = new IntersectionObserver(handleObserver, option);
+    if (pageEnd) observer.observe(pageEnd);
+    console.log(observer);
+  }, [handleObserver]);
+
+  // 무한 스크롤
+  // const fetchQustion = async () => {
   //   setLoading(true);
-
   //   await axios
-  //     .get(`/stuffQuestion?page=${paging}&size=10`)
+  //     .get(`/stuffQuestion?page=${page}&size=20`)
   //     .then((response) => {
-  //       // GET 요청으로 받아온 데이터를 state에 잘 넣어줍니다
   //       setQuestions(response.data.data);
-  //       console.log(response);
-  //       setPaging(response.data.pageInfo.page);
-  //       console.log(paging);
+  //       console.log(response.data);
+  //       setTotalPage(response.data.pageInfo.totalPages);
+  //       setLoading(false);
   //     })
-  //     .catch((error) => {
-  //       // Error 핸들링
-  //       console.log(error);
-  //     });
-  //   // 로딩중이지 않은 상태로 전환
-  //   setLoading(false);
+  //     .catch((e) => setError(e));
   // };
 
-  // // 컴포넌트가 마운트되면 해당 함수를 호출해서 초기 데이터를 받아옵니다.
-  // useEffect(() => {
-  //   fetchFeeds();
-  // }, []);
-
-  // const fetchMoreFeeds = async () => {
-  //   // 추가 데이터를 로드하는 상태로 전환
-  //   setFetching(true);
-
-  //   // API로부터 받아온 페이징 데이터를 이용해 다음 데이터를 로드
-  //   await axios.get(paging.next).then((response) => {
-  //     const fetchedData = response.data.data; // 피드 데이터 부분
-  //     // 기존 데이터 배열과 새로 받아온 데이터 배열을 합쳐 새 배열을 만들고 state에 저장한다.
-  //     const mergedData = questions.concat(...fetchedData);
-  //     setQuestions(mergedData);
-  //   });
-  //   // 추가 데이터 로드 끝
-  //   setFetching(false);
-  // };
-
-  // // 스크롤 이벤트 핸들러
-  // const handleScroll = () => {
-  //   const scrollHeight = document.documentElement.scrollHeight;
-  //   const scrollTop = document.documentElement.scrollTop;
-  //   const clientHeight = document.documentElement.clientHeight;
-  //   if (scrollTop + clientHeight >= scrollHeight && fetching === false) {
-  //     // 페이지 끝에 도달하면 추가 데이터를 받아온다
-  //     fetchMoreFeeds();
+  // const onIntersect = (entries, observer) => {
+  //   const entry = entries[0];
+  //   if (entry.isIntersecting && !loading) {
+  //     setTimeout(async () => {
+  //       setPage((page) => page + 1);
+  //       observer.observe(entry.pageEnd);
+  //       setLoading(false);
+  //     }, 300);
   //   }
   // };
 
   // useEffect(() => {
-  //   // scroll event listener 등록
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     // scroll event listener 해제
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // });
+  //   if (page !== 1 && totalPage >= page) {
+  //     fetchQustion(page);
+  //   }
+  // }, [page]);
+
+  // useEffect(() => {
+  //   let observer;
+  //   if (pageEnd) {
+  //     observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
+  //     observer.observe(pageEnd);
+  //   }
+  //   return () => observer && observer.disconnect();
+  // }, [pageEnd]);
+
   const handleDrop = (e) => {
     setDrop(e.target.value);
   };
@@ -117,27 +140,12 @@ function StuffList() {
       handleSearchButton();
     }
   };
-
-  useEffect(() => {
-    const fetchQustion = async () => {
-      try {
-        // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
-        setError(null);
-        setQuestions(null);
-        // loading 상태를 true 로 바꿉니다.
-        setLoading(true);
-        const response = await axios.get(`/stuffQuestion?page=1&size=20`);
-        console.log(response.data);
-        setQuestions(response.data.data); // 데이터는 response.data 안에 들어있습니다.
-      } catch (e) {
-        setError(e);
-      }
-      setLoading(false);
-    };
-
-    fetchQustion();
-  }, []);
-  if (loading) return <div>로딩중..</div>;
+  if (loading)
+    return (
+      <Loading>
+        <DotSpinner size={80} speed={0.9} color="#008505" />
+      </Loading>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
@@ -196,20 +204,28 @@ function StuffList() {
         <ContentsContainer>
           {questions &&
             questions.map((item) => (
-              <StuffListContents
-                key={item.stuffQuestionId}
-                id={item.stuffQuestionId}
-                memberId={item.memberId}
-                title={item.stuffQuestionTitle}
-                content={item.stuffQuestionContent}
-                num={item.stuffQuestionId}
-                writer={item.name}
-                date={item.stuffQuestionCreated}
-                tag={item.locationTag}
-                view={item.views}
-                count={item.countAnswer}
-              />
+              <div id="observer" key={item.stuffQuestionId}>
+                <StuffListContents
+                  key={item.stuffQuestionId}
+                  id={item.stuffQuestionId}
+                  memberId={item.memberId}
+                  title={item.stuffQuestionTitle}
+                  content={item.stuffQuestionContent}
+                  num={item.stuffQuestionId}
+                  writer={item.name}
+                  date={item.stuffQuestionCreated}
+                  tag={item.locationTag}
+                  view={item.views}
+                  count={item.countAnswer}
+                />
+              </div>
             ))}
+
+          {loading && (
+            <Loader ref={setPageEnd}>
+              <DotPulse size={40} speed={1.3} color="#008505" />
+            </Loader>
+          )}
         </ContentsContainer>
       </StuffListContent>
     </StuffListContainer>
@@ -217,7 +233,13 @@ function StuffList() {
 }
 
 export default StuffList;
-
+const Loading = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const StuffListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
@@ -378,4 +400,12 @@ const ContentsContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 5px;
   justify-content: center;
+`;
+
+const Loader = styled.div`
+  width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 16px 0;
 `;

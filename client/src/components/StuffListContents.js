@@ -51,7 +51,7 @@ export default EquipmentContents;
 
 const Container = styled.div``;
 const ContentsList = styled.div`
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   transition: box-shadow 0.25s ease-in 0s, transform 0.2s ease-in 0s;
   margin: 0.8rem;
