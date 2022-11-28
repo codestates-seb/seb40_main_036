@@ -39,7 +39,7 @@ const Nav = () => {
           <div className={`navbar-list ${Ishide ? 'sm-hide' : ''}`}>
             <ul>
               <li>
-                <Link to="Tips">재난별 대피요령</Link>
+                <Link to="/map">대피소 예약하기</Link>
               </li>
               <li>
                 <Link to="/stuffList">비품 현황</Link>
@@ -51,7 +51,7 @@ const Nav = () => {
                 <Link to="/review">대피소 후기</Link>
               </li>
               <li>
-                <Link to="/map">대피소 예약하기</Link>
+                <Link to="Tips">재난별 대피요령</Link>
               </li>
             </ul>
             <ul>
