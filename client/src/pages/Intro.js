@@ -129,7 +129,7 @@ const Intro = () => {
       <OddContents
         title={
           <>
-            이웃과 함께, <span className="font-bold">[대피소 후기]</span>
+            이웃과 함께, <span className="font-bold">대피소후기</span>
           </>
         }
         img={[Mockup2, Social]}
