@@ -191,10 +191,10 @@ const IntroWrapper = styled.div`
     }
   }
   .font-light {
-    font-weight: 400;
+    font-weight: 200;
   }
   .font-bold {
-    font-weight: 900;
+    font-weight: 600;
   }
 
   .Wrapper:nth-child(even) {
