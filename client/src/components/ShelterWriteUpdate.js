@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
-const StuffWriteForm = () => {
+const ShelterWriteUpdate = () => {
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -33,25 +33,40 @@ const StuffWriteForm = () => {
     'background',
   ];
 
-  // 초기값 - 제목, 내용
-  const [title, setTitle] = useState('');
-  const [contents, setContents] = useState(''); // eslint-disable-line no-unused-vars
-
   // 지역 선택 드롭다운
   const [drop, setDrop] = useState('');
 
-  const onChangeTitle = (e) => {
-    setTitle(e.target.value);
+  const { QuestionId } = useParams();
+
+  // eslint-disable-next-line no-unused-vars
+  // 글 수정 초기값
+  const [title, setTest] = useState('');
+  const [content, setContent] = useState('');
+
+  useEffect(() => {
+    const fetchQustion = async () => {
+      try {
+        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
+        console.log(response.data.data);
+        setTest(response.data.data.shelterQuestionTitle);
+        setContent(response.data.data.shelterQuestionContent);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    fetchQustion();
+  }, [QuestionId]);
+
+  // eslint-disable-next-line no-unused-vars
+  const updateTitle = (e) => {
+    setTest(e.target.value);
   };
 
   // eslint-disable-next-line no-unused-vars
-  const onChangeContents = (el) => {
-    setContents(el);
+  const updateContents = (el) => {
+    setContent(el);
   };
-
-  // const extractTextPattern = /(<([^>]+)>)/gi;
-  // let a = contents.replace(extractTextPattern, '');
-  // console.log(a);
 
   // 지역 구 받아오는 값
   const handleDrop = (e) => {
@@ -60,31 +75,31 @@ const StuffWriteForm = () => {
 
   const navigate = useNavigate();
 
-  const submit = () => {
+  const update = () => {
     if (drop === '') {
       return alert('지역을 선택하세요');
     } else if (title === '') {
       return alert('제목을 입력하세요');
-    } else if (contents === '') {
+    } else if (content === '') {
       return alert('내용을 입력하세요');
     }
     axios
-      .post(`/stuffQuestion`, {
+      .patch(`/shelterQuestion/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
-        name: sessionStorage.getItem('name'),
-        stuffQuestionTitle: title,
-        stuffQuestionContent: contents,
+        shelterQuestionTitle: title,
+        shelterQuestionContent: content,
         locationTag: drop,
       })
       .then((response) => {
         console.log(response);
-        navigate('/stuffList');
+        navigate(`/review/${QuestionId}`);
       })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
       });
   };
+
   return (
     <WriteFormStyle>
       <form className="input">
@@ -100,7 +115,7 @@ const StuffWriteForm = () => {
               type="text"
               id="titleWrite"
               value={title || ''}
-              onChange={onChangeTitle}
+              onChange={updateTitle}
             />
           </div>
         </div>
@@ -111,17 +126,17 @@ const StuffWriteForm = () => {
               className="editor"
               modules={modules}
               formats={formats}
-              value={contents}
-              onChange={onChangeContents}
+              value={content || ''}
+              onChange={updateContents}
             />
           </EditorStyle>
         </div>
       </form>
       <div className="reCancelBox">
-        <button onClick={submit} className="registBox">
-          <div className="registInput">등록</div>
+        <button onClick={update} className="registBox">
+          <div className="registInput">수정</div>
         </button>
-        <Link to="/stuffList" style={{ textDecoration: 'none' }}>
+        <Link to="/review" style={{ textDecoration: 'none' }}>
           <button className="cancelBox">
             <div className="cancelInput">취소</div>
           </button>
@@ -131,7 +146,7 @@ const StuffWriteForm = () => {
   );
 };
 
-export default StuffWriteForm;
+export default ShelterWriteUpdate;
 
 const WriteFormStyle = styled.div`
   width: 1180px;

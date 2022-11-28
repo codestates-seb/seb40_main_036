@@ -14,10 +14,12 @@ import LogoutNav from './components/LogoutNav';
 import MyPage from './pages/MyPage';
 import ReviewListLookup from './pages/ReviewListLookUp';
 import StuffListLookup from './pages/StuffListLookup';
-import QuestionWriteForm from './components/QuestionWriteForm';
-import QuestionWriteUpdate from './components/QuestionWriteUpdate';
 import StuffWriteForm from './components/StuffWriteForm';
 import StuffWriteUpdate from './components/StuffWriteUpdate';
+import ShareWriteForm from './components/ShareWriteForm';
+import ShareWriteUpdate from './components/ShareWriteUpdate';
+import ShelterWriteForm from './components/ShelterWriteForm';
+import ShelterWriteUpdate from './components/ShelterWriteUpdate';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -47,18 +49,20 @@ function App() {
           <Route path="/Tips" element={<EvacuationTips />} />
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
+          <Route path="/shareWriteForm" element={<ShareWriteForm />}></Route>
           <Route
-            path="/questionWriteForm"
-            element={<QuestionWriteForm />}
-          ></Route>
-          <Route
-            path="/questionWriteUpdate/:QuestionId"
-            element={<QuestionWriteUpdate />}
+            path="/shareWriteUpdate/:QuestionId"
+            element={<ShareWriteUpdate />}
           ></Route>
           <Route path="/stuffWriteForm" element={<StuffWriteForm />} />
           <Route
             path="/stuffWriteUpdate/:QuestionId"
             element={<StuffWriteUpdate />}
+          />
+          <Route path="/shelterWriteForm" element={<ShelterWriteForm />} />
+          <Route
+            path="/shelterWriteUpdate/:QuestionId"
+            element={<ShelterWriteUpdate />}
           />
           <Route path="/mypage" element={<MyPage />} />
         </Routes>

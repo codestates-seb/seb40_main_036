@@ -118,7 +118,7 @@ function StuffList() {
               </button>
             </div>
             <div className="row">
-              <Link to="/stuffWriteForm">
+              <Link to="/stuffWriteForm" style={{ textDecoration: 'none' }}>
                 <button className="writingBox">
                   <FaPencilAlt />
                   <div className="writing">글쓰기</div>

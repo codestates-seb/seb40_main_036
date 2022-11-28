@@ -4,9 +4,13 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const QuestionWriteForm = () => {
+const ShareWriteForm = () => {
+  const size = { mobile: 425, tablet: 768 };
+  const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+  const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
+
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -121,15 +125,17 @@ const QuestionWriteForm = () => {
         <button onClick={submit} className="registBox">
           <div className="registInput">등록</div>
         </button>
-        <button className="cancelBox">
-          <div className="cancelInput">취소</div>
-        </button>
+        <Link to="/share" style={{ textDecoration: 'none' }}>
+          <button className="cancelBox">
+            <div className="cancelInput">취소</div>
+          </button>
+        </Link>
       </div>
     </WriteFormStyle>
   );
 };
 
-export default QuestionWriteForm;
+export default ShareWriteForm;
 
 const WriteFormStyle = styled.div`
   width: 1180px;

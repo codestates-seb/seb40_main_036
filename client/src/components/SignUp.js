@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -72,7 +72,7 @@ const SignUP = () => {
     }
   };
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onClickSignUp = (e) => {
     e.preventDefault(); // 새로고침 방지
@@ -89,7 +89,7 @@ const SignUP = () => {
         console.log('User profile', response.data.memberId);
         console.log('User token', response.data.access_token);
         localStorage.setItem('token', response.data.jwt);
-        navigate('/login');
+        // navigate('/login');
       })
       .catch((error) => {
         // Handle error.
@@ -128,8 +128,8 @@ const SignUP = () => {
                   value={inputName}
                 />
               </div>
+              <div className="msgName">{nameMessage}</div>
             </div>
-            <div className="msg">{nameMessage}</div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="numWrite">
                 전화번호
@@ -157,10 +157,10 @@ const SignUP = () => {
                   value={inputId}
                 />
               </div>
-              <div>{idMessage}</div>
+              <div className="msgEmail">{idMessage}</div>
             </div>
             <div className="idPwBox">
-              <label className="idPwText" htmlFor="idWrite">
+              <label className="idPwText" htmlFor="emailWrite">
                 비밀번호
               </label>
               <div>
@@ -172,8 +172,9 @@ const SignUP = () => {
                   value={inputPw}
                 />
               </div>
+              <div className="msgPw">{passwordMessage}</div>
             </div>
-            <div className="msg">{passwordMessage}</div>
+
             <button onClick={onClickSignUp}>회원가입</button>
             <div className="accountExistence">
               이미 계정이 있으신가요? <Link to="/login">로그인</Link>
@@ -188,8 +189,8 @@ const SignUP = () => {
 export default SignUP;
 
 const SignUpForm = styled.div`
-  width: 340px;
-  height: 600px;
+  width: 400px;
+  height: 100%;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -211,12 +212,12 @@ const SignUpInput = styled.div`
   }
   .idPwText {
     display: flex;
-    padding: 3px;
+    padding-bottom: 5px;
     font-weight: 500;
     font-size: 16px;
   }
   .idPwInput {
-    width: 289px;
+    width: 350px;
     height: 35px;
     left: 571px;
     top: 436px;
@@ -224,12 +225,21 @@ const SignUpInput = styled.div`
     border-radius: 3px;
     positon: fixed;
   }
-  .msg {
-    margin-top: -10px;
-    text-align: center;
+  .msgName {
+    padding: 3px;
+    font-size: 12px;
+  }
+  .msgEmail {
+    padding: 3px;
+    font-size: 12px;
+  }
+  .msgPw {
+    padding: 3px;
+    font-size: 12px;
   }
   .idPwBox {
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   button {
     margin-top: 15px;
@@ -244,6 +254,7 @@ const SignUpInput = styled.div`
   }
   .accountExistence {
     margin-top: 15px;
+    margin-bottom: 30px;
     text-align: center;
   }
   .accountExistence a {

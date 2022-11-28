@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const StuffWriteUpdate = () => {
   const modules = useMemo(
@@ -136,9 +136,11 @@ const StuffWriteUpdate = () => {
         <button onClick={update} className="registBox">
           <div className="registInput">수정</div>
         </button>
-        <button className="cancelBox">
-          <div className="cancelInput">취소</div>
-        </button>
+        <Link to="/stuffList" style={{ textDecoration: 'none' }}>
+          <button className="cancelBox">
+            <div className="cancelInput">취소</div>
+          </button>
+        </Link>
       </div>
     </WriteFormStyle>
   );
