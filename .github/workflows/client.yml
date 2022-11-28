@@ -1,27 +1,34 @@
-# .github/workflows/client.yml
-name: client
+name: github pages
+
 on:
   push:
     branches:
-      - dev
+      - main
+
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout source code.
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm i
-        working-directory: ./client
-      - name: Build
-        run: npm run build
-        working-directory: ./client
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm run build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        # If you're changing the branch from main,
-        # also change the `main` in `refs/heads/main`
-        # below accordingly.
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./dist
