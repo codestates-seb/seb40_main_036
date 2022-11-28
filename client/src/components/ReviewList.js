@@ -6,6 +6,7 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
+import { DotSpinner } from '@uiball/loaders';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -22,7 +23,25 @@ function ReviewList() {
     select: 'title',
     content: '',
   });
+  const [drop, setDrop] = useState();
 
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/shelterQuestion/search/tag/${drop} `)
+
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(drop);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -68,7 +87,15 @@ function ReviewList() {
 
     fetchQustion();
   }, []);
-  if (loading) return <div>로딩중..</div>;
+  if (loading)
+    return (
+      <div>
+        {' '}
+        <Loading>
+          <DotSpinner size={80} speed={0.9} color="#008505" />
+        </Loading>
+      </div>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
@@ -80,7 +107,10 @@ function ReviewList() {
             <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
-            <CityDown />
+            <CityDown onChange={handleDrop} value={drop} />
+            <button className="tagSearch" onClick={handleTagSearchButton}>
+              <FaSearch />
+            </button>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -91,22 +121,23 @@ function ReviewList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions
-            .slice(items * (page - 1), items * (page - 1) + items)
-            .map((item) => (
-              <ReviewListContents
-                key={item.shelterQuestionId}
-                id={item.shelterQuestionId}
-                memberId={item.memberId}
-                title={item.shelterQuestionTitle}
-                num={item.shelterQuestionId}
-                writer={item.name}
-                date={item.shelterQuestionCreated}
-                tag={item.locationTag}
-                view={item.views}
-                count={item.countAnswer}
-              />
-            ))}
+          {questions &&
+            questions
+              .slice(items * (page - 1), items * (page - 1) + items)
+              .map((item) => (
+                <ReviewListContents
+                  key={item.shelterQuestionId}
+                  id={item.shelterQuestionId}
+                  memberId={item.memberId}
+                  title={item.shelterQuestionTitle}
+                  num={item.shelterQuestionId}
+                  writer={item.name}
+                  date={item.shelterQuestionCreated}
+                  tag={item.locationTag}
+                  view={item.views}
+                  count={item.countAnswer}
+                />
+              ))}
         </ContentsContainer>
         <Row>
           <select className="items" onChange={itemChange}>
@@ -168,7 +199,13 @@ function ReviewList() {
 }
 
 export default ReviewList;
-
+const Loading = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const ShareListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
@@ -203,6 +240,25 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;
