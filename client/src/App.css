@@ -1,46 +1,7 @@
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
-}
-
-/** Thin */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
-}
-
-/** Regular */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-
-/** Medium */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 500;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
-}
-
-/** Semi Bold */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 600;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
-}
-
-/** Bold */ 
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 700;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
-}
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
 html, *{
   box-sizing: border-box;
   padding:0;
   margin:0;
-  font-family: "San Francisco", sans-serif;
+  font-family: 'SCoreDream', sans-serif;
 }
