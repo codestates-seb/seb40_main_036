@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Logo from './../img/logo.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -10,66 +10,69 @@ const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disa
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const Nav = () => {
   const [Ishide, setIsHide] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
+
+  const onClickLogout = () => {
+    sessionStorage.clear(); // 세션스토리지 안에 있는 모든 데이터를 삭제해줌
+    // 로그인페이지로 이동(새로고침)
+    window.location.href = '/login';
+  };
+  useEffect(() => {
+    if (sessionStorage.getItem('email') === null) {
+      // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
+    } else {
+      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
+      // 로그인 상태 변경
+      setIsLogin(true);
+    }
+  }, []);
   return (
     <Header>
       <div>
-        <div
-          className="navbar flex"
-          onMouseEnter={() => {
-            setIsHide(false);
-          }}
-          onMouseLeave={() => {
-            setIsHide(true);
-          }}
-        >
+        <div className="navbar flex">
           <div className="navbar-logo flex" id="logo">
             <Link to="/">
               <img src={Logo} alt="logo" />
             </Link>
           </div>
-          <div className="navbar-list flex">
-            <ul className="flex">
-              <li className="nav-title">대피요령</li>
-              <li className="nav-title">비품</li>
-              <li className="nav-title">커뮤니티</li>
-            </ul>
-          </div>
-          <div className="navbar-member flex">
-            <ul className="flex">
+
+          <div className={`navbar-list ${Ishide ? 'sm-hide' : ''}`}>
+            <ul>
               <li>
-                <Link to="/login">로그인</Link>
+                <Link to="Tips">재난별 대피요령</Link>
               </li>
               <li>
-                <Link to="/signup">회원가입</Link>
+                <Link to="/stuffList">비품 현황</Link>
+              </li>
+              <li>
+                <Link to="/share">물품 나눔</Link>
+              </li>
+              <li>
+                <Link to="/review">대피소 후기</Link>
+              </li>
+              <li>
+                <Link to="/map">대피소 예약하기</Link>
               </li>
             </ul>
+            <ul>
+              {isLogin ? (
+                <li>
+                  <Link onClick={onClickLogout}>로그아웃</Link>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login">로그인</Link>
+                  </li>
+                  <li>
+                    <Link to="/signup">회원가입</Link>
+                  </li>
+                </>
+              )}
+            </ul>
           </div>
-          {!Ishide && (
-            <div className="navbar-slide">
-              <ul className="">
-                <li className="sm-dblock">대피요령</li>
-                <li>
-                  <Link to="Tips">재난별 대피요령</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">비품</li>
-                <li>
-                  <Link to="/stuffList">비품 현황</Link>
-                </li>
-              </ul>
-              <ul>
-                <li className="sm-dblock">커뮤니티</li>
-                <li>
-                  <Link to="/share">물품 나눔</Link>
-                </li>
-                <li>
-                  <Link to="/review">대피소 후기</Link>
-                </li>
-              </ul>
-            </div>
-          )}
-          <div className="responsive-bar">
+
+          <div className="responsive-bar sm-dblock">
             {Ishide && (
               <FontAwesomeIcon
                 icon={solid('bars')}
@@ -96,11 +99,20 @@ const Header = styled.header`
 
   display: flex;
   justify-content: center;
+  .sm-dblock {
+    display: none;
+    ${tablet} {
+      display: block;
+      padding: 12px 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
   > div {
     background: white;
     border-bottom: 4px solid #008505;
     width: 100%;
-    height: 50px;
     position: fixed;
     z-index: 1;
   }
@@ -113,38 +125,36 @@ const Header = styled.header`
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
-    height: 46px;
     ${tablet} {
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      flex-direction: column;
     }
     .navbar-logo {
-      width: 200px;
       align-items: center;
-      padding-right: 100px;
+      padding-right: 50px;
       img {
-        width: 100px;
+        max-height: 33.5px;
       }
     }
     .navbar-list {
-      flex: 1 1 auto;
-      ${tablet} {
-        display: none;
-      }
-      li.nav-title {
-        padding: 4px 24px;
-      }
-      li {
-        position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-        ul {
+      ${tablet} {
+        &.sm-hide {
           display: none;
-          position: absolute;
+        }
+        flex-direction: column;
+        align-items: baseline;
+        ul {
+          display: flex;
           flex-direction: column;
-          background: white;
-          top: 55px;
-          border: 4px solid #008505;
-          border-top: none;
+          li {
+            padding: 4px 0;
+          }
         }
       }
     }
@@ -153,67 +163,13 @@ const Header = styled.header`
         display: none;
       }
     }
-    .navbar-slide {
-      position: absolute;
-      z-index: 1;
-      top: 46px;
-      left: 196px;
-      right: 0;
-      background: white;
-      display: flex;
-      border: 4px solid #008505;
-      border-top: none;
-      border-bottom-left-radius: 15px;
-      padding-bottom: 8px;
-      ul {
-        width: 120px;
-      }
-      .sm-dblock {
-        display: none;
-      }
-      ${tablet} {
-        left: 0;
-        border-right: 0;
-        border-left: 0;
-        border-radius: 0;
-        flex-direction: column;
-        .sm-dblock {
-          display: block;
-          font-weight: 600;
-          font-size: 16px;
-          margin-top: 8px;
-        }
-      }
-    }
-    .responsive-bar {
-      display: none;
-      margin-right: 24px;
-      ${tablet} {
-        display: block;
-      }
-    }
-    ul {
-      align-items: center;
-      ${tablet} {
-        align-items: baseline;
-        flex-direction: column;
-        display: flex;
-      }
-    }
-    ul.info {
-      flex: 1 0 auto;
-      text-align: right;
-      li {
-        width: 70px;
-      }
-    }
+
     li {
       list-style: none;
       flex: 1 0 auto;
-      padding: 4px 16px;
     }
     a {
-      padding: 4px 8px;
+      padding: 4px 16px;
     }
     li,
     a {
@@ -221,7 +177,6 @@ const Header = styled.header`
       text-decoration: none;
       font-weight: 400;
       display: inline-block;
-      width: 120px;
       border-radius: 0.75rem;
       ${tablet} {
         font-size: 13px;
