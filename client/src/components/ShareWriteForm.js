@@ -5,12 +5,13 @@ import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 const ShareWriteForm = () => {
-  const size = { mobile: 425, tablet: 768 };
-  const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
-  const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -66,11 +67,11 @@ const ShareWriteForm = () => {
 
   const submit = () => {
     if (drop === '') {
-      return alert('지역을 선택하세요');
+      return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
-      return alert('제목을 입력하세요');
+      return Swal.fire('제목을 입력하세요');
     } else if (contents === '') {
-      return alert('내용을 입력하세요');
+      return Swal.fire('내용을 입력하세요');
     }
     axios
       .post(`/question/`, {
@@ -143,6 +144,11 @@ const WriteFormStyle = styled.div`
   background: #ffffff;
   box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.25);
   margin: 50px auto;
+  .input {
+    ${tablet} {
+      width: 100%;
+    }
+  }
 
   .region {
     padding-left: 100px;
