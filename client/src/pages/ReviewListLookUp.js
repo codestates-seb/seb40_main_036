@@ -59,18 +59,17 @@ function ReviewListLookup() {
             />
           </>
         )}
-        {answer &&
-          answer.map((item) => (
-            <ReviewAnswerViewer
-              key={item.shelterAnswerId}
-              questionId={item.shelterQuestionId}
-              id={item.shelterAnswerId}
-              memberid={item.memberId}
-              user={item.name}
-              answerContents={item.shelterAnswerContent}
-              answerDate={item.shelterAnswerCreated}
-            />
-          ))}
+        {[...answer].map((item) => (
+          <ReviewAnswerViewer
+            key={item.shelterAnswerId}
+            questionId={item.shelterQuestionId}
+            id={item.shelterAnswerId}
+            memberid={item.memberId}
+            user={item.name}
+            answerContents={item.shelterAnswerContent}
+            answerDate={item.shelterAnswerCreated}
+          />
+        ))}
         <ReviewAnswerPost />
       </Container>
     </Contents>
