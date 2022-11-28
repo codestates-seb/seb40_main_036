@@ -1,40 +1,36 @@
+name: github pages
 
-name: deploy
 on:
   push:
-    branches: dev
+    branches:
+      - dev
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    env:
-      CI: false
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+  deploy:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - name: Install modules
+      - name: Checkout source code.
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
         run: npm install
-      - name: Run test codes
-        run: npm run test
-      - name: Build project
+
+      - name: Build
         run: npm run build
-      - name: Deploy build outputs
-        uses: appleboy/scp-action@master
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PEM_KEY }}
-          port: ${{ secrets.PORT }}
-          source: "build/*"
-          strip_components: 1
-          target: "/var/www/html"
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
