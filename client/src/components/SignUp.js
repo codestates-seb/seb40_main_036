@@ -28,9 +28,11 @@ const SignUP = () => {
     if (currentName.length < 2 || currentName.length > 8) {
       setNameMessage('닉네임은 2글자 이상 8글자 이하로 입력해주세요!');
       setIsName(false);
+      console.log(isname);
     } else {
       setNameMessage('사용가능한 닉네임 입니다.');
       setIsName(true);
+      console.log(isname);
     }
   };
 
@@ -226,15 +228,15 @@ const SignUpInput = styled.div`
     positon: fixed;
   }
   .msgName {
-    padding: 3px;
+    padding-top: 5px;
     font-size: 12px;
   }
   .msgEmail {
-    padding: 3px;
+    padding-top: 5px;
     font-size: 12px;
   }
   .msgPw {
-    padding: 3px;
+    padding-top: 5px;
     font-size: 12px;
   }
   .idPwBox {
@@ -253,8 +255,8 @@ const SignUpInput = styled.div`
     border-radius: 3px;
   }
   .accountExistence {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     text-align: center;
   }
   .accountExistence a {
