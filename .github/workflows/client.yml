@@ -19,11 +19,11 @@ jobs:
           node-version: 18.x
 
       - name: Install Dependencies
-        working-directory: ./my-agora-states-client
+        working-directory: ./client
         run: npm install
 
       - name: Build Docs
-        working-directory: ./my-agora-states-client
+        working-directory: ./client
         run: npm run build:docs
 
       - name: Deploy Docs
