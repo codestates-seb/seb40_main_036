@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'; // eslint-disable-line no-unused-vars
+import Intro from './pages/Intro';
 import Main from './pages/main';
 import Nav from './components/nav';
 import ShareList from './components/ShareList';
@@ -10,7 +11,6 @@ import EvacuationTips from './components/EvacuationTips';
 import './App.css';
 import ShareListLookup from './pages/ShareListLookup';
 import StuffList from './components/StuffList';
-import LogoutNav from './components/LogoutNav';
 import MyPage from './pages/MyPage';
 import ReviewListLookup from './pages/ReviewListLookUp';
 import StuffListLookup from './pages/StuffListLookup';
@@ -22,24 +22,13 @@ import ShelterWriteForm from './components/ShelterWriteForm';
 import ShelterWriteUpdate from './components/ShelterWriteUpdate';
 
 function App() {
-  const [isLogin, setIsLogin] = useState(false);
-
-  useEffect(() => {
-    if (sessionStorage.getItem('email') === null) {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
-    } else {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
-      // 로그인 상태 변경
-      setIsLogin(true);
-    }
-  }, []);
   return (
     <div className="App">
       <BrowserRouter>
-        {/* isLogin 값이 true라면 로그아웃이 있는 헤더로 아니라면 그냥 헤더로 변환 */}
-        {isLogin ? <LogoutNav isLogin={isLogin} /> : <Nav />}
+        <Nav />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Intro />} />
+          <Route path="/map" element={<Main />} />
           <Route path="/share" element={<ShareList />} />
           <Route path="/review" element={<ReviewList />} />
           <Route path="/stuffList" element={<StuffList />} />

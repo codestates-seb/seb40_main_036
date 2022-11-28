@@ -157,7 +157,7 @@ const DropDown = ({ onChange, value }) => {
         onChange={onChange}
         value={value}
       >
-        <option value={value}>시/군/구 선택</option>
+        <option>시/군/구 선택</option>
       </select>
     </SelectRegionStyle>
   );
@@ -189,6 +189,7 @@ const SelectRegionStyle = styled.div`
   }
   .selectDistrict {
     margin-left: 10px;
+    margin-right: 10px;
     width: auto;
     height: auto;
     border-radius: 5px;
@@ -201,6 +202,25 @@ const SelectRegionStyle = styled.div`
     }
     ${mobile} {
       font-size: 0.8rem;
+    }
+  }
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
     }
   }
 `;

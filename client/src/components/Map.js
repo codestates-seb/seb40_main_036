@@ -22,8 +22,50 @@ const Map = (props) => {
   const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
-
+  const [apiRoutes, setApiRoutes] = useState([]);
   const Mapping = async () => {
+    const fetchRoute2 = (routestartX, routestartY, routeendX, routeendY) => {
+      const options = {
+        method: 'POST',
+        url: 'https://apis.openapi.sk.com/tmap/routes/pedestrian',
+        params: { version: '1', callback: 'function' },
+        headers: {
+          accept: 'application/json',
+          'Content-Type': 'application/json',
+          appKey: skAppKey,
+        },
+        data: {
+          startX: routestartX,
+          startY: routestartY,
+          angle: 20,
+          speed: 30,
+          endPoiId: '10001',
+          endX: routeendX,
+          endY: routeendY,
+          startName: '%EC%B6%9C%EB%B0%9C',
+          endName: '%EB%8F%84%EC%B0%A9',
+        },
+      };
+
+      axios
+        .request(options)
+        .then((res) =>
+          setApiRoutes(
+            res.data.features
+              .filter((x) => x.geometry.type === 'Point')
+              .map(
+                (x) =>
+                  new kakao.maps.LatLng(
+                    x.geometry.coordinates[1],
+                    x.geometry.coordinates[0]
+                  )
+              )
+          )
+        )
+        .catch(function (error) {
+          console.error(error);
+        });
+    };
     let container = document.getElementById('map');
     let options = {
       center: new kakao.maps.LatLng(props.x, props.y),
@@ -44,12 +86,20 @@ const Map = (props) => {
         reservationInfos[x.shelter_id - 1].reservedNum > 0
           ? (obj['now'] = reservationInfos[x.shelter_id - 1]['reservedNum'])
           : (obj['now'] = 0);
+        //obj['now'] = Math.floor(Math.random() * x.capacity);
 
         obj['capacity'] = x.capacity;
         obj['shelterId'] = x.shelter_id;
         return obj;
       });
-    console.log(lists);
+
+    var polyline = new kakao.maps.Polyline({
+      path: apiRoutes, // 선을 구성하는 좌표배열 입니다
+      strokeWeight: 5, // 선의 두께 입니다
+      strokeColor: '#FFAE00', // 선의 색깔입니다
+      strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+      strokeStyle: 'solid', // 선의 스타일입니다
+    });
     const listsGreen = lists.filter(
       (x) => Math.floor(x.capacity * 0.3333) > x.now
     );
@@ -116,6 +166,7 @@ const Map = (props) => {
         setShelterId(i.shelterId);
         setNow(i.now);
         fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
+        fetchRoute2(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
       });
     });
     listsYellow.forEach((i) => {
@@ -133,6 +184,7 @@ const Map = (props) => {
         setShelterId(i.shelterId);
         setNow(i.now);
         fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
+        fetchRoute2(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
       });
     });
     listsRed.forEach((i) => {
@@ -150,15 +202,16 @@ const Map = (props) => {
         setShelterId(i.shelterId);
         setNow(i.now);
         fetchRoute(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
+        fetchRoute2(props.y, props.x, i.latlng.getLng(), i.latlng.getLat());
       });
     });
-
+    polyline.setMap(map);
     props.setloading(false);
   };
 
   useEffect(() => {
     Mapping();
-  }, [props.x, props.y, props.reservationInfos]);
+  }, [props.x, props.y, apiRoutes]);
 
   return (
     <>

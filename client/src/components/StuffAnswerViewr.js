@@ -169,9 +169,9 @@ const AnswerContents = styled.div`
     padding-left: 20px;
   }
   .contents {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     ${tablet} {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     ${mobile} {
       font-size: 0.8rem;

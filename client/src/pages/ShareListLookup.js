@@ -70,7 +70,6 @@ function ShareListLookup() {
             answerDate={item.answerCreated}
           />
         ))}
-
         <ShareAnswerPost />
       </Container>
     </Contents>
