@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+// eslint-disable-next-line no-unused-vars
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const SignUP = () => {
   const [inputName, setInputName] = useState('');
@@ -74,14 +76,20 @@ const SignUP = () => {
     }
   };
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onClickSignUp = (e) => {
-    if (inputName || inputId || inputPw || hyphen === '') {
-      setIdMessage('필수 정보입니다');
-      setNameMessage('필수 정보입니다');
-      setPasswordMessage('필수 정보입니다');
-      setHyphenMessage('필수 정보입니다');
+    if (inputName === '') {
+      setNameMessage('필수 정보입니다.');
+    }
+    if (inputId === '') {
+      setIdMessage('필수 정보입니다.');
+    }
+    if (inputPw === '') {
+      setPasswordMessage('필수 정보입니다.');
+    }
+    if (hyphen === '') {
+      setHyphenMessage('필수 정보입니다.');
     }
     e.preventDefault(); // 새로고침 방지
     axios
@@ -96,12 +104,18 @@ const SignUP = () => {
         console.log(response);
         console.log('User profile', response.data.memberId);
         console.log('User token', response.data.access_token);
-        localStorage.setItem('token', response.data.jwt);
-        navigate('/login');
+        // navigate('/login');
       })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
+        if (error.response.status === 500) {
+          Swal.fire({
+            icon: 'error',
+            title: '회원가입 실패!',
+            text: '이미 사용중인 이메일입니다. 다른 이메일을 입력하세요!',
+          });
+        }
       });
   };
 
