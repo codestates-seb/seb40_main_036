@@ -27,7 +27,7 @@ function StuffLisViewerContents({ id, content, memberId }) {
       ) {
         setTimeout(() => {
           axios
-            .delete(`/stuffQuestion/${id}`)
+            .delete(`/api/stuffQuestion/${id}`)
             .then(() => navigate(`/stuffList`))
             .catch((err) => console.log(err));
         }, 1000);

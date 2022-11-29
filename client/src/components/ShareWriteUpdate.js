@@ -48,7 +48,7 @@ const ShareWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setTest(response.data.questionTitle);
         setContent(response.data.questionContent);
@@ -96,7 +96,7 @@ const ShareWriteUpdate = () => {
       });
     }
     axios
-      .patch(`/question/${QuestionId}`, {
+      .patch(`/api/question/${QuestionId}`, {
         memberId: localStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: content,

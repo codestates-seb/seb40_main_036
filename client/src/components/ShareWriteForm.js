@@ -83,7 +83,7 @@ const ShareWriteForm = () => {
       });
     }
     axios
-      .post(`/question/`, {
+      .post(`/api/question/`, {
         memberId: localStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: contents,

@@ -79,7 +79,7 @@ const ShelterWriteForm = () => {
       });
     }
     axios
-      .post(`/shelterQuestion`, {
+      .post(`/api/shelterQuestion`, {
         memberId: localStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: contents,

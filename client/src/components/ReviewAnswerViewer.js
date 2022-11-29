@@ -31,7 +31,7 @@ function ReviewAnswerViewr({
       };
       console.log(data);
       axios
-        .patch(`/shelterAnswer/${id}`, data)
+        .patch(`/api/shelterAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -82,7 +82,7 @@ function ReviewAnswerViewr({
       ) {
         setTimeout(() => {
           axios
-            .delete(`/shelterAnswer/${id}`)
+            .delete(`/api/shelterAnswer/${id}`)
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);
