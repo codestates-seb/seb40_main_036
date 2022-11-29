@@ -17,13 +17,13 @@ function ReviewAnswerPost() {
     if (
       ReviewAnswerPost.body !== '' &&
       textRef.current.value !== '' &&
-      sessionStorage.getItem('memberId')
+      localStorage.getItem('memberId')
     ) {
       const data = {
         shelterAnswerContent: textRef.current.value,
         shelterQuestionId: `${QuestionId}`,
-        memberId: `${sessionStorage.getItem('memberId')}`,
-        name: `${sessionStorage.getItem('name')}`,
+        memberId: `${localStorage.getItem('memberId')}`,
+        name: `${localStorage.getItem('name')}`,
       };
       console.log(data);
       axios
@@ -35,7 +35,7 @@ function ReviewAnswerPost() {
   return (
     <Container>
       <Post>
-        <div className="user"> {sessionStorage.getItem('name')}</div>
+        <div className="user"> {localStorage.getItem('name')}</div>
         <textarea
           className="answer"
           ref={textRef}
