@@ -21,7 +21,7 @@ function StuffListLookup() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
+        const response = await axios.get(`/api/stuffQuestion/${QuestionId}`);
         console.log(response.data);
         setQuestions(response.data.data);
         setAnswer(response.data.data.stuffAnswers); // 데이터는 response.body 안에 들어있습니다.
@@ -59,18 +59,17 @@ function StuffListLookup() {
             />
           </>
         )}
-        {answer &&
-          answer.map((item) => (
-            <StuffAnswerViewer
-              key={item.stuffAnswerId}
-              questionId={item.stuffQuestionId}
-              id={item.stuffAnswerId}
-              memberid={item.memberId}
-              user={item.name}
-              answerContents={item.stuffAnswerContent}
-              answerDate={item.stuffAnswerCreated}
-            />
-          ))}
+        {[...answer].map((item) => (
+          <StuffAnswerViewer
+            key={item.stuffAnswerId}
+            questionId={item.stuffQuestionId}
+            id={item.stuffAnswerId}
+            memberid={item.memberId}
+            user={item.name}
+            answerContents={item.stuffAnswerContent}
+            answerDate={item.stuffAnswerCreated}
+          />
+        ))}
         <StuffAnswerPost />
       </Container>
     </Contents>

@@ -32,7 +32,7 @@ function ReviewList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/shelterQuestion/search/tag/${drop} `)
+        .get(`/api/shelterQuestion/search/tag/${drop} `)
 
         .then((response) => {
           console.log(response);
@@ -52,7 +52,7 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/shelterQuestion/search/${search.select}/${search.content}`)
+        .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -76,7 +76,9 @@ function ReviewList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/shelterQuestion/shelterQuestions`);
+        const response = await axios.get(
+          `/api/shelterQuestion/shelterQuestions`
+        );
         console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
@@ -90,7 +92,6 @@ function ReviewList() {
   if (loading)
     return (
       <div>
-        {' '}
         <Loading>
           <DotSpinner size={80} speed={0.9} color="#008505" />
         </Loading>
@@ -121,23 +122,22 @@ function ReviewList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions &&
-            questions
-              .slice(items * (page - 1), items * (page - 1) + items)
-              .map((item) => (
-                <ReviewListContents
-                  key={item.shelterQuestionId}
-                  id={item.shelterQuestionId}
-                  memberId={item.memberId}
-                  title={item.shelterQuestionTitle}
-                  num={item.shelterQuestionId}
-                  writer={item.name}
-                  date={item.shelterQuestionCreated}
-                  tag={item.locationTag}
-                  view={item.views}
-                  count={item.countAnswer}
-                />
-              ))}
+          {[...questions]
+            .slice(items * (page - 1), items * (page - 1) + items)
+            .map((item) => (
+              <ReviewListContents
+                key={item.shelterQuestionId}
+                id={item.shelterQuestionId}
+                memberId={item.memberId}
+                title={item.shelterQuestionTitle}
+                num={item.shelterQuestionId}
+                writer={item.name}
+                date={item.shelterQuestionCreated}
+                tag={item.locationTag}
+                view={item.views}
+                count={item.countAnswer}
+              />
+            ))}
         </ContentsContainer>
         <Row>
           <select className="items" onChange={itemChange}>

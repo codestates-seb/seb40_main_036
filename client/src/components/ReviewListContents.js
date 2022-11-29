@@ -77,22 +77,21 @@ const ContentsList = styled.div`
     }
     .title {
       width: 60%;
-      line-height: 1;
       word-break: break-word;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
     .tag {
-      width: 64px;
+      width: 70px;
       padding: 0 10px;
       border: 1px solid #d2d2d2;
       border-radius: 5px;
       margin-right: 5px;
       ${tablet} {
         width: 60px;
-        padding: 0 8px;
-        font-size: 0.9rem;
+        padding: 0.3px;
+        font-size: 0.8rem;
       }
       ${mobile} {
         width: 50px;

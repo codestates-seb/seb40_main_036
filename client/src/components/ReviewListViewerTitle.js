@@ -64,6 +64,9 @@ const ReviewContentsHeader = styled.div`
     ${mobile} {
       font-size: 0.7rem;
     }
+    :hover {
+      color: #005603;
+    }
   }
 `;
 const ReviewContentsTitle = styled.div`

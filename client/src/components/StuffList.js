@@ -6,115 +6,31 @@ import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import InfiniteScroll from 'react-infinite-scroller';
-import { DotPulse, DotSpinner } from '@uiball/loaders';
+import { DotSpinner } from '@uiball/loaders';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffList() {
   const textRef = useRef();
-  const [pageEnd, setPageEnd] = useState();
-  const [questions, setQuestions] = useState(); //데이터 저장
-  const [page, setPage] = useState(1);
+  const pageEnd = useRef(null);
+  const [questions, setQuestions] = useState([]); //데이터 저장
+  const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const [totalPage, setTotalPage] = useState();
+  const [totalPage, setTotalPage] = useState(0);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
   });
   const [drop, setDrop] = useState();
-
-  const fetchQustion = useCallback(async () => {
-    try {
-      // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
-      setError(null);
-      setQuestions(null);
-      // loading 상태를 true 로 바꿉니다.
-      setLoading(true);
-      const response = await axios.get(`/stuffQuestion?page=${page}&size=10`);
-      console.log(response.data);
-      setQuestions(questions.concat(response.data.data));
-      // setTotalPage(response.data.pageInfo.totalPages);
-      // console.log(response.data.pageInfo.totalPages);
-    } catch (e) {
-      setError(e);
-    }
-    setLoading(false);
-  }, [page]);
-
-  useEffect(() => {
-    fetchQustion(page);
-  }, [page]);
-  const handleObserver = useCallback((entries) => {
-    const target = entries[0];
-    if (target.isIntersecting && !loading) {
-      setPage((page) => page + 1);
-      console.log(page);
-    }
-  }, []);
-
-  useEffect(() => {
-    const option = {
-      root: null,
-      rootMargin: '30px',
-      threshold: 1.0,
-    };
-    const observer = new IntersectionObserver(handleObserver, option);
-    if (pageEnd) observer.observe(pageEnd);
-    console.log(observer);
-  }, [handleObserver]);
-
-  // 무한 스크롤
-  // const fetchQustion = async () => {
-  //   setLoading(true);
-  //   await axios
-  //     .get(`/stuffQuestion?page=${page}&size=20`)
-  //     .then((response) => {
-  //       setQuestions(response.data.data);
-  //       console.log(response.data);
-  //       setTotalPage(response.data.pageInfo.totalPages);
-  //       setLoading(false);
-  //     })
-  //     .catch((e) => setError(e));
-  // };
-
-  // const onIntersect = (entries, observer) => {
-  //   const entry = entries[0];
-  //   if (entry.isIntersecting && !loading) {
-  //     setTimeout(async () => {
-  //       setPage((page) => page + 1);
-  //       observer.observe(entry.pageEnd);
-  //       setLoading(false);
-  //     }, 300);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (page !== 1 && totalPage >= page) {
-  //     fetchQustion(page);
-  //   }
-  // }, [page]);
-
-  // useEffect(() => {
-  //   let observer;
-  //   if (pageEnd) {
-  //     observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
-  //     observer.observe(pageEnd);
-  //   }
-  //   return () => observer && observer.disconnect();
-  // }, [pageEnd]);
-
-  const handleDrop = (e) => {
-    setDrop(e.target.value);
-  };
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/stuffQuestion/search/tag/${drop} `)
+        .get(`/api/stuffQuestion/search/tag/${drop} `)
 
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
           setQuestions(response.data);
           console.log(drop);
         })
@@ -125,7 +41,7 @@ function StuffList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(`/api/stuffQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -141,12 +57,53 @@ function StuffList() {
       handleSearchButton();
     }
   };
-  if (loading)
-    return (
-      <Loading>
-        <DotSpinner size={80} speed={0.9} color="#008505" />
-      </Loading>
-    );
+  const fetchQustion = useCallback(async () => {
+    try {
+      console.log('불러오기');
+      // loading 상태를 true 로 바꿉니다.
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await axios.get(
+        `/api/stuffQuestion?page=${pageNum}&size=15`
+      );
+      console.log(response.data);
+      setQuestions((prev) => [...prev, ...response.data.data]);
+      setTotalPage(response.data.pageInfo.totalPages);
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
+  }, [pageNum]);
+  // console.log(questions);
+  console.log(pageNum);
+  console.log(questions);
+
+  const onIntersect = (entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting && !loading) {
+      setTimeout(async () => {
+        setPageNum((page) => page + 1);
+        setLoading(false);
+      }, 300);
+    }
+  };
+  useEffect(() => {
+    fetchQustion();
+  }, [pageNum]);
+
+  useEffect(() => {
+    let observer;
+    if (pageEnd.current) {
+      observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
+      observer.observe(pageEnd.current);
+    }
+    return () => observer && observer.disconnect();
+  }, [onIntersect]);
+
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
@@ -205,30 +162,25 @@ function StuffList() {
           </button>
         </SelectBox>
         <ContentsContainer>
-          {questions &&
-            questions.map((item) => (
-              <div id="observer" key={item.stuffQuestionId}>
-                <StuffListContents
-                  key={item.stuffQuestionId}
-                  id={item.stuffQuestionId}
-                  memberId={item.memberId}
-                  title={item.stuffQuestionTitle}
-                  content={item.stuffQuestionContent}
-                  num={item.stuffQuestionId}
-                  writer={item.name}
-                  date={item.stuffQuestionCreated}
-                  tag={item.locationTag}
-                  view={item.views}
-                  count={item.countAnswer}
-                />
-              </div>
-            ))}
-
-          {loading && (
-            <Loader ref={setPageEnd}>
-              <DotPulse size={40} speed={1.3} color="#008505" />
-            </Loader>
-          )}
+          {[...questions].map((item) => (
+            <StuffListContents
+              key={item.stuffQuestionId}
+              id={item.stuffQuestionId}
+              memberId={item.memberId}
+              title={item.stuffQuestionTitle}
+              content={item.stuffQuestionContent}
+              num={item.stuffQuestionId}
+              writer={item.name}
+              date={item.stuffQuestionCreated}
+              tag={item.locationTag}
+              view={item.views}
+              count={item.countAnswer}
+            />
+          ))}
+          <Loader>
+            {totalPage > pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
+            {loading && <DotSpinner size={80} speed={0.9} color="#008505" />}
+          </Loader>
         </ContentsContainer>
       </StuffListContent>
     </StuffListContainer>
@@ -236,13 +188,13 @@ function StuffList() {
 }
 
 export default StuffList;
-const Loading = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+// const Loading = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 const StuffListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
@@ -406,9 +358,8 @@ const ContentsContainer = styled.div`
 `;
 
 const Loader = styled.div`
-  width: 760px;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0 0 16px 0;
+  align-items: center;
 `;

@@ -65,6 +65,9 @@ const EquipmentContentsHeader = styled.div`
     ${mobile} {
       font-size: 0.7rem;
     }
+    :hover {
+      color: #005603;
+    }
   }
 `;
 const EquipmentContentsTitle = styled.div`

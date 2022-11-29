@@ -31,7 +31,7 @@ function ShareList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/question/search/tag/${drop} `)
+        .get(`/api/question/search/tag/${drop} `)
 
         .then((response) => {
           console.log(response);
@@ -51,7 +51,7 @@ function ShareList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/question/search/${search.select}/${search.content}`)
+        .get(`/api/question/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -71,7 +71,7 @@ function ShareList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/question/questions`);
+        const response = await axios.get(`/api/question/questions`);
         console.log(response);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
@@ -113,23 +113,22 @@ function ShareList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions &&
-            questions
-              .slice(items * (page - 1), items * (page - 1) + items)
-              .map((item) => (
-                <ShareListContents
-                  key={item.questionId}
-                  id={item.questionId}
-                  memberId={item.memberId}
-                  title={item.questionTitle}
-                  num={item.questionId}
-                  writer={item.name}
-                  date={item.questionCreated}
-                  tag={item.locationTag}
-                  view={item.views}
-                  count={item.countAnswer}
-                />
-              ))}
+          {[...questions]
+            .slice(items * (page - 1), items * (page - 1) + items)
+            .map((item) => (
+              <ShareListContents
+                key={item.questionId}
+                id={item.questionId}
+                memberId={item.memberId}
+                title={item.questionTitle}
+                num={item.questionId}
+                writer={item.name}
+                date={item.questionCreated}
+                tag={item.locationTag}
+                view={item.views}
+                count={item.countAnswer}
+              />
+            ))}
         </ContentsContainer>
         <Row>
           <select className="items" onChange={itemChange}>
