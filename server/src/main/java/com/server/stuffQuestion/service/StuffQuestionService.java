@@ -105,6 +105,8 @@ public class StuffQuestionService {
                     Sort.by("stuffQuestionId").descending()));
     }
 
+//    public Page<>
+
     @Transactional
     public void deleteStuffQuestion(long stuffQuestionId){
         if(!stuffQuestionRepository.existsById(stuffQuestionId)){

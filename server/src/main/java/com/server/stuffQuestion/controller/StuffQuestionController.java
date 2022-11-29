@@ -100,6 +100,17 @@ public class StuffQuestionController {
 
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
     }
+
+//    @GetMapping
+//    public ResponseEntity getStuffQuestionsTags(@Positive @RequestParam int page,
+//                                            @Positive @RequestParam int size) {
+//        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
+//        List<stuffQuestionList> stuffQuestion = pageStuffQuestion.getContent();
+//
+//        return new ResponseEntity<>(
+//                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestion), pageStuffQuestion), HttpStatus.OK);
+//    }
+
     @GetMapping("/stuffQuestions")
     public ResponseEntity getAllStuffQuestions(){
         List<StuffQuestion> stuffQuestionList=stuffQuestionRepository.findAll(Sort.by(Sort.Direction.DESC, "stuffQuestionId"));  // 바로 repository에서 데이터 가져옴

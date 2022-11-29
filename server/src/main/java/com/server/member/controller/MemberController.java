@@ -34,7 +34,7 @@ public class MemberController {
 
     @PostMapping("/join")
     public ResponseEntity postMember(@RequestBody @Valid MemberPostDto memberPostDto){
-        Member member = memberMapper.memberPostDtoMember(memberPostDto);
+        Member member = memberMapper.memberPostDtoToMember(memberPostDto);
         Member response = memberService.createMember(member);
 
         return new ResponseEntity<>(
@@ -56,7 +56,7 @@ public class MemberController {
 
     @GetMapping
     public ResponseEntity getMembers(@Positive @RequestParam int page,
-                                       @Positive @RequestParam int size) {
+                                     @Positive @RequestParam int size) {
         Page<Member> pageMembers = memberService.findMembers(page-1, size);
         List<Member> members = pageMembers.getContent();// 내용까지도
 
@@ -68,7 +68,7 @@ public class MemberController {
 
     @PostMapping("/login")
     public ResponseEntity<Object> loginMember(@RequestBody MemberLoginDto memberLoginDto) {
-        Member member = memberMapper.memberLoginDtoMember(memberLoginDto);
+        Member member = memberMapper.memberLoginDtoToMember(memberLoginDto);
         Member response = memberService.LoginMember(member);
 
         return new ResponseEntity<>(memberMapper.memberToMemberResponseDto(response), HttpStatus.OK);
