@@ -133,6 +133,7 @@ const DropDown = ({ onChange, value }) => {
       opt.innerHTML = d[x];
       state.current.appendChild(opt);
     }
+
     setSelectValue(currentRegion);
   };
 

@@ -70,7 +70,7 @@ const ShareWriteForm = () => {
       return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
       return Swal.fire('제목을 입력하세요');
-    } else if (contents === '') {
+    } else if (contents === '' || contents === '<p><br></p>') {
       return Swal.fire('내용을 입력하세요');
     }
     axios
@@ -94,7 +94,9 @@ const ShareWriteForm = () => {
     <WriteFormStyle>
       <form className="input">
         <div className="region">지역선택</div>
-        <DropDown onChange={handleDrop} value={drop} />
+        <DropDownStyle>
+          <DropDown className="dropStyle" onChange={handleDrop} value={drop} />
+        </DropDownStyle>
         <div className="title">
           <label className="titleText" htmlFor="titleWrite">
             제목
@@ -144,11 +146,6 @@ const WriteFormStyle = styled.div`
   background: #ffffff;
   box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.25);
   margin: 50px auto;
-  .input {
-    ${tablet} {
-      width: 100%;
-    }
-  }
 
   .region {
     padding-left: 100px;
@@ -157,6 +154,7 @@ const WriteFormStyle = styled.div`
     font-weight: 400;
     font-size: 24px;
   }
+
   .title {
     padding: 50px;
   }
@@ -237,5 +235,12 @@ const EditorStyle = styled.div`
     top: 495px;
     margin-left: auto;
     margin-right: auto;
+  }
+`;
+
+const DropDownStyle = styled.div`
+  .dropStyle {
+    width: 42px;
+    height: 4px;
   }
 `;

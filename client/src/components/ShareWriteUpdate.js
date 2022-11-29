@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+// eslint-disable-next-line no-unused-vars
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ShareWriteUpdate = () => {
   const modules = useMemo(
@@ -71,17 +73,18 @@ const ShareWriteUpdate = () => {
   // 지역 구 받아오는 값
   const handleDrop = (e) => {
     setDrop(e.target.value);
+    console.log(e.target.value);
   };
 
   const navigate = useNavigate();
 
   const update = () => {
     if (drop === '') {
-      return alert('지역을 선택하세요');
+      return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
-      return alert('제목을 입력하세요');
-    } else if (content === '') {
-      return alert('내용을 입력하세요');
+      return Swal.fire('제목을 입력하세요');
+    } else if (content === '' || content === '<p><br></p>') {
+      return Swal.fire('내용을 입력하세요');
     }
     axios
       .patch(`/question/${QuestionId}`, {
