@@ -4,7 +4,11 @@ import { useEffect } from 'react';
 import WOW from 'wowjs';
 import Mockup1 from './../img/mobileMockup.png';
 import Mockup2 from './../img/pcMockup.png';
-import Mapimg1 from './../img/MapImg1.png';
+import IntroImg1 from './../img/intro1.gif';
+import IntroImg2 from './../img/intro2.gif';
+import IntroImg3 from './../img/intro3.gif';
+import MapIcon from './../img/mapIcon1.png';
+import Packages from './../img/packages.png';
 import Social from './../img/social-media.png';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -67,7 +71,7 @@ const EvenContents = (props) => {
           </p>
           {props.extra}
         </div>
-        <div className="imgWrapper">
+        <div className="imgWrapper even">
           {props.img &&
             props.img.map((x, i) => (
               <img
@@ -137,7 +141,7 @@ const Intro = () => {
             모델을 제안합니다.
           </>
         }
-        img={[Mapimg1]}
+        img={[IntroImg1, MapIcon]}
         extra={
           <div className="btn-group">
             <Link to="/map" className="wow flipInX btn" data-wow-delay=".6s">
@@ -152,7 +156,7 @@ const Intro = () => {
             이웃과 함께, <span className="font-bold">대피소후기</span>
           </>
         }
-        img={[Mockup2, Social]}
+        img={[IntroImg2, Social]}
         paragraph={'우리동네 대피소에는 어떤 후기가 있을까요?'}
         extra={
           <div className="btn-group">
@@ -168,11 +172,15 @@ const Intro = () => {
             우리동네 대피소는? <span className="font-bold">비품확인</span>
           </>
         }
-        img={[Mockup2, Social]}
+        img={[IntroImg3, Packages]}
         paragraph={'우리동네 대피소 비품을 알고싶다면?'}
         extra={
           <div className="btn-group">
-            <Link to="/review" className="wow flipInX btn" data-wow-delay=".6s">
+            <Link
+              to="/stuffList"
+              className="wow flipInX btn"
+              data-wow-delay=".6s"
+            >
               비품확인 보러가기
             </Link>
           </div>
@@ -251,7 +259,6 @@ const IntroWrapper = styled.div`
       display: flex;
       justify-content: center;
       border-radius: 0.25em;
-      overflow: hidden;
       position: relative;
       ${tablet} {
         flex: 0 1 50%;
@@ -262,8 +269,14 @@ const IntroWrapper = styled.div`
         &:nth-child(2) {
           position: absolute;
           width: 25%;
-          right: 0;
-          bottom: 0;
+          right: -5%;
+          bottom: -5%;
+        }
+      }
+      &.even {
+        img:nth-child(2) {
+          left: -5%;
+          right: auto;
         }
       }
     }
