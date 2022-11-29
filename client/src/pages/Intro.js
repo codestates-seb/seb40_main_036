@@ -7,8 +7,6 @@ import Mockup2 from './../img/pcMockup.png';
 import IntroImg1 from './../img/intro1.gif';
 import IntroImg2 from './../img/intro2.gif';
 import IntroImg3 from './../img/intro3.gif';
-import MapIcon from './../img/mapIcon1.png';
-import Packages from './../img/packages.png';
 import Social from './../img/social-media.png';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -141,7 +139,7 @@ const Intro = () => {
             모델을 제안합니다.
           </>
         }
-        img={[IntroImg1, MapIcon]}
+        img={[IntroImg1]}
         extra={
           <div className="btn-group">
             <Link to="/map" className="wow flipInX btn" data-wow-delay=".6s">
@@ -172,7 +170,7 @@ const Intro = () => {
             우리동네 대피소는? <span className="font-bold">비품확인</span>
           </>
         }
-        img={[IntroImg3, Packages]}
+        img={[IntroImg3]}
         paragraph={'우리동네 대피소 비품을 알고싶다면?'}
         extra={
           <div className="btn-group">
