@@ -32,6 +32,11 @@ public class MemberService {
             throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
         }
 
+        Member mem2 = memberRepository.findByPhone(member.getPhone());
+        if(mem2!=null){
+            throw new BusinessLogicException(ExceptionCode.PHONE_EXISTS);
+        }
+
         member.setPassword(passwordEncoder.encode(member.getPassword()));
 
         return memberRepository.save(member);

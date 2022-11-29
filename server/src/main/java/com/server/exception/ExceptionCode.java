@@ -16,6 +16,7 @@ public enum ExceptionCode {
 
     MEMBER_EXISTS(409, "Member exists"),
     EMAIL_EXISTS(409,"이미 가입된 이메일이 있습니다."),
+    PHONE_EXISTS(409,"이미 가입된 휴대폰 번호가 있습니다."),
 
     SHELTER_EXISTS(409, "Shelter exists"),
     QUESTION_EXISTS(409, "Question exists"),
