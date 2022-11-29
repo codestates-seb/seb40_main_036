@@ -44,6 +44,7 @@ function StuffList() {
   }, [pageNum]);
   // console.log(questions);
   console.log(pageNum);
+  console.log(questions);
 
   const onIntersect = (entries) => {
     const entry = entries[0];
