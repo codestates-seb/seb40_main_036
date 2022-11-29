@@ -7,8 +7,6 @@ public class ShelterQuestionPostDto {
 
     private Long memberId;
 
-    private String name;
-
     private String  shelterQuestionTitle;
 
     private String  shelterQuestionContent;

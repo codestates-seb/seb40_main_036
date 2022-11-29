@@ -15,19 +15,23 @@ import java.util.List;
 @EnableScheduling
 @RequiredArgsConstructor
 public class DeleteReserve {
+
     private final ReservationRepository reservationRepository;
     private final ReservationInfoRepository reservationInfoRepository;
 
-        // @Scheduled(cron = "*/200 * * * * *") // 매일매일 100초 뒤에 아래의 코드를 실행하겠다.
-        // @Scheduled(cron = "0 0 0/1 * * *") // 매일매일 1시간 마다 아래의 코드를 실행하겠다.
-        // @Scheduled(cron = "0 0 0 * * *") // 매일매일 0시에 아래의 코드를 실행하겠다.
-        @Scheduled(cron = "0 0 0/1 * * *")
-        public void run(){
+    // @Scheduled(cron="*/200 * * * * *") // 매일매일 100초 뒤에 아래의 코드를 실행하겠다.
+    // @Scheduled(cron = "0 0 0 * * *") // 매일매일 0시에 아래의 코드를 실행하겠다.
+    // @Scheduled(cron = "0 0 0/1 * * *") // 매일매일 1시간마다 정각에 아래의 코드를 실행하겠다.
+    @Transactional
+    @Scheduled(cron = "0 0 0/1 * * *")
+    public void run(){
         reservationRepository.deleteAll();
-            List<ReservationInfo> reservationInfoList=reservationInfoRepository.findAll();
-            for(ReservationInfo reservationInfo:reservationInfoList){
-                reservationInfo.setReservedNum(0); // 지우지말고 0으로 set
-            }
-            System.out.println("작동");
+        List<ReservationInfo> reservationInfoList=reservationInfoRepository.findAll();
+        for(ReservationInfo reservationInfo:reservationInfoList){
+            reservationInfo.setReservedNum(0); // 지우지말고 0으로 set
+        }
+        System.out.println("작동");
+
     }
+
 }

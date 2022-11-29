@@ -7,7 +7,11 @@ import com.server.member.mapper.MemberMapper;
 import com.server.member.service.MemberService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +26,8 @@ import java.util.List;
 @RequestMapping("/member")
 @AllArgsConstructor
 @Validated
+@Slf4j
+@Api(tags ="Member API")
 public class MemberController {
 
     private final MemberService memberService;
@@ -30,11 +36,9 @@ public class MemberController {
 
     @PostMapping("/join")
     public ResponseEntity postMember(@RequestBody @Valid MemberPostDto memberPostDto){
-        Member member = memberMapper.memberPostDtoMember(memberPostDto);
-        Member response = memberService.createMember(member);
-
+        Member member = memberService.createMember(memberMapper.memberPostDtoToMember(memberPostDto));
         return new ResponseEntity<>(
-                memberMapper.memberToMemberResponseDto(response),
+                new SingleResponseDto<>(memberMapper.memberToMemberResponseDto(member)),
                 HttpStatus.CREATED);
     }
 
@@ -42,17 +46,14 @@ public class MemberController {
     public ResponseEntity getMember(@PathVariable("memberId")
                                     @Positive long Id) {
         Member member = memberService.findMember(Id);
-
         return new ResponseEntity<>(
-
-                new SingleResponseDto(memberMapper.memberToMemberResponseDto(member)),
-                HttpStatus.OK);
-
+                new SingleResponseDto<>(memberMapper.memberToMemberResponseDto(member))
+                , HttpStatus.OK);
     }
 
     @GetMapping
     public ResponseEntity getMembers(@Positive @RequestParam int page,
-                                       @Positive @RequestParam int size) {
+                                     @Positive @RequestParam int size) {
         Page<Member> pageMembers = memberService.findMembers(page-1, size);
         List<Member> members = pageMembers.getContent();// 내용까지도
 
@@ -64,7 +65,7 @@ public class MemberController {
 
     @PostMapping("/login")
     public ResponseEntity<Object> loginMember(@RequestBody MemberLoginDto memberLoginDto) {
-        Member member = memberMapper.memberLoginDtoMember(memberLoginDto);
+        Member member = memberMapper.memberLoginDtoToMember(memberLoginDto);
         Member response = memberService.LoginMember(member);
 
         return new ResponseEntity<>(memberMapper.memberToMemberResponseDto(response), HttpStatus.OK);

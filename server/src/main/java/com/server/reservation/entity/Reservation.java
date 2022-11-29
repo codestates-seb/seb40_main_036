@@ -41,7 +41,11 @@ public class Reservation {
     @JoinColumn(name = "memberId",insertable = false,updatable = false)
     private Member member;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "shelterId",insertable = false,updatable = false)
     private Shelter shelter;
+
+    @ManyToOne
+    @JoinColumn(name = "reservationInfoId",insertable = false,updatable = false)
+    private ReservationInfo reservationInfo;
 }

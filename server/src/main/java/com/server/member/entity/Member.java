@@ -37,11 +37,11 @@ public class Member {
     @Column(nullable = false)
     private String phone;
 
-    @OneToOne(mappedBy = "member")
-    private Reservation reservation;
-
     @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
     private List<Question> questions=new ArrayList<>();
+
+    @OneToOne(mappedBy = "member")
+    private Reservation reservation;
 
     @OneToMany(mappedBy = "member",cascade = CascadeType.PERSIST)
     private List<StuffQuestion> stuffQuestions=new ArrayList<>();

@@ -2,6 +2,7 @@ package com.server.shelter.entity;
 
 import com.server.question.entity.Question;
 import com.server.reservation.entity.Reservation;
+import com.server.reservationInfo.entity.ReservationInfo;
 import com.server.stuffQuestion.entity.StuffQuestion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,8 +39,11 @@ public class Shelter {
     @Column (nullable = false)
     private int capacity; // 대피소 수용가능 인원
 
+    @OneToMany(mappedBy = "shelter")
+    private List<Reservation> reservations;
+
     @OneToOne(mappedBy = "shelter")
-    private Reservation reservation;
+    private ReservationInfo reservationInfo;
 
     @OneToMany(mappedBy = "shelter")
     private List<Question> questions = new ArrayList<>();

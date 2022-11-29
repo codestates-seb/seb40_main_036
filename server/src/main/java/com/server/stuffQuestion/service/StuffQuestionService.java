@@ -2,6 +2,7 @@ package com.server.stuffQuestion.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffAnswer.repository.StuffAnswerRepository;
@@ -39,6 +40,9 @@ public class StuffQuestionService {
         stuffQuestion.setStuffQuestionCreated(LocalDate.now());
 
         stuffQuestion.setCountAnswer(0);
+
+        Member member = memberRepository.findByMemberId(stuffQuestion.getMemberId());
+        stuffQuestion.setName(member.getName());
 
         return stuffQuestionRepository.save(stuffQuestion);
     }
@@ -100,6 +104,8 @@ public class StuffQuestionService {
             return stuffQuestionRepository.findAll(PageRequest.of(page,size,
                     Sort.by("stuffQuestionId").descending()));
     }
+
+//    public Page<>
 
     @Transactional
     public void deleteStuffQuestion(long stuffQuestionId){

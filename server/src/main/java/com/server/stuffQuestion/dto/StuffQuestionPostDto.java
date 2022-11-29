@@ -7,8 +7,6 @@ public class StuffQuestionPostDto {
 
     private Long memberId;
 
-    private String name;
-
     private String  stuffQuestionTitle;
 
     private String  stuffQuestionContent;

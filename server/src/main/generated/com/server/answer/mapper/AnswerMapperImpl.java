@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-25T20:58:09+0900",
+    date = "2022-11-29T17:33:45+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -27,7 +27,6 @@ public class AnswerMapperImpl implements AnswerMapper {
 
         answer.setQuestionId( answerPostDto.getQuestionId() );
         answer.setMemberId( answerPostDto.getMemberId() );
-        answer.setName( answerPostDto.getName() );
         answer.setAnswerContent( answerPostDto.getAnswerContent() );
 
         return answer;
@@ -68,7 +67,7 @@ public class AnswerMapperImpl implements AnswerMapper {
     }
 
     @Override
-    public List<AnswerResponseDto> answersToAnswersResponseDtos(List<Answer> answers) {
+    public List<AnswerResponseDto> answersToAnswerResponseDtos(List<Answer> answers) {
         if ( answers == null ) {
             return null;
         }

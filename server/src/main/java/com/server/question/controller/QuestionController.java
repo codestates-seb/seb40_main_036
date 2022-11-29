@@ -1,5 +1,6 @@
 package com.server.question.controller;
 
+import com.server.answer.mapper.AnswerMapper;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.entity.Question;
@@ -7,6 +8,7 @@ import com.server.question.mapper.QuestionMapper;
 import com.server.question.repository.QuestionRepository;
 import com.server.question.service.QuestionService;
 import com.server.response.MultiResponseDto;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
@@ -24,6 +26,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="Question API")
 public class QuestionController {
 
     private final QuestionService questionService;
@@ -32,7 +35,7 @@ public class QuestionController {
 
     private final QuestionRepository questionRepository;
 
-
+    private final AnswerMapper answerMapper;
     @PostMapping
     public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
 
@@ -116,12 +119,12 @@ public class QuestionController {
                 HttpStatus.OK);
     }
 
-    @DeleteMapping("/{questionId}")
-    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
-
-        questionService.deleteQuestion(questionId);
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+//    @DeleteMapping("/{questionId}")
+//    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
+//
+//        questionService.deleteQuestion(questionId);
+//
+//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//    }
 
 }
