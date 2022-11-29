@@ -1,5 +1,6 @@
 {
-  "homepage": "https://codestates-seb.github.io/seb40_main_036/",
+
+  "homepage": ".",
   "name": "client",
   "version": "0.1.0",
   "private": true,
