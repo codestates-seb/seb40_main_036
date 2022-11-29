@@ -88,7 +88,7 @@ const ShareWriteUpdate = () => {
     }
     axios
       .patch(`/api/question/${QuestionId}`, {
-        memberId: sessionStorage.getItem('memberId'),
+        memberId: localStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: content,
         locationTag: drop,

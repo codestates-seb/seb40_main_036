@@ -75,8 +75,8 @@ const ShareWriteForm = () => {
     }
     axios
       .post(`/api/question/`, {
-        memberId: sessionStorage.getItem('memberId'),
-        name: sessionStorage.getItem('name'),
+        memberId: localStorage.getItem('memberId'),
+        name: localStorage.getItem('name'),
         questionTitle: title,
         questionContent: contents,
         locationTag: drop,
