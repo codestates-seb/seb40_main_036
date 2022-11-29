@@ -88,7 +88,7 @@ const StuffWriteForm = () => {
       })
       .then((response) => {
         console.log(response);
-        navigate('/stuffList');
+        navigate(`/stuffList/${response.data.stuffQuestionId}`);
       })
       .catch((error) => {
         // Handle error.
@@ -237,5 +237,17 @@ const EditorStyle = styled.div`
     top: 495px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .ql-container {
+    font-size: 1rem;
+  }
+  .ql-size-small {
+    font-size: 0.76rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
   }
 `;

@@ -21,7 +21,7 @@ function ReviewListLookup() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
+        const response = await axios.get(`api/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setQuestions(response.data.data);
         setAnswer(response.data.data.shelterAnswers); // 데이터는 response.body 안에 들어있습니다.

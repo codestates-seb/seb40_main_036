@@ -79,7 +79,7 @@ const ShelterWriteForm = () => {
       });
     }
     axios
-      .post(`/api/shelterQuestion`, {
+      .post(`/shelterQuestion`, {
         memberId: localStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: contents,
@@ -87,7 +87,7 @@ const ShelterWriteForm = () => {
       })
       .then((response) => {
         console.log(response);
-        navigate('/review');
+        navigate(`/review/${response.data.shelterQuestionId}`);
       })
       .catch((error) => {
         // Handle error.
@@ -121,6 +121,7 @@ const ShelterWriteForm = () => {
               modules={modules}
               formats={formats}
               value={contents}
+              theme="snow"
               onChange={onChangeContents}
             />
           </EditorStyle>
@@ -236,5 +237,17 @@ const EditorStyle = styled.div`
     top: 495px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .ql-container {
+    font-size: 1rem;
+  }
+  .ql-size-small {
+    font-size: 0.76rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
   }
 `;
