@@ -72,7 +72,7 @@ const Header = styled.div`
     margin: 0px 0px 2.5px;
     align-items: center;
     text-align: center;
-    width: 64px;
+    width: 70px;
     padding: 0 10px;
     align-items: center;
     border: 1px solid #d2d2d2;

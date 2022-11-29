@@ -59,7 +59,7 @@ function ShareListLookup() {
             />
           </>
         )}
-        {answer.map((item) => (
+        {[...answer].map((item) => (
           <ShareAnswerViewr
             key={item.answerId}
             questionId={item.questionId}
