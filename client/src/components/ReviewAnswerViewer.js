@@ -71,7 +71,7 @@ function ReviewAnswerViewr({
     ) {
       setTimeout(() => {
         axios
-          .delete(`/api/shelterAnswer/${id}`)
+          .delete(`/shelterAnswer/${id}`)
           .then(() => window.location.reload())
           .catch((err) => console.log(err));
       }, 1000);

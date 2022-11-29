@@ -5,6 +5,7 @@ import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ShelterWriteUpdate = () => {
   const modules = useMemo(
@@ -46,7 +47,7 @@ const ShelterWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
+        const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.shelterQuestionTitle);
         setContent(response.data.data.shelterQuestionContent);
@@ -77,14 +78,14 @@ const ShelterWriteUpdate = () => {
 
   const update = () => {
     if (drop === '') {
-      return alert('지역을 선택하세요');
+      return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
-      return alert('제목을 입력하세요');
-    } else if (content === '') {
-      return alert('내용을 입력하세요');
+      return Swal.fire('제목을 입력하세요');
+    } else if (content === '' || content === '<p><br></p>') {
+      return Swal.fire('내용을 입력하세요');
     }
     axios
-      .patch(`/shelterQuestion/${QuestionId}`, {
+      .patch(`/api/shelterQuestion/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: content,
