@@ -100,9 +100,6 @@ public class AnswerService {
     public void deleteAnswer(long answerId){
         Answer answer= findVerifiedAnswer(answerId);
 
-        /////////////////////////////////////////////////////////////
-        // 답변 개수 갱신
-
         Question question=questionRepository.findByQuestionId(answer.getQuestionId());
 
         Long count=question.getCountAnswer();
@@ -110,8 +107,6 @@ public class AnswerService {
         question.setCountAnswer(count);
 
         questionRepository.save(question);
-
-        /////////////////////////////////////////////////////////////
 
         answerRepository.delete(answer);
 
