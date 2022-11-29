@@ -1,22 +1,24 @@
 package com.server.question.dto;
 
+//import com.server.answer.dto.AnswerResponseDto;
 import com.server.answer.dto.AnswerResponseDto;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class QuestionResponseDto {
 
     private Long questionId;
 
     private Long memberId;
 
-    private String name;
+    private String name; // 작성자
 
     private String questionTitle;
 

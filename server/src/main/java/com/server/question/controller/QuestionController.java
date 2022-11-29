@@ -1,5 +1,6 @@
 package com.server.question.controller;
 
+import com.server.answer.mapper.AnswerMapper;
 import com.server.question.dto.QuestionPatchDto;
 import com.server.question.dto.QuestionPostDto;
 import com.server.question.entity.Question;
@@ -34,14 +35,14 @@ public class QuestionController {
 
     private final QuestionRepository questionRepository;
 
-
+    private final AnswerMapper answerMapper;
     @PostMapping
     public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
 
         Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto));
 
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question), HttpStatus.CREATED);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question, answerMapper), HttpStatus.CREATED);
 
     }
 
@@ -54,7 +55,7 @@ public class QuestionController {
 
         Question responseQuestion=questionService.updateQuestion(question);
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(responseQuestion),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(responseQuestion, answerMapper),HttpStatus.OK);
 
     }
 
@@ -66,7 +67,7 @@ public class QuestionController {
         Question question = questionService.findQuestion(Id);
         question = questionService.addViews(question);
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question, answerMapper),HttpStatus.OK);
 
     }
 
@@ -118,12 +119,12 @@ public class QuestionController {
                 HttpStatus.OK);
     }
 
-    @DeleteMapping("/{questionId}")
-    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
-
-        questionService.deleteQuestion(questionId);
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+//    @DeleteMapping("/{questionId}")
+//    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
+//
+//        questionService.deleteQuestion(questionId);
+//
+//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//    }
 
 }

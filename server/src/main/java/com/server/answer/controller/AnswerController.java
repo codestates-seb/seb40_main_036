@@ -72,7 +72,7 @@ public class AnswerController {
                                               @Positive long questionID){
         List<Answer> answerList = answerService.findQuestionAnswers(questionID);
 
-        return new ResponseEntity<>(answerMapper.answersToAnswersResponseDtos(answerList),HttpStatus.OK);
+        return new ResponseEntity<>(answerMapper.answersToAnswerResponseDtos(answerList),HttpStatus.OK);
     }
 
 
@@ -83,7 +83,7 @@ public class AnswerController {
         List<Answer> answer = pageAnswer.getContent();
 
         return new ResponseEntity<>(
-                new MultiResponseDto<>(answerMapper.answersToAnswersResponseDtos(answer),pageAnswer),HttpStatus.OK);
+                new MultiResponseDto<>(answerMapper.answersToAnswerResponseDtos(answer),pageAnswer),HttpStatus.OK);
     }
 
 

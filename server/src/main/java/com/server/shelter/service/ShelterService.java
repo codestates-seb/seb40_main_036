@@ -86,9 +86,9 @@ public class ShelterService {
     public void deleteShelter(long shelterId){
 
         Shelter findShelter = findVerifiedShelter(shelterId);
-        //reservationInfoRepository.delete(shelterId);
+        ReservationInfo reservationInfo = reservationInfoRepository.findByshelterName(findShelter.getShelterName());
+        reservationInfoRepository.delete(reservationInfo);
         shelterRepository.delete(findShelter);
-
 
     }
 

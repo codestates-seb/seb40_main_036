@@ -28,7 +28,6 @@ public class QuestionService {
 
     private final AnswerRepository answerRepository;
 
-
     public Question createQuestion(Question question){
 
         if(!memberRepository.existsById(question.getMemberId())){
@@ -37,7 +36,7 @@ public class QuestionService {
 
         question.setQuestionCreated(LocalDate.now());
 
-        question.setCountAnswer(0);
+        // question.setCountAnswer(0);
 
         return questionRepository.save(question);
     }

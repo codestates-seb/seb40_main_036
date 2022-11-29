@@ -1,52 +1,19 @@
 package com.server.answer.mapper;
 
-import com.server.answer.dto.AnswerPatchDto;
-import com.server.answer.dto.AnswerPostDto;
 import com.server.answer.dto.AnswerResponseDto;
 import com.server.answer.entity.Answer;
-import java.util.ArrayList;
-import java.util.List;
+import com.server.member.entity.Member;
+import com.server.question.entity.Question;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-26T22:14:10+0900",
+    date = "2022-11-29T11:32:06+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
 public class AnswerMapperImpl implements AnswerMapper {
-
-    @Override
-    public Answer answerPostDtoToAnswer(AnswerPostDto answerPostDto) {
-        if ( answerPostDto == null ) {
-            return null;
-        }
-
-        Answer answer = new Answer();
-
-        answer.setQuestionId( answerPostDto.getQuestionId() );
-        answer.setMemberId( answerPostDto.getMemberId() );
-        answer.setName( answerPostDto.getName() );
-        answer.setAnswerContent( answerPostDto.getAnswerContent() );
-
-        return answer;
-    }
-
-    @Override
-    public Answer answerPatchDtoToAnswer(AnswerPatchDto answerPatchDto) {
-        if ( answerPatchDto == null ) {
-            return null;
-        }
-
-        Answer answer = new Answer();
-
-        answer.setQuestionId( answerPatchDto.getQuestionId() );
-        answer.setMemberId( answerPatchDto.getMemberId() );
-        answer.setAnswerContent( answerPatchDto.getAnswerContent() );
-
-        return answer;
-    }
 
     @Override
     public AnswerResponseDto answerToAnswerResponseDto(Answer answer) {
@@ -56,10 +23,10 @@ public class AnswerMapperImpl implements AnswerMapper {
 
         AnswerResponseDto.AnswerResponseDtoBuilder answerResponseDto = AnswerResponseDto.builder();
 
+        answerResponseDto.questionId( answerQuestionQuestionId( answer ) );
+        answerResponseDto.name( answerMemberName( answer ) );
         answerResponseDto.answerId( answer.getAnswerId() );
-        answerResponseDto.questionId( answer.getQuestionId() );
         answerResponseDto.memberId( answer.getMemberId() );
-        answerResponseDto.name( answer.getName() );
         answerResponseDto.answerContent( answer.getAnswerContent() );
         answerResponseDto.answerCreated( answer.getAnswerCreated() );
         answerResponseDto.answerModified( answer.getAnswerModified() );
@@ -67,17 +34,33 @@ public class AnswerMapperImpl implements AnswerMapper {
         return answerResponseDto.build();
     }
 
-    @Override
-    public List<AnswerResponseDto> answersToAnswersResponseDtos(List<Answer> answers) {
-        if ( answers == null ) {
+    private Long answerQuestionQuestionId(Answer answer) {
+        if ( answer == null ) {
             return null;
         }
-
-        List<AnswerResponseDto> list = new ArrayList<AnswerResponseDto>( answers.size() );
-        for ( Answer answer : answers ) {
-            list.add( answerToAnswerResponseDto( answer ) );
+        Question question = answer.getQuestion();
+        if ( question == null ) {
+            return null;
         }
+        Long questionId = question.getQuestionId();
+        if ( questionId == null ) {
+            return null;
+        }
+        return questionId;
+    }
 
-        return list;
+    private String answerMemberName(Answer answer) {
+        if ( answer == null ) {
+            return null;
+        }
+        Member member = answer.getMember();
+        if ( member == null ) {
+            return null;
+        }
+        String name = member.getName();
+        if ( name == null ) {
+            return null;
+        }
+        return name;
     }
 }
