@@ -76,15 +76,15 @@ const ContentsList = styled.div`
       text-decoration: underline;
     }
     .title {
-      width: 60%;
+      width: 70%;
       word-break: break-word;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
     .tag {
-      width: 70px;
-      padding: 0 10px;
+      width: 16%;
+      padding: 1px 6px;
       border: 1px solid #d2d2d2;
       border-radius: 5px;
       margin-right: 5px;
@@ -100,6 +100,7 @@ const ContentsList = styled.div`
       }
     }
     .count {
+      width: 14%;
       margin-left: 3px;
       color: #008505;
       ${tablet} {
