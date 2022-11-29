@@ -68,26 +68,20 @@ const ReviewListContents = styled.div`
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
-  color: #838383;
-  font-size: 1.125rem;
-  cursor: pointer;
-  ${tablet} {
-    font-size: 1.1rem;
-  }
-  ${mobile} {
-    font-size: 0.9rem;
-  }
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 1rem;
+    font-size: 1.125rem;
     border: none;
+    :hover {
+      color: #005603;
+    }
     ${tablet} {
-      font-size: 0.8rem;
+      font-size: 1.1rem;
     }
     ${mobile} {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
   }
 `;

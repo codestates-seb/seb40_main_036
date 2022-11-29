@@ -68,17 +68,14 @@ const StuffListContents = styled.div`
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
-  cursor: pointer;
   button {
     cursor: pointer;
-    background-color: #008505;
-    color: #ffffff;
+    background-color: transparent;
+    color: #838383;
     font-size: 1.125rem;
     border: none;
-    border-radius: 5px;
-    padding: 4px 6px;
     :hover {
-      background-color: #005603;
+      color: #005603;
     }
     ${tablet} {
       font-size: 1.1rem;

@@ -23,7 +23,7 @@ function ReviewAnswerViewr({
   const AnswerEditOnClick = () => {
     if (Number(sessionStorage.getItem('memberId')) === memberid) {
       const data = {
-        shelterAnswerConten: textRef.current.value,
+        shelterAnswerContent: textRef.current.value,
         shelterQuestionId: `${questionId}`,
         memberId: `${sessionStorage.getItem('memberId')}`,
         name: `${sessionStorage.getItem('name')}`,
@@ -71,7 +71,7 @@ function ReviewAnswerViewr({
     ) {
       setTimeout(() => {
         axios
-          .delete(`/stuffAnswer/${id}`)
+          .delete(`/shelterAnswer/${id}`)
           .then(() => window.location.reload())
           .catch((err) => console.log(err));
       }, 1000);
@@ -193,13 +193,16 @@ const DeletEdit = styled.div`
   padding-right: 30px;
   justify-content: end;
   gap: 0px 5px;
-  padding-left: 73px;
+  padding-right: 50px;
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 1rem;
+    font-size: 1.12rem;
     border: none;
+    :hover {
+      color: #005603;
+    }
     ${tablet} {
       font-size: 0.85rem;
     }

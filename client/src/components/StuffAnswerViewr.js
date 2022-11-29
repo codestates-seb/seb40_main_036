@@ -93,7 +93,9 @@ function StuffAnswerViewr({
           </div>
           {memberid === Number(sessionStorage.getItem('memberId')) ? (
             <DeletEdit>
-              <button onClick={deleteClick}>삭제</button>
+              <button className="delete" onClick={deleteClick}>
+                삭제
+              </button>
               <button
                 className="edit"
                 onClick={() => {
@@ -193,13 +195,16 @@ const DeletEdit = styled.div`
   padding-right: 30px;
   justify-content: end;
   gap: 0px 5px;
-  padding-left: 73px;
+  padding-right: 50px;
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 1rem;
+    font-size: 1.12rem;
     border: none;
+    :hover {
+      color: #005603;
+    }
     ${tablet} {
       font-size: 0.85rem;
     }
