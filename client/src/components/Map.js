@@ -15,10 +15,8 @@ const skAppKey = 'l7xx846db5f3bc1e48d29b7275a745d501c8';
 
 const Map = (props) => {
   const [open, setopen] = useState(false);
-  const [open2, setopen2] = useState(false);
   const [title, setTitle] = useState('');
   const [distance, setDistance] = useState('');
-  const [message, setmessage] = useState('예약이 완료되었습니다.');
   const [now, setNow] = useState(0);
   const [capacity, setCapacity] = useState('');
   const [shelterId, setShelterId] = useState('');
@@ -223,8 +221,6 @@ const Map = (props) => {
           capacity={capacity}
           shelterId={shelterId}
           now={now}
-          setopen2={setopen2}
-          setmessage={setmessage}
         />
       )}
       <LoadingIcon
@@ -234,14 +230,7 @@ const Map = (props) => {
         pulse={true}
         style={props.loading ? { display: 'block' } : { display: 'none' }}
       />
-      {open2 && (
-        <Overlay>
-          <Message>
-            {message}
-            <button onClick={() => window.location.reload()}>x</button>
-          </Message>
-        </Overlay>
-      )}
+
       <MapWrapper id="map"></MapWrapper>
       <div id="centerAddr"></div>
     </>
@@ -249,33 +238,7 @@ const Map = (props) => {
 };
 
 export default Map;
-const Overlay = styled.div`
-  content: '';
-  position: fixed;
-  background: rgba(0, 0, 0, 0.25);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`;
-const Message = styled.div`
-  background: white;
-  border-radius: 0.25em;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 16px 8px;
-  button {
-    border: none;
-    padding: 4px 8px;
-    background: transparent;
 
-    &:hover {
-      background: lightgray;
-    }
-  }
-`;
 const LoadingIcon = styled(FontAwesomeIcon)`
   position: fixed;
   top: 50%;
