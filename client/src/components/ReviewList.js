@@ -1,12 +1,12 @@
 import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ReviewListContents from './ReviewListContents';
-import { Link } from 'react-router-dom';
 import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import { DotSpinner } from '@uiball/loaders';
+import Swal from 'sweetalert2';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -32,7 +32,7 @@ function ReviewList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/shelterQuestion/search/tag/${drop} `)
+        .get(`/api/shelterQuestion/search/tag/${drop} `)
 
         .then((response) => {
           console.log(response);
@@ -52,7 +52,7 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/shelterQuestion/search/${search.select}/${search.content}`)
+        .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -68,6 +68,21 @@ function ReviewList() {
       handleSearchButton();
     }
   };
+
+  // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
+  const handleAskBtnClick = () => {
+    if (localStorage.getItem('email') !== null) {
+      window.location.href = '/shelterWriteForm';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      }).then(() => (window.location.href = '/login'));
+    }
+  };
+
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -145,12 +160,10 @@ function ReviewList() {
             <option value="20">20개</option>
             <option value="30">30개</option>
           </select>
-          <Link to="/shelterWriteForm">
-            <button className="writing">
-              <FaPencilAlt />
-              글쓰기
-            </button>
-          </Link>
+          <button className="writing" onClick={handleAskBtnClick}>
+            <FaPencilAlt />
+            글쓰기
+          </button>
         </Row>
         <PaginationBox>
           <Pagination

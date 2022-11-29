@@ -114,6 +114,7 @@ const SignUP = () => {
             icon: 'error',
             title: '회원가입 실패!',
             text: '이미 사용중인 이메일입니다. 다른 이메일을 입력하세요!',
+            confirmButtonColor: '#008505',
           });
         }
       });
