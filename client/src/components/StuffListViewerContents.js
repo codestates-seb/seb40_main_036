@@ -68,26 +68,23 @@ const StuffListContents = styled.div`
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
-  color: #838383;
-  font-size: 1.125rem;
   cursor: pointer;
-  ${tablet} {
-    font-size: 1.1rem;
-  }
-  ${mobile} {
-    font-size: 0.9rem;
-  }
   button {
     cursor: pointer;
-    background-color: transparent;
-    color: #838383;
-    font-size: 1rem;
+    background-color: #008505;
+    color: #ffffff;
+    font-size: 1.125rem;
     border: none;
+    border-radius: 5px;
+    padding: 4px 6px;
+    :hover {
+      background-color: #005603;
+    }
     ${tablet} {
-      font-size: 0.8rem;
+      font-size: 1.1rem;
     }
     ${mobile} {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
   }
 `;

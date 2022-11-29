@@ -113,23 +113,22 @@ function ShareList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions &&
-            questions
-              .slice(items * (page - 1), items * (page - 1) + items)
-              .map((item) => (
-                <ShareListContents
-                  key={item.questionId}
-                  id={item.questionId}
-                  memberId={item.memberId}
-                  title={item.questionTitle}
-                  num={item.questionId}
-                  writer={item.name}
-                  date={item.questionCreated}
-                  tag={item.locationTag}
-                  view={item.views}
-                  count={item.countAnswer}
-                />
-              ))}
+          {[...questions]
+            .slice(items * (page - 1), items * (page - 1) + items)
+            .map((item) => (
+              <ShareListContents
+                key={item.questionId}
+                id={item.questionId}
+                memberId={item.memberId}
+                title={item.questionTitle}
+                num={item.questionId}
+                writer={item.name}
+                date={item.questionCreated}
+                tag={item.locationTag}
+                view={item.views}
+                count={item.countAnswer}
+              />
+            ))}
         </ContentsContainer>
         <Row>
           <select className="items" onChange={itemChange}>
