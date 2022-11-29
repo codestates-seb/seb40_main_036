@@ -24,7 +24,39 @@ function StuffList() {
     content: '',
   });
   const [drop, setDrop] = useState();
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/api/stuffQuestion/search/tag/${drop} `)
 
+        .then((response) => {
+          console.log(response.data);
+          setQuestions(response.data);
+          console.log(drop);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
+  const handleSearchButton = () => {
+    if (search.content !== undefined) {
+      axios
+        .get(`/api/stuffQuestion/search/${search.select}/${search.content}`)
+        .then((response) => {
+          console.log(response);
+          setQuestions(response.data);
+          console.log(search);
+        });
+    }
+    window.scrollTo(0, 0);
+    setSearch({ select: 'title', content: '' });
+    document.getElementById('search').value = 'title';
+  };
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
+    }
+  };
   const fetchQustion = useCallback(async () => {
     try {
       console.log('불러오기');
@@ -32,7 +64,7 @@ function StuffList() {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/stuffQuestion?page=${pageNum}&size=15`
+        `/api/stuffQuestion?page=${pageNum}&size=15`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
@@ -70,39 +102,6 @@ function StuffList() {
 
   const handleDrop = (e) => {
     setDrop(e.target.value);
-  };
-  const handleTagSearchButton = () => {
-    if (drop !== undefined) {
-      axios
-        .get(`/stuffQuestion/search/tag/${drop} `)
-
-        .then((response) => {
-          console.log(response);
-          setQuestions(response.data);
-          console.log(drop);
-        })
-        .catch((err) => console.log(err));
-    }
-  };
-
-  const handleSearchButton = () => {
-    if (search.content !== undefined) {
-      axios
-        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
-        .then((response) => {
-          console.log(response);
-          setQuestions(response.data);
-          console.log(search);
-        });
-    }
-    window.scrollTo(0, 0);
-    setSearch({ select: 'title', content: '' });
-    document.getElementById('search').value = 'title';
-  };
-  const handleEnter = (e) => {
-    if (e.key === 'Enter') {
-      handleSearchButton();
-    }
   };
 
   if (error) return <div>에러가 발생했습니다</div>;
