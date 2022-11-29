@@ -11,6 +11,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ import java.util.List;
 @RequestMapping("/member")
 @AllArgsConstructor
 @Validated
+@Slf4j
 @Api(tags ="Member API")
 public class MemberController {
 
@@ -34,11 +36,9 @@ public class MemberController {
 
     @PostMapping("/join")
     public ResponseEntity postMember(@RequestBody @Valid MemberPostDto memberPostDto){
-        Member member = memberMapper.memberPostDtoToMember(memberPostDto);
-        Member response = memberService.createMember(member);
-
+        Member member = memberService.createMember(memberMapper.memberPostDtoToMember(memberPostDto));
         return new ResponseEntity<>(
-                memberMapper.memberToMemberResponseDto(response),
+                new SingleResponseDto<>(memberMapper.memberToMemberResponseDto(member)),
                 HttpStatus.CREATED);
     }
 
@@ -46,12 +46,9 @@ public class MemberController {
     public ResponseEntity getMember(@PathVariable("memberId")
                                     @Positive long Id) {
         Member member = memberService.findMember(Id);
-
         return new ResponseEntity<>(
-
-                new SingleResponseDto(memberMapper.memberToMemberResponseDto(member)),
-                HttpStatus.OK);
-
+                new SingleResponseDto<>(memberMapper.memberToMemberResponseDto(member))
+                , HttpStatus.OK);
     }
 
     @GetMapping
