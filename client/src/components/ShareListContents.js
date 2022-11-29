@@ -75,8 +75,8 @@ const ContentsList = styled.div`
       overflow: hidden;
     }
     .tag {
-      width: 70px;
-      padding: 0 10px;
+      width: 85px;
+      padding: 1px 10px;
       border: 1px solid #d2d2d2;
       border-radius: 5px;
       margin-right: 5px;

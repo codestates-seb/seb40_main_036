@@ -71,14 +71,17 @@ const Container = styled.div`
 `;
 const ShareListContents = styled.div`
   padding: 20px 0 30px 0;
-  .contents {
-    font-size: 1.125rem;
-    ${tablet} {
-      font-size: 1rem;
-    }
-    ${mobile} {
-      font-size: 0.8rem;
-    }
+  .ql-container {
+    font-size: 1rem;
+  }
+  .ql-size-small {
+    font-size: 0.76rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
   }
 `;
 const DeletEdit = styled.div`
