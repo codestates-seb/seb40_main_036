@@ -67,16 +67,24 @@ const ShareWriteForm = () => {
 
   const submit = () => {
     if (drop === '') {
-      return Swal.fire('지역을 선택하세요');
+      return Swal.fire({
+        title: '지역을 선택하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (title === '') {
-      return Swal.fire('제목을 입력하세요');
+      return Swal.fire({
+        title: '제목을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (contents === '' || contents === '<p><br></p>') {
-      return Swal.fire('내용을 입력하세요');
+      return Swal.fire({
+        title: '내용을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     }
     axios
       .post(`/api/question/`, {
         memberId: localStorage.getItem('memberId'),
-        name: localStorage.getItem('name'),
         questionTitle: title,
         questionContent: contents,
         locationTag: drop,
