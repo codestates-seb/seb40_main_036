@@ -31,7 +31,7 @@ function ReviewAnswerViewr({
       };
       console.log(data);
       axios
-        .patch(`/api/shelterAnswer/${id}`, data)
+        .patch(`/shelterAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
