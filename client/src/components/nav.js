@@ -21,7 +21,7 @@ const Nav = () => {
     if (localStorage.getItem('email') === null) {
       // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
     } else {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
+      // localStorage 에 email이라는 key 값으로 저장된 값이 있다면
       // 로그인 상태 변경
       setIsLogin(true);
     }

@@ -4,9 +4,9 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 // import InfiniteScroll from 'react-infinite-scroller';
 import { DotSpinner } from '@uiball/loaders';
+import Swal from 'sweetalert2';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -27,7 +27,7 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/api/stuffQuestion/search/tag/${drop} `)
+        .get(`/stuffQuestion/search/tag/${drop} `)
         .then((response) => {
           console.log(response.data);
           setQuestions(response.data);
@@ -40,7 +40,7 @@ function StuffList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/api/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -64,7 +64,7 @@ function StuffList() {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/api/stuffQuestion?page=${pageNum}&size=20`
+        `/stuffQuestion?page=${pageNum}&size=20`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
@@ -87,6 +87,21 @@ function StuffList() {
       }, 300);
     }
   };
+
+  // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
+  const handleAskBtnClick = () => {
+    if (localStorage.getItem('email') !== null) {
+      window.location.href = '/stuffWriteForm';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      }).then(() => (window.location.href = '/login'));
+    }
+  };
+
   useEffect(() => {
     fetchQustion();
   }, [pageNum]);
@@ -146,12 +161,10 @@ function StuffList() {
               </button>
             </div>
             <div className="row">
-              <Link to="/stuffWriteForm" style={{ textDecoration: 'none' }}>
-                <button className="writingBox">
-                  <FaPencilAlt />
-                  <div className="writing">글쓰기</div>
-                </button>
-              </Link>
+              <button className="writingBox" onClick={handleAskBtnClick}>
+                <FaPencilAlt />
+                <div className="writing">글쓰기</div>
+              </button>
             </div>
           </SearchBox>
         </StuffListTitle>

@@ -30,7 +30,7 @@ function ShareLisViewerContents({ id, content, memberId }) {
       ) {
         setTimeout(() => {
           axios
-            .delete(`/api/question/${id}`)
+            .delete(`/question/${id}`)
             .then(() => navigate(`/share`))
             .catch((err) => console.log(err));
         }, 1000);

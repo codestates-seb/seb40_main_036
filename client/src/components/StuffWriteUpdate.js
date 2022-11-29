@@ -47,7 +47,7 @@ const StuffWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/api/stuffQuestion/${QuestionId}`);
+        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.stuffQuestionTitle);
         setContent(response.data.data.stuffQuestionContent);
@@ -78,14 +78,23 @@ const StuffWriteUpdate = () => {
 
   const update = () => {
     if (drop === '') {
-      return Swal.fire('지역을 선택하세요');
+      return Swal.fire({
+        title: '지역을 선택하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (title === '') {
-      return Swal.fire('제목을 입력하세요');
+      return Swal.fire({
+        title: '제목을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (content === '' || content === '<p><br></p>') {
-      return Swal.fire('내용을 입력하세요');
+      return Swal.fire({
+        title: '내용을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     }
     axios
-      .patch(`/api/stuffQuestion/${QuestionId}`, {
+      .patch(`/stuffQuestion/${QuestionId}`, {
         memberId: localStorage.getItem('memberId'),
         stuffQuestionTitle: title,
         stuffQuestionContent: content,
