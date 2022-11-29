@@ -1,783 +1,783 @@
 [
     {
-     "shelter_id": 1,
-     "shelter_name": "가평고등학교 운동장",
+     "shelterId": 1,
+     "shelterName": "가평고등학교 운동장",
      "geolocation": "경기도 가평군 가평읍 호반로 2601",
      "y": "37.8175411",
      "x": "127.5133576",
      "capacity": 2543
     },
     {
-     "shelter_id": 2,
-     "shelter_name": "가평종합운동장",
+     "shelterId": 2,
+     "shelterName": "가평종합운동장",
      "geolocation": "경기도 가평군 가평읍 문화로 131",
      "y": "37.8248741",
      "x": "127.5072179",
      "capacity": 5395
     },
     {
-     "shelter_id": 3,
-     "shelter_name": "가평중학교 운동장",
+     "shelterId": 3,
+     "shelterName": "가평중학교 운동장",
      "geolocation": "경기도 가평군 가평읍 광장로 10",
      "y": "37.8269245",
      "x": "127.510185",
      "capacity": 1704
     },
     {
-     "shelter_id": 4,
-     "shelter_name": "가평체육관",
+     "shelterId": 4,
+     "shelterName": "가평체육관",
      "geolocation": "경기도 가평군 가평읍 문화로 131",
      "y": "37.823668",
      "x": "127.506991",
      "capacity": 973
     },
     {
-     "shelter_id": 5,
-     "shelter_name": "목동초등학교,가평북중학교 운동장",
+     "shelterId": 5,
+     "shelterName": "목동초등학교,가평북중학교 운동장",
      "geolocation": "경기도 가평군 북면 석장모루길 13",
      "y": "37.8797004",
      "x": "127.5486018",
      "capacity": 1896
     },
     {
-     "shelter_id": 6,
-     "shelter_name": "미원초등학교 운동장",
+     "shelterId": 6,
+     "shelterName": "미원초등학교 운동장",
      "geolocation": "경기도 가평군 설악면 신천중앙로120번길 11",
      "y": "37.6794161",
      "x": "127.4901687",
      "capacity": 853
     },
     {
-     "shelter_id": 7,
-     "shelter_name": "상면초등학교 운동장",
+     "shelterId": 7,
+     "shelterName": "상면초등학교 운동장",
      "geolocation": "경기도 가평군 상면 청군로 700-22",
      "y": "37.7757901",
      "x": "127.3711993",
      "capacity": 1143
     },
     {
-     "shelter_id": 8,
-     "shelter_name": "상면초등학교 체육관",
+     "shelterId": 8,
+     "shelterName": "상면초등학교 체육관",
      "geolocation": "경기도 가평군 상면 청군로 700-22",
      "y": "37.7757053",
      "x": "127.3713027",
      "capacity": 285
     },
     {
-     "shelter_id": 9,
-     "shelter_name": "설악중고등학교 강당",
+     "shelterId": 9,
+     "shelterName": "설악중고등학교 강당",
      "geolocation": "경기도 가평군 설악면 한양부로 21-1",
      "y": "37.6818367",
      "x": "127.4939548",
      "capacity": 302
     },
     {
-     "shelter_id": 10,
-     "shelter_name": "설악중고등학교 운동장",
+     "shelterId": 10,
+     "shelterName": "설악중고등학교 운동장",
      "geolocation": "경기도 가평군 설악면 한양부로 21-1",
      "y": "37.6817788",
      "x": "127.4939705",
      "capacity": 1125
     },
     {
-     "shelter_id": 11,
-     "shelter_name": "조종생활체육공원",
+     "shelterId": 11,
+     "shelterName": "조종생활체육공원",
      "geolocation": "경기도 가평군 하면 현리 420-13",
      "y": "37.8172294",
      "x": "127.3518143",
      "capacity": 4597
     },
     {
-     "shelter_id": 12,
-     "shelter_name": "조종초등학교 운동장",
+     "shelterId": 12,
+     "shelterName": "조종초등학교 운동장",
      "geolocation": "경기도 가평군 조종면 조종새싹로 13-9",
      "y": "37.8209863",
      "x": "127.3487882",
      "capacity": 1139
     },
     {
-     "shelter_id": 13,
-     "shelter_name": "청평중학교 운동장",
+     "shelterId": 13,
+     "shelterName": "청평중학교 운동장",
      "geolocation": "경기도 가평군 청평면 골안길 7",
      "y": "37.743051",
      "x": "127.4220355",
      "capacity": 1164
     },
     {
-     "shelter_id": 14,
-     "shelter_name": "청평초등학교 운동장",
+     "shelterId": 14,
+     "shelterName": "청평초등학교 운동장",
      "geolocation": "경기도 가평군 청평면 잠곡로 27",
      "y": "37.7375481",
      "x": "127.4215053",
      "capacity": 1196
     },
     {
-     "shelter_id": 15,
-     "shelter_name": "가람중학교 운동장",
+     "shelterId": 15,
+     "shelterName": "가람중학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 122",
      "y": "37.62366015",
      "x": "126.8412088",
      "capacity": 1685
     },
     {
-     "shelter_id": 16,
-     "shelter_name": "가람초등학교 운동장",
+     "shelterId": 16,
+     "shelterName": "가람초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 행신로311번길 78",
      "y": "37.62371918",
      "x": "126.8422019",
      "capacity": 1973
     },
     {
-     "shelter_id": 17,
-     "shelter_name": "가좌초등학교 운동장",
+     "shelterId": 17,
+     "shelterName": "가좌초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 가좌2로 31",
      "y": "37.68848153",
      "x": "126.7213648",
      "capacity": 1157
     },
     {
-     "shelter_id": 18,
-     "shelter_name": "고양고등학교 운동장",
+     "shelterId": 18,
+     "shelterName": "고양고등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 삼송로 171",
      "y": "37.65423828",
      "x": "126.8908698",
      "capacity": 848
     },
     {
-     "shelter_id": 19,
-     "shelter_name": "고양관산초등학교 운동장",
+     "shelterId": 19,
+     "shelterName": "고양관산초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 통일로726번길 130",
      "y": "37.69212289",
      "x": "126.866569",
      "capacity": 701
     },
     {
-     "shelter_id": 20,
-     "shelter_name": "고양송산중학교 운동장",
+     "shelterId": 20,
+     "shelterName": "고양송산중학교 운동장",
      "geolocation": "경기도 고양시 일산서구 가좌2로 15",
      "y": "37.68786323",
      "x": "126.7220292",
      "capacity": 1262
     },
     {
-     "shelter_id": 21,
-     "shelter_name": "고양신일초등학교 운동장",
+     "shelterId": 21,
+     "shelterName": "고양신일초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 강선로 183",
      "y": "37.67954944",
      "x": "126.7708283",
      "capacity": 2007
     },
     {
-     "shelter_id": 22,
-     "shelter_name": "고양제일중학교 운동장",
+     "shelterId": 22,
+     "shelterName": "고양제일중학교 운동장",
      "geolocation": "경기도 고양시 덕양구 통일로 820",
      "y": "37.6899001",
      "x": "126.8610402",
      "capacity": 1830
     },
     {
-     "shelter_id": 23,
-     "shelter_name": "고양종합운동장",
+     "shelterId": 23,
+     "shelterName": "고양종합운동장",
      "geolocation": "경기도 고양시 일산서구 중앙로 1601",
      "y": "37.6764217",
      "x": "126.7430656",
      "capacity": 6081
     },
     {
-     "shelter_id": 24,
-     "shelter_name": "고양종합운동장보조구장",
+     "shelterId": 24,
+     "shelterName": "고양종합운동장보조구장",
      "geolocation": "경기도 고양시 일산서구 중앙로 1601",
      "y": "37.6764217",
      "x": "126.7430656",
      "capacity": 5212
     },
     {
-     "shelter_id": 25,
-     "shelter_name": "고양화수초등학교 운동장",
+     "shelterId": 25,
+     "shelterName": "고양화수초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화수로 25",
      "y": "37.64538018",
      "x": "126.8327278",
      "capacity": 1347
     },
     {
-     "shelter_id": 26,
-     "shelter_name": "능곡고등학교 운동장",
+     "shelterId": 26,
+     "shelterName": "능곡고등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 지도로 76",
      "y": "37.62396233",
      "x": "126.8255034",
      "capacity": 2823
     },
     {
-     "shelter_id": 27,
-     "shelter_name": "능곡초등학교 운동장",
+     "shelterId": 27,
+     "shelterName": "능곡초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 토당로67번길 66",
      "y": "37.62449921",
      "x": "126.815946",
      "capacity": 3435
     },
     {
-     "shelter_id": 28,
-     "shelter_name": "대송중학교 운동장",
+     "shelterId": 28,
+     "shelterName": "대송중학교 운동장",
      "geolocation": "경기도 고양시 일산서구 송포로 49",
      "y": "37.67085888",
      "x": "126.7308658",
      "capacity": 1618
     },
     {
-     "shelter_id": 29,
-     "shelter_name": "대화인조잔디축구장",
+     "shelterId": 29,
+     "shelterName": "대화인조잔디축구장",
      "geolocation": "경기도 고양시 일산서구 대화로 168",
      "y": "37.67153905",
      "x": "126.7384442",
      "capacity": 2533
     },
     {
-     "shelter_id": 30,
-     "shelter_name": "대화중학교 운동장",
+     "shelterId": 30,
+     "shelterName": "대화중학교 운동장",
      "geolocation": "경기도 고양시 일산서구 고양대로 348",
      "y": "37.67384436",
      "x": "126.7444755",
      "capacity": 2364
     },
     {
-     "shelter_id": 31,
-     "shelter_name": "대화초등학교 운동장",
+     "shelterId": 31,
+     "shelterName": "대화초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 송포로 50",
      "y": "37.67157234",
      "x": "126.7323957",
      "capacity": 2780
     },
     {
-     "shelter_id": 32,
-     "shelter_name": "덕은중학교 운동장",
+     "shelterId": 32,
+     "shelterName": "덕은중학교 운동장",
      "geolocation": "경기도 고양시 덕양구 중앙로176번길 18-29",
      "y": "37.60465398",
      "x": "126.8717319",
      "capacity": 1355
     },
     {
-     "shelter_id": 33,
-     "shelter_name": "덕은초등학교 운동장",
+     "shelterId": 33,
+     "shelterName": "덕은초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 중앙로176번길 18-4",
      "y": "37.60317647",
      "x": "126.8718241",
      "capacity": 4908
     },
     {
-     "shelter_id": 34,
-     "shelter_name": "덕이중학교 운동장",
+     "shelterId": 34,
+     "shelterName": "덕이중학교 운동장",
      "geolocation": "경기도 고양시 일산서구 덕이동 산145-6",
      "y": "37.70219286",
      "x": "126.7533699",
      "capacity": 815
     },
     {
-     "shelter_id": 35,
-     "shelter_name": "덕이초등학교 운동장",
+     "shelterId": 35,
+     "shelterName": "덕이초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 덕이로 104",
      "y": "37.69276604",
      "x": "126.7483789",
      "capacity": 1569
     },
     {
-     "shelter_id": 36,
-     "shelter_name": "무원고등학교 운동장",
+     "shelterId": 36,
+     "shelterName": "무원고등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 65",
      "y": "37.61907895",
      "x": "126.8381457",
      "capacity": 1529
     },
     {
-     "shelter_id": 37,
-     "shelter_name": "무원초등학교 운동장",
+     "shelterId": 37,
+     "shelterName": "무원초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 무원로 47",
      "y": "37.6176968",
      "x": "126.8316813",
      "capacity": 2448
     },
     {
-     "shelter_id": 38,
-     "shelter_name": "문촌초등학교 운동장",
+     "shelterId": 38,
+     "shelterName": "문촌초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 주엽로 168",
      "y": "37.67338777",
      "x": "126.7604552",
      "capacity": 2425
     },
     {
-     "shelter_id": 39,
-     "shelter_name": "문화초등학교 운동장",
+     "shelterId": 39,
+     "shelterName": "문화초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 강선로 123",
      "y": "37.67486446",
      "x": "126.7672018",
      "capacity": 2142
     },
     {
-     "shelter_id": 40,
-     "shelter_name": "발산중학교 운동장",
+     "shelterId": 40,
+     "shelterName": "발산중학교 운동장",
      "geolocation": "경기도 고양시 일산서구 고봉로 99",
      "y": "37.66984176",
      "x": "126.769625",
      "capacity": 2291
     },
     {
-     "shelter_id": 41,
-     "shelter_name": "백석인조잔디축구장",
+     "shelterId": 41,
+     "shelterName": "백석인조잔디축구장",
      "geolocation": "경기도 고양시 일산동구 강송로 14",
      "y": "37.64247781",
      "x": "126.7953753",
      "capacity": 2218
     },
     {
-     "shelter_id": 42,
-     "shelter_name": "백송초등학교 운동장",
+     "shelterId": 42,
+     "shelterName": "백송초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 덕이동 350-2",
      "y": "37.70115184",
      "x": "126.7537355",
      "capacity": 927
     },
     {
-     "shelter_id": 43,
-     "shelter_name": "백신고등학교 운동장",
+     "shelterId": 43,
+     "shelterName": "백신고등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 백석로 8",
      "y": "37.64248981",
      "x": "126.7819555",
      "capacity": 2485
     },
     {
-     "shelter_id": 44,
-     "shelter_name": "백신중학교 운동장",
+     "shelterId": 44,
+     "shelterName": "백신중학교 운동장",
      "geolocation": "경기도 고양시 일산동구 강촌로 89",
      "y": "37.65133249",
      "x": "126.7831761",
      "capacity": 1828
     },
     {
-     "shelter_id": 45,
-     "shelter_name": "백양고등학교 운동장",
+     "shelterId": 45,
+     "shelterName": "백양고등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 199",
      "y": "37.62949477",
      "x": "126.8384277",
      "capacity": 956
     },
     {
-     "shelter_id": 46,
-     "shelter_name": "백양초등학교 운동장",
+     "shelterId": 46,
+     "shelterName": "백양초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 238",
      "y": "37.63225947",
      "x": "126.836165",
      "capacity": 2199
     },
     {
-     "shelter_id": 47,
-     "shelter_name": "벽제초등학교 운동장",
+     "shelterId": 47,
+     "shelterName": "벽제초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 공릉천로 13",
      "y": "37.69562966",
      "x": "126.8432733",
      "capacity": 2424
     },
     {
-     "shelter_id": 48,
-     "shelter_name": "삼송초등학교 운동장",
+     "shelterId": 48,
+     "shelterName": "삼송초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 세솔로 150",
      "y": "37.65420131",
      "x": "126.8823082",
      "capacity": 709
     },
     {
-     "shelter_id": 49,
-     "shelter_name": "성라초등학교 운동장",
+     "shelterId": 49,
+     "shelterName": "성라초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 호국로716번길 13-19",
      "y": "37.65279144",
      "x": "126.8338444",
      "capacity": 2158
     },
     {
-     "shelter_id": 50,
-     "shelter_name": "성사초등학교 운동장",
+     "shelterId": 50,
+     "shelterName": "성사초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 호국로834번길 89",
      "y": "37.65782151",
      "x": "126.843652",
      "capacity": 3318
     },
     {
-     "shelter_id": 51,
-     "shelter_name": "성석초등학교 운동장",
+     "shelterId": 51,
+     "shelterName": "성석초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 문봉길 110",
      "y": "37.7073801",
      "x": "126.8123754",
      "capacity": 197
     },
     {
-     "shelter_id": 52,
-     "shelter_name": "성신초등학교 운동장",
+     "shelterId": 52,
+     "shelterName": "성신초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 성신로 104",
      "y": "37.62663527",
      "x": "126.8399201",
      "capacity": 1148
     },
     {
-     "shelter_id": 53,
-     "shelter_name": "성저초등학교 운동장",
+     "shelterId": 53,
+     "shelterName": "성저초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 성저로 92",
      "y": "37.68474457",
      "x": "126.7573667",
      "capacity": 474
     },
     {
-     "shelter_id": 54,
-     "shelter_name": "소만초등학교 운동장",
+     "shelterId": 54,
+     "shelterName": "소만초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 48",
      "y": "37.61754206",
      "x": "126.8395862",
      "capacity": 2122
     },
     {
-     "shelter_id": 55,
-     "shelter_name": "송포초등학교 운동장",
+     "shelterId": 55,
+     "shelterName": "송포초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 송산로 379",
      "y": "37.68582036",
      "x": "126.7207308",
      "capacity": 957
     },
     {
-     "shelter_id": 56,
-     "shelter_name": "신원초등학교 운동장",
+     "shelterId": 56,
+     "shelterName": "신원초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 신원동 119-2",
      "y": "37.66954059",
      "x": "126.8829147",
      "capacity": 534
     },
     {
-     "shelter_id": 57,
-     "shelter_name": "아람초등학교 운동장",
+     "shelterId": 57,
+     "shelterName": "아람초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 서정마을로 36",
      "y": "37.61945556",
      "x": "126.8504107",
      "capacity": 904
     },
     {
-     "shelter_id": 58,
-     "shelter_name": "안곡초등학교 운동장",
+     "shelterId": 58,
+     "shelterName": "안곡초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 중산로 142",
      "y": "37.6847816",
      "x": "126.7818544",
      "capacity": 758
     },
     {
-     "shelter_id": 59,
-     "shelter_name": "오마초등학교 운동장",
+     "shelterId": 59,
+     "shelterName": "오마초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 주엽로 214",
      "y": "37.67704006",
      "x": "126.7630008",
      "capacity": 1265
     },
     {
-     "shelter_id": 60,
-     "shelter_name": "용두초등학교 운동장",
+     "shelterId": 60,
+     "shelterName": "용두초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 용두동 16-2",
      "y": "37.62131884",
      "x": "126.8933521",
      "capacity": 1061
     },
     {
-     "shelter_id": 61,
-     "shelter_name": "용정초등학교 운동장",
+     "shelterId": 61,
+     "shelterName": "용정초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 은빛로17번길 53",
      "y": "37.64051767",
      "x": "126.8296478",
      "capacity": 748
     },
     {
-     "shelter_id": 62,
-     "shelter_name": "원당초등학교 운동장",
+     "shelterId": 62,
+     "shelterName": "원당초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 마상로107번길 13",
      "y": "37.66235778",
      "x": "126.8349292",
      "capacity": 3492
     },
     {
-     "shelter_id": 63,
-     "shelter_name": "일산고등학교 운동장",
+     "shelterId": 63,
+     "shelterName": "일산고등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 원일로 53",
      "y": "37.6885949",
      "x": "126.7669775",
      "capacity": 3988
     },
     {
-     "shelter_id": 64,
-     "shelter_name": "일산은행초등학교 운동장",
+     "shelterId": 64,
+     "shelterName": "일산은행초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 은행마을로 70",
      "y": "37.66932777",
      "x": "126.8064343",
      "capacity": 955
     },
     {
-     "shelter_id": 65,
-     "shelter_name": "일산초등학교 운동장",
+     "shelterId": 65,
+     "shelterName": "일산초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 일중로15번길 38",
      "y": "37.68298978",
      "x": "126.7719358",
      "capacity": 1320
     },
     {
-     "shelter_id": 66,
-     "shelter_name": "저동고등학교 운동장",
+     "shelterId": 66,
+     "shelterName": "저동고등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 무궁화로 165",
      "y": "37.6708653",
      "x": "126.7790569",
      "capacity": 2082
     },
     {
-     "shelter_id": 67,
-     "shelter_name": "정발고등학교 운동장",
+     "shelterId": 67,
+     "shelterName": "정발고등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 정발산로 185",
      "y": "37.6636489",
      "x": "126.7861369",
      "capacity": 1849
     },
     {
-     "shelter_id": 68,
-     "shelter_name": "정발초등학교 운동장",
+     "shelterId": 68,
+     "shelterName": "정발초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 강송로 190",
      "y": "37.65576999",
      "x": "126.783757",
      "capacity": 1437
     },
     {
-     "shelter_id": 69,
-     "shelter_name": "주엽고등학교 운동장",
+     "shelterId": 69,
+     "shelterName": "주엽고등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 킨텍스로 341",
      "y": "37.67610338",
      "x": "126.7543569",
      "capacity": 2285
     },
     {
-     "shelter_id": 70,
-     "shelter_name": "주엽초등학교 운동장",
+     "shelterId": 70,
+     "shelterName": "주엽초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 강선로 29",
      "y": "37.66738939",
      "x": "126.7615127",
      "capacity": 2339
     },
     {
-     "shelter_id": 71,
-     "shelter_name": "중산인조잔디축구장",
+     "shelterId": 71,
+     "shelterName": "중산인조잔디축구장",
      "geolocation": "경기도 고양시 일산동구 중산로 217",
      "y": "37.6915705",
      "x": "126.7798982",
      "capacity": 2534
     },
     {
-     "shelter_id": 72,
-     "shelter_name": "중산중학교 운동장",
+     "shelterId": 72,
+     "shelterName": "중산중학교 운동장",
      "geolocation": "경기도 고양시 일산동구 탄중로 361",
      "y": "37.691405",
      "x": "126.7834994",
      "capacity": 833
     },
     {
-     "shelter_id": 73,
-     "shelter_name": "충장인조잔디축구장",
+     "shelterId": 73,
+     "shelterName": "충장인조잔디축구장",
      "geolocation": "경기도 고양시 덕양구 행주내동 630",
      "y": "37.61398594",
      "x": "126.8257316",
      "capacity": 2488
     },
     {
-     "shelter_id": 74,
-     "shelter_name": "풍동초등학교 운동장",
+     "shelterId": 74,
+     "shelterName": "풍동초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 숲속마을로 14-43",
      "y": "37.66951581",
      "x": "126.8025235",
      "capacity": 886
     },
     {
-     "shelter_id": 75,
-     "shelter_name": "풍산초등학교 운동장",
+     "shelterId": 75,
+     "shelterName": "풍산초등학교 운동장",
      "geolocation": "경기도 고양시 일산동구 숲속마을로 51",
      "y": "37.66687147",
      "x": "126.7967048",
      "capacity": 130
     },
     {
-     "shelter_id": 76,
-     "shelter_name": "한산초등학교 운동장",
+     "shelterId": 76,
+     "shelterName": "한산초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 덕이동 379-28",
      "y": "37.6954577",
      "x": "126.7538136",
      "capacity": 965
     },
     {
-     "shelter_id": 77,
-     "shelter_name": "행남초등학교 운동장",
+     "shelterId": 77,
+     "shelterName": "행남초등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 소만로 22",
      "y": "37.61518192",
      "x": "126.8425148",
      "capacity": 1685
     },
     {
-     "shelter_id": 78,
-     "shelter_name": "행신중학교 운동장",
+     "shelterId": 78,
+     "shelterName": "행신중학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 22",
      "y": "37.61515634",
      "x": "126.8396548",
      "capacity": 1227
     },
     {
-     "shelter_id": 79,
-     "shelter_name": "현산초등학교 운동장",
+     "shelterId": 79,
+     "shelterName": "현산초등학교 운동장",
      "geolocation": "경기도 고양시 일산서구 산현로 87",
      "y": "37.69269338",
      "x": "126.7710917",
      "capacity": 1512
     },
     {
-     "shelter_id": 80,
-     "shelter_name": "화수고등학교 운동장",
+     "shelterId": 80,
+     "shelterName": "화수고등학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화수로 51",
      "y": "37.64506781",
      "x": "126.8361278",
      "capacity": 2493
     },
     {
-     "shelter_id": 81,
-     "shelter_name": "화정중학교 운동장",
+     "shelterId": 81,
+     "shelterName": "화정중학교 운동장",
      "geolocation": "경기도 고양시 덕양구 화신로 343",
      "y": "37.63491254",
      "x": "126.8264793",
      "capacity": 2370
     },
     {
-     "shelter_id": 82,
-     "shelter_name": "과천중앙공원",
+     "shelterId": 82,
+     "shelterName": "과천중앙공원",
      "geolocation": "경기도 과천시 도서관길 36",
      "y": "37.4306182",
      "x": "126.9949285",
      "capacity": 14548
     },
     {
-     "shelter_id": 83,
-     "shelter_name": "과천초등학교 운동장",
+     "shelterId": 83,
+     "shelterName": "과천초등학교 운동장",
      "geolocation": "경기도 과천시 온온사로 10",
      "y": "37.43667482",
      "x": "126.9941142",
      "capacity": 1756
     },
     {
-     "shelter_id": 84,
-     "shelter_name": "관문체육공원",
+     "shelterId": 84,
+     "shelterName": "관문체육공원",
      "geolocation": "경기도 과천시 중앙로 294",
      "y": "37.44180296",
      "x": "126.9964941",
      "capacity": 54354
     },
     {
-     "shelter_id": 85,
-     "shelter_name": "문원체육공원",
+     "shelterId": 85,
+     "shelterName": "문원체육공원",
      "geolocation": "경기도 과천시 문원로 56",
      "y": "37.42780539",
      "x": "127.0035245",
      "capacity": 11150
     },
     {
-     "shelter_id": 86,
-     "shelter_name": "문원초등학교 운동장",
+     "shelterId": 86,
+     "shelterName": "문원초등학교 운동장",
      "geolocation": "경기도 과천시 코오롱로 53",
      "y": "37.42371336",
      "x": "126.9945973",
      "capacity": 1820
     },
     {
-     "shelter_id": 87,
-     "shelter_name": "주암체육소공원",
+     "shelterId": 87,
+     "shelterName": "주암체육소공원",
      "geolocation": "경기도 과천시 장군마을길 62-1",
      "y": "37.46107818",
      "x": "127.031903",
      "capacity": 2976
     },
     {
-     "shelter_id": 88,
-     "shelter_name": "가림중학교 운동장",
+     "shelterId": 88,
+     "shelterName": "가림중학교 운동장",
      "geolocation": "경기도 광명시 철망산로 71",
      "y": "37.47030796",
      "x": "126.8753251",
      "capacity": 19996
     },
     {
-     "shelter_id": 89,
-     "shelter_name": "가림초등학교 운동장",
+     "shelterId": 89,
+     "shelterName": "가림초등학교 운동장",
      "geolocation": "경기도 광명시 하안로 392",
      "y": "37.46979541",
      "x": "126.8745934",
      "capacity": 16170
     },
     {
-     "shelter_id": 90,
-     "shelter_name": "광남중학교 운동장",
+     "shelterId": 90,
+     "shelterName": "광남중학교 운동장",
      "geolocation": "경기도 광명시 광명로 785",
      "y": "37.47007357",
      "x": "126.8475572",
      "capacity": 17176
     },
     {
-     "shelter_id": 91,
-     "shelter_name": "광덕초등학교 운동장",
+     "shelterId": 91,
+     "shelterName": "광덕초등학교 운동장",
      "geolocation": "경기도 광명시 안양천로 495",
      "y": "37.49141672",
      "x": "126.8686095",
      "capacity": 6909
     },
     {
-     "shelter_id": 92,
-     "shelter_name": "광명2동행정복지센터",
+     "shelterId": 92,
+     "shelterName": "광명2동행정복지센터",
      "geolocation": "경기도 광명시 광명로 947",
      "y": "37.48335773",
      "x": "126.8559242",
      "capacity": 30
     },
     {
-     "shelter_id": 93,
-     "shelter_name": "광명3동주민센터",
+     "shelterId": 93,
+     "shelterName": "광명3동주민센터",
      "geolocation": "경기도 광명시 광명로928번길 18-20",
      "y": "37.48023427",
      "x": "126.8569341",
      "capacity": 20
     },
     {
-     "shelter_id": 94,
-     "shelter_name": "광명5동행정복지센터",
+     "shelterId": 94,
+     "shelterName": "광명5동행정복지센터",
      "geolocation": "경기도 광명시 너부대로35번길 20",
      "y": "37.47876645",
      "x": "126.8475125",
      "capacity": 70
     },
     {
-     "shelter_id": 95,
-     "shelter_name": "광명6동주민센터",
+     "shelterId": 95,
+     "shelterName": "광명6동주민센터",
      "geolocation": "경기도 광명시 광명로791번길 6",
      "y": "37.4710877",
      "x": "126.8486404",
      "capacity": 33
     },
     {
-     "shelter_id": 96,
-     "shelter_name": "광명7동행정복지센터",
+     "shelterId": 96,
+     "shelterName": "광명7동행정복지센터",
      "geolocation": "경기도 광명시 새터로 13",
      "y": "37.46930126",
      "x": "126.8532262",
      "capacity": 43
     },
     {
-     "shelter_id": 97,
-     "shelter_name": "광명고등학교 운동장",
+     "shelterId": 97,
+     "shelterName": "광명고등학교 운동장",
      "geolocation": "경기도 광명시 연서로12번길 3-8",
      "y": "37.48151171",
      "x": "126.8630868",
      "capacity": 1545
     },
     {
-     "shelter_id": 98,
-     "shelter_name": "광명남초등학교 운동장",
+     "shelterId": 98,
+     "shelterName": "광명남초등학교 운동장",
      "geolocation": "경기도 광명시 광명로 866-9",
      "y": "37.47512699",
      "x": "126.8537015",
