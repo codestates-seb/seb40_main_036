@@ -9,8 +9,6 @@ public class ShelterAnswerPostDto {
 
     private Long memberId;
 
-    private String name;
-
     private String shelterAnswerContent;
 
 }

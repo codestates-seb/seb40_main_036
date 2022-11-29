@@ -13,40 +13,42 @@ import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public interface AnswerMapper {
-    default Answer answerPostDtoToAnswer(AnswerPostDto answerPostDto){
-        Answer answer = new Answer();
-        Member member = new Member();
-        // memberId
-        member.setMemberId(answerPostDto.getMemberId());
-        // answerContent
-        answer.setAnswerContent(answerPostDto.getAnswerContent());
-        return answer;
-    }
+//    default Answer answerPostDtoToAnswer(AnswerPostDto answerPostDto){
+//        Answer answer = new Answer();
+//        Member member = new Member();
+//        // memberId
+//        member.setMemberId(answerPostDto.getMemberId());
+//        // answerContent
+//        answer.setAnswerContent(answerPostDto.getAnswerContent());
+//        return answer;
+//    }
+    Answer answerPostDtoToAnswer(AnswerPostDto answerPostDto);
+//    default Answer answerPatchDtoToAnswer(AnswerPatchDto answerPatchDto){
+//        Answer answer = new Answer();
+//        Member member = new Member();
+//        // memberId
+//        member.setMemberId(answerPatchDto.getMemberId());
+//        // answerContent
+//        answer.setAnswerContent(answerPatchDto.getAnswerContent());
+//        return answer;
+//    }
+    Answer answerPatchDtoToAnswer(AnswerPatchDto answerPatchDto);
 
-    default Answer answerPatchDtoToAnswer(AnswerPatchDto answerPatchDto){
-        Answer answer = new Answer();
-        Member member = new Member();
-        // memberId
-        member.setMemberId(answerPatchDto.getMemberId());
-        // answerContent
-        answer.setAnswerContent(answerPatchDto.getAnswerContent());
-        return answer;
-    }
-
-    @Mapping(source = "answer.question.questionId", target = "questionId")
-    @Mapping(source = "answer.member.name", target = "name")
+//    @Mapping(source = "answer.question.questionId", target = "questionId")
+//    @Mapping(source = "answer.member.name", target = "name")
     AnswerResponseDto answerToAnswerResponseDto(Answer answer);
 
-    default List<AnswerResponseDto> answersToAnswerResponseDtos(List<Answer> answers){
-        return answers.stream()
-                .map(answer -> AnswerResponseDto
-                        .builder()
-                        .questionId(answer.getQuestion().getQuestionId())
-                        .name(answer.getMember().getName())
-                        .answerContent(answer.getAnswerContent())
-                        .answerCreated(answer.getAnswerCreated())
-                        .answerModified(answer.getAnswerModified())
-                        .build())
-                .collect(Collectors.toList());
-    }
+//    default List<AnswerResponseDto> answersToAnswerResponseDtos(List<Answer> answers){
+//        return answers.stream()
+//                .map(answer -> AnswerResponseDto
+//                        .builder()
+//                        .questionId(answer.getQuestion().getQuestionId())
+//                        .name(answer.getMember().getName())
+//                        .answerContent(answer.getAnswerContent())
+//                        .answerCreated(answer.getAnswerCreated())
+//                        .answerModified(answer.getAnswerModified())
+//                        .build())
+//                .collect(Collectors.toList());
+//    }
+    List<AnswerResponseDto> answersToAnswerResponseDtos(List<Answer> answers);
 }

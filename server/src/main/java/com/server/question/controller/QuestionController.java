@@ -42,7 +42,7 @@ public class QuestionController {
         Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto));
 
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question, answerMapper), HttpStatus.CREATED);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question), HttpStatus.CREATED);
 
     }
 
@@ -55,7 +55,7 @@ public class QuestionController {
 
         Question responseQuestion=questionService.updateQuestion(question);
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(responseQuestion, answerMapper),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(responseQuestion),HttpStatus.OK);
 
     }
 
@@ -67,7 +67,7 @@ public class QuestionController {
         Question question = questionService.findQuestion(Id);
         question = questionService.addViews(question);
 
-        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question, answerMapper),HttpStatus.OK);
+        return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question),HttpStatus.OK);
 
     }
 
