@@ -71,8 +71,8 @@ const ShelterWriteForm = () => {
     }
     axios
       .post(`/api/shelterQuestion`, {
-        memberId: sessionStorage.getItem('memberId'),
-        name: sessionStorage.getItem('name'),
+        memberId: localStorage.getItem('memberId'),
+        name: localStorage.getItem('name'),
         shelterQuestionTitle: title,
         shelterQuestionContent: contents,
         locationTag: drop,

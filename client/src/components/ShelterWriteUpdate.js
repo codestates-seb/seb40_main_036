@@ -86,7 +86,7 @@ const ShelterWriteUpdate = () => {
     }
     axios
       .patch(`/api/shelterQuestion/${QuestionId}`, {
-        memberId: sessionStorage.getItem('memberId'),
+        memberId: localStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: content,
         locationTag: drop,

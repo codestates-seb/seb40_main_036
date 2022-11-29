@@ -86,7 +86,7 @@ const StuffWriteUpdate = () => {
     }
     axios
       .patch(`/api/stuffQuestion/${QuestionId}`, {
-        memberId: sessionStorage.getItem('memberId'),
+        memberId: localStorage.getItem('memberId'),
         stuffQuestionTitle: title,
         stuffQuestionContent: content,
         locationTag: drop,

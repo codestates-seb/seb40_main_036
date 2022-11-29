@@ -71,8 +71,8 @@ const StuffWriteForm = () => {
     }
     axios
       .post(`/api/stuffQuestion`, {
-        memberId: sessionStorage.getItem('memberId'),
-        name: sessionStorage.getItem('name'),
+        memberId: localStorage.getItem('memberId'),
+        name: localStorage.getItem('name'),
         stuffQuestionTitle: title,
         stuffQuestionContent: contents,
         locationTag: drop,
