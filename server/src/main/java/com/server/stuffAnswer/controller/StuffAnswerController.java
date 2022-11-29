@@ -8,6 +8,7 @@ import com.server.stuffAnswer.dto.StuffAnswerPostDto;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffAnswer.mapper.StuffAnswerMapper;
 import com.server.stuffAnswer.service.StuffAnswerService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequiredArgsConstructor
 @Transactional
+@Api(tags ="StuffAnswer API")
 public class StuffAnswerController {
 
     private final StuffAnswerService stuffAnswerService;

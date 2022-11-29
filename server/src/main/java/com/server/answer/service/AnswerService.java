@@ -4,6 +4,7 @@ import com.server.answer.entity.Answer;
 import com.server.answer.repository.AnswerRepository;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import com.server.question.entity.Question;
 import com.server.question.repository.QuestionRepository;
@@ -40,9 +41,6 @@ public class AnswerService {
 
         answer.setAnswerCreated(LocalDate.now());
 
-        /////////////////////////////////////////////////////////////
-        // 답변 개수 갱신
-
         Question question=questionRepository.findByQuestionId(answer.getQuestionId());
 
         Long count=question.getCountAnswer();
@@ -51,7 +49,8 @@ public class AnswerService {
 
         questionRepository.save(question);
 
-        /////////////////////////////////////////////////////////////
+        Member member = memberRepository.findByMemberId(answer.getMemberId());
+        answer.setName(member.getName());
 
         return answerRepository.save(answer);
 

@@ -2,6 +2,7 @@ package com.server.shelterQuestion.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import com.server.shelterAnswer.entity.ShelterAnswer;
 import com.server.shelterAnswer.repository.ShelterAnswerRepository;
@@ -37,6 +38,9 @@ public class ShelterQuestionService {
         shelterQuestion.setShelterQuestionCreated(LocalDate.now());
 
         shelterQuestion.setCountAnswer(0);
+
+        Member member = memberRepository.findByMemberId(shelterQuestion.getMemberId());
+        shelterQuestion.setName(member.getName());
 
         return shelterQuestionRepository.save(shelterQuestion);
     }

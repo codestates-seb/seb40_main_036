@@ -2,6 +2,7 @@ package com.server.stuffAnswer.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import com.server.question.entity.Question;
 import com.server.stuffAnswer.entity.StuffAnswer;
@@ -41,9 +42,6 @@ public class StuffAnswerService {
 
         stuffAnswer.setStuffAnswerCreated(LocalDate.now());
 
-        /////////////////////////////////////////////////////////////
-        // 답변 개수 갱신
-
         StuffQuestion stuffQuestion=stuffQuestionRepository.findByStuffQuestionId(stuffAnswer.getStuffQuestionId());
 
         Long count=stuffQuestion.getCountAnswer();
@@ -52,7 +50,8 @@ public class StuffAnswerService {
 
         stuffQuestionRepository.save(stuffQuestion);
 
-        /////////////////////////////////////////////////////////////
+        Member member = memberRepository.findByMemberId(stuffAnswer.getMemberId());
+        stuffAnswer.setName(member.getName());
 
         return stuffAnswerRepository.save(stuffAnswer);
     }

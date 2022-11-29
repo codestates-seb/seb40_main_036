@@ -1,5 +1,6 @@
 package com.server.answer.entity;
 
+import com.server.member.entity.Member;
 import com.server.question.entity.Question;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,7 +26,6 @@ public class Answer {
     @Column(nullable = false)
     private Long memberId;
 
-    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
@@ -38,5 +38,9 @@ public class Answer {
     @ManyToOne
     @JoinColumn(name = "questionId",insertable = false,updatable = false)
     private Question question;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId",insertable = false,updatable = false)
+    private Member member; // member에 접근하여 name(작성자)을 가져올 수 있어야함
 
 }

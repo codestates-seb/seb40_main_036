@@ -8,6 +8,7 @@ import com.server.reservation.service.ReservationService;
 import com.server.response.MultiResponseDto;
 import com.server.response.SingleResponseDto;
 import com.server.shelter.service.ShelterService;
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import java.util.List;
 @Validated
 @RequestMapping("/reservation")
 @Transactional
+@Api(tags ="Reservation API")
 public class ReservationController {
 
     private final ReservationService reservationService;

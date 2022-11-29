@@ -14,7 +14,9 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-29T13:33:23+0900",
+
+    date = "2022-11-29T14:55:37+0900",
+
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -29,7 +31,6 @@ public class StuffQuestionMapperImpl implements StuffQuestionMapper {
         StuffQuestion.StuffQuestionBuilder stuffQuestion = StuffQuestion.builder();
 
         stuffQuestion.memberId( stuffQuestionPostDto.getMemberId() );
-        stuffQuestion.name( stuffQuestionPostDto.getName() );
         stuffQuestion.stuffQuestionTitle( stuffQuestionPostDto.getStuffQuestionTitle() );
         stuffQuestion.stuffQuestionContent( stuffQuestionPostDto.getStuffQuestionContent() );
         stuffQuestion.locationTag( stuffQuestionPostDto.getLocationTag() );

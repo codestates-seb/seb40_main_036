@@ -9,7 +9,5 @@ public class AnswerPostDto {
 
     private Long memberId;
 
-    private String name;
-
     private String answerContent;
 }

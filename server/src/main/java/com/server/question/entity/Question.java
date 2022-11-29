@@ -1,5 +1,7 @@
 package com.server.question.entity;
 
+//import com.server.answer.entity.Answer;
+import com.server.answer.dto.AnswerResponseDto;
 import com.server.answer.entity.Answer;
 import com.server.member.entity.Member;
 import com.server.shelter.entity.Shelter;
@@ -25,9 +27,6 @@ public class Question {
     private Long memberId;
 
     @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
     private String questionTitle;
 
     @Column(nullable = false)
@@ -35,6 +34,8 @@ public class Question {
 
     @Column(nullable = true)
     private String locationTag;
+
+    private String name; // 작성자
 
     private long views; // 조회수
 
@@ -49,11 +50,10 @@ public class Question {
 
     @ManyToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)
-    private Member member;
+    private Member member; // member에 접근하여 name(작성자)을 가져올 수 있어야함
 
     @ManyToOne
     @JoinColumn(name = "shelterId", insertable = false, updatable = false)
     private Shelter shelter;
-
 
 }

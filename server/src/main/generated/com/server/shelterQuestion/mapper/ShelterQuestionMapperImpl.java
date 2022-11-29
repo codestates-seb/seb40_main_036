@@ -14,7 +14,9 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-29T13:33:23+0900",
+
+    date = "2022-11-29T14:55:37+0900",
+
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -29,7 +31,6 @@ public class ShelterQuestionMapperImpl implements ShelterQuestionMapper {
         ShelterQuestion.ShelterQuestionBuilder shelterQuestion = ShelterQuestion.builder();
 
         shelterQuestion.memberId( shelterQuestionPostDto.getMemberId() );
-        shelterQuestion.name( shelterQuestionPostDto.getName() );
         shelterQuestion.shelterQuestionTitle( shelterQuestionPostDto.getShelterQuestionTitle() );
         shelterQuestion.shelterQuestionContent( shelterQuestionPostDto.getShelterQuestionContent() );
         shelterQuestion.locationTag( shelterQuestionPostDto.getLocationTag() );
