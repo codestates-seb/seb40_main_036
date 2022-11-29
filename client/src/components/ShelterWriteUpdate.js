@@ -47,7 +47,7 @@ const ShelterWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
+        const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.shelterQuestionTitle);
         setContent(response.data.data.shelterQuestionContent);
@@ -85,7 +85,7 @@ const ShelterWriteUpdate = () => {
       return Swal.fire('내용을 입력하세요');
     }
     axios
-      .patch(`/shelterQuestion/${QuestionId}`, {
+      .patch(`/api/shelterQuestion/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: content,

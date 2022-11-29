@@ -48,7 +48,7 @@ const ShareWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setTest(response.data.questionTitle);
         setContent(response.data.questionContent);
@@ -87,7 +87,7 @@ const ShareWriteUpdate = () => {
       return Swal.fire('내용을 입력하세요');
     }
     axios
-      .patch(`/question/${QuestionId}`, {
+      .patch(`/api/question/${QuestionId}`, {
         memberId: sessionStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: content,

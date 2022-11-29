@@ -70,7 +70,7 @@ const ShelterWriteForm = () => {
       return Swal.fire('내용을 입력하세요');
     }
     axios
-      .post(`/shelterQuestion`, {
+      .post(`/api/shelterQuestion`, {
         memberId: sessionStorage.getItem('memberId'),
         name: sessionStorage.getItem('name'),
         shelterQuestionTitle: title,

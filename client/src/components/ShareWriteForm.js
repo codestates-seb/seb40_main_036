@@ -74,7 +74,7 @@ const ShareWriteForm = () => {
       return Swal.fire('내용을 입력하세요');
     }
     axios
-      .post(`/question/`, {
+      .post(`/api/question/`, {
         memberId: sessionStorage.getItem('memberId'),
         name: sessionStorage.getItem('name'),
         questionTitle: title,
