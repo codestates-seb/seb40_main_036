@@ -223,13 +223,15 @@ const Map = (props) => {
           now={now}
         />
       )}
-      <LoadingIcon
-        icon={solid('spinner')}
-        size={'3x'}
-        spin={true}
-        pulse={true}
-        style={props.loading ? { display: 'block' } : { display: 'none' }}
-      />
+      <LoadingIcon>
+        <FontAwesomeIcon
+          icon={solid('spinner')}
+          size={'3x'}
+          spin={true}
+          pulse={true}
+          style={props.loading ? { display: 'block' } : { display: 'none' }}
+        />
+      </LoadingIcon>
 
       <MapWrapper id="map"></MapWrapper>
       <div id="centerAddr"></div>
@@ -239,7 +241,7 @@ const Map = (props) => {
 
 export default Map;
 
-const LoadingIcon = styled(FontAwesomeIcon)`
+const LoadingIcon = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
