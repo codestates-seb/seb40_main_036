@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const SignUP = () => {
   const [inputName, setInputName] = useState('');
@@ -15,6 +17,7 @@ const SignUP = () => {
   const [idMessage, setIdMessage] = useState('');
   const [nameMessage, setNameMessage] = useState('');
   const [passwordMessage, setPasswordMessage] = useState('');
+  const [hyphenMessage, setHyphenMessage] = useState('');
 
   // 유효성 검사
   const [isId, setIsId] = useState(false); // eslint-disable-line no-unused-vars
@@ -53,6 +56,7 @@ const SignUP = () => {
     const regex = /^[0-9\b -]{0,13}$/; //숫자와 하이픈만 입력가능 길이는 13자까지라는 의미
     if (regex.test(e.target.value)) {
       setHyphen(e.target.value);
+      setHyphenMessage('');
     }
   };
 
@@ -72,9 +76,21 @@ const SignUP = () => {
     }
   };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onClickSignUp = (e) => {
+    if (inputName === '') {
+      setNameMessage('필수 정보입니다.');
+    }
+    if (inputId === '') {
+      setIdMessage('필수 정보입니다.');
+    }
+    if (inputPw === '') {
+      setPasswordMessage('필수 정보입니다.');
+    }
+    if (hyphen === '') {
+      setHyphenMessage('필수 정보입니다.');
+    }
     e.preventDefault(); // 새로고침 방지
     axios
       .post('/member/join', {
@@ -88,12 +104,18 @@ const SignUP = () => {
         console.log(response);
         console.log('User profile', response.data.memberId);
         console.log('User token', response.data.access_token);
-        localStorage.setItem('token', response.data.jwt);
-        // navigate('/login');
+        navigate('/login');
       })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
+        if (error.response.status === 500) {
+          Swal.fire({
+            icon: 'error',
+            title: '회원가입 실패!',
+            text: '이미 사용중인 이메일입니다. 다른 이메일을 입력하세요!',
+          });
+        }
       });
   };
 
@@ -128,7 +150,9 @@ const SignUP = () => {
                   value={inputName}
                 />
               </div>
-              <div className="msgName">{nameMessage}</div>
+              <MsgNameStyle value={isname}>
+                <div className="msgName">{nameMessage}</div>
+              </MsgNameStyle>
             </div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="numWrite">
@@ -143,6 +167,9 @@ const SignUP = () => {
                   value={hyphen}
                 />
               </div>
+              <MsgHyphenStyle value={hyphen}>
+                <div className="msgHyphen">{hyphenMessage}</div>
+              </MsgHyphenStyle>
             </div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="emailWrite">
@@ -157,7 +184,9 @@ const SignUP = () => {
                   value={inputId}
                 />
               </div>
-              <div className="msgEmail">{idMessage}</div>
+              <MsgEmailStyle value={isId}>
+                <div className="msgEmail">{idMessage}</div>
+              </MsgEmailStyle>
             </div>
             <div className="idPwBox">
               <label className="idPwText" htmlFor="emailWrite">
@@ -172,9 +201,10 @@ const SignUP = () => {
                   value={inputPw}
                 />
               </div>
-              <div className="msgPw">{passwordMessage}</div>
+              <MsgPwStyle value={isPassword}>
+                <div className="msgPw">{passwordMessage}</div>
+              </MsgPwStyle>
             </div>
-
             <button onClick={onClickSignUp}>회원가입</button>
             <div className="accountExistence">
               이미 계정이 있으신가요? <Link to="/login">로그인</Link>
@@ -225,18 +255,6 @@ const SignUpInput = styled.div`
     border-radius: 3px;
     positon: fixed;
   }
-  .msgName {
-    padding: 3px;
-    font-size: 12px;
-  }
-  .msgEmail {
-    padding: 3px;
-    font-size: 12px;
-  }
-  .msgPw {
-    padding: 3px;
-    font-size: 12px;
-  }
   .idPwBox {
     margin-top: 5px;
     margin-bottom: 10px;
@@ -253,12 +271,48 @@ const SignUpInput = styled.div`
     border-radius: 3px;
   }
   .accountExistence {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     text-align: center;
   }
   .accountExistence a {
     padding-left: 7px;
     color: blue;
+  }
+`;
+
+const MsgNameStyle = styled.div`
+  .msgName {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 450;
+    color: ${(props) => (props.value ? 'black' : 'red')};
+  }
+`;
+
+const MsgEmailStyle = styled.div`
+  .msgEmail {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 450;
+    color: ${(props) => (props.value ? 'black' : 'red')};
+  }
+`;
+
+const MsgPwStyle = styled.div`
+  .msgPw {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 450;
+    color: ${(props) => (props.value ? 'black' : 'red')};
+  }
+`;
+
+const MsgHyphenStyle = styled.div`
+  .msgHyphen {
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 450;
+    color: ${(props) => (props.value ? 'black' : 'red')};
   }
 `;
