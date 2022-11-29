@@ -32,7 +32,7 @@ function ReviewList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/api/shelterQuestion/search/tag/${drop} `)
+        .get(`/shelterQuestion/search/tag/${drop} `)
 
         .then((response) => {
           console.log(response);
@@ -52,7 +52,7 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
+        .get(`/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
