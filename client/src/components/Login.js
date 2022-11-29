@@ -53,9 +53,9 @@ const Login = () => {
         localStorage.setItem('email', inputId);
         localStorage.setItem('memberId', res.data.memberId);
         localStorage.setItem('name', res.data.name);
-        // localStorage.setItem('token', res.data.token);
+        localStorage.setItem('token', res.data.token);
         // localStorage.setItem('authorization', res.headers.authorization);
-        // window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
+        window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
       })
       .catch((err) => {
         console.log(err);
