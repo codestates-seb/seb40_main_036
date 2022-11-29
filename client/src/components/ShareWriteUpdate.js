@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+// eslint-disable-next-line no-unused-vars
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ShareWriteUpdate = () => {
   const modules = useMemo(
@@ -46,7 +48,7 @@ const ShareWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setTest(response.data.questionTitle);
         setContent(response.data.questionContent);
@@ -71,21 +73,22 @@ const ShareWriteUpdate = () => {
   // 지역 구 받아오는 값
   const handleDrop = (e) => {
     setDrop(e.target.value);
+    console.log(e.target.value);
   };
 
   const navigate = useNavigate();
 
   const update = () => {
     if (drop === '') {
-      return alert('지역을 선택하세요');
+      return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
-      return alert('제목을 입력하세요');
-    } else if (content === '') {
-      return alert('내용을 입력하세요');
+      return Swal.fire('제목을 입력하세요');
+    } else if (content === '' || content === '<p><br></p>') {
+      return Swal.fire('내용을 입력하세요');
     }
     axios
-      .patch(`/question/${QuestionId}`, {
-        memberId: sessionStorage.getItem('memberId'),
+      .patch(`/api/question/${QuestionId}`, {
+        memberId: localStorage.getItem('memberId'),
         questionTitle: title,
         questionContent: content,
         locationTag: drop,

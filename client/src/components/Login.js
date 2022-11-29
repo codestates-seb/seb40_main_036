@@ -39,7 +39,7 @@ const Login = () => {
 
     axios
       .post(
-        '/member/login',
+        '/api/member/login',
         {
           email: inputId,
           password: inputPw,
@@ -50,12 +50,11 @@ const Login = () => {
         // 로그인 성공과 실패시 나오는 데이터를 기반으로 로그인이 성공 했을때만 페이지 이동이 되게 구현
         console.log(res);
         console.log(res.headers); // 응답이 어떻게 오는지 콘솔에서 확인하기 위한 코드
-        // 세션스토리지에 이메일 멤버아이디 이름 저장시키기
-        sessionStorage.setItem('email', inputId);
-        sessionStorage.setItem('memberId', res.data.memberId);
-        sessionStorage.setItem('name', res.data.name);
+        localStorage.setItem('email', inputId);
+        localStorage.setItem('memberId', res.data.memberId);
+        localStorage.setItem('name', res.data.name);
         localStorage.setItem('token', res.data.token);
-        // localStorage.setItem('authorization', res.headers.authorization); 백엔드에서 토큰 구현하면 로컬스토리지로
+        // localStorage.setItem('authorization', res.headers.authorization);
         window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
       })
       .catch((err) => {

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -21,12 +22,12 @@ function StuffAnswerViewr({
   }, []);
 
   const AnswerEditOnClick = () => {
-    if (Number(sessionStorage.getItem('memberId')) === memberid) {
+    if (Number(localStorage.getItem('memberId')) === memberid) {
       const data = {
         stuffAnswerContent: textRef.current.value,
         stuffQuestionId: `${questionId}`,
-        memberId: `${sessionStorage.getItem('memberId')}`,
-        name: `${sessionStorage.getItem('name')}`,
+        memberId: `${localStorage.getItem('memberId')}`,
+        name: `${localStorage.getItem('name')}`,
       };
       console.log(data);
       axios
@@ -64,18 +65,28 @@ function StuffAnswerViewr({
     </EditContainer>
   );
   const deleteClick = () => {
-    const result = window.confirm('답변을 삭제하시겠습니까?');
-    if (
-      result === true &&
-      Number(sessionStorage.getItem('memberId')) === memberid
-    ) {
-      setTimeout(() => {
-        axios
-          .delete(`/api/stuffAnswer/${id}`)
-          .then(() => window.location.reload())
-          .catch((err) => console.log(err));
-      }, 1000);
-    }
+    Swal.fire({
+      title: '댓글을 삭제하시겠습니까?',
+      text: '삭제하시면 다시 복구시킬 수 없습니다.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#AC0000',
+      cancelButtonColor: '#008505',
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+    }).then((result) => {
+      if (
+        result.value &&
+        Number(localStorage.getItem('memberId')) === memberid
+      ) {
+        setTimeout(() => {
+          axios
+            .delete(`/api/stuffAnswer/${id}`)
+            .then(() => window.location.reload())
+            .catch((err) => console.log(err));
+        }, 1000);
+      }
+    });
   };
 
   return (
@@ -91,7 +102,7 @@ function StuffAnswerViewr({
               <div className="date">{answerDate}</div>
             </div>
           </div>
-          {memberid === Number(sessionStorage.getItem('memberId')) ? (
+          {memberid === Number(localStorage.getItem('memberId')) ? (
             <DeletEdit>
               <button className="delete" onClick={deleteClick}>
                 삭제
