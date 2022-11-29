@@ -79,15 +79,15 @@ const Map = (props) => {
       gyeongi &&
       gyeongi.map((x) => {
         let obj = {};
-        obj['title'] = x.shelter_name;
+        obj['title'] = x.shelterName;
         obj['latlng'] = new kakao.maps.LatLng(x.y, x.x);
-        reservationInfos[x.shelter_id - 1].reservedNum > 0
-          ? (obj['now'] = reservationInfos[x.shelter_id - 1]['reservedNum'])
+        reservationInfos[x.shelterId - 1].reservedNum > 0
+          ? (obj['now'] = reservationInfos[x.shelterId - 1]['reservedNum'])
           : (obj['now'] = 0);
         //obj['now'] = Math.floor(Math.random() * x.capacity);
 
         obj['capacity'] = x.capacity;
-        obj['shelterId'] = x.shelter_id;
+        obj['shelterId'] = x.shelterId;
         return obj;
       });
 

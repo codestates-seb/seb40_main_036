@@ -93,7 +93,7 @@ const SignUP = () => {
     }
     e.preventDefault(); // 새로고침 방지
     axios
-      .post('/member/join', {
+      .post('/api/member/join', {
         name: inputName,
         email: inputId,
         password: inputPw,

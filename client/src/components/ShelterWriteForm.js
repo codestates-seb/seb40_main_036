@@ -5,6 +5,7 @@ import DropDown from './Dropdown';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ShelterWriteForm = () => {
   const modules = useMemo(
@@ -62,16 +63,16 @@ const ShelterWriteForm = () => {
 
   const submit = () => {
     if (drop === '') {
-      return alert('지역을 선택하세요');
+      return Swal.fire('지역을 선택하세요');
     } else if (title === '') {
-      return alert('제목을 입력하세요');
-    } else if (contents === '') {
-      return alert('내용을 입력하세요');
+      return Swal.fire('제목을 입력하세요');
+    } else if (contents === '' || contents === '<p><br></p>') {
+      return Swal.fire('내용을 입력하세요');
     }
     axios
-      .post(`/shelterQuestion`, {
-        memberId: sessionStorage.getItem('memberId'),
-        name: sessionStorage.getItem('name'),
+      .post(`/api/shelterQuestion`, {
+        memberId: localStorage.getItem('memberId'),
+        name: localStorage.getItem('name'),
         shelterQuestionTitle: title,
         shelterQuestionContent: contents,
         locationTag: drop,
