@@ -17,7 +17,7 @@ function ReviewLisViewerContents({ id, content, memberId }) {
     ) {
       setTimeout(() => {
         axios
-          .delete(`/shelterQuestion/${id}`)
+          .delete(`/api/shelterQuestion/${id}`)
           .then(() => navigate(`/Review`))
           .catch((err) => console.log(err));
       }, 1000);
