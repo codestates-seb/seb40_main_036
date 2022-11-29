@@ -49,13 +49,11 @@ const Login = () => {
       .then((res) => {
         // 로그인 성공과 실패시 나오는 데이터를 기반으로 로그인이 성공 했을때만 페이지 이동이 되게 구현
         console.log(res);
-        console.log(res.headers); // 응답이 어떻게 오는지 콘솔에서 확인하기 위한 코드
         localStorage.setItem('email', inputId);
         localStorage.setItem('memberId', res.data.memberId);
         localStorage.setItem('name', res.data.name);
-        // localStorage.setItem('token', res.data.token);
-        // localStorage.setItem('authorization', res.headers.authorization);
-        // window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
+        localStorage.setItem('token', res.data.token);
+        window.location.href = '/'; // 메인 페이지로 이동 (새로고침해서)
       })
       .catch((err) => {
         console.log(err);
