@@ -13,15 +13,15 @@ const Nav = () => {
   const [isLogin, setIsLogin] = useState(false);
 
   const onClickLogout = () => {
-    sessionStorage.clear(); // 세션스토리지 안에 있는 모든 데이터를 삭제해줌
+    localStorage.clear(); // 로컬스토리지 안에 있는 모든 데이터를 삭제해줌
     // 로그인페이지로 이동(새로고침)
     window.location.href = '/login';
   };
   useEffect(() => {
-    if (sessionStorage.getItem('email') === null) {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
+    if (localStorage.getItem('email') === null) {
+      // localStorage 에 email이라는 key 값으로 저장된 값이 없다면
     } else {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
+      // localStorage 에 email이라는 key 값으로 저장된 값이 있다면
       // 로그인 상태 변경
       setIsLogin(true);
     }
