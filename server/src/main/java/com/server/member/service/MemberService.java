@@ -29,7 +29,7 @@ public class MemberService {
 
         Member mem = memberRepository.findByEmail(member.getEmail());
         if(mem!=null){ // 있으면
-            throw new BusinessLogicException(ExceptionCode.MEMBER_EXISTS);
+            throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
         }
 
         member.setPassword(passwordEncoder.encode(member.getPassword()));

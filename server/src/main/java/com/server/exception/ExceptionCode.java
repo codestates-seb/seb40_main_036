@@ -14,7 +14,9 @@ public enum ExceptionCode {
     ShelterQuestion_NOT_FOUND(404, "ShelterQuestion not found"),
     ShelterAnswer_NOT_FOUND(404, "ShelterAnswer not found"),
 
-    MEMBER_EXISTS(409, "MEMBER exists"),
+    MEMBER_EXISTS(409, "Member exists"),
+    EMAIL_EXISTS(409,"이미 가입된 이메일이 있습니다."),
+
     SHELTER_EXISTS(409, "Shelter exists"),
     QUESTION_EXISTS(409, "Question exists"),
     ANSWER_EXISTS(409, "Answer exists"),
