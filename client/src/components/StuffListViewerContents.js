@@ -3,32 +3,43 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // eslint-disable-next-line no-unused-vars
 import Parser from 'html-react-parser';
-
+import Swal from 'sweetalert2';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffLisViewerContents({ id, content, memberId }) {
   const navigate = useNavigate();
+
   const deleteClick = () => {
-    const result = window.confirm('질문을 삭제하시겠습니까?');
-    if (
-      result === true &&
-      Number(sessionStorage.getItem('memberId')) === memberId
-    ) {
-      setTimeout(() => {
-        axios
-          .delete(`/api/stuffQuestion/${id}`)
-          .then(() => navigate(`/stuffList`))
-          .catch((err) => console.log(err));
-      }, 1000);
-    }
+    Swal.fire({
+      title: '게시글을 삭제하시겠습니까?',
+      text: '삭제하시면 다시 복구시킬 수 없습니다.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#AC0000',
+      cancelButtonColor: '#008505',
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+    }).then((result) => {
+      if (
+        result.value &&
+        Number(localStorage.getItem('memberId')) === memberId
+      ) {
+        setTimeout(() => {
+          axios
+            .delete(`/stuffQuestion/${id}`)
+            .then(() => navigate(`/stuffList`))
+            .catch((err) => console.log(err));
+        }, 1000);
+      }
+    });
   };
   return (
     <Container>
       <StuffListContents>
         <div className="contents">{Parser(content)}</div>
       </StuffListContents>
-      {memberId === Number(sessionStorage.getItem('memberId')) ? (
+      {memberId === Number(localStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
           <Link to={`/stuffWriteUpdate/${id}`}>

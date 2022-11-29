@@ -27,8 +27,7 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/api/stuffQuestion/search/tag/${drop} `)
-
+        .get(`/stuffQuestion/search/tag/${drop} `)
         .then((response) => {
           console.log(response.data);
           setQuestions(response.data);
@@ -41,7 +40,7 @@ function StuffList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/api/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
@@ -52,6 +51,7 @@ function StuffList() {
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
+
   const handleEnter = (e) => {
     if (e.key === 'Enter') {
       handleSearchButton();
@@ -64,7 +64,7 @@ function StuffList() {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/api/stuffQuestion?page=${pageNum}&size=15`
+        `/stuffQuestion?page=${pageNum}&size=20`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
@@ -74,9 +74,9 @@ function StuffList() {
     }
     setLoading(false);
   }, [pageNum]);
-  // console.log(questions);
+  console.log(totalPage);
   console.log(pageNum);
-  console.log(questions);
+  console.log(questions.length);
 
   const onIntersect = (entries) => {
     const entry = entries[0];
@@ -179,7 +179,9 @@ function StuffList() {
           ))}
           <Loader>
             {totalPage > pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
-            {loading && <DotSpinner size={80} speed={0.9} color="#008505" />}
+            {loading ? (
+              <DotSpinner size={80} speed={0.9} color="#008505" />
+            ) : null}
           </Loader>
         </ContentsContainer>
       </StuffListContent>
