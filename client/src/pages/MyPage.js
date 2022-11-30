@@ -14,7 +14,7 @@ const MyPage = () => {
   const [userEmail, setUserEmail] = useState('');
   const [reservationInfo, setReservationInfo] = useState([]);
   const [shelterId, setShelterId] = useState(1);
-  const [shelter, setShelter] = useState('');
+  const [shelter, setShelter] = useState([]);
   const [err, setErr] = useState(false);
 
   const fetchUser = () => {
@@ -78,6 +78,7 @@ const MyPage = () => {
     fetchShelter();
   }, [reservationInfo]);
   useEffect(() => {
+    console.log(shelter);
     if (shelter.length !== 0) {
       var mapContainer = document.getElementById('map'),
         mapOption = {
