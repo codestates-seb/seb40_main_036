@@ -49,7 +49,7 @@ const ShelterWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
+        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.shelterQuestionTitle);
         setContent(response.data.data.shelterQuestionContent);
@@ -96,7 +96,7 @@ const ShelterWriteUpdate = () => {
       });
     }
     axios
-      .patch(`/api/shelterQuestion/${QuestionId}`, {
+      .patch(`/shelterQuestion/${QuestionId}`, {
         memberId: localStorage.getItem('memberId'),
         shelterQuestionTitle: title,
         shelterQuestionContent: content,

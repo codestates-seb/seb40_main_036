@@ -81,7 +81,7 @@ const StuffWriteForm = () => {
       });
     }
     axios
-      .post(`/api/stuffQuestion`, {
+      .post(`/stuffQuestion`, {
         memberId: localStorage.getItem('memberId'),
         name: localStorage.getItem('name'),
         stuffQuestionTitle: title,
