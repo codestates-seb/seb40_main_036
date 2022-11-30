@@ -32,7 +32,7 @@ function ReviewList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/shelterQuestion/search/tag/${drop} `)
+        .get(`/shelterQuestion/search/tag/${drop}`)
         .then((response) => {
           console.log(response.data);
           setQuestions(response.data);

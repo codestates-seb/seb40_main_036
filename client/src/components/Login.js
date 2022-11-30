@@ -42,7 +42,7 @@ const Login = () => {
 
     axios
       .post(
-        '/api/member/login',
+        '/member/login',
         {
           email: inputId,
           password: inputPw,
