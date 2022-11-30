@@ -78,29 +78,31 @@ const MyPage = () => {
     fetchShelter();
   }, [reservationInfo]);
   useEffect(() => {
-    var mapContainer = document.getElementById('map'),
-      mapOption = {
-        center: new kakao.maps.LatLng(Number(shelter.y), Number(shelter.x)),
-        level: 3,
-      };
+    if (shelter.length !== 0) {
+      var mapContainer = document.getElementById('map'),
+        mapOption = {
+          center: new kakao.maps.LatLng(Number(shelter.y), Number(shelter.x)),
+          level: 3,
+        };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption);
+      var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    var imageSrc = GreenOlive,
-      imageSize = new kakao.maps.Size(64, 69);
+      var imageSrc = GreenOlive,
+        imageSize = new kakao.maps.Size(64, 69);
 
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-    var markerPosition = new kakao.maps.LatLng(
-      Number(shelter.y),
-      Number(shelter.x)
-    );
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      var markerPosition = new kakao.maps.LatLng(
+        Number(shelter.y),
+        Number(shelter.x)
+      );
 
-    var marker = new kakao.maps.Marker({
-      position: markerPosition,
-      image: markerImage,
-    });
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage,
+      });
 
-    marker.setMap(map);
+      marker.setMap(map);
+    }
   }, [shelter.x, shelter.y]);
 
   return (
