@@ -2,10 +2,13 @@ import axios from 'axios';
 import { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { ImageResize } from 'quill-image-resize-module';
+
+Quill.register('modules/ImageResize', ImageResize);
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -35,6 +38,7 @@ const ShareWriteForm = () => {
         handlers: {
           link: imageUrlHandler,
         },
+        ImageResize: { modules: ['Resize'] },
       },
     }),
     []
