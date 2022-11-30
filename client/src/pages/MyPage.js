@@ -129,7 +129,7 @@ const MyPage = () => {
         {err ? (
           <div id="reservationInfo">
             <h2 className="bold title">현재 예약중인 대피소</h2>
-            <div className="d-flex my">예약 내역이 없습니다.</div>
+            <div className="d-flex my jc-center">예약 내역이 없습니다.</div>
           </div>
         ) : (
           <>
@@ -186,6 +186,9 @@ const MypageWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .jc-center {
+      justify-content: center;
     }
     .jc-right {
       justify-content: end;
