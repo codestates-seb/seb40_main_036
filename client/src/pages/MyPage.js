@@ -13,7 +13,7 @@ const MyPage = () => {
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [reservationInfo, setReservationInfo] = useState([]);
-  const [shelterId, setShelterId] = useState(1);
+  const [shelterId, setShelterId] = useState(0);
   const [shelter, setShelter] = useState([]);
   const [err, setErr] = useState(false);
 
