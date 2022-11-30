@@ -106,6 +106,7 @@ public class ReservationService {
     }
 
     public Reservation findReservation(long reservationId) {
+
         return findVerifiedReservation(reservationId);
     }
 
@@ -114,26 +115,13 @@ public class ReservationService {
     }
 
     public Reservation findVerifiedMemberReservation(long memberId){
-        Reservation member=
+        Reservation member =
                 reservationRepository.findByMemberId(memberId);
 
-        if(member==null) { // 없으면
+        if(member==null){ // 없으면
             throw new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND);
         }
         return reservationRepository.findByMemberId(memberId);
-    }
-
-    public Page<Reservation> findReservations(int page, int size){
-        return reservationRepository.findAll(PageRequest.of(page,size,
-                Sort.by("shelterName").descending()));
-    }
-
-    @Transactional
-    public void deleteReservation(long reservationId){
-
-        Reservation findReservation = findVerifiedReservation(reservationId);
-        reservationRepository.delete(findReservation);
-
     }
 
     public Reservation findVerifiedReservation(long reservationId){
@@ -145,6 +133,18 @@ public class ReservationService {
         }
 
         return optionalReservation.get(0);
+    }
+    public Page<Reservation> findReservations(int page, int size){
+        return reservationRepository.findAll(PageRequest.of(page,size,
+                Sort.by("shelterName").descending()));
+    }
+
+    @Transactional
+    public void deleteReservation(long reservationId){
+
+        Reservation findReservation = findVerifiedReservation(reservationId);
+        reservationRepository.delete(findReservation);
+
     }
 
 }

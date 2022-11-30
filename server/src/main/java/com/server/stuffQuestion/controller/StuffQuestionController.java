@@ -73,18 +73,16 @@ public class StuffQuestionController {
 
     }
 
+
     @GetMapping("/search/title/{word}") // 리스트로 불러와짐
     public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word){
         List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTitleStuffQuestion(word);
-
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList), HttpStatus.OK);
     }
-
 
     @GetMapping("/search/name/{word}") // 리스트로 불러와짐
     public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word){
         List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchNameStuffQuestion(word);
-
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
     }
 
