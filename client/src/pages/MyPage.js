@@ -28,9 +28,11 @@ const MyPage = () => {
       .catch(() => setErr(true));
   };
   const fetchShelter = () => {
-    axios
-      .get('/api/shelter/' + shelterId)
-      .then((res) => setShelter(res.data.data));
+    if (shelter > 0) {
+      axios
+        .get('/api/shelter/' + shelterId)
+        .then((res) => setShelter(res.data.data));
+    }
   };
   const deleteReservation = () => {
     Swal.fire({
