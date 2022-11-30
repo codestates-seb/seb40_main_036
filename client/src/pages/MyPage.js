@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import GreenOlive from './../img/locationDotSolidGreen.svg';
 import Logo from './../img/logo.png';
 
 const { kakao } = window;
@@ -77,26 +78,28 @@ const MyPage = () => {
     fetchShelter();
   }, [reservationInfo]);
   useEffect(() => {
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    var mapContainer = document.getElementById('map'),
       mapOption = {
-        center: new kakao.maps.LatLng(Number(shelter.y), Number(shelter.x)), // 지도의 중심좌표
-        level: 3, // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(Number(shelter.y), Number(shelter.x)),
+        level: 3,
       };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
 
-    // 마커가 표시될 위치입니다
+    var imageSrc = GreenOlive,
+      imageSize = new kakao.maps.Size(64, 69);
+
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
     var markerPosition = new kakao.maps.LatLng(
       Number(shelter.y),
       Number(shelter.x)
     );
 
-    // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
       position: markerPosition,
+      image: markerImage,
     });
 
-    // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
   }, [shelter.x, shelter.y]);
 
@@ -130,7 +133,7 @@ const MyPage = () => {
               <h2 className="bold title">현재 예약중인 대피소</h2>
               <div className="d-flex jc-right">
                 <button onClick={deleteReservation}>
-                  <FontAwesomeIcon icon={solid('trash-can')} />
+                  <FontAwesomeIcon icon={solid('trash-can')} /> 삭제
                 </button>
               </div>
               <div className="d-flex my">
@@ -182,7 +185,8 @@ const MypageWrapper = styled.div`
     .jc-right {
       justify-content: end;
       button {
-        background: none;
+        background: #dc3545;
+        padding: 8px 16px;
         border: 0;
         outline: 0;
       }
