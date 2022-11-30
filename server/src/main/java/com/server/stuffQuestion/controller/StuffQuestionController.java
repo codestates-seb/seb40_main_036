@@ -78,7 +78,7 @@ public class StuffQuestionController {
                                                    @Positive @RequestParam int page,
                                                    @Positive @RequestParam int size){
         Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionTitle=stuffQuestionService.searchTitleStuffQuestion(word);
+        List<StuffQuestion> stuffQuestionTitle = pageStuffQuestion.getContent();
 
         return new ResponseEntity<>(
                 new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTitle),pageStuffQuestion), HttpStatus.OK);
@@ -101,7 +101,7 @@ public class StuffQuestionController {
                                                      @Positive @RequestParam int page,
                                                      @Positive @RequestParam int size){
         Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionContent=pageStuffQuestion.getContent();
+        List<StuffQuestion> stuffQuestionContent = pageStuffQuestion.getContent();
 
         return new ResponseEntity<>(
                 new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionContent),pageStuffQuestion), HttpStatus.OK);
