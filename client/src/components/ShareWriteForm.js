@@ -38,7 +38,7 @@ const ShareWriteForm = () => {
         handlers: {
           link: imageUrlHandler,
         },
-        ImageResize: { modules: ['Resize'] },
+        ImageResize: { parchment: Quill.import('parchment') },
       },
     }),
     []
