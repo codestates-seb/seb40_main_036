@@ -56,9 +56,14 @@ const Nav = () => {
             </ul>
             <ul>
               {isLogin ? (
-                <li>
-                  <Link onClick={onClickLogout}>로그아웃</Link>
-                </li>
+                <>
+                  <li>
+                    <Link to="mypage">마이페이지</Link>
+                  </li>
+                  <li>
+                    <Link onClick={onClickLogout}>로그아웃</Link>
+                  </li>
+                </>
               ) : (
                 <>
                   <li>
