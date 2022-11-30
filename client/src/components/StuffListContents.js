@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
+import NoImage from './../img/NoImage.png';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import Parser from 'html-react-parser';
@@ -17,6 +18,11 @@ function EquipmentContents({
   return (
     <Container>
       <ContentsList>
+        <ImageContainer>
+          <div className="imageBox">
+            <img src={NoImage} alt="NoImage" />
+          </div>
+        </ImageContainer>
         <Header>
           <div className="tagContainer">
             <div className="tag">{tag}</div>
@@ -64,6 +70,7 @@ const ContentsList = styled.div`
     transform: translateY(-5px);
   }
 `;
+const ImageContainer = styled.div``;
 const Header = styled.div`
   display: flex;
   align-items: center;

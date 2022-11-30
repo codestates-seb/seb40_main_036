@@ -27,7 +27,7 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/stuffQuestion/search/tag/${drop} `)
+        .get(`/stuffQuestion/search/tag/${drop}?page=1&size=10 `)
         .then((response) => {
           console.log(response.data);
           setQuestions(response.data);
@@ -80,7 +80,7 @@ function StuffList() {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/stuffQuestion?page=${pageNum}&size=20`
+        `/stuffQuestion?page=${pageNum}&size=15`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
