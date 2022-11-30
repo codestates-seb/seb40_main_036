@@ -29,7 +29,7 @@ function stuffAnswerPost() {
       };
       console.log(data);
       axios
-        .post(`/api/stuffAnswer`, data)
+        .post(`/stuffAnswer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

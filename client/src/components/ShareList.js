@@ -32,12 +32,20 @@ function ShareList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/api/question/search/tag/${drop} `)
+        .get(`/question/search/tag/${drop} `)
 
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
-          console.log(drop);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         })
         .catch((err) => console.log(err));
     }
@@ -52,11 +60,19 @@ function ShareList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/api/question/search/${search.select}/${search.content}`)
+        .get(`/question/search/${search.select}/${search.content}`)
         .then((response) => {
           console.log(response);
           setQuestions(response.data);
-          console.log(search);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         });
     }
     window.scrollTo(0, 0);
@@ -86,7 +102,7 @@ function ShareList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/api/question/questions`);
+        const response = await axios.get(`/question/questions`);
         console.log(response);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {

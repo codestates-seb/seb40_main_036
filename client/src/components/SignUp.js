@@ -5,7 +5,9 @@ import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const SignUP = () => {
   const [inputName, setInputName] = useState('');
   const [inputId, setInputId] = useState('');
@@ -23,6 +25,7 @@ const SignUP = () => {
   const [isId, setIsId] = useState(false); // eslint-disable-line no-unused-vars
   const [isname, setIsName] = useState(false); // eslint-disable-line no-unused-vars
   const [isPassword, setIsPassword] = useState(false); // eslint-disable-line no-unused-vars
+  const [isHyphen, setIsHyphen] = useState(false);
 
   const onChangeName = (e) => {
     const currentName = e.target.value;
@@ -47,7 +50,7 @@ const SignUP = () => {
       setIdMessage('이메일의 형식이 올바르지 않습니다!');
       setIsId(false);
     } else {
-      setIdMessage('사용 가능한 이메일 입니다.'); // 아직은 이메일 형식만 맞으면 이러한 메세지가 뜨게 설정 나중에 중복여부로 구현 예정
+      setIdMessage('중복검사를 눌러주세요!'); // 아직은 이메일 형식만 맞으면 이러한 메세지가 뜨게 설정 나중에 중복여부로 구현 예정
       setIsId(true);
     }
   };
@@ -93,7 +96,7 @@ const SignUP = () => {
     }
     e.preventDefault(); // 새로고침 방지
     axios
-      .post('/api/member/join', {
+      .post('/member/join', {
         name: inputName,
         email: inputId,
         password: inputPw,
@@ -109,13 +112,61 @@ const SignUP = () => {
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error);
-        if (error.response.status === 500) {
+        if (error.response.status === 409) {
           Swal.fire({
             icon: 'error',
             title: '회원가입 실패!',
-            text: '이미 사용중인 이메일입니다. 다른 이메일을 입력하세요!',
+            text: '이메일 또는 전화번호 중복여부를 확인해주세요!',
             confirmButtonColor: '#008505',
           });
+        }
+      });
+  };
+
+  const onClickCheckNumber = (e) => {
+    e.preventDefault();
+    axios
+      .post('/member/join/checkPhone', {
+        phone: hyphen,
+      })
+      .then((response) => {
+        console.log(response);
+        // console.log(response.data.message);
+        if (response.data.message === '사용 가능한 휴대폰 번호 입니다.') {
+          setHyphenMessage('사용 가능한 휴대폰 번호 입니다!');
+          setIsHyphen(true);
+        }
+      })
+      .catch((error) => {
+        // Handle error.
+        console.log(error);
+        if (error.response.data.message === '이미 가입된 휴대폰 번호입니다.') {
+          setHyphenMessage('이미 가입된 휴대폰 번호입니다.');
+          setIsHyphen(false);
+        }
+      });
+  };
+
+  const onClickCheckEmail = (e) => {
+    e.preventDefault();
+    axios
+      .post('/member/join/checkEmail', {
+        email: inputId,
+      })
+      .then((response) => {
+        console.log(response);
+        // console.log(response.data.message);
+        if (response.data.message === '사용 가능한 이메일 입니다.') {
+          setIdMessage('멋진 이메일이네요!');
+          setIsId(true);
+        }
+      })
+      .catch((error) => {
+        // Handle error.
+        console.log(error);
+        if (error.response.data.message === '이미 가입된 이메일 입니다.') {
+          setIdMessage('이미 가입된 이메일 입니다.');
+          setIsId(false);
         }
       });
   };
@@ -159,6 +210,9 @@ const SignUP = () => {
               <label className="idPwText" htmlFor="numWrite">
                 전화번호
               </label>
+              <button className="checkNumber" onClick={onClickCheckNumber}>
+                중복검사
+              </button>
               <div>
                 <input
                   className="idPwInput"
@@ -168,7 +222,7 @@ const SignUP = () => {
                   value={hyphen}
                 />
               </div>
-              <MsgHyphenStyle value={hyphen}>
+              <MsgHyphenStyle value={isHyphen}>
                 <div className="msgHyphen">{hyphenMessage}</div>
               </MsgHyphenStyle>
             </div>
@@ -176,6 +230,9 @@ const SignUP = () => {
               <label className="idPwText" htmlFor="emailWrite">
                 이메일
               </label>
+              <button className="checkEmail" onClick={onClickCheckEmail}>
+                중복검사
+              </button>
               <div>
                 <input
                   className="idPwInput"
@@ -206,7 +263,9 @@ const SignUP = () => {
                 <div className="msgPw">{passwordMessage}</div>
               </MsgPwStyle>
             </div>
-            <button onClick={onClickSignUp}>회원가입</button>
+            <button className="signBtn" onClick={onClickSignUp}>
+              회원가입
+            </button>
             <div className="accountExistence">
               이미 계정이 있으신가요? <Link to="/login">로그인</Link>
             </div>
@@ -223,10 +282,12 @@ const SignUpForm = styled.div`
   width: 400px;
   height: 100%;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   border-radius: 5px;
   margin: 90px auto;
-
+  ${mobile} {
+    width: 340px;
+  }
   .logoImg {
     margin-top: 15px;
     text-align: center;
@@ -243,6 +304,7 @@ const SignUpInput = styled.div`
   }
   .idPwText {
     display: flex;
+    display: inline-block;
     padding-bottom: 5px;
     font-weight: 500;
     font-size: 16px;
@@ -255,12 +317,37 @@ const SignUpInput = styled.div`
     border: 1px solid #bcbcbc;
     border-radius: 3px;
     positon: fixed;
+    ${mobile} {
+      width: 300px;
+    }
   }
   .idPwBox {
     margin-top: 5px;
     margin-bottom: 10px;
   }
-  button {
+  .checkNumber {
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    background: #008505;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+  }
+  .checkEmail {
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    background: #008505;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-bottom: 4px;
+  }
+  .signBtn {
     margin-top: 15px;
     width: 289px;
     height: 56px;
@@ -268,8 +355,15 @@ const SignUpInput = styled.div`
     top: 694px;
     color: white;
     font-weight: 600;
+    width: 280px;
+    height: 50px;
     background: #008505;
     border-radius: 3px;
+    margin-top: 10px;
+    border: none;
+    ${mobile} {
+      width: 230px;
+    }
   }
   .accountExistence {
     margin-top: 20px;
@@ -287,7 +381,7 @@ const MsgNameStyle = styled.div`
     padding-top: 5px;
     font-size: 12px;
     font-weight: 450;
-    color: ${(props) => (props.value ? 'black' : 'red')};
+    color: ${(props) => (props.value ? 'green' : 'red')};
   }
 `;
 
@@ -296,7 +390,7 @@ const MsgEmailStyle = styled.div`
     padding-top: 5px;
     font-size: 12px;
     font-weight: 450;
-    color: ${(props) => (props.value ? 'black' : 'red')};
+    color: ${(props) => (props.value ? 'green' : 'red')};
   }
 `;
 
@@ -305,7 +399,7 @@ const MsgPwStyle = styled.div`
     padding-top: 5px;
     font-size: 12px;
     font-weight: 450;
-    color: ${(props) => (props.value ? 'black' : 'red')};
+    color: ${(props) => (props.value ? 'green' : 'red')};
   }
 `;
 
@@ -314,6 +408,6 @@ const MsgHyphenStyle = styled.div`
     padding-top: 5px;
     font-size: 12px;
     font-weight: 450;
-    color: ${(props) => (props.value ? 'black' : 'red')};
+    color: ${(props) => (props.value ? 'green' : 'red')};
   }
 `;
