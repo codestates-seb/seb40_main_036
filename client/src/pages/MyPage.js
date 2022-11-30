@@ -31,13 +31,14 @@ const MyPage = () => {
       .get('/api/shelter/' + shelterId)
       .then((res) => setShelter(res.data.data));
   };
-  if (localStorage.getItem('email') !== null) {
-    setIsLogin(true);
-    setMemberId(localStorage.getItem('memberId'));
-    setUserName(localStorage.getItem('name'));
-    setUserEmail(localStorage.getItem('email'));
-  }
+
   useEffect(() => {
+    if (localStorage.getItem('email') !== null) {
+      setIsLogin(true);
+      setMemberId(localStorage.getItem('memberId'));
+      setUserName(localStorage.getItem('name'));
+      setUserEmail(localStorage.getItem('email'));
+    }
     fetchUser();
     !isLogin &&
       Swal.fire({
