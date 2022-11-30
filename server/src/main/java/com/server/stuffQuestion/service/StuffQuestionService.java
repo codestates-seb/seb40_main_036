@@ -6,7 +6,9 @@ import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import com.server.stuffAnswer.entity.StuffAnswer;
 import com.server.stuffAnswer.repository.StuffAnswerRepository;
+import com.server.stuffQuestion.dto.StuffQuestionResponseDto;
 import com.server.stuffQuestion.entity.StuffQuestion;
+import com.server.stuffQuestion.mapper.StuffQuestionMapper;
 import com.server.stuffQuestion.repository.StuffQuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -17,8 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -29,6 +30,8 @@ public class StuffQuestionService {
     private final MemberRepository memberRepository;
 
     private final StuffAnswerRepository stuffAnswerRepository;
+
+    private final StuffQuestionMapper stuffQuestionMapper;
 
 
     public StuffQuestion createStuffQuestion(StuffQuestion stuffQuestion){
@@ -84,21 +87,22 @@ public class StuffQuestionService {
     public StuffQuestion findStuffQuestion(long stuffQuestionID){return findVerifiedStuffQuestion(stuffQuestionID);}
 
 
-    public List<StuffQuestion> searchTitleStuffQuestion(String word){
-        return stuffQuestionRepository.findByStuffQuestionTitleContainingOrderByStuffQuestionIdDesc(word);
+    public Page<StuffQuestion> searchTagStuffQuestion(String word, int page, int size){
+        return stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(PageRequest.of(page, size, Sort.by("stuffQuestionId").descending()),word);
     }
 
-    public List<StuffQuestion> searchNameStuffQuestion(String word){
-        return stuffQuestionRepository.findByNameContainingOrderByStuffQuestionIdDesc(word);
+    public Page<StuffQuestion> searchContentStuffQuestion(String word, int page, int size){
+        return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(PageRequest.of(page, size, Sort.by("stuffQuestionId").descending()),word);
     }
 
-    public List<StuffQuestion> searchContentStuffQuestion(String word){
-        return stuffQuestionRepository.findByStuffQuestionContentContainingOrderByStuffQuestionIdDesc(word);
+    public Page<StuffQuestion> searchTitleStuffQuestion(String word, int page, int size){
+        return stuffQuestionRepository.findByStuffQuestionTitleContainingOrderByStuffQuestionIdDesc(PageRequest.of(page, size, Sort.by("stuffQuestionId").descending()),word);
     }
 
-    public List<StuffQuestion> searchTagStuffQuestion(String word){
-        return stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(word);
+    public Page<StuffQuestion> searchNameStuffQuestion(String word, int page, int size){
+        return stuffQuestionRepository.findByNameContainingOrderByStuffQuestionIdDesc(PageRequest.of(page, size, Sort.by("stuffQuestionId").descending()),word);
     }
+
 
 
     public Page<StuffQuestion> findStuffQuestions(int page, int size){
@@ -106,7 +110,18 @@ public class StuffQuestionService {
                     Sort.by("stuffQuestionId").descending()));
     }
 
-//    public Page<>
+    public List<StuffQuestionResponseDto> getValue(List<StuffQuestion> stuffQuestions){
+        List<StuffQuestionResponseDto> value = new ArrayList<>();
+
+        Iterator iter = stuffQuestions.iterator();
+
+        while(iter.hasNext()){
+            StuffQuestion stuffQuestion = (StuffQuestion) iter.next();
+            value.add(stuffQuestionMapper.stuffQuestionToStuffQuestionResponseDto(stuffQuestion));
+
+        }
+        return value;
+    }
 
     @Transactional
     public void deleteStuffQuestion(long stuffQuestionId){
