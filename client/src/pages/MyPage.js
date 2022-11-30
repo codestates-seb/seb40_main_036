@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import Logo from './../img/logo.png';
 
+const { kakao } = window;
 const MyPage = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [memberId, setMemberId] = useState(1);
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [reservationInfo, setReservationInfo] = useState([]);
@@ -15,12 +18,9 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/api/reservation/member/' + memberId, {
-        headers: {
-          'ngrok-skip-browser-warning': '69420',
-        },
-      })
+      .get('/api/reservation/member/' + localStorage.getItem('memberId'))
       .then((res) => {
+        console.log(res);
         setReservationInfo(res.data.data);
         setShelterId(res.data.data.shelterId);
       })
@@ -31,11 +31,26 @@ const MyPage = () => {
       .get('/api/shelter/' + shelterId)
       .then((res) => setShelter(res.data.data));
   };
-
+  const deleteReservation = () => {
+    Swal.fire({
+      icon: 'warning',
+      title: '예약 삭제',
+      text: '현재 예약을 삭제하시겠습니까?',
+      showCancelButton: true,
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+      allowOutsideClick: false,
+    }).then((res) => {
+      if (res.isConfirmed) {
+        axios
+          .delete('/api/reservation' + reservationInfo.reservationId)
+          .then((window.location.href = '/'));
+      }
+    });
+  };
   useEffect(() => {
     if (localStorage.getItem('email') !== null) {
       setIsLogin(true);
-      setMemberId(localStorage.getItem('memberId'));
       setUserName(localStorage.getItem('name'));
       setUserEmail(localStorage.getItem('email'));
     } else {
@@ -61,10 +76,36 @@ const MyPage = () => {
   useEffect(() => {
     fetchShelter();
   }, [reservationInfo]);
+  useEffect(() => {
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(Number(shelter.y), Number(shelter.x)), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+      };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다
+    var markerPosition = new kakao.maps.LatLng(
+      Number(shelter.y),
+      Number(shelter.x)
+    );
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition,
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+  }, [shelter.x, shelter.y]);
 
   return (
     <>
       <MypageWrapper>
+        <div className="d-flex jc-right">
+          <img src={Logo} alt="logo" className="logo" />
+        </div>
         <div id="info">
           <h2 className="bold title">MyPage</h2>
           <div className="d-flex my">
@@ -76,12 +117,22 @@ const MyPage = () => {
             <span>{userEmail}</span>
           </div>
         </div>
-        <div id="reservationInfo">
-          <h2 className="bold title">현재 예약중인 대피소</h2>
-          {err ? (
+
+        {err ? (
+          <div id="reservationInfo">
+            <h2 className="bold title">현재 예약중인 대피소</h2>
             <div className="d-flex my">예약 내역이 없습니다.</div>
-          ) : (
-            <>
+          </div>
+        ) : (
+          <>
+            <div id="map"></div>
+            <div id="reservationInfo">
+              <h2 className="bold title">현재 예약중인 대피소</h2>
+              <div className="d-flex jc-right">
+                <button onClick={deleteReservation}>
+                  <FontAwesomeIcon icon={solid('trash-can')} />
+                </button>
+              </div>
               <div className="d-flex my">
                 <span className="bold">예약일자</span>
                 <span>{reservationInfo.reservationCreated}</span>
@@ -94,9 +145,9 @@ const MyPage = () => {
                 <span className="bold">예약인원</span>
                 <span>{reservationInfo.num}</span>
               </div>
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </MypageWrapper>
     </>
   );
@@ -108,16 +159,33 @@ const MypageWrapper = styled.div`
   width: 100%;
   margin: 16px auto;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-
+  .logo {
+    width: 100%;
+    max-width: 100px;
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+  #map {
+    width: 100%;
+    height: 300px;
+  }
   #reservationInfo,
   #info {
-    padding: 8px;
+    padding: 16px;
   }
   & {
     .d-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .jc-right {
+      justify-content: end;
+      button {
+        background: none;
+        border: 0;
+        outline: 0;
+      }
     }
     .my {
       margin-top: 8px;
@@ -129,6 +197,7 @@ const MypageWrapper = styled.div`
     .title {
       margin-top: 16px;
       margin-bottom: 16px;
+      text-align: center;
     }
   }
 `;
