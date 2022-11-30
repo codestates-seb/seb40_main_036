@@ -28,7 +28,7 @@ function ReviewLisViewerContents({ id, content, memberId }) {
       ) {
         setTimeout(() => {
           axios
-            .delete(`/shelterQuestion/${id}`)
+            .delete(`api/shelterQuestion/${id}`)
             .then(() => navigate(`/Review`))
             .catch((err) => console.log(err));
         }, 1000);
@@ -69,12 +69,17 @@ const Container = styled.div`
 `;
 const ReviewListContents = styled.div`
   padding: 20px 0 30px 0;
-  font-size: 1.125rem;
-  ${tablet} {
+  .ql-container {
     font-size: 1rem;
   }
-  ${mobile} {
-    font-size: 0.8rem;
+  .ql-size-small {
+    font-size: 0.76rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
   }
 `;
 const DeletEdit = styled.div`

@@ -42,7 +42,7 @@ const SideNav = (props) => {
         });
       })
 
-      .catch(() => {
+      .catch((err) => {
         props.setopen(false);
         Swal.fire({
           icon: 'warning',
@@ -56,6 +56,7 @@ const SideNav = (props) => {
             //취소
           }
         });
+        console.log(err);
       });
   };
   return (

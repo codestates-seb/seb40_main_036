@@ -1,68 +1,101 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const MyPage = () => {
-  var acc = document.getElementsByClassName('accordion');
-  var i;
+  const [isLogin, setIsLogin] = useState(true);
+  const [memberId, setMemberId] = useState(1);
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [reservationInfo, setReservationInfo] = useState([]);
+  const [shelterId, setShelterId] = useState(1);
+  const [shelter, setShelter] = useState('');
+  const [err, setErr] = useState(false);
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener('click', function () {
-      this.classList.toggle('active');
-      var panel = this.nextElementSibling;
-      if (panel.style.display === 'block') {
-        panel.style.display = 'none';
-      } else {
-        panel.style.display = 'block';
-      }
-    });
-  }
+  const fetchUser = () => {
+    axios
+      .get('/api/reservation/member/' + memberId, {
+        headers: {
+          'ngrok-skip-browser-warning': '69420',
+        },
+      })
+      .then((res) => {
+        setReservationInfo(res.data.data);
+        setShelterId(res.data.data.shelterId);
+      })
+      .catch(() => setErr(true));
+  };
+  const fetchShelter = () => {
+    axios
+      .get('/api/shelter/' + shelterId)
+      .then((res) => setShelter(res.data.data));
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem('email') !== null) {
+      setIsLogin(true);
+      setMemberId(localStorage.getItem('memberId'));
+      setUserName(localStorage.getItem('name'));
+      setUserEmail(localStorage.getItem('email'));
+    } else {
+      setIsLogin(false);
+    }
+    fetchUser();
+  }, []);
+  useEffect(() => {
+    if (isLogin === false) {
+      Swal.fire({
+        icon: 'warning',
+        title: '로그인 오류',
+        text: '로그인 정보가 없습니다.',
+        confirmButtonText: '메인으로 이동',
+        allowOutsideClick: false,
+      }).then((res) => {
+        if (res.isConfirmed) {
+          window.location.href = '/';
+        }
+      });
+    }
+  }, [isLogin]);
+  useEffect(() => {
+    fetchShelter();
+  }, [reservationInfo]);
+
   return (
     <>
       <MypageWrapper>
-        <h2 className="bold title">MyPage</h2>
         <div id="info">
-          <div className="d-flex">
+          <h2 className="bold title">MyPage</h2>
+          <div className="d-flex my">
             <span className="bold">이름</span>
-            <span>어쩌구</span>
+            <span>{userName}</span>
           </div>
-          <div className="d-flex">
-            <span className="bold">전화번호</span>
-            <span>저쩌구</span>
-          </div>
-          <div className="d-flex">
+          <div className="d-flex my">
             <span className="bold">이메일</span>
-            <span>머시깽이</span>
+            <span>{userEmail}</span>
           </div>
         </div>
         <div id="reservationInfo">
-          <button className="accordion">Section 1</button>
-          <div className="panel">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-
-          <button className="accordion">Section 2</button>
-          <div className="panel">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-
-          <button className="accordion">Section 3</button>
-          <div className="panel">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+          <h2 className="bold title">현재 예약중인 대피소</h2>
+          {err ? (
+            <div className="d-flex my">예약 내역이 없습니다.</div>
+          ) : (
+            <>
+              <div className="d-flex my">
+                <span className="bold">예약일자</span>
+                <span>{reservationInfo.reservationCreated}</span>
+              </div>
+              <div className="d-flex my">
+                <span className="bold">대피소명</span>
+                <span>{shelter.shelterName}</span>
+              </div>
+              <div className="d-flex my">
+                <span className="bold">예약인원</span>
+                <span>{reservationInfo.num}</span>
+              </div>
+            </>
+          )}
         </div>
       </MypageWrapper>
     </>
@@ -74,46 +107,28 @@ const MypageWrapper = styled.div`
   max-width: 400px;
   width: 100%;
   margin: 16px auto;
-  padding: 8px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    .active,
-    .accordion:hover {
-      background-color: #ccc;
-    }
-  }
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
+  #reservationInfo,
+  #info {
+    padding: 8px;
   }
-  .d-flex {
-    display: flex;
-    *:first-child {
-      flex: 0 1 33.3333%;
+  & {
+    .d-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    *:last-child {
-      flex: 0 1 66.6666%;
+    .my {
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
-  }
-  > div {
-    margin-bottom: 8px;
-  }
-
-  .bold {
-    font-weight: bold;
+    .bold {
+      font-weight: bold;
+    }
+    .title {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
   }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import StuffListContents from './StuffListContents';
 import CityDown from './CityDown';
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 // import InfiniteScroll from 'react-infinite-scroller';
@@ -18,7 +18,7 @@ function StuffList() {
   const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [totalPage, setTotalPage] = useState(0);
+  const [totalPage, setTotalPage] = useState(1);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
@@ -27,11 +27,21 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/stuffQuestion/search/tag/${drop} `)
+        .get(`/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=8`)
         .then((response) => {
-          console.log(response.data);
-          setQuestions(response.data);
+          console.log(response.data.data);
           console.log(drop);
+          setQuestions(response.data.data);
+          if (response.data.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+            setLoading(false);
+          }
         })
         .catch((err) => console.log(err));
     }
@@ -40,11 +50,21 @@ function StuffList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(
+          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=8`
+        )
         .then((response) => {
-          console.log(response);
-          setQuestions(response.data);
-          console.log(search);
+          console.log(response.data.data);
+          setQuestions(response.data.data);
+          if (response.data.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         });
     }
     window.scrollTo(0, 0);
@@ -57,23 +77,24 @@ function StuffList() {
       handleSearchButton();
     }
   };
-  const fetchQustion = useCallback(async () => {
+  const fetchQustion = async (pageNum) => {
     try {
       console.log('불러오기');
       // loading 상태를 true 로 바꿉니다.
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/stuffQuestion?page=${pageNum}&size=20`
+        `/api/stuffQuestion?page=${pageNum}&size=8`
       );
       console.log(response.data);
+
       setQuestions((prev) => [...prev, ...response.data.data]);
       setTotalPage(response.data.pageInfo.totalPages);
     } catch (e) {
       setError(e);
     }
     setLoading(false);
-  }, [pageNum]);
+  };
   console.log(totalPage);
   console.log(pageNum);
   console.log(questions.length);
@@ -103,8 +124,18 @@ function StuffList() {
   };
 
   useEffect(() => {
-    fetchQustion();
+    if (totalPage >= pageNum) {
+      fetchQustion(pageNum);
+    }
   }, [pageNum]);
+
+  // useEffect(() => {
+  //   if (questions.length >= 15) {
+  //     setLoading(true);
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // });
 
   useEffect(() => {
     let observer;
@@ -191,7 +222,7 @@ function StuffList() {
             />
           ))}
           <Loader>
-            {totalPage > pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
+            {totalPage >= pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
             {loading ? (
               <DotSpinner size={80} speed={0.9} color="#008505" />
             ) : null}
