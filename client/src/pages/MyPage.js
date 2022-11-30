@@ -40,6 +40,8 @@ const MyPage = () => {
       setUserEmail(localStorage.getItem('email'));
     }
     fetchUser();
+  }, []);
+  useEffect(() => {
     !isLogin &&
       Swal.fire({
         icon: 'warning',
@@ -52,7 +54,7 @@ const MyPage = () => {
           window.location.href = '/';
         }
       });
-  }, []);
+  }, [isLogin]);
   useEffect(() => {
     fetchShelter();
   }, [reservationInfo]);
