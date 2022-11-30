@@ -43,7 +43,7 @@ const MyPage = () => {
     }).then((res) => {
       if (res.isConfirmed) {
         axios
-          .delete('/api/reservation' + reservationInfo.reservationId)
+          .delete('/api/reservation/' + reservationInfo.reservationId)
           .then((window.location.href = '/'));
       }
     });
