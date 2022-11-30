@@ -26,7 +26,9 @@ public enum ExceptionCode {
     STUFFQUESTION_EXISTS(409, "StuffQuestion exists"),
     STUFFANSWER_EXISTS(409, "StuffAnswer exists"),
     SHELTERQUESTION_EXISTS(409, "ShelterQuestion exists"),
-    SHELTERANSWER_EXISTS(409, "ShelterAnswer exists");
+    SHELTERANSWER_EXISTS(409, "ShelterAnswer exists"),
+
+    EMAIL_NOT_EXISTS(200, "사용 가능한 이메일 입니다.");
 
 
     @Getter

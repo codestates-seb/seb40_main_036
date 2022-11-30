@@ -4,6 +4,7 @@ package com.server.member.service;
 import com.server.config.jwt.JwtTokenProvider;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Email;
 import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,7 +41,17 @@ public class MemberService {
         member.setPassword(passwordEncoder.encode(member.getPassword()));
 
         return memberRepository.save(member);
+       // throw new BusinessLogicException(ExceptionCode.)
     }
+
+    public void checkEmail(Email email){
+        Member emai1 = memberRepository.findByEmail(email.getEmail());
+        if(emai1!=null){
+            throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
+        }
+        throw new BusinessLogicException(ExceptionCode.EMAIL_NOT_EXISTS);
+    }
+
 
     public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
 
