@@ -7,6 +7,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const MyPage = () => {
   const [isLogin, setIsLogin] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   const [memberId, setMemberId] = useState(1);
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -17,12 +18,9 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/reservation/member/' + memberId, {
-        headers: {
-          'ngrok-skip-browser-warning': '69420',
-        },
-      })
+      .get('/reservation/member/' + localStorage.getItem('memberId'))
       .then((res) => {
+        console.log(res);
         setReservationInfo(res.data.data);
         setShelterId(res.data.data.shelterId);
       })
