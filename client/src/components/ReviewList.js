@@ -32,12 +32,19 @@ function ReviewList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/api/shelterQuestion/search/tag/${drop} `)
-
+        .get(`/api/shelterQuestion/search/tag/${drop}`)
         .then((response) => {
-          console.log(response);
+          console.log(response.data);
           setQuestions(response.data);
-          console.log(drop);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         })
         .catch((err) => console.log(err));
     }
@@ -54,9 +61,16 @@ function ReviewList() {
       axios
         .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
-          console.log(response);
           setQuestions(response.data);
-          console.log(search);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         });
     }
     window.scrollTo(0, 0);

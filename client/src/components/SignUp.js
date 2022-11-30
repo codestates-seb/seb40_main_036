@@ -5,7 +5,9 @@ import Logo from './../img/SalidaLogo.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const SignUP = () => {
   const [inputName, setInputName] = useState('');
   const [inputId, setInputId] = useState('');
@@ -223,10 +225,12 @@ const SignUpForm = styled.div`
   width: 400px;
   height: 100%;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   border-radius: 5px;
   margin: 90px auto;
-
+  ${mobile} {
+    width: 340px;
+  }
   .logoImg {
     margin-top: 15px;
     text-align: center;
@@ -255,21 +259,26 @@ const SignUpInput = styled.div`
     border: 1px solid #bcbcbc;
     border-radius: 3px;
     positon: fixed;
+    ${mobile} {
+      width: 300px;
+    }
   }
   .idPwBox {
     margin-top: 5px;
     margin-bottom: 10px;
   }
   button {
-    margin-top: 15px;
-    width: 289px;
-    height: 56px;
-    left: 583px;
-    top: 694px;
     color: white;
     font-weight: 600;
+    width: 280px;
+    height: 50px;
     background: #008505;
     border-radius: 3px;
+    margin-top: 10px;
+    border: none;
+    ${mobile} {
+      width: 230px;
+    }
   }
   .accountExistence {
     margin-top: 20px;
