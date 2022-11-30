@@ -44,21 +44,20 @@ const MyPage = () => {
     fetchShelter();
   }, [reservationInfo]);
 
-  if (isLogin === false) {
-    Swal.fire({
-      icon: 'warning',
-      title: '로그인 오류',
-      text: '로그인 정보가 없습니다.',
-      confirmButtonText: '메인으로 이동',
-      allowOutsideClick: false,
-    }).then((res) => {
-      if (res.isConfirmed) {
-        window.location.href = '/';
-      }
-    });
-  }
   return (
     <>
+      {!isLogin &&
+        Swal.fire({
+          icon: 'warning',
+          title: '로그인 오류',
+          text: '로그인 정보가 없습니다.',
+          confirmButtonText: '메인으로 이동',
+          allowOutsideClick: false,
+        }).then((res) => {
+          if (res.isConfirmed) {
+            window.location.href = '/';
+          }
+        })}
       <MypageWrapper>
         <div id="info">
           <h2 className="bold title">MyPage</h2>
