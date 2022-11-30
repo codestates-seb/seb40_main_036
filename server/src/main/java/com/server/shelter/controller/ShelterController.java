@@ -52,6 +52,8 @@ public class ShelterController {
                 HttpStatus.OK);
     }
 
+
+
     @GetMapping
     public ResponseEntity getShelters(@Positive @RequestParam int page,
                                       @Positive @RequestParam int size) {

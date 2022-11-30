@@ -62,6 +62,17 @@ public class ReservationController {
                 HttpStatus.OK);
     }
 
+    @GetMapping("/member/{memberId}")
+    public ResponseEntity getMemberReservation(@PathVariable("memberId")
+                                         @Positive long Id) {
+        Reservation reservation = reservationService.findMemberReservation(Id);
+
+        return new ResponseEntity<>(
+
+                new SingleResponseDto(reservationMapper.reservationToReservationResponseDto(reservation)),
+                HttpStatus.OK);
+    }
+
     @GetMapping
     public ResponseEntity getReservations(@Positive @RequestParam int page,
                                       @Positive @RequestParam int size) {

@@ -109,6 +109,8 @@ public class ReservationService {
         return findVerifiedReservation(reservationId);
     }
 
+    public Reservation findMemberReservation(long memberId){return findVerifiedReservation(memberId);}
+
     public Page<Reservation> findReservations(int page, int size){
         return reservationRepository.findAll(PageRequest.of(page,size,
                 Sort.by("shelterName").descending()));
