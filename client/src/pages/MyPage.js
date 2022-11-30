@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const MyPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -15,7 +17,7 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/api/reservation/member/' + memberId, {
+      .get('/reservation/member/' + memberId, {
         headers: {
           'ngrok-skip-browser-warning': '69420',
         },
@@ -27,11 +29,23 @@ const MyPage = () => {
       .catch(() => setErr(true));
   };
   const fetchShelter = () => {
-    axios
-      .get('/api/shelter/' + shelterId)
-      .then((res) => setShelter(res.data.data));
+    axios.get('/shelter/' + shelterId).then((res) => setShelter(res.data.data));
   };
-
+  const deleteReservation = () => {
+    Swal.fire({
+      icon: 'warning',
+      title: '예약 삭제',
+      text: '현재 예약을 삭제하시겠습니까?',
+      showCancelButton: true,
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+      allowOutsideClick: false,
+    }).then((res) => {
+      if (res.isConfirmed) {
+        console.log(reservationInfo);
+      }
+    });
+  };
   useEffect(() => {
     if (localStorage.getItem('email') !== null) {
       setIsLogin(true);
@@ -77,11 +91,19 @@ const MyPage = () => {
           </div>
         </div>
         <div id="reservationInfo">
-          <h2 className="bold title">현재 예약중인 대피소</h2>
           {err ? (
-            <div className="d-flex my">예약 내역이 없습니다.</div>
+            <>
+              <h2 className="bold title">현재 예약중인 대피소</h2>
+              <div className="d-flex my">예약 내역이 없습니다.</div>
+            </>
           ) : (
             <>
+              <h2 className="bold title">현재 예약중인 대피소</h2>
+              <div className="d-flex delete">
+                <button onClick={deleteReservation}>
+                  <FontAwesomeIcon icon={solid('trash-can')} />
+                </button>
+              </div>
               <div className="d-flex my">
                 <span className="bold">예약일자</span>
                 <span>{reservationInfo.reservationCreated}</span>
@@ -108,16 +130,27 @@ const MypageWrapper = styled.div`
   width: 100%;
   margin: 16px auto;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-
+  #staticMap {
+    width: 100%;
+    height: 300px;
+  }
   #reservationInfo,
   #info {
-    padding: 8px;
+    padding: 16px;
   }
   & {
     .d-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .delete {
+      justify-content: end;
+      button {
+        background: none;
+        border: 0;
+        outline: 0;
+      }
     }
     .my {
       margin-top: 8px;
