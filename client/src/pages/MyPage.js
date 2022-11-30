@@ -145,7 +145,7 @@ const MyPage = () => {
               </div>
               <div className="d-flex my">
                 <span className="bold">대피소명</span>
-                <span>{reservationInfo.shelterName}</span>
+                <span>{shelter.shelterName}</span>
               </div>
               <div className="d-flex my">
                 <span className="bold">예약인원</span>
