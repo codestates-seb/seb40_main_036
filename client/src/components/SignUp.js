@@ -325,7 +325,6 @@ const SignUpInput = styled.div`
     margin-top: 5px;
     margin-bottom: 10px;
   }
-<<<<<<< HEAD
   .checkNumber {
     display: inline-block;
     width: 80px;
@@ -354,9 +353,6 @@ const SignUpInput = styled.div`
     height: 56px;
     left: 583px;
     top: 694px;
-=======
-  button {
->>>>>>> 75ee8d60a358ba9fd54610ee9d6221d6ecf83adf
     color: white;
     font-weight: 600;
     width: 280px;
