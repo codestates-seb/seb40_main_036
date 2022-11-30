@@ -4,7 +4,9 @@ import Logo from './../img/SalidaLogo.png';
 import { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const Login = () => {
   // 초기값 - 이메일, 비밀번호
   const [inputId, setInputId] = useState('');
@@ -16,6 +18,7 @@ const Login = () => {
 
   const onChangeId = (e) => {
     setInputId(e.target.value);
+    console.log(new Date().getMinutes() + 1000);
   };
 
   const onChangePw = (e) => {
@@ -40,7 +43,7 @@ const Login = () => {
 
     axios
       .post(
-        '/api/member/login',
+        '/member/login',
         {
           email: inputId,
           password: inputPw,
@@ -106,6 +109,7 @@ const Login = () => {
               </div>
               <div className="msgPw">{passwordMessage}</div>
             </div>
+
             <button onClick={onClickLogin}>로그인</button>
             <div className="accountExistence">
               계정이 없으신가요? <Link to="/signup">회원가입</Link>
@@ -120,12 +124,13 @@ const Login = () => {
 export default Login;
 
 const LoginInput = styled.div`
+  padding: 20px;
+
   .loginInput {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
   }
   .idPwText {
     display: flex;
@@ -136,10 +141,12 @@ const LoginInput = styled.div`
   .idPwInput {
     width: 350px;
     height: 35px;
-    left: 571px;
-    top: 436px;
+    padding-left: 10px;
     border: 1px solid #bcbcbc;
     border-radius: 3px;
+    ${mobile} {
+      width: 300px;
+    }
   }
   .idPwBox {
     margin-bottom: 25px;
@@ -159,13 +166,15 @@ const LoginInput = styled.div`
   button {
     color: white;
     font-weight: 600;
-    width: 289px;
+    width: 280px;
     height: 50px;
-    left: 571px;
-    top: 621px;
     background: #008505;
     border-radius: 3px;
     margin-top: 10px;
+    border: none;
+    ${mobile} {
+      width: 230px;
+    }
   }
   .accountExistence {
     margin-top: 30px;
@@ -178,12 +187,16 @@ const LoginInput = styled.div`
   }
 `;
 const LoginForm = styled.div`
+  padding: 10px;
   width: 400px;
   height: 100%;
   margin: 150px auto;
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   border-radius: 5px;
+  ${mobile} {
+    width: 335px;
+  }
   .logoImg {
     margin-top: 15px;
     text-align: center;

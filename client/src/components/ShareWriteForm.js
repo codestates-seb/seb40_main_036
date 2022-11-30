@@ -12,18 +12,46 @@ const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disa
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 const ShareWriteForm = () => {
+  function imageUrlHandler() {
+    const range = this.quill.getSelection();
+    const url = prompt('이미지 주소를 넣어주세요');
+
+    if (url) {
+      // 커서위치에 imageUrl 삽입
+      this.quill.insertEmbed(range.index, 'image', url);
+    }
+  }
+
   const modules = useMemo(
     () => ({
-      toolbar: [
-        ['bold', 'italic', 'underline'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ size: ['small', false, 'large', 'huge'] }],
-        ['link', 'video'],
-        [{ color: [] }, { background: [] }],
-      ],
+      toolbar: {
+        container: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image', 'video'],
+          [{ color: [] }, { background: [] }],
+        ],
+        handlers: {
+          link: imageUrlHandler,
+        },
+      },
     }),
     []
   );
+
+  // const modules = useMemo(
+  //   () => ({
+  //     toolbar: [
+  //       ['bold', 'italic', 'underline'],
+  //       [{ list: 'ordered' }, { list: 'bullet' }],
+  //       [{ size: ['small', false, 'large', 'huge'] }],
+  //       ['link', 'image'],
+  //       [{ color: [] }, { background: [] }],
+  //     ],
+  //   }),
+  //   []
+  // );
 
   const formats = [
     'bold',
@@ -52,6 +80,7 @@ const ShareWriteForm = () => {
   // eslint-disable-next-line no-unused-vars
   const onChangeContents = (el) => {
     setContents(el);
+    console.log(el);
   };
 
   // const extractTextPattern = /(<([^>]+)>)/gi;
@@ -99,104 +128,139 @@ const ShareWriteForm = () => {
       });
   };
   return (
-    <WriteFormStyle>
-      <form className="input">
-        <div className="region">지역선택</div>
-        <DropDownStyle>
-          <DropDown className="dropStyle" onChange={handleDrop} value={drop} />
-        </DropDownStyle>
-        <div className="title">
-          <label className="titleText" htmlFor="titleWrite">
-            제목
-          </label>
-          <div className="titleInputDiv">
-            <input
-              className="titleInput"
-              type="text"
-              id="titleWrite"
-              value={title || ''}
-              onChange={onChangeTitle}
-            />
+    <Container>
+      <WriteFormStyle>
+        <form className="input">
+          <div className="regionBox">
+            <div className="region">지역선택</div>
+            <DropDown onChange={handleDrop} value={drop} />
           </div>
-        </div>
-        <div>
-          <div className="content">내용</div>
-          <EditorStyle>
-            <ReactQuill
-              className="editor"
-              modules={modules}
-              formats={formats}
-              value={contents}
-              onChange={onChangeContents}
-            />
-          </EditorStyle>
-        </div>
-      </form>
-      <div className="reCancelBox">
-        <button onClick={submit} className="registBox">
-          <div className="registInput">등록</div>
-        </button>
-        <Link to="/share" style={{ textDecoration: 'none' }}>
-          <button className="cancelBox">
-            <div className="cancelInput">취소</div>
+          <div className="title">
+            <label className="titleText" htmlFor="titleWrite">
+              제목
+            </label>
+            <div className="titleInputDiv">
+              <input
+                className="titleInput"
+                type="text"
+                id="titleWrite"
+                value={title || ''}
+                onChange={onChangeTitle}
+              />
+            </div>
+          </div>
+          <div>
+            <div className="content">내용</div>
+            <EditorStyle>
+              <ReactQuill
+                className="editor"
+                modules={modules}
+                formats={formats}
+                value={contents}
+                onChange={onChangeContents}
+              />
+            </EditorStyle>
+          </div>
+        </form>
+        <div className="reCancelBox">
+          <button onClick={submit} className="registBox">
+            <div className="registInput">등록</div>
           </button>
-        </Link>
-      </div>
-    </WriteFormStyle>
+          <Link to="/share" style={{ textDecoration: 'none' }}>
+            <button className="cancelBox">
+              <div className="cancelInput">취소</div>
+            </button>
+          </Link>
+        </div>
+      </WriteFormStyle>
+    </Container>
   );
 };
 
 export default ShareWriteForm;
 
-const WriteFormStyle = styled.div`
-  width: 1180px;
+const Container = styled.div`
+  margin: 80px auto;
+  padding: 20px 80px;
+  max-width: 1180px;
+  width: 100%;
   height: 100%;
   background: #ffffff;
   box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.25);
-  margin: 50px auto;
-
+  ${tablet} {
+    padding: 20px 40px;
+  }
+  ${mobile} {
+    padding: 20px 15px;
+  }
+`;
+const WriteFormStyle = styled.div`
   .region {
-    padding-left: 100px;
+    padding: 10px 0;
     padding-top: 60px;
     padding-bottom: 12px;
     font-weight: 400;
     font-size: 24px;
-  }
-
-  .title {
-    padding: 50px;
+    ${tablet} {
+      font-size: 20px;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      height: 2.1rem;
+    }
   }
 
   .titleText {
+    padding: 10px 0;
     position: relative;
-    top: 50%;
-    left: 4.8%;
     font-weight: 400;
     font-size: 24px;
+    ${tablet} {
+      font-size: 20px;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      height: 2.1rem;
+    }
   }
 
   .titleInputDiv {
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    margin: 10px;
   }
 
   .titleInput {
-    width: 983px;
+    width: 100%;
     height: 46px;
-    left: 228px;
-    top: 225px;
     background: #ffffff;
     border: 1px solid #d2d2d2;
     font-size: 20px;
+    ${tablet} {
+      font-size: 18px;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      height: 2.1rem;
+    }
   }
   .content {
-    padding-left: 100px;
+    padding: 10px 0;
     padding-bottom: 12px;
     font-weight: 400;
     font-size: 24px;
+    ${tablet} {
+      font-size: 20px;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      height: 2.1rem;
+    }
   }
   .reCancelBox {
     display: flex;
@@ -214,6 +278,17 @@ const WriteFormStyle = styled.div`
     background: #008505;
     border-radius: 10px;
     margin-right: 26px;
+    border: none;
+    ${tablet} {
+      font-size: 20px;
+      width: 130px;
+      height: 40px;
+    }
+    ${mobile} {
+      font-size: 16px;
+      width: 120px;
+      height: 30px;
+    }
   }
   .registInput {
     font-weight: 600;
@@ -228,6 +303,17 @@ const WriteFormStyle = styled.div`
     height: 50px;
     background: #eaeaea;
     border-radius: 10px;
+    border: #919eab;
+    ${tablet} {
+      font-size: 20px;
+      width: 130px;
+      height: 40px;
+    }
+    ${mobile} {
+      font-size: 16px;
+      width: 120px;
+      height: 30px;
+    }
   }
   .cancelInput {
     font-weight: 600;
@@ -236,13 +322,20 @@ const WriteFormStyle = styled.div`
 `;
 
 const EditorStyle = styled.div`
+  height: 300px;
+
   .editor {
     text-align: center;
-    width: 983px;
-    height: 250px;
-    top: 495px;
+    width: 100%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+    ${tablet} {
+      height: 230px;
+    }
+    ${mobile} {
+      height: 180px;
+    }
   }
   .ql-container {
     font-size: 1rem;
@@ -255,12 +348,5 @@ const EditorStyle = styled.div`
   }
   .ql-size-huge {
     font-size: 2rem;
-  }
-`;
-
-const DropDownStyle = styled.div`
-  .dropStyle {
-    width: 42px;
-    height: 4px;
   }
 `;
