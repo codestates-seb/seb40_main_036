@@ -27,7 +27,7 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=8`)
+        .get(`/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=8`)
         .then((response) => {
           console.log(response.data.data);
           console.log(drop);
@@ -51,7 +51,7 @@ function StuffList() {
     if (search.content !== undefined) {
       axios
         .get(
-          `/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=8`
+          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=8`
         )
         .then((response) => {
           console.log(response.data.data);
@@ -83,7 +83,9 @@ function StuffList() {
       // loading 상태를 true 로 바꿉니다.
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      const response = await axios.get(`/stuffQuestion?page=${pageNum}&size=8`);
+      const response = await axios.get(
+        `/api/stuffQuestion?page=${pageNum}&size=8`
+      );
       console.log(response.data);
 
       setQuestions((prev) => [...prev, ...response.data.data]);
