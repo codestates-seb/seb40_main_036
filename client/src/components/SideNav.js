@@ -8,7 +8,6 @@ const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const [memberId, setMemberId] = useState(0);
 
   useEffect(() => {
     if (localStorage.getItem('email') === null) {
@@ -17,13 +16,12 @@ const SideNav = (props) => {
       // localStorage 에 email이라는 key 값으로 저장된 값이 있다면
       // 로그인 상태 변경
       setIsLogin(true);
-      setMemberId(localStorage.getItem('memberId'));
     }
   }, []);
   const PostReservation = () => {
     axios
       .post('/api/reservation', {
-        memberId: memberId,
+        memberId: localStorage.getItem('memberId'),
         shelterId: props.shelterId,
         num: count,
       })
@@ -41,7 +39,6 @@ const SideNav = (props) => {
           }
         });
       })
-
       .catch((err) => {
         props.setopen(false);
         Swal.fire({
