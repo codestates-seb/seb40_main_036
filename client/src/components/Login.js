@@ -16,6 +16,7 @@ const Login = () => {
 
   const onChangeId = (e) => {
     setInputId(e.target.value);
+    console.log(new Date().getMinutes() + 1000);
   };
 
   const onChangePw = (e) => {

@@ -12,18 +12,46 @@ const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disa
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 const ShareWriteForm = () => {
+  function imageUrlHandler() {
+    const range = this.quill.getSelection();
+    const url = prompt('이미지 주소를 넣어주세요');
+
+    if (url) {
+      // 커서위치에 imageUrl 삽입
+      this.quill.insertEmbed(range.index, 'image', url);
+    }
+  }
+
   const modules = useMemo(
     () => ({
-      toolbar: [
-        ['bold', 'italic', 'underline'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ size: ['small', false, 'large', 'huge'] }],
-        ['link', 'video'],
-        [{ color: [] }, { background: [] }],
-      ],
+      toolbar: {
+        container: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image', 'video'],
+          [{ color: [] }, { background: [] }],
+        ],
+        handlers: {
+          link: imageUrlHandler,
+        },
+      },
     }),
     []
   );
+
+  // const modules = useMemo(
+  //   () => ({
+  //     toolbar: [
+  //       ['bold', 'italic', 'underline'],
+  //       [{ list: 'ordered' }, { list: 'bullet' }],
+  //       [{ size: ['small', false, 'large', 'huge'] }],
+  //       ['link', 'image'],
+  //       [{ color: [] }, { background: [] }],
+  //     ],
+  //   }),
+  //   []
+  // );
 
   const formats = [
     'bold',
@@ -52,6 +80,7 @@ const ShareWriteForm = () => {
   // eslint-disable-next-line no-unused-vars
   const onChangeContents = (el) => {
     setContents(el);
+    console.log(el);
   };
 
   // const extractTextPattern = /(<([^>]+)>)/gi;
