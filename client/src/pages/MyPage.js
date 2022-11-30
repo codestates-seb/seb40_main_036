@@ -18,7 +18,7 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/reservation/member/' + localStorage.getItem('memberId'))
+      .get('/api/reservation/member/' + localStorage.getItem('memberId'))
       .then((res) => {
         console.log(res);
         setReservationInfo(res.data.data);
@@ -27,7 +27,9 @@ const MyPage = () => {
       .catch(() => setErr(true));
   };
   const fetchShelter = () => {
-    axios.get('/shelter/' + shelterId).then((res) => setShelter(res.data.data));
+    axios
+      .get('/api/shelter/' + shelterId)
+      .then((res) => setShelter(res.data.data));
   };
   const deleteReservation = () => {
     Swal.fire({
