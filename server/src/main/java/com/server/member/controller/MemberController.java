@@ -2,6 +2,7 @@ package com.server.member.controller;
 
 import com.server.member.dto.MemberEmailDto;
 import com.server.member.dto.MemberLoginDto;
+import com.server.member.dto.MemberPhoneDto;
 import com.server.member.dto.MemberPostDto;
 import com.server.member.entity.Email;
 import com.server.member.entity.Member;
@@ -47,6 +48,11 @@ public class MemberController {
     @PostMapping("/join/checkEmail")
     public void postEmail(@RequestBody @Valid MemberEmailDto memberEmailDto){
         memberService.checkEmail(memberMapper.memberEmailDtoToMember(memberEmailDto));
+    }
+
+    @PostMapping("/join/checkPhone")
+    public void postPhone(@RequestBody @Valid MemberPhoneDto memberPhoneDto){
+        memberService.checkPhone(memberMapper.memberPhoneDtoToMember(memberPhoneDto));
     }
 
     @GetMapping("/{memberId}")

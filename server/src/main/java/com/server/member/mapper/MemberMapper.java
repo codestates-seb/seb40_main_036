@@ -4,6 +4,7 @@ package com.server.member.mapper;
 import com.server.member.dto.*;
 import com.server.member.entity.Email;
 import com.server.member.entity.Member;
+import com.server.member.entity.Phone;
 import org.mapstruct.Mapper;
 
 import java.util.List;
@@ -15,11 +16,11 @@ public interface MemberMapper {
 
     Email memberEmailDtoToMember(MemberEmailDto memberEmailDto);
 
+    Phone memberPhoneDtoToMember(MemberPhoneDto memberPhoneDto);
+
     Member memberLoginDtoToMember(MemberLoginDto memberLoginDto);
 
     MemberResponseDto memberToMemberResponseDto(Member member);
-
-    EmailResponseDto emailToEmailResponseDto(Email email);
 
     List <MemberResponseDto> membersToMemberResponseDtos(List<Member> members);
 

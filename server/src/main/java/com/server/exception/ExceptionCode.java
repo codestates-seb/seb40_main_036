@@ -15,8 +15,8 @@ public enum ExceptionCode {
     ShelterAnswer_NOT_FOUND(404, "ShelterAnswer not found"),
 
     MEMBER_EXISTS(409, "Member exists"),
-    EMAIL_EXISTS(409,"이미 가입된 이메일이 있습니다."),
-    PHONE_EXISTS(409,"이미 가입된 휴대폰 번호가 있습니다."),
+    EMAIL_EXISTS(409,"이미 가입된 이메일 입니다."),
+    PHONE_EXISTS(409,"이미 가입된 휴대폰 번호입니다."),
 
     SHELTER_EXISTS(409, "Shelter exists"),
     QUESTION_EXISTS(409, "Question exists"),
@@ -28,7 +28,8 @@ public enum ExceptionCode {
     SHELTERQUESTION_EXISTS(409, "ShelterQuestion exists"),
     SHELTERANSWER_EXISTS(409, "ShelterAnswer exists"),
 
-    EMAIL_NOT_EXISTS(200, "사용 가능한 이메일 입니다.");
+    EMAIL_NOT_EXISTS(200, "사용 가능한 이메일 입니다."),
+    PHONE_NOT_EXISTS(200, "사용 가능한 휴대폰 번호 입니다.");
 
 
     @Getter

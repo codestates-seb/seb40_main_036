@@ -6,6 +6,7 @@ import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.entity.Email;
 import com.server.member.entity.Member;
+import com.server.member.entity.Phone;
 import com.server.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -50,6 +51,14 @@ public class MemberService {
             throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
         }
         throw new BusinessLogicException(ExceptionCode.EMAIL_NOT_EXISTS);
+    }
+
+    public void checkPhone(Phone phone){
+        Member phoon =memberRepository.findByPhone(phone.getPhone());
+        if(phoon!=null){
+            throw new BusinessLogicException(ExceptionCode.PHONE_EXISTS);
+        }
+        throw new BusinessLogicException(ExceptionCode.PHONE_NOT_EXISTS);
     }
 
 
