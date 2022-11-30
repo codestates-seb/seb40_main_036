@@ -6,7 +6,7 @@ import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { ImageResize } from 'quill-image-resize-module';
+import ImageResize from '@looop/quill-image-resize-module-react';
 
 Quill.register('modules/ImageResize', ImageResize);
 
@@ -38,7 +38,7 @@ const ShareWriteForm = () => {
         handlers: {
           link: imageUrlHandler,
         },
-        ImageResize: { parchment: Quill.import('parchment') },
+        ImageResize: { modules: ['Resize'] },
       },
     }),
     []
