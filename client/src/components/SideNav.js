@@ -9,7 +9,7 @@ const SideNav = (props) => {
   const [hide, sethide] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [memberId, setMemberId] = useState(0);
-
+  console.log(memberId, props.shelterId, count);
   useEffect(() => {
     if (localStorage.getItem('email') === null) {
       // localStorage 에 email이라는 key 값으로 저장된 값이 없다면
