@@ -40,7 +40,7 @@ const Login = () => {
 
     axios
       .post(
-        '/api/member/login',
+        '/member/login',
         {
           email: inputId,
           password: inputPw,
@@ -106,6 +106,7 @@ const Login = () => {
               </div>
               <div className="msgPw">{passwordMessage}</div>
             </div>
+
             <button onClick={onClickLogin}>로그인</button>
             <div className="accountExistence">
               계정이 없으신가요? <Link to="/signup">회원가입</Link>

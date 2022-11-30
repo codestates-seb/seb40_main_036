@@ -22,7 +22,7 @@ const SideNav = (props) => {
   }, []);
   const PostReservation = () => {
     axios
-      .post('/api/reservation', {
+      .post('/reservation', {
         memberId: memberId,
         shelterId: props.shelterId,
         num: count,

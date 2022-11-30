@@ -47,7 +47,7 @@ const StuffWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/api/stuffQuestion/${QuestionId}`);
+        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.stuffQuestionTitle);
         setContent(response.data.data.stuffQuestionContent);
@@ -94,7 +94,7 @@ const StuffWriteUpdate = () => {
       });
     }
     axios
-      .patch(`/api/stuffQuestion/${QuestionId}`, {
+      .patch(`/stuffQuestion/${QuestionId}`, {
         memberId: localStorage.getItem('memberId'),
         stuffQuestionTitle: title,
         stuffQuestionContent: content,
