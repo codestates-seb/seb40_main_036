@@ -191,6 +191,8 @@ const MypageWrapper = styled.div`
         padding: 8px 16px;
         border: 0;
         outline: 0;
+        border-radius: 0.25em;
+        color: white;
       }
     }
     .my {
