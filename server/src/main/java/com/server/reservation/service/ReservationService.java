@@ -2,6 +2,7 @@ package com.server.reservation.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.service.MemberService;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.repository.ReservationRepository;
@@ -37,16 +38,22 @@ public class ReservationService {
 
         Reservation reservedPerson=reservationRepository.findByMemberId(reservation.getMemberId());
 
-//        if(reservedPerson!=null){
-//            updateReservation(reservedPerson);  // 기존에 예약한 사람이면 업데이트 메서드로 이동
-//        }
-
         // 회원이 존재하는지 확인
         memberService.findVerifiedMember(reservation.getMemberId()); // 있으면 넘어가고 없으면 예외문구뜸
 
         // 대피소가 존재하는지 확인
         shelterService.findVerifiedShelter(reservation.getShelterId()); // 있으면 넘어가고 없으면 예외문구뜸
 
+//        Member mem = memberRepository.findByEmail(member.getEmail());
+//        if(mem!=null){ // 있으면
+//            throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
+//        }
+        // reservationRepository 안에 저장된 memberId가 있는지 확인
+        // 있으면 이미 예약한 대피소가 있습니다. 없으면 예약 고ㄱㄱ
+        Reservation mem =reservationRepository.findByMemberId(reservation.getMemberId());
+        if(mem!=null) { // 있으면
+            throw new BusinessLogicException(ExceptionCode.RESERVATION_EXISTS);
+        }
         reservation.setReservationCreated(LocalDate.now());
 
         // reservationId가 reservationInfo에 넣어져야하니 save가 먼저 진행되어야함

@@ -21,7 +21,7 @@ public enum ExceptionCode {
     SHELTER_EXISTS(409, "Shelter exists"),
     QUESTION_EXISTS(409, "Question exists"),
     ANSWER_EXISTS(409, "Answer exists"),
-    RESERVATION_EXISTS(409, "Reservation exists"),
+    RESERVATION_EXISTS(409, "이미 예약한 대피소가 있습니다."),
     RESERVATIONINFO_EXISTS(409, "ReservationInfo exists"),
     STUFFQUESTION_EXISTS(409, "StuffQuestion exists"),
     STUFFANSWER_EXISTS(409, "StuffAnswer exists"),

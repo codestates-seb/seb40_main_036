@@ -1,12 +1,13 @@
 package com.server.member.mapper;
 
-import com.server.member.dto.EmailResponseDto;
 import com.server.member.dto.MemberEmailDto;
 import com.server.member.dto.MemberLoginDto;
+import com.server.member.dto.MemberPhoneDto;
 import com.server.member.dto.MemberPostDto;
 import com.server.member.dto.MemberResponseDto;
 import com.server.member.entity.Email;
 import com.server.member.entity.Member;
+import com.server.member.entity.Phone;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-30T02:03:55+0900",
+    date = "2022-11-30T13:08:49+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -50,6 +51,19 @@ public class MemberMapperImpl implements MemberMapper {
     }
 
     @Override
+    public Phone memberPhoneDtoToMember(MemberPhoneDto memberPhoneDto) {
+        if ( memberPhoneDto == null ) {
+            return null;
+        }
+
+        Phone phone = new Phone();
+
+        phone.setPhone( memberPhoneDto.getPhone() );
+
+        return phone;
+    }
+
+    @Override
     public Member memberLoginDtoToMember(MemberLoginDto memberLoginDto) {
         if ( memberLoginDto == null ) {
             return null;
@@ -80,19 +94,6 @@ public class MemberMapperImpl implements MemberMapper {
         memberResponseDto.token( member.getToken() );
 
         return memberResponseDto.build();
-    }
-
-    @Override
-    public EmailResponseDto emailToEmailResponseDto(Email email) {
-        if ( email == null ) {
-            return null;
-        }
-
-        EmailResponseDto.EmailResponseDtoBuilder emailResponseDto = EmailResponseDto.builder();
-
-        emailResponseDto.email( email.getEmail() );
-
-        return emailResponseDto.build();
     }
 
     @Override

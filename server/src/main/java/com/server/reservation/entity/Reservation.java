@@ -34,8 +34,6 @@ public class Reservation {
 
     private LocalDate reservationCreated;
 
-//    private LocalDate reservationModified;
-
     @OneToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)
     private Member member;

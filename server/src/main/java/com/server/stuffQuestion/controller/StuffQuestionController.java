@@ -94,22 +94,23 @@ public class StuffQuestionController {
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
     }
 
-    @GetMapping("/search/tag/{word}")
-    public ResponseEntity searchTagStuffQuestion(@PathVariable("word") String word){
-        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTagStuffQuestion(word);
-
-        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
-    }
-
-//    @GetMapping
-//    public ResponseEntity getStuffQuestionsTags(@Positive @RequestParam int page,
-//                                            @Positive @RequestParam int size) {
-//        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-//        List<stuffQuestionList> stuffQuestion = pageStuffQuestion.getContent();
+//    @GetMapping("/search/tag/{word}")
+//    public ResponseEntity searchTagStuffQuestion(@PathVariable("word") String word){
+//        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTagStuffQuestion(word);
 //
-//        return new ResponseEntity<>(
-//                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestion), pageStuffQuestion), HttpStatus.OK);
+//        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
 //    }
+
+    @GetMapping("/search/tag/{word}")
+    public ResponseEntity getStuffQuestionsTags(@PathVariable("word") String word,
+                                                @Positive @RequestParam int page,
+                                                @Positive @RequestParam int size) {
+        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
+        List<StuffQuestion> stuffQuestionTags = pageStuffQuestion.getContent();
+
+        return new ResponseEntity<>(
+                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTags), pageStuffQuestion), HttpStatus.OK);
+    }
 
     @GetMapping("/stuffQuestions")
     public ResponseEntity getAllStuffQuestions(){
@@ -117,7 +118,6 @@ public class StuffQuestionController {
 
         return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
     }
-
 
 
     @GetMapping
