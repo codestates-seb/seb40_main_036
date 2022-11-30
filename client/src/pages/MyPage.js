@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const MyPage = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [memberId, setMemberId] = useState(1);
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -31,15 +31,20 @@ const MyPage = () => {
       .get('/api/shelter/' + shelterId)
       .then((res) => setShelter(res.data.data));
   };
-  if (localStorage.getItem('email') !== null) {
-    setIsLogin(true);
-    setMemberId(localStorage.getItem('memberId'));
-    setUserName(localStorage.getItem('name'));
-    setUserEmail(localStorage.getItem('email'));
-  }
+
   useEffect(() => {
+    if (localStorage.getItem('email') !== null) {
+      setIsLogin(true);
+      setMemberId(localStorage.getItem('memberId'));
+      setUserName(localStorage.getItem('name'));
+      setUserEmail(localStorage.getItem('email'));
+    } else {
+      setIsLogin(false);
+    }
     fetchUser();
-    !isLogin &&
+  }, []);
+  useEffect(() => {
+    if (isLogin === false) {
       Swal.fire({
         icon: 'warning',
         title: '로그인 오류',
@@ -51,7 +56,8 @@ const MyPage = () => {
           window.location.href = '/';
         }
       });
-  }, []);
+    }
+  }, [isLogin]);
   useEffect(() => {
     fetchShelter();
   }, [reservationInfo]);
