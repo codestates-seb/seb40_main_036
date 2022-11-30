@@ -28,11 +28,9 @@ const MyPage = () => {
       .catch(() => setErr(true));
   };
   const fetchShelter = () => {
-    if (shelter > 0) {
-      axios
-        .get('/api/shelter/' + shelterId)
-        .then((res) => setShelter(res.data.data));
-    }
+    axios
+      .get('/api/shelter/' + shelterId)
+      .then((res) => setShelter(res.data.data));
   };
   const deleteReservation = () => {
     Swal.fire({
@@ -147,7 +145,7 @@ const MyPage = () => {
               </div>
               <div className="d-flex my">
                 <span className="bold">대피소명</span>
-                <span>{shelter.shelterName}</span>
+                <span>{reservationInfo.shelterName}</span>
               </div>
               <div className="d-flex my">
                 <span className="bold">예약인원</span>
