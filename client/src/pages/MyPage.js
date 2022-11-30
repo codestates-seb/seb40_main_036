@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const MyPage = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [memberId, setMemberId] = useState(1);
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
