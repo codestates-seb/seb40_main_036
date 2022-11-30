@@ -100,9 +100,6 @@ public class StuffQuestionService {
         return stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(word);
     }
 
-    public Page<StuffQuestion> findStuffQuestionTags(int page, int size){ // 페이지네이션 해서 tag 정보들 가져옴
-        return (Page<StuffQuestion>) stuffQuestionRepository.findByLocationTagContainingOrderByStuffQuestionIdDesc(String.valueOf(PageRequest.of(page,size)));
-    }
 
     public Page<StuffQuestion> findStuffQuestions(int page, int size){
             return stuffQuestionRepository.findAll(PageRequest.of(page,size,

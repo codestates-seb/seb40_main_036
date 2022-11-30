@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -73,43 +74,49 @@ public class StuffQuestionController {
     }
 
     @GetMapping("/search/title/{word}")
-    public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word){
-        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTitleStuffQuestion(word);
+    public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word,
+                                                   @Positive @RequestParam int page,
+                                                   @Positive @RequestParam int size){
+        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
+        List<StuffQuestion> stuffQuestionTitle=stuffQuestionService.searchTitleStuffQuestion(word);
 
-        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList), HttpStatus.OK);
+        return new ResponseEntity<>(
+                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTitle),pageStuffQuestion), HttpStatus.OK);
     }
 
 
     @GetMapping("/search/name/{word}")
-    public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word){
-        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchNameStuffQuestion(word);
+    public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word,
+                                                  @Positive @RequestParam int page,
+                                                  @Positive @RequestParam int size){
+        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1,size);
+        List<StuffQuestion> stuffQuestionName = pageStuffQuestion.getContent();
 
-        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
+        return new ResponseEntity<>(
+                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionName),pageStuffQuestion), HttpStatus.OK);
     }
 
     @GetMapping("/search/content/{word}")
-    public ResponseEntity searchContentStuffQuestion(@PathVariable("word") String word){
-        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchContentStuffQuestion(word);
+    public ResponseEntity searchContentStuffQuestion(@PathVariable("word") String word,
+                                                     @Positive @RequestParam int page,
+                                                     @Positive @RequestParam int size){
+        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
+        List<StuffQuestion> stuffQuestionContent=pageStuffQuestion.getContent();
 
-        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
+        return new ResponseEntity<>(
+                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionContent),pageStuffQuestion), HttpStatus.OK);
     }
 
-//    @GetMapping("/search/tag/{word}")
-//    public ResponseEntity searchTagStuffQuestion(@PathVariable("word") String word){
-//        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTagStuffQuestion(word);
-//
-//        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
-//    }
 
     @GetMapping("/search/tag/{word}")
-    public ResponseEntity getStuffQuestionsTags(@PathVariable("word") String word,
+    public ResponseEntity searchTagStuffQuestion(@PathVariable("word") String word,
                                                 @Positive @RequestParam int page,
                                                 @Positive @RequestParam int size) {
         Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionTags = pageStuffQuestion.getContent();
+        List<StuffQuestion> stuffQuestionTag = pageStuffQuestion.getContent();
 
         return new ResponseEntity<>(
-                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTags), pageStuffQuestion), HttpStatus.OK);
+                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTag), pageStuffQuestion), HttpStatus.OK);
     }
 
     @GetMapping("/stuffQuestions")

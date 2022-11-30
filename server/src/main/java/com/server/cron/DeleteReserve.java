@@ -26,6 +26,7 @@ public class DeleteReserve {
     @Scheduled(cron = "0 0 0/1 * * *")
     public void run(){
         reservationRepository.deleteAll();
+
         List<ReservationInfo> reservationInfoList=reservationInfoRepository.findAll();
         for(ReservationInfo reservationInfo:reservationInfoList){
             reservationInfo.setReservedNum(0); // 지우지말고 0으로 set
