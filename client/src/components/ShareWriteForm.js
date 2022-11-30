@@ -67,23 +67,31 @@ const ShareWriteForm = () => {
 
   const submit = () => {
     if (drop === '') {
-      return Swal.fire('지역을 선택하세요');
+      return Swal.fire({
+        title: '지역을 선택하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (title === '') {
-      return Swal.fire('제목을 입력하세요');
+      return Swal.fire({
+        title: '제목을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     } else if (contents === '' || contents === '<p><br></p>') {
-      return Swal.fire('내용을 입력하세요');
+      return Swal.fire({
+        title: '내용을 입력하세요',
+        confirmButtonColor: '#008505',
+      });
     }
     axios
-      .post(`/api/question/`, {
+      .post(`/api/question`, {
         memberId: localStorage.getItem('memberId'),
-        name: localStorage.getItem('name'),
         questionTitle: title,
         questionContent: contents,
         locationTag: drop,
       })
       .then((response) => {
         console.log(response);
-        navigate('/share');
+        navigate(`/share/${response.data.questionId}`);
       })
       .catch((error) => {
         // Handle error.
@@ -235,6 +243,18 @@ const EditorStyle = styled.div`
     top: 495px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .ql-container {
+    font-size: 1rem;
+  }
+  .ql-size-small {
+    font-size: 0.76rem;
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+  }
+  .ql-size-huge {
+    font-size: 2rem;
   }
 `;
 

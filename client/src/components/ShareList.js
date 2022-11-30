@@ -1,12 +1,13 @@
 import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ShareListContents from './ShareListContents';
-import { Link } from 'react-router-dom';
 import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { DotSpinner } from '@uiball/loaders';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -61,6 +62,20 @@ function ShareList() {
     window.scrollTo(0, 0);
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
+  };
+
+  // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
+  const handleAskBtnClick = () => {
+    if (localStorage.getItem('email') !== null) {
+      window.location.href = '/shareWriteForm';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      }).then(() => (window.location.href = '/login'));
+    }
   };
 
   useEffect(() => {
@@ -136,12 +151,10 @@ function ShareList() {
             <option value="20">20개</option>
             <option value="30">30개</option>
           </select>
-          <Link to="/shareWriteForm">
-            <button className="writing">
-              <FaPencilAlt />
-              글쓰기
-            </button>
-          </Link>
+          <button className="writing" onClick={handleAskBtnClick}>
+            <FaPencilAlt />
+            글쓰기
+          </button>
         </Row>
         <PaginationBox>
           <Pagination
