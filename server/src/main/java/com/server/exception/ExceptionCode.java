@@ -7,7 +7,7 @@ public enum ExceptionCode {
     Question_NOT_FOUND(404, "Question not found"),
     Answer_NOT_FOUND(404, "Answer not found"),
     Shelter_NOT_FOUND(404, "Shelter not found"),
-    Reservation_NOT_FOUND(404, "Reservation not found"),
+    Reservation_NOT_FOUND(404, "예약이 없습니다."),
     ReservationInfo_NOT_FOUND(404, "ReservationInfo not found"),
     StuffAnswer_NOT_FOUND(404, "StuffAnswer not found"),
     StuffQuestion_NOT_FOUND(404, "StuffQuestion not found"),
