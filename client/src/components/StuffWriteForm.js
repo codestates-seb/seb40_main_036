@@ -88,7 +88,7 @@ const StuffWriteForm = () => {
       })
       .then((response) => {
         console.log(response);
-        navigate(`/stuffList/${response.data.stuffQuestionId}`);
+        navigate(`/stuffLook/${response.data.stuffQuestionId}`);
       })
       .catch((error) => {
         // Handle error.
