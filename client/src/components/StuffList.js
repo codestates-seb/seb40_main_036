@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import StuffListContents from './StuffListContents';
 import CityDown from './CityDown';
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 // import InfiniteScroll from 'react-infinite-scroller';
@@ -18,7 +18,7 @@ function StuffList() {
   const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [totalPage, setTotalPage] = useState(0);
+  const [totalPage, setTotalPage] = useState(1);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
@@ -27,7 +27,7 @@ function StuffList() {
   const handleTagSearchButton = () => {
     if (drop !== undefined) {
       axios
-        .get(`/stuffQuestion/search/tag/${drop}?page=1&size=10 `)
+        .get(`/stuffQuestion/search/tag/${drop}`)
         .then((response) => {
           console.log(response.data);
           setQuestions(response.data);
@@ -39,6 +39,7 @@ function StuffList() {
             }).then(() => {
               window.location.reload();
             });
+            setLoading(false);
           }
         })
         .catch((err) => console.log(err));
@@ -73,7 +74,7 @@ function StuffList() {
       handleSearchButton();
     }
   };
-  const fetchQustion = useCallback(async () => {
+  const fetchQustion = async (pageNum) => {
     try {
       console.log('불러오기');
       // loading 상태를 true 로 바꿉니다.
@@ -83,13 +84,14 @@ function StuffList() {
         `/stuffQuestion?page=${pageNum}&size=15`
       );
       console.log(response.data);
+
       setQuestions((prev) => [...prev, ...response.data.data]);
       setTotalPage(response.data.pageInfo.totalPages);
     } catch (e) {
       setError(e);
     }
     setLoading(false);
-  }, [pageNum]);
+  };
   console.log(totalPage);
   console.log(pageNum);
   console.log(questions.length);
@@ -119,8 +121,18 @@ function StuffList() {
   };
 
   useEffect(() => {
-    fetchQustion();
+    if (totalPage >= pageNum) {
+      fetchQustion(pageNum);
+    }
   }, [pageNum]);
+
+  // useEffect(() => {
+  //   if (questions.length >= 15) {
+  //     setLoading(true);
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // });
 
   useEffect(() => {
     let observer;
@@ -207,7 +219,7 @@ function StuffList() {
             />
           ))}
           <Loader>
-            {totalPage > pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
+            {totalPage >= pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
             {loading ? (
               <DotSpinner size={80} speed={0.9} color="#008505" />
             ) : null}
