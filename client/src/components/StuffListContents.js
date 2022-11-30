@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
-import NoImage from './../img/NoImage.png';
+import NoImage from './../img/noImage.png';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import Parser from 'html-react-parser';
@@ -19,9 +19,9 @@ function EquipmentContents({
     <Container>
       <ContentsList>
         <ImageContainer>
-          <div className="imageBox">
+          <Link to={`/stuffLook/${id}`} className="imageBox">
             <img src={NoImage} alt="NoImage" />
-          </div>
+          </Link>
         </ImageContainer>
         <Header>
           <div className="tagContainer">
@@ -70,11 +70,17 @@ const ContentsList = styled.div`
     transform: translateY(-5px);
   }
 `;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  padding: 15px 15px 0 15px;
+  img {
+    width: 100%;
+    border-radius: 3px;
+  }
+`;
 const Header = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px 15px 0 15px;
+  padding: 10px 15px 0 15px;
   .tag {
     margin: 0px 0px 2.5px;
     align-items: center;
