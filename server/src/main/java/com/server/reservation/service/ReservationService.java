@@ -109,7 +109,19 @@ public class ReservationService {
         return findVerifiedReservation(reservationId);
     }
 
-    public Reservation findMemberReservation(long memberId){return findVerifiedReservation(memberId);}
+    public Reservation findMemberReservation(long memberId){
+        return findVerifiedMemberReservation(memberId);
+    }
+
+    public Reservation findVerifiedMemberReservation(long memberId){
+        Reservation member=
+                reservationRepository.findByMemberId(memberId);
+
+        if(member==null) { // 없으면
+            throw new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND);
+        }
+        return reservationRepository.findByMemberId(memberId);
+    }
 
     public Page<Reservation> findReservations(int page, int size){
         return reservationRepository.findAll(PageRequest.of(page,size,

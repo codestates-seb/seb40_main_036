@@ -73,47 +73,39 @@ public class StuffQuestionController {
 
     }
 
-    @GetMapping("/search/title/{word}")
-    public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word,
-                                                   @Positive @RequestParam int page,
-                                                   @Positive @RequestParam int size){
-        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionTitle=stuffQuestionService.searchTitleStuffQuestion(word);
+    @GetMapping("/search/title/{word}") // 리스트로 불러와짐
+    public ResponseEntity searchTitleStuffQuestion(@PathVariable("word") String word){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchTitleStuffQuestion(word);
 
-        return new ResponseEntity<>(
-                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTitle),pageStuffQuestion), HttpStatus.OK);
+        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList), HttpStatus.OK);
     }
 
 
-    @GetMapping("/search/name/{word}")
-    public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word,
-                                                  @Positive @RequestParam int page,
-                                                  @Positive @RequestParam int size){
-        Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1,size);
-        List<StuffQuestion> stuffQuestionName = pageStuffQuestion.getContent();
+    @GetMapping("/search/name/{word}") // 리스트로 불러와짐
+    public ResponseEntity searchNameStuffQuestion(@PathVariable("word") String word){
+        List<StuffQuestion> stuffQuestionList=stuffQuestionService.searchNameStuffQuestion(word);
 
-        return new ResponseEntity<>(
-                new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionName),pageStuffQuestion), HttpStatus.OK);
+        return new ResponseEntity<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionList),HttpStatus.OK);
     }
 
-    @GetMapping("/search/content/{word}")
+    @GetMapping("/search/content/{word}") // 페이지네이션은 되는데 입력한 단어 기준으로 안뽑아와짐
     public ResponseEntity searchContentStuffQuestion(@PathVariable("word") String word,
                                                      @Positive @RequestParam int page,
                                                      @Positive @RequestParam int size){
         Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionContent=pageStuffQuestion.getContent();
+        List<StuffQuestion> stuffQuestionContent=pageStuffQuestion.getContent();// 페이지네이션은 되는데 단어는 안뽑아와짐
 
         return new ResponseEntity<>(
                 new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionContent),pageStuffQuestion), HttpStatus.OK);
     }
 
 
-    @GetMapping("/search/tag/{word}")
+    @GetMapping("/search/tag/{word}") // 단어는 잘 봅아와지는데 페이지네이션이 안됨
     public ResponseEntity searchTagStuffQuestion(@PathVariable("word") String word,
                                                 @Positive @RequestParam int page,
                                                 @Positive @RequestParam int size) {
         Page<StuffQuestion> pageStuffQuestion = stuffQuestionService.findStuffQuestions(page-1, size);
-        List<StuffQuestion> stuffQuestionTag = pageStuffQuestion.getContent();
+        List<StuffQuestion> stuffQuestionTag=stuffQuestionService.searchTagStuffQuestion(word); // 단어는 잘 뽑아오는데 페이지네이션이 안됨
 
         return new ResponseEntity<>(
                 new MultiResponseDto<>(stuffQuestionMapper.stuffQuestionsToStuffQuestionResponseDtos(stuffQuestionTag), pageStuffQuestion), HttpStatus.OK);
