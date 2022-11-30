@@ -120,7 +120,7 @@ const ShareWriteForm = () => {
       })
       .then((response) => {
         console.log(response);
-        navigate(`/share/${response.data.questionId}`);
+        navigate(`/api/share/${response.data.questionId}`);
       })
       .catch((error) => {
         // Handle error.

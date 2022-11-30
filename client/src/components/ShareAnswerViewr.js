@@ -31,7 +31,7 @@ function ShareAnswerViewr({
       };
       console.log(data);
       axios
-        .patch(`/answer/${id}`, data)
+        .patch(`/api/answer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -82,7 +82,7 @@ function ShareAnswerViewr({
       ) {
         setTimeout(() => {
           axios
-            .delete(`/answer/${id}`)
+            .delete(`/api/answer/${id}`)
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);

@@ -30,7 +30,7 @@ function ReviewAnswerPost() {
       };
       console.log(data);
       axios
-        .post(`/shelterAnswer`, data)
+        .post(`/api/shelterAnswer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {
