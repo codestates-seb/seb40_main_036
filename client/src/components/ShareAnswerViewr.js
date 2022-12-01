@@ -34,13 +34,10 @@ function ShareAnswerViewr({
       };
       console.log(data);
       axios
-<<<<<<< HEAD
         .patch(`/api/answer/${id}`, data, {
           headers: headers,
         })
-=======
-        .patch(`/api/answer/${id}`, data)
->>>>>>> 030e32d718a0aceef219951811f574648c4a72b4
+
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -95,13 +92,9 @@ function ShareAnswerViewr({
             token: `${localStorage.getItem('token')}`,
           };
           axios
-<<<<<<< HEAD
             .delete(`/api/answer/${id}`, {
               headers: headers,
             })
-=======
-            .delete(`/api/answer/${id}`)
->>>>>>> 030e32d718a0aceef219951811f574648c4a72b4
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);
