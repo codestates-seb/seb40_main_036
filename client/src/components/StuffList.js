@@ -30,7 +30,7 @@ function StuffList() {
   const fetchQustion = async (pageNum) => {
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 600));
       const response = await axios.get(
         `/api/stuffQuestion?page=${pageNum}&size=10`
       );
