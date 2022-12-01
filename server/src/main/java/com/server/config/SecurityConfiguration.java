@@ -70,6 +70,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/reservationInfo").permitAll()
                 .antMatchers(HttpMethod.GET,"/reservationInfo/**").permitAll()
 
+                // email, phone 가입 가능 여부 확인 접근 허용
+                .antMatchers(HttpMethod.POST,"/member/join/checkEmail").permitAll()
+                .antMatchers(HttpMethod.POST,"/member/join/checkPhone").permitAll()
+
                 .antMatchers("/**").authenticated(); // 나머지는 인증이 필요
 
     }
