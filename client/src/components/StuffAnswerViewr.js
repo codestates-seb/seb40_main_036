@@ -34,7 +34,7 @@ function StuffAnswerViewr({
       };
       console.log(data);
       axios
-        .patch(`/stuffAnswer/${id}`, data, {
+        .patch(`/api/stuffAnswer/${id}`, data, {
           headers: headers,
         })
         .then(() => setModal(false), window.location.reload())
@@ -90,7 +90,7 @@ function StuffAnswerViewr({
             token: `${localStorage.getItem('token')}`,
           };
           axios
-            .delete(`/stuffAnswer/${id}`, {
+            .delete(`/api/stuffAnswer/${id}`, {
               headers: headers,
             })
             .then(() => window.location.reload())

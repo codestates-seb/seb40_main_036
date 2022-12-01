@@ -33,7 +33,7 @@ function stuffAnswerPost() {
       };
       console.log(data);
       axios
-        .post(`/stuffAnswer`, data, {
+        .post(`/api/stuffAnswer`, data, {
           headers: headers,
         })
         .then(() => window.location.reload())

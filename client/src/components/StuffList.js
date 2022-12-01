@@ -32,7 +32,7 @@ function StuffList() {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
-        `/stuffQuestion?page=${pageNum}&size=10`
+        `/api/stuffQuestion?page=${pageNum}&size=10`
       );
       console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
@@ -86,7 +86,7 @@ function StuffList() {
       setLoading(true);
       if (drop !== undefined) {
         const response = await axios.get(
-          `/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
+          `/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
         );
         console.log(response.data);
         console.log(drop);
@@ -113,7 +113,7 @@ function StuffList() {
       setLoading(true);
       axios
         .get(
-          `/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=10`
+          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=10`
         )
         .then((response) => {
           console.log(response.data.data);
