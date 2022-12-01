@@ -172,7 +172,7 @@ const ShareWriteUpdate = () => {
           <button onClick={update} className="registBox">
             <div className="registInput">수정</div>
           </button>
-          <Link to="/share" style={{ textDecoration: 'none' }}>
+          <Link to={`/share/${QuestionId}`} style={{ textDecoration: 'none' }}>
             <button className="cancelBox">
               <div className="cancelInput">취소</div>
             </button>
