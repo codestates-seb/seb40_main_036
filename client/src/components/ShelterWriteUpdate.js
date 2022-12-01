@@ -168,7 +168,7 @@ const ShelterWriteUpdate = () => {
           <button onClick={update} className="registBox">
             <div className="registInput">수정</div>
           </button>
-          <Link to="/review" style={{ textDecoration: 'none' }}>
+          <Link to={`/review/${QuestionId}`} style={{ textDecoration: 'none' }}>
             <button className="cancelBox">
               <div className="cancelInput">취소</div>
             </button>

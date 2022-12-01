@@ -13,12 +13,16 @@ module.exports = function (app) {
       '/stuffAnswer',
       '/shelterQuestion',
       '/shelterAnswer',
+      '/api',
     ],
     createProxyMiddleware({
       target:
         'http://ec2-43-201-62-209.ap-northeast-2.compute.amazonaws.com:8080',
 
       changeOrigin: true,
+      pathRewrite: {
+        '^/api': '', // URL ^/api -> 공백 변경
+      },
     })
   );
 };
