@@ -20,11 +20,17 @@ const SideNav = (props) => {
   }, []);
   const PostReservation = () => {
     axios
-      .post('/api/reservation', {
-        memberId: localStorage.getItem('memberId'),
-        shelterId: props.shelterId,
-        num: count,
-      })
+      .post(
+        '/api/reservation',
+        {
+          memberId: localStorage.getItem('memberId'),
+          shelterId: props.shelterId,
+          num: count,
+        },
+        {
+          headers: { token: localStorage.getItem('token') },
+        }
+      )
       .then((res) => console.log(res))
       .then(() => {
         props.setopen(false);
