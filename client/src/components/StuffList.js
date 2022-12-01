@@ -71,13 +71,6 @@ function StuffList() {
       handleSearchButton(pageNum);
     }
   }, [pageNum]);
-  // useEffect(() => {
-  //   if (questions.length >= 15) {
-  //     setLoading(true);
-  //   } else {
-  //     setLoading(false);
-  //   }
-  // });
 
   useEffect(() => {
     let observer;
@@ -264,7 +257,7 @@ function StuffList() {
                   ) : null}
                 </div>
               ))}
-          {new Array(8).fill('').map((_, i) => (
+          {new Array(10).fill('').map((_, i) => (
             <Loader key={i}>{loading ? <Loading /> : null}</Loader>
           ))}
         </ContentsContainer>
