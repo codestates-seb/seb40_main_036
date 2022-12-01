@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Positive;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -38,13 +39,17 @@ public class QuestionController {
     private final QuestionRepository questionRepository;
 
     private final AnswerMapper answerMapper;
-    @PostMapping
-    public ResponseEntity postQuestion(@Valid @RequestBody QuestionPostDto questionPostDto){
 
-        Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto));
+    @PostMapping
+    public ResponseEntity postQuestion(@Valid
+                                           @RequestPart(value="image", required = false) List<MultipartFile> images,
+                                           @RequestPart(value="question") QuestionPostDto questionPostDto) throws Exception {
+
+        Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto),images);
 
 
         return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question), HttpStatus.CREATED);
+
 
     }
 
