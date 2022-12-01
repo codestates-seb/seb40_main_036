@@ -18,7 +18,6 @@ const Login = () => {
 
   const onChangeId = (e) => {
     setInputId(e.target.value);
-    console.log(new Date().getMinutes() + 1000);
   };
 
   const onChangePw = (e) => {
@@ -43,7 +42,7 @@ const Login = () => {
 
     axios
       .post(
-        '/member/login',
+        '/api/member/login',
         {
           email: inputId,
           password: inputPw,

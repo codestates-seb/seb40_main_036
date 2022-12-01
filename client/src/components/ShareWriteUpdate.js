@@ -2,24 +2,32 @@ import axios from 'axios';
 import { useState, useMemo, useEffect } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 // eslint-disable-next-line no-unused-vars
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import ImageResize from 'quill-image-resize';
+Quill.register('modules/ImageResize', ImageResize);
+
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const ShareWriteUpdate = () => {
   const modules = useMemo(
     () => ({
-      toolbar: [
-        ['bold', 'italic', 'underline'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ size: ['small', false, 'large', 'huge'] }],
-        ['link', 'video'],
-        [{ color: [] }, { background: [] }],
-      ],
+      toolbar: {
+        container: [
+          [{ size: ['small', false, 'large', 'huge'] }],
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image'],
+          [{ color: [] }, { background: [] }],
+        ],
+      },
+      ImageResize: {
+        parchment: Quill.import('parchment'),
+      },
     }),
     []
   );
@@ -32,7 +40,6 @@ const ShareWriteUpdate = () => {
     'size',
     'link',
     'image',
-    'video',
     'color',
     'background',
   ];
@@ -50,7 +57,7 @@ const ShareWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setTest(response.data.questionTitle);
         setContent(response.data.questionContent);
@@ -97,13 +104,25 @@ const ShareWriteUpdate = () => {
         confirmButtonColor: '#008505',
       });
     }
+
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
+
     axios
-      .patch(`/question/${QuestionId}`, {
-        memberId: localStorage.getItem('memberId'),
-        questionTitle: title,
-        questionContent: content,
-        locationTag: drop,
-      })
+      .patch(
+        `/api/question/${QuestionId}`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          questionTitle: title,
+          questionContent: content,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/share/${QuestionId}`);

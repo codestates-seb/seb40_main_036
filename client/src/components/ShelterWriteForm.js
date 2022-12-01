@@ -2,23 +2,31 @@ import axios from 'axios';
 import { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import DropDown from './Dropdown';
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import ImageResize from 'quill-image-resize';
+Quill.register('modules/ImageResize', ImageResize);
+
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const ShelterWriteForm = () => {
   const modules = useMemo(
     () => ({
-      toolbar: [
-        ['bold', 'italic', 'underline'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ size: ['small', false, 'large', 'huge'] }],
-        ['link', 'video'],
-        [{ color: [] }, { background: [] }],
-      ],
+      toolbar: {
+        container: [
+          [{ size: ['small', false, 'large', 'huge'] }],
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['link', 'image'],
+          [{ color: [] }, { background: [] }],
+        ],
+      },
+      ImageResize: {
+        parchment: Quill.import('parchment'),
+      },
     }),
     []
   );
@@ -31,7 +39,6 @@ const ShelterWriteForm = () => {
     'size',
     'link',
     'image',
-    'video',
     'color',
     'background',
   ];
@@ -80,13 +87,24 @@ const ShelterWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .post(`/shelterQuestion`, {
-        memberId: localStorage.getItem('memberId'),
-        shelterQuestionTitle: title,
-        shelterQuestionContent: contents,
-        locationTag: drop,
-      })
+      .post(
+        `/api/shelterQuestion`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          shelterQuestionTitle: title,
+          shelterQuestionContent: contents,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/review/${response.data.shelterQuestionId}`);
