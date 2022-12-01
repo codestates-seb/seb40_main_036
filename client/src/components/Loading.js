@@ -128,7 +128,7 @@ const Contents = styled.div`
   .contents {
     margin: 0px 0px 2.5px;
     align-items: center;
-    width: 282px;
+    width: 100%;
     height: 73px;
     align-items: center;
     background-color: #d2d2d2;
