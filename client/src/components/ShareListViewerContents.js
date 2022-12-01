@@ -29,8 +29,14 @@ function ShareLisViewerContents({ id, content, memberId }) {
         Number(localStorage.getItem('memberId')) === memberId
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/question/${id}`)
+            .delete(`/api/question/${id}`, {
+              headers: headers,
+            })
             .then(() => navigate(`/share`))
             .catch((err) => console.log(err));
         }, 1000);

@@ -27,11 +27,10 @@ function StuffAnswerViewr({
         stuffAnswerContent: textRef.current.value,
         stuffQuestionId: `${questionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
-        name: `${localStorage.getItem('name')}`,
       };
       console.log(data);
       axios
-        .patch(`/stuffAnswer/${id}`, data)
+        .patch(`/api/stuffAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -80,8 +79,14 @@ function StuffAnswerViewr({
         Number(localStorage.getItem('memberId')) === memberid
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/stuffAnswer/${id}`)
+            .delete(`/api/stuffAnswer/${id}`, {
+              headers: headers,
+            })
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);

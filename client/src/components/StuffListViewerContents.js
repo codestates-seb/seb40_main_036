@@ -26,8 +26,14 @@ function StuffLisViewerContents({ id, content, memberId }) {
         Number(localStorage.getItem('memberId')) === memberId
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/stuffQuestion/${id}`)
+            .delete(`/api/stuffQuestion/${id}`, {
+              headers: headers,
+            })
             .then(() => navigate(`/stuffList`))
             .catch((err) => console.log(err));
         }, 1000);

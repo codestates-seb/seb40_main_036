@@ -26,11 +26,16 @@ function ReviewAnswerPost() {
         shelterAnswerContent: textRef.current.value,
         shelterQuestionId: `${QuestionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
-        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .post(`/shelterAnswer`, data)
+        .post(`/api/shelterAnswer`, data, {
+          headers: headers,
+        })
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

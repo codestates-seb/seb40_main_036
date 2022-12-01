@@ -26,9 +26,15 @@ function ReviewLisViewerContents({ id, content, memberId }) {
         result.value &&
         Number(localStorage.getItem('memberId')) === memberId
       ) {
+        const headers = {
+          'Content-Type': 'application/json',
+          token: `${localStorage.getItem('token')}`,
+        };
         setTimeout(() => {
           axios
-            .delete(`api/shelterQuestion/${id}`)
+            .delete(`/api/shelterQuestion/${id}`, {
+              headers: headers,
+            })
             .then(() => navigate(`/Review`))
             .catch((err) => console.log(err));
         }, 1000);

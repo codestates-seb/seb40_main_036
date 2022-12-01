@@ -3,6 +3,7 @@ import { useState } from 'react';
 import EarthquakeTipsContents from './EarthquakeTipsContents';
 import CongestionTips from './CongestionTips';
 import DownpourTipsContents from './DownpourTips';
+import Loading from './Loading';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -19,6 +20,7 @@ function EvacuationTips() {
 
   return (
     <TipstContainer>
+      <Loading />
       <TipsContent>
         <TipsTitle>
           <Header>
