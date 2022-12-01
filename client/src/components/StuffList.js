@@ -30,7 +30,7 @@ function StuffList() {
   const fetchQustion = async (pageNum) => {
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       const response = await axios.get(
         `/stuffQuestion?page=${pageNum}&size=10`
       );
@@ -65,6 +65,12 @@ function StuffList() {
       handleTagSearchButton(pageNum);
     }
   }, [pageNum]);
+
+  useEffect(() => {
+    if (searchtotalPage > pageNum) {
+      handleSearchButton(pageNum);
+    }
+  }, [pageNum]);
   // useEffect(() => {
   //   if (questions.length >= 15) {
   //     setLoading(true);
@@ -86,7 +92,6 @@ function StuffList() {
     try {
       setLoading(true);
       if (drop !== undefined) {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
         const response = await axios.get(
           `/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
         );
@@ -110,7 +115,7 @@ function StuffList() {
     setLoading(false);
   };
 
-  const handleSearchButton = (pageNum) => {
+  const handleSearchButton = () => {
     if (search.content !== undefined) {
       setLoading(true);
       axios
@@ -130,8 +135,8 @@ function StuffList() {
               window.location.reload();
             });
           }
-          setLoading(false);
         });
+      setLoading(false);
     }
     window.scrollTo(0, 0);
     setSearch({ select: 'title', content: '' });
@@ -162,47 +167,6 @@ function StuffList() {
     setDrop(e.target.value);
   };
 
-  // const mappingQuestion =
-  //   searchquestions.length === 0
-  //     ? [...questions].map((item) => (
-  //         <div key={item.stuffQuestionId}>
-  //           <StuffListContents
-  //             key={item.stuffQuestionId}
-  //             id={item.stuffQuestionId}
-  //             memberId={item.memberId}
-  //             title={item.stuffQuestionTitle}
-  //             content={item.stuffQuestionContent}
-  //             num={item.stuffQuestionId}
-  //             writer={item.name}
-  //             date={item.stuffQuestionCreated}
-  //             tag={item.locationTag}
-  //             view={item.views}
-  //             count={item.countAnswer}
-  //           />
-  //           {totalPage >= pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
-  //         </div>
-  //       ))
-  //     : [...searchquestions].map((item) => (
-  //         <div key={item.stuffQuestionId}>
-  //           {loading ? <Loading /> : null}
-  //           <StuffListContents
-  //             key={item.stuffQuestionId}
-  //             id={item.stuffQuestionId}
-  //             memberId={item.memberId}
-  //             title={item.stuffQuestionTitle}
-  //             content={item.stuffQuestionContent}
-  //             num={item.stuffQuestionId}
-  //             writer={item.name}
-  //             date={item.stuffQuestionCreated}
-  //             tag={item.locationTag}
-  //             view={item.views}
-  //             count={item.countAnswer}
-  //           />
-  //           {searchtotalPage > pageNum ? (
-  //             <div id="pageEnd" ref={pageEnd} />
-  //           ) : null}
-  //         </div>
-  //       ));
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
@@ -259,7 +223,6 @@ function StuffList() {
           </button>
         </SelectBox>
         <ContentsContainer>
-          {/* {loading || questions ? mappingQuestion : <Loading />} */}
           {searchquestions.length === 0
             ? [...questions].map((item) => (
                 <div key={item.stuffQuestionId}>

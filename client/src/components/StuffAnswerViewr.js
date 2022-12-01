@@ -28,9 +28,15 @@ function StuffAnswerViewr({
         stuffQuestionId: `${questionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
       };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
+      };
       console.log(data);
       axios
-        .patch(`/api/stuffAnswer/${id}`, data)
+        .patch(`/stuffAnswer/${id}`, data, {
+          headers: headers,
+        })
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -84,7 +90,7 @@ function StuffAnswerViewr({
             token: `${localStorage.getItem('token')}`,
           };
           axios
-            .delete(`/api/stuffAnswer/${id}`, {
+            .delete(`/stuffAnswer/${id}`, {
               headers: headers,
             })
             .then(() => window.location.reload())

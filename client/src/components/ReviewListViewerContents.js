@@ -77,15 +77,39 @@ const ReviewListContents = styled.div`
   padding: 20px 0 30px 0;
   .ql-container {
     font-size: 1rem;
+    ${tablet} {
+      font-size: 0.9rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+    }
   }
   .ql-size-small {
     font-size: 0.76rem;
+    ${tablet} {
+      font-size: 0.68rem;
+    }
+    ${mobile} {
+      font-size: 0.66rem;
+    }
   }
   .ql-size-large {
     font-size: 1.5rem;
+    ${tablet} {
+      font-size: 1.38rem;
+    }
+    ${mobile} {
+      font-size: 1.3rem;
+    }
   }
   .ql-size-huge {
     font-size: 2rem;
+    ${tablet} {
+      font-size: 1.86rem;
+    }
+    ${mobile} {
+      font-size: 1.8rem;
+    }
   }
 `;
 const DeletEdit = styled.div`

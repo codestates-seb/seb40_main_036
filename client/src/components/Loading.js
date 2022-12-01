@@ -61,10 +61,7 @@ const skeleton = keyframes`
     opacity: 0;
   }
 `;
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
+const Container = styled.div``;
 const ContentsList = styled.div`
   border-radius: 15px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
