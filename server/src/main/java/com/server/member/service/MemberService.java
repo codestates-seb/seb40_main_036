@@ -1,6 +1,7 @@
 package com.server.member.service;
 
 
+import com.server.config.auth.UserAuthentication;
 import com.server.config.jwt.JwtTokenProvider;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -64,8 +66,6 @@ public class MemberService {
 
     public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
 
-        //String memberEmail = member.getEmail();
-        //String memberPassword = member.getPassword();
 
         Member mem=memberRepository.findByEmail(member.getEmail());
         if(mem==null){
@@ -77,9 +77,18 @@ public class MemberService {
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
-        //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
-        //return mem;
-        mem.setToken(jwtTokenProvider.createToken(mem.getEmail()));
+        ////////////////////////////////////////////////////////////////////////////
+        // 현재 사용자의 정보를 authentication에 저장 + 토큰
+
+        Authentication authentication
+                =new UserAuthentication(mem.getEmail(),null,null);
+
+        mem.setToken(jwtTokenProvider.createToken(authentication,mem.getEmail()));
+
+        memberRepository.save(mem);
+
+        ////////////////////////////////////////////////////////////////////////////
+
         return mem;
     }
 

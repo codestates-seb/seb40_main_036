@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
     value = "org.mapstruct.ap.MappingProcessor",
     date = "2022-12-01T10:22:38+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+
 )
 @Component
 public class AnswerMapperImpl implements AnswerMapper {
