@@ -51,6 +51,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 // login, 회원가입 api토큰이 없는 상태에서 요청이 들어옴
                 .antMatchers(HttpMethod.POST,"/member/login").permitAll()
                 .antMatchers(HttpMethod.POST,"/member/join").permitAll()
+                .antMatchers(HttpMethod.POST,"/member/join/**").permitAll()
 
                 // 질문, 답변 조회는 접근 허용
                 .antMatchers(HttpMethod.GET,"/question/**").permitAll()
