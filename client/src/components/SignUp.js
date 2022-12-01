@@ -330,9 +330,14 @@ const SignUpInput = styled.div`
     color: white;
     font-weight: 600;
     background: #008505;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-left: 5px;
     margin-bottom: 4px;
+    border: none;
+    cursor: pointer;
+    :hover {
+      background-color: #005603;
+    }
   }
   .checkEmail {
     display: inline-block;
@@ -341,9 +346,14 @@ const SignUpInput = styled.div`
     color: white;
     font-weight: 600;
     background: #008505;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-left: 20px;
     margin-bottom: 4px;
+    border: none;
+    cursor: pointer;
+    :hover {
+      background-color: #005603;
+    }
   }
   .signBtn {
     margin-top: 15px;
@@ -361,6 +371,10 @@ const SignUpInput = styled.div`
     border: none;
     ${mobile} {
       width: 230px;
+    }
+    cursor: pointer;
+    :hover {
+      background-color: #005603;
     }
   }
   .accountExistence {

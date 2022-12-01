@@ -183,6 +183,7 @@ const SelectRegionStyle = styled.div`
     background: #ffffff;
     border: 1px solid #919eab;
     border-radius: 5px;
+    cursor: pointer;
     ${tablet} {
       width: 100%;
       margin-bottom: 10px;
@@ -199,6 +200,7 @@ const SelectRegionStyle = styled.div`
     border: 1px solid #919eab;
     border-radius: 5px;
     margin-left: 20px;
+    cursor: pointer;
     ${tablet} {
       width: 100%;
       margin-left: 0;

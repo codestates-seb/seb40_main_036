@@ -267,6 +267,10 @@ const WriteFormStyle = styled.div`
     border-radius: 10px;
     margin-right: 26px;
     border: none;
+    cursor: pointer;
+    :hover {
+      background-color: #005603;
+    }
     ${tablet} {
       font-size: 20px;
       width: 130px;
@@ -292,6 +296,10 @@ const WriteFormStyle = styled.div`
     background: #eaeaea;
     border-radius: 10px;
     border: #919eab;
+    cursor: pointer;
+    :hover {
+      background-color: #d2d2d2;
+    }
     ${tablet} {
       font-size: 20px;
       width: 130px;
