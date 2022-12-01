@@ -3,6 +3,7 @@ package com.server.question.dto;
 //import com.server.answer.dto.AnswerResponseDto;
 import com.server.answer.dto.AnswerResponseDto;
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.util.List;

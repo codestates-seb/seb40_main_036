@@ -14,10 +14,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -51,13 +54,13 @@ public class QuestionService {
 
         Question findquestion = findVerifiedQuestion(question.getQuestionId());
 
-        // address 수정
+        // title 수정
         Optional.ofNullable(question.getQuestionTitle())
                 .ifPresent(Title->findquestion.setQuestionTitle(Title));
-        // name 수정
+        // content 수정
         Optional.ofNullable(question.getQuestionContent())
                 .ifPresent(Content ->findquestion.setQuestionContent(Content));
-        // 수용 가능 인원 수정
+        // locationTag 수정
         Optional.ofNullable(question.getLocationTag())
                 .ifPresent(Tag->findquestion.setLocationTag(Tag));
 

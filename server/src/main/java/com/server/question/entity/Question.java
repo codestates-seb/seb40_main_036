@@ -1,11 +1,12 @@
 package com.server.question.entity;
 
 //import com.server.answer.entity.Answer;
-import com.server.answer.dto.AnswerResponseDto;
 import com.server.answer.entity.Answer;
+import com.server.photo.entity.Photo;
 import com.server.member.entity.Member;
 import com.server.shelter.entity.Shelter;
 import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -44,6 +45,18 @@ public class Question {
     private LocalDate questionCreated;
 
     private LocalDate questionModified;
+
+    @OneToMany(mappedBy = "question", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
+    private List<Photo> photo = new ArrayList<>();
+
+    // question에서 파일 처리를 위함
+    public void addPhoto(Photo photo){
+        this.photo.add(photo);
+
+        // 게시글에 파일이 저장되어있지 않은 경우
+        if(photo.getQuestion()!=this)
+            photo.setQuestion(this);
+    }
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.PERSIST)
     private List<Answer> answers=new ArrayList<>();

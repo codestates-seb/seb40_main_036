@@ -24,20 +24,32 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.google.code.gson:gson:2.8.7'
+
+	// DB
 	implementation 'mysql:mysql-connector-java'
+
+	// lombok > mapstruct
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.mapstruct:mapstruct:1.5.1.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
+
+	// test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	// security
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
+	// jwt
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 
+	// swagger
 	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 
-	implementation 'org.mapstruct:mapstruct:1.5.1.Final'
-	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.1.Final'
+	// file 처리
+	implementation 'commons-io:commons-io:2.6'
+
 
 }
 
