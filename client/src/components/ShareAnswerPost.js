@@ -33,9 +33,13 @@ function AnswerPost() {
       };
       console.log(data);
       axios
+<<<<<<< HEAD
         .post(`/api/answer`, data, {
           headers: headers,
         })
+=======
+        .post(`/api/answer`, data)
+>>>>>>> 030e32d718a0aceef219951811f574648c4a72b4
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

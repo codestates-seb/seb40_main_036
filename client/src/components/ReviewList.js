@@ -59,7 +59,11 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
+<<<<<<< HEAD
         .get(`/api//shelterQuestion/search/${search.select}/${search.content}`)
+=======
+        .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
+>>>>>>> 030e32d718a0aceef219951811f574648c4a72b4
         .then((response) => {
           setQuestions(response.data);
           if (response.data.length === 0) {

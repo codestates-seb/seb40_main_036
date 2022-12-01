@@ -96,7 +96,7 @@ const SignUP = () => {
     }
     e.preventDefault(); // 새로고침 방지
     axios
-      .post('/member/join', {
+      .post('/api/member/join', {
         name: inputName,
         email: inputId,
         password: inputPw,
@@ -105,8 +105,6 @@ const SignUP = () => {
       .then((response) => {
         // Handle success.
         console.log(response);
-        console.log('User profile', response.data.memberId);
-        console.log('User token', response.data.access_token);
         navigate('/login');
       })
       .catch((error) => {
@@ -126,7 +124,7 @@ const SignUP = () => {
   const onClickCheckNumber = (e) => {
     e.preventDefault();
     axios
-      .post('/member/join/checkPhone', {
+      .post('/api/member/join/checkPhone', {
         phone: hyphen,
       })
       .then((response) => {
@@ -150,7 +148,7 @@ const SignUP = () => {
   const onClickCheckEmail = (e) => {
     e.preventDefault();
     axios
-      .post('/member/join/checkEmail', {
+      .post('/api/member/join/checkEmail', {
         email: inputId,
       })
       .then((response) => {

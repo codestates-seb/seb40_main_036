@@ -36,6 +36,7 @@ function ReviewAnswerPost() {
         .post(`/api/shelterAnswer`, data, {
           headers: headers,
         })
+
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {
