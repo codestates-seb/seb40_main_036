@@ -89,13 +89,23 @@ const ShareWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .post(`/question`, {
-        memberId: localStorage.getItem('memberId'),
-        questionTitle: title,
-        questionContent: contents,
-        locationTag: drop,
-      })
+      .post(
+        `/api/question`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          questionTitle: title,
+          questionContent: contents,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/share/${response.data.questionId}`);

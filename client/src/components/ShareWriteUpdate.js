@@ -57,7 +57,7 @@ const ShareWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setTest(response.data.questionTitle);
         setContent(response.data.questionContent);
@@ -104,13 +104,25 @@ const ShareWriteUpdate = () => {
         confirmButtonColor: '#008505',
       });
     }
+
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
+
     axios
-      .patch(`/question/${QuestionId}`, {
-        memberId: localStorage.getItem('memberId'),
-        questionTitle: title,
-        questionContent: content,
-        locationTag: drop,
-      })
+      .patch(
+        `/api/question/${QuestionId}`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          questionTitle: title,
+          questionContent: content,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/share/${QuestionId}`);

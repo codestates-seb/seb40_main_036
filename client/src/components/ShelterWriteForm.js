@@ -87,13 +87,24 @@ const ShelterWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .post(`/shelterQuestion`, {
-        memberId: localStorage.getItem('memberId'),
-        shelterQuestionTitle: title,
-        shelterQuestionContent: contents,
-        locationTag: drop,
-      })
+      .post(
+        `/api/shelterQuestion`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          shelterQuestionTitle: title,
+          shelterQuestionContent: contents,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/review/${response.data.shelterQuestionId}`);

@@ -56,7 +56,7 @@ const ShelterWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/shelterQuestion/${QuestionId}`);
+        const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.shelterQuestionTitle);
         setContent(response.data.data.shelterQuestionContent);
@@ -102,13 +102,23 @@ const ShelterWriteUpdate = () => {
         confirmButtonColor: '#008505',
       });
     }
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .patch(`/shelterQuestion/${QuestionId}`, {
-        memberId: localStorage.getItem('memberId'),
-        shelterQuestionTitle: title,
-        shelterQuestionContent: content,
-        locationTag: drop,
-      })
+      .patch(
+        `/api/shelterQuestion/${QuestionId}`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          shelterQuestionTitle: title,
+          shelterQuestionContent: content,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/review/${QuestionId}`);

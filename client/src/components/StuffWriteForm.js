@@ -87,14 +87,24 @@ const StuffWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .post(`/stuffQuestion`, {
-        memberId: localStorage.getItem('memberId'),
-        name: localStorage.getItem('name'),
-        stuffQuestionTitle: title,
-        stuffQuestionContent: contents,
-        locationTag: drop,
-      })
+      .post(
+        `/api/stuffQuestion`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          name: localStorage.getItem('name'),
+          stuffQuestionTitle: title,
+          stuffQuestionContent: contents,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/stuffLook/${response.data.stuffQuestionId}`);

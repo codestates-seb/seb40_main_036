@@ -56,7 +56,7 @@ const StuffWriteUpdate = () => {
   useEffect(() => {
     const fetchQustion = async () => {
       try {
-        const response = await axios.get(`/stuffQuestion/${QuestionId}`);
+        const response = await axios.get(`/api/stuffQuestion/${QuestionId}`);
         console.log(response.data.data);
         setTest(response.data.data.stuffQuestionTitle);
         setContent(response.data.data.stuffQuestionContent);
@@ -102,13 +102,23 @@ const StuffWriteUpdate = () => {
         confirmButtonColor: '#008505',
       });
     }
+    const headers = {
+      'Content-Type': 'application/json',
+      token: `${localStorage.getItem('token')}`,
+    };
     axios
-      .patch(`/stuffQuestion/${QuestionId}`, {
-        memberId: localStorage.getItem('memberId'),
-        stuffQuestionTitle: title,
-        stuffQuestionContent: content,
-        locationTag: drop,
-      })
+      .patch(
+        `/api/stuffQuestion/${QuestionId}`,
+        {
+          memberId: localStorage.getItem('memberId'),
+          stuffQuestionTitle: title,
+          stuffQuestionContent: content,
+          locationTag: drop,
+        },
+        {
+          headers: headers,
+        }
+      )
       .then((response) => {
         console.log(response);
         navigate(`/stuffLook/${QuestionId}`);

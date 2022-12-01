@@ -15,7 +15,7 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/reservation/member/' + memberId, {
+      .get('/api/reservation/member/' + memberId, {
         headers: {
           'ngrok-skip-browser-warning': '69420',
         },
@@ -27,7 +27,9 @@ const MyPage = () => {
       .catch(() => setErr(true));
   };
   const fetchShelter = () => {
-    axios.get('/shelter/' + shelterId).then((res) => setShelter(res.data.data));
+    axios
+      .get('/api/shelter/' + shelterId)
+      .then((res) => setShelter(res.data.data));
   };
 
   useEffect(() => {
