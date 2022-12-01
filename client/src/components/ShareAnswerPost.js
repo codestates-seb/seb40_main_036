@@ -30,7 +30,7 @@ function AnswerPost() {
       };
       console.log(data);
       axios
-        .post(`/api/answer`, data)
+        .post(`/answer`, data)
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

@@ -31,7 +31,7 @@ function StuffAnswerViewr({
       };
       console.log(data);
       axios
-        .patch(`/api/stuffAnswer/${id}`, data)
+        .patch(`/stuffAnswer/${id}`, data)
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -81,7 +81,7 @@ function StuffAnswerViewr({
       ) {
         setTimeout(() => {
           axios
-            .delete(`/api/stuffAnswer/${id}`)
+            .delete(`/stuffAnswer/${id}`)
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);
