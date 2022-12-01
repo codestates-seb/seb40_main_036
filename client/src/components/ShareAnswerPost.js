@@ -26,11 +26,16 @@ function AnswerPost() {
         answerContent: textRef.current.value,
         questionId: `${QuestionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
-        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .post(`/api/answer`, data)
+        .post(`/api/answer`, data, {
+          headers: headers,
+        })
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {
