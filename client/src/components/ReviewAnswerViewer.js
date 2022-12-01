@@ -29,9 +29,15 @@ function ReviewAnswerViewr({
         memberId: `${localStorage.getItem('memberId')}`,
         name: `${localStorage.getItem('name')}`,
       };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
+      };
       console.log(data);
       axios
-        .patch(`/api/shelterAnswer/${id}`, data)
+        .patch(`/api/shelterAnswer/${id}`, data, {
+          headers: headers,
+        })
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -81,8 +87,14 @@ function ReviewAnswerViewr({
         Number(localStorage.getItem('memberId')) === memberid
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/api/shelterAnswer/${id}`)
+            .delete(`/api/shelterAnswer/${id}`, {
+              headers: headers,
+            })
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);
