@@ -65,6 +65,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 // 대피소 목록은 접근 허용
                 .antMatchers(HttpMethod.GET,"/shelter").permitAll()
                 .antMatchers(HttpMethod.GET,"/shelter/**").permitAll()
+                
+                // reservationInfo get접근 허용
+                .antMatchers(HttpMethod.GET,"/reservationInfo").permitAll()
+                .antMatchers(HttpMethod.GET,"/reservationInfo/**").permitAll()
 
                 .antMatchers("/**").authenticated(); // 나머지는 인증이 필요
 
