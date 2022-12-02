@@ -119,12 +119,12 @@ public class QuestionController {
                 HttpStatus.OK);
     }
 
-//    @DeleteMapping("/{questionId}")
-//    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
-//
-//        questionService.deleteQuestion(questionId);
-//
-//        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//    }
+    @DeleteMapping("/{questionId}")
+    public ResponseEntity deleteQuestion(@PathVariable("questionId") @Positive long questionId){
+
+        questionService.deleteQuestion(questionId);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }
