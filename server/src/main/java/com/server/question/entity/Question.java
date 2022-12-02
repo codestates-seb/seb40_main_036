@@ -52,8 +52,5 @@ public class Question {
     @JoinColumn(name = "memberId",insertable = false,updatable = false)
     private Member member; // member에 접근하여 name(작성자)을 가져올 수 있어야함
 
-    @ManyToOne
-    @JoinColumn(name = "shelterId", insertable = false, updatable = false)
-    private Shelter shelter;
 
 }

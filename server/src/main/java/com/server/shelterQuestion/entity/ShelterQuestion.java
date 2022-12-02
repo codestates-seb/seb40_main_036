@@ -52,8 +52,4 @@ public class ShelterQuestion {
     @OneToMany(mappedBy = "shelterQuestion",cascade = CascadeType.PERSIST)
     private List<ShelterAnswer> shelterAnswers=new ArrayList<>();
 
-    @ManyToOne
-    @JoinColumn(name = "shelterId", insertable = false, updatable = false)
-    private Shelter shelter;  // location 때문에 연결했었음
-
 }
