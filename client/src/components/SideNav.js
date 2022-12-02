@@ -47,19 +47,33 @@ const SideNav = (props) => {
       })
       .catch((err) => {
         props.setopen(false);
-        Swal.fire({
-          icon: 'warning',
-          title: '오류',
-          text: '알수 없는 오류가 발생하였습니다.',
-          confirmButtonText: '새로고침',
-        }).then((res) => {
-          if (res.isConfirmed) {
-            window.location.reload();
-          } else {
-            //취소
-          }
-        });
-        console.log(err);
+        if (err.response.status === 409) {
+          Swal.fire({
+            icon: 'warning',
+            title: '오류',
+            text: '이미 예약내역이 있습니다.',
+            confirmButtonText: '예약내역',
+          }).then((res) => {
+            if (res.isConfirmed) {
+              window.location.href = '/mypage';
+            } else {
+              //취소
+            }
+          });
+        } else {
+          Swal.fire({
+            icon: 'warning',
+            title: '오류',
+            text: '알수 없는 오류가 발생하였습니다.',
+            confirmButtonText: '새로고침',
+          }).then((res) => {
+            if (res.isConfirmed) {
+              window.location.reload();
+            } else {
+              //취소
+            }
+          });
+        }
       });
   };
   return (
