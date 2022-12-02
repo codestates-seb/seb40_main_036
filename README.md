@@ -18,7 +18,7 @@
 추후 수정 
  
  
- ## 📌 [기술 및 논의 정리 - WIKI]()
+ ## 📌 [기술 및 논의 정리 - WIKI](https://github.com/codestates-seb/seb40_main_036/wiki)
  
  
  
