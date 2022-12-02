@@ -14,6 +14,16 @@ const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disa
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 
 const ShareWriteForm = () => {
+  function imageUrlHandler() {
+    const range = this.quill.getSelection();
+    const url = prompt('이미지 주소를 넣어주세요');
+
+    if (url) {
+      // 커서위치에 imageUrl 삽입
+      this.quill.insertEmbed(range.index, 'image', url);
+    }
+  }
+
   const modules = useMemo(
     () => ({
       toolbar: {
@@ -24,6 +34,9 @@ const ShareWriteForm = () => {
           ['link', 'image'],
           [{ color: [] }, { background: [] }],
         ],
+        handlers: {
+          link: imageUrlHandler,
+        },
       },
       ImageResize: {
         parchment: Quill.import('parchment'),
@@ -72,6 +85,13 @@ const ShareWriteForm = () => {
 
   const navigate = useNavigate();
 
+  const [file, setFile] = useState(null); // 파일 저장 할 State
+
+  //파일 추가
+  const handleChange = (e) => {
+    setFile(e);
+  };
+
   const submit = () => {
     if (drop === '') {
       return Swal.fire({
@@ -89,23 +109,32 @@ const ShareWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+
     const headers = {
-      'Content-Type': 'application/json',
+      'Contest-Type': 'multipart/form-data',
       token: `${localStorage.getItem('token')}`,
     };
+
+    const formData = new FormData();
+    formData.append('image', file);
+
+    let jsonData = {
+      memberId: localStorage.getItem('memberId'),
+      questionTitle: title,
+      questionContent: contents,
+      locationTag: drop,
+    };
+    formData.append(
+      'question',
+      new Blob([JSON.stringify(jsonData)], {
+        type: 'application/json',
+      })
+    );
+
     axios
-      .post(
-        `/api/question`,
-        {
-          memberId: localStorage.getItem('memberId'),
-          questionTitle: title,
-          questionContent: contents,
-          locationTag: drop,
-        },
-        {
-          headers: headers,
-        }
-      )
+      .post(`/api/question`, formData, {
+        headers: headers, // headers에 API 인증키 전달
+      })
       .then((response) => {
         console.log(response);
         navigate(`/share/${response.data.questionId}`);
@@ -145,7 +174,10 @@ const ShareWriteForm = () => {
                 modules={modules}
                 formats={formats}
                 value={contents}
-                onChange={onChangeContents}
+                onChange={(e) => {
+                  onChangeContents(e);
+                  handleChange(e);
+                }}
               />
             </EditorStyle>
           </div>

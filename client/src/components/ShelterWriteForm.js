@@ -57,6 +57,7 @@ const ShelterWriteForm = () => {
   // eslint-disable-next-line no-unused-vars
   const onChangeContents = (el) => {
     setContents(el);
+    console.log(el);
   };
 
   // const extractTextPattern = /(<([^>]+)>)/gi;
