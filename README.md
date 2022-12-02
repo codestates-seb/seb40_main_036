@@ -17,7 +17,9 @@
  ## 📌 [기술 및 논의 정리 - WIKI](https://github.com/codestates-seb/seb40_main_036/wiki)
  
  
+ ## 📌 [주요 기능](https://github.com/codestates-seb/seb40_main_036/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80)
  
+ - 주요기능은 사진 따로 첨부해서 링크 각각 달아둘 예정 
  
  ## 📌 팀원소개
  | SEB_FE_40_김지연 | SEB_BE_40_김영희 | SEB_BE_40_김민준 |
