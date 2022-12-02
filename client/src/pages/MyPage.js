@@ -178,6 +178,7 @@ const MypageWrapper = styled.div`
   #map {
     width: 100%;
     height: 300px;
+    z-index: -1;
   }
   #reservationInfo,
   #info {
