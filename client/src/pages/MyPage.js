@@ -19,7 +19,9 @@ const MyPage = () => {
 
   const fetchUser = () => {
     axios
-      .get('/api/reservation/member/' + localStorage.getItem('memberId'))
+      .get('/api/reservation/member/' + localStorage.getItem('memberId'), {
+        headers: { token: localStorage.getItem('token') },
+      })
       .then((res) => {
         console.log(res);
         setReservationInfo(res.data.data);
@@ -44,7 +46,9 @@ const MyPage = () => {
     }).then((res) => {
       if (res.isConfirmed) {
         axios
-          .delete('/api/reservation/' + reservationInfo.reservationId)
+          .delete('/api/reservation/' + reservationInfo.reservationId, {
+            headers: { token: localStorage.getItem('token') },
+          })
           .then((window.location.href = '/'));
       }
     });
@@ -75,7 +79,9 @@ const MyPage = () => {
     }
   }, [isLogin]);
   useEffect(() => {
-    fetchShelter();
+    if (shelterId > 0) {
+      fetchShelter();
+    }
   }, [reservationInfo]);
   useEffect(() => {
     console.log(shelter);

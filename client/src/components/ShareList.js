@@ -79,7 +79,11 @@ function ShareList() {
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
-
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
+    }
+  };
   // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
   const handleAskBtnClick = () => {
     if (localStorage.getItem('email') !== null) {
@@ -202,6 +206,7 @@ function ShareList() {
             onChange={(e) =>
               setSearch({ select: search.select, content: e.target.value })
             }
+            onKeyDown={handleEnter}
           />
           <button
             className="searchClick"

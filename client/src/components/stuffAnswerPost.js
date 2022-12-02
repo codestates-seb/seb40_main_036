@@ -27,9 +27,15 @@ function stuffAnswerPost() {
         memberId: `${localStorage.getItem('memberId')}`,
         name: `${localStorage.getItem('name')}`,
       };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
+      };
       console.log(data);
       axios
-        .post(`/api/stuffAnswer`, data)
+        .post(`/api/stuffAnswer`, data, {
+          headers: headers,
+        })
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
     } else {

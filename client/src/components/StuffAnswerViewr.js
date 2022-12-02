@@ -27,11 +27,16 @@ function StuffAnswerViewr({
         stuffAnswerContent: textRef.current.value,
         stuffQuestionId: `${questionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
-        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .patch(`/api/stuffAnswer/${id}`, data)
+        .patch(`/api/stuffAnswer/${id}`, data, {
+          headers: headers,
+        })
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -80,8 +85,14 @@ function StuffAnswerViewr({
         Number(localStorage.getItem('memberId')) === memberid
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/api/stuffAnswer/${id}`)
+            .delete(`/api/stuffAnswer/${id}`, {
+              headers: headers,
+            })
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);

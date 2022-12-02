@@ -27,11 +27,17 @@ function ShareAnswerViewr({
         answerContent: textRef.current.value,
         questionId: `${questionId}`,
         memberId: `${localStorage.getItem('memberId')}`,
-        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .patch(`/api/answer/${id}`, data)
+        .patch(`/api/answer/${id}`, data, {
+          headers: headers,
+        })
+
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -81,8 +87,14 @@ function ShareAnswerViewr({
         Number(localStorage.getItem('memberId')) === memberid
       ) {
         setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
           axios
-            .delete(`/api/answer/${id}`)
+            .delete(`/api/answer/${id}`, {
+              headers: headers,
+            })
             .then(() => window.location.reload())
             .catch((err) => console.log(err));
         }, 1000);

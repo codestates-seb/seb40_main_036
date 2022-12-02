@@ -5,8 +5,9 @@ import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
 // import InfiniteScroll from 'react-infinite-scroller';
-import { DotSpinner } from '@uiball/loaders';
+// import { DotSpinner } from '@uiball/loaders';
 import Swal from 'sweetalert2';
+import Loading from './Loading';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -15,79 +16,25 @@ function StuffList() {
   const textRef = useRef();
   const pageEnd = useRef(null);
   const [questions, setQuestions] = useState([]); //데이터 저장
+  const [searchquestions, setsearchQuestions] = useState([]); //데이터 저장
   const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [totalPage, setTotalPage] = useState(1);
+  const [searchtotalPage, setsearchTotalPage] = useState(1);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
   });
   const [drop, setDrop] = useState();
-  const handleTagSearchButton = () => {
-    if (drop !== undefined) {
-      axios
-        .get(`/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=8`)
-        .then((response) => {
-          console.log(response.data.data);
-          console.log(drop);
-          setQuestions(response.data.data);
-          if (response.data.data.length === 0) {
-            Swal.fire({
-              title: '검색 결과가 없습니다.',
-              confirmButtonColor: '#008505',
-              icon: 'error',
-            }).then(() => {
-              window.location.reload();
-            });
-            setLoading(false);
-          }
-        })
-        .catch((err) => console.log(err));
-    }
-  };
-
-  const handleSearchButton = () => {
-    if (search.content !== undefined) {
-      axios
-        .get(
-          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=8`
-        )
-        .then((response) => {
-          console.log(response.data.data);
-          setQuestions(response.data.data);
-          if (response.data.data.length === 0) {
-            Swal.fire({
-              title: '검색 결과가 없습니다.',
-              confirmButtonColor: '#008505',
-              icon: 'error',
-            }).then(() => {
-              window.location.reload();
-            });
-          }
-        });
-    }
-    window.scrollTo(0, 0);
-    setSearch({ select: 'title', content: '' });
-    document.getElementById('search').value = 'title';
-  };
-
-  const handleEnter = (e) => {
-    if (e.key === 'Enter') {
-      handleSearchButton();
-    }
-  };
   const fetchQustion = async (pageNum) => {
+    setLoading(true);
     try {
-      console.log('불러오기');
-      // loading 상태를 true 로 바꿉니다.
-      setLoading(true);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 600));
       const response = await axios.get(
-        `/api/stuffQuestion?page=${pageNum}&size=8`
+        `/api/stuffQuestion?page=${pageNum}&size=10`
       );
       console.log(response.data);
-
       setQuestions((prev) => [...prev, ...response.data.data]);
       setTotalPage(response.data.pageInfo.totalPages);
     } catch (e) {
@@ -104,8 +51,94 @@ function StuffList() {
     if (entry.isIntersecting && !loading) {
       setTimeout(async () => {
         setPageNum((page) => page + 1);
-        setLoading(false);
       }, 300);
+    }
+  };
+  useEffect(() => {
+    if (totalPage >= pageNum) {
+      fetchQustion(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    if (searchtotalPage > pageNum) {
+      handleTagSearchButton(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    if (searchtotalPage > pageNum) {
+      handleSearchButton(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    let observer;
+    if (pageEnd.current) {
+      observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
+      observer.observe(pageEnd.current);
+    }
+    return () => observer && observer.disconnect();
+  }, [onIntersect]);
+
+  const handleTagSearchButton = async () => {
+    try {
+      setLoading(true);
+      if (drop !== undefined) {
+        const response = await axios.get(
+          `/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
+        );
+        console.log(response.data);
+        console.log(drop);
+        setsearchQuestions((prev) => [...prev, ...response.data.data]);
+        setsearchTotalPage(response.data.pageInfo.totalPages);
+        if (response.data.data.length === 0) {
+          Swal.fire({
+            title: '검색 결과가 없습니다.',
+            confirmButtonColor: '#008505',
+            icon: 'error',
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
+  };
+
+  const handleSearchButton = () => {
+    if (search.content !== undefined) {
+      setLoading(true);
+      axios
+        .get(
+          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=10`
+        )
+        .then((response) => {
+          console.log(response.data.data);
+          setsearchQuestions((prev) => [...prev, ...response.data.data]);
+          setsearchTotalPage(response.data.pageInfo.totalPages);
+          if (response.data.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
+        });
+      setLoading(false);
+    }
+    window.scrollTo(0, 0);
+    setSearch({ select: 'title', content: '' });
+    document.getElementById('search').value = 'title';
+  };
+
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchButton();
     }
   };
 
@@ -122,29 +155,6 @@ function StuffList() {
       }).then(() => (window.location.href = '/login'));
     }
   };
-
-  useEffect(() => {
-    if (totalPage >= pageNum) {
-      fetchQustion(pageNum);
-    }
-  }, [pageNum]);
-
-  // useEffect(() => {
-  //   if (questions.length >= 15) {
-  //     setLoading(true);
-  //   } else {
-  //     setLoading(false);
-  //   }
-  // });
-
-  useEffect(() => {
-    let observer;
-    if (pageEnd.current) {
-      observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
-      observer.observe(pageEnd.current);
-    }
-    return () => observer && observer.disconnect();
-  }, [onIntersect]);
 
   const handleDrop = (e) => {
     setDrop(e.target.value);
@@ -206,27 +216,50 @@ function StuffList() {
           </button>
         </SelectBox>
         <ContentsContainer>
-          {[...questions].map((item) => (
-            <StuffListContents
-              key={item.stuffQuestionId}
-              id={item.stuffQuestionId}
-              memberId={item.memberId}
-              title={item.stuffQuestionTitle}
-              content={item.stuffQuestionContent}
-              num={item.stuffQuestionId}
-              writer={item.name}
-              date={item.stuffQuestionCreated}
-              tag={item.locationTag}
-              view={item.views}
-              count={item.countAnswer}
-            />
+          {searchquestions.length === 0
+            ? [...questions].map((item) => (
+                <div key={item.stuffQuestionId}>
+                  <StuffListContents
+                    key={item.stuffQuestionId}
+                    id={item.stuffQuestionId}
+                    memberId={item.memberId}
+                    title={item.stuffQuestionTitle}
+                    content={item.stuffQuestionContent}
+                    num={item.stuffQuestionId}
+                    writer={item.name}
+                    date={item.stuffQuestionCreated}
+                    tag={item.locationTag}
+                    view={item.views}
+                    count={item.countAnswer}
+                  />
+                  {totalPage >= pageNum ? (
+                    <div id="pageEnd" ref={pageEnd} />
+                  ) : null}
+                </div>
+              ))
+            : [...searchquestions].map((item) => (
+                <div key={item.stuffQuestionId}>
+                  <StuffListContents
+                    key={item.stuffQuestionId}
+                    id={item.stuffQuestionId}
+                    memberId={item.memberId}
+                    title={item.stuffQuestionTitle}
+                    content={item.stuffQuestionContent}
+                    num={item.stuffQuestionId}
+                    writer={item.name}
+                    date={item.stuffQuestionCreated}
+                    tag={item.locationTag}
+                    view={item.views}
+                    count={item.countAnswer}
+                  />
+                  {searchtotalPage > pageNum ? (
+                    <div id="pageEnd" ref={pageEnd} />
+                  ) : null}
+                </div>
+              ))}
+          {new Array(10).fill('').map((_, i) => (
+            <Loader key={i}>{loading ? <Loading /> : null}</Loader>
           ))}
-          <Loader>
-            {totalPage >= pageNum ? <div id="pageEnd" ref={pageEnd} /> : null}
-            {loading ? (
-              <DotSpinner size={80} speed={0.9} color="#008505" />
-            ) : null}
-          </Loader>
         </ContentsContainer>
       </StuffListContent>
     </StuffListContainer>
@@ -403,9 +436,4 @@ const ContentsContainer = styled.div`
   justify-content: center;
 `;
 
-const Loader = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const Loader = styled.div``;
