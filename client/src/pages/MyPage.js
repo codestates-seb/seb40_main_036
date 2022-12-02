@@ -23,7 +23,6 @@ const MyPage = () => {
         headers: { token: localStorage.getItem('token') },
       })
       .then((res) => {
-        console.log(res);
         setReservationInfo(res.data.data);
         setShelterId(res.data.data.shelterId);
       })
@@ -84,7 +83,6 @@ const MyPage = () => {
     }
   }, [reservationInfo]);
   useEffect(() => {
-    console.log(shelter);
     if (shelter.length !== 0) {
       var mapContainer = document.getElementById('map'),
         mapOption = {
@@ -180,6 +178,7 @@ const MypageWrapper = styled.div`
   #map {
     width: 100%;
     height: 300px;
+    z-index: -1;
   }
   #reservationInfo,
   #info {
