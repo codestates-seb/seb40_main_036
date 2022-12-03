@@ -33,7 +33,7 @@
 | ![비품 정보 페이지](https://user-images.githubusercontent.com/83641398/205427008-a57e2370-720d-4759-aa3e-e5ab6d743901.gif) | ![재난별 대피요령 페이지](https://user-images.githubusercontent.com/83641398/205427391-138579c5-e16d-4c81-8136-266bf7f42cda.gif) |
 |                       **댓글 (CRUD)**                        |           [🔗 **My page**](https://github.com/codestates-seb/seb40_main_036/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80#-mypage-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%98%88%EC%95%BD-%EC%82%AD%EC%A0%9C)           |
 | ![댓글 (CRUD)](https://user-images.githubusercontent.com/83641398/205427719-6495ebf8-23d4-4aeb-90e4-b5a433415f60.gif) | ![My page](https://user-images.githubusercontent.com/83641398/205427915-3ec58d5f-dabc-40ff-a697-68555fb87249.gif) |
- - 주요기능은 사진 따로 첨부해서 링크 각각 달아둘 예정 
+
  
  ## 📌 팀원소개
  | SEB_FE_40_김지연 | SEB_BE_40_김영희 | SEB_BE_40_김민준 |
