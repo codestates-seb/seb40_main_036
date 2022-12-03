@@ -1,6 +1,6 @@
 ## SALIDA - 재난 대피소 서비스
 <p align='center'>
-<img width='50%' src='https://cdn.discordapp.com/attachments/1039359809625002084/1039810272422002718/942269b3cc935469.png'>
+<img width='50%' src='https://user-images.githubusercontent.com/83641398/205433353-262024d3-db6b-48ec-ad06-d79263a178e4.png'>
 </p>
 
 ## 📌 재난 대피소 서비스 소개
