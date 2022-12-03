@@ -52,13 +52,6 @@
 | <img src="https://avatars.githubusercontent.com/u/107448607?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/107971877?v=4" alt="img" height="150px" width="150px" /> | <img src="https://avatars.githubusercontent.com/u/83641398?v=4" alt="img" height="150px" width="150px" />
 | [SeongYum](https://github.com/SeongYum) | [sunghee-park](https://github.com/sunghee-park) | [GopOwl](https://github.com/GopOwl) |
 
-## 📕 docs
-- [사용자 요구사항 정의서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=0)
-- [API 명세서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=937852559)
-- [화면정의서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=737185700)
-- [화면정의서 피그마](https://www.figma.com/file/yiRWGLIoCHJpEeGKVFFurF/Untitled?node-id=0%3A1&t=WrU4YNdIsZ8gg4B5-1)
-- [테이블명세서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=1813176822)
-- [ER다이어그램](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=31159588)
 
 ## 🛠 Tech Stacks
 
