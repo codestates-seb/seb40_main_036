@@ -16,9 +16,9 @@
  
  ## [⭐️기술 및 논의 정리 - WIKI⭐️](https://github.com/codestates-seb/seb40_main_036/wiki)
  |사용자 요구사항 정의서|테이블명세서|화면정의서|
- |------|---|---|
+ | :------: | :------: | :------: |
  |![사용자 요구사항 정의서](https://user-images.githubusercontent.com/107836206/205432806-81ef75c0-58ca-4c3e-8127-09c3b898087a.gif)|![테이블명세서](https://user-images.githubusercontent.com/107836206/205432811-44b03f1e-9c71-46e5-9611-488ea51fa49a.gif)|![화면정의서](https://user-images.githubusercontent.com/107836206/205432815-a42abb40-def5-4d4f-aa7d-6074b9f83bbd.gif)|
- |API명세서|ERD다이어그램|
+ |  **API 명세서**  |  **ERD 다이아그램**  |
  |![api명세서](https://user-images.githubusercontent.com/107836206/205432818-2b8e8535-cd3d-4006-a29e-4662ee61a3e9.gif)|![erd 다이아그램](https://user-images.githubusercontent.com/107836206/205432819-85853ce5-0188-493e-84ac-7fac85b9092c.gif)|
 
  
