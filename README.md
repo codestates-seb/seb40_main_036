@@ -17,7 +17,8 @@
  ## 📌 [기술 및 논의 정리 - WIKI](https://github.com/codestates-seb/seb40_main_036/wiki)
  
  
- ## 📌 [주요 기능](https://github.com/codestates-seb/seb40_main_036/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80)
+ ## 📌 주요 기능
+ 
  ### ✔️ 클릭하면 큰 화면에서 보실 수 있습니다!
  
  |                           [🔗 로그인/로그아웃](https://github.com/codestates-seb/seb40_main_036/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80#-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80)                           |                            [🔗 회원가입](https://github.com/codestates-seb/seb40_main_036/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C-%ED%8E%98%EC%9D%B4%EC%A7%80#-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%ED%8E%98%EC%9D%B4%EC%A7%80)                            |
