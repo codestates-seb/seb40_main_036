@@ -92,4 +92,10 @@ public class ReservationController {
         reservationService.deleteReservation(Id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+    @DeleteMapping("/member/shelter/{memberId}")
+    public ResponseEntity deleteMemberReservation(@PathVariable("memberId")
+                                                  @Positive long Id){
+        reservationService.deleteMemberReservation(Id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
