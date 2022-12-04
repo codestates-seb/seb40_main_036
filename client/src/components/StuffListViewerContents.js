@@ -1,34 +1,56 @@
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+// eslint-disable-next-line no-unused-vars
+import Parser from 'html-react-parser';
+import Swal from 'sweetalert2';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffLisViewerContents({ id, content, memberId }) {
   const navigate = useNavigate();
+
   const deleteClick = () => {
-    const result = window.confirm('질문을 삭제하시겠습니까?');
-    if (
-      result === true &&
-      Number(sessionStorage.getItem('memberId')) === memberId
-    ) {
-      setTimeout(() => {
-        axios
-          .delete(`/stuffQuestion/${id}`)
-          .then(() => navigate(`/stuffList`))
-          .catch((err) => console.log(err));
-      }, 1000);
-    }
+    Swal.fire({
+      title: '게시글을 삭제하시겠습니까?',
+      text: '삭제하시면 다시 복구시킬 수 없습니다.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#AC0000',
+      cancelButtonColor: '#008505',
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+    }).then((result) => {
+      if (
+        result.value &&
+        Number(localStorage.getItem('memberId')) === memberId
+      ) {
+        setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
+          axios
+            .delete(`/api/stuffQuestion/${id}`, {
+              headers: headers,
+            })
+            .then(() => navigate(`/stuffList`))
+            .catch((err) => console.log(err));
+        }, 1000);
+      }
+    });
   };
   return (
     <Container>
       <StuffListContents>
-        <div className="contents">{content}</div>
+        <div className="contents">{Parser(content)}</div>
       </StuffListContents>
-      {memberId === Number(sessionStorage.getItem('memberId')) ? (
+      {memberId === Number(localStorage.getItem('memberId')) ? (
         <DeletEdit>
           <button onClick={deleteClick}>삭제</button>
-          <button className="edit">수정</button>
+          <Link to={`/stuffWriteUpdate/${id}`}>
+            <button className="edit">수정</button>
+          </Link>
         </DeletEdit>
       ) : null}
     </Container>
@@ -52,37 +74,60 @@ const Container = styled.div`
 `;
 const StuffListContents = styled.div`
   padding: 20px 0 30px 0;
-  font-size: 1.125rem;
-  ${tablet} {
+  .ql-container {
     font-size: 1rem;
+    ${tablet} {
+      font-size: 0.9rem;
+    }
+    ${mobile} {
+      font-size: 0.8rem;
+    }
   }
-  ${mobile} {
-    font-size: 0.8rem;
+  .ql-size-small {
+    font-size: 0.76rem;
+    ${tablet} {
+      font-size: 0.68rem;
+    }
+    ${mobile} {
+      font-size: 0.66rem;
+    }
+  }
+  .ql-size-large {
+    font-size: 1.5rem;
+    ${tablet} {
+      font-size: 1.38rem;
+    }
+    ${mobile} {
+      font-size: 1.3rem;
+    }
+  }
+  .ql-size-huge {
+    font-size: 2rem;
+    ${tablet} {
+      font-size: 1.86rem;
+    }
+    ${mobile} {
+      font-size: 1.8rem;
+    }
   }
 `;
 const DeletEdit = styled.div`
   display: flex;
   gap: 0px 5px;
-  color: #838383;
-  font-size: 1.125rem;
-  cursor: pointer;
-  ${tablet} {
-    font-size: 1.1rem;
-  }
-  ${mobile} {
-    font-size: 0.9rem;
-  }
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 1rem;
+    font-size: 1.125rem;
     border: none;
+    :hover {
+      color: #005603;
+    }
     ${tablet} {
-      font-size: 0.8rem;
+      font-size: 1.1rem;
     }
     ${mobile} {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
   }
 `;

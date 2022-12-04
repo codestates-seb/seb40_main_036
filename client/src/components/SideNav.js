@@ -3,40 +3,77 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 const SideNav = (props) => {
   const [count, setCount] = useState(1);
   const [hide, sethide] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const [memberId, setMemberId] = useState(0);
 
   useEffect(() => {
-    if (sessionStorage.getItem('email') === null) {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 없다면
+    if (localStorage.getItem('email') === null) {
+      // localStorage 에 email이라는 key 값으로 저장된 값이 없다면
     } else {
-      // sessionStorage 에 email이라는 key 값으로 저장된 값이 있다면
+      // localStorage 에 email이라는 key 값으로 저장된 값이 있다면
       // 로그인 상태 변경
       setIsLogin(true);
-      setMemberId(sessionStorage.getItem('memberId'));
     }
   }, []);
   const PostReservation = () => {
     axios
-      .post('/reservation', {
-        memberId: memberId,
-        shelterId: props.shelterId,
-        num: count,
-      })
+      .post(
+        '/api/reservation',
+        {
+          memberId: localStorage.getItem('memberId'),
+          shelterId: props.shelterId,
+          num: count,
+        },
+        {
+          headers: { token: localStorage.getItem('token') },
+        }
+      )
       .then((res) => console.log(res))
       .then(() => {
         props.setopen(false);
-        props.setopen2(true);
-        props.setmessage('예약이 완료되었습니다.');
+        Swal.fire({
+          icon: 'success',
+          title: '예약완료',
+          text: '성공적으로 예약되었습니다.',
+          confirmButtonText: '확인',
+        }).then((res) => {
+          if (res.isConfirmed) {
+            window.location.reload();
+          }
+        });
       })
-      .catch(() => {
+      .catch((err) => {
         props.setopen(false);
-        props.setopen2(true);
-        props.setmessage('오류가 발생하였습니다.새로고침해주세요.');
+        if (err.response.status === 409) {
+          Swal.fire({
+            icon: 'warning',
+            title: '오류',
+            text: '이미 예약내역이 있습니다.',
+            confirmButtonText: '예약내역',
+          }).then((res) => {
+            if (res.isConfirmed) {
+              window.location.href = '/mypage';
+            } else {
+              //취소
+            }
+          });
+        } else {
+          Swal.fire({
+            icon: 'warning',
+            title: '오류',
+            text: '알수 없는 오류가 발생하였습니다.',
+            confirmButtonText: '새로고침',
+          }).then((res) => {
+            if (res.isConfirmed) {
+              window.location.reload();
+            } else {
+              //취소
+            }
+          });
+        }
       });
   };
   return (

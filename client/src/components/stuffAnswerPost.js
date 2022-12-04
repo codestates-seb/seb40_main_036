@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { useRef, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import axios from 'axios';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function stuffAnswerPost() {
+  const navigate = useNavigate();
   const { QuestionId } = useParams();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
@@ -17,25 +19,38 @@ function stuffAnswerPost() {
     if (
       stuffAnswerPost.body !== '' &&
       textRef.current.value !== '' &&
-      sessionStorage.getItem('memberId')
+      localStorage.getItem('memberId')
     ) {
       const data = {
         stuffAnswerContent: textRef.current.value,
         stuffQuestionId: `${QuestionId}`,
-        memberId: `${sessionStorage.getItem('memberId')}`,
-        name: `${sessionStorage.getItem('name')}`,
+        memberId: `${localStorage.getItem('memberId')}`,
+        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .post(`/stuffAnswer`, data)
+        .post(`/api/stuffAnswer`, data, {
+          headers: headers,
+        })
         .then(() => window.location.reload())
         .catch((err) => console.log(err));
+    } else {
+      Swal.fire({
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      });
+      navigate('/login');
     }
   };
   return (
     <Container>
       <Post>
-        <div className="user"> {sessionStorage.getItem('name')}</div>
+        <div className="user"> {localStorage.getItem('name')}</div>
         <textarea
           className="answer"
           ref={textRef}

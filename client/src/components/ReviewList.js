@@ -1,11 +1,12 @@
 import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 import ReviewListContents from './ReviewListContents';
-import { Link } from 'react-router-dom';
 import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
+import { DotSpinner } from '@uiball/loaders';
+import Swal from 'sweetalert2';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -22,7 +23,32 @@ function ReviewList() {
     select: 'title',
     content: '',
   });
+  const [drop, setDrop] = useState();
 
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
+  const handleTagSearchButton = () => {
+    if (drop !== undefined) {
+      axios
+        .get(`/api/shelterQuestion/search/tag/${drop}`)
+        .then((response) => {
+          console.log(response.data);
+          setQuestions(response.data);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  };
   const handlePageChange = (page) => {
     setPage(page);
   };
@@ -33,11 +59,18 @@ function ReviewList() {
   const handleSearchButton = () => {
     if (search.content !== undefined) {
       axios
-        .get(`/shelterQuestion/search/${search.select}/${search.content}`)
+        .get(`/api/shelterQuestion/search/${search.select}/${search.content}`)
         .then((response) => {
-          console.log(response);
           setQuestions(response.data);
-          console.log(search);
+          if (response.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         });
     }
     window.scrollTo(0, 0);
@@ -49,6 +82,21 @@ function ReviewList() {
       handleSearchButton();
     }
   };
+
+  // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
+  const handleAskBtnClick = () => {
+    if (localStorage.getItem('email') !== null) {
+      window.location.href = '/shelterWriteForm';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      }).then(() => (window.location.href = '/login'));
+    }
+  };
+
   useEffect(() => {
     const fetchQustion = async () => {
       try {
@@ -57,7 +105,9 @@ function ReviewList() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/shelterQuestion/shelterQuestions`);
+        const response = await axios.get(
+          `/api/shelterQuestion/shelterQuestions`
+        );
         console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
@@ -68,7 +118,14 @@ function ReviewList() {
 
     fetchQustion();
   }, []);
-  if (loading) return <div>로딩중..</div>;
+  if (loading)
+    return (
+      <div>
+        <Loading>
+          <DotSpinner size={80} speed={0.9} color="#008505" />
+        </Loading>
+      </div>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
 
@@ -80,7 +137,10 @@ function ReviewList() {
             <h1>대피소 후기 및 정보</h1>
           </Header>
           <SelectBox>
-            <CityDown />
+            <CityDown onChange={handleDrop} value={drop} />
+            <button className="tagSearch" onClick={handleTagSearchButton}>
+              <FaSearch />
+            </button>
           </SelectBox>
         </ShareListTitle>
         <ContentsContainer>
@@ -91,7 +151,7 @@ function ReviewList() {
             <div className="date">작성일</div>
             <div className="view">조회수</div>
           </ContentsTitle>
-          {questions
+          {[...questions]
             .slice(items * (page - 1), items * (page - 1) + items)
             .map((item) => (
               <ReviewListContents
@@ -114,12 +174,10 @@ function ReviewList() {
             <option value="20">20개</option>
             <option value="30">30개</option>
           </select>
-          <Link to="/writeForm">
-            <button className="writing">
-              <FaPencilAlt />
-              글쓰기
-            </button>
-          </Link>
+          <button className="writing" onClick={handleAskBtnClick}>
+            <FaPencilAlt />
+            글쓰기
+          </button>
         </Row>
         <PaginationBox>
           <Pagination
@@ -168,7 +226,13 @@ function ReviewList() {
 }
 
 export default ReviewList;
-
+const Loading = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const ShareListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
@@ -203,6 +267,25 @@ const SelectBox = styled.div`
   justify-content: end;
   align-items: center;
   margin: 0 0 12px;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 const ContentsContainer = styled.div`
   border: 2px solid black;

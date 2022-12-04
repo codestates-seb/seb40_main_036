@@ -21,7 +21,7 @@ function ShareListLookup() {
         setQuestions(null);
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
-        const response = await axios.get(`/question/${QuestionId}`);
+        const response = await axios.get(`/api/question/${QuestionId}`);
         console.log(response.data);
         setQuestions(response.data);
         setAnswer(response.data.answers); // 데이터는 response.body 안에 들어있습니다.
@@ -59,7 +59,7 @@ function ShareListLookup() {
             />
           </>
         )}
-        {answer.map((item) => (
+        {[...answer].map((item) => (
           <ShareAnswerViewr
             key={item.answerId}
             questionId={item.questionId}

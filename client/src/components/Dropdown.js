@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-
+const size = { mobile: 425, tablet: 768 };
+const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
+const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 const DropDown = ({ onChange, value }) => {
   const [selectValue, setSelectValue] = useState('');
   const state = useRef();
@@ -133,6 +135,7 @@ const DropDown = ({ onChange, value }) => {
       opt.innerHTML = d[x];
       state.current.appendChild(opt);
     }
+
     setSelectValue(currentRegion);
   };
 
@@ -165,24 +168,46 @@ const DropDown = ({ onChange, value }) => {
 export default DropDown;
 
 const SelectRegionStyle = styled.div`
+  padding: 20px 0;
+  ${tablet} {
+    display: flex;
+    flex-direction: column;
+  }
+  ${mobile} {
+    display: flex;
+    flex-direction: column;
+  }
   .selectRegion {
-    width: 420px;
+    width: 320px;
     height: 47px;
-    left: 228px;
-    top: 246px;
     background: #ffffff;
     border: 1px solid #919eab;
     border-radius: 5px;
-    margin-left: 100px;
+    cursor: pointer;
+    ${tablet} {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    ${mobile} {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
   .selectDistrict {
-    width: 259px;
+    width: 220px;
     height: 47px;
-    left: 669px;
-    top: 246px;
     background: #ffffff;
     border: 1px solid #919eab;
     border-radius: 5px;
     margin-left: 20px;
+    cursor: pointer;
+    ${tablet} {
+      width: 100%;
+      margin-left: 0;
+    }
+    ${mobile} {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 `;

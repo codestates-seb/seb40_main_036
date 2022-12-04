@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
+import NoImage from './../img/noImage.png';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import Parser from 'html-react-parser';
+
 function EquipmentContents({
   id,
   tag,
@@ -14,6 +18,11 @@ function EquipmentContents({
   return (
     <Container>
       <ContentsList>
+        <ImageContainer>
+          <Link to={`/stuffLook/${id}`} className="imageBox">
+            <img src={NoImage} alt="NoImage" />
+          </Link>
+        </ImageContainer>
         <Header>
           <div className="tagContainer">
             <div className="tag">{tag}</div>
@@ -25,7 +34,7 @@ function EquipmentContents({
         <Contents>
           <div className="contentsBox">
             <Link to={`/stuffLook/${id}`} className="contents">
-              {content}
+              {Parser(content)}
             </Link>
           </div>
           <div className="dateBox">
@@ -51,7 +60,7 @@ export default EquipmentContents;
 
 const Container = styled.div``;
 const ContentsList = styled.div`
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 16px 0px;
   transition: box-shadow 0.25s ease-in 0s, transform 0.2s ease-in 0s;
   margin: 0.8rem;
@@ -61,16 +70,23 @@ const ContentsList = styled.div`
     transform: translateY(-5px);
   }
 `;
+const ImageContainer = styled.div`
+  padding: 15px 15px 0 15px;
+  img {
+    width: 100%;
+    border-radius: 3px;
+  }
+`;
 const Header = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px 15px 0 15px;
+  padding: 10px 15px 0 15px;
   .tag {
     margin: 0px 0px 2.5px;
     align-items: center;
     text-align: center;
-    width: 64px;
-    padding: 0 10px;
+    width: 85px;
+    padding: 3px 5px;
     align-items: center;
     border: 1px solid #d2d2d2;
     border-radius: 5px;

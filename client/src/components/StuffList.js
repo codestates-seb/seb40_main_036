@@ -4,77 +4,162 @@ import CityDown from './CityDown';
 import { useEffect, useState, useRef } from 'react';
 import { FaSearch, FaPencilAlt } from 'react-icons/fa';
 import axios from 'axios';
+// import InfiniteScroll from 'react-infinite-scroller';
+// import { DotSpinner } from '@uiball/loaders';
+import Swal from 'sweetalert2';
+import Loading from './Loading';
 
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
 function StuffList() {
   const textRef = useRef();
-  const [questions, setQuestions] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const pageEnd = useRef(null);
+  const [questions, setQuestions] = useState([]); //데이터 저장
+  const [searchquestions, setsearchQuestions] = useState([]); //데이터 저장
+  const [pageNum, setPageNum] = useState(1);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [totalPage, setTotalPage] = useState(1);
+  const [searchtotalPage, setsearchTotalPage] = useState(1);
   const [search, setSearch] = useState({
     select: 'title',
     content: '',
   });
-  const [drop, setDrop] = useState('');
-  const handleDrop = (e) => {
-    setDrop(e.target.value);
-  };
-
-  const handleTagSearchButton = () => {
-    if (drop !== undefined) {
-      axios
-        .get(`/stuffQuestion/search/tag/${drop} `)
-
-        .then((response) => {
-          console.log(response);
-          setQuestions(response.data);
-          console.log(drop);
-        })
-        .catch((err) => console.log(err));
+  const [drop, setDrop] = useState();
+  const fetchQustion = async (pageNum) => {
+    setLoading(true);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      const response = await axios.get(
+        `/api/stuffQuestion?page=${pageNum}&size=10`
+      );
+      console.log(response.data);
+      setQuestions((prev) => [...prev, ...response.data.data]);
+      setTotalPage(response.data.pageInfo.totalPages);
+    } catch (e) {
+      setError(e);
     }
+    setLoading(false);
+  };
+  console.log(totalPage);
+  console.log(pageNum);
+  console.log(questions.length);
+
+  const onIntersect = (entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting && !loading) {
+      setTimeout(async () => {
+        setPageNum((page) => page + 1);
+      }, 300);
+    }
+  };
+  useEffect(() => {
+    if (totalPage >= pageNum) {
+      fetchQustion(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    if (searchtotalPage > pageNum) {
+      handleTagSearchButton(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    if (searchtotalPage > pageNum) {
+      handleSearchButton(pageNum);
+    }
+  }, [pageNum]);
+
+  useEffect(() => {
+    let observer;
+    if (pageEnd.current) {
+      observer = new IntersectionObserver(onIntersect, { threshold: 1.0 });
+      observer.observe(pageEnd.current);
+    }
+    return () => observer && observer.disconnect();
+  }, [onIntersect]);
+
+  const handleTagSearchButton = async () => {
+    try {
+      setLoading(true);
+      if (drop !== undefined) {
+        const response = await axios.get(
+          `/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
+        );
+        console.log(response.data);
+        console.log(drop);
+        setsearchQuestions((prev) => [...prev, ...response.data.data]);
+        setsearchTotalPage(response.data.pageInfo.totalPages);
+        if (response.data.data.length === 0) {
+          Swal.fire({
+            title: '검색 결과가 없습니다.',
+            confirmButtonColor: '#008505',
+            icon: 'error',
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
   };
 
   const handleSearchButton = () => {
     if (search.content !== undefined) {
+      setLoading(true);
       axios
-        .get(`/stuffQuestion/search/${search.select}/${search.content}`)
+        .get(
+          `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=10`
+        )
         .then((response) => {
-          console.log(response);
-          setQuestions(response.data);
-          console.log(search);
+          console.log(response.data.data);
+          setsearchQuestions((prev) => [...prev, ...response.data.data]);
+          setsearchTotalPage(response.data.pageInfo.totalPages);
+          if (response.data.data.length === 0) {
+            Swal.fire({
+              title: '검색 결과가 없습니다.',
+              confirmButtonColor: '#008505',
+              icon: 'error',
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         });
+      setLoading(false);
     }
     window.scrollTo(0, 0);
     setSearch({ select: 'title', content: '' });
     document.getElementById('search').value = 'title';
   };
+
   const handleEnter = (e) => {
     if (e.key === 'Enter') {
       handleSearchButton();
     }
   };
-  useEffect(() => {
-    const fetchQustion = async () => {
-      try {
-        // 요청이 시작 할 때에는 error 와 questions 를 초기화하고
-        setError(null);
-        setQuestions(null);
-        // loading 상태를 true 로 바꿉니다.
-        setLoading(true);
-        const response = await axios.get(`/stuffQuestion/stuffQuestions`);
-        console.log(response.data);
-        setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
-      } catch (e) {
-        setError(e);
-      }
-      setLoading(false);
-    };
 
-    fetchQustion();
-  }, []);
-  if (loading) return <div>로딩중..</div>;
+  // 비로그인일시 로그인 페이지로 이동 글쓰기 막는 기능
+  const handleAskBtnClick = () => {
+    if (localStorage.getItem('email') !== null) {
+      window.location.href = '/stuffWriteForm';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '로그인 후 이용해주세요.',
+        text: '로그인 후 댓글을 작성하실 수 있습니다.',
+        confirmButtonColor: '#008505',
+      }).then(() => (window.location.href = '/login'));
+    }
+  };
+
+  const handleDrop = (e) => {
+    setDrop(e.target.value);
+  };
+
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
@@ -117,7 +202,7 @@ function StuffList() {
               </button>
             </div>
             <div className="row">
-              <button className="writingBox">
+              <button className="writingBox" onClick={handleAskBtnClick}>
                 <FaPencilAlt />
                 <div className="writing">글쓰기</div>
               </button>
@@ -125,29 +210,55 @@ function StuffList() {
           </SearchBox>
         </StuffListTitle>
         <SelectBox>
-          <CityDown
-            onChange={(e) => {
-              handleTagSearchButton(e);
-              handleDrop(e);
-            }}
-            value={drop}
-          />
+          <CityDown onChange={handleDrop} value={drop} />
+          <button className="tagSearch" onClick={handleTagSearchButton}>
+            <FaSearch />
+          </button>
         </SelectBox>
         <ContentsContainer>
-          {questions.map((item) => (
-            <StuffListContents
-              key={item.stuffQuestionId}
-              id={item.stuffQuestionId}
-              memberId={item.memberId}
-              title={item.stuffQuestionTitle}
-              content={item.stuffQuestionContent}
-              num={item.stuffQuestionId}
-              writer={item.name}
-              date={item.stuffQuestionCreated}
-              tag={item.locationTag}
-              view={item.views}
-              count={item.countAnswer}
-            />
+          {searchquestions.length === 0
+            ? [...questions].map((item) => (
+                <div key={item.stuffQuestionId}>
+                  <StuffListContents
+                    key={item.stuffQuestionId}
+                    id={item.stuffQuestionId}
+                    memberId={item.memberId}
+                    title={item.stuffQuestionTitle}
+                    content={item.stuffQuestionContent}
+                    num={item.stuffQuestionId}
+                    writer={item.name}
+                    date={item.stuffQuestionCreated}
+                    tag={item.locationTag}
+                    view={item.views}
+                    count={item.countAnswer}
+                  />
+                  {totalPage >= pageNum ? (
+                    <div id="pageEnd" ref={pageEnd} />
+                  ) : null}
+                </div>
+              ))
+            : [...searchquestions].map((item) => (
+                <div key={item.stuffQuestionId}>
+                  <StuffListContents
+                    key={item.stuffQuestionId}
+                    id={item.stuffQuestionId}
+                    memberId={item.memberId}
+                    title={item.stuffQuestionTitle}
+                    content={item.stuffQuestionContent}
+                    num={item.stuffQuestionId}
+                    writer={item.name}
+                    date={item.stuffQuestionCreated}
+                    tag={item.locationTag}
+                    view={item.views}
+                    count={item.countAnswer}
+                  />
+                  {searchtotalPage > pageNum ? (
+                    <div id="pageEnd" ref={pageEnd} />
+                  ) : null}
+                </div>
+              ))}
+          {new Array(10).fill('').map((_, i) => (
+            <Loader key={i}>{loading ? <Loading /> : null}</Loader>
           ))}
         </ContentsContainer>
       </StuffListContent>
@@ -156,7 +267,13 @@ function StuffList() {
 }
 
 export default StuffList;
-
+// const Loading = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
 const StuffListContainer = styled.div`
   width: 100%;
   max-width: 1400px;
@@ -291,6 +408,25 @@ const SelectBox = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
+  .tagSearch {
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #919eab;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    ${tablet} {
+      font-size: 1.2rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    ${mobile} {
+      font-size: 1rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
 `;
 
 const ContentsContainer = styled.div`
@@ -299,3 +435,5 @@ const ContentsContainer = styled.div`
   grid-gap: 5px;
   justify-content: center;
 `;
+
+const Loader = styled.div``;

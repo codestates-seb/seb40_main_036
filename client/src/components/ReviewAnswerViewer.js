@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import axios from 'axios';
 import { useRef, useCallback, useState } from 'react';
+import Swal from 'sweetalert2';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -21,16 +22,22 @@ function ReviewAnswerViewr({
   }, []);
 
   const AnswerEditOnClick = () => {
-    if (Number(sessionStorage.getItem('memberId')) === memberid) {
+    if (Number(localStorage.getItem('memberId')) === memberid) {
       const data = {
-        shelterAnswerConten: textRef.current.value,
+        shelterAnswerContent: textRef.current.value,
         shelterQuestionId: `${questionId}`,
-        memberId: `${sessionStorage.getItem('memberId')}`,
-        name: `${sessionStorage.getItem('name')}`,
+        memberId: `${localStorage.getItem('memberId')}`,
+        name: `${localStorage.getItem('name')}`,
+      };
+      const headers = {
+        'Content-Type': 'application/json',
+        token: `${localStorage.getItem('token')}`,
       };
       console.log(data);
       axios
-        .patch(`/shelterAnswer/${id}`, data)
+        .patch(`/api/shelterAnswer/${id}`, data, {
+          headers: headers,
+        })
         .then(() => setModal(false), window.location.reload())
         .catch((err) => console.log(err));
     }
@@ -63,21 +70,37 @@ function ReviewAnswerViewr({
       </Post>
     </EditContainer>
   );
-  const deleteClick = () => {
-    const result = window.confirm('답변을 삭제하시겠습니까?');
-    if (
-      result === true &&
-      Number(sessionStorage.getItem('memberId')) === memberid
-    ) {
-      setTimeout(() => {
-        axios
-          .delete(`/stuffAnswer/${id}`)
-          .then(() => window.location.reload())
-          .catch((err) => console.log(err));
-      }, 1000);
-    }
-  };
 
+  const deleteClick = () => {
+    Swal.fire({
+      title: '댓글을 삭제하시겠습니까?',
+      text: '삭제하시면 다시 복구시킬 수 없습니다.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#AC0000',
+      cancelButtonColor: '#008505',
+      confirmButtonText: '삭제',
+      cancelButtonText: '취소',
+    }).then((result) => {
+      if (
+        result.value &&
+        Number(localStorage.getItem('memberId')) === memberid
+      ) {
+        setTimeout(() => {
+          const headers = {
+            'Content-Type': 'application/json',
+            token: `${localStorage.getItem('token')}`,
+          };
+          axios
+            .delete(`/api/shelterAnswer/${id}`, {
+              headers: headers,
+            })
+            .then(() => window.location.reload())
+            .catch((err) => console.log(err));
+        }, 1000);
+      }
+    });
+  };
   return (
     <AnswerContainer>
       <AnswerContents>
@@ -91,7 +114,7 @@ function ReviewAnswerViewr({
               <div className="date">{answerDate}</div>
             </div>
           </div>
-          {memberid === Number(sessionStorage.getItem('memberId')) ? (
+          {memberid === Number(localStorage.getItem('memberId')) ? (
             <DeletEdit>
               <button onClick={deleteClick}>삭제</button>
               <button
@@ -169,9 +192,9 @@ const AnswerContents = styled.div`
     padding-left: 20px;
   }
   .contents {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     ${tablet} {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     ${mobile} {
       font-size: 0.8rem;
@@ -193,13 +216,16 @@ const DeletEdit = styled.div`
   padding-right: 30px;
   justify-content: end;
   gap: 0px 5px;
-  padding-left: 73px;
+  padding-right: 50px;
   button {
     cursor: pointer;
     background-color: transparent;
     color: #838383;
-    font-size: 1rem;
+    font-size: 1.12rem;
     border: none;
+    :hover {
+      color: #005603;
+    }
     ${tablet} {
       font-size: 0.85rem;
     }

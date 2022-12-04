@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Profile from './../img/profile.png';
 import { Link } from 'react-router-dom';
+
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
@@ -64,6 +65,9 @@ const EquipmentContentsHeader = styled.div`
     ${mobile} {
       font-size: 0.7rem;
     }
+    :hover {
+      color: #005603;
+    }
   }
 `;
 const EquipmentContentsTitle = styled.div`
@@ -75,17 +79,22 @@ const EquipmentContentsTitle = styled.div`
     display: flex;
   }
   .tag {
-    padding: 4px 15px;
+    width: 80px;
+    padding: 3px 7px;
+    text-align: center;
     align-items: center;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
     margin-right: 5px;
     ${tablet} {
       font-size: 0.8rem;
-      padding: 3px 15px;
+      width: 70px;
+      padding: 3px 7px;
     }
     ${mobile} {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
+      width: 60px;
+      padding: 3px 7px;
     }
   }
   h1 {
