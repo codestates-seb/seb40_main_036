@@ -58,7 +58,6 @@ const ShareWriteForm = () => {
   // eslint-disable-next-line no-unused-vars
   const onChangeContents = (el) => {
     setContents(el);
-    console.log(el);
   };
 
   // const extractTextPattern = /(<([^>]+)>)/gi;
@@ -89,10 +88,12 @@ const ShareWriteForm = () => {
         confirmButtonColor: '#008505',
       });
     }
+
     const headers = {
       'Content-Type': 'application/json',
       token: `${localStorage.getItem('token')}`,
     };
+
     axios
       .post(
         `/api/question`,

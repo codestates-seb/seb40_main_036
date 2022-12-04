@@ -23,7 +23,6 @@ const MyPage = () => {
         headers: { token: localStorage.getItem('token') },
       })
       .then((res) => {
-        console.log(res);
         setReservationInfo(res.data.data);
         setShelterId(res.data.data.shelterId);
       })
@@ -46,9 +45,13 @@ const MyPage = () => {
     }).then((res) => {
       if (res.isConfirmed) {
         axios
-          .delete('/api/reservation/' + reservationInfo.reservationId, {
-            headers: { token: localStorage.getItem('token') },
-          })
+          .delete(
+            '/api/reservation/member/shelter/' +
+              localStorage.getItem('memberId'),
+            {
+              headers: { token: localStorage.getItem('token') },
+            }
+          )
           .then((window.location.href = '/'));
       }
     });
@@ -84,7 +87,6 @@ const MyPage = () => {
     }
   }, [reservationInfo]);
   useEffect(() => {
-    console.log(shelter);
     if (shelter.length !== 0) {
       var mapContainer = document.getElementById('map'),
         mapOption = {
@@ -180,6 +182,7 @@ const MypageWrapper = styled.div`
   #map {
     width: 100%;
     height: 300px;
+    z-index: -1;
   }
   #reservationInfo,
   #info {
