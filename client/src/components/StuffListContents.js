@@ -20,7 +20,7 @@ function EquipmentContents({
       <ContentsList>
         <ImageContainer>
           <Link to={`/stuffLook/${id}`} className="imageBox">
-            <img src={NoImage} alt="NoImage" />
+            <img src={NoImage} alt="이미지 없음" />
           </Link>
         </ImageContainer>
         <Header>
