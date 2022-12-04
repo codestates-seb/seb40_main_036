@@ -147,4 +147,31 @@ public class ReservationService {
 
     }
 
+    @Transactional
+    public void deleteMemberReservation(long memberId){
+        // 일단 memberId의 예약을 가져와
+        Reservation memberReservation = findMemberReservation(memberId);
+
+        // 그 memberId의 예약에서 몇명을 예약했었는지 가져와
+        int num = memberReservation.getNum();
+
+        // memberId가 어디 대피소를 예약했었는지 가져와
+        Shelter shelter=shelterRepository.findByShelterId(memberReservation.getShelterId());
+
+        // 그 대피소 이름에 연관된 reservationInfo 가져와
+        ReservationInfo reservationInfo=reservationInfoRepository.findByshelterName(shelter.getShelterName());
+
+        // 그 reservationInfo에서 reservedNum을 가져와
+        int total = reservationInfo.getReservedNum();
+
+        // 그 대피소에 예약된 전체 인원에서 memberId가 예약한 인원만큼 빼고
+        reservationInfo.setReservedNum(total-num);
+
+        // reservationInfo를 다시 저장해
+        reservationInfoRepository.save(reservationInfo);
+
+        // 이제 memberId의 예약을 지워버려
+        reservationRepository.delete(memberReservation);
+
+    }
 }
