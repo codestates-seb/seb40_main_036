@@ -45,9 +45,13 @@ const MyPage = () => {
     }).then((res) => {
       if (res.isConfirmed) {
         axios
-          .delete('/api/reservation/' + reservationInfo.reservationId, {
-            headers: { token: localStorage.getItem('token') },
-          })
+          .delete(
+            '/api/reservation/member/shelter/' +
+              localStorage.getItem('memberId'),
+            {
+              headers: { token: localStorage.getItem('token') },
+            }
+          )
           .then((window.location.href = '/'));
       }
     });
