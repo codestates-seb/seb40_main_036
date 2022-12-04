@@ -34,7 +34,7 @@ function ReviewList() {
       axios
         .get(`/api/shelterQuestion/search/tag/${drop}`)
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           setQuestions(response.data);
           if (response.data.length === 0) {
             Swal.fire({
@@ -108,7 +108,7 @@ function ReviewList() {
         const response = await axios.get(
           `/api/shelterQuestion/shelterQuestions`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
