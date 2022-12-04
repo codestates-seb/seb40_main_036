@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { DotSpinner } from '@uiball/loaders';
 function StuffListLookup() {
   const { QuestionId } = useParams();
   const [questions, setQuestions] = useState(null);
@@ -22,7 +23,7 @@ function StuffListLookup() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/api/stuffQuestion/${QuestionId}`);
-        console.log(response.data);
+        // console.log(response.data);
         setQuestions(response.data.data);
         setAnswer(response.data.data.stuffAnswers); // 데이터는 response.body 안에 들어있습니다.
       } catch (e) {
@@ -33,7 +34,12 @@ function StuffListLookup() {
 
     fetchQustion();
   }, [QuestionId]);
-  if (loading) return <div>로딩중..</div>;
+  if (loading)
+    return (
+      <Loading>
+        <DotSpinner size={80} speed={0.9} color="#008505" />
+      </Loading>
+    );
   if (error) return <div>에러가 발생했습니다</div>;
   if (!questions) return <div>질문이 없습니다.</div>;
   return (
@@ -77,6 +83,13 @@ function StuffListLookup() {
 }
 
 export default StuffListLookup;
+const Loading = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Contents = styled.div`
   margin-top: 60px;
   display: flex;

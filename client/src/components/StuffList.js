@@ -34,7 +34,7 @@ function StuffList() {
       const response = await axios.get(
         `/api/stuffQuestion?page=${pageNum}&size=10`
       );
-      console.log(response.data);
+      // console.log(response.data);
       setQuestions((prev) => [...prev, ...response.data.data]);
       setTotalPage(response.data.pageInfo.totalPages);
     } catch (e) {
@@ -42,9 +42,9 @@ function StuffList() {
     }
     setLoading(false);
   };
-  console.log(totalPage);
-  console.log(pageNum);
-  console.log(questions.length);
+  // console.log(totalPage);
+  // console.log(pageNum);
+  // console.log(questions.length);
 
   const onIntersect = (entries) => {
     const entry = entries[0];
@@ -88,8 +88,8 @@ function StuffList() {
         const response = await axios.get(
           `/api/stuffQuestion/search/tag/${drop}?page=${pageNum}&size=10`
         );
-        console.log(response.data);
-        console.log(drop);
+        // console.log(response.data);
+        // console.log(drop);
         setsearchQuestions((prev) => [...prev, ...response.data.data]);
         setsearchTotalPage(response.data.pageInfo.totalPages);
         if (response.data.data.length === 0) {
@@ -116,7 +116,7 @@ function StuffList() {
           `/api/stuffQuestion/search/${search.select}/${search.content}?page=${pageNum}&size=10`
         )
         .then((response) => {
-          console.log(response.data.data);
+          // console.log(response.data.data);
           setsearchQuestions((prev) => [...prev, ...response.data.data]);
           setsearchTotalPage(response.data.pageInfo.totalPages);
           if (response.data.data.length === 0) {

@@ -57,7 +57,7 @@ const ShelterWriteUpdate = () => {
     const fetchQustion = async () => {
       try {
         const response = await axios.get(`/api/shelterQuestion/${QuestionId}`);
-        console.log(response.data.data);
+        // console.log(response.data.data);
         setTest(response.data.data.shelterQuestionTitle);
         setContent(response.data.data.shelterQuestionContent);
       } catch (e) {
