@@ -183,7 +183,7 @@ function ReviewList() {
           <Pagination
             activePage={page}
             itemsCountPerPage={items}
-            totalItemsCount={questions.length - 1}
+            totalItemsCount={questions.length}
             prevPageText={'‹'}
             nextPageText={'›'}
             onChange={handlePageChange}
