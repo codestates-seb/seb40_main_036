@@ -67,3 +67,4 @@
   - 🌏 release : 버전 릴리즈
   - ✅ merge : 병합
   - ⚙ chore : 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore
+ 
