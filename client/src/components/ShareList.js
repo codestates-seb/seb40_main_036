@@ -11,7 +11,6 @@ import Swal from 'sweetalert2';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
 const tablet = `@media screen and (max-width: ${size.tablet}px)`; // eslint-disable-line no-unused-vars
-
 function ShareList() {
   const textRef = useRef();
   const [questions, setQuestions] = useState(null);
@@ -107,7 +106,7 @@ function ShareList() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(`/api/question/questions`);
-        // console.log(response);
+        console.log(response);
         setQuestions(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
         setError(e);
@@ -180,7 +179,7 @@ function ShareList() {
           <Pagination
             activePage={page}
             itemsCountPerPage={items}
-            totalItemsCount={questions.length - 1}
+            totalItemsCount={questions.length}
             prevPageText={'‹'}
             nextPageText={'›'}
             onChange={handlePageChange}
