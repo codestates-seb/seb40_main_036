@@ -77,7 +77,7 @@
  <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white" > 
  <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
  <img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white"> 
- <img src="https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=cron&logoColor=white"> 
+ <img src="https://img.shields.io/badge/cron-A8B9CC?style=for-the-badge&logo=c&logoColor=white"> 
  </div> 
 
 
