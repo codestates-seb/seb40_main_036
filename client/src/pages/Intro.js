@@ -211,7 +211,7 @@ const IntroWrapper = styled.div`
     }
   }
   .Wrapper {
-    padding: 50px 0;
+    padding: 70px 0;
     ${mobile} {
       padding: 25px 0;
     }
