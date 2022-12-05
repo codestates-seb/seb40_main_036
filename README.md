@@ -21,8 +21,10 @@
  |[사용자 요구사항 정의서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=0)|[테이블명세서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=1813176822)|[화면정의서](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=737185700)|
  | :------: | :------: | :------: |
  |![사용자 요구사항 정의서](https://user-images.githubusercontent.com/107836206/205432806-81ef75c0-58ca-4c3e-8127-09c3b898087a.gif)|![테이블명세서](https://user-images.githubusercontent.com/107836206/205432811-44b03f1e-9c71-46e5-9611-488ea51fa49a.gif)|![화면정의서](https://user-images.githubusercontent.com/107836206/205432815-a42abb40-def5-4d4f-aa7d-6074b9f83bbd.gif)|
- |  [**API 명세서**](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=937852559)  | [**ER다이어그램**](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=31159588)  |
- |![api명세서](https://user-images.githubusercontent.com/107836206/205432818-2b8e8535-cd3d-4006-a29e-4662ee61a3e9.gif)|![erd 다이아그램](https://user-images.githubusercontent.com/107836206/205432819-85853ce5-0188-493e-84ac-7fac85b9092c.gif)|
+ |  [**API 명세서**](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=937852559)  | [**ER다이어그램**](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=31159588)  |  [**화면정의서 피그마**](https://docs.google.com/spreadsheets/d/12BtU2A7Py4ZDJY3OWv9c90LWmH0753KiPjLyzfCuZC0/edit#gid=31159588)  |
+ |![api명세서](https://user-images.githubusercontent.com/107836206/205432818-2b8e8535-cd3d-4006-a29e-4662ee61a3e9.gif)|![erd 다이아그램](https://user-images.githubusercontent.com/107836206/205432819-85853ce5-0188-493e-84ac-7fac85b9092c.gif)|<img src="https://user-images.githubusercontent.com/83641398/205547333-2fe907ad-1fe7-422c-93fa-20bc2bcf2830.png" alt="img" height="200px" width="300px" />|
+
+
 
  
  ## 📌 주요 기능
