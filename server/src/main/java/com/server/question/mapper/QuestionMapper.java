@@ -31,7 +31,9 @@ public interface QuestionMapper {
                         .questionContent(question.getQuestionContent())
                         .locationTag(question.getLocationTag())
                         .views(question.getViews())
-                        // .questionCreated(question.getQuestionCreated())
+                        .fileName(question.getFileName())
+                        .filePath(question.getFilePath())
+                        .questionCreated(question.getQuestionCreated())
                         .questionModified(question.getQuestionModified())
                         .countAnswer(question.getAnswers().size()) // 답변 수 세기
                         .build())

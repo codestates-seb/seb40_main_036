@@ -27,6 +27,10 @@ public class QuestionResponseDto {
 
     private String locationTag;
 
+    private String fileName; // 저장할 파일
+
+    private String filePath; // 파일 경로
+
     private long views; // 조회수
 
     private long countAnswer; // 답변 개수

@@ -42,10 +42,10 @@ public class QuestionController {
 
     @PostMapping
     public ResponseEntity postQuestion(@Valid
-                                           @RequestPart(value="image", required = false) List<MultipartFile> images,
+                                           @RequestPart(value="image", required = false) MultipartFile image,
                                            @RequestPart(value="question") QuestionPostDto questionPostDto) throws Exception {
 
-        Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto),images);
+        Question question=questionService.createQuestion(questionMapper.questionPostDtoToQuestion(questionPostDto),image);
 
 
         return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(question), HttpStatus.CREATED);
@@ -55,12 +55,13 @@ public class QuestionController {
 
     @PatchMapping("/{questionId}")
     public ResponseEntity patchQuestion(@PathVariable("questionId") @Positive long questionId,
-                                    @Valid @RequestBody QuestionPatchDto questionPatchDto){
+                                    @Valid @RequestPart(value="question") QuestionPatchDto questionPatchDto,
+                                        @RequestPart(value = "image", required = false)MultipartFile image) throws Exception{
 
         Question question=questionMapper.questionPatchDtoToQuestion(questionPatchDto);
         question.setQuestionId(questionId);
 
-        Question responseQuestion=questionService.updateQuestion(question);
+        Question responseQuestion=questionService.updateQuestion(question, image);
 
         return new ResponseEntity<>(questionMapper.questionToQuestionResponseDto(responseQuestion),HttpStatus.OK);
 

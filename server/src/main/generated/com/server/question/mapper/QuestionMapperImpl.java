@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-12-01T15:47:49+0900",
+    date = "2022-12-05T14:50:51+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
 )
 @Component
@@ -65,6 +65,8 @@ public class QuestionMapperImpl implements QuestionMapper {
         questionResponseDto.questionTitle( question.getQuestionTitle() );
         questionResponseDto.questionContent( question.getQuestionContent() );
         questionResponseDto.locationTag( question.getLocationTag() );
+        questionResponseDto.fileName( question.getFileName() );
+        questionResponseDto.filePath( question.getFilePath() );
         questionResponseDto.views( question.getViews() );
         questionResponseDto.countAnswer( question.getCountAnswer() );
         questionResponseDto.questionCreated( question.getQuestionCreated() );

@@ -62,6 +62,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/stuffQuestion/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/stuffAnswer/**").permitAll()
 
+                // 이미지 조회 접근 허용
+                .antMatchers(HttpMethod.GET,"/image/**").permitAll()
+
                 // 대피소 목록은 접근 허용
                 .antMatchers(HttpMethod.GET,"/shelter").permitAll()
                 .antMatchers(HttpMethod.GET,"/shelter/**").permitAll()
