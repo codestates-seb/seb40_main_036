@@ -66,6 +66,7 @@
 ![image](https://user-images.githubusercontent.com/107836206/201006795-d94b1387-4447-4aaf-af5c-3260043c2d1c.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006803-f11f1ec3-c5fc-4ae1-91ed-112d3739b671.png)
 ![image](https://user-images.githubusercontent.com/107836206/201006898-3ba29792-59fe-4cd3-bee2-99e9b4244c3d.png)
+<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> 
 
 ### BACKEND
 
@@ -75,6 +76,8 @@
  <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" >
  <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white" > 
  <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
+ <img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white"> 
+ <img src="https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=cron&logoColor=white"> 
  </div> 
 
 
