@@ -53,6 +53,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST,"/member/join").permitAll()
                 .antMatchers(HttpMethod.POST,"/member/join/**").permitAll()
 
+                // member get 접근 허용
+                .antMatchers(HttpMethod.GET,"/member/**").permitAll()
+
                 // 질문, 답변 조회는 접근 허용
                 .antMatchers(HttpMethod.GET,"/question/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/answer/**").permitAll()
