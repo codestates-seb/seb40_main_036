@@ -16,7 +16,8 @@ module.exports = function (app) {
       '/api',
     ],
     createProxyMiddleware({
-      target: 'https://b9fe-14-39-204-244.jp.ngrok.io',
+      target:
+        'http://ec2-54-180-95-238.ap-northeast-2.compute.amazonaws.com:8080',
 
       changeOrigin: true,
       pathRewrite: {
