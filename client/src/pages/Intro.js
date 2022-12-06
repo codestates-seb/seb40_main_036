@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import WOW from 'wowjs';
 import Mockup1 from './../img/mobileMockup.png';
 import Mockup2 from './../img/pcMockup.png';
-import IntroImg1 from './../img/intro1.gif';
-import IntroImg2 from './../img/intro2.gif';
-import IntroImg3 from './../img/intro3.gif';
+import IntroImg1 from './../img/intro.gif';
+import IntroImg2 from './../img/review.gif';
+import IntroImg3 from './../img/stuff.gif';
 import Social from './../img/social-media.png';
 const size = { mobile: 425, tablet: 768 };
 const mobile = `@media screen and (max-width: ${size.mobile}px)`; // eslint-disable-line no-unused-vars
@@ -211,7 +211,7 @@ const IntroWrapper = styled.div`
     }
   }
   .Wrapper {
-    padding: 50px 0;
+    padding: 70px 0;
     ${mobile} {
       padding: 25px 0;
     }
