@@ -41,16 +41,11 @@ public class SwaggerConfig {
                 .description("프로젝트 Salida는 스페인어로 '출구'를 뜻하는 'Salida'에서 출발하였습니다.\\n\" +\n" +
                         "                \"스페인어 발음으로 Salida [살리다] 즉, 한국어로 '사람을 살리다' 와 비슷한 어감으로 지진과 같은 재난 상황 발생 시, \" +\n" +
                         "                \"사람을 살리는 안전한 출구를 모두가 찾을 수 있길 바라는 마음으로 제작하였습니다.")
-//                .version("0.4.0")
-//                .termsOfServiceUrl("Terms of service")
-//                .contact(new Contact("Tae Jeong, Da hun", "https://github.com/GreenByMe/GreenByMe_Server", "xowjd41@naver.com"))
-//                .license("Apache License Version 2.0")
-//                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
                 .build();
     }
 
 //    @Bean
-//    public Docket docket() {
+//    public Docket docket() { // jwt 적용 안했을 경우 이것만으로 사용 가능
 //
 //        ApiInfoBuilder apiInfo = new ApiInfoBuilder();
 //        apiInfo.title("Salida API 명세서");
