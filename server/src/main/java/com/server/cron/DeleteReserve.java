@@ -26,7 +26,7 @@ public class DeleteReserve {
     // @Scheduled(cron = "0 0 0 * * *") // 매일매일 0시에 아래의 코드를 실행하겠다.
     // @Scheduled(cron = "0 0 0/1 * * *") // 매일매일 1시간마다 정각에 아래의 코드를 실행하겠다.
     @Transactional
-    @Scheduled(cron = "0 0 0/1 * * *")
+    @Scheduled(cron = "0 0 0 * * *")
     public void run(){
         reservationRepository.deleteAll();
 
