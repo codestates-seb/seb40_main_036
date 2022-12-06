@@ -56,10 +56,15 @@ const SignUP = () => {
   };
 
   const onChangeHyphen = (e) => {
-    const regex = /^[0-9\b -]{0,13}$/; //숫자와 하이픈만 입력가능 길이는 13자까지라는 의미
-    if (regex.test(e.target.value)) {
-      setHyphen(e.target.value);
-      setHyphenMessage('');
+    setHyphen(e.target.value);
+    const regex = /^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+    if (!regex.test(hyphen)) {
+      setHyphenMessage('전화번호 형식이 올바르지 않습니다!');
+      setIsHyphen(false);
+    }
+    if (regex.test(hyphen) || regex.test(e.target.value)) {
+      setHyphenMessage('중복검사를 눌러주세요!');
+      setIsHyphen(true);
     }
   };
 
@@ -130,7 +135,10 @@ const SignUP = () => {
       .then((response) => {
         console.log(response);
         // console.log(response.data.message);
-        if (response.data.message === '사용 가능한 휴대폰 번호 입니다.') {
+        if (
+          hyphen.length === 13 &&
+          response.data.message === '사용 가능한 휴대폰 번호 입니다.'
+        ) {
           setHyphenMessage('사용 가능한 휴대폰 번호 입니다!');
           setIsHyphen(true);
         }
@@ -179,6 +187,7 @@ const SignUP = () => {
       );
     }
   }, [hyphen]);
+
   return (
     <SignUpForm>
       <div className="signUpForm">
