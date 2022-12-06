@@ -79,6 +79,7 @@ public class MemberService {
 
         ////////////////////////////////////////////////////////////////////////////
         // 현재 사용자의 정보를 authentication에 저장 + 토큰
+        // 토큰을 저장하는 것은 보안에 좋지 않지만 확인차원에서 DB에 저장을 해본다.
 
         Authentication authentication
                 =new UserAuthentication(mem.getEmail(),null,null);
