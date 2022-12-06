@@ -2,6 +2,7 @@ package com.server.reservation.service;
 
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Member;
 import com.server.member.service.MemberService;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.repository.ReservationRepository;
@@ -19,7 +20,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -38,16 +38,22 @@ public class ReservationService {
 
         Reservation reservedPerson=reservationRepository.findByMemberId(reservation.getMemberId());
 
-//        if(reservedPerson!=null){
-//            updateReservation(reservedPerson);  // 기존에 예약한 사람이면 업데이트 메서드로 이동
-//        }
-
         // 회원이 존재하는지 확인
         memberService.findVerifiedMember(reservation.getMemberId()); // 있으면 넘어가고 없으면 예외문구뜸
 
         // 대피소가 존재하는지 확인
         shelterService.findVerifiedShelter(reservation.getShelterId()); // 있으면 넘어가고 없으면 예외문구뜸
 
+//        Member mem = memberRepository.findByEmail(member.getEmail());
+//        if(mem!=null){ // 있으면
+//            throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
+//        }
+        // reservationRepository 안에 저장된 memberId가 있는지 확인
+        // 있으면 이미 예약한 대피소가 있습니다. 없으면 예약 고ㄱㄱ
+        Reservation mem =reservationRepository.findByMemberId(reservation.getMemberId());
+        if(mem!=null) { // 있으면
+            throw new BusinessLogicException(ExceptionCode.RESERVATION_EXISTS);
+        }
         reservation.setReservationCreated(LocalDate.now());
 
         // reservationId가 reservationInfo에 넣어져야하니 save가 먼저 진행되어야함
@@ -100,9 +106,34 @@ public class ReservationService {
     }
 
     public Reservation findReservation(long reservationId) {
+
         return findVerifiedReservation(reservationId);
     }
 
+    public Reservation findMemberReservation(long memberId){
+        return findVerifiedMemberReservation(memberId);
+    }
+
+    public Reservation findVerifiedMemberReservation(long memberId){
+        Reservation member =
+                reservationRepository.findByMemberId(memberId);
+
+        if(member==null){ // 없으면
+            throw new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND);
+        }
+        return reservationRepository.findByMemberId(memberId);
+    }
+
+    public Reservation findVerifiedReservation(long reservationId){
+        List<Reservation> optionalReservation=
+                reservationRepository.findByReservationId(reservationId);
+
+        if(optionalReservation.size()==0){
+            throw new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND);
+        }
+
+        return optionalReservation.get(0);
+    }
     public Page<Reservation> findReservations(int page, int size){
         return reservationRepository.findAll(PageRequest.of(page,size,
                 Sort.by("shelterName").descending()));
@@ -116,15 +147,32 @@ public class ReservationService {
 
     }
 
-    public Reservation findVerifiedReservation(long reservationId){
-        List<Reservation> optionalReservation=
-                reservationRepository.findByReservationId(reservationId);
+    @Transactional
+    public void deleteMemberReservation(long memberId){
+        // 일단 memberId의 예약을 가져와
+        Reservation memberReservation = findMemberReservation(memberId);
 
-        if(optionalReservation.size()==0){
-            throw new BusinessLogicException(ExceptionCode.Reservation_NOT_FOUND);
-        }
+        // 그 memberId의 예약에서 몇명을 예약했었는지 가져와
+        int num = memberReservation.getNum();
 
-        return optionalReservation.get(0);
+        // memberId가 어디 대피소를 예약했었는지 가져와
+        Shelter shelter=shelterRepository.findByShelterId(memberReservation.getShelterId());
+
+        // 그 대피소 이름에 연관된 reservationInfo 가져와
+        ReservationInfo reservationInfo=reservationInfoRepository.findByshelterName(shelter.getShelterName());
+
+        // 그 reservationInfo에서 reservedNum을 가져와
+        int total = reservationInfo.getReservedNum();
+
+        // 그 대피소에 예약된 전체 인원에서 memberId가 예약한 인원만큼 빼고
+        reservationInfo.setReservedNum(total-num);
+
+        // reservationInfo를 다시 저장해
+        reservationInfoRepository.save(reservationInfo);
+
+        // 이제 memberId의 예약을 지워버려
+        reservationRepository.delete(memberReservation);
+
     }
 
 }

@@ -4,6 +4,7 @@ import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
 import com.server.member.entity.Member;
 import com.server.member.repository.MemberRepository;
+import com.server.question.entity.Question;
 import com.server.shelterAnswer.entity.ShelterAnswer;
 import com.server.shelterAnswer.repository.ShelterAnswerRepository;
 import com.server.shelterQuestion.entity.ShelterQuestion;
@@ -100,6 +101,15 @@ public class ShelterAnswerService {
     @Transactional
     public void deleteShelterAnswer(long shelterAnswerId) {
         ShelterAnswer shelterAnswer = findVerifiedShelterAnswer(shelterAnswerId);
+
+        ShelterQuestion shelterQuestion=shelterQuestionRepository.findByShelterQuestionId(shelterAnswer.getShelterQuestionId());
+
+        Long count=shelterQuestion.getCountAnswer();
+        count--;
+        shelterQuestion.setCountAnswer(count);
+
+        shelterQuestionRepository.save(shelterQuestion);
+
         shelterAnswerRepository.delete(shelterAnswer);
 
     }

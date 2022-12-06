@@ -52,8 +52,4 @@ public class StuffQuestion {
     @OneToMany(mappedBy = "stuffQuestion",cascade = CascadeType.PERSIST)
     private List<StuffAnswer> stuffAnswers=new ArrayList<>();
 
-    @ManyToOne
-    @JoinColumn(name = "shelterId", insertable = false, updatable = false)
-    private Shelter shelter;
-
 }

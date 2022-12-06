@@ -45,10 +45,6 @@ public class Shelter {
     @OneToOne(mappedBy = "shelter")
     private ReservationInfo reservationInfo;
 
-    @OneToMany(mappedBy = "shelter")
-    private List<Question> questions = new ArrayList<>();
 
-    @OneToMany(mappedBy = "shelter")
-    private List<StuffQuestion> stuffQuestions = new ArrayList<>();
 
 }

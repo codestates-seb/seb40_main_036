@@ -1,7 +1,6 @@
 package com.server.reservation.controller;
 
 import com.server.member.service.MemberService;
-//import com.server.reservation.dto.ReservationPatchDto;
 import com.server.reservation.dto.ReservationPostDto;
 import com.server.reservation.entity.Reservation;
 import com.server.reservation.mapper.ReservationMapper;
@@ -63,6 +62,17 @@ public class ReservationController {
                 HttpStatus.OK);
     }
 
+    @GetMapping("/member/{memberId}")
+    public ResponseEntity getMemberReservation(@PathVariable("memberId")
+                                         @Positive long Id) {
+        Reservation reservation = reservationService.findMemberReservation(Id);
+
+        return new ResponseEntity<>(
+
+                new SingleResponseDto(reservationMapper.reservationToReservationResponseDto(reservation)),
+                HttpStatus.OK);
+    }
+
     @GetMapping
     public ResponseEntity getReservations(@Positive @RequestParam int page,
                                       @Positive @RequestParam int size) {
@@ -80,6 +90,12 @@ public class ReservationController {
                                         @Positive long Id){
 
         reservationService.deleteReservation(Id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+    @DeleteMapping("/member/shelter/{memberId}")
+    public ResponseEntity deleteMemberReservation(@PathVariable("memberId")
+                                                  @Positive long Id){
+        reservationService.deleteMemberReservation(Id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

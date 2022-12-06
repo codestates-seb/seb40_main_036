@@ -1,9 +1,13 @@
 package com.server.member.mapper;
 
+import com.server.member.dto.MemberEmailDto;
 import com.server.member.dto.MemberLoginDto;
+import com.server.member.dto.MemberPhoneDto;
 import com.server.member.dto.MemberPostDto;
 import com.server.member.dto.MemberResponseDto;
+import com.server.member.entity.Email;
 import com.server.member.entity.Member;
+import com.server.member.entity.Phone;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -11,8 +15,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-11-29T18:13:20+0900",
-    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.5 (Amazon.com Inc.)"
+    date = "2022-12-06T10:10:20+0900",
+    comments = "version: 1.5.1.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
 public class MemberMapperImpl implements MemberMapper {
@@ -31,6 +35,32 @@ public class MemberMapperImpl implements MemberMapper {
         member.setPhone( memberPostDto.getPhone() );
 
         return member;
+    }
+
+    @Override
+    public Email memberEmailDtoToMember(MemberEmailDto memberEmailDto) {
+        if ( memberEmailDto == null ) {
+            return null;
+        }
+
+        Email email = new Email();
+
+        email.setEmail( memberEmailDto.getEmail() );
+
+        return email;
+    }
+
+    @Override
+    public Phone memberPhoneDtoToMember(MemberPhoneDto memberPhoneDto) {
+        if ( memberPhoneDto == null ) {
+            return null;
+        }
+
+        Phone phone = new Phone();
+
+        phone.setPhone( memberPhoneDto.getPhone() );
+
+        return phone;
     }
 
     @Override
@@ -53,23 +83,17 @@ public class MemberMapperImpl implements MemberMapper {
             return null;
         }
 
-        long memberId = 0L;
-        String name = null;
-        String email = null;
-        String phone = null;
-        String token = null;
+        MemberResponseDto.MemberResponseDtoBuilder memberResponseDto = MemberResponseDto.builder();
 
         if ( member.getMemberId() != null ) {
-            memberId = member.getMemberId();
+            memberResponseDto.memberId( member.getMemberId() );
         }
-        name = member.getName();
-        email = member.getEmail();
-        phone = member.getPhone();
-        token = member.getToken();
+        memberResponseDto.name( member.getName() );
+        memberResponseDto.email( member.getEmail() );
+        memberResponseDto.phone( member.getPhone() );
+        memberResponseDto.token( member.getToken() );
 
-        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, name, email, phone, token );
-
-        return memberResponseDto;
+        return memberResponseDto.build();
     }
 
     @Override

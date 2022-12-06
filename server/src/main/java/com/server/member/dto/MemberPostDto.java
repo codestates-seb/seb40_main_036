@@ -28,6 +28,7 @@ public class MemberPostDto { // 회원가입할 때 필요한 post
     @Pattern(regexp = "[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}")
     private String email;
 
-    @NotBlank(message = "휴대폰 번호는 필수 입력값입니다.")
+    @NotBlank(message = "형식에 맞는 휴대폰 번호는 필수 입력값입니다.")
+    @Pattern(regexp = "^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$")
     private String phone;
 }

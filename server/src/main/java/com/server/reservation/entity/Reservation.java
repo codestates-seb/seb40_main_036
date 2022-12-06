@@ -7,10 +7,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity
@@ -34,8 +33,6 @@ public class Reservation {
     private int num;
 
     private LocalDate reservationCreated;
-
-//    private LocalDate reservationModified;
 
     @OneToOne
     @JoinColumn(name = "memberId",insertable = false,updatable = false)

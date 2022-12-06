@@ -1,15 +1,19 @@
 package com.server.member.service;
 
 
+import com.server.config.auth.UserAuthentication;
 import com.server.config.jwt.JwtTokenProvider;
 import com.server.exception.BusinessLogicException;
 import com.server.exception.ExceptionCode;
+import com.server.member.entity.Email;
 import com.server.member.entity.Member;
+import com.server.member.entity.Phone;
 import com.server.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -32,15 +36,36 @@ public class MemberService {
             throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
         }
 
+        Member mem2 = memberRepository.findByPhone(member.getPhone());
+        if(mem2!=null){
+            throw new BusinessLogicException(ExceptionCode.PHONE_EXISTS);
+        }
+
         member.setPassword(passwordEncoder.encode(member.getPassword()));
 
         return memberRepository.save(member);
+       // throw new BusinessLogicException(ExceptionCode.)
     }
+
+    public void checkEmail(Email email){
+        Member emai1 = memberRepository.findByEmail(email.getEmail());
+        if(emai1!=null){
+            throw new BusinessLogicException(ExceptionCode.EMAIL_EXISTS);
+        }
+        throw new BusinessLogicException(ExceptionCode.EMAIL_NOT_EXISTS);
+    }
+
+    public void checkPhone(Phone phone){
+        Member phoon =memberRepository.findByPhone(phone.getPhone());
+        if(phoon!=null){
+            throw new BusinessLogicException(ExceptionCode.PHONE_EXISTS);
+        }
+        throw new BusinessLogicException(ExceptionCode.PHONE_NOT_EXISTS);
+    }
+
 
     public Member LoginMember(Member member){ // 리턴값을 토큰값으로~
 
-        //String memberEmail = member.getEmail();
-        //String memberPassword = member.getPassword();
 
         Member mem=memberRepository.findByEmail(member.getEmail());
         if(mem==null){
@@ -52,9 +77,19 @@ public class MemberService {
             throw new BusinessLogicException(ExceptionCode.Member_NOT_FOUND);
         }
 
-        //Member mem = memberRepository.findByEmailAndPassword(member.getEmail(), member.getPassword());
-        //return mem;
-        mem.setToken(jwtTokenProvider.createToken(mem.getEmail()));
+        ////////////////////////////////////////////////////////////////////////////
+        // 현재 사용자의 정보를 authentication에 저장 + 토큰
+        // 토큰을 저장하는 것은 보안에 좋지 않지만 확인차원에서 DB에 저장을 해본다.
+
+        Authentication authentication
+                =new UserAuthentication(mem.getEmail(),null,null);
+
+        mem.setToken(jwtTokenProvider.createToken(authentication,mem.getEmail()));
+
+        memberRepository.save(mem);
+
+        ////////////////////////////////////////////////////////////////////////////
+
         return mem;
     }
 
