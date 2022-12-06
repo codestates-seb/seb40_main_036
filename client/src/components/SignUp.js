@@ -50,7 +50,7 @@ const SignUP = () => {
       setIdMessage('이메일의 형식이 올바르지 않습니다!');
       setIsId(false);
     } else {
-      setIdMessage('중복검사를 눌러주세요!'); // 아직은 이메일 형식만 맞으면 이러한 메세지가 뜨게 설정 나중에 중복여부로 구현 예정
+      setIdMessage('중복검사를 눌러주세요!');
       setIsId(true);
     }
   };
@@ -135,10 +135,7 @@ const SignUP = () => {
       .then((response) => {
         console.log(response);
         // console.log(response.data.message);
-        if (
-          hyphen.length === 13 &&
-          response.data.message === '사용 가능한 휴대폰 번호 입니다.'
-        ) {
+        if (response.data.message === '사용 가능한 휴대폰 번호 입니다.') {
           setHyphenMessage('사용 가능한 휴대폰 번호 입니다!');
           setIsHyphen(true);
         }
