@@ -35,8 +35,6 @@ public class Member {
     @Column(nullable = false)
     private String password;
 
-    @Pattern(regexp = "^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$"
-            , message = "잘못된 형식입니다. (예시: 010-1111-2222)")
     @Column(nullable = false)
     private String phone;
 
