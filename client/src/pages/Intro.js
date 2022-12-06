@@ -117,7 +117,7 @@ const Intro = () => {
               GitHub
             </a>
             <a
-              href="https://www.notion.so/codestates/36-SALIDA-bbb2654a9c56417bbc72db0ad807b891#0b2da0c809da411d8d37965341a33248"
+              href="https://codestates.notion.site/40-Team036-SALIDA-bbb2654a9c56417bbc72db0ad807b891"
               target="_blank"
               className="wow flipInX btn"
               data-wow-delay=".6s"
