@@ -71,7 +71,7 @@ const Map = (props) => {
     };
     var map = await new kakao.maps.Map(container, options);
     const reserve = await axios
-      .get('/reservationInfo/reservationInfos')
+      .get('/api/reservationInfo/reservationInfos')
       .catch((err) => console.log(err));
     const reservationInfos = reserve.data;
 
